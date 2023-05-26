@@ -32,6 +32,6 @@ jobs:
     - name: Test with pytest
       run: |
         # Get the list of modified files
-        changed_files=$(git diff --name-only HEAD~1)
+        changed_files=$(git log --name-only --pretty=format: -n 1)
         # Run pytest only for the modified files
         pytest -s -v $changed_files
