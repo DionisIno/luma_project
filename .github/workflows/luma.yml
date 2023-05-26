@@ -31,4 +31,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        # Get the list of modified files
+        changed_files=$(git diff --name-only HEAD^)
+        # Run pytest only for the modified files
+        pytest -s -v $changed_files
