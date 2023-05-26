@@ -19,3 +19,6 @@ def test_check_link(driver):
     link = driver.find_element(By.CSS_SELECTOR, "li[class^='level0 nav-1']")
     print("3")
     assert link.is_enabled()
+
+def test_2_page_open(driver):
+    driver.get("https://magento.softwaretestingboard.com/women.html")
