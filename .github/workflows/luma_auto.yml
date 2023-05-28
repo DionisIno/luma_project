@@ -5,7 +5,7 @@ name: LUMA
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '45 18 * * *'
 
 jobs:
   build:
