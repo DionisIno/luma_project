@@ -9,3 +9,7 @@ class HeaderPage(BasePage):
         message = self.element_is_visible(self.locators.GREETING_MESSAGE)
         return message
 
+    def check_create_account_link(self):
+        link = self.element_is_visible(self.locators.CREATE_AN_ACCOUNT)
+        return link
+
