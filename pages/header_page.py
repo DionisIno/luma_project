@@ -19,3 +19,7 @@ class HeaderPage(BasePage):
         header = self.element_is_visible(self.create_account_locators.CREATE_NEW_CUSTOMER_ACCOUNT_HEADER)
         return header
 
+    def check_sign_in_page_link(self):
+        link = self.element_is_visible(self.header_locators.SIGN_IN)
+        return link
+

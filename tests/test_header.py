@@ -26,9 +26,18 @@ class TestHeader:
         the "Create New Customer Account" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        create_account_link = page.check_create_account_page_link()
-        create_account_link.click()
-        page_header = page.check_create_account_page_header()
-        assert driver.current_url == CREATE_ACCOUNT_PAGE_URL and page_header.text == "Create New Customer Account", \
+        link = page.check_create_account_page_link()
+        link.click()
+        header = page.check_create_account_page_header()
+        assert driver.current_url == CREATE_ACCOUNT_PAGE_URL and header.text == "Create New Customer Account", \
             "Create an account page is either not opened or the page header is incorrect"
+
+    def test_tc_01_01_04_verify_the_display_and_interactivity_of_the_sign_in_link(self, driver):
+        """Check 'Sign In' link is displayed and underlined"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        link = page.check_sign_in_page_link()
+        page.action_move_to_element(link)
+        assert link is not None and "underline" in link.value_of_css_property('text-decoration'), \
+            "Link 'Sign In' is either not displayed or not underlined on hover"
 
