@@ -2,6 +2,8 @@ MAIN_PAGE_URL = "https://magento.softwaretestingboard.com/"
 SIGN_IN_URL = MAIN_PAGE_URL + "customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/"
 CREATE_ACCOUNT_PAGE_URL = "https://magento.softwaretestingboard.com/customer/account/create/"
 SALE_PAGE_URL = "https://magento.softwaretestingboard.com/sale.html"
+HOODIES_AND_SWEATSHIRTS_WOMEN = 'https://magento.softwaretestingboard.com/' \
+                                'women/tops-women/hoodies-and-sweatshirts-women.html'
 
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
