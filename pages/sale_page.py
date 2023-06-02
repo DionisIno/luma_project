@@ -13,3 +13,7 @@ class SalePage(BasePage):
     def check_women_deals_hoodies_element(self):
         element = self.element_is_clickable(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W)
         return element
+
+    def check_women_deals_hoodies_link(self):
+        link = self.element_is_visible(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W).click()
+        return link
