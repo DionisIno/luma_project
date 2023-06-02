@@ -9,3 +9,7 @@ class SalePage(BasePage):
         women_deals_title = self.element_is_visible(self.side_bar_locators.WOMEN_DEALS_TITLE)
         title_women_deals = women_deals_title.text
         return title_women_deals
+
+    def check_women_deals_hoodies_element(self):
+        element = self.element_is_clickable(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W)
+        return element
