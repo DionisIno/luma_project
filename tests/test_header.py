@@ -26,8 +26,7 @@ class TestHeader:
         the "Create New Customer Account" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        link = page.check_create_account_page_link()
-        link.click()
+        page.click_and_return_element(page.header_locators.CREATE_AN_ACCOUNT)
         header = page.check_create_account_page_header()
         assert driver.current_url == CREATE_ACCOUNT_PAGE_URL and header.text == "Create New Customer Account", \
             "Create an account page is either not opened or the page header is incorrect"
@@ -46,10 +45,20 @@ class TestHeader:
                 the "Customer Login" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        link = page.check_sign_in_page_link()
-        link.click()
+        page.click_and_return_element(page.header_locators.SIGN_IN)
         header = page.check_sign_in_page_header()
         assert driver.current_url == SIGN_IN_URL and header.text == "Customer Login", \
             "Sign In page is either not opened or the page header is incorrect"
 
-        
+    def test_tc_01_02_16_verify_the_display_and_interactivity_of_the_logo(self, driver):
+        """Check that the cursor changes to a 'hand' indicating the logo is a clickable element, \
+        and that clicking on it causes the page to reload and redirect to the main page"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        logo = page.check_logo_link()
+        page.action_move_to_element(logo)
+        cursor_type = logo.value_of_css_property('cursor')
+        page.click_and_return_element(page.header_locators.LOGO)
+        assert cursor_type == 'pointer' and driver.current_url == MAIN_PAGE_URL, \
+            "Failed: Either the cursor does not change to a 'hand' when hovering over the logo or " \
+            "clicking on the logo does not redirect to the main page"
