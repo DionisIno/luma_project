@@ -18,3 +18,12 @@ class TestRegisteredCustomers:
         h1_heading = sign_in_page.check_registered_customers_heading()
         assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_heading"], \
             "Registered Customers heading is not present"
+
+    def test_03_01_06_email_is_appropriately_labeled(self, driver):
+        """Check if Email field is appropriately labeled """
+        sign_in_page = SignInPage(driver, SIGN_IN_URL)
+        sign_in_page.open()
+        label = sign_in_page.check_customer_email_label()
+        asterisk = sign_in_page.check_customer_email_asterisk()
+        assert asterisk is not None and label.text == sign_in_data["email_label"], \
+            "Email label or asterisk is not present for Email field"
