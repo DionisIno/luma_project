@@ -14,8 +14,10 @@ class SignInPage(BasePage):
         return heading
 
     def check_customer_email_label(self):
-        '''This method verifies if email label is visible'''
         return self.element_is_visible(self.locators.CUSTOMER_EMAIL_LABEL)
 
     def check_customer_email_asterisk(self):
-        return self.element_is_visible(self.locators.CUSTOMER_EMAIL_ASTERISK)
+        email_label = self.element_is_visible(self.locators.CUSTOMER_EMAIL_LABEL)
+        asterisk_script = "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"
+        return self.driver.execute_script(asterisk_script, email_label)
+

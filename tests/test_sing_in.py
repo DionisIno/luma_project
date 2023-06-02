@@ -26,4 +26,4 @@ class TestRegisteredCustomers:
         label = sign_in_page.check_customer_email_label()
         asterisk = sign_in_page.check_customer_email_asterisk()
         assert asterisk is not None and label.text == sign_in_data["email_label"], \
-            "Note is not present under Registered Customers"
+            "Email label or asterisk is not present for Email field"
