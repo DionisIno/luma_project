@@ -1,6 +1,7 @@
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data
 from data.data_urls import SIGN_IN_URL
+from data.credentials import credentials
 
 
 class TestRegisteredCustomers:
@@ -27,3 +28,10 @@ class TestRegisteredCustomers:
         asterisk = sign_in_page.check_customer_email_asterisk()
         assert asterisk is not None and label.text == sign_in_data["email_label"], \
             "Email label or asterisk is not present for Email field"
+
+    def test_03_01_17_password_masking(self, driver):
+        """Check if the entered value is masked in password field"""
+        sign_in_page = SignInPage(driver, SIGN_IN_URL)
+        sign_in_page.open()
+        password_input = sign_in_page.check_password_value_masking(credentials['password'])
+        assert password_input == "password", "Password input field is not marked as password type"
