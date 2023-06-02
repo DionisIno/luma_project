@@ -9,23 +9,27 @@ class HeaderPage(BasePage):
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
 
+    def click_and_return_element(self, locator):
+        element = self.element_is_visible(locator)
+        element.click()
+        return element
+
     def check_greeting_message(self):
-        message = self.element_is_visible(self.header_locators.GREETING_MESSAGE)
-        return message
+        return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
     def check_create_account_page_link(self):
-        link = self.element_is_visible(self.header_locators.CREATE_AN_ACCOUNT)
-        return link
+        return self.element_is_visible(self.header_locators.CREATE_AN_ACCOUNT)
 
     def check_create_account_page_header(self):
-        header = self.element_is_visible(self.create_account_locators.CREATE_NEW_CUSTOMER_ACCOUNT_HEADER)
-        return header
+        return self.element_is_visible(self.create_account_locators.CREATE_NEW_CUSTOMER_ACCOUNT_HEADER)
 
     def check_sign_in_page_link(self):
-        link = self.element_is_visible(self.header_locators.SIGN_IN)
-        return link
+        return self.element_is_visible(self.header_locators.SIGN_IN)
 
     def check_sign_in_page_header(self):
-        header = self.element_is_visible(self.sign_in_locators.PAGE_HEADER)
-        return header
+        return self.element_is_visible(self.sign_in_locators.PAGE_HEADER)
+
+    def check_logo_link(self):
+        return self.element_is_visible(self.header_locators.LOGO)
+
 
