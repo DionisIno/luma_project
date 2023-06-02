@@ -1,5 +1,3 @@
-import time
-
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL
 from pages.header_page import HeaderPage
 
