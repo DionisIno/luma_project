@@ -27,6 +27,23 @@ class SignInPage(BasePage):
         asterisk_script = self.find_required_element()
         return self.driver.execute_script(asterisk_script, email_label)
 
+    def check_customer_email_field_is_clickable(self):
+        """This method verifies if Email field is clickable"""
+        return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)
+
+    def fill_in_email_field(self, email):
+        """This method fills in Email field with provided email"""
+        email_input = self.check_customer_email_field_is_clickable()
+        email_input.click()
+        email_input.clear()
+        email_input.send_keys(email)
+        return email_input
+
+    def get_email_field_attribute(self, attribute):
+        """This method fills in Email field with provided email"""
+        # email_input = self.check_customer_email_field_is_clickable()
+        return self.check_customer_email_field_is_clickable().get_attribute(attribute)
+
     def check_customer_password_field_is_clickable(self):
         """This method verifies if Password field is clickable"""
         return self.element_is_clickable(self.locators.CUSTOMER_PASSWORD)

@@ -9,7 +9,7 @@ class SingInPageLocators:
     REGISTERED_CUSTOMERS_HEADER = (By.CSS_SELECTOR, "#block-customer-login-heading")
     REGISTERED_CUSTOMERS_NOTE = (By.CSS_SELECTOR, "div.field.note")
     CUSTOMER_EMAIL_LABEL = (By.CSS_SELECTOR, "label[for='email'] span")
-    CUSTOMER_EMAIL = (By.CSS_SELECTOR, "#customer-email")
+    CUSTOMER_EMAIL = (By.CSS_SELECTOR, "#email")
     CUSTOMER_EMAIL_ASTERISK = (By.CSS_SELECTOR, "+ span.required")
     CUSTOMER_PASSWORD_LABEL = (By.CSS_SELECTOR, "label[for ='pass'] span")
     CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
