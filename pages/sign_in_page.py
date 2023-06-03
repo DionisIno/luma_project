@@ -1,3 +1,5 @@
+import re
+
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 
@@ -61,3 +63,17 @@ class SignInPage(BasePage):
         """
         password_input = self.fill_in_password_field(password)
         return password_input.get_attribute('type')
+
+    def is_valid_email(self, email):
+        """This method is validation Email field for correct email format"""
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        valid_email = re.match(pattern, email)
+        return valid_email is not None
+
+    def get_error_message(self):
+        """
+        This method validates that the error message is displayed
+        when an incorrect email format is entered.
+        """
+        error_element = self.driver.find_element_by_css_selector("#email-error")
+        return error_element.text if error_element else None
