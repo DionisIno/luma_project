@@ -32,4 +32,5 @@ class HeaderPage(BasePage):
     def check_logo_link(self):
         return self.element_is_visible(self.header_locators.LOGO)
 
-
+    def verify_redirected_the_link_sale(self):
+        return self.element_is_visible(self.header_locators.SALE)

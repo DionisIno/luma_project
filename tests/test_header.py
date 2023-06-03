@@ -1,4 +1,4 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, SALE_PAGE_URL
 from pages.header_page import HeaderPage
 
 
@@ -62,3 +62,13 @@ class TestHeader:
         assert cursor_type == 'pointer' and driver.current_url == MAIN_PAGE_URL, \
             "Failed: Either the cursor does not change to a 'hand' when hovering over the logo or " \
             "clicking on the logo does not redirect to the main page"
+
+    def test_tc_01_03_53_verify_correctly_redirected_the_link_sale(self, driver):
+        """Verify 'Sale' link click redirected to the Sale page and \
+                the "Sale" header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.click_and_return_element(page.header_locators.SALE)
+        header = page.verify_redirected_the_link_sale()
+        assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
+            "Sale page isn't opened or the page header is incorrect"
