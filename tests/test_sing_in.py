@@ -29,6 +29,15 @@ class TestRegisteredCustomers:
         assert asterisk is not None and label.text == sign_in_data["email_label"], \
             "Email label or asterisk is not present for Email field"
 
+    def test_03_01_08_value_in_email_matches(self, driver):
+        """Check if the displayed email matches the entered email in Email field"""
+        sign_in_page = SignInPage(driver, SIGN_IN_URL)
+        sign_in_page.open()
+        entered_email = credentials['email']
+        sign_in_page.fill_in_email_field(entered_email)
+        displayed_email = sign_in_page.get_email_field_attribute('value')
+        assert displayed_email == entered_email, "Email value in the field doesn't match the entered email"
+
     def test_03_01_17_password_masking(self, driver):
         """Check if the entered value is masked in password field"""
         sign_in_page = SignInPage(driver, SIGN_IN_URL)
