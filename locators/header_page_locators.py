@@ -12,3 +12,6 @@ class HeaderPageLocators:
     # Header Content
     LOGO = (By.XPATH, "//a[@aria-label='store logo']//img")
 
+    # Top menu navigation
+    SALE = (By.ID, 'ui-id-8')
+
