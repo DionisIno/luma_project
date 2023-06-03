@@ -4,6 +4,8 @@ CREATE_ACCOUNT_PAGE_URL = "https://magento.softwaretestingboard.com/customer/acc
 SALE_PAGE_URL = "https://magento.softwaretestingboard.com/sale.html"
 HOODIES_AND_SWEATSHIRTS_WOMEN = 'https://magento.softwaretestingboard.com/' \
                                 'women/tops-women/hoodies-and-sweatshirts-women.html'
+SHOPPING_CART_PAGE = "https://magento.softwaretestingboard.com/checkout/cart/"
+
 
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
