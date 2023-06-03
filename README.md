@@ -26,3 +26,12 @@ Please note that the data and content on this test instance are not real and are
 [**Link to test cases**](https://docs.google.com/spreadsheets/d/1Ixzm4xA6LoCwpKffuYDdv0syJ530mTBOu5SRCaYZMZg/edit#gid=0)
 
 [**Link to website**](https://magento.softwaretestingboard.com/)
+
+## How to work with this repository:
+
+- Clone repository to your machine.
+
+- Navigate to the root folder of the project.
+- Create a virtual environment.
+- Run command **pip install -r requirements.txt**
+- After, execute **pytest -s -v** to run tests.
