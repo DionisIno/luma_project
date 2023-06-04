@@ -13,5 +13,6 @@ class SingInPageLocators:
     CUSTOMER_EMAIL_ASTERISK = (By.CSS_SELECTOR, "+ span.required")
     CUSTOMER_PASSWORD_LABEL = (By.CSS_SELECTOR, "label[for ='pass'] span")
     CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
+    SIGN_IN_BUTTON = (By.ID, 'send2')
 
     # SignIn form > New Customers
