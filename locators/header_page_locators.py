@@ -11,6 +11,8 @@ class HeaderPageLocators:
 
     # Header Content
     LOGO = (By.XPATH, "//a[@aria-label='store logo']//img")
+    CART_ICON = (By.XPATH, "//a[@class='action showcart']")
+    CART_BUTTON_MESSAGE = (By.XPATH, "//strong[@class='subtitle empty']")
 
     # Top menu navigation
     SALE = (By.ID, 'ui-id-8')

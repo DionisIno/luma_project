@@ -14,6 +14,11 @@ class HeaderPage(BasePage):
         element.click()
         return element
 
+    def check_element_hover_style(self, locator, css_property):
+        element = self.element_is_visible(locator)
+        self.action_move_to_element(element)
+        return element.value_of_css_property(css_property)
+
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
@@ -34,3 +39,10 @@ class HeaderPage(BasePage):
 
     def verify_redirected_the_link_sale(self):
         return self.element_is_visible(self.header_locators.SALE)
+
+    def check_cart_icon_link(self):
+        return self.element_is_visible(self.header_locators.CART_ICON)
+
+    def check_cart_message(self):
+        return self.element_is_visible(self.header_locators.CART_BUTTON_MESSAGE).text
+

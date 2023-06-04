@@ -16,9 +16,7 @@ class TestHeader:
         """Check 'Create an account' link is displayed and underlined"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        link = page.check_create_account_page_link()
-        page.action_move_to_element(link)
-        assert link is not None and "underline" in link.value_of_css_property('text-decoration'), \
+        assert "underline" in page.check_element_hover_style(page.header_locators.CREATE_AN_ACCOUNT, 'text-decoration'), \
             "Link 'Create an account' is either not displayed or not underlined on hover"
 
     def test_tc_01_01_03_verify_the_correctness_create_an_account_link(self, driver):
@@ -35,9 +33,7 @@ class TestHeader:
         """Check 'Sign In' link is displayed and underlined"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        link = page.check_sign_in_page_link()
-        page.action_move_to_element(link)
-        assert link is not None and "underline" in link.value_of_css_property('text-decoration'), \
+        assert "underline" in page.check_element_hover_style(page.header_locators.SIGN_IN, 'text-decoration'), \
             "Link 'Sign In' is either not displayed or not underlined on hover"
 
     def test_tc_01_01_05_verify_the_correctness_sign_in_link(self, driver):
@@ -55,13 +51,11 @@ class TestHeader:
         and that clicking on it causes the page to reload and redirect to the main page"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        logo = page.check_logo_link()
-        page.action_move_to_element(logo)
-        cursor_type = logo.value_of_css_property('cursor')
+        assert "pointer" in page.check_element_hover_style(page.header_locators.LOGO,
+                                                           'cursor'), \
+            "Failed: The cursor does not change to a 'hand' when hovering over the logo"
         page.click_and_return_element(page.header_locators.LOGO)
-        assert cursor_type == 'pointer' and driver.current_url == MAIN_PAGE_URL, \
-            "Failed: Either the cursor does not change to a 'hand' when hovering over the logo or " \
-            "clicking on the logo does not redirect to the main page"
+        assert driver.current_url == MAIN_PAGE_URL, "Failed: Clicking on the logo does not redirect to the main page"
 
     def test_tc_01_03_53_verify_correctly_redirected_the_link_sale(self, driver):
         """Verify 'Sale' link click redirected to the Sale page and \
@@ -72,3 +66,15 @@ class TestHeader:
         header = page.verify_redirected_the_link_sale()
         assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
             "Sale page isn't opened or the page header is incorrect"
+
+    def test_tc_01_02_17_verify_the_display_and_interactivity_of_the_cart_icon(self, driver):
+        """Verify hovering over the shopping cart icon changes the cursor to a "hand," indicating that the cart is a \
+        clickable element, click on it and the message "You have no items in your shopping cart." appears"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        assert "pointer" in page.check_element_hover_style(page.header_locators.CART_ICON, 'cursor'), \
+            "Failed: The cursor does not change to a 'hand' when hovering over the cart icon"
+        page.click_and_return_element(page.header_locators.CART_ICON)
+        assert page.check_cart_message() == "You have no items in your shopping cart.", \
+            "Cart icon test failed: incorrect cart message"
+
