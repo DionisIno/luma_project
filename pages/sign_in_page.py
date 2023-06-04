@@ -79,5 +79,9 @@ class SignInPage(BasePage):
         return error_element.text if error_element else None
 
     def check_sign_in_button_is_visible(self):
-        """This method verifies if Email field is visible"""
+        """This method verifies if sign-in button field is visible"""
         return self.element_is_clickable(self.locators.SIGN_IN_BUTTON)
+
+    def click_sign_in_button(self):
+        """This method clicks on sign-in button"""
+        self.check_sign_in_button_is_visible().click()

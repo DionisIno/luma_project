@@ -1,8 +1,8 @@
 import pytest
 
 from pages.sign_in_page import SignInPage
-from data.sign_in_data import sign_in_data
-from data.data_urls import SIGN_IN_URL
+from data.sign_in_data import sign_in_data, LOGIN
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN
 from data.credentials import credentials
 
 @pytest.fixture(scope="function")
@@ -61,3 +61,19 @@ class TestRegisteredCustomers:
             error_message = sign_in_page.get_error_message()
             expected_error_message = "Please enter a valid email address (Ex: johndoe@domain.com)."
             assert error_message == expected_error_message, "Incorrect error message displayed"
+
+    class TestLoginFunctionality:
+        @pytest.mark.parametrize('email, password', LOGIN)
+        def test_03_02_01_to_03_02_10_login(self, driver, email, password):
+            """Check Success and Failed Login, no error validation"""
+            sign_in_page = SignInPage(driver, SIGN_IN_URL)
+            sign_in_page.open()
+            sign_in_page.fill_in_email_field(email)
+            sign_in_page.fill_in_password_field(password)
+            sign_in_page.click_sign_in_button()
+            try:
+                assert sign_in_page.driver.current_url in URL_AFTER_LOGIN \
+                       and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Customer Login'], "Login failed"
+            except AssertionError as error:
+                print('Error: ', str(error))
+                return False
