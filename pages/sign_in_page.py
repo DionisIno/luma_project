@@ -81,3 +81,12 @@ class SignInPage(BasePage):
     def check_sign_in_button_is_visible(self):
         """This method verifies if Email field is visible"""
         return self.element_is_clickable(self.locators.SIGN_IN_BUTTON)
+
+    def click_sign_in_button(self):
+        """This method verifies if the sign-in button is clickable"""
+        sign_in_button = self.check_sign_in_button_is_visible()
+        try:
+            sign_in_button.click()
+        except:
+            sign_in_button.click()
+        return sign_in_button

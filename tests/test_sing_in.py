@@ -52,6 +52,10 @@ class TestRegisteredCustomers:
         assert button is not None and button.text == sign_in_data['sign_in_btn'], \
             f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
+    def test_03_01_15_click_sign_in_button(self, driver, sign_in_page):
+        sign_in_button = sign_in_page.click_sign_in_button()
+        assert sign_in_button.is_enabled(), f'''The {sign_in_data['sign_in_btn']} button is not clickable'''
+
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         sign_in_page.fill_in_email_field("testmail.mailinator.com")
