@@ -86,6 +86,13 @@ class TestHeader:
         """Check the "Search" field is activated and the drop-down list appears with various product"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        dropdown_items = page.enter_search_term_and_get_dropdown()
+        dropdown_items = page.enter_search_field_and_get_dropdown()
         assert dropdown_items is not None and len(dropdown_items) > 0, "Error: No drop-down list appears or it`s empty"
+
+    def test_tc_01_02_13_display_and_interactivity_of_the_search_field(self, driver):
+        """Check the "Search" field is activated with a vertical flashing symbol "|" and highlighted"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        initial_box_shadow, active_box_shadow = page.activate_search_field_and_check_style()
+        assert initial_box_shadow != active_box_shadow, "Error: Search field style doesn't change on activation"
 
