@@ -77,3 +77,7 @@ class SignInPage(BasePage):
         """
         error_element = self.driver.find_element_by_css_selector("#email-error")
         return error_element.text if error_element else None
+
+    def check_sign_in_button_is_visible(self):
+        """This method verifies if Email field is visible"""
+        return self.element_is_clickable(self.locators.SIGN_IN_BUTTON)
