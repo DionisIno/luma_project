@@ -37,7 +37,8 @@ class HeaderPage(BasePage):
     def check_logo_link(self):
         return self.element_is_visible(self.header_locators.LOGO)
 
-    def verify_redirected_the_link_sale(self):
+    def verify_redirected_the_link_sale(self, page):
+        page.click_and_return_element(page.header_locators.SALE)
         return self.element_is_visible(self.header_locators.SALE)
 
     def check_cart_icon_link(self):

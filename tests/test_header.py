@@ -62,8 +62,7 @@ class TestHeader:
                 the "Sale" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        page.click_and_return_element(page.header_locators.SALE)
-        header = page.verify_redirected_the_link_sale()
+        header = page.verify_redirected_the_link_sale(page)
         assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
             "Sale page isn't opened or the page header is incorrect"
 
