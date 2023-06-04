@@ -17,3 +17,11 @@ class SalePage(BasePage):
     def check_women_deals_hoodies_link(self):
         link = self.element_is_visible(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W).click()
         return link
+
+    def get_actual_title(self, driver):
+        actual_title = driver.title
+        return actual_title
+
+    def get_actual_url(self, driver):
+        actual_url = driver.current_url
+        return actual_url

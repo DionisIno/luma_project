@@ -1,5 +1,6 @@
-from data.data_urls import SALE_PAGE_URL, HOODIES_AND_SWEATSHIRTS_WOMEN
+from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
+from data.sale_data import expected_title, expected_url
 
 
 class TestSalePage:
@@ -23,10 +24,7 @@ class TestSalePage:
         page = SalePage(driver, SALE_PAGE_URL)
         page.open()
         page.check_women_deals_hoodies_link()
-        expected_title = 'Hoodies & Sweatshirts - Tops - Women'
-        expected_url = HOODIES_AND_SWEATSHIRTS_WOMEN
-        actual_title = driver.title
-        actual_url = driver.current_url
-        assert actual_url == expected_url and actual_title == expected_title, \
-            f"Expected URL: {expected_url}, Actual URL: {actual_url}\n"\
-            f"Expected title: {expected_title}, Actual title: {actual_title}"
+        assert page.get_actual_url(driver) == expected_url['hoodies_women_url'] \
+               and page.get_actual_title(driver) == expected_title['hoodies_women'], \
+            f"Expected URL: {expected_url['hoodies_women_url']}, Actual URL: {page.get_actual_url(driver)}\n"\
+            f"Expected title: {expected_title['hoodies_women']}, Actual title: {page.get_actual_title(driver)}"
