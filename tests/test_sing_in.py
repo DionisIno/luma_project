@@ -15,23 +15,17 @@ def sign_in_page(driver):
 class TestRegisteredCustomers:
     def test_03_01_01_h1_heading(self, driver, sign_in_page):
         """Check Login Page Heading is present """
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         h1_heading = sign_in_page.check_h1_header()
         assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], "H1 Heading is not present"
 
     def test_03_01_02_registered_customers_heading(self, driver, sign_in_page):
         """Check Registered Customers Heading is present """
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         h1_heading = sign_in_page.check_registered_customers_heading()
         assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_heading"], \
             "Registered Customers heading is not present"
 
     def test_03_01_06_email_is_appropriately_labeled(self, driver, sign_in_page):
         """Check if Email field is appropriately labeled """
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         label = sign_in_page.check_customer_email_label()
         asterisk = sign_in_page.check_customer_email_asterisk()
         assert asterisk is not None and label.text == sign_in_data["email_label"], \
@@ -39,16 +33,12 @@ class TestRegisteredCustomers:
 
     def test_03_01_08_value_in_email_matches(self, driver, sign_in_page):
         """Check if the displayed email matches the entered email in Email field"""
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         sign_in_page.fill_in_email_field(credentials['email'])
         displayed_email = sign_in_page.get_email_field_attribute('value')
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
 
     def test_03_01_13_password_masking(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         password_input = sign_in_page.check_password_value_masking(credentials['password'])
         assert password_input == "password", "Password input field is not marked as password type"
 
@@ -59,8 +49,6 @@ class TestRegisteredCustomers:
 
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
-        sign_in_page = SignInPage(driver, SIGN_IN_URL)
-        sign_in_page.open()
         sign_in_page.fill_in_email_field("testmail.mailinator.com")
         email = sign_in_page.get_email_field_attribute('value')
         invalid_email = sign_in_page.is_valid_email(email)
