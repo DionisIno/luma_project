@@ -3,6 +3,9 @@ SIGN_IN_URL = MAIN_PAGE_URL + "customer/account/login/referer/aHR0cHM6Ly9tYWdlbn
 CREATE_ACCOUNT_PAGE_URL = "https://magento.softwaretestingboard.com/customer/account/create/"
 SALE_PAGE_URL = "https://magento.softwaretestingboard.com/sale.html"
 SHOPPING_CART_PAGE = "https://magento.softwaretestingboard.com/checkout/cart/"
+MY_ACCOUNT_URL = MAIN_PAGE_URL + 'customer/account/'
+URL_AFTER_LOGIN = MAIN_PAGE_URL + \
+                   'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 
 
 DATA_1 = ["https://magento.softwaretestingboard.com/",
