@@ -58,12 +58,10 @@ class TestHeader:
         assert driver.current_url == MAIN_PAGE_URL, "Failed: Clicking on the logo does not redirect to the main page"
 
     def test_tc_01_03_53_verify_correctly_redirected_the_link_sale(self, driver):
-        """Verify 'Sale' link click redirected to the Sale page and \
-                the "Sale" header is displayed"""
+        """Verify 'Sale' link click redirected to the Sale page and the "Sale" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        page.click_and_return_element(page.header_locators.SALE)
-        header = page.verify_redirected_the_link_sale()
+        header = page.verify_redirected_the_link_sale(page)
         assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
             "Sale page isn't opened or the page header is incorrect"
 
