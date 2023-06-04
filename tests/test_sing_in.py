@@ -37,15 +37,20 @@ class TestRegisteredCustomers:
         displayed_email = sign_in_page.get_email_field_attribute('value')
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
 
+    def test_03_01_09_password_is_present(self, driver, sign_in_page):
+        """Check if the password input field is present"""
+        password_input = sign_in_page.check_customer_password_field_is_clickable()
+        assert password_input.is_displayed(), "Password input field is not displayed"
+
     def test_03_01_13_password_masking(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         password_input = sign_in_page.check_password_value_masking(credentials['password'])
         assert password_input == "password", "Password input field is not marked as password type"
 
-    def test_03_01_09_password_is_present(self, driver, sign_in_page):
-        """Check if the password input field is present"""
-        password_input = sign_in_page.check_customer_password_field_is_clickable()
-        assert password_input.is_displayed(), "Password input field is not displayed"
+    def test_03_01_14_sign_in_button_is_present(self, driver, sign_in_page):
+        button = sign_in_page.check_sign_in_button_is_visible()
+        assert button is not None and button.text == sign_in_data['sign_in_btn'], \
+            f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
