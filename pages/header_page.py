@@ -9,16 +9,6 @@ class HeaderPage(BasePage):
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
 
-    def click_and_return_element(self, locator):
-        element = self.element_is_visible(locator)
-        element.click()
-        return element
-
-    def check_element_hover_style(self, locator, css_property):
-        element = self.element_is_visible(locator)
-        self.action_move_to_element(element)
-        return element.value_of_css_property(css_property)
-
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
@@ -46,4 +36,7 @@ class HeaderPage(BasePage):
 
     def check_cart_message(self):
         return self.element_is_visible(self.header_locators.CART_BUTTON_MESSAGE).text
+
+    def check_search_field(self):
+        return self.element_is_visible(self.header_locators.SEARCH_FIELD).get_attribute('placeholder')
 
