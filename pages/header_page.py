@@ -40,7 +40,7 @@ class HeaderPage(BasePage):
     def check_search_field(self):
         return self.element_is_visible(self.header_locators.SEARCH_FIELD).get_attribute('placeholder')
 
-    def enter_search_term_and_get_dropdown(self):
+    def enter_search_field_and_get_dropdown(self):
         """
         This method activates the field "Search", enters the term "T-shirt" in the field "Search"
         and returns the combo box that appears after you enter the search term.
@@ -49,4 +49,13 @@ class HeaderPage(BasePage):
         search_field.send_keys("T-shirt")
         return self.elements_are_visible(self.header_locators.SEARCH_DROPDOWN)
 
+    def activate_search_field_and_check_style(self):
+        """
+        This method activates the field "Search" and checks if the style of the field changes upon activation.
+        It returns the styles before and after activation for comparison.
+        """
+        initial_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
+        self.click_and_return_element(self.header_locators.SEARCH_FIELD)
+        active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
+        return initial_box_shadow, active_box_shadow
 
