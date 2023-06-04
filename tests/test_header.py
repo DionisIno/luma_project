@@ -4,7 +4,7 @@ from pages.header_page import HeaderPage
 
 class TestHeader:
 
-    def test_tc_01_01_01_verify_the_greeting_message_is_displayed(self, driver):
+    def test_tc_01_01_01_greeting_message_is_displayed(self, driver):
         """Check greeting message == 'Default welcome msg!' and is visible"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
@@ -12,14 +12,14 @@ class TestHeader:
         assert message is not None and message.text == "Default welcome msg!", \
             "The greeting message is not displayed or the text is incorrect"
 
-    def test_tc_01_01_02_verify_the_display_and_interactivity_of_the_create_an_account_link(self, driver):
+    def test_tc_01_01_02_display_and_interactivity_of_the_create_an_account_link(self, driver):
         """Check 'Create an account' link is displayed and underlined"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         assert "underline" in page.check_element_hover_style(page.header_locators.CREATE_AN_ACCOUNT, 'text-decoration'), \
             "Link 'Create an account' is either not displayed or not underlined on hover"
 
-    def test_tc_01_01_03_verify_the_correctness_create_an_account_link(self, driver):
+    def test_tc_01_01_03_correctness_create_an_account_link(self, driver):
         """Check 'Create an account' link click redirects to the account’s registration page and \
         the "Create New Customer Account" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -29,14 +29,14 @@ class TestHeader:
         assert driver.current_url == CREATE_ACCOUNT_PAGE_URL and header.text == "Create New Customer Account", \
             "Create an account page is either not opened or the page header is incorrect"
 
-    def test_tc_01_01_04_verify_the_display_and_interactivity_of_the_sign_in_link(self, driver):
+    def test_tc_01_01_04_display_and_interactivity_of_the_sign_in_link(self, driver):
         """Check 'Sign In' link is displayed and underlined"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         assert "underline" in page.check_element_hover_style(page.header_locators.SIGN_IN, 'text-decoration'), \
             "Link 'Sign In' is either not displayed or not underlined on hover"
 
-    def test_tc_01_01_05_verify_the_correctness_sign_in_link(self, driver):
+    def test_tc_01_01_05_correctness_sign_in_link(self, driver):
         """Check 'Sign In' link click redirects to the login page and \
                 the "Customer Login" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -46,13 +46,12 @@ class TestHeader:
         assert driver.current_url == SIGN_IN_URL and header.text == "Customer Login", \
             "Sign In page is either not opened or the page header is incorrect"
 
-    def test_tc_01_02_16_verify_the_display_and_interactivity_of_the_logo(self, driver):
+    def test_tc_01_02_16_display_and_interactivity_of_the_logo(self, driver):
         """Check that the cursor changes to a 'hand' indicating the logo is a clickable element, \
         and that clicking on it causes the page to reload and redirect to the main page"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        assert "pointer" in page.check_element_hover_style(page.header_locators.LOGO,
-                                                           'cursor'), \
+        assert "pointer" in page.check_element_hover_style(page.header_locators.LOGO, 'cursor'), \
             "Failed: The cursor does not change to a 'hand' when hovering over the logo"
         page.click_and_return_element(page.header_locators.LOGO)
         assert driver.current_url == MAIN_PAGE_URL, "Failed: Clicking on the logo does not redirect to the main page"
@@ -65,7 +64,7 @@ class TestHeader:
         assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
             "Sale page isn't opened or the page header is incorrect"
 
-    def test_tc_01_02_17_verify_the_display_and_interactivity_of_the_cart_icon(self, driver):
+    def test_tc_01_02_17_display_and_interactivity_of_the_cart_icon(self, driver):
         """Check hovering over the shopping cart icon changes the cursor to a "hand," indicating that the cart is a \
         clickable element, click on it and the message "You have no items in your shopping cart." appears"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -76,10 +75,17 @@ class TestHeader:
         assert page.check_cart_message() == "You have no items in your shopping cart.", \
             "Cart icon test failed: incorrect cart message"
 
-    def test_tc_01_02_15_verify_the_presence_of_a_placeholder_in_the_search_field(self, driver):
+    def test_tc_01_02_15_presence_of_a_placeholder_in_the_search_field(self, driver):
         """Check the "Search" field in the header contains the placeholder 'Search entire store here...'"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         assert page.check_search_field() == "Search entire store here...", \
             "Text in the Placeholder field does not match or is missing"
+
+    def test_tc_01_02_14_functionality_of_the_search_field(self, driver):
+        """Check the "Search" field is activated and the drop-down list appears with various product"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        dropdown_items = page.enter_search_term_and_get_dropdown()
+        assert dropdown_items is not None and len(dropdown_items) > 0, "Error: No drop-down list appears or it`s empty"
 
