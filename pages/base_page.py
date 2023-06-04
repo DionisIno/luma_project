@@ -91,3 +91,28 @@ class BasePage:
         action = ActionChains(self.driver)
         action.move_to_element(element)
         action.perform()
+
+    @allure.step('Click on element and return it')
+    def click_and_return_element(self, locator):
+        """
+        This method finds a visible element using the provided locator,
+        performs a click action on it, and then returns the element.
+        Locator - is used to find the element.
+        """
+        element = self.element_is_visible(locator)
+        element.click()
+        return element
+
+    @allure.step('Check element hover style')
+    def check_element_hover_style(self, locator, css_property):
+        """
+        This method finds a visible element using the provided locator,
+        simulates a hover action by moving the cursor to it,
+        and then returns the value of the specified CSS property of the element.
+        Locator - is used to find the element.
+        Css_property - the name of the CSS property whose value is to be returned.
+        """
+        element = self.element_is_visible(locator)
+        self.action_move_to_element(element)
+        return element.value_of_css_property(css_property)
+

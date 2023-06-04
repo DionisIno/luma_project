@@ -68,7 +68,7 @@ class TestHeader:
             "Sale page isn't opened or the page header is incorrect"
 
     def test_tc_01_02_17_verify_the_display_and_interactivity_of_the_cart_icon(self, driver):
-        """Verify hovering over the shopping cart icon changes the cursor to a "hand," indicating that the cart is a \
+        """Check hovering over the shopping cart icon changes the cursor to a "hand," indicating that the cart is a \
         clickable element, click on it and the message "You have no items in your shopping cart." appears"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
@@ -77,4 +77,11 @@ class TestHeader:
         page.click_and_return_element(page.header_locators.CART_ICON)
         assert page.check_cart_message() == "You have no items in your shopping cart.", \
             "Cart icon test failed: incorrect cart message"
+
+    def test_tc_01_02_15_verify_the_presence_of_a_placeholder_in_the_search_field(self, driver):
+        """Check the "Search" field in the header contains the placeholder 'Search entire store here...'"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        assert page.check_search_field() == "Search entire store here...", \
+            "Text in the Placeholder field does not match or is missing"
 
