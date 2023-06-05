@@ -33,5 +33,9 @@ class MainPage(BasePage):
         return text_before, text_after
 
     def check_card_price(self):
+        """
+        This method gets the price of an item
+        :return: price in USD
+        """
         text = self.get_text(self.locators.CARD_PRICE)
         return text

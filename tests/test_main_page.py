@@ -31,6 +31,7 @@ class TestMainPage:
                 "Headers are not equal or redirect to the wrong page of the site"
 
         def test_check_card_price(self, driver):
+            """This test checks that the card has a price and a price in USD"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             text = page.check_card_price()
