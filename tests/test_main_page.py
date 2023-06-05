@@ -29,3 +29,9 @@ class TestMainPage:
             text_before, text_after = page.check_the_correct_page_title_after_click_on_the_card()
             assert text_before == text_after, \
                 "Headers are not equal or redirect to the wrong page of the site"
+
+        def test_check_card_price(self, driver):
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            text = page.check_card_price()
+            assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
