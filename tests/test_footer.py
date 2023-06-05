@@ -1,15 +1,7 @@
-
 import pytest
 from selenium.webdriver.common.by import By
 from data.data_urls import MAIN_PAGE_URL, DATA_1
 from pages.footer_page import FooterPage
-
-
-def test_check_link(driver):
-    driver.get("https://magento.softwaretestingboard.com/")
-    link = driver.find_element(By.CSS_SELECTOR, "ul[class='footer links'] li:nth-child(1)")
-    print("4")
-    assert link.is_enabled()
 
 
 class TestFooter:
