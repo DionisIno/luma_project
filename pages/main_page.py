@@ -31,3 +31,7 @@ class MainPage(BasePage):
         self.element_is_visible(self.locators.CARD_IMG).click()
         text_after = self.get_text(self.locators.H1_TITLE)
         return text_before, text_after
+
+    def check_card_price(self):
+        text = self.get_text(self.locators.CARD_PRICE)
+        return text
