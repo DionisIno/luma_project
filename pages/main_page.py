@@ -20,3 +20,14 @@ class MainPage(BasePage):
         card_item = self.element_is_visible(self.locators.CARD_TITLE)
         text_title = card_item.text
         return text_title
+
+    def check_the_correct_page_title_after_click_on_the_card(self):
+        """
+        This method gets the title text of the product card,
+        click on the product card, go to the product page,
+        get the title of the product and return the titles
+        """
+        text_before = self.get_text(self.locators.CARD_TITLE)
+        self.element_is_visible(self.locators.CARD_IMG).click()
+        text_after = self.get_text(self.locators.H1_TITLE)
+        return text_before, text_after

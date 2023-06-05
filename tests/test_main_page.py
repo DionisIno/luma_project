@@ -5,7 +5,6 @@ from data.data_urls import MAIN_PAGE_URL
 
 
 class TestMainPage:
-
     class TestHotSellerSection:
 
         def test_verify_the_card_is_interactive_on_hover(self, driver):
@@ -23,3 +22,10 @@ class TestMainPage:
             title_text = page.check_product_card_title()
             assert len(title_text) > 0, "Card has no title"
 
+        def test_check_for_duplicate_titles_after_clicking_on_the_card(self, driver):
+            """This test checks for the same titles after clicking on the product card and going to the product page"""
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            text_before, text_after = page.check_the_correct_page_title_after_click_on_the_card()
+            assert text_before == text_after, \
+                "Headers are not equal or redirect to the wrong page of the site"

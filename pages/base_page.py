@@ -116,3 +116,11 @@ class BasePage:
         self.action_move_to_element(element)
         return element.value_of_css_property(css_property)
 
+    @allure.step('Get element text')
+    def get_text(self, locator):
+        """
+        This method get element text
+        :return: element text
+        """
+        text = self.element_is_visible(locator)
+        return text.text
