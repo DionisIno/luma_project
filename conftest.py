@@ -1,9 +1,20 @@
+import json
+import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-import os
+from locators.sign_in_page_locators import SingInPageLocators as sil
+from locators.header_page_locators import HeaderPageLocators as hpl
+from data.data_urls import MAIN_PAGE_URL
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait as wait
+from selenium.webdriver.support import expected_conditions as EC
+
+CUSTOMER_EMAIL = (By.CSS_SELECTOR, "#email")
+CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
+SIGN_IN_BUTTON = (By.ID, 'send2')
 
 
 @pytest.fixture(scope="function")
@@ -22,3 +33,26 @@ def driver():
     yield driver
     print('\nquit browser...')
     driver.quit()
+
+
+@pytest.fixture(scope="session")
+def config():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    config_file = os.path.join(current_dir, "config.json")
+    with open(config_file) as f:
+        config = json.load(f)
+    return config
+
+
+@pytest.fixture(scope="function")
+def sing_in(driver, config):
+    driver.get(MAIN_PAGE_URL)
+    sing_in_button = wait(driver, config["timeout"]).until(EC.visibility_of_element_located(hpl.SIGN_IN))
+    sing_in_button.click()
+    email = wait(driver, config["timeout"]).until(EC.visibility_of_element_located(sil.CUSTOMER_EMAIL))
+    email.send_keys(config["email"])
+    password = wait(driver, config["timeout"]).until(EC.visibility_of_element_located(sil.CUSTOMER_PASSWORD))
+    password.send_keys(config["password"])
+    button = wait(driver, config["timeout"]).until(EC.element_to_be_clickable(sil.SIGN_IN_BUTTON))
+    button.click()
+
