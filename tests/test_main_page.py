@@ -1,4 +1,6 @@
 """This section contains home page tests"""
+import json
+import time
 
 from pages.main_page import MainPage
 from data.data_urls import MAIN_PAGE_URL
@@ -36,3 +38,11 @@ class TestMainPage:
             page.open()
             text = page.check_card_price()
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
+
+        def test_example(self, driver, sing_in):
+
+            page = MainPage(driver, MAIN_PAGE_URL)
+
+            time.sleep(20)
+
+
