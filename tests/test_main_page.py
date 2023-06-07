@@ -43,6 +43,5 @@ class TestMainPage:
 
             page = MainPage(driver, MAIN_PAGE_URL)
 
-            time.sleep(20)
 
 
