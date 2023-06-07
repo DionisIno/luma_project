@@ -37,7 +37,7 @@ def driver():
 
 @pytest.fixture(scope="session")
 def config():
-    with open("../config.json") as f:
+    with open("config.json") as f:
         config = json.load(f)
     return config
 
