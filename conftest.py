@@ -37,7 +37,9 @@ def driver():
 
 @pytest.fixture(scope="session")
 def config():
-    with open("config.json") as f:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    config_file = os.path.join(current_dir, "config.json")
+    with open(config_file) as f:
         config = json.load(f)
     return config
 
