@@ -52,3 +52,20 @@ class MainPage(BasePage):
         self.hover_by_item()
         btn_status = self.element_is_visible(self.locators.BTN_ADD_TO_CART)
         return btn_status
+
+
+class PromoBlock(BasePage):
+    locators = MainPageLocators
+
+    def check_promo_block_display(self):
+        """Checks promo block display"""
+        promo_block = self.element_is_visible(self.locators.PROMO_BLOCK)
+        return promo_block.is_displayed()
+
+    def check_info_block_title(self):
+        """Checks the title of info-block in block 1 'home-pants'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TITLE)
+        info_block_title = element.text
+        return info_block_title
+
+

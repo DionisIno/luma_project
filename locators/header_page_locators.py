@@ -18,4 +18,5 @@ class HeaderPageLocators:
 
     # Top menu navigation
     SALE = (By.ID, 'ui-id-8')
-
+    TRAINING = (By.ID, 'ui-id-7')
+    VIDEO_DOWNLOAD = (By.ID, 'ui-id-28')

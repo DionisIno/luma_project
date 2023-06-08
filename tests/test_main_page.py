@@ -2,7 +2,7 @@
 import json
 import time
 
-from pages.main_page import MainPage
+from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL
 
 
@@ -39,8 +39,8 @@ class TestMainPage:
             text = page.check_card_price()
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
 
-        def test_example(self, driver, sing_in):
 
+        def test_example(self, driver, sing_in):
             page = MainPage(driver, MAIN_PAGE_URL)
 
         def test_tc_06_01_08_check_btn_add_to_cart_is_visible(self, driver):
@@ -49,3 +49,19 @@ class TestMainPage:
             page.open()
             assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
 
+
+    class TestPromoBlock:
+
+        def test_check_promo_block_display(self, driver):
+            """This test checks if promo block under header is displayed on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            promo_block = page.check_promo_block_display()
+            assert promo_block is True, "The element is not visible"
+
+        def test_check_info_block_title_in_section_2_block_1(self, driver):
+            """This test checks if the info block title in section 2 block 1 'home-pants' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title()
+            assert info_block_title == "20% OFF", "The title is not correct"

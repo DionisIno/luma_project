@@ -56,11 +56,11 @@ class TestHeader:
         page.click_and_return_element(page.header_locators.LOGO)
         assert driver.current_url == MAIN_PAGE_URL, "Failed: Clicking on the logo does not redirect to the main page"
 
-    def test_tc_01_03_53_verify_correctly_redirected_the_link_sale(self, driver):
-        """Verify 'Sale' link click redirected to the Sale page and the "Sale" header is displayed"""
+    def test_tc_01_03_53_correctly_redirected_the_link_sale(self, driver):
+        """Verify 'Sale' link click redirected to the page and the 'Sale' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        header = page.verify_redirected_the_link_sale(page)
+        header = page.redirected_the_link_sale(page)
         assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
             "Sale page isn't opened or the page header is incorrect"
 
@@ -96,3 +96,31 @@ class TestHeader:
         initial_box_shadow, active_box_shadow = page.activate_search_field_and_check_style()
         assert initial_box_shadow != active_box_shadow, "Error: Search field style doesn't change on activation"
 
+    def test_tc_01_03_52_visible_and_interactive_the_link_sale(self, driver):
+        """Verify the link 'Sale' is visible and interactive"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        link = page.link_sale_is_visible_and_interactive()
+        assert link, "The link 'Sale' isn't visible and non-interactive"
+
+    def test_tc_01_03_50_correctly_redirected_the_link_training(self, driver):
+        """Verify 'Training' link click redirected to the page and the 'Training' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_training()
+        assert current_page, "Training page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_51_correctly_redirected_the_link_training_video_download(self,driver):
+        """Verify 'Training - Video Download' link click redirected to the 'Video Download' page
+             and the 'Video Download' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_training_video_download()
+        assert current_page, "Video Download page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_49_visible_and_interactive_the_link_training(self, driver):
+        """Verify the link 'Training' is visible and interactive and link 'Video Download' is visible"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        link = page.link_training_is_visible_and_interactive()
+        assert link, "The link 'Sale' isn't visible and non-interactive"
