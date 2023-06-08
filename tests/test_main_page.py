@@ -58,3 +58,10 @@ class TestMainPage:
             page.open()
             info_block_title = page.check_info_block_title()
             assert info_block_title == "20% OFF", "The title is not correct"
+
+        def test_check_info_block_text_in_section_2_block_1(self, driver):
+            """This test checks if the info block text in section 2 block 1 'home-pants' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text()
+            assert info_block_text == "Luma pants when you shop today*", "The text is not correct"
