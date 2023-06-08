@@ -8,7 +8,7 @@ MY_ACCOUNT_URL = MAIN_PAGE_URL + 'customer/account/'
 URL_AFTER_LOGIN = MAIN_PAGE_URL + \
                    'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
-
+TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
