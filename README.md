@@ -2,6 +2,10 @@
 
 This project was created by students RedRoverSchool under my leadership (Denis Tadzhibaev), as well as the following students:
 
+1. Natalya Mastyaeva [![linkedin](https://camo.githubusercontent.com/2c85d4c4312f3fb155768b8f9ebbe7c759f71f4eb0e281da9e656f32415dbe91/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3039303930393f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d303037336231)](https://www.linkedin.com/in/natalya-mastyaeva/) [![github](https://camo.githubusercontent.com/75034af641cfa10810d5f7bb9f0e815a1ec2ce3d9ee5540893518b4d3727712c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769746875622d3039303930393f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d386363346437)](https://github.com/Nat754)
+
+2. Stanislav Osipov  [![linkedin](https://camo.githubusercontent.com/2c85d4c4312f3fb155768b8f9ebbe7c759f71f4eb0e281da9e656f32415dbe91/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3039303930393f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d303037336231)](https://www.linkedin.com/in/stanislav-osipov89/) [![github](https://camo.githubusercontent.com/75034af641cfa10810d5f7bb9f0e815a1ec2ce3d9ee5540893518b4d3727712c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769746875622d3039303930393f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d386363346437)](https://github.com/Badx86)
+
 
 [![luma_project](https://github.com/DionisIno/luma_project/actions/workflows/luma.yml/badge.svg?branch=)](https://github.com/DionisIno/luma_project/actions/workflows/luma.yml)
 ![Python Version](https://img.shields.io/badge/python-3.11-blue)
