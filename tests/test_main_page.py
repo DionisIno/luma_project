@@ -46,8 +46,15 @@ class TestMainPage:
     class TestPromoBlock:
 
         def test_check_promo_block_display(self, driver):
-            """Check promo block under header is displayed on the main page"""
+            """This test checks if promo block under header is displayed on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             promo_block = page.check_promo_block_display()
             assert promo_block is True, "The element is not visible"
+
+        def test_check_info_block_title_in_section_2_block_1(self, driver):
+            """This test checks if the info block title in section 2 block 1 'home-pants' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title()
+            assert info_block_title == "20% OFF", "The title is not correct"
