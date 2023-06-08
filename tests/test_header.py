@@ -100,7 +100,7 @@ class TestHeader:
         """Verify the link 'Sale' is visible and interactive"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        link = page.link_is_visible_and_interactive()
+        link = page.link_sale_is_visible_and_interactive()
         assert link, "The link 'Sale' isn't visible and non-interactive"
 
     def test_tc_01_03_50_correctly_redirected_the_link_training(self, driver):
@@ -117,3 +117,10 @@ class TestHeader:
         page.open()
         current_page = page.redirected_the_link_training_video_download()
         assert current_page, "Video Download page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_49_visible_and_interactive_the_link_training(self, driver):
+        """Verify the link 'Training' is visible and interactive and link 'Video Download' is visible"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        link = page.link_training_is_visible_and_interactive()
+        assert link, "The link 'Sale' isn't visible and non-interactive"

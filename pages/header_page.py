@@ -65,7 +65,7 @@ class HeaderPage(BasePage):
         active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
         return initial_box_shadow, active_box_shadow
 
-    def link_is_visible_and_interactive(self):
+    def link_sale_is_visible_and_interactive(self):
         element = self.element_is_visible(self.header_locators.SALE)
         clickable = self.element_is_clickable(self.header_locators.SALE)
         interactive = self.check_element_hover_style(self.header_locators.SALE, 'pointer')
@@ -79,10 +79,15 @@ class HeaderPage(BasePage):
         return url == TRAINING_PAGE_URL and text == "Training"
 
     def redirected_the_link_training_video_download(self):
-        element = self.element_is_visible(self.header_locators.TRAINING)
         self.check_element_hover_style(self.header_locators.TRAINING, 'pointer')
-        video_element = self.element_is_present(self.header_locators.VIDEO_DOWNLOAD)
-        video_element.click()
+        element = self.element_is_present(self.header_locators.VIDEO_DOWNLOAD)
+        element.click()
         url = self.driver.current_url
         text = self.get_text(self.training_video_locators.HEAD_TEXT)
         return url == VIDEO_DOWNLOAD_PAGE_URL and text == "Video Download"
+
+    def link_training_is_visible_and_interactive(self):
+        self.element_is_visible(self.header_locators.TRAINING)
+        interactive = self.check_element_hover_style(self.header_locators.TRAINING, 'pointer')
+        element = self.element_is_visible(self.header_locators.VIDEO_DOWNLOAD)
+        return element, interactive
