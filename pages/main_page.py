@@ -39,3 +39,14 @@ class MainPage(BasePage):
         """
         text = self.get_text(self.locators.CARD_PRICE)
         return text
+
+
+class PromoBlock(BasePage):
+    locators = MainPageLocators
+
+    def check_promo_block_display(self):
+        """Checks promo block display"""
+        promo_block = self.element_is_visible(self.locators.PROMO_BLOCK)
+        return promo_block.is_displayed()
+
+
