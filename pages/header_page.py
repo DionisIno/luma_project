@@ -1,9 +1,10 @@
-from data.data_urls import TRAINING_PAGE_URL
+from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
+from locators.training_video_page_locators import TrainingVideoPageLocators
 
 
 class HeaderPage(BasePage):
@@ -11,6 +12,7 @@ class HeaderPage(BasePage):
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
     training_locators = TrainingPageLocators
+    training_video_locators = TrainingVideoPageLocators
 
 
     def check_greeting_message(self):
@@ -75,3 +77,12 @@ class HeaderPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.training_locators.HEAD_TEXT)
         return url == TRAINING_PAGE_URL and text == "Training"
+
+    def redirected_the_link_training_video_download(self):
+        element = self.element_is_visible(self.header_locators.TRAINING)
+        self.check_element_hover_style(self.header_locators.TRAINING, 'pointer')
+        video_element = self.element_is_present(self.header_locators.VIDEO_DOWNLOAD)
+        video_element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.training_video_locators.HEAD_TEXT)
+        return url == VIDEO_DOWNLOAD_PAGE_URL and text == "Video Download"
