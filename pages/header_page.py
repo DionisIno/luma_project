@@ -1,4 +1,4 @@
-from data.data_urls import SALE_PAGE_URL, TRAINING_PAGE_URL
+from data.data_urls import TRAINING_PAGE_URL
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
