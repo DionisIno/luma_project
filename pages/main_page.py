@@ -61,4 +61,10 @@ class PromoBlock(BasePage):
         info_block_text = element.text
         return info_block_text
 
+    def check_info_block_sign(self):
+        """Checks the sign in info-block in block 1 'home-pants'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_SIGN)
+        info_block_sign = element.text
+        return info_block_sign
+
 
