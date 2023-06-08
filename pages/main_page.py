@@ -53,6 +53,12 @@ class MainPage(BasePage):
         btn_status = self.element_is_visible(self.locators.BTN_ADD_TO_CART)
         return btn_status
 
+    def check_rating(self):
+        pass
+
+    def check_review(self):
+        self.element_is_visible(self.locators.CARD_TITLE)
+
 
 class PromoBlock(BasePage):
     locators = MainPageLocators

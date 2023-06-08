@@ -40,8 +40,10 @@ class TestMainPage:
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
 
 
-        def test_example(self, driver, sing_in):
+        def test_check_card_rating(self, driver):
+            """This test checks that if a product has a review, then the product card has a rating"""
             page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
 
         def test_tc_06_01_08_check_btn_add_to_cart_is_visible(self, driver):
             """This test checks that button Add to Cart is visible on the product card when hover by product"""
