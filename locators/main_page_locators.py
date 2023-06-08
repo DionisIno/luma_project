@@ -13,6 +13,7 @@ class MainPageLocators:
     CARD_IMG = (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) img[class='product-image-photo']")
     H1_TITLE = (By.CSS_SELECTOR, "h1[class='page-title']")
     CARD_PRICE = (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) span[class='price']")
+    BTN_ADD_TO_CART = (By.CSS_SELECTOR, 'button.action.tocart')
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, '.blocks-promo')

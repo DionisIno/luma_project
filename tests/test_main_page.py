@@ -43,6 +43,13 @@ class TestMainPage:
         def test_example(self, driver, sing_in):
             page = MainPage(driver, MAIN_PAGE_URL)
 
+        def test_tc_06_01_08_check_btn_add_to_cart_is_visible(self, driver):
+            """This test checks that button Add to Cart is visible on the product card when hover by product"""
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
+
+
     class TestPromoBlock:
 
         def test_check_promo_block_display(self, driver):
