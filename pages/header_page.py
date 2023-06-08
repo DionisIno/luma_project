@@ -14,7 +14,6 @@ class HeaderPage(BasePage):
     training_locators = TrainingPageLocators
     training_video_locators = TrainingVideoPageLocators
 
-
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
