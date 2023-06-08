@@ -2,7 +2,7 @@
 import json
 import time
 
-from pages.main_page import MainPage
+from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL
 
 
@@ -39,9 +39,15 @@ class TestMainPage:
             text = page.check_card_price()
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
 
-        def test_example(self, driver, sing_in):
 
+        def test_example(self, driver, sing_in):
             page = MainPage(driver, MAIN_PAGE_URL)
 
+    class TestPromoBlock:
 
-
+        def test_check_promo_block_display(self, driver):
+            """Check promo block under header is displayed on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            promo_block = page.check_promo_block_display()
+            assert promo_block is True, "The element is not visible"
