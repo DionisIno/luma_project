@@ -27,7 +27,7 @@ class HeaderPage(BasePage):
     def check_logo_link(self):
         return self.element_is_visible(self.header_locators.LOGO)
 
-    def verify_redirected_the_link_sale(self, page):
+    def redirected_the_link_sale(self, page):
         page.click_and_return_element(page.header_locators.SALE)
         return self.element_is_visible(self.header_locators.SALE)
 
@@ -59,3 +59,8 @@ class HeaderPage(BasePage):
         active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
         return initial_box_shadow, active_box_shadow
 
+    def link_is_visible_and_interactive(self):
+        element = self.element_is_visible(self.header_locators.SALE)
+        clickable = self.element_is_clickable(self.header_locators.SALE)
+        interactive = self.check_element_hover_style(self.header_locators.SALE, 'pointer')
+        return element, clickable, interactive
