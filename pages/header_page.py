@@ -1,13 +1,17 @@
+from data.data_urls import SALE_PAGE_URL, TRAINING_PAGE_URL
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
+from locators.training_page_locators import TrainingPageLocators
 
 
 class HeaderPage(BasePage):
     header_locators = HeaderPageLocators
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
+    training_locators = TrainingPageLocators
+
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
@@ -64,3 +68,10 @@ class HeaderPage(BasePage):
         clickable = self.element_is_clickable(self.header_locators.SALE)
         interactive = self.check_element_hover_style(self.header_locators.SALE, 'pointer')
         return element, clickable, interactive
+
+    def redirected_the_link_training(self):
+        element = self.element_is_visible(self.header_locators.TRAINING)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.training_locators.HEAD_TEXT)
+        return url == TRAINING_PAGE_URL and text == "Training"
