@@ -39,3 +39,16 @@ class MainPage(BasePage):
         """
         text = self.get_text(self.locators.CARD_PRICE)
         return text
+
+    def hover_by_item(self):
+        """This method finds a visible element Product card,
+        simulates a hover action by moving the cursor to it,"""
+        card_item = self.element_is_visible(self.locators.PRODUCT_CARD)
+        self.action_move_to_element(card_item)
+
+    def btn_is_visible(self):
+        """This method check that button Add to Cart is visible
+        on the product card when hover by product"""
+        self.hover_by_item()
+        btn_status = self.element_is_visible(self.locators.BTN_ADD_TO_CART)
+        return btn_status
