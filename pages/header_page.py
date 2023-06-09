@@ -90,3 +90,9 @@ class HeaderPage(BasePage):
         interactive = self.check_element_hover_style(self.header_locators.TRAINING, 'pointer')
         element = self.element_is_visible(self.header_locators.VIDEO_DOWNLOAD)
         return element, interactive
+
+    def link_what_is_new_is_visible_and_interactive(self):
+        element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
+        clickable = self.element_is_clickable(self.header_locators.WHAT_IS_NEW)
+        interactive = self.check_element_hover_style(self.header_locators.WHAT_IS_NEW, 'pointer')
+        return element, clickable, interactive
