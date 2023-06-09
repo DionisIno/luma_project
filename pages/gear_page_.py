@@ -11,4 +11,11 @@ class GearPage(BasePage):
         bags = self.element_is_clickable(self.locators.BAGS)
         return bags
 
+    def check_bags_functionality(self):
+        bags = self.element_is_visible(self.locators.BAGS)
+        link = bags.click()
+        return link
 
+    def get_actual_url(self, driver):
+        actual_url = driver.current_url
+        return actual_url
