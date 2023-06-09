@@ -1,10 +1,11 @@
-from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL
+from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
 from locators.training_video_page_locators import TrainingVideoPageLocators
+from locators.women_page_locators import WomenPageLocators
 
 
 class HeaderPage(BasePage):
@@ -13,6 +14,7 @@ class HeaderPage(BasePage):
     sign_in_locators = SingInPageLocators
     training_locators = TrainingPageLocators
     training_video_locators = TrainingVideoPageLocators
+    women_locators = WomenPageLocators
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
@@ -96,3 +98,10 @@ class HeaderPage(BasePage):
         clickable = self.element_is_clickable(self.header_locators.WHAT_IS_NEW)
         interactive = self.check_element_hover_style(self.header_locators.WHAT_IS_NEW, 'pointer')
         return element, clickable, interactive
+
+    def redirection_of_the_link_women(self):
+        element = self.element_is_visible(self.header_locators.WOMEN)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.women_locators.WOMEN_HEAD_TEXT)
+        return url == WOMEN_PAGE_URL and text == "Women"
