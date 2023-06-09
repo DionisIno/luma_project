@@ -85,3 +85,7 @@ class SignInPage(BasePage):
     def click_sign_in_button(self):
         """This method clicks on sign-in button"""
         self.check_sign_in_button_is_visible().click()
+
+    def check_forgot_your_password_link(self):
+        """This method finds 'Forgot your password? link"""
+        return self.element_is_visible(self.locators.FORGOT_PASSWORD)

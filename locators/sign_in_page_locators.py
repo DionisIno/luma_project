@@ -14,5 +14,7 @@ class SingInPageLocators:
     CUSTOMER_PASSWORD_LABEL = (By.CSS_SELECTOR, "label[for ='pass'] span")
     CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
     SIGN_IN_BUTTON = (By.ID, 'send2')
+    FORGOT_PASSWORD = (By.XPATH, '//*[@id="login-form"]/fieldset/div[4]/div[2]/a/span')
+
 
     # SignIn form > New Customers
