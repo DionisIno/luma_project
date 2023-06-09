@@ -1,9 +1,11 @@
 import pytest
 
+from data import data_urls
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN
 from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN
 from data.credentials import credentials
+
 
 @pytest.fixture(scope="function")
 def sign_in_page(driver):
@@ -62,6 +64,11 @@ class TestRegisteredCustomers:
             expected_error_message = "Please enter a valid email address (Ex: johndoe@domain.com)."
             assert error_message == expected_error_message, "Incorrect error message displayed"
 
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that the 'Forgot your password?' link is present"""
+        element = sign_in_page.check_forgot_your_password_link()
+        assert element.is_displayed()
+
     class TestLoginFunctionality:
         @pytest.mark.parametrize('email, password', LOGIN)
         def test_03_02_01_to_03_02_10_login(self, driver, email, password):
@@ -73,7 +80,8 @@ class TestRegisteredCustomers:
             sign_in_page.click_sign_in_button()
             try:
                 assert sign_in_page.driver.current_url in URL_AFTER_LOGIN \
-                       and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Customer Login'], "Login failed"
+                       and sign_in_page.check_h1_header().text in ['My Account', 'Home Page',
+                                                                   'Customer Login'], "Login failed"
             except AssertionError as error:
                 print('Error: ', str(error))
                 return False
