@@ -104,7 +104,7 @@ class BasePage:
         return element
 
     @allure.step('Check element hover style')
-    def check_element_hover_style(self, locator, css_property):
+    def check_element_hover_style(self, element, css_property):
         """
         This method finds a visible element using the provided locator,
         simulates a hover action by moving the cursor to it,
@@ -112,7 +112,7 @@ class BasePage:
         Locator - is used to find the element.
         Css_property - the name of the CSS property whose value is to be returned.
         """
-        element = self.element_is_visible(locator)
+        # element = self.element_is_present(locator)
         self.action_move_to_element(element)
         return element.value_of_css_property(css_property)
 

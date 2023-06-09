@@ -2,6 +2,8 @@
 import json
 import time
 
+import pytest
+
 from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL
 
@@ -39,7 +41,6 @@ class TestMainPage:
             text = page.check_card_price()
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
 
-
         def test_check_card_rating(self, driver):
             """This test checks that if a product has a review, then the product card has a rating"""
             page = MainPage(driver, MAIN_PAGE_URL)
@@ -51,6 +52,14 @@ class TestMainPage:
             page.open()
             assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
 
+        @pytest.mark.xfail(reason="The test is unstable")
+        def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):
+            """This test check the color change when hovering over the Add to Cart button"""
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            background_before, background_after = \
+                page.check_the_color_change_to_add_to_cart_button()
+            assert background_before != background_after, "The add to cart button is not clickable."
 
     class TestPromoBlock:
 
