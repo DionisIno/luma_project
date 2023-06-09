@@ -131,3 +131,11 @@ class TestHeader:
         page.open()
         link = page.link_what_is_new_is_visible_and_interactive()
         assert link, "The link 'What's new' isn't visible and non-interactive"
+
+    def test_tc_01_03_04_correct_redirection_of_the_link_women(self, driver):
+        """Verify that the link 'Women' correctly opens and redirects to a new webpage, the header 'Women' is
+        displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirection_of_the_link_women()
+        assert current_page, "'Women' page isn't open or the 'Women' header is incorrect"
