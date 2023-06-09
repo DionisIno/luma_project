@@ -1,0 +1,1 @@
+product_card_button = ["add_to_card", "add_to_wish_list", "add_to_compare"]
