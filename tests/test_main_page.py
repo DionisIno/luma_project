@@ -52,7 +52,6 @@ class TestMainPage:
             page.open()
             assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
 
-        @pytest.mark.xfail(reason="The test is unstable")
         def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):
             """This test check the color change when hovering over the Add to Cart button"""
             page = MainPage(driver, MAIN_PAGE_URL)
