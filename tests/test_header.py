@@ -1,4 +1,4 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, SALE_PAGE_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL
 from pages.header_page import HeaderPage
 
 
@@ -60,9 +60,8 @@ class TestHeader:
         """Verify 'Sale' link click redirected to the page and the 'Sale' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        header = page.redirected_the_link_sale(page)
-        assert driver.current_url == SALE_PAGE_URL and header.text == "Sale", \
-            "Sale page isn't opened or the page header is incorrect"
+        link = page.redirected_the_link_sale()
+        assert link, "Sale page isn't opened or the page header is incorrect"
 
     def test_tc_01_02_17_display_and_interactivity_of_the_cart_icon(self, driver):
         """Check hovering over the shopping cart icon changes the cursor to a "hand," indicating that the cart is a \
@@ -110,7 +109,7 @@ class TestHeader:
         current_page = page.redirected_the_link_training()
         assert current_page, "Training page isn't opened or the page header is incorrect"
 
-    def test_tc_01_03_34_correctly_redirected_the_link_training_video_download(self,driver):
+    def test_tc_01_03_34_correctly_redirected_the_link_training_video_download(self, driver):
         """Verify 'Training - Video Download' link click redirected to the 'Video Download' page
              and the 'Video Download' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -139,3 +138,10 @@ class TestHeader:
         page.open()
         current_page = page.redirection_of_the_link_women()
         assert current_page, "'Women' page isn't open or the 'Women' header is incorrect"
+
+    def test_tc_01_03_02_correctly_redirected_the_link_what_is_new(self, driver):
+        """Verify the link 'What's new' redirected to the page and the 'What's new' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_what_is_new()
+        assert current_page, "What's new page isn't opened or the page header is incorrect"
