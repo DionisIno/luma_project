@@ -68,7 +68,7 @@ class MainPage(BasePage):
             card = self.element_is_visible(self.locators.PRODUCT_CARD)
             self.action_move_to_element(card)
         with allure.step("Hover mouse cursor over 'add to cart' button"):
-            background_after = self.check_element_hover_style(add_to_card_button, "background-color")
+            background_after = self.check_element_hover_style(add_to_card_button, "background-color", 2)
         return background_before, background_after
 
     def check_review(self):
