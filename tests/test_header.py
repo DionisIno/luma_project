@@ -136,4 +136,4 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         current_page = page.redirected_the_link_what_is_new()
-        assert current_page, "Training page isn't opened or the page header is incorrect"
+        assert current_page, "What's new page isn't opened or the page header is incorrect"
