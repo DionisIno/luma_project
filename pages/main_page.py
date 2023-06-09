@@ -51,7 +51,7 @@ class MainPage(BasePage):
         """This method check that button Add to Cart is visible
         on the product card when hover by product"""
         self.hover_by_item()
-        btn_status = self.element_is_visible(self.locators.BTN_ADD_TO_CART)
+        btn_status = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_card"])
         return btn_status
 
     @allure.step("Check the color change on hover on the Add to Cart button")
@@ -62,7 +62,7 @@ class MainPage(BasePage):
         and checks for the button color change
         """
         with allure.step("Get button properties before hover"):
-            add_to_card_button = self.element_is_present(self.locators.BTN_ADD_TO_CART)
+            add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_card"])
             background_before = add_to_card_button.value_of_css_property("background-color")
         with allure.step("Hover mouse cursor on a product card"):
             card = self.element_is_visible(self.locators.PRODUCT_CARD)
@@ -71,8 +71,22 @@ class MainPage(BasePage):
             background_after = self.check_element_hover_style(add_to_card_button, "background-color", 2)
         return background_before, background_after
 
-    def check_review(self):
-        self.element_is_visible(self.locators.CARD_TITLE)
+    @allure.step("Check the cursor change on hover on the card buttons")
+    def check_the_cursor_change_to_cart_buttons(self, item):
+        """
+        This test hovers the mouse cursor over the product card,
+        hovers the mouse cursor over the add to cart button,
+        and checks for the button cursor change
+        """
+        with allure.step("Get button properties before hover"):
+            cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
+        with allure.step("Hover mouse cursor on a product card"):
+            card = self.element_is_visible(self.locators.PRODUCT_CARD)
+            self.action_move_to_element(card)
+        with allure.step("Hover mouse cursor over button"):
+            cursor = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[item])
+            cursor_after = self.check_element_hover_style(cursor, "cursor", 2)
+        return cursor_before, cursor_after
 
 
 class PromoBlock(BasePage):

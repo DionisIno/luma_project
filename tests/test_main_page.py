@@ -6,6 +6,7 @@ import pytest
 
 from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL
+from data.main_data import product_card_button
 
 
 class TestMainPage:
@@ -58,7 +59,15 @@ class TestMainPage:
             page.open()
             background_before, background_after = \
                 page.check_the_color_change_to_add_to_cart_button()
-            assert background_before != background_after, "The add to cart button is not clickable."
+            assert background_before != background_after, "Product card button did not change color on hover"
+
+        @pytest.mark.parametrize("item", product_card_button)
+        def test_tc_06_01_10_check_the_cursor_change_to_cart_button(self, driver, item):
+            """This test check the cursor change when hovering over the cart buttons"""
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            cursor_before, cursor_after = page.check_the_cursor_change_to_cart_buttons(item)
+            assert cursor_before != cursor_after, "Mouse cursor has not changed"
 
     class TestPromoBlock:
 
