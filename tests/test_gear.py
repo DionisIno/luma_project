@@ -5,6 +5,13 @@ from pages.gear_page_ import GearPage
 
 class TestGearPage:
 
+    def test_tc_10_01_01(self, driver):
+        """Checking title of the Category section"""
+        page = GearPage(driver, GEAR_PAGE_URL)
+        page.open()
+        title = page.check_text_in_category_title()
+        assert title == "Category", f"Expected title: 'Category', Actual title: {title}"
+
     def test_tc_11_01_02(self, driver):
         """Check that Bags is displayed and enabled"""
         page = GearPage(driver, GEAR_PAGE_URL)
