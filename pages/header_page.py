@@ -1,10 +1,12 @@
-from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL
+from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WHAT_IS_NEW_PAGE_URL, SALE_PAGE_URL
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
 from locators.training_video_page_locators import TrainingVideoPageLocators
+from locators.what_is_new_page_locators import WhatIsNewPageLocators
+from locators.sale_page_locators import MainContentPromoBlocks
 
 
 class HeaderPage(BasePage):
@@ -13,6 +15,8 @@ class HeaderPage(BasePage):
     sign_in_locators = SingInPageLocators
     training_locators = TrainingPageLocators
     training_video_locators = TrainingVideoPageLocators
+    what_is_new_locators = WhatIsNewPageLocators
+    sale_locators = MainContentPromoBlocks
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
@@ -32,9 +36,12 @@ class HeaderPage(BasePage):
     def check_logo_link(self):
         return self.element_is_visible(self.header_locators.LOGO)
 
-    def redirected_the_link_sale(self, page):
-        page.click_and_return_element(page.header_locators.SALE)
-        return self.element_is_visible(self.header_locators.SALE)
+    def redirected_the_link_sale(self):
+        element = self.element_is_visible(self.header_locators.SALE)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.sale_locators.HEAD_TEXT)
+        return url == SALE_PAGE_URL and text == "Sale"
 
     def check_cart_icon_link(self):
         return self.element_is_visible(self.header_locators.CART_ICON)
@@ -96,3 +103,10 @@ class HeaderPage(BasePage):
         clickable = self.element_is_clickable(self.header_locators.WHAT_IS_NEW)
         interactive = self.check_element_hover_style(self.header_locators.WHAT_IS_NEW, 'pointer')
         return element, clickable, interactive
+
+    def redirected_the_link_what_is_new(self):
+        element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.what_is_new_locators.HEAD_TEXT)
+        return url == WHAT_IS_NEW_PAGE_URL and text == "What's New"

@@ -15,3 +15,4 @@ class SideBarLocators:
 
 class MainContentPromoBlocks:
     """A class for Main Content Promo Blocks locators"""
+    HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
