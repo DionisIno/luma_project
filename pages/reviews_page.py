@@ -6,7 +6,8 @@ class ReviewsPage(BasePage):
     locators = ReviewsPageLocators
 
     def one_star_review_correct(self):
-        self.click_and_return_element(self.locators.STAR_1)
+        one_star_element = self.element_is_clickable(self.locators.STAR_1)
+        one_star_element.click()
 
     def nickname_input_review_correct(self):
         nickname_input_element = self.element_is_clickable(self.locators.NICKNAME_INPUT)
