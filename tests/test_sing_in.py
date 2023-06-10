@@ -3,7 +3,7 @@ import pytest
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN, sign_in_errors
-from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN
 from data.credentials import credentials
 
 
@@ -76,7 +76,7 @@ class TestLogin:
         sign_in_page.fill_in_email_field(credentials['valid_email'])
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
-        assert sign_in_page.driver.current_url in URL_AFTER_LOGIN \
+        assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
 
     def test_03_02_04_error_if_login_with_empty_email(self, driver, sign_in_page):
@@ -100,7 +100,7 @@ class TestLogin:
         sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
-        assert sign_in_page.driver.current_url in URL_AFTER_LOGIN \
+        assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
 
     def test_03_02_09_login_with_valid_email_containing_trailing_leading_spaces(self, driver, sign_in_page):
@@ -108,7 +108,7 @@ class TestLogin:
         sign_in_page.fill_in_email_field(credentials['valid_case_sensitive_email'])
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
-        assert sign_in_page.driver.current_url in URL_AFTER_LOGIN \
+        assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
 
 
