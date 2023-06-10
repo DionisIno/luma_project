@@ -1,5 +1,5 @@
 from pages.shopping_cart_page import ShoppingCartPage
-from data.data_urls import SHOPPING_CART_PAGE
+from data.data_urls import SHOPPING_CART_PAGE, MAIN_PAGE_URL
 
 
 class TestShoppingCart:
@@ -17,5 +17,12 @@ class TestShoppingCart:
         page.open()
         here_link = page.check_here_link_is_clickable()
         assert here_link is not None, 'The link "here" is not actual'
+
+    def test_tc_07_01_04_verify_here_link_leads_to_the_main_page(self, driver):
+        """Verify that the link "here" redirects to the main page."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        actual_link = page.here_link_actual_url()
+        assert actual_link == MAIN_PAGE_URL
 
 
