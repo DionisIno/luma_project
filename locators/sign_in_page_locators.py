@@ -21,3 +21,5 @@ class SingInPageLocators:
     ERROR_MESSAGE = (By.XPATH, '//div[@data-bind="html: $parent.prepareMessageForHtml(message.text)"]')
 
     # SignIn form > New Customers
+    NEW_CUSTOMERS_HEADER = (By.CSS_SELECTOR, "#block-new-customer-heading")
+    NEW_CUSTOMERS_NOTE = (By.CSS_SELECTOR, ".block-new-customer > div.block-content > p")
