@@ -71,37 +71,49 @@ class TestMainPage:
 
     class TestPromoBlock:
 
-        def test_check_promo_block_display(self, driver):
-            """This test checks if promo block under header is displayed on the main page"""
+        def test_tc_13_01_01_check_promo_block_display(self, driver):
+            """This test checks if Promo Block under header is displayed on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             promo_block = page.check_promo_block_display()
             assert promo_block is True, "The element is not visible"
 
-        def test_check_image_in_section_2_block_1(self, driver):
-            """This test checks if the info block image in section 2 block 1 'home-pants' is correct"""
+        def test_tc_13_01_16_check_image_in_section_2_block_1(self, driver):
+            """This test checks if the info block image in section 2 block 1 'home-pants' is correct
+            in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_image = page.check_block_image()
+            info_block_image = page.check_block_image_in_section2_block1()
             assert info_block_image == ImageUrls.SECTION_2_BLOCK_1_IMAGE_URL, "The image is not correct"
 
-        def test_check_info_block_title_in_section_2_block_1(self, driver):
-            """This test checks if the info block title in section 2 block 1 'home-pants' is correct"""
+        def test_tc_13_01_17_check_info_block_in_section2_block1(self, driver):
+            """This test checks if info block in section 2 block 1 'home-pants' is displayed
+            in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title()
+            info_block = page.check_info_block_display_in_section2_block1()
+            assert info_block is True, "The element is not visible"
+
+        def test_tc_13_01_18_check_info_block_title_in_section2_block1(self, driver):
+            """This test checks if the info block title in section 2 block 1 'home-pants' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section2_block1()
             assert info_block_title == "20% OFF", "The title is not correct"
 
-        def test_check_info_block_text_in_section_2_block_1(self, driver):
-            """This test checks if the info block text in section 2 block 1 'home-pants' is correct"""
+        def test_tc_13_01_19_check_info_block_text_in_section2_block1(self, driver):
+            """This test checks if the info block text in section 2 block 1 'home-pants' is correct
+            in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_text = page.check_info_block_text()
+            info_block_text = page.check_info_block_text_in_section2_block1()
             assert info_block_text == "Luma pants when you shop today*", "The text is not correct"
 
-        def test_check_info_block_sing_in_section_2_block_1(self, driver):
-            """This test checks if the sign in info block in section 2 block 1 'home-pants' is correct"""
+        def test_tc_13_01_20_check_info_block_sing_in_section2_block1(self, driver):
+            """This test checks if the sign in info block in section 2 block 1 'home-pants' is correct
+            in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign()
+            info_block_sign = page.check_info_block_sign_in_section2_block1()
             assert info_block_sign == "Shop Pants", "The text is not correct"
