@@ -10,9 +10,11 @@ from data.data_urls import MAIN_PAGE_URL, ImageUrls
 from data.main_data import product_card_button
 
 
+@allure.epic("Main Page")
 class TestMainPage:
+    @allure.feature("Testing Hot Seller Section")
     class TestHotSellerSection:
-
+        @allure.title("TC 06.01.02 - verify the card is interactive on hover")
         def test_verify_the_card_is_interactive_on_hover(self, driver):
             """This test checks that the card is interactive"""
             page = MainPage(driver, MAIN_PAGE_URL)
