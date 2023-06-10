@@ -97,6 +97,12 @@ class PromoBlock(BasePage):
         promo_block = self.element_is_visible(self.locators.PROMO_BLOCK)
         return promo_block.is_displayed()
 
+    def check_block_image(self):
+        """Checks the image of info-block in block 1 'home-pants'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_IMAGE)
+        info_block_image = element.get_attribute("src")
+        return info_block_image
+
     def check_info_block_title(self):
         """Checks the title of info-block in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TITLE)
