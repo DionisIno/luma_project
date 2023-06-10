@@ -14,6 +14,8 @@ TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
 
+
+# URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
           # "https://magento.softwaretestingboard.com/women.html",
@@ -48,3 +50,7 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
           # "https://magento.softwaretestingboard.com/contact/"
         ]
 
+
+class ImageUrls:
+    SECTION_2_BLOCK_1_IMAGE_URL = \
+        "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
