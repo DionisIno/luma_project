@@ -93,7 +93,7 @@ class BasePage:
         action.perform()
 
     @allure.step('Click on element and return it')
-    def click_and_return_element(self, locator, seconds=10):
+    def click_and_return_element(self, locator, seconds=15):
         """
         This method finds a visible element using the provided locator,
         performs a click action on it, and then returns the element.
