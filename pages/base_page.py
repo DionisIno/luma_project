@@ -26,7 +26,7 @@ class BasePage:
         return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
 
     @allure.step('Find visible elements')
-    def elements_are_visible(self, locator, timeout=5):
+    def elements_are_visible(self, locator, timeout=10):
         """
         This method expects to verify that the elements are present in the DOM tree, visible and displayed on the page.
         Visibility means that the elements are not only displayed but also have a height and width greater than 0.

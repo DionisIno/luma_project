@@ -132,3 +132,10 @@ class HeaderPage(BasePage):
         element_fitness_equipment = self.element_is_visible(self.header_locators.FITNESS_EQUIPMENT)
         element_watches = self.element_is_visible(self.header_locators.WATCHES)
         return element, clickable, interactive,element_bags, element_fitness_equipment, element_watches
+
+    def check_bottoms_subsection(self):
+        """This method moves the cursor over the 'Men' section, then over the 'Bottoms' subsection
+        and returns the 'Pants' and 'Shorts' subsections."""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION))
+        return self.element_is_visible(self.header_locators.PANTS_SHORTS_SUBSECTION)

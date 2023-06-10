@@ -147,3 +147,12 @@ class TestHeader:
         page.open()
         link = page.link_gear_is_visible_and_interactive()
         assert link, "The link 'Gear' isn't visible or non-interactive"
+
+    def test_tc_01_03_23_display_and_interactivity_of_the_bottoms_subsection(self, driver):
+        """Check the 'Bottoms' subsection under 'Men' section is displayed and the 'Pants' and 'Shorts' \
+        subsection is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        dropdown_items = page.check_bottoms_subsection()
+        assert dropdown_items.is_displayed(), "Error: The Pants and Shorts subsection is not displayed"
+
