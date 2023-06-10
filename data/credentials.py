@@ -12,7 +12,7 @@ credentials = {
     "password_with_trailing_spaces": 'Test#12p@ssword ',
     "new_email": 'testmail@mailinator.com',
     "new_password": 'P@sswordTest#12',
-    "valid_email": 'test170@mailinator.com',
-    "valid_case_sensitive_email": 'Test170@Mailinator.com',
-    "valid_email_with_spaces": ' test170@mailinator.com '
+    "valid_email": 'test130@mailinator.com',
+    "valid_case_sensitive_email": 'Test130@Mailinator.com',
+    "valid_email_with_spaces": ' test130@mailinator.com '
 }
