@@ -2,6 +2,7 @@
 import json
 import time
 
+import allure
 import pytest
 
 from pages.main_page import MainPage, PromoBlock
@@ -53,6 +54,7 @@ class TestMainPage:
             page.open()
             assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
 
+        @allure.title("TC 06.01.09 - check the color change to add to cart button")
         def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):
             """This test check the color change when hovering over the Add to Cart button"""
             page = MainPage(driver, MAIN_PAGE_URL)

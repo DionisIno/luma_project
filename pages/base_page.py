@@ -118,6 +118,19 @@ class BasePage:
         self.action_move_to_element(element)  # Move to the element
         return element.value_of_css_property(css_property)
 
+    @allure.step('Check element hover style using JavaScript')
+    def check_element_hover_style_using_js(self, element, css_property):
+        """
+        This method finds a visible element using the provided locator,
+        simulates a hover action by moving the cursor to it,
+        and then returns the value of the specified CSS property of the element using JavaScript.
+        Locator - is used to find the element.
+        Css_property - the name of the CSS property whose value is to be returned.
+        """
+        element_property = self.driver.execute_script(
+            f"return getComputedStyle(arguments[0]).getPropertyValue('{css_property}');", element)
+        return element_property
+
     @allure.step('Get element text')
     def get_text(self, locator):
         """
