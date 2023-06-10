@@ -22,3 +22,7 @@ class HeaderPageLocators:
     VIDEO_DOWNLOAD = (By.ID, 'ui-id-28')
     WHAT_IS_NEW = (By.ID, 'ui-id-3')
     WOMEN = (By.ID, 'ui-id-4')
+    GEAR = (By.ID, 'ui-id-6')
+    BAGS = (By.ID, 'ui-id-25')
+    FITNESS_EQUIPMENT = (By.ID, 'ui-id-26')
+    WATCHES = (By.ID, 'ui-id-27')
