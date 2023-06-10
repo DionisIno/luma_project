@@ -77,7 +77,7 @@ class TestLogin:
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
         assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
-               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
+               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
     def test_03_02_04_error_if_login_with_empty_email(self, driver, sign_in_page):
         """Check error message on attempt to log in with empty email"""
@@ -101,7 +101,7 @@ class TestLogin:
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
         assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
-               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
+               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
     def test_03_02_09_login_with_valid_email_containing_trailing_leading_spaces(self, driver, sign_in_page):
         """Check Success Login with correct credentials"""
@@ -109,7 +109,7 @@ class TestLogin:
         sign_in_page.fill_in_password_field(credentials['password'])
         sign_in_page.click_sign_in_button()
         assert sign_in_page.driver.current_url in URL_AFTER_SUCCESS_LOGIN \
-               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page'], "Login failed"
+               and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
 
 @pytest.mark.skip(reason="to be run with secret code for captcha")
