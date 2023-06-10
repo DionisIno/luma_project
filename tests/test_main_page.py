@@ -71,6 +71,14 @@ class TestMainPage:
             cursor_before, cursor_after = page.check_the_cursor_change_to_cart_buttons(item)
             assert cursor_before != cursor_after, "Mouse cursor has not changed"
 
+        @pytest.mark.parametrize("item", product_card_button[1:])
+        def test_tc_06_01_12_the_color_change_my_wish_and_add_to_compare_button(self, driver, item):
+            """This test checks the color change of the add to wishlist button and add to compare button on hover"""
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            color_before, color_after = page.check_the_color_change_to_add_to_cart_button()
+            assert color_before != color_after, "Product card button did not change color on hover"
+
     class TestPromoBlock:
 
         def test_tc_13_01_01_check_promo_block_display(self, driver):
