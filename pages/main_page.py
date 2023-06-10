@@ -82,13 +82,28 @@ class MainPage(BasePage):
             cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
         with allure.step("Hover mouse cursor on a product card"):
             card = self.element_is_visible(self.locators.PRODUCT_CARD)
-            print(self.locators.PRODUCT_CARD)
             self.action_move_to_element(card)
         with allure.step("Hover mouse cursor over button"):
             cursor = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[item])
-            print(self.locators.PRODUCT_CARD_BUTTONS[item])
             cursor_after = self.check_element_hover_style_using_js(cursor, "cursor")
         return cursor_before, cursor_after
+
+    @allure.step("Check the color change on hover on the wishlist button and add to compare button")
+    def check_the_color_change_my_wish_and_add_to_compare_button(self, item):
+        """
+        This test hovers the mouse cursor over the product card,
+        hovers the mouse cursor over the wishlist button and add to compare button,
+        and checks for the button color change
+        """
+        with allure.step("Get button properties before hover"):
+            add_to_card_button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[item])
+            color_before = add_to_card_button.value_of_css_property("color")
+        with allure.step("Hover mouse cursor on a product card"):
+            card = self.element_is_visible(self.locators.PRODUCT_CARD)
+            self.action_move_to_element(card)
+        with allure.step(f"Hover mouse cursor over '{item}' button"):
+            color_after = self.check_element_hover_style_using_js(add_to_card_button, "color")
+        return color_before, color_after
 
 
 class PromoBlock(BasePage):
