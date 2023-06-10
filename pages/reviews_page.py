@@ -40,7 +40,7 @@ class ReviewsPage(BasePage):
         review_input_element = self.element_is_visible(self.locators.SUBMIT_REVIEW_BUTTON)
         time.sleep(1)
         review_input_element.click()
-        time.sleep(10)
+        time.sleep(1)
         review_successfully_submitted = self.element_is_visible(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         time.sleep(1)
         return review_successfully_submitted

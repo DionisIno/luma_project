@@ -15,7 +15,7 @@ class BasePage:
         self.driver.get(self.url)
 
     @allure.step('Find a visible element')
-    def element_is_visible(self, locator, timeout=5):
+    def element_is_visible(self, locator, timeout=10):
         """
         This method expects to verify that the element is present in the DOM tree, visible, and displayed on the page.
         Visibility means that the element is not only displayed but also has a height and width greater than 0.
