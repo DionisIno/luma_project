@@ -22,7 +22,7 @@ class MainPageLocators:
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, '.blocks-promo')
-    SECTION_2_BLOCK_1_INFO_BLOCK_IMAGE = (By.CSS_SELECTOR, '.home-pants img')
+    SECTION_2_BLOCK_1_IMAGE = (By.CSS_SELECTOR, '.home-pants img')
     SECTION_2_BLOCK_1_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, '.home-pants .content .icon')
     SECTION_2_BLOCK_1_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, '.home-pants .content .info')
     SECTION_2_BLOCK_1_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, '.home-pants .content .title')
