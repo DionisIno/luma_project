@@ -1,3 +1,8 @@
+from selenium.webdriver.support import expected_conditions as EC
+from locators.reviews_page_locators import ReviewsPageLocators as locators
+
+from selenium.webdriver.support.wait import WebDriverWait
+
 from pages.reviews_page import ReviewsPage
 from data.data_urls import REVIEWS_URL
 
@@ -18,7 +23,9 @@ class TestReviews:
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
-        review_successfully_submitted = page.send_review_correct()
+        wait = WebDriverWait(driver, 10)
+        # review_successfully_submitted = page.send_review_correct()
+        review_successfully_submitted = wait.until(EC.visibility_of_element_located(locators.REVIEW_SUCCESSFULLY_SUBMITTED))
         assert review_successfully_submitted, "Leave a review failed"
         # assert review_successfully_submitted.text == "You submitted your review for moderation.", "Leave a review failed"
 
