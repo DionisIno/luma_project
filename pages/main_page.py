@@ -68,7 +68,7 @@ class MainPage(BasePage):
             card = self.element_is_visible(self.locators.PRODUCT_CARD)
             self.action_move_to_element(card)
         with allure.step("Hover mouse cursor over 'add to cart' button"):
-            background_after = self.check_element_hover_style(add_to_card_button, "background-color", 2)
+            background_after = self.check_element_hover_style_using_js(add_to_card_button, "background-color")
         return background_before, background_after
 
     @allure.step("Check the cursor change on hover on the card buttons")
@@ -82,10 +82,12 @@ class MainPage(BasePage):
             cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
         with allure.step("Hover mouse cursor on a product card"):
             card = self.element_is_visible(self.locators.PRODUCT_CARD)
+            print(self.locators.PRODUCT_CARD)
             self.action_move_to_element(card)
         with allure.step("Hover mouse cursor over button"):
             cursor = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS[item])
-            cursor_after = self.check_element_hover_style(cursor, "cursor", 2)
+            print(self.locators.PRODUCT_CARD_BUTTONS[item])
+            cursor_after = self.check_element_hover_style_using_js(cursor, "cursor")
         return cursor_before, cursor_after
 
 
