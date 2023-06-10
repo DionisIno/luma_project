@@ -8,6 +8,7 @@ import pytest
 from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL, ImageUrls
 from data.main_data import product_card_button
+from locators.main_page_locators import MainPageLocators
 
 
 @allure.epic("Main Page")
@@ -89,6 +90,14 @@ class TestMainPage:
             page.open()
             promo_block = page.check_promo_block_display()
             assert promo_block is True, "The element is not visible"
+
+        def test_tc_13_01_10_check_section2_block1_display(self, driver):
+            """This test checks if block 1 'home-pants' is displayed in section 2
+            of Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block1 = page.check_section2_block1_display()
+            assert block1 is True, "The element is not visible"
 
         def test_tc_13_01_16_check_image_in_section_2_block_1(self, driver):
             """This test checks if the info block image in section 2 block 1 'home-pants' is correct
