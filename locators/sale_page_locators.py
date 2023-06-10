@@ -8,6 +8,14 @@ class SideBarLocators:
     # WOMEN'S DEALS section
     WOMEN_DEALS_TITLE = (By.CSS_SELECTOR, '.categories-menu > strong:nth-child(1) > span')
     HOODIES_AND_SWEATSHIRTS_W = (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(1) > a')
+    WOMEN_DEALS_ELEMENTS = {
+        "hoodies_and_sweatshirts_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(1) > a'),
+        "jackets_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a'),
+        "tees_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(3) > a'),
+        "bras_and_tanks": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(4) > a'),
+        "pants_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(5) > a'),
+        "shorts_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(6) > a')
+    }
     # MEN'S DEALS section
 
     # Gear Deals section
