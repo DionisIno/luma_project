@@ -12,4 +12,5 @@ class ReviewsPageLocators:
     REVIEW_INPUT = (By.CSS_SELECTOR, '#review_field')
     SUBMIT_REVIEW_BUTTON = (By.CSS_SELECTOR, '.submit')
     # REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, '.message-success')
-    REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, '.message-success.success.message')
+    # REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, '.message-success.success.message')
+    REVIEW_SUCCESSFULLY_SUBMITTED = (By.XPATH, '//*[@id="maincontent"]/div[1]/div[2]/div/div')
