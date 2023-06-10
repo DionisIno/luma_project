@@ -93,18 +93,19 @@ class BasePage:
         action.perform()
 
     @allure.step('Click on element and return it')
-    def click_and_return_element(self, locator):
+    def click_and_return_element(self, locator, seconds=10):
         """
         This method finds a visible element using the provided locator,
         performs a click action on it, and then returns the element.
         Locator - is used to find the element.
         """
         element = self.element_is_visible(locator)
+        wait(self.driver, seconds)
         element.click()
         return element
 
     @allure.step('Check element hover style')
-    def check_element_hover_style(self, element, css_property, seconds):
+    def check_element_hover_style(self, locator, css_property, seconds=10):
         """
         This method finds a visible element using the provided locator,
         simulates a hover action by moving the cursor to it,
@@ -112,8 +113,9 @@ class BasePage:
         Locator - is used to find the element.
         Css_property - the name of the CSS property whose value is to be returned.
         """
-        self.action_move_to_element(element)
+        element = self.element_is_visible(locator)  # Get the WebElement using locator
         wait(self.driver, seconds)
+        self.action_move_to_element(element)  # Move to the element
         return element.value_of_css_property(css_property)
 
     @allure.step('Get element text')

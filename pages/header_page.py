@@ -70,9 +70,9 @@ class HeaderPage(BasePage):
         This method activates the field "Search" and checks if the style of the field changes upon activation.
         It returns the styles before and after activation for comparison.
         """
-        initial_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
+        initial_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow', 5)
         self.click_and_return_element(self.header_locators.SEARCH_FIELD)
-        active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow')
+        active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow', 5)
         return initial_box_shadow, active_box_shadow
 
     def link_sale_is_visible_and_interactive(self):
