@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from locators.reviews_page_locators import ReviewsPageLocators
+import time
 
 
 class ReviewsPage(BasePage):
