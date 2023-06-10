@@ -44,5 +44,3 @@ class ReviewsPage(BasePage):
         review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         time.sleep(1)
         return review_successfully_submitted
-
-
