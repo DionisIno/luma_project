@@ -22,7 +22,6 @@ def driver():
         chrome_options.add_argument('--disable-dev-shm-usage')
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         driver.set_window_size(1900, 1000)
-        driver.implicitly_wait(5)
     else:
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
