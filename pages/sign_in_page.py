@@ -70,13 +70,13 @@ class SignInPage(BasePage):
         valid_email = re.match(pattern, email)
         return valid_email is not None
 
-    def get_error_message(self):
+    def get_error_message(self, locator):
         """
         This method validates that the error message is displayed
         when an incorrect email format is entered.
         """
-        error_element = self.driver.find_element_by_css_selector("#email-error")
-        return error_element.text if error_element else None
+        error = self.element_is_visible(locator)
+        return error.text if error else None
 
     def check_sign_in_button_is_visible(self):
         """This method verifies if sign-in button field is visible"""
