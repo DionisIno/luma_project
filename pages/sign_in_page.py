@@ -73,7 +73,7 @@ class SignInPage(BasePage):
     def get_error_message(self, locator):
         """
         This method validates that the error message is displayed
-        when an incorrect email format is entered.
+        on attempt to sign in with incorrect credentials.
         """
         error = self.element_is_visible(locator)
         return error.text if error else None
@@ -89,3 +89,11 @@ class SignInPage(BasePage):
     def check_forgot_your_password_link(self):
         """This method finds 'Forgot your password? link"""
         return self.element_is_visible(self.locators.FORGOT_PASSWORD)
+
+    def check_new_customers_heading(self):
+        """This method verifies if heading is visible"""
+        return self.element_is_visible(self.locators.NEW_CUSTOMERS_HEADER)
+
+    def check_new_customers_note(self):
+        """This method verifies if note is visible"""
+        return self.element_is_visible(self.locators.NEW_CUSTOMERS_NOTE)

@@ -141,3 +141,17 @@ class TestFailedLogin:
         print(error_message)
         assert error_message in [sign_in_errors['invalid_credentials_msg'], sign_in_errors['incorrect_captcha_msg']], \
             "The error message is incorrect or missing"
+
+
+class TestNewCustomers:
+    def test_03_01_19_new_customers_heading(self, driver, sign_in_page):
+        """Check New Customers Heading is present """
+        h1_heading = sign_in_page.check_new_customers_heading()
+        assert h1_heading is not None and h1_heading.text == sign_in_data["new_customers_heading"], \
+            "New Customers heading is incorrect or not present"
+
+    def test_03_01_03_new_customers_note(self, driver, sign_in_page):
+        """Check if Note is present under New Customers Heading"""
+        note = sign_in_page.check_new_customers_note()
+        assert note is not None and note.text == sign_in_data["new_customers_note"], \
+            "Note is incorrect or not present under New Customers"
