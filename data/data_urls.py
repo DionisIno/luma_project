@@ -13,8 +13,14 @@ WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
 TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
+MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
 MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
+MEN_BOTTOMS_SHORTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html"
+ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
+BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
+FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
+WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
 MEN_TOPS_URL = "https://magento.softwaretestingboard.com/men/tops-men.html"
 
@@ -55,5 +61,6 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
 
 
 class ImageUrls:
+    SECTION_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-main.jpg"
     SECTION_2_BLOCK_1_IMAGE_URL = \
         "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
