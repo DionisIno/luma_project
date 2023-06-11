@@ -129,12 +129,15 @@ class MainPage(BasePage):
         and checks that the correct page has been navigated to.
         :return:
         """
+        action = ActionChains(self.driver)
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
         button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         # self.action_move_to_element(button)
+        # action.click(button).perform()
         # button.click()
         self.driver.execute_script("arguments[0].click();", button)
+        action.pause(10).perform()
         error_message = self.get_error_message()
         return error_message
 
@@ -146,6 +149,7 @@ class MainPage(BasePage):
 
         # Получение текста сообщения об ошибке
         error_message = error_message_element
+        print(error_message)
         return error_message
 
 
