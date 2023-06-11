@@ -218,3 +218,10 @@ class TestHeader:
         page.open()
         current_page = page.redirected_the_link_gear_fitness_equipment()
         assert current_page, "The 'Fitness Equipment' page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_31_correctly_redirected_the_link_gear_watches(self, driver):
+        """Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_gear_watches()
+        assert current_page, "The 'Watches' page isn't opened or the page header is incorrect"
