@@ -1,10 +1,13 @@
 """This section contains the basic steps for running homepage tests"""
 import time
-
-import allure
+from selenium.webdriver.common.by import By
 
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
+from selenium.webdriver.support.ui import WebDriverWait as wait
+from selenium.webdriver.support import expected_conditions as EC
+import allure
+from selenium.webdriver import ActionChains
 
 
 class MainPage(BasePage):
@@ -128,14 +131,18 @@ class MainPage(BasePage):
         """
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
-        button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
+        button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         self.action_move_to_element(button)
         button.click()
         error_message = self.get_error_message()
-        return error_message.text
+        return error_message
 
     def get_error_message(self):
-        error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
+        error_message_locator = (By.CSS_SELECTOR, "div.message-error")
+        error_message_element = wait(self.driver, 30).until(EC.visibility_of_element_located(error_message_locator))
+
+        # Получение текста сообщения об ошибке
+        error_message = error_message_element.text
         return error_message
 
 
