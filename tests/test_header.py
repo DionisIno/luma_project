@@ -197,3 +197,9 @@ class TestHeader:
         dropdown_items = page.check_men_section_link()
         assert dropdown_items.is_displayed(), "Error: Tops and Bottoms subsections is not displayed"
 
+    def test_tc_01_03_28_correctly_redirected_the_link_gear(self, driver):
+        """Verify the link 'What's new' redirected to the page and the 'What's new' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_gear()
+        assert current_page, "The 'Gear' page isn't opened or the page header is incorrect"

@@ -149,3 +149,9 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         return self.element_is_visible(self.header_locators.TOPS_BOTTOMS_SUBSECTION)
 
+    def redirected_the_link_gear(self):
+        element = self.element_is_visible(self.header_locators.GEAR)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.gear_locators.HEAD_TEXT)
+        return url == GEAR_PAGE_URL and text == "Gear"
