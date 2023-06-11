@@ -15,6 +15,7 @@ VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/tra
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
 MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
+MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
 
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
