@@ -145,6 +145,11 @@ class PromoBlock(BasePage):
         info_block_title = element.text
         return info_block_title
 
+    def check_section2_display(self):
+        """Checks section 2 display"""
+        section2 = self.element_is_visible(self.locators.SECTION_2)
+        return section2.is_displayed()
+
     def check_section2_block1_display(self):
         """Checks section 2 block 1 'home-pants' display"""
         section2_block1 = self.element_is_visible(self.locators.SECTION_2_BLOCK_1)
