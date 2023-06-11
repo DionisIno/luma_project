@@ -145,3 +145,7 @@ class HeaderPage(BasePage):
         self.click_and_return_element(self.header_locators.SHORTS)
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
+    def check_men_section_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        return self.element_is_visible(self.header_locators.TOPS_BOTTOMS_SUBSECTION)
+
