@@ -1,5 +1,5 @@
-from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL
-from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL
+from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL, BAGS_PAGE_URL
+from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL, FITNESS_EQUIPMENT_PAGE_URL
 from locators.common_locators import CommonLocators
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
@@ -11,6 +11,8 @@ from locators.women_page_locators import WomenPageLocators
 from locators.what_is_new_page_locators import WhatIsNewPageLocators
 from locators.sale_page_locators import MainContentPromoBlocks
 from locators.gear_page_locators import SideBarLocators
+from locators.bags_page_locators import BagsPageLocators
+from locators.fitness_equipment_page_locators import FitnessEquipmentPageLocators
 
 
 class HeaderPage(BasePage):
@@ -24,6 +26,8 @@ class HeaderPage(BasePage):
     sale_locators = MainContentPromoBlocks
     gear_locators = SideBarLocators
     common_locators = CommonLocators
+    bags_locators = BagsPageLocators
+    fitness_equipment_locators = FitnessEquipmentPageLocators
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
@@ -138,3 +142,38 @@ class HeaderPage(BasePage):
         self.click_and_return_element(self.header_locators.PANTS)
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
+    def check_men_shorts_subsection_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.PANTS))
+        self.click_and_return_element(self.header_locators.SHORTS)
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
+
+    def check_men_section_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        return self.element_is_visible(self.header_locators.TOPS_BOTTOMS_SUBSECTION)
+
+    def redirected_the_link_gear(self):
+        element = self.element_is_visible(self.header_locators.GEAR)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.gear_locators.HEAD_TEXT)
+        return url == GEAR_PAGE_URL and text == "Gear"
+
+    def redirected_the_link_gear_bags(self):
+        self.element_is_visible(self.header_locators.GEAR)
+        self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
+        element = self.element_is_visible(self.header_locators.BAGS)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.bags_locators.HEAD_TEXT)
+        return url == BAGS_PAGE_URL and text == "Bags"
+
+    def redirected_the_link_gear_fitness_equipment(self):
+        self.element_is_visible(self.header_locators.GEAR)
+        self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
+        element = self.element_is_visible(self.header_locators.FITNESS_EQUIPMENT)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.fitness_equipment_locators.HEAD_TEXT)
+        return url == FITNESS_EQUIPMENT_PAGE_URL and text == "Fitness Equipment"

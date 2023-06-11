@@ -1,4 +1,5 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL,\
+    MEN_BOTTOMS_SHORTS_URL
 from pages.header_page import HeaderPage
 
 
@@ -179,3 +180,40 @@ class TestHeader:
         assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Men section is either not opened or the page header is incorrect"
 
+    def test_tc_01_03_26_correctness_shorts_link(self, driver):
+        """Check 'Shorts' subsection link in 'Men' section click redirects to the Shorts page and \
+                the 'Shorts' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_men_shorts_subsection_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_BOTTOMS_SHORTS_URL and header.text == "Shorts", \
+            "Shorts page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_15_display_and_interactivity_of_the_men_section(self, driver):
+        """Check the 'Tops' & 'Bottoms' subsections in 'Men' section is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        dropdown_items = page.check_men_section_link()
+        assert dropdown_items.is_displayed(), "Error: Tops and Bottoms subsections is not displayed"
+
+    def test_tc_01_03_28_correctly_redirected_the_link_gear(self, driver):
+        """Verify the link 'Gear' redirected to the page and the 'Gear' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_gear()
+        assert current_page, "The 'Gear' page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_29_correctly_redirected_the_link_gear_bags(self, driver):
+        """Verify the link 'Bags' redirected to the page and the 'Bags' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_gear_bags()
+        assert current_page, "The 'Bags' page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_30_correctly_redirected_the_link_gear_fitness_equipment(self, driver):
+        """Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        current_page = page.redirected_the_link_gear_fitness_equipment()
+        assert current_page, "The 'Fitness Equipment' page isn't opened or the page header is incorrect"
