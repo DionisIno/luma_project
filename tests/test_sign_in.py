@@ -21,14 +21,22 @@ class TestRegisteredCustomers:
     def test_03_01_01_h1_heading(self, driver, sign_in_page):
         """Check Login Page Heading is present """
         h1_heading = sign_in_page.check_h1_header()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], "H1 Heading is not present"
+        assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], \
+            "H1 Heading is incorrect or not present"
 
     @allure.title('TC 03.01.02 Verify Registered Customers Heading')
     def test_03_01_02_registered_customers_heading(self, driver, sign_in_page):
         """Check Registered Customers Heading is present """
-        h1_heading = sign_in_page.check_registered_customers_heading()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_heading"], \
-            "Registered Customers heading is not present"
+        heading = sign_in_page.check_registered_customers_heading()
+        assert heading is not None and heading.text == sign_in_data["customer_login_heading"], \
+            "Registered Customers heading is incorrect or not present"
+
+    @allure.title('TC 03.01.03 Verify Registered Customers note')
+    def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
+        """Check Registered Customers note is present """
+        h1_heading = sign_in_page.check_registered_customers_note()
+        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_note"], \
+            "Registered Customers note is incorrect or not present"
 
     @allure.title('TC 03.01.06 Verify Email field is appropriately labeled')
     def test_03_01_06_email_is_appropriately_labeled(self, driver, sign_in_page):
