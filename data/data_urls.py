@@ -55,5 +55,6 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
 
 
 class ImageUrls:
+    SECTION_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-main.jpg"
     SECTION_2_BLOCK_1_IMAGE_URL = \
         "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
