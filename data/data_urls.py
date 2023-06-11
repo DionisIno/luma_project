@@ -21,6 +21,9 @@ ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
 BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
+MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
+MEN_TOPS_URL = "https://magento.softwaretestingboard.com/men/tops-men.html"
+
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
