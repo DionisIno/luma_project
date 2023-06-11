@@ -188,3 +188,8 @@ class HeaderPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.watches_locators.HEAD_TEXT)
         return url == WATCHES_PAGE_URL and text == "Watches"
+
+    def check_redirection_of_men_section_link(self):
+        self.element_is_visible(self.header_locators.MEN_SECTION).click()
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
+
