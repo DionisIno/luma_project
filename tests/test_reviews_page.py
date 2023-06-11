@@ -23,9 +23,11 @@ class TestReviews:
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
-        wait = WebDriverWait(driver, 10)
+
+        page.click_submit_review()
+
         # review_successfully_submitted = page.send_review_correct()
-        review_successfully_submitted = wait.until(EC.visibility_of_element_located(locators.REVIEW_SUCCESSFULLY_SUBMITTED))
+        review_successfully_submitted = WebDriverWait(page, 20).until(EC.visibility_of_element_located(locators.REVIEW_SUCCESSFULLY_SUBMITTED))
         assert review_successfully_submitted, "Leave a review failed"
         # assert review_successfully_submitted.text == "You submitted your review for moderation.", "Leave a review failed"
 

@@ -37,3 +37,29 @@ class ReviewsPage(BasePage):
         review_input_element.click()
         review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         return review_successfully_submitted
+
+    def click_submit_review(self):
+        review_input_element = self.element_is_present(self.locators.SUBMIT_REVIEW_BUTTON)
+        review_input_element.click()
+        return review_input_element
+
+    def send_review_correct(self):
+        # review_input_element = self.element_is_present(self.locators.SUBMIT_REVIEW_BUTTON)
+        # review_input_element.click()
+        review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+        return review_successfully_submitted
+
+#
+# —- работает
+# если
+# клик
+# вынести
+# в
+# отдельный
+# метод, и
+# после
+# него
+# дополнительный
+# wait, тогда
+# тест
+# pass
