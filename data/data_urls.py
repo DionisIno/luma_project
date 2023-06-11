@@ -16,6 +16,7 @@ WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.htm
 MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
 MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
+MEN_TOPS_URL = "https://magento.softwaretestingboard.com/men/tops-men.html"
 
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
