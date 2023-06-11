@@ -91,6 +91,30 @@ class TestMainPage:
             promo_block = page.check_promo_block_display()
             assert promo_block is True, "The element is not visible"
 
+        def test_tc_13_01_03_check_image_in_section1(self, driver):
+            """This test checks if the image in section 1 'home-main' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section1_image = page.check_image_in_section1()
+            assert section1_image == ImageUrls.SECTION_1_IMAGE_URL, "The image is not correct"
+
+        def test_tc_13_01_06_check_info_block_text_in_section1(self, driver):
+            """This test checks if the info block text in section 1 'home-main' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text_in_section1()
+            assert info_block_text == "New Luma Yoga Collection", "The text is not correct"
+
+        def test_tc_13_01_07_check_info_block_title_in_section1(self, driver):
+            """This test checks if the info block title in section 1 'home-main' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section1()
+            assert info_block_title == "Get fit and look fab in new seasonal styles", "The text is not correct"
+
         def test_tc_13_01_10_check_section2_block1_display(self, driver):
             """This test checks if block 1 'home-pants' is displayed in section 2
             of Promo Block under header on the main page"""
