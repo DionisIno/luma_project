@@ -122,6 +122,13 @@ class TestMainPage:
             info_block_title = page.check_info_block_title_in_section1()
             assert info_block_title == "Get fit and look fab in new seasonal styles", "The text is not correct"
 
+        def test_tc_13_01_09_check_section2_display(self, driver):
+            """This test checks if section 2 in Promo Block under header is displayed on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2 = page.check_section2_display()
+            assert section2 is True, "The element is not visible"
+
         def test_tc_13_01_10_check_section2_block1_display(self, driver):
             """This test checks if block 1 'home-pants' is displayed in section 2
             of Promo Block under header on the main page"""
