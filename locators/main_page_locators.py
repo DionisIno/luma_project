@@ -22,6 +22,7 @@ class MainPageLocators:
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, ".blocks-promo")
+    SECTION_1_IMAGE = (By.CSS_SELECTOR, '.home-main img')
     SECTION_2_BLOCK_1 = (By.CSS_SELECTOR, '.home-pants')
     SECTION_2_BLOCK_1_IMAGE = (By.CSS_SELECTOR, ".home-pants img")
     SECTION_2_BLOCK_1_INFO_BLOCK = (By.CSS_SELECTOR, ".home-pants .content")
