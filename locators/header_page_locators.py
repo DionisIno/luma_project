@@ -22,3 +22,14 @@ class HeaderPageLocators:
     VIDEO_DOWNLOAD = (By.ID, 'ui-id-28')
     WHAT_IS_NEW = (By.ID, 'ui-id-3')
     WOMEN = (By.ID, 'ui-id-4')
+    GEAR = (By.ID, 'ui-id-6')
+    BAGS = (By.ID, 'ui-id-25')
+    FITNESS_EQUIPMENT = (By.ID, 'ui-id-26')
+    WATCHES = (By.ID, 'ui-id-27')
+    # Men Section
+    MEN_SECTION = (By.ID, 'ui-id-5')
+    BOTTOMS_SUBSECTION = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]'
+    PANTS_SHORTS_SUBSECTION = By.XPATH, "(//ul[@role='menu'])[7]"
+    PANTS = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]/ul/li[1]'
+    SHORTS = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]/ul/li[2]'
+
