@@ -1,5 +1,5 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL,\
-    MEN_BOTTOMS_SHORTS_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL, \
+    MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
 
 
@@ -39,7 +39,7 @@ class TestHeader:
 
     def test_tc_01_01_05_correctness_sign_in_link(self, driver):
         """Check 'Sign In' link click redirects to the login page and \
-                the "Customer Login" header is displayed"""
+        the "Customer Login" header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.click_and_return_element(page.header_locators.SIGN_IN)
@@ -110,7 +110,7 @@ class TestHeader:
 
     def test_tc_01_03_34_correctly_redirected_the_link_training_video_download(self, driver):
         """Verify 'Training - Video Download' link click redirected to the 'Video Download' page
-             and the 'Video Download' header is displayed"""
+            and the 'Video Download' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         current_page = page.redirected_the_link_training_video_download()
@@ -162,7 +162,7 @@ class TestHeader:
 
     def test_tc_01_03_24_correctness_bottoms_link(self, driver):
         """Check 'Bottoms' subsection link in 'Men' section click redirects to the Bottoms page and \
-                the 'Bottoms' header is displayed"""
+        the 'Bottoms' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_men_bottoms_subsection_link()
@@ -172,7 +172,7 @@ class TestHeader:
 
     def test_tc_01_03_25_correctness_pants_link(self, driver):
         """Check 'Pants' subsection link in 'Men' section click redirects to the Pants page and \
-                the 'Pants' header is displayed"""
+        the 'Pants' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_men_pants_subsection_link()
@@ -180,10 +180,9 @@ class TestHeader:
         assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Men section is either not opened or the page header is incorrect"
 
-
     def test_tc_01_03_26_correctness_shorts_link(self, driver):
         """Check 'Shorts' subsection link in 'Men' section click redirects to the Shorts page and \
-                the 'Shorts' header is displayed"""
+            the 'Shorts' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_men_shorts_subsection_link()
@@ -225,3 +224,13 @@ class TestHeader:
         page.open()
         current_page = page.redirected_the_link_gear_watches()
         assert current_page, "The 'Watches' page isn't opened or the page header is incorrect"
+
+    def test_tc_01_03_16_correctness_of_the_men_section_link(self, driver):
+        """Check the 'Men' section click redirects to the Men page and the 'Men' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_redirection_of_men_section_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_PAGE_URL and header.text == "Men", \
+            "Men page of Men section is either not opened or the page header is incorrect"
+
