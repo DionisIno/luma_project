@@ -1,4 +1,5 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL,\
+    MEN_BOTTOMS_SHORTS_URL
 from pages.header_page import HeaderPage
 
 
@@ -178,4 +179,14 @@ class TestHeader:
         header = page.check_common_header()
         assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_26_correctness_shorts_link(self, driver):
+        """Check 'Shorts' subsection link in 'Men' section click redirects to the Shorts page and \
+                the 'Shorts' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_men_shorts_subsection_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_BOTTOMS_SHORTS_URL and header.text == "Shorts", \
+            "Shorts page of Men section is either not opened or the page header is incorrect"
 
