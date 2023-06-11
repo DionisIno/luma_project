@@ -180,6 +180,7 @@ class TestHeader:
         assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Men section is either not opened or the page header is incorrect"
 
+
     def test_tc_01_03_26_correctness_shorts_link(self, driver):
         """Check 'Shorts' subsection link in 'Men' section click redirects to the Shorts page and \
                 the 'Shorts' header is displayed"""

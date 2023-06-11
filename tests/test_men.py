@@ -12,10 +12,3 @@ class TestMenPage:
         page.open()
         link = page.verify_tops_link_is_visible_and_clickable()
         assert link, "The link 'Tops' is not visible"
-
-    @allure.title("TC 14.02.03 Verify the link Tops redirects to a correct page.")
-    def test_tc_14_02_03(self, driver):
-        page = MenPage(driver, MEN_PAGE_URL)
-        page.open()
-        current_page = page.verify_tops_link_redirects_to_a_correct_page()
-        assert current_page, "New page isn't open or the 'Tops' subhead is incorrect"

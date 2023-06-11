@@ -1,4 +1,6 @@
 """This section contains the basic steps for running homepage tests"""
+import time
+
 import allure
 
 from locators.main_page_locators import MainPageLocators
@@ -105,6 +107,17 @@ class MainPage(BasePage):
             color_after = self.check_element_hover_style_using_js(add_to_card_button, "color")
         return color_before, color_after
 
+    @allure.step("Checking the display of an element on the screen")
+    def check_element_display(self, item):
+        """
+        This test checks that the element is displayed on the screen.
+        :return: True or False
+        """
+        product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
+        self.action_move_to_element(product_card)
+        element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])
+        return element.is_displayed()
+
 
 class PromoBlock(BasePage):
     locators = MainPageLocators
@@ -165,5 +178,3 @@ class PromoBlock(BasePage):
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
-
-
