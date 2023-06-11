@@ -132,23 +132,25 @@ class MainPage(BasePage):
         action = ActionChains(self.driver)
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
+        print('card')
         button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         # self.action_move_to_element(button)
         # action.click(button).perform()
         # button.click()
         self.driver.execute_script("arguments[0].click();", button)
+        print("button")
         action.pause(10).perform()
+        print(self.driver.current_url)
         error_message = self.get_error_message()
         return error_message
 
     def get_error_message(self):
 
         error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
-        error_message_element = wait(self.driver, 30).until(EC.visibility_of_element_located(error_message_locator))
-        error_message_element = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
-
-        # Получение текста сообщения об ошибке
-        error_message = error_message_element
+        print("locator")
+        error_message_element = wait(self.driver, 30).until(EC.presence_of_element_located(error_message_locator))
+        print("element")
+        error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
         print(error_message)
         return error_message
 
