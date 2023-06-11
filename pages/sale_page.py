@@ -14,9 +14,10 @@ class SalePage(BasePage):
         element = self.element_is_clickable(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W)
         return element
 
-    def check_women_deals_hoodies_link(self):
-        link = self.element_is_visible(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W).click()
-        return link
+    def click_link_women_deals(self, element_locator):
+        link_locator = self.side_bar_locators.WOMEN_DEALS_ELEMENTS[element_locator]
+        element = self.element_is_visible(*link_locator)
+        element.click()
 
     def get_actual_title(self, driver):
         actual_title = driver.title
