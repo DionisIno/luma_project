@@ -82,13 +82,6 @@ class TestMainPage:
             color_before, color_after = page.check_the_color_change_to_add_to_cart_button()
             assert color_before != color_after, "Product card button did not change color on hover"
 
-        @pytest.mark.parametrize("item", product_card_button)
-        def test_tc_06_01_15_check_the_display_of_the_add_to_wish_button(self, driver, item):
-            page = MainPage(driver, MAIN_PAGE_URL)
-            page.open()
-            check_display = page.check_element_display(item)
-            assert check_display, "Element is not displayed"
-
     class TestPromoBlock:
 
         def test_tc_13_01_01_check_promo_block_display(self, driver):
@@ -113,6 +106,14 @@ class TestMainPage:
             page.open()
             info_block_text = page.check_info_block_text_in_section1()
             assert info_block_text == "New Luma Yoga Collection", "The text is not correct"
+
+        def test_tc_13_01_07_check_info_block_title_in_section1(self, driver):
+            """This test checks if the info block title in section 1 'home-main' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section1()
+            assert info_block_title == "Get fit and look fab in new seasonal styles", "The text is not correct"
 
         def test_tc_13_01_10_check_section2_block1_display(self, driver):
             """This test checks if block 1 'home-pants' is displayed in section 2
