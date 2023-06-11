@@ -1,4 +1,4 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL
 from pages.header_page import HeaderPage
 
 
@@ -152,19 +152,30 @@ class TestHeader:
         assert link, "The link 'Gear' isn't visible or non-interactive"
 
     def test_tc_01_03_23_display_and_interactivity_of_the_bottoms_subsection(self, driver):
-        """Check the 'Bottoms' subsection under 'Men' section is displayed and the 'Pants' and 'Shorts' \
-        subsection is displayed"""
+        """Check the 'Bottoms' subsection in 'Men' section is displayed and the 'Pants' and 'Shorts' \
+        subsections is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        dropdown_items = page.check_bottoms_subsection()
+        dropdown_items = page.check_men_bottoms_subsection()
         assert dropdown_items.is_displayed(), "Error: The Pants and Shorts subsection is not displayed"
 
     def test_tc_01_03_24_correctness_bottoms_link(self, driver):
-        """Check the correctness of the "Bottoms" subsection link in the "Men" section"""
+        """Check 'Bottoms' subsection link in 'Men' section click redirects to the Bottoms page and \
+                the 'Bottoms' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        page.check_bottoms_subsection_link()
+        page.check_men_bottoms_subsection_link()
         header = page.check_common_header()
         assert driver.current_url == MEN_BOTTOMS_URL and header.text == "Bottoms", \
             "Bottoms page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_25_correctness_pants_link(self, driver):
+        """Check 'Pants' subsection link in 'Men' section click redirects to the Pants page and \
+                the 'Pants' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_men_pants_subsection_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
+            "Pants page of Men section is either not opened or the page header is incorrect"
 
