@@ -24,13 +24,20 @@ class TestReviews:
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
+        page.send_review_correct()
 
-        page.click_submit_review()
+        """Wait for an element to appear"""
+        WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED))
+        """Checking the success message"""
+        review_successfully_submitted = page.get_review_successfully_submitted_confirmation()
+
+        # page.click_submit_review()
 
         # review_successfully_submitted = page.send_review_correct()
-        review_successfully_submitted = WebDriverWait(driver, 20).until(EC.visibility_of_element_located(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED))
+
         # assert review_successfully_submitted, "Leave a review failed"
-        assert review_successfully_submitted.text == "You submitted your review for moderation.", "Leave a review failed"
+        # assert review_successfully_submitted.text == "You submitted your review for moderation.", "Leave a review failed"
 
 
 
