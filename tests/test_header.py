@@ -1,5 +1,5 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, MEN_BOTTOMS_PANTS_URL, \
-    MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
+    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
 
 
@@ -17,8 +17,8 @@ class TestHeader:
         """Check 'Create an account' link is displayed and underlined"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
-        assert "underline" in page.check_element_hover_style(page.header_locators.CREATE_AN_ACCOUNT, 'text-decoration'\
-            , 2), "Link 'Create an account' is either not displayed or not underlined on hover"
+        assert "underline" in page.check_element_hover_style(page.header_locators.CREATE_AN_ACCOUNT, 'text-decoration',
+            2), "Link 'Create an account' is either not displayed or not underlined on hover"
 
     def test_tc_01_01_03_correctness_create_an_account_link(self, driver):
         """Check 'Create an account' link click redirects to the account’s registration page and \
@@ -234,3 +234,11 @@ class TestHeader:
         assert driver.current_url == MEN_PAGE_URL and header.text == "Men", \
             "Men page of Men section is either not opened or the page header is incorrect"
 
+    def test_tc_01_03_17_display_and_interactivity_of_the_tops_subsection(self, driver):
+        """Check the 'Tops' subsection in 'Men' section is displayed and the 'Jackets', 'Shorts', \
+        'Hoodies & Sweatshirts', 'Tees' and 'Tanks' subsections is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        dropdown_items = page.check_men_tops_subsection()
+        assert dropdown_items.is_displayed(), "Error: The 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', \
+            'Tees' and 'Tanks' subsections is not displayed"
