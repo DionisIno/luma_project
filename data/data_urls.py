@@ -16,7 +16,7 @@ WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.htm
 MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
 MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
-
+ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
