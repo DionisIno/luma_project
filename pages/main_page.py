@@ -131,6 +131,7 @@ class MainPage(BasePage):
         button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         self.action_move_to_element(button)
         button.click()
+        time.sleep(5)
         error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
         return error_message.text
 
