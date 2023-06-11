@@ -148,9 +148,10 @@ class MainPage(BasePage):
 
         error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
         print("locator")
-        error_message_element = wait(self.driver, 30).until(EC.presence_of_element_located(error_message_locator))
+        error_message = self.driver.execute_script("return document.querySelector('.message-error > div').textContent;")
+        # error_message_element = wait(self.driver, 30).until(EC.presence_of_element_located(error_message_locator))
         print("element")
-        error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
+        # error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
         print(error_message)
         return error_message
 
