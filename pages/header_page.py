@@ -1,5 +1,6 @@
 from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL
 from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL
+from locators.common_locators import CommonLocators
 from locators.header_page_locators import HeaderPageLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
@@ -22,24 +23,13 @@ class HeaderPage(BasePage):
     what_is_new_locators = WhatIsNewPageLocators
     sale_locators = MainContentPromoBlocks
     gear_locators = SideBarLocators
+    common_locators = CommonLocators
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
-    def check_create_account_page_link(self):
-        return self.element_is_visible(self.header_locators.CREATE_AN_ACCOUNT)
-
-    def check_create_account_page_header(self):
-        return self.element_is_visible(self.create_account_locators.CREATE_NEW_CUSTOMER_ACCOUNT_HEADER)
-
-    def check_sign_in_page_link(self):
-        return self.element_is_visible(self.header_locators.SIGN_IN)
-
-    def check_sign_in_page_header(self):
-        return self.element_is_visible(self.sign_in_locators.PAGE_HEADER)
-
-    def check_logo_link(self):
-        return self.element_is_visible(self.header_locators.LOGO)
+    def check_common_header(self):
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
     def redirected_the_link_sale(self):
         element = self.element_is_visible(self.header_locators.SALE)
@@ -47,9 +37,6 @@ class HeaderPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.sale_locators.HEAD_TEXT)
         return url == SALE_PAGE_URL and text == "Sale"
-
-    def check_cart_icon_link(self):
-        return self.element_is_visible(self.header_locators.CART_ICON)
 
     def check_cart_message(self):
         return self.element_is_visible(self.header_locators.CART_BUTTON_MESSAGE).text
@@ -139,3 +126,8 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION))
         return self.element_is_visible(self.header_locators.PANTS_SHORTS_SUBSECTION)
+
+    def check_bottoms_subsection_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.click_and_return_element(self.header_locators.BOTTOMS_SUBSECTION)
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)

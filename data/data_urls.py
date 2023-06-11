@@ -13,6 +13,7 @@ WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
 TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
+MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 
 
 # URL SETS

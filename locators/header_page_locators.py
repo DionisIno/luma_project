@@ -26,6 +26,7 @@ class HeaderPageLocators:
     BAGS = (By.ID, 'ui-id-25')
     FITNESS_EQUIPMENT = (By.ID, 'ui-id-26')
     WATCHES = (By.ID, 'ui-id-27')
+    # Men Section
     MEN_SECTION = (By.ID, 'ui-id-5')
     BOTTOMS_SUBSECTION = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]'
     PANTS_SHORTS_SUBSECTION = By.XPATH, "(//ul[@role='menu'])[7]"
