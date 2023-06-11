@@ -7,8 +7,7 @@ import pytest
 
 from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL, ImageUrls
-from data.main_data import product_card_button
-from locators.main_page_locators import MainPageLocators
+from data.main_data import product_card_button, error_message
 
 
 @allure.epic("Main Page")
@@ -82,12 +81,28 @@ class TestMainPage:
             color_before, color_after = page.check_the_color_change_to_add_to_cart_button()
             assert color_before != color_after, "Product card button did not change color on hover"
 
+        @allure.title("Check the display of the add to wish and add to compare buttons")
         @pytest.mark.parametrize("item", product_card_button)
-        def test_tc_06_01_15_check_the_display_of_the_add_to_wish_button(self, driver, item):
+        def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):
+            """
+            This test will check that the add to wishlist and add to compare buttons are visible on the screen
+            """
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             check_display = page.check_element_display(item)
             assert check_display, "Element is not displayed"
+
+        @allure.title("Check the transition to the page my wish after clicking on the button")
+        def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
+            """
+            This test will check that after clicking on the add to wishlist button,
+            you are redirected to the My Wishlist page
+            """
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            error_message_text = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button()
+            assert error_message == error_message_text, \
+                f"The text does not equal {error_message} or did not go to the page 'My desires'"
 
     class TestPromoBlock:
 
