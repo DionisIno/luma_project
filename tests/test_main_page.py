@@ -94,10 +94,6 @@ class TestMainPage:
 
         @allure.title("Check the transition to the page my wish after clicking on the button")
         def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
-            """
-            This test will check that after clicking on the add to wishlist button,
-            and you are redirected to the My Wishlist page
-            """
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             error_message_text = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button()
