@@ -6,6 +6,7 @@ https://magento.softwaretestingboard.com/meteor-workout-short.html#reviews
 from selenium.webdriver.common.by import By
 
 class ReviewsPageLocators:
+
     STAR_1 = (By.CSS_SELECTOR, '#Rating_1_label')
     NICKNAME_INPUT = (By.CSS_SELECTOR, '#nickname_field')
     SUMMARY_INPUT = (By.CSS_SELECTOR, '#summary_field')

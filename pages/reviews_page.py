@@ -35,7 +35,7 @@ class ReviewsPage(BasePage):
     def send_review_correct(self):
         review_input_element = self.element_is_present(self.locators.SUBMIT_REVIEW_BUTTON)
         review_input_element.click()
-        review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+        review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
         return review_successfully_submitted
 
     def click_submit_review(self):
