@@ -139,11 +139,15 @@ class MainPage(BasePage):
         return error_message
 
     def get_error_message(self):
-        error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
-        error_message_element = wait(self.driver, 30).until(EC.presence_of_element_located(error_message_locator))
+        error_message = self.driver.find_element_by_xpath("//div[@class='message-error error message']")
+
+        # Используем JavaScript для получения текста сообщения об ошибке
+        error_message_element = self.driver.execute_script("return arguments[0].textContent;", error_message)
+        # error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
+        # error_message_element = wait(self.driver, 30).until(EC.visibility_of_element_located(error_message_locator))
 
         # Получение текста сообщения об ошибке
-        error_message = error_message_element.text
+        error_message = error_message_element
         return error_message
 
 

@@ -92,7 +92,6 @@ class TestMainPage:
         #     check_display = page.check_element_display(item)
         #     assert check_display, "Element is not displayed"
 
-
         @allure.title("Check the transition to the page my wish after clicking on the button")
         def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
             """
