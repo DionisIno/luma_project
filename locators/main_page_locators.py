@@ -15,8 +15,7 @@ class MainPageLocators:
     CARD_PRICE = (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) span[class='price']")
     PRODUCT_CARD_BUTTONS = {"add_to_card": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) button["
                                                              f"class='action tocart primary']"),
-                            "add_to_wish_list": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) a["
-                                                                  f"data-action='add-to-wishlist']"),
+                            "add_to_wish_list": (By.CSS_SELECTOR, f".product-item:nth-child({elem}) .towishlist"),
                             "add_to_compare": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) a["
                                                                 f"class='action tocompare']")}
     ERROR_MESSAGE = (By.CSS_SELECTOR, "div[class='message-error error message']")

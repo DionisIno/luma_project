@@ -138,7 +138,7 @@ class MainPage(BasePage):
         return error_message
 
     def get_error_message(self):
-        error_message_locator = (By.CSS_SELECTOR, "div.message-error")
+        error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
         error_message_element = wait(self.driver, 30).until(EC.visibility_of_element_located(error_message_locator))
 
         # Получение текста сообщения об ошибке
