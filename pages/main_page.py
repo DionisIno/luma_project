@@ -132,8 +132,12 @@ class MainPage(BasePage):
         self.action_move_to_element(button)
         button.click()
         time.sleep(5)
-        error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
+        error_message = self.get_error_message()
         return error_message.text
+
+    def get_error_message(self):
+        error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
+        return error_message
 
 
 
