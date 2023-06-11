@@ -19,6 +19,11 @@ class SignInPage(BasePage):
         """This method verifies if heading is visible"""
         return self.element_is_visible(self.locators.REGISTERED_CUSTOMERS_HEADER)
 
+    @allure.step('Check Registered Customers note is visible')
+    def check_registered_customers_note(self):
+        """This method verifies if note is visible under heading"""
+        return self.element_is_visible(self.locators.REGISTERED_CUSTOMERS_NOTE)
+
     @allure.step('Check Email label is visible')
     def check_customer_email_label(self):
         """This method verifies if Email label is visible"""
