@@ -19,7 +19,8 @@ class MainPageLocators:
                                                                   f"data-action='add-to-wishlist']"),
                             "add_to_compare": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) a["
                                                                 f"class='action tocompare']")}
-    ERROR_MESSAGE = (By.CSS_SELECTOR, "div[class='message-error error message']")
+    # ERROR_MESSAGE = (By.CSS_SELECTOR, "div[class='message-error error message']")
+    ERROR_MESSAGE = (By.XPATH, "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, ".blocks-promo")
