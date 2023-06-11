@@ -196,3 +196,4 @@ class TestHeader:
         page.open()
         dropdown_items = page.check_men_section_link()
         assert dropdown_items.is_displayed(), "Error: Tops and Bottoms subsections is not displayed"
+
