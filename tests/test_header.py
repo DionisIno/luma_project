@@ -1,4 +1,4 @@
-from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL
+from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL
 from pages.header_page import HeaderPage
 
 
@@ -25,7 +25,7 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.click_and_return_element(page.header_locators.CREATE_AN_ACCOUNT)
-        header = page.check_create_account_page_header()
+        header = page.check_common_header()
         assert driver.current_url == CREATE_ACCOUNT_PAGE_URL and header.text == "Create New Customer Account", \
             "Create an account page is either not opened or the page header is incorrect"
 
@@ -42,7 +42,7 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.click_and_return_element(page.header_locators.SIGN_IN)
-        header = page.check_sign_in_page_header()
+        header = page.check_common_header()
         assert driver.current_url == SIGN_IN_URL and header.text == "Customer Login", \
             "Sign In page is either not opened or the page header is incorrect"
 
@@ -68,6 +68,9 @@ class TestHeader:
         page.open()
         assert "pointer" in page.check_element_hover_style(page.header_locators.CART_ICON, 'cursor', 2), \
             "Failed: The cursor does not change to a 'hand' when hovering over the cart icon"
+        page.click_and_return_element(page.header_locators.CART_ICON)
+        assert "You have no items in your shopping cart." in page.check_cart_message(), \
+            "Failed: The message in the cart is not correct or the cart is not empty"
 
     def test_tc_01_02_15_presence_of_a_placeholder_in_the_search_field(self, driver):
         """Check the "Search" field in the header contains the placeholder 'Search entire store here...'"""
@@ -155,4 +158,13 @@ class TestHeader:
         page.open()
         dropdown_items = page.check_bottoms_subsection()
         assert dropdown_items.is_displayed(), "Error: The Pants and Shorts subsection is not displayed"
+
+    def test_tc_01_03_24_correctness_bottoms_link(self, driver):
+        """Check the correctness of the "Bottoms" subsection link in the "Men" section"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_bottoms_subsection_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_BOTTOMS_URL and header.text == "Bottoms", \
+            "Bottoms page of Men section is either not opened or the page header is incorrect"
 
