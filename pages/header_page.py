@@ -1,4 +1,4 @@
-from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL
+from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL, BAGS_PAGE_URL
 from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL
 from locators.common_locators import CommonLocators
 from locators.header_page_locators import HeaderPageLocators
@@ -11,6 +11,7 @@ from locators.women_page_locators import WomenPageLocators
 from locators.what_is_new_page_locators import WhatIsNewPageLocators
 from locators.sale_page_locators import MainContentPromoBlocks
 from locators.gear_page_locators import SideBarLocators
+from locators.bags_page_locators import BagsPageLocators
 
 
 class HeaderPage(BasePage):
@@ -24,6 +25,7 @@ class HeaderPage(BasePage):
     sale_locators = MainContentPromoBlocks
     gear_locators = SideBarLocators
     common_locators = CommonLocators
+    bags_locators = BagsPageLocators
 
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
@@ -155,3 +157,12 @@ class HeaderPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.gear_locators.HEAD_TEXT)
         return url == GEAR_PAGE_URL and text == "Gear"
+
+    def redirected_the_link_gear_bags(self):
+        self.element_is_visible(self.header_locators.GEAR)
+        self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
+        element = self.element_is_visible(self.header_locators.BAGS)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.bags_locators.HEAD_TEXT)
+        return url == BAGS_PAGE_URL and text == "Bags"
