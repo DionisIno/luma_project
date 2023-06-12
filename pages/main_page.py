@@ -133,13 +133,14 @@ class MainPage(BasePage):
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
         print('card')
-        button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
-        # self.action_move_to_element(button)
+        button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
+        self.action_move_to_element(button)
         # action.click(button).perform()
-        # button.click()
-        self.driver.execute_script("arguments[0].click();", button)
+        button.click()
+        # self.driver.execute_script("arguments[0].click();", button)
         print("button")
-        action.pause(10).perform()
+        time.sleep(5)
+        # action.pause(10).perform()
         print(self.driver.current_url)
         error_message = self.get_error_message()
         return error_message
@@ -148,11 +149,29 @@ class MainPage(BasePage):
 
         error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
         print("locator")
+        # script = """
+        #     var element = document.querySelector('.message.error div');
+        #     var computedStyle = window.getComputedStyle(element, '::before');
+        #     var content = computedStyle.content;
+        #
+        #     return content;
+        # """
+        # script = """
+        #     var element = document.querySelector('.message.error');
+        #     var pseudoElement = window.getComputedStyle(element, ':before').getPropertyValue('content');
+        #     var temp = document.createElement('div');
+        #     temp.innerHTML = pseudoElement;
+        #     var content = temp.textContent || temp.innerText;
+        #     return content.replace(/['"]+/g, '');
+        # """
+        # result = self.driver.execute_script(script)
+        # print(result)
         error_message_element = wait(self.driver, 30).until(EC.visibility_of_element_located(error_message_locator))
-        print("element")
-        error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
-        print(error_message)
-        return error_message
+        print(error_message_element.text)
+        # print("element")
+        # error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
+        # print(error_message)
+        # return result
 
 
 
