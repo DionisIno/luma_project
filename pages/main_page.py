@@ -166,7 +166,6 @@ class MainPage(BasePage):
         """
         This method check successful message
         """
-        print(self.driver.current_url)
         text = self.element_is_visible(self.locators.SUCCESSFUL_MESSAGE)
         return text.text
 
