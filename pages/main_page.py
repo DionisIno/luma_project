@@ -141,7 +141,6 @@ class MainPage(BasePage):
         print("button")
         time.sleep(5)
         # action.pause(10).perform()
-        print(self.driver.current_url)
         error_message = self.get_error_message()
         return error_message
 
@@ -149,6 +148,7 @@ class MainPage(BasePage):
 
         error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
         print("locator")
+        print(self.driver.current_url)
         # script = """
         #     var element = document.querySelector('.message.error div');
         #     var computedStyle = window.getComputedStyle(element, '::before');
@@ -171,7 +171,7 @@ class MainPage(BasePage):
         # print("element")
         # error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
         # print(error_message)
-        # return result
+        return error_message_element
 
 
 
