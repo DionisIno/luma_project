@@ -1,6 +1,7 @@
 """This section contains the basic steps for running homepage tests"""
 import time
 from selenium.webdriver.common.by import By
+
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
 from selenium.webdriver.support.ui import WebDriverWait as wait
@@ -12,6 +13,7 @@ from selenium.webdriver import ActionChains
 class MainPage(BasePage):
     locators = MainPageLocators
 
+
     @allure.step("Check the transition to the page my desires when clicking on the button")
     def check_the_transition_to_the_page_my_wish_after_click_on_the_button(self):
         """
@@ -22,16 +24,12 @@ class MainPage(BasePage):
         """
         action = ActionChains(self.driver)
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
-        print(self.locators.PRODUCT_CARD)
-        print(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         self.action_move_to_element(product_card)
         print('card')
-        time.sleep(5)
         button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
-        print(button.text)
-        # self.action_move_to_element(button)
-        # action.click(button).perform()
-        button.click()
+        self.action_move_to_element(button)
+        action.click(button).perform()
+        # button.click()
         # self.driver.execute_script("arguments[0].click();", button)
         print("button")
         time.sleep(5)
@@ -41,7 +39,7 @@ class MainPage(BasePage):
 
     def get_error_message(self):
 
-        error_message_locator = (By.XPATH, "//div[@class='message-error error message']/div[contains(@data-bind, 'prepareMessageForHtml')]")
+        error_message_locator = (By.XPATH, "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
         print("locator")
         print(self.driver.current_url)
         print(self.driver.title)
@@ -68,3 +66,4 @@ class MainPage(BasePage):
         # error_message = self.driver.execute_script("return arguments[0].textContent;", error_message_element)
         # print(error_message)
         return error_message_element
+
