@@ -118,13 +118,13 @@ class MainPage(BasePage):
         element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])
         return element.is_displayed()
 
-    @allure.step("Check the transition to the page my desires when clicking on the button")
+    @allure.step("Check the transition to the page my desires when clicking on the button. User is not authorized")
     def check_the_transition_to_the_page_my_wish_after_click_on_the_button(self):
         """
         This method hovers the mouse over the product card,
         clicks the add to favorites button
-        and checks that the correct page has been navigated to.
-        :return:
+        and checks that the correct page has been navigated to
+        User is not authorized
         """
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
@@ -134,10 +134,40 @@ class MainPage(BasePage):
         error_message = self.get_error_message()
         return error_message.text
 
+    @allure.step("Check the error message")
     def get_error_message(self):
+        """
+        This method check error message
+        """
         error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
         return error_message
 
+    @allure.step("Check the transition to the page my desires when clicking on the button. User is not authorized")
+    def check_the_transition_to_the_page_my_wish_after_click_on_the_button_user_authorized(self):
+        """
+        This method hovers the mouse over the product card,
+        clicks the add to favorites button
+        and checks that the correct page has been navigated to
+        User is not authorized
+        """
+        card_title = self.element_is_visible(self.locators.CARD_TITLE).text
+        product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
+        self.action_move_to_element(product_card)
+        button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
+        # self.action_move_to_element(button)
+        self.driver.execute_script("arguments[0].click();", button)
+        # button.click()
+        text = self.get_successful_message()
+        # self.delete_my_wish_list()
+        return text, card_title
+
+    @allure.step("Check the error message")
+    def get_successful_message(self):
+        """
+        This method check successful message
+        """
+        text = self.element_is_visible(self.locators.SUCCESSFUL_MESSAGE)
+        return text.text
 
 
 class PromoBlock(BasePage):

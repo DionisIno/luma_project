@@ -20,6 +20,7 @@ class MainPageLocators:
                             "add_to_compare": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) a["
                                                                 f"class='action tocompare']")}
     ERROR_MESSAGE = (By.CSS_SELECTOR, "div[class='message-error error message']")
+    SUCCESSFUL_MESSAGE = (By.CSS_SELECTOR, "div[data-ui-id='message-success']")
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, ".blocks-promo")
