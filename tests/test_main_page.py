@@ -92,18 +92,31 @@ class TestMainPage:
             check_display = page.check_element_display(item)
             assert check_display, "Element is not displayed"
 
-        @pytest.mark.xfail(reason="Can't find error message. Need to improve the test")
-        @allure.title("Check the transition to the page my wish after clicking on the button")
+        @pytest.mark.xfail(reason="In CI, there is no transition to the user registration page, so the test fails")
+        @allure.title("Check the transition to the page my wish after clicking on the button. User is not authorized")
         def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
             """
             This test will check that after clicking on the add to wishlist button,
             you are redirected to the My Wishlist page
+            User is not authorized
             """
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             error_message_text = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button()
             assert error_message == error_message_text, \
                 f"The text does not equal {error_message} or did not go to the page 'My desires'"
+
+        @allure.title("Check the transition to the page my wish after clicking on the button. User is authorized")
+        def test_06_01_18_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver, sing_in):
+            """
+            This test will check that after clicking on the add to wishlist button,
+            you are redirected to the My Wishlist page
+            User is authorized
+            """
+            page = MainPage(driver, MAIN_PAGE_URL)
+            page.open()
+            text, card_title = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button_user_authorized()
+            assert card_title in text, "Product card was not added to the wishlist"
 
     class TestPromoBlock:
 
