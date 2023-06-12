@@ -146,9 +146,10 @@ class MainPage(BasePage):
 
     def get_error_message(self):
 
-        error_message_locator = (By.CSS_SELECTOR, ".message-error > div")
+        error_message_locator = (By.XPATH, "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
         print("locator")
         print(self.driver.current_url)
+        print(self.driver.title)
         # script = """
         #     var element = document.querySelector('.message.error div');
         #     var computedStyle = window.getComputedStyle(element, '::before');
