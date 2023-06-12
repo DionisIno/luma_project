@@ -135,6 +135,7 @@ class MainPage(BasePage):
         print(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         self.action_move_to_element(product_card)
         print('card')
+        time.sleep(5)
         button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
         print(button.text)
         # self.action_move_to_element(button)
