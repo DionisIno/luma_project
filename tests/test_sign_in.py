@@ -21,14 +21,36 @@ class TestRegisteredCustomers:
     def test_03_01_01_h1_heading(self, driver, sign_in_page):
         """Check Login Page Heading is present """
         h1_heading = sign_in_page.check_h1_header()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], "H1 Heading is not present"
+        assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], \
+            "H1 Heading is incorrect or not present"
 
     @allure.title('TC 03.01.02 Verify Registered Customers Heading')
     def test_03_01_02_registered_customers_heading(self, driver, sign_in_page):
         """Check Registered Customers Heading is present """
-        h1_heading = sign_in_page.check_registered_customers_heading()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_heading"], \
-            "Registered Customers heading is not present"
+        heading = sign_in_page.check_registered_customers_heading()
+        assert heading is not None and heading.text == sign_in_data["customer_login_heading"], \
+            "Registered Customers heading is incorrect or not present"
+
+    @allure.title('TC 03.01.03 Verify Registered Customers note')
+    def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
+        """Check Registered Customers note is present """
+        h1_heading = sign_in_page.check_registered_customers_note()
+        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_note"], \
+            "Registered Customers note is incorrect or not present"
+
+    @allure.title('TC 03.01.04 Verify Email field is present')
+    def test_03_01_04_email_field_is_present(self, driver, sign_in_page):
+        """Check if the Email input field is present"""
+        email_input = sign_in_page.check_customer_email_field_is_clickable()
+        assert email_input.is_displayed(), "Email input field is not displayed"
+
+    @allure.title('TC 03.01.05 Verify Email field is correct format and clickable')
+    def test_03_01_04_email_field_is_correct_format(self, driver, sign_in_page):
+        """Check if the password input field is present"""
+        email_input = sign_in_page.check_customer_email_field_is_clickable()
+        assert "input-text" in email_input.get_attribute("class") \
+               and email_input.is_enabled(), \
+            "Email input field does not accept text or is not clickable"
 
     @allure.title('TC 03.01.06 Verify Email field is appropriately labeled')
     def test_03_01_06_email_is_appropriately_labeled(self, driver, sign_in_page):
@@ -39,7 +61,7 @@ class TestRegisteredCustomers:
             "Email label or asterisk is not present for Email field"
 
     @allure.title('TC 03.01.07 Verify Email field highlighting on click')
-    def test_03_01_07_Email_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
+    def test_03_01_07_email_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Email field is activated with a cursor and gets highlighted when clicked
         and change color back when focus is removed from the Email field (by clicking another element)
@@ -56,7 +78,7 @@ class TestRegisteredCustomers:
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
 
     @allure.title('TC 03.01.09 Verify Password field is present')
-    def test_03_01_09_password_is_present(self, driver, sign_in_page):
+    def test_03_01_09_password_field_is_present(self, driver, sign_in_page):
         """Check if the password input field is present"""
         password_input = sign_in_page.check_customer_password_field_is_clickable()
         assert password_input.is_displayed(), "Password input field is not displayed"

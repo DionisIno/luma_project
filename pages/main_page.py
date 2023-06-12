@@ -59,7 +59,7 @@ class MainPage(BasePage):
     @allure.step("Check the color change on hover on the Add to Cart button")
     def check_the_color_change_to_add_to_cart_button(self):
         """
-        This test hovers the mouse cursor over the product card,
+        This method hovers the mouse cursor over the product card,
         hovers the mouse cursor over the add to cart button,
         and checks for the button color change
         """
@@ -76,7 +76,7 @@ class MainPage(BasePage):
     @allure.step("Check the cursor change on hover on the card buttons")
     def check_the_cursor_change_to_cart_buttons(self, item):
         """
-        This test hovers the mouse cursor over the product card,
+        This method hovers the mouse cursor over the product card,
         hovers the mouse cursor over the add to cart button,
         and checks for the button cursor change
         """
@@ -93,7 +93,7 @@ class MainPage(BasePage):
     @allure.step("Check the color change on hover on the wishlist button and add to compare button")
     def check_the_color_change_my_wish_and_add_to_compare_button(self, item):
         """
-        This test hovers the mouse cursor over the product card,
+        This method hovers the mouse cursor over the product card,
         hovers the mouse cursor over the wishlist button and add to compare button,
         and checks for the button color change
         """
@@ -110,13 +110,64 @@ class MainPage(BasePage):
     @allure.step("Checking the display of an element on the screen")
     def check_element_display(self, item):
         """
-        This test checks that the element is displayed on the screen.
+        This method checks that the element is displayed on the screen.
         :return: True or False
         """
         product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
         self.action_move_to_element(product_card)
         element = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[item])
         return element.is_displayed()
+
+    @allure.step("Check the transition to the page my desires when clicking on the button. User is not authorized")
+    def check_the_transition_to_the_page_my_wish_after_click_on_the_button(self):
+        """
+        This method hovers the mouse over the product card,
+        clicks the add to favorites button
+        and checks that the correct page has been navigated to
+        User is not authorized
+        """
+        product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
+        self.action_move_to_element(product_card)
+        button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
+        self.action_move_to_element(button)
+        button.click()
+        error_message = self.get_error_message()
+        return error_message.text
+
+    @allure.step("Check the error message")
+    def get_error_message(self):
+        """
+        This method check error message
+        """
+        error_message = self.element_is_visible(self.locators.ERROR_MESSAGE, 15)
+        return error_message
+
+    @allure.step("Check the transition to the page my desires when clicking on the button. User is not authorized")
+    def check_the_transition_to_the_page_my_wish_after_click_on_the_button_user_authorized(self):
+        """
+        This method hovers the mouse over the product card,
+        clicks the add to favorites button
+        and checks that the correct page has been navigated to
+        User is not authorized
+        """
+        card_title = self.element_is_visible(self.locators.CARD_TITLE).text
+        product_card = self.element_is_visible(self.locators.PRODUCT_CARD)
+        self.action_move_to_element(product_card)
+        button = self.element_is_present(self.locators.PRODUCT_CARD_BUTTONS["add_to_wish_list"])
+        # self.action_move_to_element(button)
+        self.driver.execute_script("arguments[0].click();", button)
+        # button.click()
+        text = self.get_successful_message()
+        # self.delete_my_wish_list()
+        return text, card_title
+
+    @allure.step("Check the error message")
+    def get_successful_message(self):
+        """
+        This method check successful message
+        """
+        text = self.element_is_visible(self.locators.SUCCESSFUL_MESSAGE)
+        return text.text
 
 
 class PromoBlock(BasePage):
@@ -144,6 +195,11 @@ class PromoBlock(BasePage):
         element = self.element_is_visible(self.locators.SECTION_1_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
+
+    def check_section2_display(self):
+        """Checks section 2 display"""
+        section2 = self.element_is_visible(self.locators.SECTION_2)
+        return section2.is_displayed()
 
     def check_section2_block1_display(self):
         """Checks section 2 block 1 'home-pants' display"""

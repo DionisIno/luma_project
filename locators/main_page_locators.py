@@ -19,12 +19,15 @@ class MainPageLocators:
                                                                   f"data-action='add-to-wishlist']"),
                             "add_to_compare": (By.CSS_SELECTOR, f"li[class='product-item']:nth-child({elem}) a["
                                                                 f"class='action tocompare']")}
+    ERROR_MESSAGE = (By.CSS_SELECTOR, "div[class='message-error error message']")
+    SUCCESSFUL_MESSAGE = (By.CSS_SELECTOR, "div[data-ui-id='message-success']")
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, ".blocks-promo")
     SECTION_1_IMAGE = (By.CSS_SELECTOR, '.home-main img')
     SECTION_1_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, '.home-main .info')
     SECTION_1_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, '.home-main .title')
+    SECTION_2 = (By.CSS_SELECTOR, '.blocks-promo > div')
     SECTION_2_BLOCK_1 = (By.CSS_SELECTOR, '.home-pants')
     SECTION_2_BLOCK_1_IMAGE = (By.CSS_SELECTOR, ".home-pants img")
     SECTION_2_BLOCK_1_INFO_BLOCK = (By.CSS_SELECTOR, ".home-pants .content")
