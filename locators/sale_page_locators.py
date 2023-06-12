@@ -17,7 +17,7 @@ class SideBarLocators:
         "shorts_w": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(2) > li:nth-child(6) > a')
     }
     # MEN'S DEALS section
-
+    MEN_DEALS_TITLE = (By.CSS_SELECTOR, '.categories-menu > strong:nth-child(3) > span')
     # Gear Deals section
 
 
