@@ -29,6 +29,7 @@ class ReviewsPage(BasePage):
     def summary_input_review_correct(self):
         """Entering data into input summary"""
         summary_input_element = self.element_is_clickable(self.locators.SUMMARY_INPUT)
+        time.sleep(2)
         summary_input_element.click()
         summary_input_element.clear()
         summary_input_element.send_keys('Some Summary Text')
@@ -37,6 +38,7 @@ class ReviewsPage(BasePage):
     def review_input_review_correct(self):
         """Entering data into input review"""
         review_input_element = self.element_is_clickable(self.locators.REVIEW_INPUT)
+        time.sleep(2)
         review_input_element.click()
         review_input_element.clear()
         review_input_element.send_keys('Some Review Text')
@@ -46,6 +48,7 @@ class ReviewsPage(BasePage):
         """Click on the send feedback button"""
         # button = browser.find_element(By.TAG_NAME, "button")
         button_element = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
+        time.sleep(2)
         button_element.click()
 
         # time.sleep(15)
