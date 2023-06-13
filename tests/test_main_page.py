@@ -9,7 +9,6 @@ from pages.main_page import MainPage
 from data.data_urls import MAIN_PAGE_URL
 
 
-
 @allure.epic("Main Page")
 class TestMainPage:
     @allure.feature("Testing Hot Seller Section")
