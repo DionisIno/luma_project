@@ -31,9 +31,10 @@ class TestReviews:
         WebDriverWait(driver, 20).until(
             EC.visibility_of_element_located(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED))
         """Checking the success message"""
-        review_successfully_submitted = page.get_review_successfully_submitted_confirmation()
+        review_successfully_submitted = page.review_have_been_send_correctly()
 
         # page.click_submit_review()
+        # page.review_have_been_send_correctly()
 
         # review_successfully_submitted = page.send_review_correct()
 
