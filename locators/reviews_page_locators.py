@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 
 class ReviewsPageLocators:
 
+    REVIEW_MENU = (By.CSS_SELECTOR, '#tab-label-reviews-title')
     STAR_1 = (By.CSS_SELECTOR, '#Rating_1_label')
     NICKNAME_INPUT = (By.CSS_SELECTOR, '#nickname_field')
     SUMMARY_INPUT = (By.CSS_SELECTOR, '#summary_field')

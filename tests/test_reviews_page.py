@@ -4,7 +4,7 @@ from locators.reviews_page_locators import ReviewsPageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.reviews_page import ReviewsPage
-from data.data_urls import REVIEWS_URL
+from data.data_urls import REVIEWS_URL, REVIEWS_URL_GENERAL
 
 
 class TestReviews:
@@ -20,8 +20,14 @@ class TestReviews:
         """
 
         """Steps"""
-        page = ReviewsPage(driver, REVIEWS_URL)
+        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)
         page.open()
+
+        # Get the current URL and print it
+        current_url = driver.current_url
+        print("Current URL:", current_url)
+
+        page.open_review_menu()
         page.one_star_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
@@ -38,9 +44,9 @@ class TestReviews:
         review_fail_to_submit = page.review_have_been_send_not_correctly()
 
         if review_successfully_submitted == "You submitted your review for moderation.":
-            print('review_successfully_submitted')
+            print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
 
         if review_fail_to_submit:
-            print('review_fail_to_submit')
+            print('review_fail_to_submit', " Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана")
             assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
