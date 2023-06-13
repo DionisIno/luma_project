@@ -1,5 +1,4 @@
 import time
-
 from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
@@ -157,3 +156,56 @@ class BasePage:
                     flag = False
         except StaleElementReferenceException:
             pass
+
+    @allure.step('Checking if 1 or more browser windows are open. If the 2nd is detected, then it returns to the 1st')
+    def switch_between_opened_windows(self):
+        """
+        Checking if 1 or more browser windows are open
+        If the 2nd is detected, then it returns to the 1st
+        """
+        try:
+            current_url = self.driver.current_url
+            print("Current URL (base_page try): ", current_url)
+            second_window = self.driver.window_handles[1]
+            if second_window:
+                first_window = self.driver.window_handles[0]
+                print('Window[0]: ', first_window)
+                self.driver.switch_to.window(first_window)
+                current_url = self.driver.current_url
+                print("Current URL (base_page try, if): ", current_url)
+
+        except:
+            print("There is only one window. The second window is not revealed. The presence of a third, not tested.")
+
+    @allure.step('Shows all opened windows')
+    def show_all_opened_windows(self):
+        """
+        Shows all opened windows
+        """
+        handles = self.driver.window_handles
+        size = len(handles)
+
+        if size == 1:
+            print('Additional windows not found. Only one active browser window found.')
+        else:
+            print('Number of detected windows: ', size)
+
+            for x in range(size):
+                self.driver.switch_to.window(handles[x])
+                print(self.driver.title)
+
+    @allure.step('Find element (unpacking)')
+    def find_element(self, locator):
+        """Find element (unpacking)"""
+        return self.driver.find_element(*locator)
+
+    @allure.step('Move cursor to element. Perform a click action without navigating to a new page.')
+    def action_move_to_element_click_no_new_window(self, locator):
+        """
+        This method moves the mouse cursor to the center of the selected element.
+        Perform a click action without navigating to a new page
+        """
+        element = self.find_element(locator)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).click().perform()
+
