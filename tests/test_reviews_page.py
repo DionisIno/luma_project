@@ -64,6 +64,7 @@ class TestReviews:
             print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
             print('Отзыв записан по адресу и под номером: ', current_url)
             assert 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
+
         else:
             print('Оставить ревью НЕ получилось')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
