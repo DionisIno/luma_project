@@ -51,7 +51,7 @@ class ReviewsPage(BasePage):
         # time.sleep(15)
 
     def some_wait(self):
-        time.sleep(15)
+        time.sleep(55)
 
     def review_have_been_send_correctly(self):
         # review_input_element = self.action_move_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
