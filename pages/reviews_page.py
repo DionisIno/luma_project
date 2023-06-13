@@ -85,4 +85,4 @@ class ReviewsPage(BasePage):
                 except:
                     print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
 
-            review_have_been_send_not_correctly()
+            self.review_have_been_send_not_correctly()
