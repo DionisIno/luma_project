@@ -42,6 +42,10 @@ class TestReviews:
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
 
+        # Get the current URL and print it
+        current_url = driver.current_url
+        print("Current URL:", current_url)
+
         if review_successfully_submitted == "You submitted your review for moderation.":
             print('review_successfully_submitted', ' "Success" = Review sent successfully!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
