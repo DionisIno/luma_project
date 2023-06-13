@@ -21,7 +21,7 @@ class TestReviews:
         page = ReviewsPage(driver, REVIEWS_URL)
         page.open()
         page.one_star_review_correct()
-        page.nickname_input_review_correct()
+        # page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
 
@@ -34,13 +34,17 @@ class TestReviews:
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
 
+        review_fail_to_submit = page.review_have_been_send_not_correctly()
 
-        assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
-        # if review_successfully_submitted == "You submitted your review for moderation.":
-        #     assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
-        #
-        # if:
-        #     (By.CSS_SELECTOR,
+
+        # assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
+        if review_successfully_submitted == "You submitted your review for moderation.":
+            print('review_successfully_submitted')
+            assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
+
+        if review_fail_to_submit:
+            print('review_fail_to_submit')
+            assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
 
 
 

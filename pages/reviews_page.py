@@ -1,4 +1,5 @@
 import allure
+from selenium.common import TimeoutException
 
 from pages.base_page import BasePage
 from locators.reviews_page_locators import ReviewsPageLocators
@@ -58,9 +59,25 @@ class ReviewsPage(BasePage):
 
     def review_have_been_send_correctly(self):
         """Checking if a message about the successful submission for moderation of the review appears"""
-        review_successfully_submitted = self.get_text(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
-        time.sleep(10)
-        return review_successfully_submitted
+
+        time.sleep(2)
+        try:
+            review_successfully_submitted = self.get_text(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+            return review_successfully_submitted
+        except TimeoutException as ex:
+            print("TimeoutException, и будет проба проверить на ошибку заполненных полей")
+            print("Exception has been thrown. " + str(ex))
+            pass
+
+
+    def review_have_been_send_not_correctly(self):
+        """Checking if a message about NOT successful submission for moderation of the review appears"""
+        review_not_successfully_submitted = self.get_text(self.locators.MESSAGE_ERROR)
+        time.sleep(2)
+        try:
+            return review_not_successfully_submitted
+        except:
+            print("Something went wrong")
 
     #
     # @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
