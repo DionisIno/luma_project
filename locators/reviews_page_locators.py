@@ -15,3 +15,6 @@ class ReviewsPageLocators:
     REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, '.message-success')
     # REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, "div[role='alert']")
     # REVIEW_SUCCESSFULLY_SUBMITTED = (By.XPATH, "//main[1]/div[1]/div[2]/div[1]/div[1]/div[1]")
+    # REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, ".messages .message-error div[data-bind*='prepareMessageForHtml']")
+    MESSAGE_ERROR = (By.CSS_SELECTOR, '.mage-error')
+
