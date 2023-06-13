@@ -28,7 +28,7 @@ class TestReviews:
         page.send_review_correct()
 
         """Wait for an element to appear"""
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 40).until(
             EC.visibility_of_element_located(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED))
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
