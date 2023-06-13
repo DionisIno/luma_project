@@ -104,11 +104,8 @@ class TestRegisteredCustomers:
     def test_03_01_12_password_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Password field is activated with a cursor and gets highlighted when clicked
-        and change color back when focus is removed from the Password field (by clicking another element)
         """
         initial_psw_box_shadow, active_psw_box_shadow = sign_in_page.activate_password_field_and_check_style()
-        sign_in_page.check_customer_password_field_is_clickable.click()
-        initial_email_box_shadow, active_email_box_shadow = sign_in_page.activate_email_field_and_check_style()
         assert active_psw_box_shadow != initial_psw_box_shadow, \
             "Error: Password field style doesn't change on activation"
 
