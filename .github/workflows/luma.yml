@@ -38,4 +38,7 @@ jobs:
     - name: Run Pytest on changed files
       if: steps.changed-py-files.outputs.any_changed == 'true'
       run: |
+        export PYTEST_ADDOPTS="--follow-redirects"
         pytest -s -v --follow-redirects ${{ steps.changed-py-files.outputs.all_changed_files }}
+      env:
+        PYTHONPATH: $GITHUB_WORKSPACE
