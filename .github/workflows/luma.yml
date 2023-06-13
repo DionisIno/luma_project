@@ -37,4 +37,5 @@ jobs:
             **/*.py
     - name: Run Pytest on changed files
       if: steps.changed-py-files.outputs.any_changed == 'true'
-      run: pytest -s -v --follow-redirects ${{ steps.changed-py-files.outputs.all_changed_files }}
+      run: |
+        pytest -s -v --follow-redirects ${{ steps.changed-py-files.outputs.all_changed_files }}
