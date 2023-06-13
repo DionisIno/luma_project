@@ -41,7 +41,8 @@ class MainPage(BasePage):
     def get_error_message(self):
 
         error_message_locator = (By.XPATH, "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
-        print("locator")
+        window_handles = self.driver.window_handles
+        print(f"""window_handles : {len(window_handles)}""")
         print(self.driver.current_url)
         print(self.driver.title)
         # script = """
