@@ -30,7 +30,13 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
+    - name: Start X-server
+      run: |
+        sudo apt-get install -y xvfb
+        Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
+        sleep 1
+
     - name: Run Pytest
       run: |
-        pytest -s -v
+        DISPLAY=:99 pytest -s -v
       continue-on-error: true
