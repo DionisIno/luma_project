@@ -121,6 +121,14 @@ class TestRegisteredCustomers:
         assert button is not None and button.text == sign_in_data['sign_in_btn'], \
             f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
+    @allure.title('TC 03.01.15 Verify Sign in button is clickable')
+    def test_03_01_15_sign_in_button_is_clickable(self, driver, sign_in_page):
+        """Check if Sign In button is clickable"""
+        sign_in_button = sign_in_page.check_sign_in_button_is_clickable()
+        sign_in_button.click()
+        assert sign_in_button is not None, "Sign In button element not found"
+
+    @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         sign_in_page.fill_in_email_field(credentials['incorrect_email'])

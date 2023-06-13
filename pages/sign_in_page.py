@@ -138,15 +138,20 @@ class SignInPage(BasePage):
         error = self.element_is_visible(locator)
         return error.text if error else None
 
-    @allure.step('Check Email field for correct email format')
+    @allure.step('Check Sign In button is visible')
     def check_sign_in_button_is_visible(self):
+        """This method verifies if sign-in button field is visible"""
+        return self.element_is_visible(self.locators.SIGN_IN_BUTTON)
+
+    @allure.step('Check Sign In button is clickable')
+    def check_sign_in_button_is_clickable(self):
         """This method verifies if sign-in button field is visible"""
         return self.element_is_clickable(self.locators.SIGN_IN_BUTTON)
 
-    @allure.step('Check Sign In button is visible')
+    @allure.step('Click on Sign In button')
     def click_sign_in_button(self):
         """This method clicks on sign-in button"""
-        self.check_sign_in_button_is_visible().click()
+        self.check_sign_in_button_is_clickable().click()
 
     @allure.step('Check Forgot Your Password_link')
     def check_forgot_your_password_link(self):
