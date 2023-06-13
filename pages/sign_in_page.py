@@ -85,10 +85,31 @@ class SignInPage(BasePage):
         """This method verifies if Password field is clickable"""
         return self.element_is_clickable(self.locators.CUSTOMER_PASSWORD)
 
+    @allure.step('Check Password label is visible')
+    def check_customer_password_label(self):
+        """This method verifies if Email label is visible"""
+        return self.element_is_visible(self.locators.CUSTOMER_PASSWORD_LABEL)
+
+    @allure.step('Check Password asterisk is visible')
+    def check_customer_password_asterisk(self):
+        """This method verifies if asterisk is displayed next to Email label"""
+        password_label = self.check_customer_password_label()
+        asterisk_script = self.find_required_element()
+        return self.driver.execute_script(asterisk_script, password_label)
+
+    @allure.step('Activate Password field and check style')
+    def activate_password_field_and_check_style(self):
+        """
+        This method activates the Password field
+        and checks if the style of the field changes upon activation.
+        """
+        return self.activate_field_and_check_style(self.locators.CUSTOMER_PASSWORD)
+
     @allure.step('Fill in Password field')
     def fill_in_password_field(self, password):
         """This method fills in Password field with provided password"""
         password_input = self.check_customer_password_field_is_clickable()
+        password_input.click()
         password_input.send_keys(password)
         return password_input
 
