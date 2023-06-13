@@ -24,6 +24,7 @@ class TestReviews:
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
+
         page.send_review_correct()
 
         """Wait for an element to appear"""

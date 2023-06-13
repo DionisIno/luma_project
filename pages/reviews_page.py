@@ -18,7 +18,7 @@ class ReviewsPage(BasePage):
     @allure.feature('tc_01_15_01 - Entering data into the nickname input')
     def nickname_input_review_correct(self):
         """Entering data into the nickname input"""
-        nickname_input_element = self.element_is_clickable(self.locators.NICKNAME_INPUT)
+        nickname_input_element = self.go_to_element(self.locators.NICKNAME_INPUT)
         time.sleep(1)
         nickname_input_element.click()
         nickname_input_element.clear()
@@ -28,7 +28,7 @@ class ReviewsPage(BasePage):
     @allure.feature('tc_01_15_01 - Entering data into input summary')
     def summary_input_review_correct(self):
         """Entering data into input summary"""
-        summary_input_element = self.element_is_clickable(self.locators.SUMMARY_INPUT)
+        summary_input_element = self.go_to_element(self.locators.SUMMARY_INPUT)
         summary_input_element.click()
         summary_input_element.clear()
         summary_input_element.send_keys('Some Summary Text')
@@ -36,7 +36,7 @@ class ReviewsPage(BasePage):
     @allure.feature('tc_01_15_01 - Entering data into input review')
     def review_input_review_correct(self):
         """Entering data into input review"""
-        review_input_element = self.element_is_clickable(self.locators.REVIEW_INPUT)
+        review_input_element = self.go_to_element(self.locators.REVIEW_INPUT)
         review_input_element.click()
         review_input_element.clear()
         review_input_element.send_keys('Some Review Text')
@@ -45,13 +45,16 @@ class ReviewsPage(BasePage):
     def send_review_correct(self):
         """Click on the send feedback button"""
         # button = browser.find_element(By.TAG_NAME, "button")
-        self.go_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
+        button_element = self.go_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
+        button_element.click()
+
+        time.sleep(5)
 
 
         # review_input_element = self.action_move_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
-        review_input_element_2 = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
-        review_input_element_2.click()
-        time.sleep(5)
+        # review_input_element_2 = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
+        # review_input_element_2.click()
+        # time.sleep(5)
 
     #
     # @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
