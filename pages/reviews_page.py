@@ -48,7 +48,7 @@ class ReviewsPage(BasePage):
         button_element = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
         button_element.click()
 
-        time.sleep(15)
+        # time.sleep(15)
 
     def some_wait(self):
         time.sleep(15)
@@ -62,10 +62,9 @@ class ReviewsPage(BasePage):
         # review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
         # print('\n', self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED), ' = self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)')
         # self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
-        print('\n', self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED),
-              ' = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)')
-        review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
-        time.sleep(15)
+        # print('\n', self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED),
+        #       ' = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)')
+        review_successfully_submitted = self.get_text(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         return review_successfully_submitted
 
     #
