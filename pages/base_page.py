@@ -161,6 +161,7 @@ class BasePage:
         except StaleElementReferenceException:
             pass
 
+    @allure.step('Checking if 1 or more browser windows are open. If the 2nd is detected, then it returns to the 1st')
     def switch_between_opened_windows(self):
         """
         Checking if 1 or more browser windows are open
@@ -180,8 +181,11 @@ class BasePage:
         except:
             print("There is only one window. The second window is not revealed. The presence of a third, not tested.")
 
-
+    @allure.step('Shows all opened windows')
     def show_all_opened_windows(self):
+        """
+        Shows all opened windows
+        """
         handles = self.driver.window_handles
         size = len(handles)
 
@@ -194,7 +198,9 @@ class BasePage:
                 self.driver.switch_to.window(handles[x])
                 print(self.driver.title)
 
+    @allure.step('Find element (unpacking)')
     def find_element(self, locator):
+        """Find element (unpacking)"""
         return self.driver.find_element(*locator)
 
     @allure.step('Move cursor to element. Perform a click action without navigating to a new page.')
@@ -203,7 +209,7 @@ class BasePage:
         This method moves the mouse cursor to the center of the selected element.
         Perform a click action without navigating to a new page
         """
-        element = self.find_element(locator)  # Find the element using the provided locator
+        element = self.find_element(locator)
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
 

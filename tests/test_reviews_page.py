@@ -23,13 +23,17 @@ class TestReviews:
         page = ReviewsPage(driver, REVIEWS_URL_GENERAL)
         page.open()
 
+        # Get the current URL and print it
+        current_url = driver.current_url
+        print("Current URL:", current_url)
+
         page.open_review_menu()
         page.one_star_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
 
-        """Клик по кнопке"""
+        """Button click"""
         page.send_review_correct()
 
         page.see_all_opened_windows()
@@ -39,15 +43,15 @@ class TestReviews:
         review_successfully_submitted = page.review_have_been_send_correctly()
 
         if review_successfully_submitted == "You submitted your review for moderation.":
-            print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
+            print('review_successfully_submitted', ' "Success" = Review sent successfully!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
 
         elif 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url:
-            print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
-            print('Отзыв записан по адресу и под номером: ', current_url)
+            print('review_successfully_submitted', ' "Success" = Review sent successfully!')
+            print('The review is recorded at the address and under the number: ', current_url)
             assert 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
 
         else:
-            print('Оставить ревью НЕ получилось')
+            print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
 
