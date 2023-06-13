@@ -5,3 +5,4 @@ webdriver-manager==3.8.6
 allure-pytest==2.13.2
 allure-python-commons==2.13.2
 requests==2.31.0
+Faker==18.9.0
