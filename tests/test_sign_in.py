@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 
@@ -45,8 +47,8 @@ class TestRegisteredCustomers:
         assert email_input.is_displayed(), "Email input field is not displayed"
 
     @allure.title('TC 03.01.05 Verify Email field is correct format and clickable')
-    def test_03_01_04_email_field_is_correct_format(self, driver, sign_in_page):
-        """Check if the password input field is present"""
+    def test_03_01_05_email_field_is_correct_format_and_clickable(self, driver, sign_in_page):
+        """Check if the Email input is of correct format (input-text) and clickable"""
         email_input = sign_in_page.check_customer_email_field_is_clickable()
         assert "input-text" in email_input.get_attribute("class") \
                and email_input.is_enabled(), \
@@ -64,7 +66,6 @@ class TestRegisteredCustomers:
     def test_03_01_07_email_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Email field is activated with a cursor and gets highlighted when clicked
-        and change color back when focus is removed from the Email field (by clicking another element)
         """
         initial_box_shadow, active_box_shadow = sign_in_page.activate_email_field_and_check_style()
         assert active_box_shadow != initial_box_shadow, \
@@ -82,6 +83,34 @@ class TestRegisteredCustomers:
         """Check if the password input field is present"""
         password_input = sign_in_page.check_customer_password_field_is_clickable()
         assert password_input.is_displayed(), "Password input field is not displayed"
+
+    @allure.title('TC 03.01.10 Verify Password field is correct format and clickable')
+    def test_03_01_10_password_field_is_correct_format_and_clickable(self, driver, sign_in_page):
+        """Check if the password input field is of correct format (input-text) and clickable"""
+        password_input = sign_in_page.check_customer_password_field_is_clickable()
+        assert "input-text" in password_input.get_attribute("class") \
+               and password_input.is_enabled(), \
+            "Password input field does not accept text or is not clickable"
+
+    @allure.title('TC 03.01.11 Verify Password field is appropriately labeled')
+    def test_03_01_11_password_is_appropriately_labeled(self, driver, sign_in_page):
+        """Check if Password field is appropriately labeled """
+        label = sign_in_page.check_customer_password_label()
+        asterisk = sign_in_page.check_customer_password_asterisk()
+        assert asterisk is not None and label.text == sign_in_data["password_label"], \
+            "Password label or asterisk is not present for Password field"
+
+    @allure.title('TC 03.01.12 Verify Password field highlighting on click')
+    def test_03_01_12_password_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
+        """
+        Check the Password field is activated with a cursor and gets highlighted when clicked
+        and change color back when focus is removed from the Password field (by clicking another element)
+        """
+        initial_psw_box_shadow, active_psw_box_shadow = sign_in_page.activate_password_field_and_check_style()
+        sign_in_page.check_customer_password_field_is_clickable.click()
+        initial_email_box_shadow, active_email_box_shadow = sign_in_page.activate_email_field_and_check_style()
+        assert active_psw_box_shadow != initial_psw_box_shadow, \
+            "Error: Password field style doesn't change on activation"
 
     @allure.title('TC 03.01.13 Verify Password is masked')
     def test_03_01_13_password_masking(self, driver, sign_in_page):
