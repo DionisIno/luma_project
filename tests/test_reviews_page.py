@@ -26,7 +26,7 @@ class TestReviews:
         page.review_input_review_correct()
 
         page.send_review_correct()
-        # page.some_wait()
+        page.some_wait()
 
         """Wait for an element to appear"""
         # WebDriverWait(driver, 40).until(
