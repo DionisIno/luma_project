@@ -193,10 +193,10 @@ class BasePage:
                 self.driver.switch_to.window(handles[x])
                 print(self.driver.title)
 
-    @allure.step('Find element (unpacking)')
-    def find_element(self, locator):
-        """Find element (unpacking)"""
-        return self.driver.find_element(*locator)
+    # @allure.step('Find element (unpacking)')
+    # def find_element(self, locator):
+    #     """Find element (unpacking)"""
+    #     return self.driver.find_element(*locator)
 
     @allure.step('Move cursor to element. Perform a click action without navigating to a new page.')
     def action_move_to_element_click_no_new_window(self, locator):
@@ -208,3 +208,5 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
 
+    def find_element(self, by, value):
+        return self.driver.find_element(by, value)
