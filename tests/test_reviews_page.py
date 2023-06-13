@@ -29,6 +29,10 @@ class TestReviews:
         page.send_review_correct()
         page.some_wait()
 
+        # Get the current URL and print it
+        current_url = driver.current_url
+        print("Current URL:", current_url)
+
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
         review_fail_to_submit = page.review_have_been_send_not_correctly()
