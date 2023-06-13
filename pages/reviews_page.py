@@ -47,8 +47,7 @@ class ReviewsPage(BasePage):
     @allure.feature('tc_01_15_01 - Click on the send feedback button')
     def send_review_correct(self):
         """Click on the send feedback button"""
-        button_element = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
-        button_element.click()
+        self.action_move_to_element_click_no_new_window(self.locators.SUBMIT_REVIEW_BUTTON)
 
     @allure.feature('tc_01_15_01 - Just some wait')
     def some_wait(self):
@@ -57,7 +56,7 @@ class ReviewsPage(BasePage):
     def see_all_opened_windows(self):
         self.show_all_opened_windows()
 
-    def swich_between_opend_windows_to_base_one(self):
+    def switch_between_opened_windows_to_base_one(self):
         self.switch_between_opened_windows()
 
     @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')

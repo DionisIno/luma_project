@@ -191,3 +191,20 @@ class BasePage:
                 self.driver.switch_to.window(handles[x])
                 print(self.driver.title)
 
+    def find_element(self, locator):
+        return self.driver.find_element(*locator)
+
+    @allure.step('Move cursor to element. Perform a click action without navigating to a new page.')
+    def action_move_to_element_click_no_new_window(self, locator):
+        """
+        This method moves the mouse cursor to the center of the selected element.
+        Perform a click action without navigating to a new page
+        """
+        # actions = ActionChains(self.driver)
+        # element = actions.move_to_element(locator)
+        # actions.move_to_element(element).click().perform()
+
+        element = self.find_element(locator)  # Find the element using the provided locator
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).click().perform()
+

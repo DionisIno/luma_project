@@ -35,7 +35,7 @@ class TestReviews:
         page.send_review_correct()
 
         page.see_all_opened_windows()
-        page.swich_between_opend_windows_to_base_one()
+        page.switch_between_opened_windows_to_base_one()
 
         # page.some_wait()
 
