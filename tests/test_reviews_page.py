@@ -25,7 +25,7 @@ class TestReviews:
 
         # Get the current URL and print it
         current_url = driver.current_url
-        print("Current URL:", current_url)
+        print("Current URL (строка 28 = открытая изначально страница):", current_url)
 
         page.open_review_menu()
         page.one_star_review_correct()
@@ -46,16 +46,20 @@ class TestReviews:
 
         # Get the current URL and print it
         current_url = driver.current_url
-        print("Current URL:", current_url)
+        print("Current URL (стока 49 = отправлено на ревью = нажата кнопка):", current_url)
 
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
-        review_fail_to_submit = page.review_have_been_send_not_correctly()
+        # review_fail_to_submit = page.review_have_been_send_not_correctly()
+
+        # Get the current URL and print it
+        current_url = driver.current_url
+        print("Current URL (строка 57 =  после проверки 'Успех' сообщения):", current_url)
 
         if review_successfully_submitted == "You submitted your review for moderation.":
             print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
 
-        if review_fail_to_submit:
-            print('review_fail_to_submit', " Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана")
-            assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
+        # if review_fail_to_submit:
+        #     print('review_fail_to_submit', " Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана")
+        #     assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
