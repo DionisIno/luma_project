@@ -157,3 +157,23 @@ class BasePage:
                     flag = False
         except StaleElementReferenceException:
             pass
+
+    def switch_between_opened_windows(self):
+        """
+        Checking if 1 or more browser windows are open
+        If the 2nd is detected, then it returns to the 1st
+        """
+        try:
+            current_url = self.driver.current_url
+            print("Current URL: ", current_url)
+            second_window = self.driver.window_handles[1]
+            if second_window:
+                first_window = self.driver.window_handles[0]
+                print('Window[0]: ', first_window)
+                self.driver.switch_to.window(first_window)
+                current_url = self.driver.current_url
+                print("Current URL: ", current_url)
+
+        except:
+            print("There is only one window. The second window is not revealed. The presence of a third, not tested.")
+

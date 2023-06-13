@@ -33,7 +33,10 @@ class TestReviews:
         page.summary_input_review_correct()
         page.review_input_review_correct()
         page.send_review_correct()
-        page.some_wait()
+
+        page.swich_between_opend_windows()
+
+        # page.some_wait()
 
         # Get the current URL and print it
         current_url = driver.current_url
