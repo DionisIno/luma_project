@@ -61,10 +61,10 @@ class ReviewsPage(BasePage):
         """Checking if a message about the successful submission for moderation of the review appears"""
         # review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
         time.sleep(15)
-        self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+        # self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         review_successfully_submitted = self.element_is_clickable(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         time.sleep(15)
-        return review_successfully_submitted
+        # return review_successfully_submitted
 
     #
     # @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
