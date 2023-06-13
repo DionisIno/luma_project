@@ -41,3 +41,18 @@ class TestGearPage:
         page.check_fitness_equipment_functionality()
         assert page.get_actual_url(driver) == expected_link['fitness_equipment_url'], \
             'The link is not correct'
+
+    def test_tc_11_01_06(self, driver):
+        """Check that watches is displayed and enabled"""
+        page = GearPage(driver, GEAR_PAGE_URL)
+        page.open()
+        watches = page.check_watches_element()
+        assert watches is not None, "The element isn't displayed or not enabled"
+
+    def test_TC_11_01_07(self, driver):
+        """Check that watches link is correct"""
+        page = GearPage(driver, GEAR_PAGE_URL)
+        page.open()
+        page.check_watches_functionality()
+        assert page.get_actual_url(driver) == expected_link['watches_url'], \
+            'The link is not correct'

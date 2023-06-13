@@ -10,5 +10,6 @@ class SideBarLocators:
     BAGS = (By.XPATH, "//dl[@id='narrow-by-list2']//a[text()='Bags']")
     HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
     FITNESS_EQUIPMENT = (By.XPATH, "//dl[@id='narrow-by-list2']//a[text()='Fitness Equipment']")
+    WATCHES = (By.XPATH, "//dl[@id='narrow-by-list2']//a[text()='Watches']")
 
 

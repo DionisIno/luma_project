@@ -33,3 +33,12 @@ class GearPage(BasePage):
         fitness_equipment = self.element_is_visible(self.locators.FITNESS_EQUIPMENT)
         link = fitness_equipment.click()
         return link
+
+    def check_watches_element(self):
+        watches = self.element_is_clickable(self.locators.WATCHES)
+        return watches
+
+    def check_watches_functionality(self):
+        watches = self.element_is_visible(self.locators.WATCHES)
+        link = watches.click()
+        return link
