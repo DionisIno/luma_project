@@ -23,18 +23,11 @@ class TestReviews:
         page = ReviewsPage(driver, REVIEWS_URL_GENERAL)
         page.open()
 
-        # Get the current URL and print it
-        current_url = driver.current_url
-        print("Current URL (строка 28 = открытая изначально страница):", current_url)
-
         page.open_review_menu()
         page.one_star_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
-
-        """Начало записи экрана"""
-        # page.record_screen_on_demand_function()
 
         """Клик по кнопке"""
         page.send_review_correct()
@@ -42,19 +35,8 @@ class TestReviews:
         page.see_all_opened_windows()
         page.switch_between_opened_windows_to_base_one()
 
-        # page.some_wait()
-
-        # Get the current URL and print it
-        current_url = driver.current_url
-        print("Current URL (стока 49 = отправлено на ревью = нажата кнопка):", current_url)
-
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
-        # review_fail_to_submit = page.review_have_been_send_not_correctly()
-
-        # Get the current URL and print it
-        current_url = driver.current_url
-        print("Current URL (строка 57 =  после проверки 'Успех' сообщения):", current_url)
 
         if review_successfully_submitted == "You submitted your review for moderation.":
             print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
@@ -69,6 +51,3 @@ class TestReviews:
             print('Оставить ревью НЕ получилось')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
 
-        # if review_fail_to_submit:
-        #     print('review_fail_to_submit', " Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана")
-        #     assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"

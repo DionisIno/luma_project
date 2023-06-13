@@ -31,32 +31,6 @@ def driver():
     driver.quit()
 
 
-# @pytest.fixture(scope="session", autouse=True)
-# def record_screen(request):
-#     # Start recording
-#     process = subprocess.Popen(
-#         [
-#             "ffmpeg",
-#             "-f", "gdigrab",
-#             "-framerate", "30",
-#             "-i", "desktop",
-#             "-c:v", "libx264",
-#             "-preset", "ultrafast",
-#             "-tune", "zerolatency",
-#             "-crf", "25",
-#             "-pix_fmt", "yuv420p",
-#             "-vf", "pad=ceil(iw/2)*2:ceil(ih/2)*2",
-#             "output.mp4"
-#         ]
-#     )
-#
-#     # Wait for the test session to complete
-#     yield
-#
-#     # Stop recording
-#     process.terminate()
-
-
 @pytest.fixture(scope="session")
 def config():
     current_dir = os.path.dirname(os.path.abspath(__file__))
