@@ -57,7 +57,9 @@ class ReviewsPage(BasePage):
         # time.sleep(5)
         """Checking if a message about the successful submission for moderation of the review appears"""
         # review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
+        time.sleep(15)
         review_successfully_submitted = self.element_is_clickable(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+        time.sleep(15)
         return review_successfully_submitted
 
     #
