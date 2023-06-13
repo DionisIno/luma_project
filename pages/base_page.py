@@ -1,7 +1,11 @@
+import time
+
+from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 from selenium.webdriver import ActionChains
+from locators.wish_list_locators import WishListPageLocators as wl
 
 
 class BasePage:
@@ -139,3 +143,17 @@ class BasePage:
         """
         text = self.element_is_visible(locator)
         return text.text
+
+    def delete_my_wish_list(self):
+        elements = self.elements_are_visible(wl.ADDED_CARD_TO_MY_WISH_LIST)
+        try:
+            flag = True
+            while flag:
+                print(len(elements))
+                self.action_move_to_element(elements[0])
+                button = self.element_is_present(wl.DELETE_CARD_BUTTON)
+                self.driver.execute_script("arguments[0].click();", button)
+                if len(elements) == 0:
+                    flag = False
+        except StaleElementReferenceException:
+            pass
