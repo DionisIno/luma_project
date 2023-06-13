@@ -48,7 +48,7 @@ class ReviewsPage(BasePage):
         button_element = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
         button_element.click()
 
-        time.sleep(5)
+        time.sleep(15)
 
     def review_have_been_send_correctly(self):
         # review_input_element = self.action_move_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
@@ -57,7 +57,7 @@ class ReviewsPage(BasePage):
         # time.sleep(5)
         """Checking if a message about the successful submission for moderation of the review appears"""
         # review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
-        review_successfully_submitted = self.element_is_clickable(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
+        review_successfully_submitted = self.element_is_clickable(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
         return review_successfully_submitted
 
     #
