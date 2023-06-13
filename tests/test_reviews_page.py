@@ -60,6 +60,10 @@ class TestReviews:
             print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
 
+        elif 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url:
+            print('review_successfully_submitted', ' "Успех" = Ревью успешно отправлено!')
+            print('Отзыв записан по адресу и под номером: ', current_url)
+
         # if review_fail_to_submit:
         #     print('review_fail_to_submit', " Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана")
         #     assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
