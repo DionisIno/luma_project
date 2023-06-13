@@ -44,6 +44,9 @@ class ReviewsPage(BasePage):
         review_input_element.clear()
         review_input_element.send_keys('Some Review Text')
 
+    def record_screen_on_demand_function(self):
+        self.record_screen_on_demand()
+
     @allure.feature('tc_01_15_01 - Click on the send feedback button')
     def send_review_correct(self):
         """Click on the send feedback button"""

@@ -10,7 +10,7 @@ from data.data_urls import REVIEWS_URL, REVIEWS_URL_GENERAL
 class TestReviews:
     locators = ReviewsPageLocators
 
-    def test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star(self, driver):
+    def test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star(self, driver, record_screen):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
         1. All required fields are filled with correct data
@@ -32,6 +32,11 @@ class TestReviews:
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
+
+        """Начало записи экрана"""
+        page.record_screen_on_demand_function()
+
+        """Клик по кнопке"""
         page.send_review_correct()
 
         page.see_all_opened_windows()

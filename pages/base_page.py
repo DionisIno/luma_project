@@ -1,4 +1,7 @@
 import time
+import subprocess
+import time
+
 
 from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait as wait
@@ -207,4 +210,29 @@ class BasePage:
         element = self.find_element(locator)  # Find the element using the provided locator
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
+
+    def record_screen_on_demand(self):
+        """
+        Screen recording
+        -f gdigrab: Specifies the input format as gdigrab, which captures the Windows desktop.
+        -framerate 15: Sets the frame rate of the capture to 15 frames per second.
+        -offset_x 0: Sets the x-offset of the capture area to 0 (leftmost position).
+        -offset_y 0: Sets the y-offset of the capture area to 0 (topmost position).
+        -video_size 1920x1080: Sets the video size to 1920x1080 pixels.
+        -i desktop: Specifies the input source as the desktop.
+        -c:v libx264: Sets the video codec to libx264.
+        -vprofile baseline: Sets the video profile to baseline.
+        -g 15: Sets the GOP size to 15 (group of pictures).
+        -crf 1: Sets the constant rate factor (CRF) to 1 for high-quality video.
+        -pix_fmt yuv420p: Sets the pixel format to yuv420p.
+        -threads 4: Sets the number of threads to 4 for video encoding.
+        output.mkv: Specifies the output file name as output.mkv.
+        """
+        proc = subprocess.Popen(
+            ['ffmpeg', '-f', 'gdigrab', '-framerate', '15', '-offset_x', '0', '-offset_y', '0', '-video_size',
+             '1920x1080', '-i', 'desktop', '-c:v', 'libx264', '-vprofile', 'baseline', '-g', '15', '-crf', '1',
+             '-pix_fmt', 'yuv420p', '-threads', '4', 'output.mkv'])
+        # Start selenium code...
+        time.sleep(210)
+        proc.kill()
 
