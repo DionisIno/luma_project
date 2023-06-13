@@ -54,12 +54,17 @@ class ReviewsPage(BasePage):
         button_element.click()
         time.sleep(2)
 
+    @allure.feature('tc_01_15_01 - Just some wait')
     def some_wait(self):
+        """Just some wait"""
         time.sleep(5)
 
+    @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
     def review_have_been_send_correctly(self):
-        """Checking if a message about the successful submission for moderation of the review appears"""
-
+        """
+        Checking if a message about the successful submission for moderation of the review appears
+        Validates text within a message
+        """
         time.sleep(2)
         try:
             review_successfully_submitted = self.get_text(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
@@ -69,45 +74,13 @@ class ReviewsPage(BasePage):
             print("Exception has been thrown. " + str(ex))
             pass
 
-
+    @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
     def review_have_been_send_not_correctly(self):
         """Checking if a message about NOT successful submission for moderation of the review appears"""
-        review_not_successfully_submitted = self.get_text(self.locators.MESSAGE_ERROR)
         time.sleep(2)
         try:
+            print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
+            review_not_successfully_submitted = self.get_text(self.locators.MESSAGE_ERROR)
             return review_not_successfully_submitted
         except:
-            print("Something went wrong")
-
-    #
-    # @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
-    # def get_review_successfully_submitted_confirmation(self):
-    #     """Checking if a message about the successful submission for moderation of the review appears"""
-    #     review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
-    #     return review_successfully_submitted
-
-    # def click_submit_review(self):
-    #     review_input_element = self.element_is_present(self.locators.SUBMIT_REVIEW_BUTTON)
-    #     review_input_element.click()
-    #     return review_input_element
-
-    # def send_review_correct(self):
-    #     # review_input_element = self.element_is_present(self.locators.SUBMIT_REVIEW_BUTTON)
-    #     # review_input_element.click()
-    #     review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
-    #     return review_successfully_submitted
-
-#
-# —- работает
-# если
-# клик
-# вынести
-# в
-# отдельный
-# метод, и
-# после
-# него
-# дополнительный
-# wait, тогда
-# тест
-# pass
+            print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")

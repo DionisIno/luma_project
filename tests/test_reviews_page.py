@@ -18,26 +18,21 @@ class TestReviews:
         3.The "Submit Review" button is pressed
         Result: Present in the DOM and visible on the page the message: "You submitted your review for moderation."
         """
+
+        """Steps"""
         page = ReviewsPage(driver, REVIEWS_URL)
         page.open()
         page.one_star_review_correct()
-        # page.nickname_input_review_correct()
+        page.nickname_input_review_correct()
         page.summary_input_review_correct()
         page.review_input_review_correct()
-
         page.send_review_correct()
         page.some_wait()
 
-        """Wait for an element to appear"""
-        # WebDriverWait(driver, 40).until(
-        #     EC.visibility_of_element_located(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED))
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
-
         review_fail_to_submit = page.review_have_been_send_not_correctly()
 
-
-        # assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
         if review_successfully_submitted == "You submitted your review for moderation.":
             print('review_successfully_submitted')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
@@ -45,6 +40,3 @@ class TestReviews:
         if review_fail_to_submit:
             print('review_fail_to_submit')
             assert review_fail_to_submit, "Есть ошибка в заполненных полях, одно из полей не введено или звезда не выбрана"
-
-
-
