@@ -20,9 +20,24 @@ class TestGearPage:
         assert bags is not None, "The element isn't displayed or not enabled"
 
     def test_TC_11_01_03(self, driver):
+        """Check that bags link is correct"""
         page = GearPage(driver, GEAR_PAGE_URL)
         page.open()
         page.check_bags_functionality()
-        assert page.get_actual_url(driver) == expected_link['gear_url'], \
+        assert page.get_actual_url(driver) == expected_link['bags_url'], \
             'The link is not correct'
 
+    def test_tc_11_01_04(self, driver):
+        """Check that fitness_equipment is displayed and enabled"""
+        page = GearPage(driver, GEAR_PAGE_URL)
+        page.open()
+        fitness_equipment = page.check_fitness_equipment_element()
+        assert fitness_equipment is not None, "The element isn't displayed or not enabled"
+
+    def test_TC_11_01_05(self, driver):
+        """Check that fitness_equipment link is correct"""
+        page = GearPage(driver, GEAR_PAGE_URL)
+        page.open()
+        page.check_fitness_equipment_functionality()
+        assert page.get_actual_url(driver) == expected_link['fitness_equipment_url'], \
+            'The link is not correct'
