@@ -121,6 +121,19 @@ class TestRegisteredCustomers:
         assert button is not None and button.text == sign_in_data['sign_in_btn'], \
             f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
+    @allure.title('TC 03.01.15 Verify Sign in button is clickable')
+    def test_03_01_15_sign_in_button_is_clickable(self, driver, sign_in_page):
+        """Check if Sign In button is clickable"""
+        button = sign_in_page.click_sign_in_button()
+        assert button.is_enabled(), f'''The {sign_in_data['sign_in_btn']} is not clickable'''
+
+    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that the 'Forgot your password?' link is present"""
+        element = sign_in_page.check_forgot_your_password_link()
+        assert element.is_displayed()
+
+    @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         sign_in_page.fill_in_email_field(credentials['incorrect_email'])
@@ -130,12 +143,6 @@ class TestRegisteredCustomers:
             error_message = sign_in_page.get_error_message(SingInPageLocators.EMAIL_ERROR)
             assert error_message == sign_in_errors['incorrect_email_format_msg'], \
                 "The error message is incorrect or missing"
-
-    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
-    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
-        """Verify that the 'Forgot your password?' link is present"""
-        element = sign_in_page.check_forgot_your_password_link()
-        assert element.is_displayed()
 
 
 @allure.feature('New Customers')
