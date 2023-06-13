@@ -13,7 +13,6 @@ from selenium.webdriver import ActionChains
 class MainPage(BasePage):
     locators = MainPageLocators
 
-
     @allure.step("Check the transition to the page my desires when clicking on the button")
     def check_the_transition_to_the_page_my_wish_after_click_on_the_button(self):
         """

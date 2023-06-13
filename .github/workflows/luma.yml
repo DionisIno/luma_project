@@ -37,4 +37,17 @@ jobs:
             **/*.py
     - name: Run Pytest on changed files
       if: steps.changed-py-files.outputs.any_changed == 'true'
-      run: pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+      run: |
+        sudo apt-get install -y xvfb ffmpeg
+        Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
+        sleep 1
+        ffmpeg -nostdin -f x11grab -framerate 30 -i :99.0 screen.mp4 >/dev/null 2>&1 &
+        FFMPEG=$!
+        DISPLAY=:99 pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+        kill -s INT $FFMPEG
+        tail --pid=$FFMPEG -f /dev/null
+    - uses: actions/upload-artifact@v2
+      if: steps.changed-py-files.outputs.any_changed == 'true'
+      with:
+        name: recording
+        path: screen.mp4
