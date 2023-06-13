@@ -19,11 +19,11 @@ class ReviewsPage(BasePage):
     def nickname_input_review_correct(self):
         """Entering data into the nickname input"""
         nickname_input_element = self.element_is_clickable(self.locators.NICKNAME_INPUT)
-        time.sleep(1)
+        time.sleep(2)
         nickname_input_element.click()
         nickname_input_element.clear()
         nickname_input_element.send_keys('Some Name')
-        time.sleep(1)
+        time.sleep(2)
 
     @allure.feature('tc_01_15_01 - Entering data into input summary')
     def summary_input_review_correct(self):
@@ -33,6 +33,7 @@ class ReviewsPage(BasePage):
         summary_input_element.click()
         summary_input_element.clear()
         summary_input_element.send_keys('Some Summary Text')
+        time.sleep(2)
 
     @allure.feature('tc_01_15_01 - Entering data into input review')
     def review_input_review_correct(self):
@@ -42,32 +43,23 @@ class ReviewsPage(BasePage):
         review_input_element.click()
         review_input_element.clear()
         review_input_element.send_keys('Some Review Text')
+        time.sleep(2)
 
     @allure.feature('tc_01_15_01 - Click on the send feedback button')
     def send_review_correct(self):
         """Click on the send feedback button"""
-        # button = browser.find_element(By.TAG_NAME, "button")
         button_element = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
         time.sleep(2)
         button_element.click()
-
-        # time.sleep(15)
+        time.sleep(2)
 
     def some_wait(self):
         time.sleep(5)
 
     def review_have_been_send_correctly(self):
-        # review_input_element = self.action_move_to_element(self.locators.SUBMIT_REVIEW_BUTTON)
-        # review_input_element_2 = self.element_is_clickable(self.locators.SUBMIT_REVIEW_BUTTON)
-        # review_input_element_2.click()
-        # time.sleep(5)
         """Checking if a message about the successful submission for moderation of the review appears"""
-        # review_successfully_submitted = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED, timeout=15)
-        # print('\n', self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED), ' = self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)')
-        # self.action_move_to_element(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
-        # print('\n', self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED),
-        #       ' = self.element_is_present(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)')
         review_successfully_submitted = self.get_text(self.locators.REVIEW_SUCCESSFULLY_SUBMITTED)
+        time.sleep(10)
         return review_successfully_submitted
 
     #

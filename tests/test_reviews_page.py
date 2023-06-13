@@ -34,12 +34,6 @@ class TestReviews:
         """Checking the success message"""
         review_successfully_submitted = page.review_have_been_send_correctly()
 
-        # page.click_submit_review()
-        # page.review_have_been_send_correctly()
-
-        # review_successfully_submitted = page.send_review_correct()
-
-        # assert review_successfully_submitted, "Leave a review failed"
 
         assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
         # if review_successfully_submitted == "You submitted your review for moderation.":
