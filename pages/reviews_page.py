@@ -54,9 +54,10 @@ class ReviewsPage(BasePage):
     def some_wait(self):
         """Just some wait"""
 
+    def see_all_opened_windows(self):
+        self.show_all_opened_windows()
 
-
-    def swich_between_opend_windows(self):
+    def swich_between_opend_windows_to_base_one(self):
         self.switch_between_opened_windows()
 
     @allure.feature('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')

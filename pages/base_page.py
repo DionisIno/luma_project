@@ -177,3 +177,17 @@ class BasePage:
         except:
             print("There is only one window. The second window is not revealed. The presence of a third, not tested.")
 
+
+    def show_all_opened_windows(self):
+        handles = self.driver.window_handles
+        size = len(handles)
+
+        if size == 1:
+            print('Additional windows not found. Only one active browser window found.')
+        else:
+            print('Number of detected windows: ', size)
+
+            for x in range(size):
+                self.driver.switch_to.window(handles[x])
+                print(self.driver.title)
+
