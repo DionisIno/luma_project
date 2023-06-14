@@ -199,7 +199,7 @@ class BasePage:
         """Find element (unpacking)"""
         return self.driver.find_element(*locator)
 
-    @allure.step('Move cursor to element. Perform a click action without navigating to a new page.')
+    @allure.step('Move cursor to element. Perform a click action without navigating to a new page')
     def action_move_to_element_click_no_new_window(self, locator):
         """
         This method moves the mouse cursor to the center of the selected element.
@@ -209,3 +209,13 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
 
+    @allure.step('Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
+    def click_to_the_far_right_of_the_locator(self, locator):
+        """
+        Click not in the center of the selector, but in its right part,
+        with a margin from the right edge of 5 pixels
+        """
+        element = wait(self.driver, 10).until(EC.visibility_of_element_located(locator))
+        actions = ActionChains(self.driver)
+        actions.move_to_element_with_offset(element, 5, 0)
+        actions.click().perform()

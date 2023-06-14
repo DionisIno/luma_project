@@ -1,6 +1,5 @@
 import allure
 from selenium.common import TimeoutException
-
 from pages.base_page import BasePage
 from locators.reviews_page_locators import ReviewsPageLocators
 import time
@@ -25,8 +24,7 @@ class ReviewsPage(BasePage):
     @allure.title('tc_01_15_01 - Click on element 2 star')
     def star_2_review_correct(self):
         """Click on element 2 star"""
-        one_star_element = self.element_is_clickable(self.locators.STAR_2)
-        one_star_element.click()
+        star_2_element_click = self.click_to_the_far_right_of_the_locator(self.locators.STAR_2)
 
     @allure.title('tc_01_15_01 - Entering data into the nickname input')
     def nickname_input_review_correct(self):
@@ -55,6 +53,7 @@ class ReviewsPage(BasePage):
     @allure.title('tc_01_15_01 - Click on the send feedback button')
     def send_review_correct(self):
         """Click on the send feedback button"""
+        time.sleep(1)
         self.action_move_to_element_click_no_new_window(self.locators.SUBMIT_REVIEW_BUTTON)
 
     def see_all_opened_windows(self):
