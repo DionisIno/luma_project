@@ -6,7 +6,7 @@ import allure
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN, sign_in_errors
-from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD
 from data.credentials import credentials
 
 
@@ -127,6 +127,21 @@ class TestRegisteredCustomers:
         sign_in_button = sign_in_page.check_sign_in_button_is_clickable()
         assert sign_in_button is not None, "Sign In button element not found"
 
+    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that the 'Forgot your password?' link is present"""
+        element = sign_in_page.check_forgot_your_password_link()
+        assert element.is_displayed(), "Forgot Your Password link is not present"
+
+    @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that click 'Forgot your password?' link opens correct page"""
+        sign_in_page.click_forgot_your_password_link()
+        header = sign_in_page.check_h1_header()
+        assert driver.current_url == FORGOT_YOUR_PASSWORD \
+            and header is not None and header.text == "Forgot Your Password?", \
+            "Verify Forgot Your Password link is incorrect or not redirect to correct page"
+
     @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
@@ -137,12 +152,6 @@ class TestRegisteredCustomers:
             error_message = sign_in_page.get_error_message(SingInPageLocators.EMAIL_ERROR)
             assert error_message == sign_in_errors['incorrect_email_format_msg'], \
                 "The error message is incorrect or missing"
-
-    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
-    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
-        """Verify that the 'Forgot your password?' link is present"""
-        element = sign_in_page.check_forgot_your_password_link()
-        assert element.is_displayed()
 
 
 @allure.feature('New Customers')

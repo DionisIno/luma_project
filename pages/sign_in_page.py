@@ -155,8 +155,14 @@ class SignInPage(BasePage):
 
     @allure.step('Check Forgot Your Password_link')
     def check_forgot_your_password_link(self):
-        """This method finds 'Forgot your password? link"""
+        """This method finds 'Forgot your password?' link"""
         return self.element_is_visible(self.locators.FORGOT_PASSWORD)
+
+    @allure.step('Click Forgot Your Password_link')
+    def click_forgot_your_password_link(self):
+        """This method clicks 'Forgot your password?' link"""
+        forgot_your_password = self.check_forgot_your_password_link()
+        return forgot_your_password.click()
 
     @allure.step('Check New Customers heading is visible')
     def check_new_customers_heading(self):
