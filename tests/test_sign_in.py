@@ -125,7 +125,7 @@ class TestRegisteredCustomers:
     def test_03_01_15_sign_in_button_is_clickable(self, driver, sign_in_page):
         """Check if Sign In button is clickable"""
         sign_in_button = sign_in_page.click_sign_in_button()
-        assert sign_in_button is True, "Sign In button element not found"
+        assert sign_in_button.is_clickable(), "Sign In button element not found"
 
     @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
