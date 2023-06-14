@@ -209,3 +209,13 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
 
+    def get_element_attribute(self, locator, attribute, seconds=10):
+        """
+        This method finds a visible element using the provided locator
+        and returns the value of the specified attribute.
+        Locator - is used to find the element.
+        Attribute - the name of the attribute whose value is to be returned.
+        """
+        element = self.element_is_visible(locator)  # Get the WebElement using locator
+        wait(self.driver, seconds)
+        return element.get_attribute(attribute)
