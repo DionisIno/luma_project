@@ -242,3 +242,11 @@ class TestHeader:
         dropdown_items = page.check_men_tops_subsection()
         assert dropdown_items.is_displayed(), "Error: The 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', \
             'Tees' and 'Tanks' subsections is not displayed"
+
+    def test_tc_01_01_06_the_absence_of_the_create_an_account_link_display(self, driver):
+        """Check the 'Create an account' link is not displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        assert page.element_is_not_visible(page.header_locators.CREATE_AN_ACCOUNT), \
+            "Error: 'Create an account' link is visible"
