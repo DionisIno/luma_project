@@ -58,7 +58,7 @@ class TestReviews:
 
         else:
             print('Leave a review failed')
-            assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
+            assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
     def test_tc_01_15_02_check_that_it_is_possible_to_vote_for_2_star(self, driver):
         """
