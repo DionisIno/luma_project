@@ -13,17 +13,6 @@ class SalePage(BasePage):
         title_women_deals = women_deals_title.text
         return title_women_deals
 
-    @allure.step("Check interactivity of 'Hoodies and sweatshirt' element in Women's deals title")
-    def check_women_deals_hoodies_element(self):
-        element = self.element_is_clickable(self.side_bar_locators.HOODIES_AND_SWEATSHIRTS_W)
-        return element
-
-    @allure.step("Check interactivity of 6 elements in Women's deals title")
-    def click_link_women_deals(self, element_locator):
-        link_locator = self.side_bar_locators.WOMEN_DEALS_ELEMENTS[element_locator]
-        element = self.element_is_visible(*link_locator)
-        element.click()
-
     @allure.step("Get actual title of webpage")
     def get_actual_title(self, driver):
         actual_title = driver.title
@@ -39,3 +28,9 @@ class SalePage(BasePage):
         men_deals_title = self.element_is_visible(self.side_bar_locators.MEN_DEALS_TITLE)
         title_men_deals = men_deals_title.text
         return title_men_deals
+
+    @allure.step("Check text in Gear deals title")
+    def check_text_in_gear_deals_title(self):
+        gear_deals_title = self.element_is_visible(self.side_bar_locators.GEAR_DEALS_TITLE)
+        title_gear_deals = gear_deals_title.text
+        return title_gear_deals
