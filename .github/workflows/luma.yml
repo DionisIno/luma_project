@@ -38,6 +38,6 @@ jobs:
     - name: Run Pytest on changed files
       if: steps.changed-py-files.outputs.any_changed == 'true'
       run: |
-#        pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+        pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
 #             Проба, запустится ли рейтингование 2-х звезд
-        pytest -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+#        pytest -v ${{ steps.changed-py-files.outputs.all_changed_files }}
