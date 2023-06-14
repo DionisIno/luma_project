@@ -225,4 +225,4 @@ class HeaderPage(BasePage):
         password.send_keys("1234qwer!")
         sign_in_btn = self.element_is_visible(self.sign_in_locators.SIGN_IN_BUTTON)
         sign_in_btn.click()
-        return self.element_is_not_visible(self.header_locators.CREATE_AN_ACCOUNT)
+        return self.element_is_not_visible(self.header_locators.SIGN_IN)
