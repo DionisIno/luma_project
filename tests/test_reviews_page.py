@@ -1,8 +1,6 @@
 from selenium.webdriver.support import expected_conditions as EC
 from locators.reviews_page_locators import ReviewsPageLocators
-
 from selenium.webdriver.support.wait import WebDriverWait
-
 from pages.reviews_page import ReviewsPage
 from data.data_urls import REVIEWS_URL_DIRECT_ANCHOR_LINK, REVIEWS_URL_GENERAL
 
@@ -26,8 +24,7 @@ class TestReviews:
         page.open()
 
         """Get the current URL and print it"""
-        current_url = driver.current_url
-        print("Current URL:", current_url)
+        page.get_the_current_URL_and_print_it()
 
         """Steps"""
         page.open_review_menu()
@@ -48,17 +45,16 @@ class TestReviews:
 
         """Get the current URL and print it
         The variable is requested first for comparison, now for use in an assertion for a GitHub Action"""
-        current_url = driver.current_url
-        print("Current URL:", current_url)
+        result_CI_GitHub_Action_URL = page.get_the_current_URL_and_print_it()
 
         if review_successfully_submitted == "You submitted your review for moderation.":
             print('review_successfully_submitted', ' "Success" = Review sent successfully!')
             assert review_successfully_submitted == "You submitted your review for moderation.", "Leave a review failed"
 
-        elif 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url:
+        elif 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL:
             print('review_successfully_submitted', ' "Success" = Review sent successfully!')
-            print('The review is recorded at the address and under the number: ', current_url)
-            assert 'https://magento.softwaretestingboard.com/review/product/post/id' in current_url, "Leave a review failed"
+            print('The review is recorded at the address and under the number: ', result_CI_GitHub_Action_URL)
+            assert 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
         else:
             print('Leave a review failed')
