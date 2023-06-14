@@ -23,3 +23,4 @@ class SingInPageLocators:
     # SignIn form > New Customers
     NEW_CUSTOMERS_HEADER = (By.CSS_SELECTOR, "#block-new-customer-heading")
     NEW_CUSTOMERS_NOTE = (By.CSS_SELECTOR, ".block-new-customer > div.block-content > p")
+    CREATE_ACCOUNT_BUTTON = (By.CSS_SELECTOR, ".action.create.primary")
