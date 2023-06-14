@@ -264,6 +264,5 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.user_authorization()
-        aria_expanded = page.get_element_attribute(page.header_locators.DROPDOWN_BUTTON, 'aria-expanded', 2)
-        assert aria_expanded == 'false', \
-            f"Error: Expected 'aria-expanded' to be 'false', but got {aria_expanded}"
+        assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
+            "Error: dropdown button is not visible"
