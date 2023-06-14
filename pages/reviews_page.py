@@ -9,16 +9,23 @@ import time
 class ReviewsPage(BasePage):
     locators = ReviewsPageLocators
 
-    @allure.title('tc_01_15_01 - Click on element 1 star')
+    @allure.title('tc_01_15_01 - Click on review menu')
     def open_review_menu(self):
         """Click on review menu"""
         review_menu = self.element_is_clickable(self.locators.REVIEW_MENU)
         review_menu.click()
 
+
     @allure.title('tc_01_15_01 - Click on element 1 star')
-    def one_star_review_correct(self):
+    def star_1_review_correct(self):
         """Click on element 1 star"""
         one_star_element = self.element_is_clickable(self.locators.STAR_1)
+        one_star_element.click()
+
+    @allure.title('tc_01_15_01 - Click on element 2 star')
+    def star_2_review_correct(self):
+        """Click on element 2 star"""
+        one_star_element = self.element_is_clickable(self.locators.STAR_2)
         one_star_element.click()
 
     @allure.title('tc_01_15_01 - Entering data into the nickname input')

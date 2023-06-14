@@ -9,6 +9,7 @@ class ReviewsPageLocators:
 
     REVIEW_MENU = (By.CSS_SELECTOR, '#tab-label-reviews-title')
     STAR_1 = (By.CSS_SELECTOR, '#Rating_1_label')
+    STAR_2 = (By.CSS_SELECTOR, '#Rating_2_label')
     NICKNAME_INPUT = (By.CSS_SELECTOR, '#nickname_field')
     SUMMARY_INPUT = (By.CSS_SELECTOR, '#summary_field')
     REVIEW_INPUT = (By.CSS_SELECTOR, '#review_field')
