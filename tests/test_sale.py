@@ -90,3 +90,13 @@ class TestSalePage:
 
             assert page.get_actual_url(driver) == expected_url, "URL does not match"
             assert page.get_actual_title(driver) == expected_title, "Title does not match"
+
+    @allure.feature("Testing Side Menu Bar - Gear Deals Section")
+    class TestSideMenuBarGear:
+        @allure.title("TC 10.03.01 - Verify 'GEAR DEALS' title is correct")
+        def test_tc_10_03_01(self, driver):
+            """Check title of Gear Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            title = page.check_text_in_gear_deals_title()
+            assert title == "GEAR DEALS", f"Expected title: 'GEAR DEALS', Actual title: {title}"
