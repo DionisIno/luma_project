@@ -210,12 +210,23 @@ class BasePage:
         actions.move_to_element(element).click().perform()
 
     @allure.step('Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
-    def click_to_the_far_right_of_the_locator(self, locator):
+    def click_to_the_far_right_of_the_locator(self, locator, timeout=5):
         """
         Click not in the center of the selector, but in its right part,
         with a margin from the right edge of 5 pixels
         """
-        element = wait(self.driver, 10).until(EC.visibility_of_element_located(locator))
+        element = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
         actions = ActionChains(self.driver)
         actions.move_to_element_with_offset(element, 5, 0)
         actions.click().perform()
+
+    @allure.step('Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
+    def count_the_number_of_elements_with_the_same_selectors(self, locator, timeout=5):
+        """
+        Count number of elements with same selectors
+        Can be used if there are fields to fill in and the field filling error has the same locator,
+        you can understand the number of incorrectly filled fields or not filled at all
+        """
+        elements = wait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
+        count = len(elements)
+        print("Number of elements with the same (or FAIL) locators: ", count)

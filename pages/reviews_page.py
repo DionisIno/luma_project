@@ -62,6 +62,33 @@ class ReviewsPage(BasePage):
     def switch_between_opened_windows_to_base_one(self):
         self.switch_between_opened_windows()
 
+    def get_the_current_URL_and_print_it(self):
+        """Get the current URL and print it"""
+        current_url = self.driver.current_url
+        print("Current URL:", current_url)
+        return current_url
+
+    @allure.title('tc_01_15 - Checking if a message about NOT successful submission for moderation of the review appears')
+    def checking_for_blank_fields_or_an_unpressed_star(self):
+        """Checking if a message about NOT successful submission for moderation of the review appears"""
+        time.sleep(1)
+        # try:
+        #     review_not_successfully_submitted = self.element_is_present(self.locators.MESSAGE_ERROR)
+        #     if review_not_successfully_submitted:
+        #         print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
+        #         return self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
+        # except:
+        #     print("There are no reports of empty fields or an unpressed star. All fields are filled in properly.")
+
+
+        review_not_successfully_submitted = self.element_is_present(self.locators.MESSAGE_ERROR)
+        if review_not_successfully_submitted:
+            print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
+            self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
+            # return self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
+        else:
+            print("There are no reports of empty fields or an unpressed star. All fields are filled in properly.")
+
     @allure.title('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
     def review_have_been_send_correctly(self):
         """
@@ -73,14 +100,7 @@ class ReviewsPage(BasePage):
             return review_successfully_submitted
         except TimeoutException as ex:
             print("TimeoutException, and there will be a test to check the filled fields for an error")
-            print("Exception has been thrown. " + str(ex))
+            print("Exception has been thrown: " + str(ex))
 
-            """Checking if a message about NOT successful submission for moderation of the review appears"""
-            try:
-                print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
-                review_not_successfully_submitted = self.get_text(self.locators.MESSAGE_ERROR)
-                return review_not_successfully_submitted
-            except:
-                print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
 
 
