@@ -6,7 +6,8 @@ import allure
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN, sign_in_errors
-from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD, \
+    CREATE_ACCOUNT_PAGE_URL
 from data.credentials import credentials
 
 
@@ -131,7 +132,8 @@ class TestRegisteredCustomers:
     def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that the 'Forgot your password?' link is present"""
         element = sign_in_page.check_forgot_your_password_link()
-        assert element.is_displayed(), "Forgot Your Password link is not present"
+        element_href = element.get_attribute("href")
+        assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD, "Forgot Your Password link is not present"
 
     @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
     def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
@@ -170,6 +172,29 @@ class TestNewCustomers:
         assert note is not None and note.text == sign_in_data["new_customers_note"], \
             "Note is incorrect or not present under New Customers"
 
+    @allure.title('TC 03.01.21 Verify presence of Create an Account button ')
+    def test_03_01_21_create_an_account_button_is_present(self, driver, sign_in_page):
+        """Check if 'Create an Account' button is present"""
+        button = sign_in_page.check_create_an_account_button()
+        assert button.is_displayed() and button.text == sign_in_data["create_account_btn"], \
+            f"{sign_in_data['create_account_btn']} is not visible"
+
+    @allure.title('TC 03.01.22 Verify Create an Account button link')
+    def test_03_01_22_create_an_account_button_link(self, driver, sign_in_page):
+        """Check if 'Create an Account' button has correct link and is clickable"""
+        button = sign_in_page.check_create_an_account_button()
+        button_href = button.get_attribute("href")
+        assert button.is_enabled() and button_href == CREATE_ACCOUNT_PAGE_URL, \
+            f"{sign_in_data['create_account_btn']} doesn't have link ot is not clickable"
+
+    @allure.title('TC 03.01.23 Verify Create an Account button is functional')
+    def test_03_01_23_create_an_account_button_(self, driver, sign_in_page):
+        """Check if 'Create an Account' button link opens correct page"""
+        sign_in_page.click_create_an_account_button()
+        header = sign_in_page.check_h1_header()
+        assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \
+               and header is not None and header.text == "Create New Customer Account", \
+               "Verify Create an Account button is incorrect or not redirect to correct page"
 
 @allure.feature('Login Functionality')
 class TestLogin:
