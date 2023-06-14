@@ -228,4 +228,6 @@ class HeaderPage(BasePage):
         password.send_keys("1234qwer!")
         sign_in_btn = self.element_is_visible(self.sign_in_locators.SIGN_IN_BUTTON)
         sign_in_btn.click()
-        self.click_and_return_element(self.header_locators.DROPDOWN_BUTTON)
+        WebDriverWait(self.driver, 20).until(
+            EC.invisibility_of_element_located(self.header_locators.SIGN_IN))
+        return self.element_is_not_visible(self.header_locators.SIGN_IN)
