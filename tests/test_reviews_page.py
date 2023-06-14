@@ -76,13 +76,14 @@ class TestReviews:
         """
 
         """Steps"""
-        page = ReviewsPage(driver, REVIEWS_URL_DIRECT_ANCHOR_LINK)
+        page = ReviewsPage(driver, REVIEWS_URL_GENERAL)
         page.open()
 
         """Get the current URL and print it"""
         page.get_the_current_URL_and_print_it()
 
         """Steps"""
+        page.open_review_menu()
         page.star_2_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
