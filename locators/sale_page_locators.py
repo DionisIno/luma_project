@@ -25,6 +25,7 @@ class SideBarLocators:
         "shorts_m": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(4) > li:nth-child(5) > a')
     }
     # Gear Deals section
+    GEAR_DEALS_TITLE = (By.CSS_SELECTOR, '.categories-menu > strong:nth-child(5) > span')
 
 
 class MainContentPromoBlocks:
