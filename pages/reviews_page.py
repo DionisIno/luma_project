@@ -24,6 +24,7 @@ class ReviewsPage(BasePage):
     @allure.title('tc_01_15_01 - Click on element 2 star')
     def star_2_review_correct(self):
         """Click on element 2 star"""
+        time.sleep(1)
         star_2_element_click = self.click_to_the_far_right_of_the_locator(self.locators.STAR_2)
 
     @allure.title('tc_01_15_01 - Entering data into the nickname input')
