@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
@@ -264,5 +266,6 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.user_authorization()
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(page.header_locators.DROPDOWN_BUTTON))
         assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
             "Error: dropdown button is visible"
