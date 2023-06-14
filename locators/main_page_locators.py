@@ -34,3 +34,4 @@ class MainPageLocators:
     SECTION_2_BLOCK_1_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-pants .content .icon")
     SECTION_2_BLOCK_1_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, ".home-pants .content .info")
     SECTION_2_BLOCK_1_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, ".home-pants .content .title")
+    SECTION_2_BLOCK_2_IMAGE = (By.CSS_SELECTOR, '.home-t-shirts img')
