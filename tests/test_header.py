@@ -250,3 +250,11 @@ class TestHeader:
         page.user_authorization()
         assert page.element_is_not_visible(page.header_locators.CREATE_AN_ACCOUNT), \
             "Error: 'Create an account' link is visible"
+
+    def test_tc_01_01_07_the_absence_of_the_sign_in_link_display(self, driver):
+        """Check the 'Sign In' link is not displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        assert page.element_is_not_visible(page.header_locators.SIGN_IN), \
+            "Error: 'Sign In' link is visible"
