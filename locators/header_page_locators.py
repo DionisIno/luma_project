@@ -8,7 +8,7 @@ class HeaderPageLocators:
     SIGN_IN = By.XPATH, "(//a[contains(text(),'Sign In')])[1]"
     CREATE_AN_ACCOUNT = By.XPATH, "(//a[normalize-space()='Create an Account'])[1]"
     GREETING_MESSAGE = By.XPATH, "(//span[@class='not-logged-in'])[1]"
-    DROPDOWN_BUTTON = By.XPATH, "(//li[@class='customer-welcome'])[1]"
+    DROPDOWN_BUTTON = By.CSS_SELECTOR, "div[class='panel header'] li[class='customer-welcome']"
 
     # Header Content
     LOGO = By.XPATH, "//a[@aria-label='store logo']//img"
