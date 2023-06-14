@@ -32,8 +32,8 @@ jobs:
 
     - name: Run Pytest
       run: |
-#        pytest -s -v
+        pytest -s -v
 #      Проверка, запустится ли рейтингование 2-х звезд с графическим интерфейсом
-        pytest -v
+#        pytest -v
 
       continue-on-error: true
