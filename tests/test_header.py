@@ -258,3 +258,11 @@ class TestHeader:
         page.user_authorization()
         assert page.element_is_not_visible(page.header_locators.SIGN_IN), \
             "Error: 'Sign In' link is visible"
+
+    def test_tc_01_01_08_the_display_of_the_dropdown_button(self, driver):
+        """Check the dropdown button is displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
+            "Error: dropdown button is visible"
