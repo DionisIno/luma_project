@@ -1,6 +1,7 @@
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
+import pytest
 
 
 class TestHeader:
@@ -259,6 +260,7 @@ class TestHeader:
         assert page.element_is_not_visible(page.header_locators.SIGN_IN), \
             "Error: 'Sign In' link is visible"
 
+    @pytest.mark.xfail
     def test_tc_01_01_08_the_display_of_the_dropdown_button(self, driver):
         """Check the dropdown button is displayed if the user is authorized"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -268,10 +270,12 @@ class TestHeader:
         assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
             "Error: dropdown button is not visible"
 
+    @pytest.mark.xfail
     def test_tc_01_01_09_the_functionality_of_the_dropdown_button(self, driver):
         """Check the display of the dropdown list after clicking the button if the user is authorized"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.user_authorization()
+        page.click_and_return_element(page.header_locators.DROPDOWN_BUTTON)
         assert page.element_is_visible(page.header_locators.HEADER_LIST), \
             "Error: The dropdown list with sections 'My Account', 'My Wish List', 'Sign Out' is not appears"

@@ -15,7 +15,7 @@ class HeaderPageLocators:
     LOGO = By.XPATH, "//a[@aria-label='store logo']//img"
     CART_ICON = By.XPATH, "//a[@class='action showcart']"
     CART_BUTTON_MESSAGE = By.XPATH, "//strong[@class='subtitle empty']"
-    SEARCH_FIELD = By.XPATH, "//input[@id = 'search']"
+    SEARCH_FIELD = By.XPATH, "//input[@id='search']"
     SEARCH_DROPDOWN = By.XPATH, "//*[@id='search_autocomplete']"
 
     # Top menu navigation
