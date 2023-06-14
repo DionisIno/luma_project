@@ -267,7 +267,8 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.user_authorization()
-        page.element_is_visible(page.header_locators.DROPDOWN_BUTTON)
+        # page.element_is_visible(page.header_locators.DROPDOWN_BUTTON)
+        page.action_move_to_element(page.element_is_visible(page.header_locators.DROPDOWN_BUTTON))
         assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
             "Error: dropdown button is not visible"
 
