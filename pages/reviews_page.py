@@ -72,22 +72,17 @@ class ReviewsPage(BasePage):
     def checking_for_blank_fields_or_an_unpressed_star(self):
         """Checking if a message about NOT successful submission for moderation of the review appears"""
         time.sleep(1)
-        # try:
-        #     review_not_successfully_submitted = self.element_is_present(self.locators.MESSAGE_ERROR)
-        #     if review_not_successfully_submitted:
-        #         print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
-        #         return self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
-        # except:
-        #     print("There are no reports of empty fields or an unpressed star. All fields are filled in properly.")
-
-
-        review_not_successfully_submitted = self.element_is_present(self.locators.MESSAGE_ERROR)
-        if review_not_successfully_submitted:
-            print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
-            self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
-            # return self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
-        else:
+        try:
+            review_not_successfully_submitted = self.element_is_present(self.locators.MESSAGE_ERROR)
+            if review_not_successfully_submitted:
+                print("Something went wrong: One of the 3 fields is not filled or the star is not pressed")
+                self.count_the_number_of_elements_with_the_same_selectors(self.locators.MESSAGE_ERROR)
+            else:
+                print("There are no reports of empty fields or an unpressed star. All fields are filled in properly.")
+        except TimeoutException as ex:
+            print("Exception has been thrown (GOOD = no errors detected): " + str(ex))
             print("There are no reports of empty fields or an unpressed star. All fields are filled in properly.")
+
 
     @allure.title('tc_01_15_01 - Checking if a message about the successful submission for moderation of the review appears')
     def review_have_been_send_correctly(self):

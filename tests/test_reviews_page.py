@@ -84,8 +84,8 @@ class TestReviews:
 
         """Steps"""
         page.star_2_review_correct()
-        # page.nickname_input_review_correct()
-        # page.summary_input_review_correct()
+        page.nickname_input_review_correct()
+        page.summary_input_review_correct()
         page.review_input_review_correct()
 
         """Button click"""
