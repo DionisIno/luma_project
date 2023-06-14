@@ -27,6 +27,10 @@ class ReviewsPage(BasePage):
         time.sleep(1)
         star_2_element_click = self.click_to_the_far_right_of_the_locator(self.locators.STAR_2)
 
+    def debug_CI_CSS_selectors(self):
+        """Getting all CSS elements on a page and outputting them to a CI report"""
+        self.debug_headless_CI_in_GitHub_Actions_if_no_CSS_selector_found()
+
     @allure.title('tc_01_15_01 - Entering data into the nickname input')
     def nickname_input_review_correct(self):
         """Entering data into the nickname input"""

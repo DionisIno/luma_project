@@ -84,6 +84,11 @@ class TestReviews:
 
         """Steps"""
         page.open_review_menu()
+
+        # debug for CI
+        page.debug_CI_CSS_selectors()
+
+        """Steps"""
         page.star_2_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()

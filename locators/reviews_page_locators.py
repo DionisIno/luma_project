@@ -16,4 +16,5 @@ class ReviewsPageLocators:
     SUBMIT_REVIEW_BUTTON = (By.CSS_SELECTOR, '.submit')
     REVIEW_SUCCESSFULLY_SUBMITTED = (By.CSS_SELECTOR, '.message-success')
     MESSAGE_ERROR = (By.CSS_SELECTOR, '.mage-error')
+    ALL_CSS_ELEMENTS_ON_PAGE = (By.CSS_SELECTOR, '*')
 

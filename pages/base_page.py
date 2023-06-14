@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import allure
 from selenium.webdriver import ActionChains
 from locators.wish_list_locators import WishListPageLocators as wl
+from selenium.webdriver.common.by import By
 
 
 class BasePage:
@@ -230,3 +231,25 @@ class BasePage:
         elements = wait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
         count = len(elements)
         print("Number of elements with the same (or FAIL) locators: ", count)
+
+
+    def debug_headless_CI_in_GitHub_Actions_if_no_CSS_selector_found(self):
+        """
+        Getting all CSS elements on a page and outputting them to a CI report
+        CI debugging options
+        """
+        ALL_CSS_ELEMENTS_ON_PAGE = (By.CSS_SELECTOR, '*')
+        # elements = self.driver.find_element(ALL_CSS_ELEMENTS_ON_PAGE)
+        try:
+            elements = self.driver.execute_script("return document.querySelectorAll('*')")
+            for element in elements:
+                tag_name = element.tag_name
+                text = element.text
+                attributes = element.get_attribute("outerHTML")
+                print(f"Tag Name: {tag_name}")
+                print(f"Text: {text}")
+                print(f"Attributes: {attributes}")
+                print("--------")
+        except:
+            print('At this stage, an error appeared in the output of additional elements')
+
