@@ -1,3 +1,6 @@
+from selenium.common import TimeoutException
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from data.data_urls import SALE_PAGE_URL, WHAT_IS_NEW_PAGE_URL, GEAR_PAGE_URL, BAGS_PAGE_URL, WATCHES_PAGE_URL
 from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL, WOMEN_PAGE_URL, FITNESS_EQUIPMENT_PAGE_URL
 from locators.common_locators import CommonLocators
@@ -214,3 +217,18 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
         return self.element_is_visible(self.header_locators.TOPS_SUBSECTIONS)
+
+    @allure.step('User authorization')
+    def user_authorization(self):
+        sign_in = self.element_is_visible(self.header_locators.SIGN_IN)
+        sign_in.click()
+        email = self.element_is_visible(self.sign_in_locators.CUSTOMER_EMAIL)
+        email.send_keys("qwerty@mail.com")
+        password = self.element_is_visible(self.sign_in_locators.CUSTOMER_PASSWORD)
+        password.send_keys("1234qwer!")
+        sign_in_btn = self.element_is_visible(self.sign_in_locators.SIGN_IN_BUTTON)
+        sign_in_btn.click()
+        try:
+            WebDriverWait(self.driver, 10).until(EC.invisibility_of_element_located(self.header_locators.SIGN_IN))
+        except TimeoutException:
+            print("SIGN_IN button did not become invisible after 10 seconds")

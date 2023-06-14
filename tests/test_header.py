@@ -1,3 +1,4 @@
+import pytest
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
@@ -242,3 +243,29 @@ class TestHeader:
         dropdown_items = page.check_men_tops_subsection()
         assert dropdown_items.is_displayed(), "Error: The 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', \
             'Tees' and 'Tanks' subsections is not displayed"
+
+    def test_tc_01_01_06_the_absence_of_the_create_an_account_link_display(self, driver):
+        """Check the 'Create an account' link is not displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        assert page.element_is_not_visible(page.header_locators.CREATE_AN_ACCOUNT), \
+            "Error: 'Create an account' link is visible"
+
+    def test_tc_01_01_07_the_absence_of_the_sign_in_link_display(self, driver):
+        """Check the 'Sign In' link is not displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        assert page.element_is_not_visible(page.header_locators.SIGN_IN), \
+            "Error: 'Sign In' link is visible"
+
+    @pytest.mark.xfail
+    def test_tc_01_01_08_the_display_of_the_dropdown_button(self, driver):
+        """Check the dropdown button is displayed if the user is authorized"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        page.element_is_clickable(page.header_locators.DROPDOWN_BUTTON)
+        assert page.element_is_visible(page.header_locators.DROPDOWN_BUTTON), \
+            "Error: dropdown button is not visible"
