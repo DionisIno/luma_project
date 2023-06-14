@@ -84,6 +84,7 @@ class TestReviews:
         print("Current URL:", current_url)
 
         """Steps"""
+        page.star_1_review_correct()
         page.star_2_review_correct()
         page.nickname_input_review_correct()
         page.summary_input_review_correct()
