@@ -23,3 +23,9 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_TOPS)
         return url == MEN_TOPS_URL and text == "Tops"
+
+    @allure.step("Find clickable elements link 'Bottoms' on Men page")
+    def verify_bottoms_link_is_visible_and_clickable(self):
+        """This method finds 'Bottoms' link and verifies it is clickable"""
+        self.element_is_clickable(self.side_bar_locators.SIDE_BAR_BOTTOMS)
+        return wait(self.driver, 5).until(EC.element_to_be_clickable(self.side_bar_locators.SIDE_BAR_BOTTOMS))
