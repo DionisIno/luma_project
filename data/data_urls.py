@@ -65,7 +65,8 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
 
 class ImageUrls:
     SECTION_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-main.jpg"
-    SECTION_2_BLOCK_1_IMAGE_URL = \
-        "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
-    SECTION_2_BLOCK_2_IMAGE_URL = \
-        "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-t-shirts.png"
+    SECTION_2_BLOCK_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
+    SECTION_2_BLOCK_2_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-t-shirts.png"
+    SECTION_2_BLOCK_3_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-erin.jpg"
+    SECTION_2_BLOCK_4_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-performance.jpg"
+    SECTION_2_BLOCK_5_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-eco.jpg"
