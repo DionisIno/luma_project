@@ -26,5 +26,5 @@ class TestCreateAnAccount:
         page.open()
         massage = page.create_with_email()
         assert massage == 'There is already an account with this email address. If you are sure that it is your' \
-                          ' email address, click here to get your password and access your account.', 'Error massage ' \
-                                                                                                      'is not displayed'
+                          ' email address, click here to get your password and access your account.', "Error massage " \
+                                                                                                      "isn't displayed"
