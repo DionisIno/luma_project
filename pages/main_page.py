@@ -236,7 +236,25 @@ class PromoBlock(BasePage):
         return info_block_sign
 
     def check_image_in_section2_block2(self):
-        """Checks the image in block 1 'home-pants'"""
+        """Checks the image in block 2 'home-t-shirts'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_IMAGE)
         block2_image = element.get_attribute("src")
         return block2_image
+
+    def check_image_in_section2_block3(self):
+        """Checks the image in block 3 'home-erin'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_IMAGE)
+        block3_image = element.get_attribute("src")
+        return block3_image
+
+    def check_image_in_section2_block4(self):
+        """Checks the image in block 4 'home-performance'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_IMAGE)
+        block4_image = element.get_attribute("src")
+        return block4_image
+
+    def check_image_in_section2_block5(self):
+        """Checks the image in block 5 'home-eco'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_IMAGE)
+        block5_image = element.get_attribute("src")
+        return block5_image

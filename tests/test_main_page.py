@@ -230,3 +230,30 @@ class TestMainPage:
             page.open()
             block2_image = page.check_image_in_section2_block2()
             assert block2_image == ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_26_check_image_in_section2_block3(self, driver):
+            """This test checks if the image in section 2 block 3 'home-erin' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block3_image = page.check_image_in_section2_block3()
+            assert block3_image == ImageUrls.SECTION_2_BLOCK_3_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
+            """This test checks if the image in section 2 block 4 'home-performance' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block4_image = page.check_image_in_section2_block4()
+            assert block4_image == ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
+            """This test checks if the image in section 2 block 5 'home-eco' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block5_image = page.check_image_in_section2_block5()
+            assert block5_image == ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL, "The image is not correct"
