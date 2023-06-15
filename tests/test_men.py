@@ -45,3 +45,11 @@ class TestMenPage:
         page.open()
         subhead_title = page.verify_subhead_tops_is_visible()
         assert subhead_title == "TOPS"
+
+    @allure.title("TC 14.03.04 Verify the link 'Jackets' is visible and clickable.")
+    def test_tc_14_03_04(self, driver):
+        """Verify that the link 'Jackets' is displayed and clickable"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        link = page.verify_jackets_link_is_visible_and_clickable()
+        assert link, "The link 'Jackets' is not visible"
