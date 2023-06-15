@@ -23,6 +23,7 @@ class CreateAccountPage(BasePage):
         self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
         self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
+        time.sleep(1)
         massage = self.element_is_visible(self.locators.MASSAGE_REGISTERED_EMAIL)
         time.sleep(1)
         return massage.text
