@@ -243,6 +243,30 @@ class PromoBlock(BasePage):
         info_block_title = element.text
         return info_block_title
 
+    def check_info_block_title_in_section2_block2(self):
+        """Checks the title of info-block in block 2 'home-t-shirts'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_TITLE)
+        info_block_title = element.text
+        return info_block_title
+
+    def check_info_block_title_in_section2_block3(self):
+        """Checks the title of info-block in block 3 'home-erin'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_TITLE)
+        info_block_title = element.text
+        return info_block_title
+
+    def check_info_block_title_in_section2_block4(self):
+        """Checks the title of info-block in block 4 'home-performance'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_TITLE)
+        info_block_title = element.text
+        return info_block_title
+
+    def check_info_block_title_in_section2_block5(self):
+        """Checks the title of info-block in block 5 'home-eco'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_TITLE)
+        info_block_title = element.text
+        return info_block_title
+
     def check_info_block_text_in_section2_block1(self):
         """Checks the text of info-block in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TEXT)

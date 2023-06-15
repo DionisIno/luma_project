@@ -240,6 +240,15 @@ class TestMainPage:
             info_block = page.check_info_block_display_in_section2_block2()
             assert info_block is True, "The element is not visible"
 
+        @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_23_check_info_block_title_in_section2_block1(self, driver):
+            """This test checks if the info block title in section 2 block 1 'home-t-shirts' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section2_block2()
+            assert info_block_title == "Even more ways to mix and match", "The title is not correct"
+
         @allure.title("TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_26_check_image_in_section2_block3(self, driver):
             """This test checks if the image in section 2 block 3 'home-erin' is correct
@@ -257,6 +266,15 @@ class TestMainPage:
             page.open()
             info_block = page.check_info_block_display_in_section2_block3()
             assert info_block is True, "The element is not visible"
+
+        @allure.title("TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_28_check_info_block_title_in_section2_block1(self, driver):
+            """This test checks if the info block title in section 2 block 3 'home-erin' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section2_block3()
+            assert info_block_title == "Take it from Erin", "The title is not correct"
 
         @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
@@ -277,6 +295,15 @@ class TestMainPage:
             info_block = page.check_info_block_display_in_section2_block4()
             assert info_block is True, "The element is not visible"
 
+        @allure.title("TC 13.01.33 - Check the display of the title in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_33_check_info_block_title_in_section2_block4(self, driver):
+            """This test checks if the info block title in section 2 block 4 'home-performance' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section2_block4()
+            assert info_block_title == "Science meets performance", "The title is not correct"
+
         @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct
@@ -294,3 +321,12 @@ class TestMainPage:
             page.open()
             info_block = page.check_info_block_display_in_section2_block5()
             assert info_block is True, "The element is not visible"
+
+        @allure.title("TC 13.01.38 - Check the display of the title in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_38_check_info_block_title_in_section2_block5(self, driver):
+            """This test checks if the info block title in section 2 block 5 'home-eco' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_title = page.check_info_block_title_in_section2_block5()
+            assert info_block_title == "Twice around, twice as nice", "The title is not correct"
