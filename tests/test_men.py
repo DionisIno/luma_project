@@ -37,3 +37,11 @@ class TestMenPage:
         page.open()
         current_page = page.verify_tops_bottoms_redirects_to_a_correct_page()
         assert current_page, "New page isn't open or the 'Bottoms' subhead is incorrect"
+
+    @allure.title("TC 14.03.01 Verify the 'TOPS' subhead is displayed")
+    def test_tc_14_03_01(self, driver):
+        """Verify that the subhead 'TOPS' is displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        subhead_title = page.verify_subhead_tops_is_visible()
+        assert subhead_title == "TOPS"

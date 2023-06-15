@@ -38,3 +38,20 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_BOTTOMS)
         return url == MEN_BOTTOMS_URL and text == "Bottoms"
+
+    @allure.step('Correct redirection of the link "Bottoms" on Men page')
+    def verify_tops_bottoms_redirects_to_a_correct_page(self):
+        """This method finds 'Bottoms' link and verifies it is correctly redirects to a new page"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_BOTTOMS)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_BOTTOMS)
+        return url == MEN_BOTTOMS_URL and text == "Bottoms"
+
+    @allure.step('Verify subhead "TOPS" on Men page')
+    def verify_subhead_tops_is_visible(self):
+        """This method finds subhead 'TOPS' and verifies it is correctly displayed"""
+        subhead_title = self.element_is_visible(self.side_bar_locators.SIDE_BAR_SUBHEAD_TOPS)
+        text_title = subhead_title.text
+        return text_title
+
