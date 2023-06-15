@@ -28,3 +28,12 @@ class TestMenPage:
         page.open()
         link = page.verify_bottoms_link_is_visible_and_clickable()
         assert link, "The link 'Bottoms' is not visible"
+
+    @allure.title("TC 14.02.05 Verify the link 'Bottoms' redirects to a correct page.")
+    def test_tc_14_02_05(self, driver):
+        """Verify that the link 'Bottoms' correctly opens and redirects to a new webpage, the header 'Bottoms' is
+          displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_tops_bottoms_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open or the 'Bottoms' subhead is incorrect"
