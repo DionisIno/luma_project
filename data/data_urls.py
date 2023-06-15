@@ -19,6 +19,7 @@ MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
 MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
 MEN_BOTTOMS_SHORTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html"
+MEN_TOPS_URL = "https://magento.softwaretestingboard.com/men/tops-men.html"
 ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
 BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
