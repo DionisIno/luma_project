@@ -213,8 +213,28 @@ class PromoBlock(BasePage):
         return block1_image
 
     def check_info_block_display_in_section2_block1(self):
-        """Checks the info block 1 display in section 2 of promo block under header"""
+        """Checks the info block 1 'home-pants' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK)
+        return info_block.is_displayed()
+
+    def check_info_block_display_in_section2_block2(self):
+        """Checks the info block 2 'home-t-shirts' display in section 2 of promo block under header"""
+        info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK)
+        return info_block.is_displayed()
+
+    def check_info_block_display_in_section2_block3(self):
+        """Checks the info block 3 'home-erin' display in section 2 of promo block under header"""
+        info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK)
+        return info_block.is_displayed()
+
+    def check_info_block_display_in_section2_block4(self):
+        """Checks the info block 4 'home-performance' display in section 2 of promo block under header"""
+        info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK)
+        return info_block.is_displayed()
+
+    def check_info_block_display_in_section2_block5(self):
+        """Checks the info block 5 'home-eco' display in section 2 of promo block under header"""
+        info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK)
         return info_block.is_displayed()
 
     def check_info_block_title_in_section2_block1(self):

@@ -231,6 +231,15 @@ class TestMainPage:
             block2_image = page.check_image_in_section2_block2()
             assert block2_image == ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL, "The image is not correct"
 
+        @allure.title("TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block")
+        def test_tc_13_01_22_check_info_block_in_section2_block2(self, driver):
+            """This test checks if info block in section 2 block 2 'home-t-shirts' is displayed
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block = page.check_info_block_display_in_section2_block2()
+            assert info_block is True, "The element is not visible"
+
         @allure.title("TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_26_check_image_in_section2_block3(self, driver):
             """This test checks if the image in section 2 block 3 'home-erin' is correct
@@ -239,6 +248,15 @@ class TestMainPage:
             page.open()
             block3_image = page.check_image_in_section2_block3()
             assert block3_image == ImageUrls.SECTION_2_BLOCK_3_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.27 - Check the display of the info block in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_27_check_info_block_in_section2_block3(self, driver):
+            """This test checks if info block in section 2 block 3 'home-erin' is displayed
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block = page.check_info_block_display_in_section2_block3()
+            assert info_block is True, "The element is not visible"
 
         @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
@@ -249,6 +267,16 @@ class TestMainPage:
             block4_image = page.check_image_in_section2_block4()
             assert block4_image == ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL, "The image is not correct"
 
+        @allure.title("TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo "
+                      "Block")
+        def test_tc_13_01_32_check_info_block_in_section2_block4(self, driver):
+            """This test checks if info block in section 2 block 4 'home-performance' is displayed
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block = page.check_info_block_display_in_section2_block4()
+            assert info_block is True, "The element is not visible"
+
         @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct
@@ -257,3 +285,12 @@ class TestMainPage:
             page.open()
             block5_image = page.check_image_in_section2_block5()
             assert block5_image == ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.37 - Check the display of the info block in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_37_check_info_block_in_section2_block5(self, driver):
+            """This test checks if info block in section 2 block 5 'home-eco' is displayed
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block = page.check_info_block_display_in_section2_block5()
+            assert info_block is True, "The element is not visible"
