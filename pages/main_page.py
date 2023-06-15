@@ -212,6 +212,30 @@ class PromoBlock(BasePage):
         block1_image = element.get_attribute("src")
         return block1_image
 
+    def check_image_in_section2_block2(self):
+        """Checks the image in block 2 'home-t-shirts'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_IMAGE)
+        block2_image = element.get_attribute("src")
+        return block2_image
+
+    def check_image_in_section2_block3(self):
+        """Checks the image in block 3 'home-erin'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_IMAGE)
+        block3_image = element.get_attribute("src")
+        return block3_image
+
+    def check_image_in_section2_block4(self):
+        """Checks the image in block 4 'home-performance'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_IMAGE)
+        block4_image = element.get_attribute("src")
+        return block4_image
+
+    def check_image_in_section2_block5(self):
+        """Checks the image in block 5 'home-eco'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_IMAGE)
+        block5_image = element.get_attribute("src")
+        return block5_image
+
     def check_info_block_display_in_section2_block1(self):
         """Checks the info block 1 'home-pants' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK)
@@ -303,26 +327,26 @@ class PromoBlock(BasePage):
         info_block_sign = element.text
         return info_block_sign
 
-    def check_image_in_section2_block2(self):
-        """Checks the image in block 2 'home-t-shirts'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_IMAGE)
-        block2_image = element.get_attribute("src")
-        return block2_image
+    def check_info_block_sign_in_section2_block2(self):
+        """Checks the sign in info-block in block 2 'home-t-shirts'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_SIGN)
+        info_block_sign = element.text
+        return info_block_sign
 
-    def check_image_in_section2_block3(self):
-        """Checks the image in block 3 'home-erin'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_IMAGE)
-        block3_image = element.get_attribute("src")
-        return block3_image
+    def check_info_block_sign_in_section2_block3(self):
+        """Checks the sign in info-block in block 3 'home-erin'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_SIGN)
+        info_block_sign = element.text
+        return info_block_sign
 
-    def check_image_in_section2_block4(self):
-        """Checks the image in block 4 'home-performance'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_IMAGE)
-        block4_image = element.get_attribute("src")
-        return block4_image
+    def check_info_block_sign_in_section2_block4(self):
+        """Checks the sign in info-block in block 4 'home-performance'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_SIGN)
+        info_block_sign = element.text
+        return info_block_sign
 
-    def check_image_in_section2_block5(self):
-        """Checks the image in block 5 'home-eco'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_IMAGE)
-        block5_image = element.get_attribute("src")
-        return block5_image
+    def check_info_block_sign_in_section2_block5(self):
+        """Checks the sign in info-block in block 5 'home-eco'"""
+        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_SIGN)
+        info_block_sign = element.text
+        return info_block_sign
