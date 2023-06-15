@@ -55,3 +55,10 @@ class MenPage(BasePage):
         text_title = subhead_title.text
         return text_title
 
+    @allure.step("Find clickable elements link 'Jackets' on Men page")
+    def verify_jackets_link_is_visible_and_clickable(self):
+        """This method finds 'Jackets' link and verifies it is clickable"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_JACKETS)
+        wait(self.driver, 15)
+        element.click()
+        return element
