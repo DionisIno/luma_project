@@ -78,3 +78,12 @@ class TestMenPage:
         page.open()
         link = page.verify_tees_link_is_visible_and_clickable()
         assert link, "The link 'Tees' is not visible"
+
+    @allure.title("TC 14.03.07 Verify the link 'Tees' redirects to a correct page.")
+    def test_tc_14_03_07(self, driver):
+        """Verify that the link 'Tees' correctly opens and redirects to a new webpage, the header 'Tees' is
+        displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_tees_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open or the 'Tees' subhead is incorrect"
