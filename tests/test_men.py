@@ -35,7 +35,7 @@ class TestMenPage:
           displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
-        current_page = page.verify_tops_bottoms_redirects_to_a_correct_page()
+        current_page = page.verify_bottoms_redirects_to_a_correct_page()
         assert current_page, "New page isn't open or the 'Bottoms' subhead is incorrect"
 
     @allure.title("TC 14.03.01 Verify the 'TOPS' subhead is displayed")
@@ -53,3 +53,11 @@ class TestMenPage:
         page.open()
         link = page.verify_jackets_link_is_visible_and_clickable()
         assert link, "The link 'Jackets' is not visible"
+
+    @allure.title("TC 14.06.01 Verify the 'Men' header is displayed")
+    def test_tc_14_06_01(self, driver):
+        """Verify that the header 'Men' is displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        subhead_title = page.verify_header_men_is_visible()
+        assert subhead_title == "Men"
