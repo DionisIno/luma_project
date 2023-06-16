@@ -61,3 +61,12 @@ class TestMenPage:
         page.open()
         subhead_title = page.verify_header_men_is_visible()
         assert subhead_title == "Men"
+
+    @allure.title("TC 14.03.05 Verify the link 'Jackets' redirects to a correct page.")
+    def test_tc_14_02_05(self, driver):
+        """Verify that the link 'Jackets' correctly opens and redirects to a new webpage, the header 'Jackets' is
+          displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_jackets_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open or the 'Jackets' subhead is incorrect"
