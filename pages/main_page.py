@@ -173,180 +173,229 @@ class MainPage(BasePage):
 class PromoBlock(BasePage):
     locators = MainPageLocators
 
+    def get_actual_url(self, driver):
+        actual_url = driver.current_url
+        return actual_url
+
+    @allure.step("Check Promo Block display")
     def check_promo_block_display(self):
         """Checks promo block display"""
         promo_block = self.element_is_visible(self.locators.PROMO_BLOCK)
         return promo_block.is_displayed()
 
+    @allure.step("Check the image in section 1 in the Promo Block is correct")
     def check_image_in_section1(self):
         """Checks the image in section 1 'home-main'"""
         element = self.element_is_visible(self.locators.SECTION_1_IMAGE)
         section1_image = element.get_attribute("src")
         return section1_image
 
+    @allure.step("Check the text in section 1 in the Promo Block is correct")
     def check_info_block_text_in_section1(self):
         """Checks the text of info-block in section 1 'home-main'"""
         element = self.element_is_visible(self.locators.SECTION_1_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the title in section 1 in the Promo Block is correct")
     def check_info_block_title_in_section1(self):
         """Checks the title of info-block in section 1 'home-main'"""
         element = self.element_is_visible(self.locators.SECTION_1_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the section 2 display in the Promo Block")
     def check_section2_display(self):
         """Checks section 2 display"""
         section2 = self.element_is_visible(self.locators.SECTION_2)
         return section2.is_displayed()
 
+    @allure.step("Check the section 2 block 1 'home-pants' display in the Promo Block")
     def check_section2_block1_display(self):
         """Checks section 2 block 1 'home-pants' display"""
         section2_block1 = self.element_is_visible(self.locators.SECTION_2_BLOCK_1)
         return section2_block1.is_displayed()
 
+    @allure.step("Check the image in section 2 block 1 'home-pants' is correct in the Promo Block")
     def check_image_in_section2_block1(self):
         """Checks the image in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_IMAGE)
         block1_image = element.get_attribute("src")
         return block1_image
 
+    @allure.step("Check the image in section 2 block 2 'home-t-shirts' is correct in the Promo Block")
     def check_image_in_section2_block2(self):
         """Checks the image in block 2 'home-t-shirts'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_IMAGE)
         block2_image = element.get_attribute("src")
         return block2_image
 
+    @allure.step("Check the image in section 2 block 3 'home-erin' is correct in the Promo Block")
     def check_image_in_section2_block3(self):
         """Checks the image in block 3 'home-erin'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_IMAGE)
         block3_image = element.get_attribute("src")
         return block3_image
 
+    @allure.step("Check the image in section 2 block 4 'home-performance' is correct in the Promo Block")
     def check_image_in_section2_block4(self):
         """Checks the image in block 4 'home-performance'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_IMAGE)
         block4_image = element.get_attribute("src")
         return block4_image
 
+    @allure.step("Check the image in section 2 block 5 'home-eco' is correct in the Promo Block")
     def check_image_in_section2_block5(self):
         """Checks the image in block 5 'home-eco'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_IMAGE)
         block5_image = element.get_attribute("src")
         return block5_image
 
+    @allure.step("Check display of info block in section 2 block 1 'home-pants' in the Promo Block")
     def check_info_block_display_in_section2_block1(self):
         """Checks the info block 1 'home-pants' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK)
         return info_block.is_displayed()
 
+    @allure.step("Check display of info block in section 2 block 2 'home-t-shirts' in the Promo Block")
     def check_info_block_display_in_section2_block2(self):
         """Checks the info block 2 'home-t-shirts' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK)
         return info_block.is_displayed()
 
+    @allure.step("Check display of info block in section 2 block 3 'home-erin' in the Promo Block")
     def check_info_block_display_in_section2_block3(self):
         """Checks the info block 3 'home-erin' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK)
         return info_block.is_displayed()
 
+    @allure.step("Check display of info block in section 2 block 4 'home-performance' in the Promo Block")
     def check_info_block_display_in_section2_block4(self):
         """Checks the info block 4 'home-performance' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK)
         return info_block.is_displayed()
 
+    @allure.step("Check display of info block in section 2 block 5 'home-eco' in the Promo Block")
     def check_info_block_display_in_section2_block5(self):
         """Checks the info block 5 'home-eco' display in section 2 of promo block under header"""
         info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK)
         return info_block.is_displayed()
 
+    @allure.step("Check the title of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
     def check_info_block_title_in_section2_block1(self):
         """Checks the title of info-block in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the title of info block in section 2 block 2 'home-t-shirts' in the Promo Block is correct")
     def check_info_block_title_in_section2_block2(self):
         """Checks the title of info-block in block 2 'home-t-shirts'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the title of info block in section 2 block 3 'home-erin' in the Promo Block is correct")
     def check_info_block_title_in_section2_block3(self):
         """Checks the title of info-block in block 3 'home-erin'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the title of info block in section 2 block 4 'home-performance' in the Promo Block is correct")
     def check_info_block_title_in_section2_block4(self):
         """Checks the title of info-block in block 4 'home-performance'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the title of info block in section 2 block 5 'home-eco' in the Promo Block is correct")
     def check_info_block_title_in_section2_block5(self):
         """Checks the title of info-block in block 5 'home-eco'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_TITLE)
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the text of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
     def check_info_block_text_in_section2_block1(self):
         """Checks the text of info-block in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the text of info block in section 2 block 2 'home-t-shirts' in the Promo Block is correct")
     def check_info_block_text_in_section2_block2(self):
         """Checks the text of info-block in block 2 'home-t-shirts'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the text of info block in section 2 block 3 'home-erin' in the Promo Block is correct")
     def check_info_block_text_in_section2_block3(self):
         """Checks the text of info-block in block 3 'home-erin'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the text of info block in section 2 block 4 'home-performance' in the Promo Block is correct")
     def check_info_block_text_in_section2_block4(self):
         """Checks the text of info-block in block 4 'home-performance'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the text of info block in section 2 block 5 'home-eco' in the Promo Block is correct")
     def check_info_block_text_in_section2_block5(self):
         """Checks the text of info-block in block 5 'home-eco'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_TEXT)
         info_block_text = element.text
         return info_block_text
 
+    @allure.step("Check the sign of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
     def check_info_block_sign_in_section2_block1(self):
         """Checks the sign in info-block in block 1 'home-pants'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
 
+    @allure.step("Check the sign of info block in section 2 block 2 'home-t-shirts' in the Promo Block is correct")
     def check_info_block_sign_in_section2_block2(self):
         """Checks the sign in info-block in block 2 'home-t-shirts'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
 
+    @allure.step("Check the sign of info block in section 2 block 3 'home-erin' in the Promo Block is correct")
     def check_info_block_sign_in_section2_block3(self):
         """Checks the sign in info-block in block 3 'home-erin'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
 
+    @allure.step("Check the sign of info block in section 2 block 4 'home-performance' in the Promo Block is correct")
     def check_info_block_sign_in_section2_block4(self):
         """Checks the sign in info-block in block 4 'home-performance'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
 
+    @allure.step("Check the sign of info block in section 2 block 5 'home-eco' in the Promo Block is correct")
     def check_info_block_sign_in_section2_block5(self):
         """Checks the sign in info-block in block 5 'home-eco'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_SIGN)
         info_block_sign = element.text
         return info_block_sign
+
+    @allure.step("Check the link in section 1 in the Promo Block leads to another page")
+    def check_section1_link(self):
+        """Checks the link in section 1 leads to another page"""
+        section1 = self.element_is_visible(self.locators.SECTION_1)
+        link = section1.click()
+        return link
+
+    @allure.step("Check the title of opened page New Luma Yoga Collection is displayed")
+    def check_page_title_display(self):
+        """Checks the title of opened page New Luma Yoga Collection is displayed"""
+        element = self.element_is_visible(self.locators.NEW_LUMA_YOGA_COLLECTION)
+        page_title = element.text
+        return page_title
