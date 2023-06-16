@@ -3,7 +3,8 @@ import pytest
 
 from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
-from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m
+from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
+    expected_titles_gear, expected_urls_gear
 from locators.sale_page_locators import SideBarLocators
 
 
@@ -85,8 +86,8 @@ class TestSalePage:
             """Check that five links in Men's Deals section lead to the correct pages after click"""
             page = SalePage(driver, SALE_PAGE_URL)
             page.open()
-            element_in_women_deals = page.element_is_clickable(element_locator)
-            element_in_women_deals.click()
+            element_in_men_deals = page.element_is_clickable(element_locator)
+            element_in_men_deals.click()
 
             assert page.get_actual_url(driver) == expected_url, "URL does not match"
             assert page.get_actual_title(driver) == expected_title, "Title does not match"
@@ -110,3 +111,23 @@ class TestSalePage:
             page.open()
             element_in_men_deals = page.element_is_clickable(element_locator)
             assert element_in_men_deals is not None, "Element is not displayed or enabled"
+
+        @allure.title("TC 10.03.03, 10.03.05 - "
+                      "Verify 2 links in Gear Deals open the correct pages")
+        @pytest.mark.parametrize(
+            "element_locator, expected_title, expected_url",
+            zip(
+                SideBarLocators.GEAR_DEALS_ELEMENTS.values(),
+                expected_titles_gear.values(),
+                expected_urls_gear.values(),
+            )
+        )
+        def test_tc_10_03_03__05(self, driver, element_locator, expected_title, expected_url):
+            """Check that two links in Gear Deals section lead to the correct pages after click"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            element_in_gear_deals = page.element_is_clickable(element_locator)
+            element_in_gear_deals.click()
+
+            assert page.get_actual_url(driver) == expected_url, "URL does not match"
+            assert page.get_actual_title(driver) == expected_title, "Title does not match"
