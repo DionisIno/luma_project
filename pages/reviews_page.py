@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 from locators.reviews_page_locators import ReviewsPageLocators
 import time
 
+
 @allure.epic('Reviews Page')
 class ReviewsPage(BasePage):
     locators = ReviewsPageLocators
@@ -32,6 +33,12 @@ class ReviewsPage(BasePage):
         """Click on element 3 star"""
         time.sleep(1)
         self.click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self.locators.STAR_3)
+
+    @allure.title('tc_01_15_04 - Click on element 4 star')
+    def star_4_review_correct(self):
+        """Click on element 4 star"""
+        time.sleep(1)
+        self.click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self.locators.STAR_4)
 
     def debug_CI_CSS_selectors(self):
         """Getting all CSS elements on a page and outputting them to a CI report"""
