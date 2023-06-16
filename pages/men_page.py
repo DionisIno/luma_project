@@ -1,4 +1,4 @@
-from selenium.webdriver.support.wait import WebDriverWait as wait
+from selenium.webdriver.support.wait import WebDriverWait as wait, WebDriverWait
 from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL, MEN_TANKS_URL
 from locators.men_page_locators import MenPageLocators
 from pages.base_page import BasePage
@@ -105,10 +105,18 @@ class MenPage(BasePage):
         return element
 
     @allure.step('Correct redirection of the link "Tanks" on Men page')
-    def verify_tees_redirects_to_a_correct_page(self):
+    def verify_tanks_redirects_to_a_correct_page(self):
         """This method finds 'Tanks' link and verifies it is correctly redirects to a new page"""
         element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_TANKS)
         element.click()
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_TANKS)
         return url == MEN_TANKS_URL and text == "Tanks"
+
+    @allure.step("Find clickable elements link 'Hoodies&Sweatshirts' on Men page")
+    def verify_hoodies_link_is_visible_and_clickable(self):
+        """This method finds 'Hoodies&Sweatshirts' link and verifies it is clickable"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_HOODIES)
+        wait(self.driver, 15)
+        element.click()
+        return element

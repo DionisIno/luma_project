@@ -102,5 +102,13 @@ class TestMenPage:
          the header 'Tanks' is displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
-        current_page = page.verify_tees_redirects_to_a_correct_page()
+        current_page = page.verify_tanks_redirects_to_a_correct_page()
         assert current_page, "New page isn't open or the 'Tanks' subhead is incorrect"
+
+    @allure.title("TC 14.03.02 Verify the link 'Hoodies&Sweatshirts' is visible and clickable.")
+    def test_tc_14_03_02(self, driver):
+        """Verify that the link 'Hoodies&Sweatshirts' is displayed and clickable"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        link = page.verify_hoodies_link_is_visible_and_clickable()
+        assert link, "The link 'Hoodies&Sweatshirts' is not visible"
