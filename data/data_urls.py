@@ -29,7 +29,8 @@ BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
-# CREATE_ACCOUNT_PAGE_URL = ""
+YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
+
 
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",

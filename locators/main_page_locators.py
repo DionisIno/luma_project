@@ -24,6 +24,7 @@ class MainPageLocators:
 
     # Promo Block
     PROMO_BLOCK = (By.CSS_SELECTOR, ".blocks-promo")
+    SECTION_1 = (By.CSS_SELECTOR, '.blocks-promo > a')
     SECTION_1_IMAGE = (By.CSS_SELECTOR, '.home-main img')
     SECTION_1_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, '.home-main .info')
     SECTION_1_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, '.home-main .title')
@@ -54,3 +55,5 @@ class MainPageLocators:
     SECTION_2_BLOCK_5_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-eco .content .icon")
     SECTION_2_BLOCK_5_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, ".home-eco .content .info")
     SECTION_2_BLOCK_5_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, ".home-eco .content .title")
+
+    NEW_LUMA_YOGA_COLLECTION = (By.CSS_SELECTOR, '#page-title-heading .base')

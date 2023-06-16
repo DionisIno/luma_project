@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from pages.main_page import MainPage, PromoBlock
-from data.data_urls import MAIN_PAGE_URL, ImageUrls
+from data.data_urls import MAIN_PAGE_URL, ImageUrls, YOGA_COLLECTION_URL
 from data.main_data import product_card_button, error_message
 
 
@@ -403,3 +403,14 @@ class TestMainPage:
             page.open()
             info_block_sign = page.check_info_block_sign_in_section2_block5()
             assert info_block_sign == "Shop Eco-Friendly", "The text is not correct"
+
+        @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
+        def test_tc_13_02_01_check_section1_link(self, driver):
+            """Check that link in section 1 is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section1_link()
+            title = page.check_page_title_display()
+            assert page.get_actual_url(driver) == YOGA_COLLECTION_URL and title == "New Luma Yoga Collection",\
+                'The link is not correct or the new page is not loaded'
+
