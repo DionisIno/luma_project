@@ -1,5 +1,5 @@
 from selenium.webdriver.support.wait import WebDriverWait as wait
-from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL
+from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL
 from locators.men_page_locators import MenPageLocators
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
@@ -78,3 +78,11 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_JACKETS)
         return url == MEN_JACKETS_URL and text == "Jackets"
+
+    @allure.step("Find clickable elements link 'Tees' on Men page")
+    def verify_tees_link_is_visible_and_clickable(self):
+        """This method finds 'Tees' link and verifies it is clickable"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_TEES)
+        wait(self.driver, 15)
+        element.click()
+        return element
