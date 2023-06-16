@@ -64,7 +64,7 @@ class TrainingPage(BasePage):
         return block_1.is_displayed()
 
     @allure.step('Checks the block training erin display')
-    def check_block2_erin_display(self):
+    def check_block_training_erin_display(self):
         """This method checks that the block training erin display"""
         block_2 = self.element_is_visible(self.locators.BLOCK_2_ERIN)
         self.action_move_to_element(block_2)
