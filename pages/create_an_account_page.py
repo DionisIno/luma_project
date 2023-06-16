@@ -1,5 +1,3 @@
-import time
-
 import allure
 
 from locators.create_account_page_locators import CreateAccountPageLocators
@@ -24,5 +22,4 @@ class CreateAccountPage(BasePage):
         self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
         massage = self.element_is_visible(self.locators.MASSAGE_ERROR, 20)
-        self.action_move_to_element(massage)
-        return massage.text
+        return massage.text if massage else None
