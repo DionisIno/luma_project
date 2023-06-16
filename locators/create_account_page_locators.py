@@ -12,4 +12,4 @@ class CreateAccountPageLocators:
     PASSWORD = (By.CSS_SELECTOR, '[id="password"]')
     PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, '[id="password-confirmation"]')
     CREATE_AN_ACCOUNT_BUTTON = (By.CSS_SELECTOR, 'button[title="Create an Account"]')
-    MASSAGE_REGISTERED_EMAIL = (By.CSS_SELECTOR, 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]')
+    MASSAGE_ERROR = (By.CSS_SELECTOR, 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]')

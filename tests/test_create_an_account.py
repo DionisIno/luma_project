@@ -20,7 +20,7 @@ class TestCreateAnAccount:
         assert h1_heading is not None and h1_heading.text == create_account_data['h1_heading'], \
             "H1 Heading is not present"
 
-    @allure.title('test 04.02.08 create an account with registered emai ')
+    @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):
         page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
         page.open()
