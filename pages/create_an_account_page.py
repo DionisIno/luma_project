@@ -23,8 +23,6 @@ class CreateAccountPage(BasePage):
         self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
         self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
-        time.sleep(30)
-        print(self.element_is_visible(self.locators.MASSAGE_ERROR))
-        massage = self.element_is_visible(self.locators.MASSAGE_ERROR)
-        print(massage.text)
+        print(self.element_is_present(self.locators.MASSAGE_ERROR))
+        massage = self.element_is_present(self.locators.MASSAGE_ERROR)
         return massage.text if massage else None
