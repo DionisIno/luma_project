@@ -100,3 +100,13 @@ class TestSalePage:
             page.open()
             title = page.check_text_in_gear_deals_title()
             assert title == "GEAR DEALS", f"Expected title: 'GEAR DEALS', Actual title: {title}"
+
+        @allure.title("TC 10.03.02, 10.02.04 - "
+                      "Verify 2 links in Gear Deals section are visible and clickable")
+        @pytest.mark.parametrize("element_locator", SideBarLocators.GEAR_DEALS_ELEMENTS.values())
+        def test_tc_10_03_02__04(self, driver, element_locator):
+            """Check that two elements in Gear Deals section are displayed and enabled"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            element_in_men_deals = page.element_is_clickable(element_locator)
+            assert element_in_men_deals is not None, "Element is not displayed or enabled"

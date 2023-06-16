@@ -24,8 +24,12 @@ class SideBarLocators:
         "pants_m": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(4) > li:nth-child(4) > a'),
         "shorts_m": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(4) > li:nth-child(5) > a')
     }
-    # Gear Deals section
+    # GEAR DEALS section
     GEAR_DEALS_TITLE = (By.CSS_SELECTOR, '.categories-menu > strong:nth-child(5) > span')
+    GEAR_DEALS_ELEMENTS = {
+        "bags": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(6) > li:nth-child(1) > a'),
+        "fitness_equipment": (By.CSS_SELECTOR, '.categories-menu > ul:nth-child(6) > li:nth-child(2) > a'),
+    }
 
 
 class MainContentPromoBlocks:
