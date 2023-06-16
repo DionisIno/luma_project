@@ -15,11 +15,19 @@ class CreateAccountPage(BasePage):
 
     @allure.step('Create an account with registered e-mail')
     def create_with_email(self):
+        print(self.element_is_visible(self.locators.FIRST_NAME))
         self.element_is_visible(self.locators.FIRST_NAME).send_keys('test')
+        print(self.element_is_visible(self.locators.LAST_NAME))
         self.element_is_visible(self.locators.LAST_NAME).send_keys('test')
+        print(self.element_is_visible(self.locators.EMAIL))
         self.element_is_visible(self.locators.EMAIL).send_keys('teston120@mailinator.com')
+        print(self.element_is_visible(self.locators.PASSWORD))
         self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
+        print(self.element_is_visible(self.locators.PASSWORD_CONFIRMATION))
         self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
+        print(self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON))
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
-        massage = self.element_is_visible(self.locators.MASSAGE_ERROR, 20)
+        print(self.element_is_visible(self.locators.MASSAGE_ERROR))
+        massage = self.element_is_visible(self.locators.MASSAGE_ERROR)
+        print(massage.text)
         return massage.text if massage else None
