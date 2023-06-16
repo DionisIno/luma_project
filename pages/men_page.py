@@ -86,3 +86,12 @@ class MenPage(BasePage):
         wait(self.driver, 15)
         element.click()
         return element
+
+    @allure.step('Correct redirection of the link "Tees" on Men page')
+    def verify_tees_redirects_to_a_correct_page(self):
+        """This method finds 'Tees' link and verifies it is correctly redirects to a new page"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_TEES)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_TEES)
+        return url == MEN_TEES_URL and text == "Tees"
