@@ -1,7 +1,7 @@
+from selenium.webdriver.support.wait import WebDriverWait as wait
 from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL
 from locators.men_page_locators import MenPageLocators
 from pages.base_page import BasePage
-from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 
@@ -40,7 +40,7 @@ class MenPage(BasePage):
         return url == MEN_BOTTOMS_URL and text == "Bottoms"
 
     @allure.step('Correct redirection of the link "Bottoms" on Men page')
-    def verify_tops_bottoms_redirects_to_a_correct_page(self):
+    def verify_bottoms_redirects_to_a_correct_page(self):
         """This method finds 'Bottoms' link and verifies it is correctly redirects to a new page"""
         element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_BOTTOMS)
         element.click()
@@ -62,3 +62,10 @@ class MenPage(BasePage):
         wait(self.driver, 15)
         element.click()
         return element
+
+    @allure.step('Verify header "Men" on Men page')
+    def verify_header_men_is_visible(self):
+        """This method finds header 'Men' and verifies it is correctly displayed"""
+        subhead_title = self.element_is_visible(self.side_bar_locators.SIDE_BAR_HEADER_MEN)
+        text_title = subhead_title.text
+        return text_title
