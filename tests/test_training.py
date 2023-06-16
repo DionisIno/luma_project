@@ -56,3 +56,43 @@ class TestMainPage:
             page.open()
             title = page.check_sidebar_panel_my_wish_list()
             assert title == "My Wish List", f"Expected title: 'My Wish List', Actual title: {title}"
+
+        @allure.title("TC 16.02.01 Verify title Training is visible and contains text 'Training'")
+        def test_tc_16_02_01_check_title_training(self, driver):
+            """Check Training title has correct text and is visible"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            title = page.check_title_training()
+            assert title == "Training", f"Expected title: 'Training', Actual title: {title}"
+
+        @allure.title("TC 16.02.02 - Check the display of block 1 main")
+        def test_tc_16_02_02_check_block_1_main_display(self, driver):
+            """This test checks block-promo training-main is displayed"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            block_1 = page.check_block_training_main_display()
+            assert block_1 is True, "The block-promo training-main is not visible"
+
+        @allure.title("TC 16.02.03 - Check the display of block 2 erin")
+        def test_tc_16_02_03_check_block_2_erin_display(self, driver):
+            """This test checks block-promo training-erin is displayed"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            block_2 = page.check_block_training_erin_display()
+            assert block_2 is True, "The block-promo training-erin is not visible"
+
+        @allure.title("TC 16.02.04 - Check the display of block 3 on demand")
+        def test_tc_16_02_04_check_block_3_training_on_demand_display(self, driver):
+            """This test checks block-promo training-on-demand is displayed"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            block_3 = page.check_block_training_demand_display()
+            assert block_3 is True, "The block-promo training-erin is not visible"
+
+        @allure.title("TC 16.02.05 Verify title Training is visible and contains text 'Top Videos'")
+        def test_tc_16_02_05_check_title_training(self, driver):
+            """Check Top Videos title has correct text and is visible"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            title = page.check_title_top_videos()
+            assert title == "Top Videos", f"Expected title: 'Top Videos', Actual title: {title}"
