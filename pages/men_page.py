@@ -95,3 +95,11 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_TEES)
         return url == MEN_TEES_URL and text == "Tees"
+
+    @allure.step("Find clickable elements link 'Tanks' on Men page")
+    def verify_tanks_link_is_visible_and_clickable(self):
+        """This method finds 'Tanks' link and verifies it is clickable"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_TANKS)
+        wait(self.driver, 15)
+        element.click()
+        return element
