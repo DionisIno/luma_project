@@ -29,3 +29,12 @@ class TestTrainingVideoDownload:
         page.open()
         text = page.message_no_items_to_compare_is_displayed()
         assert text == "You have no items to compare.", "The compare message is not visible or contains incorrect text"
+
+    @allure.title('TC 18.01.04 message no items to compare is displayed')
+    def test_tc_18_01_04_message_no_items_in_your_with_list_is_displayed(self, driver):
+        """Verify the 'My Wish List' subtitle is visible"""
+        page = TrainingVideoDownloadPage(driver, VIDEO_DOWNLOAD_PAGE_URL)
+        page.open()
+        text = page.message_no_items_in_your_with_list_is_displayed()
+        assert text == "You have no items in your wish list.", "The compare message is not visible or contains " \
+                                                               "incorrect text"
