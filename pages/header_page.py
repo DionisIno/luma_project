@@ -6,7 +6,7 @@ from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
-from locators.training_video_page_download_locators import TrainingVideoDownloadPageLocators
+from locators.training_video_download_page_locators import TrainingVideoDownloadPageLocators
 from locators.women_page_locators import WomenPageLocators
 from locators.what_is_new_page_locators import WhatIsNewPageLocators
 from locators.sale_page_locators import MainContentPromoBlocks
