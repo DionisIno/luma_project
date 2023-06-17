@@ -49,3 +49,5 @@ class MainContentPromoBlocks:
     SALE_GEAR_TITLE = (By.CSS_SELECTOR, '.sale-women .title')
     SALE_GEAR_TEXT = (By.CSS_SELECTOR, '.sale-women .info')
     SALE_GEAR_BUTTON = (By.CSS_SELECTOR, '.sale-women .more')
+    # Title
+    HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')

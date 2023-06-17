@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from pages.main_page import MainPage, PromoBlock
-from data.data_urls import MAIN_PAGE_URL, ImageUrls, YOGA_COLLECTION_URL, PANTS_URL
+from data.data_urls import MAIN_PAGE_URL, ImageUrls, PromoBlockLinks
 from data.main_data import product_card_button, error_message
 
 
@@ -411,8 +411,8 @@ class TestMainPage:
             page.open()
             page.check_section1_link()
             title = page.check_page1_title_display()
-            assert page.get_actual_url(driver) == YOGA_COLLECTION_URL and title == "New Luma Yoga Collection",\
-                'The link is not correct or the new page is not loaded'
+            assert page.get_actual_url(driver) == PromoBlockLinks.YOGA_COLLECTION_URL \
+                   and title == "New Luma Yoga Collection", 'The link is not correct or the new page is not loaded'
 
         @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
                       "leads to the correct page")
@@ -422,5 +422,16 @@ class TestMainPage:
             page.open()
             page.check_section2_block1_link()
             title = page.check_page2_title_display()
-            assert page.get_actual_url(driver) == PANTS_URL and title == "Pants",\
+            assert page.get_actual_url(driver) == PromoBlockLinks.PANTS_PROMO_URL and title == "Pants",\
+                'The link is not correct or the new page is not loaded'
+
+        @allure.title("TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block "
+                      "leads to the correct page")
+        def test_tc_13_02_02_check_section2_block2_link(self, driver):
+            """Check that link in section 2 block 2 'home-t-shirts' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section2_block2_link()
+            title = page.check_page3_title_display()
+            assert page.get_actual_url(driver) == PromoBlockLinks.TEES_PROMO_URL and title == "Tees",\
                 'The link is not correct or the new page is not loaded'
