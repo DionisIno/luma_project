@@ -31,6 +31,8 @@ WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
 PANTS_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
+ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
+
 
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
