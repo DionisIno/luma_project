@@ -55,5 +55,3 @@ class MainPageLocators:
     SECTION_2_BLOCK_5_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-eco .content .icon")
     SECTION_2_BLOCK_5_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, ".home-eco .content .info")
     SECTION_2_BLOCK_5_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, ".home-eco .content .title")
-
-    NEW_LUMA_YOGA_COLLECTION = (By.CSS_SELECTOR, '#page-title-heading .base')
