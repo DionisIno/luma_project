@@ -29,8 +29,13 @@ BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
-YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
-PANTS_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
+
+
+# Links from the Promo Block on the Main Page
+class PromoBlockLinks:
+    YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
+    PANTS_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
+    TEES_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/tees-all.html"
 
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
