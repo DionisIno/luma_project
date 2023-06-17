@@ -4,7 +4,7 @@ import pytest
 from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
 from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
-    expected_titles_gear, expected_urls_gear
+    expected_titles_gear, expected_urls_gear, img_src
 from locators.sale_page_locators import SideBarLocators
 
 
@@ -131,3 +131,29 @@ class TestSalePage:
 
             assert page.get_actual_url(driver) == expected_url, "URL does not match"
             assert page.get_actual_title(driver) == expected_title, "Title does not match"
+
+    @allure.feature("Testing Promo Blocks - Main Block - Women's Deals")
+    class TestPromoBlocks:
+        @allure.title("TC 10.04.01 - Verify that the Women Deals contains an image")
+        def test_tc_10_04_01(self, driver):
+            """Check img existence of Women's Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_main_block()
+            assert img == img_src["sale_women_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.04 - Verify that the Men's Deals contains an image")
+        def test_tc_10_04_04(self, driver):
+            """Check img existence of Men's Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_men_block()
+            assert img == img_src["sale_men_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.07 - Verify that the Gear Deals contains an image")
+        def test_tc_10_04_07(self, driver):
+            """Check img existence of Gear Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_gear_block()
+            assert img == img_src["sale_gear_img"], "Image doesn't exist or isn't accurate"

@@ -40,5 +40,11 @@ expected_titles_gear = {
 
 expected_urls_gear = {
     "gear_bags_url": 'https://magento.softwaretestingboard.com/gear/bags.html',
-    "fitness_equipment_url": 'https://magento.softwaretestingboard.com/gear/fitness-equipment.html',
+    "fitness_equipment_url": 'https://magento.softwaretestingboard.com/gear/fitness-equipment.html'
+}
+
+img_src = {
+    "sale_women_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-main.jpg',
+    "sale_men_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-mens.jpg',
+    "sale_gear_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-gear.jpg'
 }
