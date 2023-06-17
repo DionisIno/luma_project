@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from pages.main_page import MainPage, PromoBlock
-from data.data_urls import MAIN_PAGE_URL, ImageUrls
+from data.data_urls import MAIN_PAGE_URL, ImageUrls, PromoBlockLinks
 from data.main_data import product_card_button, error_message
 
 
@@ -214,7 +214,7 @@ class TestMainPage:
             assert info_block_text == "Luma pants when you shop today*", "The text is not correct"
 
         @allure.title("TC 13.01.20 - Check the display of the sign in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_20_check_info_block_sing_in_section2_block1(self, driver):
+        def test_tc_13_01_20_check_info_block_sign_in_section2_block1(self, driver):
             """This test checks if the sign in info block in section 2 block 1 'home-pants' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -242,12 +242,30 @@ class TestMainPage:
 
         @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_23_check_info_block_title_in_section2_block1(self, driver):
-            """This test checks if the info block title in section 2 block 1 'home-t-shirts' is correct
+            """This test checks if the info block title in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             info_block_title = page.check_info_block_title_in_section2_block2()
             assert info_block_title == "Even more ways to mix and match", "The title is not correct"
+
+        @allure.title("TC 13.01.24 - Check the display of the text in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_24_check_info_block_text_in_section2_block2(self, driver):
+            """This test checks if the info block text in section 2 block 2 'home-t-shirts' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text_in_section2_block2()
+            assert info_block_text == "Buy 3 Luma tees get a 4th free", "The text is not correct"
+
+        @allure.title("TC 13.01.25 - Check the display of the sign in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_25_check_info_block_sign_in_section2_block2(self, driver):
+            """This test checks if the sign in info block in section 2 block 2 'home-t-shirts' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_sign = page.check_info_block_sign_in_section2_block2()
+            assert info_block_sign == "Shop Tees", "The text is not correct"
 
         @allure.title("TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_26_check_image_in_section2_block3(self, driver):
@@ -268,13 +286,31 @@ class TestMainPage:
             assert info_block is True, "The element is not visible"
 
         @allure.title("TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_28_check_info_block_title_in_section2_block1(self, driver):
+        def test_tc_13_01_28_check_info_block_title_in_section2_block3(self, driver):
             """This test checks if the info block title in section 2 block 3 'home-erin' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             info_block_title = page.check_info_block_title_in_section2_block3()
             assert info_block_title == "Take it from Erin", "The title is not correct"
+
+        @allure.title("TC 13.01.29 - Check the display of the text in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_29_check_info_block_text_in_section2_block3(self, driver):
+            """This test checks if the info block text in section 2 block 3 'home-erin' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text_in_section2_block3()
+            assert info_block_text == "Luma founder Erin Renny shares her favorites!", "The text is not correct"
+
+        @allure.title("TC 13.01.30 - Check the display of the sign in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_30_check_info_block_sign_in_section2_block3(self, driver):
+            """This test checks if the sign in info block in section 2 block 3 'home-erin' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_sign = page.check_info_block_sign_in_section2_block3()
+            assert info_block_sign == "Shop Erin Recommends", "The text is not correct"
 
         @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
@@ -304,6 +340,24 @@ class TestMainPage:
             info_block_title = page.check_info_block_title_in_section2_block4()
             assert info_block_title == "Science meets performance", "The title is not correct"
 
+        @allure.title("TC 13.01.34 - Check the display of the text in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_34_check_info_block_text_in_section2_block4(self, driver):
+            """This test checks if the info block text in section 2 block 4 'home-performance' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text_in_section2_block4()
+            assert info_block_text == "Wicking to raingear, Luma covers you", "The text is not correct"
+
+        @allure.title("TC 13.01.35 - Check the display of the sign in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_35_check_info_block_sign_in_section2_block4(self, driver):
+            """This test checks if the sign in info block in section 2 block 4 'home-performance' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_sign = page.check_info_block_sign_in_section2_block4()
+            assert info_block_sign == "Shop Performance", "The text is not correct"
+
         @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct
@@ -330,3 +384,54 @@ class TestMainPage:
             page.open()
             info_block_title = page.check_info_block_title_in_section2_block5()
             assert info_block_title == "Twice around, twice as nice", "The title is not correct"
+
+        @allure.title("TC 13.01.39 - Check the display of the text in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_39_check_info_block_text_in_section2_block5(self, driver):
+            """This test checks if the info block text in section 2 block 5 'home-eco' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_text = page.check_info_block_text_in_section2_block5()
+            assert info_block_text == "Find conscientious, comfy clothing in our eco-friendly collection", \
+                "The text is not correct"
+
+        @allure.title("TC 13.01.40 - Check the display of the sign in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_40_check_info_block_sign_in_section2_block5(self, driver):
+            """This test checks if the sign in info block in section 2 block 5 'home-eco' is correct
+            in the Promo Block under header on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            info_block_sign = page.check_info_block_sign_in_section2_block5()
+            assert info_block_sign == "Shop Eco-Friendly", "The text is not correct"
+
+        @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
+        def test_tc_13_02_01_check_section1_link(self, driver):
+            """Check that link in section 1 is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section1_link()
+            title = page.check_page1_title_display()
+            assert page.get_actual_url(driver) == PromoBlockLinks.YOGA_COLLECTION_URL \
+                   and title == "New Luma Yoga Collection", 'The link is not correct or the new page is not loaded'
+
+        @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
+                      "leads to the correct page")
+        def test_tc_13_02_02_check_section2_block1_link(self, driver):
+            """Check that link in section 2 block 1 'home-pants' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section2_block1_link()
+            title = page.check_page2_title_display()
+            assert page.get_actual_url(driver) == PromoBlockLinks.PANTS_PROMO_URL and title == "Pants",\
+                'The link is not correct or the new page is not loaded'
+
+        @allure.title("TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block "
+                      "leads to the correct page")
+        def test_tc_13_02_02_check_section2_block2_link(self, driver):
+            """Check that link in section 2 block 2 'home-t-shirts' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section2_block2_link()
+            title = page.check_page3_title_display()
+            assert page.get_actual_url(driver) == PromoBlockLinks.TEES_PROMO_URL and title == "Tees",\
+                'The link is not correct or the new page is not loaded'

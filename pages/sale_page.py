@@ -1,11 +1,12 @@
 import allure
 
-from locators.sale_page_locators import SideBarLocators
+from locators.sale_page_locators import SideBarLocators, MainContentPromoBlocks
 from pages.base_page import BasePage
 
 
 class SalePage(BasePage):
     side_bar_locators = SideBarLocators
+    promo_blocks_locators = MainContentPromoBlocks
 
     @allure.step("Check text in Women's deals title")
     def check_text_in_women_deals_title(self):
@@ -34,3 +35,21 @@ class SalePage(BasePage):
         gear_deals_title = self.element_is_visible(self.side_bar_locators.GEAR_DEALS_TITLE)
         title_gear_deals = gear_deals_title.text
         return title_gear_deals
+
+    @allure.step("Check img in main block - Women's Deals")
+    def check_img_in_main_block(self):
+        img = self.element_is_visible(self.promo_blocks_locators.SALE_WOMEN_IMG)
+        img_src = img.get_attribute("src")
+        return img_src
+
+    @allure.step("Check img in 2 columns block - Men's Deals")
+    def check_img_in_men_block(self):
+        img = self.element_is_visible(self.promo_blocks_locators.SALE_MEN_IMG)
+        img_src = img.get_attribute("src")
+        return img_src
+
+    @allure.step("Check img in 2 columns block - Gear Deals")
+    def check_img_in_gear_block(self):
+        img = self.element_is_visible(self.promo_blocks_locators.SALE_GEAR_IMG)
+        img_src = img.get_attribute("src")
+        return img_src

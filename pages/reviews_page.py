@@ -21,11 +21,23 @@ class ReviewsPage(BasePage):
         one_star_element = self.element_is_clickable(self.locators.STAR_1)
         one_star_element.click()
 
-    @allure.title('tc_01_15_01 - Click on element 2 star')
+    @allure.title('tc_01_15_02 - Click on element 2 star')
     def star_2_review_correct(self):
         """Click on element 2 star"""
         time.sleep(1)
-        star_2_element_click = self.click_to_the_far_right_of_the_locator(self.locators.STAR_2)
+        self.click_to_the_right_of_the_center_of_the_locator_by_5_pixels(self.locators.STAR_2)
+
+    @allure.title('tc_01_15_03 - Click on element 3 star')
+    def star_3_review_correct(self):
+        """Click on element 3 star"""
+        time.sleep(1)
+        self.click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self.locators.STAR_3)
+
+    @allure.title('tc_01_15_04 - Click on element 4 star')
+    def star_4_review_correct(self):
+        """Click on element 3 star"""
+        time.sleep(1)
+        self.click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self.locators.STAR_4)
 
     def debug_CI_CSS_selectors(self):
         """Getting all CSS elements on a page and outputting them to a CI report"""

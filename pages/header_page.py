@@ -6,7 +6,7 @@ from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
-from locators.training_video_page_locators import TrainingVideoPageLocators
+from locators.training_video_download_page_locators import TrainingVideoDownloadPageLocators
 from locators.women_page_locators import WomenPageLocators
 from locators.what_is_new_page_locators import WhatIsNewPageLocators
 from locators.sale_page_locators import MainContentPromoBlocks
@@ -23,7 +23,7 @@ class HeaderPage(BasePage):
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
     training_locators = TrainingPageLocators
-    training_video_locators = TrainingVideoPageLocators
+    training_video_locators = TrainingVideoDownloadPageLocators
     women_locators = WomenPageLocators
     what_is_new_locators = WhatIsNewPageLocators
     sale_locators = MainContentPromoBlocks
@@ -41,7 +41,7 @@ class HeaderPage(BasePage):
     def check_common_header(self):
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
-    @allure.step('Redirected the link sale')
+    @allure.step('Redirected the link "Sale"')
     def redirected_the_link_sale(self):
         element = self.element_is_visible(self.header_locators.SALE)
         element.click()
@@ -78,14 +78,14 @@ class HeaderPage(BasePage):
         active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow', 5)
         return initial_box_shadow, active_box_shadow
 
-    @allure.step('Link sale is visible and interactive')
+    @allure.step('Link "Sale" is visible and interactive')
     def link_sale_is_visible_and_interactive(self):
         element = self.element_is_visible(self.header_locators.SALE)
         clickable = self.element_is_clickable(element)
         interactive = self.check_element_hover_style(self.header_locators.SALE, 'pointer', 1)
         return element, clickable, interactive
 
-    @allure.step('Redirected the link training')
+    @allure.step('Redirected the link "Training"')
     def redirected_the_link_training(self):
         element = self.element_is_visible(self.header_locators.TRAINING)
         element.click()
@@ -93,7 +93,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.training_locators.HEAD_TEXT)
         return url == TRAINING_PAGE_URL and text == "Training"
 
-    @allure.step('Redirected the link training video download')
+    @allure.step('Redirected the link "Training Video Download"')
     def redirected_the_link_training_video_download(self):
         self.element_is_visible(self.header_locators.TRAINING)
         self.check_element_hover_style(self.header_locators.TRAINING, 'pointer', 1)
@@ -103,21 +103,21 @@ class HeaderPage(BasePage):
         text = self.get_text(self.training_video_locators.HEAD_TEXT)
         return url == VIDEO_DOWNLOAD_PAGE_URL and text == "Video Download"
 
-    @allure.step('Link training is visible and interactive')
+    @allure.step('Link "Training" is visible and interactive')
     def link_training_is_visible_and_interactive(self):
         self.element_is_visible(self.header_locators.TRAINING)
         interactive = self.check_element_hover_style(self.header_locators.TRAINING, 'pointer', 1)
         element = self.element_is_visible(self.header_locators.VIDEO_DOWNLOAD)
         return element, interactive
 
-    @allure.step('Link what is new is visible and interactive')
+    @allure.step('Link "What is New" is visible and interactive')
     def link_what_is_new_is_visible_and_interactive(self):
         element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
         clickable = self.element_is_clickable(element)
         interactive = self.check_element_hover_style(self.header_locators.WHAT_IS_NEW, 'pointer', 1)
         return element, clickable, interactive
 
-    @allure.step('Redirection of the link women')
+    @allure.step('Redirection of the link "Women"')
     def redirection_of_the_link_women(self):
         element = self.element_is_visible(self.header_locators.WOMEN)
         element.click()
@@ -125,7 +125,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.women_locators.WOMEN_HEAD_TEXT)
         return url == WOMEN_PAGE_URL and text == "Women"
 
-    @allure.step('Redirected the link what is new')
+    @allure.step('Redirected the link "What is New"')
     def redirected_the_link_what_is_new(self):
         element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
         element.click()
@@ -133,7 +133,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.what_is_new_locators.HEAD_TEXT)
         return url == WHAT_IS_NEW_PAGE_URL and text == "What's New"
 
-    @allure.step('Link gear is visible and interactive')
+    @allure.step('Link "Gear" is visible and interactive')
     def link_gear_is_visible_and_interactive(self):
         element = self.element_is_visible(self.header_locators.GEAR)
         clickable = self.element_is_clickable(element)
@@ -177,7 +177,7 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         return self.element_is_visible(self.header_locators.TOPS_BOTTOMS_SUBSECTION)
 
-    @allure.step('Redirected the link gear')
+    @allure.step('Redirected the link "Gear"')
     def redirected_the_link_gear(self):
         element = self.element_is_visible(self.header_locators.GEAR)
         element.click()
@@ -185,7 +185,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.gear_locators.HEAD_TEXT)
         return url == GEAR_PAGE_URL and text == "Gear"
 
-    @allure.step('Redirected the link gear bags')
+    @allure.step('Redirected the link "Gear - Bags"')
     def redirected_the_link_gear_bags(self):
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
@@ -195,7 +195,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.bags_locators.HEAD_TEXT)
         return url == BAGS_PAGE_URL and text == "Bags"
 
-    @allure.step('Redirected the link gear fitness equipment')
+    @allure.step('Redirected the link "Gear - Fitness - Equipment"')
     def redirected_the_link_gear_fitness_equipment(self):
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
@@ -205,7 +205,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.fitness_equipment_locators.HEAD_TEXT)
         return url == FITNESS_EQUIPMENT_PAGE_URL and text == "Fitness Equipment"
 
-    @allure.step('Redirected the link gear watches')
+    @allure.step('Redirected the link "Gear - Watches"')
     def redirected_the_link_gear_watches(self):
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)

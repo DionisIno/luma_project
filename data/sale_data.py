@@ -32,3 +32,19 @@ expected_urls_m = {
     "pants_men_url": 'https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html',
     "shorts_men_url": 'https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html'
 }
+
+expected_titles_gear = {
+    "gear_bags": "Bags - Gear",
+    "fitness_equipment": "Fitness Equipment - Gear",
+}
+
+expected_urls_gear = {
+    "gear_bags_url": 'https://magento.softwaretestingboard.com/gear/bags.html',
+    "fitness_equipment_url": 'https://magento.softwaretestingboard.com/gear/fitness-equipment.html'
+}
+
+img_src = {
+    "sale_women_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-main.jpg',
+    "sale_men_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-mens.jpg',
+    "sale_gear_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-gear.jpg'
+}

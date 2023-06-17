@@ -3,7 +3,8 @@ import pytest
 
 from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
-from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m
+from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
+    expected_titles_gear, expected_urls_gear, img_src
 from locators.sale_page_locators import SideBarLocators
 
 
@@ -85,8 +86,8 @@ class TestSalePage:
             """Check that five links in Men's Deals section lead to the correct pages after click"""
             page = SalePage(driver, SALE_PAGE_URL)
             page.open()
-            element_in_women_deals = page.element_is_clickable(element_locator)
-            element_in_women_deals.click()
+            element_in_men_deals = page.element_is_clickable(element_locator)
+            element_in_men_deals.click()
 
             assert page.get_actual_url(driver) == expected_url, "URL does not match"
             assert page.get_actual_title(driver) == expected_title, "Title does not match"
@@ -100,3 +101,59 @@ class TestSalePage:
             page.open()
             title = page.check_text_in_gear_deals_title()
             assert title == "GEAR DEALS", f"Expected title: 'GEAR DEALS', Actual title: {title}"
+
+        @allure.title("TC 10.03.02, 10.02.04 - "
+                      "Verify 2 links in Gear Deals section are visible and clickable")
+        @pytest.mark.parametrize("element_locator", SideBarLocators.GEAR_DEALS_ELEMENTS.values())
+        def test_tc_10_03_02__04(self, driver, element_locator):
+            """Check that two elements in Gear Deals section are displayed and enabled"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            element_in_men_deals = page.element_is_clickable(element_locator)
+            assert element_in_men_deals is not None, "Element is not displayed or enabled"
+
+        @allure.title("TC 10.03.03, 10.03.05 - "
+                      "Verify 2 links in Gear Deals open the correct pages")
+        @pytest.mark.parametrize(
+            "element_locator, expected_title, expected_url",
+            zip(
+                SideBarLocators.GEAR_DEALS_ELEMENTS.values(),
+                expected_titles_gear.values(),
+                expected_urls_gear.values(),
+            )
+        )
+        def test_tc_10_03_03__05(self, driver, element_locator, expected_title, expected_url):
+            """Check that two links in Gear Deals section lead to the correct pages after click"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            element_in_gear_deals = page.element_is_clickable(element_locator)
+            element_in_gear_deals.click()
+
+            assert page.get_actual_url(driver) == expected_url, "URL does not match"
+            assert page.get_actual_title(driver) == expected_title, "Title does not match"
+
+    @allure.feature("Testing Promo Blocks - Main Block - Women's Deals")
+    class TestPromoBlocks:
+        @allure.title("TC 10.04.01 - Verify that the Women Deals contains an image")
+        def test_tc_10_04_01(self, driver):
+            """Check img existence of Women's Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_main_block()
+            assert img == img_src["sale_women_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.04 - Verify that the Men's Deals contains an image")
+        def test_tc_10_04_04(self, driver):
+            """Check img existence of Men's Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_men_block()
+            assert img == img_src["sale_men_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.07 - Verify that the Gear Deals contains an image")
+        def test_tc_10_04_07(self, driver):
+            """Check img existence of Gear Deals section"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            img = page.check_img_in_gear_block()
+            assert img == img_src["sale_gear_img"], "Image doesn't exist or isn't accurate"

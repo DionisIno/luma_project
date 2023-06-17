@@ -1,9 +1,12 @@
+import allure
+
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL
 from pages.header_page import HeaderPage
 import pytest
 
 
+@allure.epic('Test Header')
 class TestHeader:
 
     def test_tc_01_01_01_greeting_message_is_displayed(self, driver):
@@ -56,6 +59,7 @@ class TestHeader:
         assert "pointer" in page.check_element_hover_style(page.header_locators.LOGO, 'cursor', 2), \
             "Failed: The cursor does not change to a 'hand' when hovering over the logo"
 
+    @allure.title('TC 01.03.36 correctly redirected the link sale')
     def test_tc_01_03_36_correctly_redirected_the_link_sale(self, driver):
         """Verify 'Sale' link click redirected to the page and the 'Sale' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -95,6 +99,7 @@ class TestHeader:
         initial_box_shadow, active_box_shadow = page.activate_search_field_and_check_style()
         assert initial_box_shadow != active_box_shadow, "Error: Search field style doesn't change on activation"
 
+    @allure.title('TC 01.03.35 visible and interactive the link "Sale"')
     def test_tc_01_03_35_visible_and_interactive_the_link_sale(self, driver):
         """Verify the link 'Sale' is visible and interactive"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -102,6 +107,7 @@ class TestHeader:
         link = page.link_sale_is_visible_and_interactive()
         assert link, "The link 'Sale' isn't visible and non-interactive"
 
+    @allure.title('TC 01.03.33 correctly redirected the link "Training"')
     def test_tc_01_03_33_correctly_redirected_the_link_training(self, driver):
         """Verify 'Training' link click redirected to the page and the 'Training' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -109,6 +115,7 @@ class TestHeader:
         current_page = page.redirected_the_link_training()
         assert current_page, "Training page isn't opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.34 correctly redirected the link "Training Video Download"')
     def test_tc_01_03_34_correctly_redirected_the_link_training_video_download(self, driver):
         """Verify 'Training - Video Download' link click redirected to the 'Video Download' page
             and the 'Video Download' header is displayed"""
@@ -117,6 +124,7 @@ class TestHeader:
         current_page = page.redirected_the_link_training_video_download()
         assert current_page, "Video Download page isn't opened or the page header is incorrect"
 
+    @allure.title('TC_01_03_32_visible_and_interactive_the_link_"Training"')
     def test_tc_01_03_32_visible_and_interactive_the_link_training(self, driver):
         """Verify the link 'Training' is visible and interactive and link 'Video Download' is visible"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -124,6 +132,7 @@ class TestHeader:
         link = page.link_training_is_visible_and_interactive()
         assert link, "The link 'Sale' isn't visible and non-interactive"
 
+    @allure.title('TC 01.03.01 visible and interactive the link "What is New"')
     def test_tc_01_03_01_visible_and_interactive_the_link_what_is_new(self, driver):
         """Verify the link 'What's new' is visible and interactive"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -131,6 +140,7 @@ class TestHeader:
         link = page.link_what_is_new_is_visible_and_interactive()
         assert link, "The link 'What's new' isn't visible and non-interactive"
 
+    @allure.title('TC 01.03.04 correct redirection of the link "Women"')
     def test_tc_01_03_04_correct_redirection_of_the_link_women(self, driver):
         """Verify that the link 'Women' correctly opens and redirects to a new webpage, the header 'Women' is
         displayed"""
@@ -139,6 +149,7 @@ class TestHeader:
         current_page = page.redirection_of_the_link_women()
         assert current_page, "'Women' page isn't open or the 'Women' header is incorrect"
 
+    @allure.title('TC 01.03.02 correctly redirected the_link "What is New"')
     def test_tc_01_03_02_correctly_redirected_the_link_what_is_new(self, driver):
         """Verify the link 'What's new' redirected to the page and the 'What's new' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -146,6 +157,7 @@ class TestHeader:
         current_page = page.redirected_the_link_what_is_new()
         assert current_page, "What's new page isn't opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.27 visible and interactive the link "Gear"')
     def test_tc_01_03_27_visible_and_interactive_the_link_gear(self, driver):
         """Verify the link 'Gear' is visible and interactive"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -181,6 +193,7 @@ class TestHeader:
         assert driver.current_url == MEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Men section is either not opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.26 correctness "Shorts" link')
     def test_tc_01_03_26_correctness_shorts_link(self, driver):
         """Check 'Shorts' subsection link in 'Men' section click redirects to the Shorts page and \
             the 'Shorts' header is displayed"""
@@ -191,6 +204,7 @@ class TestHeader:
         assert driver.current_url == MEN_BOTTOMS_SHORTS_URL and header.text == "Shorts", \
             "Shorts page of Men section is either not opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.15 display and interactivity of the "Men" section')
     def test_tc_01_03_15_display_and_interactivity_of_the_men_section(self, driver):
         """Check the 'Tops' & 'Bottoms' subsections in 'Men' section is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -198,6 +212,7 @@ class TestHeader:
         dropdown_items = page.check_men_section_link()
         assert dropdown_items.is_displayed(), "Error: Tops and Bottoms subsections is not displayed"
 
+    @allure.title('TC 01.03.28 correctly redirected the link "Gear"')
     def test_tc_01_03_28_correctly_redirected_the_link_gear(self, driver):
         """Verify the link 'Gear' redirected to the page and the 'Gear' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -205,6 +220,7 @@ class TestHeader:
         current_page = page.redirected_the_link_gear()
         assert current_page, "The 'Gear' page isn't opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.29 correctly redirected the link "Gear - Bags"')
     def test_tc_01_03_29_correctly_redirected_the_link_gear_bags(self, driver):
         """Verify the link 'Bags' redirected to the page and the 'Bags' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -212,6 +228,7 @@ class TestHeader:
         current_page = page.redirected_the_link_gear_bags()
         assert current_page, "The 'Bags' page isn't opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.30 correctly redirected the link "Gear - Fitness Equipment"')
     def test_tc_01_03_30_correctly_redirected_the_link_gear_fitness_equipment(self, driver):
         """Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -219,6 +236,7 @@ class TestHeader:
         current_page = page.redirected_the_link_gear_fitness_equipment()
         assert current_page, "The 'Fitness Equipment' page isn't opened or the page header is incorrect"
 
+    @allure.title('TC 01.03.31 correctly redirected the link "Gear - Watches"')
     def test_tc_01_03_31_correctly_redirected_the_link_gear_watches(self, driver):
         """Verify the link 'Fitness Equipment' redirected to the page and the 'Fitness Equipment' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
