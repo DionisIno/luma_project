@@ -6,7 +6,7 @@ from locators.create_account_page_locators import CreateAccountPageLocators
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.base_page import BasePage
 from locators.training_page_locators import TrainingPageLocators
-from locators.training_video_page_locators import TrainingVideoPageLocators
+from locators.training_video_page_download_locators import TrainingVideoDownloadPageLocators
 from locators.women_page_locators import WomenPageLocators
 from locators.what_is_new_page_locators import WhatIsNewPageLocators
 from locators.sale_page_locators import MainContentPromoBlocks
@@ -23,7 +23,7 @@ class HeaderPage(BasePage):
     create_account_locators = CreateAccountPageLocators
     sign_in_locators = SingInPageLocators
     training_locators = TrainingPageLocators
-    training_video_locators = TrainingVideoPageLocators
+    training_video_locators = TrainingVideoDownloadPageLocators
     women_locators = WomenPageLocators
     what_is_new_locators = WhatIsNewPageLocators
     sale_locators = MainContentPromoBlocks
