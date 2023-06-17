@@ -34,4 +34,18 @@ class SideBarLocators:
 
 class MainContentPromoBlocks:
     """A class for Main Content Promo Blocks locators"""
-    HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
+    # Block-promo sale-main, Women's deal
+    SALE_WOMEN_IMG = (By.CSS_SELECTOR, '.sale-main img')
+    SALE_WOMEN_TITLE = (By.CSS_SELECTOR, '.sale-main .info')
+    SALE_WOMEN_TEXT = (By.CSS_SELECTOR, '.sale-main .title')
+    SALE_WOMEN_BUTTON = (By.CSS_SELECTOR, '.sale-main .more')
+    # Block-promo-2columns, Men's Deals
+    SALE_MEN_IMG = (By.CSS_SELECTOR, '.sale-mens img')
+    SALE_MEN_TITLE = (By.CSS_SELECTOR, '.sale-mens .title')
+    SALE_MEN_TEXT = (By.CSS_SELECTOR, '.sale-mens .info')
+    SALE_MEN_BUTTON = (By.CSS_SELECTOR, '.sale-mens .more')
+    # Block-promo-2columns, Gear Deals
+    SALE_GEAR_IMG = (By.CSS_SELECTOR, '.sale-women img')
+    SALE_GEAR_TITLE = (By.CSS_SELECTOR, '.sale-women .title')
+    SALE_GEAR_TEXT = (By.CSS_SELECTOR, '.sale-women .info')
+    SALE_GEAR_BUTTON = (By.CSS_SELECTOR, '.sale-women .more')
