@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from pages.main_page import MainPage, PromoBlock
-from data.data_urls import MAIN_PAGE_URL, ImageUrls, YOGA_COLLECTION_URL
+from data.data_urls import MAIN_PAGE_URL, ImageUrls, YOGA_COLLECTION_URL, PANTS_URL
 from data.main_data import product_card_button, error_message
 
 
@@ -242,7 +242,7 @@ class TestMainPage:
 
         @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_23_check_info_block_title_in_section2_block1(self, driver):
-            """This test checks if the info block title in section 2 block 1 'home-t-shirts' is correct
+            """This test checks if the info block title in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -286,7 +286,7 @@ class TestMainPage:
             assert info_block is True, "The element is not visible"
 
         @allure.title("TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_28_check_info_block_title_in_section2_block1(self, driver):
+        def test_tc_13_01_28_check_info_block_title_in_section2_block3(self, driver):
             """This test checks if the info block title in section 2 block 3 'home-erin' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -410,7 +410,17 @@ class TestMainPage:
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             page.check_section1_link()
-            title = page.check_page_title_display()
+            title = page.check_page1_title_display()
             assert page.get_actual_url(driver) == YOGA_COLLECTION_URL and title == "New Luma Yoga Collection",\
                 'The link is not correct or the new page is not loaded'
 
+        @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
+                      "leads to the correct page")
+        def test_tc_13_02_02_check_section2_block1_link(self, driver):
+            """Check that link in section 2 block 1 'home-pants' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section2_block1_link()
+            title = page.check_page2_title_display()
+            assert page.get_actual_url(driver) == PANTS_URL and title == "Pants",\
+                'The link is not correct or the new page is not loaded'

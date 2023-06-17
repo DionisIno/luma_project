@@ -4,6 +4,8 @@ import time
 import allure
 
 from locators.main_page_locators import MainPageLocators
+from locators.yoga_new_page_locators import YogaCollectionPageLocators
+from locators.pants_page_locators import PantsPageLocators
 from pages.base_page import BasePage
 
 
@@ -172,6 +174,8 @@ class MainPage(BasePage):
 
 class PromoBlock(BasePage):
     locators = MainPageLocators
+    locators1 = YogaCollectionPageLocators
+    locators2 = PantsPageLocators
 
     def get_actual_url(self, driver):
         actual_url = driver.current_url
@@ -386,16 +390,30 @@ class PromoBlock(BasePage):
         info_block_sign = element.text
         return info_block_sign
 
-    @allure.step("Check the link in section 1 in the Promo Block leads to another page")
+    @allure.step("Check the link in section 1 in the Promo Block leads to the correct page")
     def check_section1_link(self):
-        """Checks the link in section 1 leads to another page"""
+        """Checks the link in section 1 leads to the correct page"""
         section1 = self.element_is_visible(self.locators.SECTION_1)
         link = section1.click()
         return link
 
     @allure.step("Check the title of opened page New Luma Yoga Collection is displayed")
-    def check_page_title_display(self):
+    def check_page1_title_display(self):
         """Checks the title of opened page New Luma Yoga Collection is displayed"""
-        element = self.element_is_visible(self.locators.NEW_LUMA_YOGA_COLLECTION)
+        element = self.element_is_visible(self.locators1.NEW_LUMA_YOGA_COLLECTION)
+        page_title = element.text
+        return page_title
+
+    @allure.step("Check the link in section 2 block 1 'home-pants' in the Promo Block leads to the correct page")
+    def check_section2_block1_link(self):
+        """Checks the link in section 1 leads to the correct page"""
+        section2_block1 = self.element_is_visible(self.locators.SECTION_2_BLOCK_1)
+        link = section2_block1.click()
+        return link
+
+    @allure.step("Check the title of opened page Pants is displayed")
+    def check_page2_title_display(self):
+        """Checks the title of opened page Pants is displayed"""
+        element = self.element_is_visible(self.locators2.PANTS)
         page_title = element.text
         return page_title
