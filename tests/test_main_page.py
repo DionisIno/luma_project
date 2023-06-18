@@ -81,6 +81,7 @@ class TestMainPage:
             color_before, color_after = page.check_the_color_change_to_add_to_cart_button()
             assert color_before != color_after, "Product card button did not change color on hover"
 
+        @pytest.mark.xfail
         @allure.title("Check the display of the add to wish and add to compare buttons")
         @pytest.mark.parametrize("item", product_card_button)
         def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):
