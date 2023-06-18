@@ -25,5 +25,5 @@ class TestForgotYourPassword:
     def test_17_01_02_registered_customers_note(self, driver, forgot_psw_page):
         """Check Registered Customers note is present """
         note = forgot_psw_page.check_forgot_your_psw_note()
-        assert note is not None and note.text == forgot_psw_page["forgot_your_password_note"], \
+        assert note is not None and note.text == forgot_your_password_data["forgot_your_password_note"], \
             "Forgot Your Password note is incorrect or not present"
