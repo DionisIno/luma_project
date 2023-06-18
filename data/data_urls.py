@@ -6,9 +6,9 @@ GEAR_PAGE_URL = "https://magento.softwaretestingboard.com/gear.html"
 SHOPPING_CART_PAGE = "https://magento.softwaretestingboard.com/checkout/cart/"
 MY_ACCOUNT_URL = MAIN_PAGE_URL + 'customer/account/'
 URL_AFTER_LOGIN = MAIN_PAGE_URL + \
-                   'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+                  'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 URL_AFTER_SUCCESS_LOGIN = MAIN_PAGE_URL + \
-                   'customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+                          'customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
 TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
@@ -31,12 +31,14 @@ WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
 
-# Links from the Promo Block on the Main Page
+
+# Links in the Promo Block on the Main Page
 class PromoBlockLinks:
     YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
     PANTS_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
     TEES_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/tees-all.html"
     ERIN_RECOMMENDS_PROMO_URL = "https://magento.softwaretestingboard.com/collections/erin-recommends.html"
+    PERFORMANCE_FABRICS_PROMO_URL = "https://magento.softwaretestingboard.com/collections/performance-fabrics.html"
 
 
 # URL SETS
@@ -72,7 +74,7 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
           # "https://magento.softwaretestingboard.com/catalogsearch/advanced/",
           # "https://magento.softwaretestingboard.com/sales/guest/form/",
           # "https://magento.softwaretestingboard.com/contact/"
-        ]
+          ]
 
 
 class ImageUrls:
