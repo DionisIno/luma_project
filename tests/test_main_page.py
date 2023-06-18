@@ -458,3 +458,14 @@ class TestMainPage:
             title = page.check_page5_title_display()
             assert page.get_actual_url(driver) == PromoBlockLinks.PERFORMANCE_FABRICS_PROMO_URL \
                    and title == "Performance Fabrics", "The link is not correct or the new page is not loaded"
+
+        @allure.title("TC 13.02.06 - Check the link in section 2 block 5 'home-eco' in the Promo Block "
+                      "leads to the correct page")
+        def test_tc_13_02_06_check_section2_block5_link(self, driver):
+            """Check that link in section 2 block 5 'home-eco' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            page.check_section2_block5_link()
+            title = page.check_page6_title_display()
+            assert page.get_actual_url(driver) == PromoBlockLinks.ECO_FRIENDLY_PROMO_URL \
+                   and title == "Eco Friendly", "The link is not correct or the new page is not loaded"
