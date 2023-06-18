@@ -9,6 +9,7 @@ from locators.pants_promo_page_locators import PantsPromoPageLocators
 from locators.tees_promo_page_locators import TeesPromoPageLocators
 from locators.erin_recommends_promo_page_locators import ErinRecommendsPromoPageLocators
 from locators.performance_fabrics_promo_page_locators import PerformanceFabricsPromoPageLocators
+from locators.eco_friendly_promo_page_locators import EcoFriendlyPromoPageLocators
 from pages.base_page import BasePage
 
 
@@ -182,6 +183,7 @@ class PromoBlock(BasePage):
     locators3 = TeesPromoPageLocators
     locators4 = ErinRecommendsPromoPageLocators
     locators5 = PerformanceFabricsPromoPageLocators
+    locators6 = EcoFriendlyPromoPageLocators
 
     def get_actual_url(self, driver):
         actual_url = driver.current_url
@@ -461,7 +463,21 @@ class PromoBlock(BasePage):
 
     @allure.step("Check the title of opened page Performance Fabrics is displayed")
     def check_page5_title_display(self):
-        """Checks the title of opened page Erin Recommends is displayed"""
+        """Checks the title of opened page Performance Fabrics is displayed"""
         element = self.element_is_visible(self.locators5.PERFORMANCE_FABRICS_PROMO_TITLE)
+        page_title = element.text
+        return page_title
+
+    @allure.step("Check the link in section 2 block 5 'home-eco' in the Promo Block leads to the correct page")
+    def check_section2_block5_link(self):
+        """Checks the link in section 2 block 5 'home-eco' leads to the correct page"""
+        section2_block5 = self.element_is_visible(self.locators.SECTION_2_BLOCK_5)
+        link = section2_block5.click()
+        return link
+
+    @allure.step("Check the title of opened page Eco Friendly is displayed")
+    def check_page6_title_display(self):
+        """Checks the title of opened page Eco Friendly is displayed"""
+        element = self.element_is_visible(self.locators6.ECO_FRIENDLY_PROMO_TITLE)
         page_title = element.text
         return page_title

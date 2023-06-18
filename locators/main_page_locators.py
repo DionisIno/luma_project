@@ -53,6 +53,7 @@ class MainPageLocators:
     SECTION_2_BLOCK_4_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-performance .content .icon")
     SECTION_2_BLOCK_4_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, ".home-performance .content .info")
     SECTION_2_BLOCK_4_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, ".home-performance .content .title")
+    SECTION_2_BLOCK_5 = (By.CSS_SELECTOR, '.home-eco')
     SECTION_2_BLOCK_5_IMAGE = (By.CSS_SELECTOR, '.home-eco img')
     SECTION_2_BLOCK_5_INFO_BLOCK = (By.CSS_SELECTOR, ".home-eco .content")
     SECTION_2_BLOCK_5_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-eco .content .icon")
