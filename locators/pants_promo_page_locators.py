@@ -1,4 +1,4 @@
-"""This section contains Pants Promo Page locators"""
+"""This section contains locators for Pants promo page"""
 
 from selenium.webdriver.common.by import By
 

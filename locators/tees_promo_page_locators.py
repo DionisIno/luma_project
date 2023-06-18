@@ -1,4 +1,4 @@
-"""This section contains Tees Promo Page locators"""
+"""This section contains locators for Tees promo page"""
 
 from selenium.webdriver.common.by import By
 
