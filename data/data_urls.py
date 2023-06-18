@@ -36,6 +36,7 @@ class PromoBlockLinks:
     YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
     PANTS_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
     TEES_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/tees-all.html"
+    ERIN_RECOMMENDS_PROMO_URL = "https://magento.softwaretestingboard.com/collections/erin-recommends.html"
 
 
 # URL SETS

@@ -1,4 +1,4 @@
-"""This section contains New Luma Yoga Collection page locators"""
+"""This section contains locators for New Luma Yoga Collection page"""
 
 from selenium.webdriver.common.by import By
 
