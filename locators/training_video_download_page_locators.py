@@ -10,3 +10,4 @@ class TrainingVideoDownloadPageLocators:
     MY_WISH_LIST = (By.CSS_SELECTOR, '.block.block-wishlist .block-title')
     COMPARE_MESSAGE = (By.CSS_SELECTOR, '.block.block-compare .empty')
     MY_WISH_LIST_MESSAGE = (By.CSS_SELECTOR, '.block.block-wishlist .empty')
+    NO_PRODUCTS_MESSAGE = (By.CLASS_NAME, 'info')
