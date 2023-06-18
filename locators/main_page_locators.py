@@ -47,6 +47,7 @@ class MainPageLocators:
     SECTION_2_BLOCK_3_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-erin .content .icon")
     SECTION_2_BLOCK_3_INFO_BLOCK_TEXT = (By.CSS_SELECTOR, ".home-erin .content .info")
     SECTION_2_BLOCK_3_INFO_BLOCK_TITLE = (By.CSS_SELECTOR, ".home-erin .content .title")
+    SECTION_2_BLOCK_4 = (By.CSS_SELECTOR, '.home-performance')
     SECTION_2_BLOCK_4_IMAGE = (By.CSS_SELECTOR, '.home-performance img')
     SECTION_2_BLOCK_4_INFO_BLOCK = (By.CSS_SELECTOR, ".home-performance .content")
     SECTION_2_BLOCK_4_INFO_BLOCK_SIGN = (By.CSS_SELECTOR, ".home-performance .content .icon")
