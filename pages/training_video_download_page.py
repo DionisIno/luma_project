@@ -37,3 +37,9 @@ class TrainingVideoDownloadPage(BasePage):
         """Verify title "Video Download" is visible"""
         text = self.element_is_visible(self.training_video_download_locators.HEAD_TEXT)
         return text.text if text else None
+
+    @allure.step('Verify message "We can not find products matching the selection." is displayed')
+    def message_we_can_not_find_products_is_displayed(self):
+        """Verify message "We can not find products matching the selection." is visible"""
+        text = self.element_is_visible(self.training_video_download_locators.NO_PRODUCTS_MESSAGE)
+        return text.text if text else None
