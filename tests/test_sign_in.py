@@ -6,7 +6,7 @@ import allure
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN, sign_in_errors
-from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD, \
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD_URL, \
     CREATE_ACCOUNT_PAGE_URL
 from data.credentials import credentials
 
@@ -37,8 +37,8 @@ class TestRegisteredCustomers:
     @allure.title('TC 03.01.03 Verify Registered Customers note')
     def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
         """Check Registered Customers note is present """
-        h1_heading = sign_in_page.check_registered_customers_note()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_note"], \
+        note = sign_in_page.check_registered_customers_note()
+        assert note is not None and note.text == sign_in_data["customer_login_note"], \
             "Registered Customers note is incorrect or not present"
 
     @allure.title('TC 03.01.04 Verify Email field is present')
@@ -133,15 +133,15 @@ class TestRegisteredCustomers:
         """Verify that the 'Forgot your password?' link is present"""
         element = sign_in_page.check_forgot_your_password_link()
         element_href = element.get_attribute("href")
-        assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD, "Forgot Your Password link is not present"
+        assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD_URL, "Forgot Your Password link is not present"
 
     @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
     def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that click 'Forgot your password?' link opens correct page"""
         sign_in_page.click_forgot_your_password_link()
         header = sign_in_page.check_h1_header()
-        assert driver.current_url == FORGOT_YOUR_PASSWORD \
-            and header is not None and header.text == "Forgot Your Password?", \
+        assert driver.current_url == FORGOT_YOUR_PASSWORD_URL \
+               and header is not None and header.text == "Forgot Your Password?", \
             "Verify Forgot Your Password link is incorrect or not redirect to correct page"
 
     @allure.title('TC 03.01.18 Verify Email field for correct email format')
