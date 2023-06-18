@@ -28,7 +28,7 @@ ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
 BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
-FORGOT_YOUR_PASSWORD = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
+FORGOT_YOUR_PASSWORD_URL = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
 
 
