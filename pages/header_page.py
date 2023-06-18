@@ -43,6 +43,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "Sale"')
     def redirected_the_link_sale(self):
+        """Verify correct redirection from the link 'Sale'"""
         element = self.element_is_visible(self.header_locators.SALE)
         element.click()
         url = self.driver.current_url
@@ -80,6 +81,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Link "Sale" is visible and interactive')
     def link_sale_is_visible_and_interactive(self):
+        """Verify the link 'Sale' is visible and interactive"""
         element = self.element_is_visible(self.header_locators.SALE)
         clickable = self.element_is_clickable(element)
         interactive = self.check_element_hover_style(self.header_locators.SALE, 'pointer', 1)
@@ -87,14 +89,16 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "Training"')
     def redirected_the_link_training(self):
+        """Verify correct redirection from the link 'Training'"""
         element = self.element_is_visible(self.header_locators.TRAINING)
         element.click()
         url = self.driver.current_url
         text = self.get_text(self.training_locators.HEAD_TEXT)
         return url == TRAINING_PAGE_URL and text == "Training"
 
-    @allure.step('Redirected the link "Training Video Download"')
+    @allure.step('Redirected the link "Training - Video Download"')
     def redirected_the_link_training_video_download(self):
+        """Verify correct redirection from the link 'Training - Video Download'"""
         self.element_is_visible(self.header_locators.TRAINING)
         self.check_element_hover_style(self.header_locators.TRAINING, 'pointer', 1)
         element = self.element_is_present(self.header_locators.VIDEO_DOWNLOAD)
@@ -103,8 +107,9 @@ class HeaderPage(BasePage):
         text = self.get_text(self.training_video_locators.HEAD_TEXT)
         return url == VIDEO_DOWNLOAD_PAGE_URL and text == "Video Download"
 
-    @allure.step('Link "Training" is visible and interactive')
+    @allure.step('Link "Training - Video Download" is visible and interactive')
     def link_training_is_visible_and_interactive(self):
+        """Verify the link 'Training - Video Download' is visible and interactive"""
         self.element_is_visible(self.header_locators.TRAINING)
         interactive = self.check_element_hover_style(self.header_locators.TRAINING, 'pointer', 1)
         element = self.element_is_visible(self.header_locators.VIDEO_DOWNLOAD)
@@ -112,6 +117,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Link "What is New" is visible and interactive')
     def link_what_is_new_is_visible_and_interactive(self):
+        """Verify the link 'What is New' is visible and interactive"""
         element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
         clickable = self.element_is_clickable(element)
         interactive = self.check_element_hover_style(self.header_locators.WHAT_IS_NEW, 'pointer', 1)
@@ -127,6 +133,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "What is New"')
     def redirected_the_link_what_is_new(self):
+        """Verify correct redirection from the link 'What is New'"""
         element = self.element_is_visible(self.header_locators.WHAT_IS_NEW)
         element.click()
         url = self.driver.current_url
@@ -135,6 +142,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Link "Gear" is visible and interactive')
     def link_gear_is_visible_and_interactive(self):
+        """Verify the link 'Gear' is visible and interactive"""
         element = self.element_is_visible(self.header_locators.GEAR)
         clickable = self.element_is_clickable(element)
         interactive = self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
@@ -166,6 +174,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Check the "Shorts" link of the "Men" section')
     def check_men_shorts_subsection_link(self):
+        """Verify the link 'Shorts' is visible and interactive"""
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.PANTS))
@@ -174,11 +183,13 @@ class HeaderPage(BasePage):
 
     @allure.step('Check the "Men" section link')
     def check_men_section_link(self):
+        """Verify the link 'Men' is visible and interactive"""
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         return self.element_is_visible(self.header_locators.TOPS_BOTTOMS_SUBSECTION)
 
     @allure.step('Redirected the link "Gear"')
     def redirected_the_link_gear(self):
+        """Verify correct redirection from the link 'Gear'"""
         element = self.element_is_visible(self.header_locators.GEAR)
         element.click()
         url = self.driver.current_url
@@ -187,6 +198,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "Gear - Bags"')
     def redirected_the_link_gear_bags(self):
+        """Verify correct redirection from the link 'Gear - Bags'"""
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
         element = self.element_is_visible(self.header_locators.BAGS)
@@ -197,6 +209,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "Gear - Fitness - Equipment"')
     def redirected_the_link_gear_fitness_equipment(self):
+        """Verify correct redirection from the link 'Gear - Fitness - Equipment'"""
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
         element = self.element_is_visible(self.header_locators.FITNESS_EQUIPMENT)
@@ -207,6 +220,7 @@ class HeaderPage(BasePage):
 
     @allure.step('Redirected the link "Gear - Watches"')
     def redirected_the_link_gear_watches(self):
+        """Verify correct redirection from the link 'Gear - Watches'"""
         self.element_is_visible(self.header_locators.GEAR)
         self.check_element_hover_style(self.header_locators.GEAR, 'pointer', 1)
         element = self.element_is_visible(self.header_locators.WATCHES)

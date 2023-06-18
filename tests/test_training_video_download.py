@@ -38,3 +38,11 @@ class TestTrainingVideoDownload:
         text = page.message_no_items_in_your_with_list_is_displayed()
         assert text == "You have no items in your wish list.", "The compare message is not visible or contains " \
                                                                "incorrect text"
+
+    @allure.title('TC 18.02.01 title "Video Download" is visible')
+    def test_tc_18_02_01_title_video_download_is_displayed(self, driver):
+        """Verify title 'Video Download' is visible"""
+        page = TrainingVideoDownloadPage(driver, VIDEO_DOWNLOAD_PAGE_URL)
+        page.open()
+        text = page.title_video_download_is_displayed()
+        assert text == "Video Download", "The title 'Video Download' is not visible or contains incorrect text"
