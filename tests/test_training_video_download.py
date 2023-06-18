@@ -46,3 +46,12 @@ class TestTrainingVideoDownload:
         page.open()
         text = page.title_video_download_is_displayed()
         assert text == "Video Download", "The title 'Video Download' is not visible or contains incorrect text"
+
+    @allure.title('TC 18.02.02 Verify message "We can not find products matching the selection." is visible')
+    def test_tc_18_02_02_title_video_download_is_displayed(self, driver):
+        """Verify message "We can not find products matching the selection." is visible"""
+        page = TrainingVideoDownloadPage(driver, VIDEO_DOWNLOAD_PAGE_URL)
+        page.open()
+        text = page.message_we_can_not_find_products_is_displayed()
+        assert text == "We can't find products matching the selection.", "The title 'Video Download' is not visible" \
+                                                                         " or contains incorrect text"
