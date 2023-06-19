@@ -1,7 +1,7 @@
 import allure
 
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
-    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL
+    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL
 from pages.header_page import HeaderPage
 import pytest
 
@@ -313,3 +313,12 @@ class TestHeader:
         header = page.check_common_header()
         assert driver.current_url == MEN_JACKETS_URL and header.text == "Jackets", \
             "Jackets-men page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_20_correctness_of_hoodies_subsection_of_men_section_link(self, driver):
+        """Checking the "Hoodies & Sweatshirts" link of the "Men" section"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_redirection_of_hoodies_subsection_of_men_section_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_HOODIES_URL and header.text == "Hoodies & Sweatshirts", \
+            "Hoodies & Sweatshirts-men page of Men section is either not opened or the page header is incorrect"
