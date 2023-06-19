@@ -6,4 +6,5 @@ class ForgotYourPasswordPageLocators:
     PAGE_HEADER = (By.CSS_SELECTOR, 'h1.page-title > span.base')
     FORGOT_YOUR_PASSWORD_NOTE = (By.CSS_SELECTOR, 'div.field.note')
     EMAIL = (By.CSS_SELECTOR, '#email_address')
+    EMAIL_LABEL = (By.CSS_SELECTOR, "label[for='email_address'] span")
 

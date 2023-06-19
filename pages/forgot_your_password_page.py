@@ -21,7 +21,7 @@ class ForgotYourPasswordPage(BasePage):
     @allure.step('Check Email label is visible')
     def check_forgot_psw_email_label(self):
         """This method verifies if Email label is visible"""
-        return self.element_is_visible(self.locators.EMAIL)
+        return self.element_is_visible(self.locators.EMAIL_LABEL)
 
     @allure.step('Check Email asterisk is visible')
     def check_forgot_psw_email_asterisk(self):
