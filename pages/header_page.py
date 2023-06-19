@@ -261,7 +261,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.TOPS_SUBSECTION).click()
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
-    @allure.step('Check redirection of the "Tops" subsection of "Men" section link')
+    @allure.step('Check redirection of the "Jackets" subsection of "Men" section link')
     def check_redirection_of_jackets_subsection_of_men_section_link(self):
         """This method checks the redirection of the 'Jackets' subsection link of the 'Men' section.
         It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Jackets' subsection link,
@@ -283,7 +283,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.HOODIES_SWEATSHIRTS_SUBSECTION).click()
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
-    @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of "Men" section link')
+    @allure.step('Check redirection of the "Tees" subsection of "Men" section link')
     def check_redirection_of_tees_subsection_of_men_section_link(self):
         """This method checks the redirection of the 'Tees' subsection link of the 'Men' section.
         It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Tees' subsection link,
@@ -292,4 +292,15 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION))
         self.element_is_visible(self.header_locators.TEES_SUBSECTION).click()
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
+
+    @allure.step('Check redirection of the "Tanks" subsection of "Men" section link')
+    def check_redirection_of_tanks_subsection_of_men_section_link(self):
+        """This method checks the redirection of the 'Tanks' subsection link of the 'Men' section.
+        It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Tees' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION))
+        self.element_is_visible(self.header_locators.TANKS_SUBSECTION).click()
         return self.element_is_visible(self.common_locators.HEADER_PAGE)

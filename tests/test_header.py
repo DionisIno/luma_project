@@ -1,10 +1,8 @@
 import allure
-
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL, \
-    MEN_TEES_URL
+    MEN_TEES_URL, MEN_TANKS_URL
 from pages.header_page import HeaderPage
-import pytest
 
 
 @allure.epic('Test Header')
@@ -23,7 +21,7 @@ class TestHeader:
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         assert "underline" in page.check_element_hover_style(page.header_locators.CREATE_AN_ACCOUNT, 'text-decoration',
-                                                             2), "Link 'Create an account' is either not displayed or not underlined on hover"
+            2), "Link 'Create an account' is either not displayed or not underlined on hover"
 
     def test_tc_01_01_03_correctness_create_an_account_link(self, driver):
         """Check 'Create an account' link click redirects to the account’s registration page and \
@@ -336,3 +334,13 @@ class TestHeader:
         header = page.check_common_header()
         assert driver.current_url == MEN_TEES_URL and header.text == "Tees", \
             "Tees-men page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_22_correctness_of_tanks_subsection_of_men_section_link(self, driver):
+        """Check 'Tanks' subsection link click in 'Men' section redirects to the Tanks-men page and \
+        the 'Tanks' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_redirection_of_tanks_subsection_of_men_section_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_TANKS_URL and header.text == "Tanks", \
+            "Tanks-men page of Men section is either not opened or the page header is incorrect"
