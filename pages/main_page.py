@@ -185,9 +185,51 @@ class PromoBlock(BasePage):
     locators5 = PerformanceFabricsPromoPageLocators
     locators6 = EcoFriendlyPromoPageLocators
 
+    @allure.step("Getting of URL of the current page")
     def get_actual_url(self, driver):
+        """This method allows to get URL of the current page"""
         actual_url = driver.current_url
         return actual_url
+
+    @allure.step("Check Promo Block is present in the DOM tree")
+    def check_promo_block_is_present(self):
+        """Checks promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.PROMO_BLOCK)
+
+    @allure.step("Check section 1 in the Promo Block is present in the DOM tree")
+    def check_section1_is_present(self):
+        """Checks section 1 in the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_1)
+
+    @allure.step("Check section 2 in the Promo Block is present in the DOM tree")
+    def check_section2_is_present(self):
+        """Checks section 2 in the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2)
+
+    @allure.step("Check block 1 'home-pants' in section 2 of the Promo Block is present in the DOM tree")
+    def check_block1_section2_is_present(self):
+        """Checks block 1 'home-pants' in section 2 of the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2_BLOCK_1)
+
+    @allure.step("Check block 2 'home-t-shirts' in section 2 of the Promo Block is present in the DOM tree")
+    def check_block2_section2_is_present(self):
+        """Checks block 2 'home-t-shirts' in section 2 of the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2_BLOCK_2)
+
+    @allure.step("Check block 3 'home-erin' in section 2 of the Promo Block is present in the DOM tree")
+    def check_block3_section2_is_present(self):
+        """Checks block 3 'home-erin' in section 2 of the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2_BLOCK_3)
+
+    @allure.step("Check block 4 'home-performance' in section 2 of the Promo Block is present in the DOM tree")
+    def check_block4_section2_is_present(self):
+        """Checks block 4 'home-performance' in section 2 of the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2_BLOCK_4)
+
+    @allure.step("Check block 5 'home-eco' in section 2 of the Promo Block is present in the DOM tree")
+    def check_block5_section2_is_present(self):
+        """Checks block 5 'home-eco' in section 2 of the promo block is present in the DOM tree"""
+        return self.element_is_present(self.locators.SECTION_2_BLOCK_5)
 
     @allure.step("Check Promo Block display")
     def check_promo_block_display(self):

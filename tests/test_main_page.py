@@ -405,12 +405,94 @@ class TestMainPage:
             info_block_sign = page.check_info_block_sign_in_section2_block5()
             assert info_block_sign == "Shop Eco-Friendly", "The text is not correct"
 
+        @allure.title("TC 13.01.41 - Check Promo Block is present in the DOM tree")
+        def test_tc_13_01_41_check_promo_block_is_present(self, driver):
+            """This test checks if Promo Block is present in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            promo_block = page.check_promo_block_is_present()
+            assert promo_block is not None, "The Promo Block is not present in the DOM tree on the main page"
+
+        @allure.title("TC 13.01.42 - Check section 1 in the Promo Block is present in the DOM tree")
+        def test_tc_13_01_42_check_section1_is_present(self, driver):
+            """This test checks if section 1 in the Promo Block is present in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section1 = page.check_section1_is_present()
+            assert section1 is not None, "The Section 1 in the Promo Block is not present in the DOM tree " \
+                                         "on the main page"
+
+        @allure.title("TC 13.01.43 - Check section 2 in the Promo Block is present in the DOM tree")
+        def test_tc_13_01_43_check_section2_is_present(self, driver):
+            """This test checks if section 2 in the Promo Block is present in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2 = page.check_section2_is_present()
+            assert section2 is not None, "The Section 2 in the Promo Block is not present in the DOM tree " \
+                                         "on the main page"
+
+        @allure.title("TC 13.01.44 - Check block 1 'home-pants' in section 2 of the Promo Block is present "
+                      "in the DOM tree")
+        def test_tc_13_01_44_check_block1_in_section2_is_present(self, driver):
+            """This test checks if block 1 'home-pants' in section 2 in the Promo Block is present
+            in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block1_section2 = page.check_block1_section2_is_present()
+            assert block1_section2 is not None, "The block 1 'home-pants' in Section 2 of the Promo Block " \
+                                                "is not present in the DOM tree on the main page"
+
+        @allure.title("TC 13.01.45 - Check block 2 'home-t-shirts' in section 2 of the Promo Block is present "
+                      "in the DOM tree")
+        def test_tc_13_01_45_check_block2_in_section2_is_present(self, driver):
+            """This test checks if block 2 'home-t-shirts' in section 2 in the Promo Block is present
+            in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block2_section2 = page.check_block2_section2_is_present()
+            assert block2_section2 is not None, "The block 2 'home-t-shirts' in Section 2 of the Promo Block " \
+                                                "is not present in the DOM tree on the main page"
+
+        @allure.title("TC 13.01.46 - Check block 3 'home-erin' in section 2 of the Promo Block is present "
+                      "in the DOM tree")
+        def test_tc_13_01_46_check_block3_in_section2_is_present(self, driver):
+            """This test checks if block 3 'home-erin' in section 2 in the Promo Block is present
+            in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block3_section2 = page.check_block3_section2_is_present()
+            assert block3_section2 is not None, "The block 3 'home-erin' in Section 2 of the Promo Block " \
+                                                "is not present in the DOM tree on the main page"
+
+        @allure.title("TC 13.01.47 - Check block 4 'home-performance' in section 2 of the Promo Block is present "
+                      "in the DOM tree")
+        def test_tc_13_01_47_check_block4_in_section2_is_present(self, driver):
+            """This test checks if block 4 'home-performance' in section 2 in the Promo Block is present
+            in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block4_section2 = page.check_block4_section2_is_present()
+            assert block4_section2 is not None, "The block 4 'home-performance' in Section 2 of the Promo Block " \
+                                                "is not present in the DOM tree on the main page"
+
+        @allure.title("TC 13.01.48 - Check block 5 'home-eco' in section 2 of the Promo Block is present "
+                      "in the DOM tree")
+        def test_tc_13_01_48_check_block5_in_section2_is_present(self, driver):
+            """This test checks if block 5 'home-eco' in section 2 in the Promo Block is present
+            in the DOM tree on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block5_section2 = page.check_block5_section2_is_present()
+            assert block5_section2 is not None, "The block 5 'home-eco' in Section 2 of the Promo Block " \
+                                                "is not present in the DOM tree on the main page"
+
         @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
         def test_tc_13_02_01_check_section1_link(self, driver):
             """Check that link in section 1 is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             page.check_section1_link()
+            get_actual_url = driver.current_url
             title = page.check_page1_title_display()
             assert page.get_actual_url(driver) == PromoBlockLinks.YOGA_COLLECTION_URL \
                    and title == "New Luma Yoga Collection", "The link is not correct or the new page is not loaded"
