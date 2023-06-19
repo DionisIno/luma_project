@@ -268,7 +268,8 @@ class HeaderPage(BasePage):
         and returns the visibility of the header page element"""
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
-        self.element_is_visible(self.header_locators.HOODIES_SWEATSHIRTS_SUBSECTION).click()
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION))
+        self.element_is_visible(self.header_locators.JACKETS_SUBSECTION).click()
         return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
     @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of "Men" section link')
