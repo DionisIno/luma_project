@@ -307,5 +307,13 @@ class HeaderPage(BasePage):
 
     @allure.step('Check redirection of the "My Account" link')
     def check_redirection_of_the_my_account_link(self):
+        self.element_is_visible(self.header_locators.DROPDOWN_BUTTON).click()
         self.element_is_visible(self.header_locators.MY_ACCOUNT).click()
         return self.check_common_header()
+
+    @allure.step('Check redirection of the "My Wish List" link')
+    def check_redirection_of_the_my_wish_list_link(self):
+        self.element_is_visible(self.header_locators.DROPDOWN_BUTTON).click()
+        self.element_is_visible(self.header_locators.MY_WISH_LIST).click()
+        return self.check_common_header()
+

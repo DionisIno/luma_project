@@ -11,6 +11,7 @@ class HeaderPageLocators:
     DROPDOWN_BUTTON = By.XPATH, "//div[@class='panel header']//button[@type='button']"
     HEADER_LIST = By.XPATH, "//div[@aria-hidden='false']//ul[@class='header links']"
     MY_ACCOUNT = By.XPATH, "(//a[normalize-space()='My Account'])[1]"
+    MY_WISH_LIST = By.XPATH, "(//a[normalize-space()='My Wish List'])[1]"
 
     # Header Content
     LOGO = By.XPATH, "//a[@aria-label='store logo']//img"
