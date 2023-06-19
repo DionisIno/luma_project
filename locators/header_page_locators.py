@@ -35,6 +35,7 @@ class HeaderPageLocators:
     TOPS_SUBSECTIONS = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[1]/ul'
     JACKETS_SUBSECTION = By.XPATH, '//a[@id="ui-id-19"]'
     HOODIES_SWEATSHIRTS_SUBSECTION = By.XPATH, '//a[@id="ui-id-20"]'
+    TEES_SUBSECTION = By.XPATH, '//a[@id="ui-id-21"]'
     BOTTOMS_SUBSECTION = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]'
     BOTTOMS_SUBSECTIONS = By.XPATH, "(//ul[@role='menu'])[7]"
     PANTS = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]/ul/li[1]'

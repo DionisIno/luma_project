@@ -1,7 +1,8 @@
 import allure
 
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
-    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL
+    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL, \
+    MEN_TEES_URL
 from pages.header_page import HeaderPage
 import pytest
 
@@ -184,7 +185,7 @@ class TestHeader:
             "Bottoms page of Men section is either not opened or the page header is incorrect"
 
     def test_tc_01_03_25_correctness_pants_link(self, driver):
-        """Check 'Pants' subsection link in 'Men' section click redirects to the Pants page and \
+        """Check 'Pants' subsection link click in 'Men' section redirects to the Pants page and \
         the 'Pants' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
@@ -297,7 +298,8 @@ class TestHeader:
             "Error: The dropdown list with sections 'My Account', 'My Wish List', 'Sign Out' is not appears"
 
     def test_tc_01_03_18_correctness_of_the_tops_subsection_of_men_section_link(self, driver):
-        """Check the "Tops" link of the "Men" section"""
+        """Check 'Tops' subsection link click in 'Men' section redirects to the Tops-men page and \
+        the 'Tops' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_redirection_of_tops_subsection_of_men_section_link()
@@ -306,7 +308,8 @@ class TestHeader:
             "Tops-men page of Men section is either not opened or the page header is incorrect"
 
     def test_tc_01_03_19_correctness_of_jackets_subsection_of_men_section_link(self, driver):
-        """Checking the "Jackets" link of the "Men" section"""
+        """Check 'Jackets' subsection link click in 'Men' section redirects to the Jackets-men page and \
+        the 'Jackets' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_redirection_of_jackets_subsection_of_men_section_link()
@@ -315,10 +318,21 @@ class TestHeader:
             "Jackets-men page of Men section is either not opened or the page header is incorrect"
 
     def test_tc_01_03_20_correctness_of_hoodies_subsection_of_men_section_link(self, driver):
-        """Checking the "Hoodies & Sweatshirts" link of the "Men" section"""
+        """Check 'Hoodies & Sweatshirts' subsection link click in 'Men' section redirects to the \
+        Hoodies & Sweatshirts-men page and the 'Hoodies & Sweatshirts' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
         page.open()
         page.check_redirection_of_hoodies_subsection_of_men_section_link()
         header = page.check_common_header()
         assert driver.current_url == MEN_HOODIES_URL and header.text == "Hoodies & Sweatshirts", \
             "Hoodies & Sweatshirts-men page of Men section is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_21_correctness_of_tees_subsection_of_men_section_link(self, driver):
+        """Check 'Tees' subsection link click in 'Men' section redirects to the Tees-men page and \
+        the 'Tees' header is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_redirection_of_tees_subsection_of_men_section_link()
+        header = page.check_common_header()
+        assert driver.current_url == MEN_TEES_URL and header.text == "Tees", \
+            "Tees-men page of Men section is either not opened or the page header is incorrect"
