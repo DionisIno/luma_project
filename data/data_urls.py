@@ -5,11 +5,18 @@ SALE_PAGE_URL = "https://magento.softwaretestingboard.com/sale.html"
 GEAR_PAGE_URL = "https://magento.softwaretestingboard.com/gear.html"
 SHOPPING_CART_PAGE = "https://magento.softwaretestingboard.com/checkout/cart/"
 MY_ACCOUNT_URL = MAIN_PAGE_URL + 'customer/account/'
+MY_WISHLIST_URL = "https://magento.softwaretestingboard.com/wishlist/"
+SIGN_OUT_URL = "https://magento.softwaretestingboard.com/customer/account/logoutSuccess/"
 URL_AFTER_LOGIN = MAIN_PAGE_URL + \
                   'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 URL_AFTER_SUCCESS_LOGIN = MAIN_PAGE_URL + \
                           'customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
+WOMEN_TOPS_URL = 'https://magento.softwaretestingboard.com/women/tops-women.html'
+WOMEN_JACKETS_URL = 'https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html'
+WOMEN_HOODIES_URL = 'https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html'
+WOMEN_TEES_URL = 'https://magento.softwaretestingboard.com/women/tops-women/tees-women.html'
+WOMEN_BRAS_TANKS_URL = 'https://magento.softwaretestingboard.com/women/tops-women/tanks-women.html'
 TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
@@ -30,8 +37,7 @@ FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitn
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD_URL = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
-MY_WISHLIST_URL = "https://magento.softwaretestingboard.com/wishlist/"
-SIGN_OUT_URL = "https://magento.softwaretestingboard.com/customer/account/logoutSuccess/"
+
 
 
 # Links in the Promo Block on the Main Page
