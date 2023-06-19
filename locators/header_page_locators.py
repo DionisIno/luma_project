@@ -12,6 +12,7 @@ class HeaderPageLocators:
     HEADER_LIST = By.XPATH, "//div[@aria-hidden='false']//ul[@class='header links']"
     MY_ACCOUNT = By.XPATH, "(//a[normalize-space()='My Account'])[1]"
     MY_WISH_LIST = By.XPATH, "(//a[normalize-space()='My Wish List'])[1]"
+    SIGN_OUT = By.XPATH, "(//a[normalize-space()='Sign Out'])[1]"
 
     # Header Content
     LOGO = By.XPATH, "//a[@aria-label='store logo']//img"
@@ -30,6 +31,7 @@ class HeaderPageLocators:
     BAGS = (By.ID, 'ui-id-25')
     FITNESS_EQUIPMENT = (By.ID, 'ui-id-26')
     WATCHES = (By.ID, 'ui-id-27')
+
     # Men Section
     MEN_SECTION = (By.ID, 'ui-id-5')
     TOPS_BOTTOMS_SUBSECTION = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul'
@@ -45,3 +47,16 @@ class HeaderPageLocators:
     SHORTS = By.XPATH, '//*[@id="ui-id-2"]/li[3]/ul/li[2]/ul/li[2]'
     TOPS_BOTTOMS_SUBSECTION = By.ID, 'ui-id-17'
 
+    # Women Section
+    WOMEN_SECTION = By.XPATH, "(//a[@id='ui-id-4'])[1]"
+    TOPS_BOTTOMS_SUBSECTION_WOMEN = By.XPATH, '//*[@id="ui-id-2"]/li[2]/ul'
+    TOPS_SUBSECTION_WOMEN = By.XPATH, '//*[@id="ui-id-2"]/li[2]/ul/li[1]'
+    TOPS_SUBSECTIONS_WOMEN = By.XPATH, '(//ul[@role="menu"])[3]'
+    JACKETS_SUBSECTION_WOMEN = By.XPATH, '//a[@id="ui-id-11"]'
+    HOODIES_SWEATSHIRTS_SUBSECTION_WOMEN = By.XPATH, '//a[@id="ui-id-12"]'
+    TEES_SUBSECTION_WOMEN = By.XPATH, '//a[@id="ui-id-13"]'
+    BRAS_TANKS_SUBSECTION_WOMEN = By.XPATH, '//a[@id="ui-id-14"]'
+    BOTTOMS_SUBSECTION_WOMEN = By.XPATH, '//*[@id="ui-id-2"]/li[2]/ul/li[2]'
+    BOTTOMS_SUBSECTIONS_WOMEN = By.XPATH, "(//ul[@role='menu'])[4]"
+    PANTS_WOMEN = By.XPATH, '//*[@id="ui-id-2"]/li[2]/ul/li[2]/ul/li[1]'
+    SHORTS_WOMEN = By.XPATH, '//*[@id="ui-id-2"]/li[2]/ul/li[2]/ul/li[2]'

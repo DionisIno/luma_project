@@ -275,8 +275,8 @@ class HeaderPage(BasePage):
     @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of "Men" section link')
     def check_redirection_of_hoodies_subsection_of_men_section_link(self):
         """This method checks the redirection of the 'Hoodies & Sweatshirts' subsection link of the 'Men' section.
-        It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Hoodies & Sweatshirts' subsection link,
-        and returns the visibility of the header page element"""
+        It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Hoodies & Sweatshirts' subsection\
+        link and returns the visibility of the header page element"""
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION))
@@ -297,7 +297,7 @@ class HeaderPage(BasePage):
     @allure.step('Check redirection of the "Tanks" subsection of "Men" section link')
     def check_redirection_of_tanks_subsection_of_men_section_link(self):
         """This method checks the redirection of the 'Tanks' subsection link of the 'Men' section.
-        It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Tees' subsection link,
+        It moves the cursor over the 'Men' section, then 'Tops' and clicks on the 'Tanks' subsection link,
         and returns the visibility of the header page element"""
         self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION))
@@ -317,3 +317,69 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.MY_WISH_LIST).click()
         return self.check_common_header()
 
+    @allure.step('Check redirection of the "Sign Out" link')
+    def check_redirection_of_the_sign_out_link(self):
+        self.element_is_visible(self.header_locators.DROPDOWN_BUTTON).click()
+        self.element_is_visible(self.header_locators.SIGN_OUT).click()
+        return self.check_common_header()
+
+    @allure.step('Check the "Tops" link of the "Women" section')
+    def check_women_tops_subsection(self):
+        """This method moves the cursor over the 'Women' section, then over the 'Tops' subsection and returns \
+        subsection contains 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', 'Tees' and 'Tanks & Bras' subsections"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        return self.element_is_visible(self.header_locators.TOPS_SUBSECTIONS_WOMEN)
+
+    @allure.step('Check redirection of the "Tops" subsection of "Women" section link')
+    def check_redirection_of_tops_subsection_of_women_section_link(self):
+        """This method checks the redirection of the 'Tops' subsection link of the 'Women' section.
+        It moves the cursor over the 'Women' section, clicks on the 'Tops' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
+
+    @allure.step('Check redirection of the "Jackets" subsection of "Women" section link')
+    def check_redirection_of_jackets_subsection_of_women_section_link(self):
+        """This method checks the redirection of the 'Jackets' subsection link of the 'Women' section.
+        It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Jackets' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN))
+        self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
+
+    @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of "Women" section link')
+    def check_redirection_of_hoodies_subsection_of_women_section_link(self):
+        """This method checks the redirection of the 'Hoodies & Sweatshirts' subsection link of the 'Women' section.
+        It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Hoodies & Sweatshirts' subsection \
+        link and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN))
+        self.element_is_visible(self.header_locators.HOODIES_SWEATSHIRTS_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
+
+    @allure.step('Check redirection of the "Tees" subsection of "Women" section link')
+    def check_redirection_of_tees_subsection_of_women_section_link(self):
+        """This method checks the redirection of the 'Tees' subsection link of the 'Women' section.
+        It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Tees' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN))
+        self.element_is_visible(self.header_locators.TEES_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
+
+    @allure.step('Check redirection of the "Tanks & Bras" subsection of "Women" section link')
+    def check_redirection_of_tanks_subsection_of_women_section_link(self):
+        """This method checks the redirection of the 'Tanks & Bras' subsection link of the 'Women' section.
+        It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Tanks & Bras' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN))
+        self.element_is_visible(self.header_locators.BRAS_TANKS_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
