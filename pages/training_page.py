@@ -85,3 +85,53 @@ class TrainingPage(BasePage):
         self.action_move_to_element(top_videos)
         return top_videos.text
 
+    @allure.step("Check the cursor change on hover on the block training main")
+    def check_the_cursor_change_to_block_training_main(self):
+        """
+        This method hovers the mouse cursor over the block training main,
+        hovers the mouse cursor over the block training main,
+        and checks for the block cursor change
+        """
+        # Get block properties before hover
+        cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
+        # Hover mouse cursor on a block training main
+        block_1_main = self.element_is_visible(self.locators.BLOCK_1_MAIN)
+        self.action_move_to_element(block_1_main)
+        # Hover mouse cursor over block training main
+        cursor = self.element_is_present(self.locators.BLOCK_1_MAIN)
+        cursor_after = self.check_element_hover_style_using_js(cursor, "cursor")
+        return cursor_before, cursor_after
+
+    @allure.step("Check the cursor change on hover on the block training erin")
+    def check_the_cursor_change_to_block_training_erin(self):
+        """
+        This method hovers the mouse cursor over the block training erin,
+        hovers the mouse cursor over the block training erin,
+        and checks for the block cursor change
+        """
+        # Get block properties before hover
+        cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
+        # Hover mouse cursor on a block training erin
+        block_2_erin = self.element_is_visible(self.locators.BLOCK_2_ERIN)
+        self.action_move_to_element(block_2_erin)
+        # Hover mouse cursor over block training erin
+        cursor = self.element_is_present(self.locators.BLOCK_2_ERIN)
+        cursor_after = self.check_element_hover_style_using_js(cursor, "cursor")
+        return cursor_before, cursor_after
+
+    @allure.step("Check the cursor change on hover on the block training on demand")
+    def check_the_cursor_change_to_block_training_on_demand(self):
+        """
+        This method hovers the mouse cursor over the block training on demand,
+        hovers the mouse cursor over the block training on demand,
+        and checks for the block cursor change
+        """
+        # Get block properties before hover
+        cursor_before = self.driver.execute_script("""return window.getComputedStyle(document.body).cursor;""")
+        # Hover mouse cursor on a block training on demand
+        block_3_on_demand = self.element_is_visible(self.locators.BLOCK_3_ON_DEMAND)
+        self.action_move_to_element(block_3_on_demand)
+        # Hover mouse cursor over block training on demand
+        cursor = self.element_is_present(self.locators.BLOCK_3_ON_DEMAND)
+        cursor_after = self.check_element_hover_style_using_js(cursor, "cursor")
+        return cursor_before, cursor_after
