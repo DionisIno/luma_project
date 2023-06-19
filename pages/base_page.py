@@ -276,3 +276,10 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element_with_offset(element, 45, 0)
         actions.click().perform()
+
+    @allure.step('Get required element visible')
+    def find_required_element(self):
+        """
+        This method finds a required element, making it visible to the user.
+        """
+        return "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"

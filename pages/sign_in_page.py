@@ -29,11 +29,6 @@ class SignInPage(BasePage):
         """This method verifies if Email label is visible"""
         return self.element_is_visible(self.locators.CUSTOMER_EMAIL_LABEL)
 
-    @allure.step('Get required element visible')
-    def find_required_element(self):
-        """This method finds the required element, making it visible to the user."""
-        return "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"
-
     @allure.step('Check Email asterisk is visible')
     def check_customer_email_asterisk(self):
         """This method verifies if asterisk is displayed next to Email label"""
