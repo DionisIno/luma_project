@@ -11,6 +11,9 @@ class ShoppingCartPageLocators:
     COLOR_BUTTON = (By.CSS_SELECTOR, '#option-label-color-93-item-53')
     ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, '#product-addtocart-button')
     SHOPPING_CART_LINK = (By.CSS_SELECTOR,'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]>a')
+    QUANTITY_FIELD = (By.CSS_SELECTOR, "input.input-text.qty")
+    UPDATE_BUTTON = (By.CSS_SELECTOR, "button.action.update")
+
 
 
 

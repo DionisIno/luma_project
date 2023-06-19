@@ -12,7 +12,7 @@ from locators.shopping_cart_locators import ShoppingCartPageLocators as shopping
 @pytest.fixture(scope="function")
 def full_cart_page(driver):
     driver.get(ITEM_CART_URL)
-    size_button = wait(driver, 7).until(EC.presence_of_element_located(shopping_locators.SIZE_BUTTON))
+    size_button = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SIZE_BUTTON))
     size_button.click()
     color_button = wait(driver, 3).until(EC.presence_of_element_located(shopping_locators.COLOR_BUTTON))
     color_button.click()
@@ -63,3 +63,20 @@ class TestShoppingCartFull:
         page.open()
         title = page.check_shopping_cart_title()
         assert title == "Shopping Cart", "The title of Shopping Cart is not displayed correctly"
+
+    @allure.title("tc 07.02.03 Verify that quantity field is displayed and clickable")
+    def test_tc_07_02_03_verify_quantity_field_is_clickable(self, driver, full_cart_page):
+        """Check that quantity field is displayed and clickable."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        quantity_field = page.check_quantity_field_is_clickable
+        assert quantity_field is not None, 'The quantity input field is not displayed or clickable'
+
+    @allure.title("tc 07.02.04 Verify that entered quantity displayed correctly after changing")
+    def test_tc_07_02_04_verify_quantity_field_displayed_correctly(self, driver, full_cart_page):
+        """Check that entered quantity displayed correctly after changing."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.fill_in_quantity_field("2")
+        displayed_quantity = page.get_quantity_field_attribute("value")
+        assert displayed_quantity == "2", "Displayed quantity isn't the same as entered in the quantity field"
+
