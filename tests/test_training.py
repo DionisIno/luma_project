@@ -96,3 +96,24 @@ class TestMainPage:
             page.open()
             title = page.check_title_top_videos()
             assert title == "Top Videos", f"Expected title: 'Top Videos', Actual title: {title}"
+
+        def test_tc_16_02_06_check_the_cursor_change_to_block_training_main(self, driver):
+            """This test check the cursor change when hovering over the block training main"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            cursor_before, cursor_after = page.check_the_cursor_change_to_block_training_main()
+            assert cursor_before != cursor_after, "Mouse cursor has not changed on the block training main"
+
+        def test_tc_16_02_07_check_the_cursor_change_to_block_training_erin(self, driver):
+            """This test check the cursor change when hovering over the block training erin"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            cursor_before, cursor_after = page.check_the_cursor_change_to_block_training_erin()
+            assert cursor_before != cursor_after, "Mouse cursor has not changed on the block training erin"
+
+        def test_tc_16_02_08_check_the_cursor_change_to_block_training_on_demand(self, driver):
+            """This test check the cursor change when hovering over the block training on demand"""
+            page = TrainingPage(driver, TRAINING_PAGE_URL)
+            page.open()
+            cursor_before, cursor_after = page.check_the_cursor_change_to_block_training_on_demand()
+            assert cursor_before != cursor_after, "Mouse cursor has not changed on the block training on demand"
