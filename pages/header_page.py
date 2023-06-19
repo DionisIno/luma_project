@@ -317,3 +317,8 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.MY_WISH_LIST).click()
         return self.check_common_header()
 
+    @allure.step('Check redirection of the "Sign Out" link')
+    def check_redirection_of_the_sign_out_link(self):
+        self.element_is_visible(self.header_locators.DROPDOWN_BUTTON).click()
+        self.element_is_visible(self.header_locators.SIGN_OUT).click()
+        return self.check_common_header()

@@ -1,7 +1,7 @@
 import allure
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL, \
-    MEN_TEES_URL, MEN_TANKS_URL, MY_ACCOUNT_URL, MY_WISHLIST_URL
+    MEN_TEES_URL, MEN_TANKS_URL, MY_ACCOUNT_URL, MY_WISHLIST_URL, SIGN_OUT_URL
 from pages.header_page import HeaderPage
 
 
@@ -354,7 +354,7 @@ class TestHeader:
         page.check_redirection_of_the_my_account_link()
         header = page.check_common_header()
         assert driver.current_url == MY_ACCOUNT_URL and header.text == "My Account", \
-            "My Account page of Men section is either not opened or the page header is incorrect"
+            "My Account page is either not opened or the page header is incorrect"
 
     def test_tc_01_01_11_functionality_of_the_my_wish_list_in_the_dropdown_list(self, driver):
         """Check the list appears with sections 'My Account', 'My Wish List', 'Sign Out' after clicking the button,\
@@ -365,4 +365,16 @@ class TestHeader:
         page.check_redirection_of_the_my_wish_list_link()
         header = page.check_common_header()
         assert driver.current_url == MY_WISHLIST_URL and header.text == "My Wish List", \
-            "My Wish List page of Men section is either not opened or the page header is incorrect"
+            "My Wish List page is either not opened or the page header is incorrect"
+
+    def test_tc_01_01_12_functionality_of_the_sign_out_in_the_dropdown_list(self, driver):
+        """Check the list appears with sections 'My Account', 'My Wish List', 'Sign Out' after clicking the button,\
+        then clicking on 'Sign Out' redirects to the account page with the header 'You are signed out' displayed \
+        and redirected to the Main Page after 5 seconds"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.user_authorization()
+        page.check_redirection_of_the_sign_out_link()
+        header = page.check_common_header()
+        assert driver.current_url == SIGN_OUT_URL and header.text == "You are signed out", \
+            "Sign Out page is either not opened or the page header is incorrect"
