@@ -244,6 +244,8 @@ class HeaderPage(BasePage):
 
     @allure.step('User authorization')
     def user_authorization(self):
+        """This method performs user authorization by entering the email and password,
+        and clicking on the sign-in button. It returns True if the sign-in element becomes not visible"""
         sign_in = self.element_is_visible(self.header_locators.SIGN_IN)
         sign_in.click()
         email = self.element_is_visible(self.sign_in_locators.CUSTOMER_EMAIL)
@@ -253,3 +255,12 @@ class HeaderPage(BasePage):
         sign_in_btn = self.element_is_visible(self.sign_in_locators.SIGN_IN_BUTTON)
         sign_in_btn.click()
         return self.element_is_not_visible(self.header_locators.SIGN_IN)
+
+    @allure.step('Check redirection of the "Tops" subsection of "Men" section link')
+    def check_redirection_of_tops_subsection_of_men_section_link(self):
+        """This method checks the redirection of the 'Tops' subsection link of the 'Men' section.
+        It moves the cursor over the 'Men' section, clicks on the 'Tops' subsection link,
+        and returns the visibility of the header page element"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.element_is_visible(self.header_locators.TOPS_SUBSECTION).click()
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
