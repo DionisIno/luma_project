@@ -31,6 +31,7 @@ WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD_URL = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
 MY_WISHLIST_URL = "https://magento.softwaretestingboard.com/wishlist/"
+SIGN_OUT_URL = "https://magento.softwaretestingboard.com/customer/account/logoutSuccess/"
 
 
 # Links in the Promo Block on the Main Page
