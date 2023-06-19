@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from selenium.webdriver.support.ui import WebDriverWait as wait
@@ -79,4 +81,12 @@ class TestShoppingCartFull:
         page.fill_in_quantity_field("2")
         displayed_quantity = page.get_quantity_field_attribute("value")
         assert displayed_quantity == "2", "Displayed quantity isn't the same as entered in the quantity field"
+
+    @allure.title("tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.")
+    def test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summarys_cart_are_equal(self, driver, full_cart_page):
+        """Verify the subtotal amounts in the item cart and in the summary cart are the same."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        subtotal_item = page.check_subtotal_of_item()
+        subtotal_summary = page.check_subtotal_in_summary()
+        assert subtotal_item == subtotal_summary, "The subtotals aren't the same"
 
