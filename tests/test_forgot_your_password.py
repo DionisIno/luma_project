@@ -27,3 +27,25 @@ class TestForgotYourPassword:
         note = forgot_psw_page.check_forgot_your_psw_note()
         assert note is not None and note.text == forgot_your_password_data["forgot_your_password_note"], \
             "Forgot Your Password note is incorrect or not present"
+
+    @allure.title('TC 17.01.03 Verify FYP Email field is present')
+    def test_17_01_03_email_field_is_present(self, driver, forgot_psw_page):
+        """Check if the Email input field is present"""
+        email_input = forgot_psw_page.check_forgot_psw_email_field_is_clickable()
+        assert email_input.is_displayed(), "Email input field is not displayed"
+
+    @allure.title('TC 17.01.04 Verify FYP Email field is correct format and clickable')
+    def test_17_01_04_email_field_is_correct_format_and_clickable(self, driver, forgot_psw_page):
+        """Check if the Email input is of correct format (input-text) and clickable"""
+        email_input = forgot_psw_page.check_forgot_psw_email_field_is_clickable()
+        assert "input-text" in email_input.get_attribute("class") \
+               and email_input.is_enabled(), \
+            "Email input field does not accept text or is not clickable"
+
+    @allure.title('TC 17.01.05 Verify FYP Email field is appropriately labeled')
+    def test_17_01_05_email_is_appropriately_labeled(self, driver, forgot_psw_page):
+        """Check if Email field is appropriately labeled """
+        label = forgot_psw_page.check_forgot_psw_email_label()
+        asterisk = forgot_psw_page.check_forgot_psw_email_asterisk()
+        assert asterisk is not None and label.text == forgot_your_password_data["email_label"], \
+            "Email label or asterisk is not present for Email field"
