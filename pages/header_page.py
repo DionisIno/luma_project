@@ -253,3 +253,9 @@ class HeaderPage(BasePage):
         sign_in_btn = self.element_is_visible(self.sign_in_locators.SIGN_IN_BUTTON)
         sign_in_btn.click()
         return self.element_is_not_visible(self.header_locators.SIGN_IN)
+
+    @allure.step('Check redirection of the "Tops" subsection of "Men" section link')
+    def check_redirection_of_tops_subsection_of_men_section_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.MEN_SECTION))
+        self.element_is_visible(self.header_locators.TOPS_SUBSECTION).click()
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
