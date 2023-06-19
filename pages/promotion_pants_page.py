@@ -1,11 +1,11 @@
 """This section contains the basic steps for promotion pants page tests"""
 
-from locators.promotion_pants_page_locators import PantsLocators
+from locators.pants_promo_page_locators import PantsPromoPageLocators
 from pages.base_page import BasePage
 
 
 class PromotionPantsPage(BasePage):
-    locators = PantsLocators
+    locators = PantsPromoPageLocators
 
     def check_text_in_shopping_options_title(self):
         shopping_options = self.element_is_visible(self.locators.SHOPPING_OPTIONS)
