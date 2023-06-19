@@ -322,3 +322,11 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.DROPDOWN_BUTTON).click()
         self.element_is_visible(self.header_locators.SIGN_OUT).click()
         return self.check_common_header()
+
+    @allure.step('Check the "Tops" link of the "Women" section')
+    def check_women_tops_subsection(self):
+        """This method moves the cursor over the 'Women' section, then over the 'Tops' subsection and returns \
+        subsection contains 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', 'Tees' and 'Tanks & Bras' subsections"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
+        return self.element_is_visible(self.header_locators.TOPS_SUBSECTIONS_WOMEN)

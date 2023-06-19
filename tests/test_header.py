@@ -164,7 +164,7 @@ class TestHeader:
         link = page.link_gear_is_visible_and_interactive()
         assert link, "The link 'Gear' isn't visible or non-interactive"
 
-    def test_tc_01_03_23_display_and_interactivity_of_the_bottoms_subsection(self, driver):
+    def test_tc_01_03_23_display_and_interactivity_of_the_bottoms_men_section(self, driver):
         """Check the 'Bottoms' subsection in 'Men' section is displayed and the 'Pants' and 'Shorts' \
         subsections is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -252,7 +252,7 @@ class TestHeader:
         assert driver.current_url == MEN_PAGE_URL and header.text == "Men", \
             "Men page of Men section is either not opened or the page header is incorrect"
 
-    def test_tc_01_03_17_display_and_interactivity_of_the_tops_subsection(self, driver):
+    def test_tc_01_03_17_display_and_interactivity_of_the_tops_men_section(self, driver):
         """Check the 'Tops' subsection in 'Men' section is displayed and the 'Jackets', 'Shorts', \
         'Hoodies & Sweatshirts', 'Tees' and 'Tanks' subsections is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -295,7 +295,7 @@ class TestHeader:
         assert page.element_is_visible(page.header_locators.HEADER_LIST), \
             "Error: The dropdown list with sections 'My Account', 'My Wish List', 'Sign Out' is not appears"
 
-    def test_tc_01_03_18_correctness_of_the_tops_subsection_of_men_section_link(self, driver):
+    def test_tc_01_03_18_correctness_of_the_tops_men_section_link(self, driver):
         """Check 'Tops' subsection link click in 'Men' section redirects to the Tops-men page and \
         the 'Tops' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -305,7 +305,7 @@ class TestHeader:
         assert driver.current_url == MEN_TOPS_URL and header.text == "Tops", \
             "Tops-men page of Men section is either not opened or the page header is incorrect"
 
-    def test_tc_01_03_19_correctness_of_jackets_subsection_of_men_section_link(self, driver):
+    def test_tc_01_03_19_correctness_of_jackets_men_section_link(self, driver):
         """Check 'Jackets' subsection link click in 'Men' section redirects to the Jackets-men page and \
         the 'Jackets' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -315,7 +315,7 @@ class TestHeader:
         assert driver.current_url == MEN_JACKETS_URL and header.text == "Jackets", \
             "Jackets-men page of Men section is either not opened or the page header is incorrect"
 
-    def test_tc_01_03_20_correctness_of_hoodies_subsection_of_men_section_link(self, driver):
+    def test_tc_01_03_20_correctness_of_hoodies_men_section_link(self, driver):
         """Check 'Hoodies & Sweatshirts' subsection link click in 'Men' section redirects to the \
         Hoodies & Sweatshirts-men page and the 'Hoodies & Sweatshirts' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -325,7 +325,7 @@ class TestHeader:
         assert driver.current_url == MEN_HOODIES_URL and header.text == "Hoodies & Sweatshirts", \
             "Hoodies & Sweatshirts-men page of Men section is either not opened or the page header is incorrect"
 
-    def test_tc_01_03_21_correctness_of_tees_subsection_of_men_section_link(self, driver):
+    def test_tc_01_03_21_correctness_of_tees_men_section_link(self, driver):
         """Check 'Tees' subsection link click in 'Men' section redirects to the Tees-men page and \
         the 'Tees' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -335,7 +335,7 @@ class TestHeader:
         assert driver.current_url == MEN_TEES_URL and header.text == "Tees", \
             "Tees-men page of Men section is either not opened or the page header is incorrect"
 
-    def test_tc_01_03_22_correctness_of_tanks_subsection_of_men_section_link(self, driver):
+    def test_tc_01_03_22_correctness_of_tanks_men_section_link(self, driver):
         """Check 'Tanks' subsection link click in 'Men' section redirects to the Tanks-men page and \
         the 'Tanks' header is displayed"""
         page = HeaderPage(driver, MAIN_PAGE_URL)
@@ -378,3 +378,12 @@ class TestHeader:
         header = page.check_common_header()
         assert driver.current_url == SIGN_OUT_URL and header.text == "You are signed out", \
             "Sign Out page is either not opened or the page header is incorrect"
+
+    def test_tc_01_03_05_display_and_interactivity_of_the_tops_women_section(self, driver):
+        """Check the 'Tops' subsection in 'Women' section is displayed and the 'Jackets', 'Shorts', \
+        'Hoodies & Sweatshirts', 'Tees' and 'Bras & Tanks' subsections is displayed"""
+        page = HeaderPage(driver, MAIN_PAGE_URL)
+        page.open()
+        dropdown_items = page.check_women_tops_subsection()
+        assert dropdown_items.is_displayed(), "Error: The 'Jackets', 'Shorts', 'Hoodies & Sweatshirts', \
+            'Tees' and 'Bras & Tanks' subsections is not displayed"
