@@ -48,3 +48,15 @@ img_src = {
     "sale_men_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-mens.jpg',
     "sale_gear_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-gear.jpg'
 }
+
+promo_blocks_titles = {
+    "sale_women_title": "Women’s Deals",
+    "sale_men_title": "Men’s Bargains",
+    "sale_gear_title": "Luma Gear Steals"
+}
+
+promo_blocks_contents = {
+    "sale_women_content": "Pristine prices on pants, tanks and bras.",
+    "sale_men_content": "Stretch your budget with active attire",
+    "sale_gear_content": "Your best efforts deserve a deal"
+}
