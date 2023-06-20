@@ -15,3 +15,4 @@ class CreateAccountPageLocators:
     PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, '[id="password-confirmation"]')
     CREATE_AN_ACCOUNT_BUTTON = (By.CSS_SELECTOR, 'button[title="Create an Account"]')
     MESSAGE_ERROR = (By.CSS_SELECTOR, '.message-error.error.message > div')
+    MESSAGE_SUCCESS = (By.CSS_SELECTOR, '.message-success.success.message > div')
