@@ -283,3 +283,19 @@ class BasePage:
         This method finds a required element, making it visible to the user.
         """
         return "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"
+
+    @allure.step("Getting actual URL of the current webpage")
+    def get_actual_url_of_current_page(self):
+        """
+        This method allows to get URL of the current page
+        """
+        actual_url = self.driver.current_url
+        return actual_url
+
+    @allure.step("Getting actual title of the current webpage")
+    def get_actual_title_of_current_page(self):
+        """
+        This method allows to get a title of the current page
+        """
+        actual_title = self.driver.title
+        return actual_title

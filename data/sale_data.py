@@ -60,3 +60,15 @@ promo_blocks_contents = {
     "sale_men_content": "Stretch your budget with active attire",
     "sale_gear_content": "Your best efforts deserve a deal"
 }
+
+expected_titles_promo_blocks = {
+    "main_block": "Women Sale",
+    "men_block": "Men Sale",
+    "gear_block": "Gear"
+}
+
+expected_urls_promo_blocks = {
+    "main_block": 'https://magento.softwaretestingboard.com/promotions/women-sale.html',
+    "men_block": 'https://magento.softwaretestingboard.com/promotions/men-sale.html',
+    "gear_block": 'https://magento.softwaretestingboard.com/gear.html'
+}

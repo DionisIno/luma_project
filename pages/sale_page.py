@@ -14,16 +14,6 @@ class SalePage(BasePage):
         title_women_deals = women_deals_title.text
         return title_women_deals
 
-    @allure.step("Get actual title of webpage")
-    def get_actual_title(self, driver):
-        actual_title = driver.title
-        return actual_title
-
-    @allure.step("Get actual URL of webpage")
-    def get_actual_url(self, driver):
-        actual_url = driver.current_url
-        return actual_url
-
     @allure.step("Check text in Men's deals title")
     def check_text_in_men_deals_title(self):
         men_deals_title = self.element_is_visible(self.side_bar_locators.MEN_DEALS_TITLE)
