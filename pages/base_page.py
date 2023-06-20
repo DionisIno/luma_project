@@ -299,3 +299,14 @@ class BasePage:
         """
         actual_title = self.driver.title
         return actual_title
+
+    @allure.step('Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
+    def click_to_the_right_of_the_center_of_the_locator_by_95_pixels(self, locator, timeout=5):
+        """
+        Click not in the center of the selector, but in its right part,
+        to the right from the center by 95 pixels
+        """
+        element = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        actions = ActionChains(self.driver)
+        actions.move_to_element_with_offset(element, 95, 0)
+        actions.click().perform()
