@@ -22,7 +22,7 @@ class TestSalePage:
     @allure.feature("Testing Side Menu Bar - Women's Deals Section")
     class TestSideMenuBarWomen:
         @allure.title("TC 10.01.01 - Verify 'WOMEN'S DEALS' title is correct")
-        def test_tc_10_01_01(self, driver, sale_page):
+        def test_tc_10_01_01(self, sale_page):
             """Check title of Women's Deals section"""
             title = sale_page.check_text_in_women_deals_title()
             assert title == "WOMEN'S DEALS", f"Expected title: 'WOMEN'S DEALS', Actual title: {title}"
