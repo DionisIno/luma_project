@@ -51,3 +51,8 @@ class MainContentPromoBlocks:
     SALE_GEAR_BUTTON = (By.CSS_SELECTOR, '.sale-women .more')
     # Title
     HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
+    MAIN_AND_2COLUMNS_BLOCKS_BUTTONS = {
+        "sale_women_button": (By.CSS_SELECTOR, '.sale-main .more'),
+        "sale_men_button": (By.CSS_SELECTOR, '.sale-mens .more'),
+        "sale_gear_button": (By.CSS_SELECTOR, '.sale-women .more')
+    }
