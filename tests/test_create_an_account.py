@@ -31,7 +31,7 @@ class TestCreateAnAccount:
                           ' email address, click here to get your password and access your account.', "No error message"
 
     @allure.title('test 04.02.01 create an account with correct data')
-    @pytest.mark.skip(reason="customer will Create An Account with correct data")
+    # @pytest.mark.skip(reason="customer will Create An Account with correct data")
     def test_tc_04_02_01_create_account_with_correct_data(self, driver):
         """ Verify that customer can Create An Account with correct data"""
         page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
