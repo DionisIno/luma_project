@@ -39,6 +39,7 @@ jobs:
       if: steps.changed-py-files.outputs.any_changed == 'true'
       id: video-recording
       run: |
+        sudo apt-get update
         sudo apt-get install -y xvfb ffmpeg
         Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
         sleep 1
