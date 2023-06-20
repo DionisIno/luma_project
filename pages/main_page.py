@@ -270,6 +270,12 @@ class PromoBlock(BasePage):
         section2_block1 = self.element_is_visible(self.locators.SECTION_2_BLOCK_1)
         return section2_block1.is_displayed()
 
+    @allure.step("Check the section 2 block 2 'home-t-shirts' display in the Promo Block")
+    def check_section2_block2_display(self):
+        """Checks section 2 block 2 'home-t-shirts' display"""
+        section2_block2 = self.element_is_visible(self.locators.SECTION_2_BLOCK_2)
+        return section2_block2.is_displayed()
+
     @allure.step("Check the image in section 2 block 1 'home-pants' is correct in the Promo Block")
     def check_image_in_section2_block1(self):
         """Checks the image in block 1 'home-pants'"""
