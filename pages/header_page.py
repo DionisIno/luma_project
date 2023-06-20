@@ -33,7 +33,7 @@ class HeaderPage(BasePage):
     fitness_equipment_locators = FitnessEquipmentPageLocators
     watches_locators = WatchesPageLocators
 
-    @allure.step('Check greeting message in search field')
+    @allure.step('Check greeting message "Default welcome msg!" in search field')
     def check_greeting_message(self):
         return self.element_is_visible(self.header_locators.GREETING_MESSAGE)
 
@@ -50,7 +50,7 @@ class HeaderPage(BasePage):
         text = self.get_text(self.sale_locators.HEAD_TEXT)
         return url == SALE_PAGE_URL and text == "Sale"
 
-    @allure.step('Check message appears after clicking on an empty cart')
+    @allure.step('Check message "You have no items in your shopping cart." appears after clicking on an empty cart')
     def check_cart_message(self):
         return self.element_is_visible(self.header_locators.CART_BUTTON_MESSAGE).text
 
@@ -58,22 +58,18 @@ class HeaderPage(BasePage):
     def check_search_field(self):
         return self.element_is_visible(self.header_locators.SEARCH_FIELD).get_attribute('placeholder')
 
-    @allure.step('Check "Search" field dropdown')
+    @allure.step('Check the dropdown of the "Search" field')
     def enter_search_field_and_get_dropdown(self):
-        """
-        This method activates the field "Search", enters the term "T-shirt" in the field "Search"
-        and returns the combo box that appears after you enter the search term.
-        """
+        """This method activates the field "Search", enters the term "T-shirt" in the field "Search"
+        and returns the combo box that appears after you enter the search term"""
         search_field = self.click_and_return_element(self.header_locators.SEARCH_FIELD)
         search_field.send_keys("T-shirt")
         return self.elements_are_visible(self.header_locators.SEARCH_DROPDOWN)
 
     @allure.step('Check "Search" field activation style')
     def activate_search_field_and_check_style(self):
-        """
-        This method activates the field "Search" and checks if the style of the field changes upon activation.
-        It returns the styles before and after activation for comparison.
-        """
+        """This method activates the field "Search" and checks if the style of the field changes upon activation.
+        It returns the styles before and after activation for comparison"""
         initial_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow', 5)
         self.click_and_return_element(self.header_locators.SEARCH_FIELD)
         active_box_shadow = self.check_element_hover_style(self.header_locators.SEARCH_FIELD, 'box-shadow', 5)
@@ -151,7 +147,7 @@ class HeaderPage(BasePage):
         element_watches = self.element_is_visible(self.header_locators.WATCHES)
         return element, clickable, interactive, element_bags, element_fitness_equipment, element_watches
 
-    @allure.step('Check "Bottom" subsection of "Men" section')
+    @allure.step('Check "Bottom" subsection of the "Men" section')
     def check_men_bottoms_subsection(self):
         """This method moves the cursor over the 'Men' section, then over the 'Bottoms' subsection
         and returns the 'Pants' and 'Shorts' subsections."""
@@ -331,7 +327,7 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
         return self.element_is_visible(self.header_locators.TOPS_SUBSECTIONS_WOMEN)
 
-    @allure.step('Check redirection of the "Tops" subsection of "Women" section link')
+    @allure.step('Check redirection of the "Tops" subsection of the "Women" section link')
     def check_redirection_of_tops_subsection_of_women_section_link(self):
         """This method checks the redirection of the 'Tops' subsection link of the 'Women' section.
         It moves the cursor over the 'Women' section, clicks on the 'Tops' subsection link,
@@ -340,7 +336,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN).click()
         return self.check_common_header()
 
-    @allure.step('Check redirection of the "Jackets" subsection of "Women" section link')
+    @allure.step('Check redirection of the "Jackets" subsection of the "Women" section link')
     def check_redirection_of_jackets_subsection_of_women_section_link(self):
         """This method checks the redirection of the 'Jackets' subsection link of the 'Women' section.
         It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Jackets' subsection link,
@@ -351,7 +347,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN).click()
         return self.check_common_header()
 
-    @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of "Women" section link')
+    @allure.step('Check redirection of the "Hoodies & Sweatshirts" subsection of the "Women" section link')
     def check_redirection_of_hoodies_subsection_of_women_section_link(self):
         """This method checks the redirection of the 'Hoodies & Sweatshirts' subsection link of the 'Women' section.
         It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Hoodies & Sweatshirts' subsection \
@@ -362,7 +358,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.HOODIES_SWEATSHIRTS_SUBSECTION_WOMEN).click()
         return self.check_common_header()
 
-    @allure.step('Check redirection of the "Tees" subsection of "Women" section link')
+    @allure.step('Check redirection of the "Tees" subsection of the "Women" section link')
     def check_redirection_of_tees_subsection_of_women_section_link(self):
         """This method checks the redirection of the 'Tees' subsection link of the 'Women' section.
         It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Tees' subsection link,
@@ -373,7 +369,7 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.TEES_SUBSECTION_WOMEN).click()
         return self.check_common_header()
 
-    @allure.step('Check redirection of the "Tanks & Bras" subsection of "Women" section link')
+    @allure.step('Check redirection of the "Tanks & Bras" subsection of the "Women" section link')
     def check_redirection_of_tanks_subsection_of_women_section_link(self):
         """This method checks the redirection of the 'Tanks & Bras' subsection link of the 'Women' section.
         It moves the cursor over the 'Women' section, then 'Tops' and clicks on the 'Tanks & Bras' subsection link,
@@ -382,4 +378,33 @@ class HeaderPage(BasePage):
         self.action_move_to_element(self.element_is_visible(self.header_locators.TOPS_SUBSECTION_WOMEN))
         self.action_move_to_element(self.element_is_visible(self.header_locators.JACKETS_SUBSECTION_WOMEN))
         self.element_is_visible(self.header_locators.BRAS_TANKS_SUBSECTION_WOMEN).click()
+        return self.check_common_header()
+
+    @allure.step('Check "Bottom" subsection of the "Women" section')
+    def check_women_bottoms_subsection(self):
+        """This method moves the cursor over the 'Women' section, then over the 'Bottoms' subsection
+        and returns the 'Pants' and 'Shorts' subsections."""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION_WOMEN))
+        return self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTIONS_WOMEN)
+
+    @allure.step('Check the "Bottoms" link of the "Women" section')
+    def check_women_bottoms_subsection_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.click_and_return_element(self.header_locators.BOTTOMS_SUBSECTION_WOMEN)
+        return self.check_common_header()
+
+    @allure.step('Check the "Pants" link of the "Women" section')
+    def check_women_pants_subsection_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION_WOMEN))
+        self.click_and_return_element(self.header_locators.PANTS_WOMEN)
+        return self.check_common_header()
+
+    @allure.step('Check the "Shorts" link of the "Women" section')
+    def check_women_shorts_subsection_link(self):
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.BOTTOMS_SUBSECTION_WOMEN))
+        self.action_move_to_element(self.element_is_visible(self.header_locators.PANTS_WOMEN))
+        self.click_and_return_element(self.header_locators.SHORTS_WOMEN)
         return self.check_common_header()
