@@ -23,7 +23,7 @@ class TestCreateAnAccount:
 
     @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):
-        """ Verify that customer can't Create An Account with registered email before """
+        """ Verify that customer can't Create An Account with registered email before"""
         page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
         page.open()
         message = page.create_with_email()
