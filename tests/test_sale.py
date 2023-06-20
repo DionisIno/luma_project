@@ -4,7 +4,7 @@ import pytest
 from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
 from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
-    expected_titles_gear, expected_urls_gear, img_src
+    expected_titles_gear, expected_urls_gear, img_src, promo_blocks_titles, promo_blocks_contents
 from locators.sale_page_locators import SideBarLocators
 
 
@@ -132,7 +132,7 @@ class TestSalePage:
             assert page.get_actual_url(driver) == expected_url, "URL does not match"
             assert page.get_actual_title(driver) == expected_title, "Title does not match"
 
-    @allure.feature("Testing Promo Blocks - Main Block - Women's Deals")
+    @allure.feature("Testing Promo Blocks, Main Block (Women's Deals) and 2 columns block - Men's Bargain, Gear Steals")
     class TestPromoBlocks:
         @allure.title("TC 10.04.01 - Verify that the Women Deals contains an image")
         def test_tc_10_04_01(self, driver):
@@ -157,3 +157,33 @@ class TestSalePage:
             page.open()
             img = page.check_img_in_gear_block()
             assert img == img_src["sale_gear_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.02 - Verify the text in main block - Women's Deals")
+        def test_tc_10_04_02(self, driver):
+            """Check title-text and content-text in main block - Women's Deals"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            title = page.check_title_text_in_main_block()
+            content = page.check_content_text_in_main_block()
+            assert title == promo_blocks_titles["sale_women_title"] \
+                   and content == promo_blocks_contents["sale_women_content"], "Ether title or content isn't accurate."
+
+        @allure.title("TC 10.04.05 - Verify the text in 2 columns block - Men's Deals")
+        def test_tc_10_04_05(self, driver):
+            """Check title-text and content-text in 2 columns block - Men's Deals"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            title = page.check_title_text_in_men_block()
+            content = page.check_content_text_in_men_block()
+            assert title == promo_blocks_titles["sale_men_title"] \
+                   and content == promo_blocks_contents["sale_men_content"], "Ether title or content isn't accurate."
+
+        @allure.title("TC 10.04.08 - Verify the text in main block - Gear Deals")
+        def test_tc_10_04_08(self, driver):
+            """Check title-text and content-text in main block - Gear Deals"""
+            page = SalePage(driver, SALE_PAGE_URL)
+            page.open()
+            title = page.check_title_text_in_gear_block()
+            content = page.check_content_text_in_gear_block()
+            assert title == promo_blocks_titles["sale_gear_title"] \
+                   and content == promo_blocks_contents["sale_gear_content"], "Ether title or content isn't accurate."

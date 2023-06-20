@@ -53,3 +53,39 @@ class SalePage(BasePage):
         img = self.element_is_visible(self.promo_blocks_locators.SALE_GEAR_IMG)
         img_src = img.get_attribute("src")
         return img_src
+
+    @allure.step("Check title-text in main block - Women's Deals")
+    def check_title_text_in_main_block(self):
+        main_block_title = self.element_is_visible(self.promo_blocks_locators.SALE_WOMEN_TITLE)
+        main_block_title_text = main_block_title.text
+        return main_block_title_text
+
+    @allure.step("Check content-text in main block - Women's Deals")
+    def check_content_text_in_main_block(self):
+        main_block_content = self.element_is_visible(self.promo_blocks_locators.SALE_WOMEN_CONTENT)
+        main_block_content_text = main_block_content.text
+        return main_block_content_text
+
+    @allure.step("Check title-text in 2 columns block - Men's Deals")
+    def check_title_text_in_men_block(self):
+        men_block_title = self.element_is_visible(self.promo_blocks_locators.SALE_MEN_TITLE)
+        men_block_title_text = men_block_title.text
+        return men_block_title_text
+
+    @allure.step("Check content-text in 2 columns block - Men's Deals")
+    def check_content_text_in_men_block(self):
+        men_block_content = self.element_is_visible(self.promo_blocks_locators.SALE_MEN_CONTENT)
+        men_block_content_text = men_block_content.text
+        return men_block_content_text
+
+    @allure.step("Check title-text in 2 columns block - Gear Deals")
+    def check_title_text_in_gear_block(self):
+        gear_block_title = self.element_is_visible(self.promo_blocks_locators.SALE_GEAR_TITLE)
+        gear_block_title_text = gear_block_title.text
+        return gear_block_title_text
+
+    @allure.step("Check content-text in 2 columns block - Gear Deals")
+    def check_content_text_in_gear_block(self):
+        gear_block_content = self.element_is_visible(self.promo_blocks_locators.SALE_GEAR_CONTENT)
+        gear_block_content_text = gear_block_content.text
+        return gear_block_content_text
