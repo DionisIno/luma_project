@@ -30,9 +30,9 @@ class CreateAccountPage(BasePage):
     @allure.step('Create an account')
     def create_with_correct_data(self):
         """ Verify that customer can Create An Account with correct data"""
-        self.element_is_visible(self.locators.FIRST_NAME).send_keys('test77')
-        self.element_is_visible(self.locators.LAST_NAME).send_keys('testoviy77')
-        self.element_is_visible(self.locators.EMAIL).send_keys('tes77ton754@mailitestov.test')
+        self.element_is_visible(self.locators.FIRST_NAME).send_keys('test717')
+        self.element_is_visible(self.locators.LAST_NAME).send_keys('testoviy717')
+        self.element_is_visible(self.locators.EMAIL).send_keys('tes717ton754@mailitestov.test')
         self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
         self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
