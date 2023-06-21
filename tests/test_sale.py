@@ -204,7 +204,7 @@ class TestSalePage:
             img = sale_page.check_img_in_second_block()
             assert img == img_src_three_columns["second_column_img"], "Image doesn't exist or isn't accurate"
 
-        @allure.title("TC 10.04.14 - Verify that the sale-womens-t-shirts contains an image")
+        @allure.title("TC 10.04.14 - Verify that the sale-women-t-shirts contains an image")
         def test_tc_10_04_14(self, sale_page):
             """Check img existence of 3rd column in 3-columns Promo Block section"""
             img = sale_page.check_img_in_third_block()
@@ -228,9 +228,9 @@ class TestSalePage:
                    and content == three_columns_blocks_contents["second_column"], "Either title or content isn't " \
                                                                                   "accurate."
 
-        @allure.title("TC 10.04.15 - Verify the text in 3-columns block - sale-womens-t-shirts")
+        @allure.title("TC 10.04.15 - Verify the text in 3-columns block - sale-women-t-shirts")
         def test_tc_10_04_15(self, sale_page):
-            """Check title-text and content-text in 3-columns block - sale-womens-t-shirts"""
+            """Check title-text and content-text in 3-columns block - sale-women-t-shirts"""
             title = sale_page.check_title_text_in_third_block()
             content = sale_page.check_content_text_in_third_block()
             assert title == three_columns_block_titles["third_column"] \
