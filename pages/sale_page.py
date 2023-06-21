@@ -79,3 +79,21 @@ class SalePage(BasePage):
         gear_block_content = self.element_is_visible(self.promo_blocks_locators.SALE_GEAR_CONTENT)
         gear_block_content_text = gear_block_content.text
         return gear_block_content_text
+
+    @allure.step("Check img in 3-columns block - 1st block")
+    def check_img_in_first_block(self):
+        img = self.element_is_present(self.promo_blocks_locators.FIRST_COLUMN_IMG)
+        img_src = img.get_attribute("src")
+        return img_src
+
+    @allure.step("Check img in 3-columns block - 2nd block")
+    def check_img_in_second_block(self):
+        img = self.element_is_present(self.promo_blocks_locators.SECOND_COLUMN_IMG)
+        img_src = img.get_attribute("src")
+        return img_src
+
+    @allure.step("Check img in 3-columns block - 3rd block")
+    def check_img_in_third_block(self):
+        img = self.element_is_present(self.promo_blocks_locators.THIRD_COLUMN_IMG)
+        img_src = img.get_attribute("src")
+        return img_src

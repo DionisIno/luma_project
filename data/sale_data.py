@@ -72,3 +72,9 @@ expected_urls_promo_blocks = {
     "men_block": 'https://magento.softwaretestingboard.com/promotions/men-sale.html',
     "gear_block": 'https://magento.softwaretestingboard.com/gear.html'
 }
+
+img_src_three_columns = {
+    "first_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-20-off.png',
+    "second_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-free-shipping.png',
+    "third_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/womens/womens-t-shirts.png'
+}

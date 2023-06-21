@@ -34,6 +34,8 @@ class SideBarLocators:
 
 class MainContentPromoBlocks:
     """A class for Main Content Promo Blocks locators"""
+    # Title
+    HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
     # Block-promo sale-main, Women's deal
     SALE_WOMEN_IMG = (By.CSS_SELECTOR, '.sale-main img')
     SALE_WOMEN_TITLE = (By.CSS_SELECTOR, '.sale-main .info')
@@ -49,10 +51,20 @@ class MainContentPromoBlocks:
     SALE_GEAR_TITLE = (By.CSS_SELECTOR, '.sale-women .title')
     SALE_GEAR_CONTENT = (By.CSS_SELECTOR, '.sale-women .info')
     SALE_GEAR_BUTTON = (By.CSS_SELECTOR, '.sale-women .more')
-    # Title
-    HEAD_TEXT = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
     MAIN_AND_2COLUMNS_BLOCKS_BUTTONS = {
         "sale_women_button": (By.CSS_SELECTOR, '.sale-main .more'),
         "sale_men_button": (By.CSS_SELECTOR, '.sale-mens .more'),
         "sale_gear_button": (By.CSS_SELECTOR, '.sale-women .more')
     }
+    # Block - Deals 3 columns, 1st column - sale-20-off
+    FIRST_COLUMN_IMG = (By.CSS_SELECTOR, '.sale-20-off .image img')
+    FIRST_COLUMN_TITLE = (By.CSS_SELECTOR, '.sale-20-off .content .title')
+    FIRST_COLUMN_CONTENT = (By.CSS_SELECTOR, '.sale-20-off .content .info')
+    # Block - Deals 3 columns, 2nd column - sale-free-shipping
+    SECOND_COLUMN_IMG = (By.CSS_SELECTOR, '.sale-free-shipping img')
+    SECOND_COLUMN_TITLE = (By.CSS_SELECTOR, '.sale-free-shipping .title')
+    SECOND_COLUMN_CONTENT = (By.CSS_SELECTOR, '..sale-free-shipping .info')
+    # Block - Deals 3 columns, 3rd column - sale-women's-t-shirts
+    THIRD_COLUMN_IMG = (By.CSS_SELECTOR, '.sale-womens-t-shirts .image img')
+    THIRD_COLUMN_TITLE = (By.CSS_SELECTOR, '.sale-womens-t-shirts .content .title')
+    THIRD_COLUMN_CONTENT = (By.CSS_SELECTOR, '.sale-womens-t-shirts .content .info')
