@@ -5,7 +5,7 @@ from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
 from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
     expected_titles_gear, expected_urls_gear, img_src, promo_blocks_titles, promo_blocks_contents, \
-    expected_titles_promo_blocks, expected_urls_promo_blocks
+    expected_titles_promo_blocks, expected_urls_promo_blocks, img_src_three_columns
 from locators.sale_page_locators import SideBarLocators, MainContentPromoBlocks
 
 
@@ -190,3 +190,21 @@ class TestSalePage:
                    and sale_page.get_actual_title_of_current_page() == expected_title, "Either the title or URL of " \
                                                                                        "the page does not match the " \
                                                                                        "expected value"
+
+        @allure.title("TC 10.04.10 - Verify that the sale-20-off contains an image")
+        def test_tc_10_04_10(self, sale_page):
+            """Check img existence of 1st column in 3-columns Promo Block section"""
+            img = sale_page.check_img_in_first_block()
+            assert img == img_src_three_columns["first_column_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.12 - Verify that the sale-free-shipping contains an image")
+        def test_tc_10_04_12(self, sale_page):
+            """Check img existence of 2nd column in 3-columns Promo Block section"""
+            img = sale_page.check_img_in_second_block()
+            assert img == img_src_three_columns["second_column_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.14 - Verify that the sale-womens-t-shirts contains an image")
+        def test_tc_10_04_14(self, sale_page):
+            """Check img existence of 3rd column in 3-columns Promo Block section"""
+            img = sale_page.check_img_in_third_block()
+            assert img == img_src_three_columns["third_column_img"], "Image doesn't exist or isn't accurate"
