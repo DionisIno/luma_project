@@ -78,3 +78,15 @@ img_src_three_columns = {
     "second_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-free-shipping.png',
     "third_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/womens/womens-t-shirts.png'
 }
+
+three_columns_block_titles = {
+    "first_column": "20% OFF",
+    "second_column": "Spend $50 or more — shipping is free!",
+    "third_column": "You can't have too many tees"
+}
+
+three_columns_blocks_contents = {
+    "first_column": "Every $200-plus purchase!",
+    "second_column": "Buy more, save more",
+    "third_column": "4 tees for the price of 3. Right now"
+}

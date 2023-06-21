@@ -210,8 +210,8 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(element).click().perform()
 
-
-    @allure.step('Click not in the center of the selector, but in its right part, to the right from the center by 5 pixels')
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 5 pixels')
     def click_to_the_right_of_the_center_of_the_locator_by_5_pixels(self, locator, timeout=5):
         """
         Click not in the center of the selector, but in its right part,
@@ -222,7 +222,8 @@ class BasePage:
         actions.move_to_element_with_offset(element, 5, 0)
         actions.click().perform()
 
-    @allure.step('Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
     def count_the_number_of_elements_with_the_same_selectors(self, locator, timeout=5):
         """
         Count number of elements with same selectors
@@ -232,7 +233,6 @@ class BasePage:
         elements = wait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
         count = len(elements)
         print("Number of elements with the same (or FAIL) locators: ", count)
-
 
     def debug_headless_CI_in_GitHub_Actions_if_no_CSS_selector_found(self):
         """
@@ -254,19 +254,8 @@ class BasePage:
         except:
             print('At this stage, an error appeared in the output of additional elements')
 
-
-    def get_element_attribute(self, locator, attribute, seconds=10):
-        """
-        This method finds a visible element using the provided locator
-        and returns the value of the specified attribute.
-        Locator - is used to find the element.
-        Attribute - the name of the attribute whose value is to be returned.
-        """
-        element = self.element_is_visible(locator)  # Get the WebElement using locator
-        wait(self.driver, seconds)
-        return element.get_attribute(attribute)
-
-    @allure.step('Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
     def click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self, locator, timeout=5):
         """
         Click not in the center of the selector, but in its right part,
@@ -300,7 +289,8 @@ class BasePage:
         actual_title = self.driver.title
         return actual_title
 
-    @allure.step('Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
     def click_to_the_right_of_the_center_of_the_locator_by_95_pixels(self, locator, timeout=5):
         """
         Click not in the center of the selector, but in its right part,

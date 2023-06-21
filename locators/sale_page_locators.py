@@ -63,8 +63,8 @@ class MainContentPromoBlocks:
     # Block - Deals 3 columns, 2nd column - sale-free-shipping
     SECOND_COLUMN_IMG = (By.CSS_SELECTOR, '.sale-free-shipping img')
     SECOND_COLUMN_TITLE = (By.CSS_SELECTOR, '.sale-free-shipping .title')
-    SECOND_COLUMN_CONTENT = (By.CSS_SELECTOR, '..sale-free-shipping .info')
-    # Block - Deals 3 columns, 3rd column - sale-women's-t-shirts
+    SECOND_COLUMN_CONTENT = (By.CSS_SELECTOR, '.sale-free-shipping .info')
+    # Block - Deals 3 columns, 3rd column - sale-women-t-shirts
     THIRD_COLUMN_IMG = (By.CSS_SELECTOR, '.sale-womens-t-shirts .image img')
     THIRD_COLUMN_TITLE = (By.CSS_SELECTOR, '.sale-womens-t-shirts .content .title')
     THIRD_COLUMN_CONTENT = (By.CSS_SELECTOR, '.sale-womens-t-shirts .content .info')

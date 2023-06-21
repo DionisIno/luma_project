@@ -5,7 +5,8 @@ from data.data_urls import SALE_PAGE_URL
 from pages.sale_page import SalePage
 from data.sale_data import expected_titles_w, expected_urls_w, expected_titles_m, expected_urls_m, \
     expected_titles_gear, expected_urls_gear, img_src, promo_blocks_titles, promo_blocks_contents, \
-    expected_titles_promo_blocks, expected_urls_promo_blocks, img_src_three_columns
+    expected_titles_promo_blocks, expected_urls_promo_blocks, img_src_three_columns, \
+    three_columns_block_titles, three_columns_blocks_contents
 from locators.sale_page_locators import SideBarLocators, MainContentPromoBlocks
 
 
@@ -153,7 +154,7 @@ class TestSalePage:
             title = sale_page.check_title_text_in_main_block()
             content = sale_page.check_content_text_in_main_block()
             assert title == promo_blocks_titles["sale_women_title"] \
-                   and content == promo_blocks_contents["sale_women_content"], "Ether title or content isn't accurate."
+                   and content == promo_blocks_contents["sale_women_content"], "Either title or content isn't accurate."
 
         @allure.title("TC 10.04.05 - Verify the text in 2 columns block - Men's Deals")
         def test_tc_10_04_05(self, sale_page):
@@ -161,7 +162,7 @@ class TestSalePage:
             title = sale_page.check_title_text_in_men_block()
             content = sale_page.check_content_text_in_men_block()
             assert title == promo_blocks_titles["sale_men_title"] \
-                   and content == promo_blocks_contents["sale_men_content"], "Ether title or content isn't accurate."
+                   and content == promo_blocks_contents["sale_men_content"], "Either title or content isn't accurate."
 
         @allure.title("TC 10.04.08 - Verify the text in 2 columns block - Gear Deals")
         def test_tc_10_04_08(self, sale_page):
@@ -169,7 +170,7 @@ class TestSalePage:
             title = sale_page.check_title_text_in_gear_block()
             content = sale_page.check_content_text_in_gear_block()
             assert title == promo_blocks_titles["sale_gear_title"] \
-                   and content == promo_blocks_contents["sale_gear_content"], "Ether title or content isn't accurate."
+                   and content == promo_blocks_contents["sale_gear_content"], "Either title or content isn't accurate."
 
         @allure.title("TC 10.04.03, 10.04.06, 10.04.09 - "
                       "Verify that links in Main block, 2 columns block open the correct pages")
@@ -203,8 +204,35 @@ class TestSalePage:
             img = sale_page.check_img_in_second_block()
             assert img == img_src_three_columns["second_column_img"], "Image doesn't exist or isn't accurate"
 
-        @allure.title("TC 10.04.14 - Verify that the sale-womens-t-shirts contains an image")
+        @allure.title("TC 10.04.14 - Verify that the sale-women-t-shirts contains an image")
         def test_tc_10_04_14(self, sale_page):
             """Check img existence of 3rd column in 3-columns Promo Block section"""
             img = sale_page.check_img_in_third_block()
             assert img == img_src_three_columns["third_column_img"], "Image doesn't exist or isn't accurate"
+
+        @allure.title("TC 10.04.11 - Verify the text in 3-columns block- sale-20-off")
+        def test_tc_10_04_11(self, sale_page):
+            """Check title-text and content-text in 3-columns block - sale-20-off"""
+            title = sale_page.check_title_text_in_first_block()
+            content = sale_page.check_content_text_in_first_block()
+            assert title == three_columns_block_titles["first_column"] \
+                   and content == three_columns_blocks_contents["first_column"], "Either title or content isn't " \
+                                                                                 "accurate."
+
+        @allure.title("TC 10.04.13 - Verify the text in 3-columns block - sale-free-shipping")
+        def test_tc_10_04_13(self, sale_page):
+            """Check title-text and content-text in 3-columns block - sale-free-shipping"""
+            title = sale_page.check_title_text_in_second_block()
+            content = sale_page.check_content_text_in_second_block()
+            assert title == three_columns_block_titles["second_column"] \
+                   and content == three_columns_blocks_contents["second_column"], "Either title or content isn't " \
+                                                                                  "accurate."
+
+        @allure.title("TC 10.04.15 - Verify the text in 3-columns block - sale-women-t-shirts")
+        def test_tc_10_04_15(self, sale_page):
+            """Check title-text and content-text in 3-columns block - sale-women-t-shirts"""
+            title = sale_page.check_title_text_in_third_block()
+            content = sale_page.check_content_text_in_third_block()
+            assert title == three_columns_block_titles["third_column"] \
+                   and content == three_columns_blocks_contents["third_column"], "Either title or content isn't " \
+                                                                                 "accurate."
