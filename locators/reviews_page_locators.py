@@ -12,6 +12,7 @@ class ReviewsPageLocators:
     STAR_2 = (By.CSS_SELECTOR, '#Rating_2_label')
     STAR_3 = (By.CSS_SELECTOR, '#Rating_3_label')
     STAR_4 = (By.CSS_SELECTOR, '#Rating_4_label')
+    STAR_5 = (By.CSS_SELECTOR, '#Rating_5_label')
     NICKNAME_INPUT = (By.CSS_SELECTOR, '#nickname_field')
     SUMMARY_INPUT = (By.CSS_SELECTOR, '#summary_field')
     REVIEW_INPUT = (By.CSS_SELECTOR, '#review_field')
