@@ -133,3 +133,4 @@ class SalePage(BasePage):
         third_block_content = self.element_is_visible(self.promo_blocks_locators.THIRD_COLUMN_CONTENT)
         third_block_content_text = third_block_content.text
         return third_block_content_text
+
