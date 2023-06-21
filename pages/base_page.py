@@ -254,18 +254,6 @@ class BasePage:
         except:
             print('At this stage, an error appeared in the output of additional elements')
 
-
-    def get_element_attribute(self, locator, attribute, seconds=10):
-        """
-        This method finds a visible element using the provided locator
-        and returns the value of the specified attribute.
-        Locator - is used to find the element.
-        Attribute - the name of the attribute whose value is to be returned.
-        """
-        element = self.element_is_visible(locator)  # Get the WebElement using locator
-        wait(self.driver, seconds)
-        return element.get_attribute(attribute)
-
     @allure.step('Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
     def click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self, locator, timeout=5):
         """

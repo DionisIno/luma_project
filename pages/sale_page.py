@@ -97,3 +97,39 @@ class SalePage(BasePage):
         img = self.element_is_present(self.promo_blocks_locators.THIRD_COLUMN_IMG)
         img_src = img.get_attribute("src")
         return img_src
+
+    @allure.step("Check title-text in 3-columns block - 1st block")
+    def check_title_text_in_first_block(self):
+        first_block_title = self.element_is_visible(self.promo_blocks_locators.FIRST_COLUMN_TITLE)
+        first_block_title_text = first_block_title.text
+        return first_block_title_text
+
+    @allure.step("Check content-text in 3-columns block - 1st block")
+    def check_content_text_in_first_block(self):
+        first_block_content = self.element_is_visible(self.promo_blocks_locators.FIRST_COLUMN_CONTENT)
+        first_block_content_text = first_block_content.text
+        return first_block_content_text
+
+    @allure.step("Check title-text in 3-columns block - 2nd block")
+    def check_title_text_in_second_block(self):
+        second_block_title = self.element_is_visible(self.promo_blocks_locators.SECOND_COLUMN_TITLE)
+        second_block_title_text = second_block_title.text
+        return second_block_title_text
+
+    @allure.step("Check content-text in 3-columns block - 2nd block")
+    def check_content_text_in_second_block(self):
+        second_block_content = self.element_is_visible(self.promo_blocks_locators.SECOND_COLUMN_CONTENT)
+        second_block_content_text = second_block_content.text
+        return second_block_content_text
+
+    @allure.step("Check title-text in 3-columns block - 3rd block")
+    def check_title_text_in_third_block(self):
+        third_block_title = self.element_is_visible(self.promo_blocks_locators.THIRD_COLUMN_TITLE)
+        third_block_title_text = third_block_title.text
+        return third_block_title_text
+
+    @allure.step("Check content-text in 3-columns block - 3rd block")
+    def check_content_text_in_third_block(self):
+        third_block_content = self.element_is_visible(self.promo_blocks_locators.THIRD_COLUMN_CONTENT)
+        third_block_content_text = third_block_content.text
+        return third_block_content_text
