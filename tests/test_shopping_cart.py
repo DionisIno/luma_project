@@ -90,3 +90,12 @@ class TestShoppingCartFull:
         subtotal_summary = page.check_subtotal_in_summary()
         assert subtotal_item == subtotal_summary, "The subtotals aren't the same"
 
+    @allure.title("tc 07.02.07 Verify that 'Proceed to checkout' button is displayed and clickable")
+    def test_tc_07_02_07_verify_proceed_to_checkout_button_is_actual(self, driver, full_cart_page):
+        """Check that the 'Proceed to checkout' button is displayed and clickable."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        checkout_button = page.check_checkout_button_is_clickable
+        assert checkout_button is not None, 'The "Proceed to checkout" button is not actual'
+
+
+
