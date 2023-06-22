@@ -65,7 +65,7 @@ class ShoppingCartPage(BasePage):
 
     @allure.step("Check 'Proceed to checkout' button is clickable")
     def check_checkout_button_is_clickable(self):
-        """This method checks that here link in the displayed text is clickable"""
+        """This method checks that 'Proceed to checkout' button is clickable"""
         checkout = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
         return checkout
 
