@@ -5,10 +5,8 @@ import pytest
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.shopping_cart_page import ShoppingCartPage
-from data.data_urls import SHOPPING_CART_PAGE, MAIN_PAGE_URL, ITEM_CART_URL
+from data.data_urls import SHOPPING_CART_PAGE, MAIN_PAGE_URL, ITEM_CART_URL, SHIPPING_PAGE
 from locators.shopping_cart_locators import ShoppingCartPageLocators as shopping_locators
-
-
 
 
 @pytest.fixture(scope="function")
@@ -23,8 +21,6 @@ def full_cart_page(driver):
     wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))
     shopping_cart_link = wait(driver, 5).until(EC.presence_of_element_located(shopping_locators.SHOPPING_CART_LINK))
     shopping_cart_link.click()
-
-
 
 
 @allure.epic("Shopping Cart")
@@ -54,6 +50,7 @@ class TestShoppingCart:
         page.open()
         actual_link = page.here_link_actual_url()
         assert actual_link == MAIN_PAGE_URL
+
 
 @allure.feature('Shopping Cart is full')
 class TestShoppingCartFull:
@@ -96,6 +93,13 @@ class TestShoppingCartFull:
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         checkout_button = page.check_checkout_button_is_clickable
         assert checkout_button is not None, 'The "Proceed to checkout" button is not actual'
+
+    @allure.title("tc 07.02.08 Verify that 'Proceed to checkout' button redirects to the shipping page")
+    def test_tc_07_02_08_verify_proceed_to_checkout_button_leads_to_the_shipping_page(self, driver, full_cart_page):
+        """Verify that the 'Proceed to checkout' button redirects to the shipping page."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        link = page.check_checkout_button_redirects_to_shipping_page()
+        assert link == SHIPPING_PAGE
 
     @allure.title("tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.")
     def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):

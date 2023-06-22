@@ -66,7 +66,7 @@ class ShoppingCartPage(BasePage):
 
     @allure.step("Check 'Proceed to checkout' button is clickable")
     def check_checkout_button_is_clickable(self):
-        """This method checks that here link in the displayed text is clickable"""
+        """This method checks that 'Proceed to checkout' button is clickable"""
         checkout = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
         return checkout
 
@@ -104,6 +104,16 @@ class ShoppingCartPage(BasePage):
         time.sleep(2)
         subtotal = price * qty
         return subtotal
+
+    @allure.step("Check 'Proceed to checkout' button redirects to the shipping page")
+    def check_checkout_button_redirects_to_shipping_page(self):
+        """This method checks that 'Proceed to checkout' button redirects to the shipping page"""
+        button = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
+        button.click()
+        time.sleep(3)
+        current_url = self.driver.current_url
+        return current_url
+
 
     @allure.step("Get Subtotal in the Summary Card")
     def get_subtotal_in_summary(self):
