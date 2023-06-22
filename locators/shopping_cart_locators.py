@@ -13,6 +13,7 @@ class ShoppingCartPageLocators:
     SHOPPING_CART_LINK = (By.CSS_SELECTOR,'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]>a')
     QUANTITY_FIELD = (By.CSS_SELECTOR, "input.input-text.qty")
     UPDATE_BUTTON = (By.CSS_SELECTOR, "button.action.update")
+    PRICE_ITEM = (By.CSS_SELECTOR, '#shopping-cart-table > tbody > tr.item-info > td.col.price > span > span > span')
     SUBTOTAL_ITEM = (By.CSS_SELECTOR, "td.col.subtotal span.price")
     SUBTOTAL_SUMMARY = (By.CSS_SELECTOR, 'td.amount span[data-th="Subtotal"]')
 

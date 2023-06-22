@@ -90,3 +90,12 @@ class TestShoppingCartFull:
         subtotal_summary = page.check_subtotal_in_summary()
         assert subtotal_item == subtotal_summary, "The subtotals aren't the same"
 
+    @allure.title("tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.")
+    def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):
+        """Verify subtotal for items: subtotal = price * qty and displayed correctly."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        subtotal = page.check_subtotal_of_item_price_multiply_qty()
+        subtotal_by_page = page.get_subtotal_of_item()
+        assert subtotal == subtotal_by_page, 'Wrong count Subtotal for items'
+
+
