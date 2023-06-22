@@ -104,5 +104,14 @@ class ShoppingCartPage(BasePage):
         subtotal = price * qty
         return subtotal
 
+    @allure.step("Check 'Proceed to checkout' button redirects to the shipping page")
+    def check_checkout_button_redirects_to_shipping_page(self):
+        """This method checks that 'Proceed to checkout' button redirects to the shipping page"""
+        button = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
+        button.click()
+        current_url = self.driver.current_url
+        return current_url
+
+
 
 
