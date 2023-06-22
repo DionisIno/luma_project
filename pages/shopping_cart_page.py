@@ -109,6 +109,7 @@ class ShoppingCartPage(BasePage):
         """This method checks that 'Proceed to checkout' button redirects to the shipping page"""
         button = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
         button.click()
+        time.sleep(3)
         current_url = self.driver.current_url
         return current_url
 
