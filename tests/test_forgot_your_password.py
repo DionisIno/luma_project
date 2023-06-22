@@ -5,6 +5,8 @@ from locators.forgot_your_password_locators import ForgotYourPasswordPageLocator
 from pages.forgot_your_password_page import ForgotYourPasswordPage
 from data.forgot_your_password_data import forgot_your_password_data
 from data.data_urls import FORGOT_YOUR_PASSWORD_URL
+from data.credentials import credentials
+
 
 @pytest.fixture(scope="function")
 def forgot_psw_page(driver):
@@ -49,3 +51,19 @@ class TestForgotYourPassword:
         asterisk = forgot_psw_page.check_forgot_psw_email_asterisk()
         assert asterisk is not None and label.text == forgot_your_password_data["email_label"], \
             "Email label or asterisk is not present for Email field"
+
+    @allure.title('TC 17.01.06 Verify FYP Email field highlighting on click')
+    def test_17_01_07_email_field_gets_highlighted_when_clicked(self, driver, forgot_psw_page):
+        """
+        Check the Email field is activated with a cursor and gets highlighted when clicked
+        """
+        initial_box_shadow, active_box_shadow = forgot_psw_page.activate_forgot_psw_email_field_and_check_style()
+        assert active_box_shadow != initial_box_shadow, \
+            "Error: Email field style doesn't change on activation"
+
+    @allure.title('TC 17.01.07 Verify displayed email matches the entered email in FYP Email field')
+    def test_17_01_07_value_in_email_matches(self, driver, forgot_psw_page):
+        """Check if the displayed email matches the entered email in Email field"""
+        forgot_psw_page.fill_in_forgot_psw_email_field(credentials['email'])
+        displayed_email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')
+        assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"

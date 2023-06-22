@@ -41,17 +41,6 @@ class SignInPage(BasePage):
         """This method verifies if Email field is clickable"""
         return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)
 
-    @allure.step('Activate the field and get the styles before and after activation')
-    def activate_field_and_check_style(self, locator):
-        """
-        This method activates the field and checks if the style of the field changes upon activation.
-        It returns the styles before and after activation for comparison.
-        """
-        initial_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
-        self.click_and_return_element(locator)
-        active_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
-        return initial_box_shadow, active_box_shadow
-
     @allure.step('Activate Email field and check style')
     def activate_email_field_and_check_style(self):
         """
@@ -63,16 +52,11 @@ class SignInPage(BasePage):
     @allure.step('Fill in Email field')
     def fill_in_email_field(self, email):
         """This method fills in Email field with provided email"""
-        email_input = self.check_customer_email_field_is_clickable()
-        email_input.click()
-        email_input.clear()
-        email_input.send_keys(email)
-        return email_input
+        self.fill_in_field(self.check_customer_email_field_is_clickable(), email)
 
     @allure.step('Get Email field attribute')
     def get_email_field_attribute(self, attribute):
-        """This method fills in Email field with provided email"""
-        # email_input = self.check_customer_email_field_is_clickable()
+        """This method gets the entered value from Email field"""
         return self.check_customer_email_field_is_clickable().get_attribute(attribute)
 
     @allure.step('Check Password field is clickable')
@@ -102,11 +86,7 @@ class SignInPage(BasePage):
 
     @allure.step('Fill in Password field')
     def fill_in_password_field(self, password):
-        """This method fills in Password field with provided password"""
-        password_input = self.check_customer_password_field_is_clickable()
-        password_input.click()
-        password_input.send_keys(password)
-        return password_input
+        return self.fill_in_field(self.check_customer_password_field_is_clickable(), password)
 
     @allure.step('Check Password field is clickable')
     def check_password_value_masking(self, password):

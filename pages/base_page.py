@@ -300,3 +300,23 @@ class BasePage:
         actions = ActionChains(self.driver)
         actions.move_to_element_with_offset(element, 95, 0)
         actions.click().perform()
+
+    @allure.step('Activate the field and get the styles before and after activation')
+    def activate_field_and_check_style(self, locator):
+        """
+        This method activates the field and checks if the style of the field changes upon activation.
+        It returns the styles before and after activation for comparison.
+        """
+        initial_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
+        self.click_and_return_element(locator)
+        active_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
+        return initial_box_shadow, active_box_shadow
+
+    @allure.step('Fill in a field')
+    def fill_in_field(self, locator, value):
+        """This method fills in a specified field with provided value"""
+        input_field = self.element_is_clickable(locator)
+        input_field.click()
+        input_field.clear()
+        input_field.send_keys(value)
+        return input_field
