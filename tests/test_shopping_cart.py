@@ -97,5 +97,12 @@ class TestShoppingCartFull:
         checkout_button = page.check_checkout_button_is_clickable
         assert checkout_button is not None, 'The "Proceed to checkout" button is not actual'
 
+    @allure.title("tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.")
+    def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):
+        """Verify subtotal for items: subtotal = price * qty and displayed correctly."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        subtotal = page.check_subtotal_of_item_price_multiply_qty()
+        subtotal_by_page = page.get_subtotal_of_item()
+        assert subtotal == subtotal_by_page, 'Wrong count Subtotal for items'
 
 
