@@ -105,4 +105,18 @@ class TestShoppingCartFull:
         subtotal_by_page = page.get_subtotal_of_item()
         assert subtotal == subtotal_by_page, 'Wrong count Subtotal for items'
 
+    @allure.title("tc 07.02.22 Verify subtotal in Summury Card: subtotal = price * qty and displayed correctly.")
+    def test_tc_07_02_22_verify_subtotal_displayed_correctly_in_summary_card(self, driver, full_cart_page):
+        """Verify subtotal in summary: subtotal = price * qty and displayed correctly."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        subtotal = page.check_subtotal_of_item_price_multiply_qty()
+        subtotal_by_page = page.get_subtotal_in_summary()
+        assert subtotal == subtotal_by_page, 'Wrong count Subtotal in summary'
 
+    @allure.title("tc 07.02.23 Verify Order Total in Summury displayed correctly.")
+    def test_tc_07_02_23_verify_order_total_displayed_correctly_in_summary_card(self, driver, full_cart_page):
+        """Verify Order Total in Summary: Order Total = Subtotal - Discount + Tax and displayed correctly."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        order_total = page.check_order_total()
+        order_total_by_page = page.get_order_total_in_summary()
+        assert order_total == order_total_by_page, 'Wrong count Order Total in summary'
