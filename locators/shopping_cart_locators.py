@@ -16,6 +16,7 @@ class ShoppingCartPageLocators:
     PRICE_ITEM = (By.CSS_SELECTOR, '#shopping-cart-table > tbody > tr.item-info > td.col.price > span > span > span')
     SUBTOTAL_ITEM = (By.CSS_SELECTOR, "td.col.subtotal span.price")
     SUBTOTAL_SUMMARY = (By.CSS_SELECTOR, 'td.amount span[data-th="Subtotal"]')
+    CHECKOUT_BUTTON = (By.CSS_SELECTOR, "button.action.primary.checkout span")
 
 
 

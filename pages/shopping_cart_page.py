@@ -1,5 +1,4 @@
 import time
-
 import allure
 from pages.base_page import BasePage
 from locators.shopping_cart_locators import ShoppingCartPageLocators
@@ -63,6 +62,12 @@ class ShoppingCartPage(BasePage):
         """This method checks that subtotal in the summary cart is displayed correctly"""
         subtotal_sum = self.element_is_visible(self.shopping_locators.SUBTOTAL_SUMMARY)
         return subtotal_sum.text
+
+    @allure.step("Check 'Proceed to checkout' button is clickable")
+    def check_checkout_button_is_clickable(self):
+        """This method checks that here link in the displayed text is clickable"""
+        checkout = self.element_is_clickable(self.shopping_locators.CHECKOUT_BUTTON)
+        return checkout
 
     @allure.step("Get a random number between 1 and 10")
     def random_qty(self):
