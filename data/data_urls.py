@@ -40,6 +40,8 @@ FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitn
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
 FORGOT_YOUR_PASSWORD_URL = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
 ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
+SHIPPING_PAGE = "https://magento.softwaretestingboard.com/checkout/#shipping"
+
 
 
 
