@@ -258,11 +258,17 @@ class PromoBlock(BasePage):
         info_block_title = element.text
         return info_block_title
 
+    @allure.step("Check the section 1 display in the Promo Block")
+    def check_section1_display(self):
+        """Checks section 1 display"""
+        section1 = self.element_is_visible(self.locators.SECTION_1)
+        return section1
+
     @allure.step("Check the section 2 display in the Promo Block")
     def check_section2_display(self):
         """Checks section 2 display"""
         section2 = self.element_is_visible(self.locators.SECTION_2)
-        return section2.is_displayed()
+        return section2
 
     @allure.step("Check the section 2 block 1 'home-pants' display in the Promo Block")
     def check_section2_block1_display(self):
