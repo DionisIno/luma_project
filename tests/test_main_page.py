@@ -532,6 +532,14 @@ class TestMainPage:
             assert block5_section2 is not None, "The block 5 'home-eco' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
+        @allure.title("TC 13.01.49 - Check if section 1 is clickable in the Promo Block")
+        def test_tc_13_01_49_check_section1_clickability(self, driver):
+            """This test checks if section 1 in Promo Block under header is clickable on the main page"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section1 = page.check_section1_clickability()
+            assert section1, "The Section 1 in Promo Blck is not clickable"
+
         @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
         def test_tc_13_02_01_check_section1_link(self, driver):
             """Check that link in section 1 is correct"""
