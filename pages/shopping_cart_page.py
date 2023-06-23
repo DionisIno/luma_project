@@ -3,6 +3,7 @@ import allure
 from pages.base_page import BasePage
 from locators.shopping_cart_locators import ShoppingCartPageLocators
 import random
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 
 class ShoppingCartPage(BasePage):
@@ -113,6 +114,61 @@ class ShoppingCartPage(BasePage):
         current_url = self.driver.current_url
         return current_url
 
+
+    @allure.step("Get Subtotal in the Summary Card")
+    def get_subtotal_in_summary(self):
+        """This method gets Subtotal in the Summary Card"""
+        subtotal = self.element_is_visible(self.shopping_locators.SUBTOTAL_SUMMARY)
+        subtotal_summary_num = subtotal.text[1:]
+        return float(subtotal_summary_num)
+
+    @allure.step("Get Discount in the Summary Card")
+    def get_discount_in_summary(self):
+        """This method gets Discount in the Summary Card"""
+        discount = self.element_is_visible(self.shopping_locators.DISCOUNT_SUMMARY)
+        discount_summary_num = discount.text[2:]
+        return float(discount_summary_num)
+
+    @allure.step("Get Tax in the Summary Card")
+    def get_tax_in_summary(self):
+        """This method gets Tax in the Summary Card"""
+        tax = self.element_is_visible(self.shopping_locators.TAX_SUMMARY)
+        tax_summary_num = tax.text[1:]
+        return float(tax_summary_num)
+
+    @allure.step("Get Order Total in the Summary Card")
+    def get_order_total_in_summary(self):
+        """This method gets Order Total in the Summary Card"""
+        order_total = self.element_is_visible(self.shopping_locators.ORDER_TOTAL)
+        order_total_num = order_total.text[1:]
+        return float(order_total_num)
+
+    @allure.step("Check Order Total in the Summary Card")
+    def check_order_total(self):
+        """Check Order Total = Subtotal - Discount + Tax"""
+        input_field = self.element_is_clickable(self.shopping_locators.QUANTITY_FIELD)
+        input_field.click()
+        input_field.clear()
+        qty = self.random_qty()
+        input_field.send_keys(qty)
+        update_button = self.element_is_clickable(self.shopping_locators.UPDATE_BUTTON)
+        update_button.click()
+        time.sleep(2)
+        subtotal = self.get_subtotal_in_summary()
+        try:
+            discount = self.get_discount_in_summary()
+        except NoSuchElementException:
+            discount = 0
+        except TimeoutException:
+            discount = 0
+        try:
+            tax = self.get_tax_in_summary()
+        except NoSuchElementException:
+            tax = 0
+        except TimeoutException:
+            tax = 0
+        order_total = subtotal - discount + tax
+        return order_total
 
 
 

@@ -16,6 +16,9 @@ class ShoppingCartPageLocators:
     PRICE_ITEM = (By.CSS_SELECTOR, '#shopping-cart-table > tbody > tr.item-info > td.col.price > span > span > span')
     SUBTOTAL_ITEM = (By.CSS_SELECTOR, "td.col.subtotal span.price")
     SUBTOTAL_SUMMARY = (By.CSS_SELECTOR, 'td.amount span[data-th="Subtotal"]')
+    DISCOUNT_SUMMARY = (By.CSS_SELECTOR, 'tbody > tr:nth-child(2) > td > span > span')
+    TAX_SUMMARY = (By.CSS_SELECTOR, '#cart-totals > div > table > tbody > tr.totals-tax > td > span')
+    ORDER_TOTAL = (By.CSS_SELECTOR, '.grand.totals > td > strong > span')
     CHECKOUT_BUTTON = (By.CSS_SELECTOR, "button.action.primary.checkout span")
 
 
