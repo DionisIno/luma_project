@@ -470,6 +470,12 @@ class PromoBlock(BasePage):
         info_block_sign = element.text
         return info_block_sign
 
+    @allure.step("Check the section 1 clickability in the Promo Block")
+    def check_section1_clickability(self):
+        """Checks section 1 clickability"""
+        section1 = self.element_is_clickable(self.locators.SECTION_1)
+        return section1
+
     @allure.step("Check the link in section 1 in the Promo Block leads to the correct page")
     def check_section1_link(self):
         """Checks the link in section 1 leads to the correct page"""
