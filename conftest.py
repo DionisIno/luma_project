@@ -1,5 +1,7 @@
 import json
 import os
+import shutil
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -22,7 +24,7 @@ def driver():
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         driver.set_window_size(1900, 1000)
     else:
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         driver.maximize_window()
     yield driver
     print('\nquit browser...')
@@ -49,3 +51,15 @@ def sing_in(driver, config):
     password.send_keys(config["password"])
     button = wait(driver, config["timeout"]).until(EC.element_to_be_clickable(sil.SIGN_IN_BUTTON))
     button.click()
+
+@pytest.fixture(scope="session", autouse=True)
+def clear_allure_result_folder():
+    allure_result_folder = "allure_result"
+    if not os.path.exists(allure_result_folder):
+        os.makedirs(allure_result_folder)
+    else:
+        for file_name in os.listdir(allure_result_folder):
+            file_path = os.path.join(allure_result_folder, file_name)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+    yield
