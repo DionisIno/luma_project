@@ -47,3 +47,6 @@ Please note that the data and content on this test instance are not real and are
 - Create a virtual environment.
 - Run command **pip install -r requirements.txt**
 - After, execute **pytest -s -v** to run tests.
+
+
+[![Allure-report](https://img.shields.io/badge/Allure%20Report-deployed-green)](https://dionisino.github.io/luma_project/)
