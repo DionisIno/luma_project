@@ -41,3 +41,9 @@ jobs:
       run: |
         DISPLAY=:99 pytest -s -v
       continue-on-error: true
+
+    - name: Copy Allure Reports to gh-pages branch
+      run: |
+        mkdir gh-pages
+        cp -R allure_report/* gh-pages/
+      continue-on-error: true
