@@ -476,6 +476,36 @@ class PromoBlock(BasePage):
         section1 = self.element_is_clickable(self.locators.SECTION_1)
         return section1
 
+    @allure.step("Check clickability of the block 1 'home-pants' in the section 2 in the Promo Block")
+    def check_section2_block1_clickability(self):
+        """Checks section 2 block 1 'home-pants' clickability"""
+        section2_block1 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_1)
+        return section2_block1
+
+    @allure.step("Check clickability of the block 2 'home-t-shirts' in the section 2 in the Promo Block")
+    def check_section2_block2_clickability(self):
+        """Checks section 2 block 2 'home-t-shirts' clickability"""
+        section2_block2 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_2)
+        return section2_block2
+
+    @allure.step("Check clickability of the block 3 'home-erin' in the section 2 in the Promo Block")
+    def check_section2_block3_clickability(self):
+        """Checks section 2 block 3 'home-erin' clickability"""
+        section2_block3 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_3)
+        return section2_block3
+
+    @allure.step("Check clickability of the block 4 'home-performance' in the section 2 in the Promo Block")
+    def check_section2_block4_clickability(self):
+        """Checks section 2 block 4 'home-performance' clickability"""
+        section2_block4 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_4)
+        return section2_block4
+
+    @allure.step("Check clickability of the block 5 'home-eco' in the section 2 in the Promo Block")
+    def check_section2_block5_clickability(self):
+        """Checks section 2 block 5 'home-eco' clickability"""
+        section2_block5 = self.element_is_clickable(self.locators.SECTION_2_BLOCK_5)
+        return section2_block5
+
     @allure.step("Check the link in section 1 in the Promo Block leads to the correct page")
     def check_section1_link(self):
         """Checks the link in section 1 leads to the correct page"""
