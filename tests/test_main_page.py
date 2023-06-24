@@ -532,13 +532,58 @@ class TestMainPage:
             assert block5_section2 is not None, "The block 5 'home-eco' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.49 - Check if section 1 is clickable in the Promo Block")
+        @allure.title("TC 13.01.49 - Check if section 1 is clickable in the Promo Block on the main page")
         def test_tc_13_01_49_check_section1_clickability(self, driver):
-            """This test checks if section 1 in Promo Block under header is clickable on the main page"""
+            """This test checks if section 1 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section1 = page.check_section1_clickability()
             assert section1, "The Section 1 in Promo Blck is not clickable"
+
+        @allure.title("TC 13.01.50 - Check if block 1 'home-pants' in section 2 is clickable"
+                      "in the Promo Block on the main page")
+        def test_tc_13_01_50_check_section2_block1_clickability(self, driver):
+            """This test checks if block 1 'home-pants' in section 2 in Promo Block under header is clickable"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2_block1 = page.check_section2_block1_clickability()
+            assert section2_block1, "The block 1 'home-pants' in the Section 2 in the Promo Blck is not clickable"
+
+        @allure.title("TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickable"
+                      "in the Promo Block on the main page")
+        def test_tc_13_01_51_check_section2_block2_clickability(self, driver):
+            """This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2_block2 = page.check_section2_block2_clickability()
+            assert section2_block2, "The block 2 'home-t-shirts' in the Section 2 in the Promo Blck is not clickable"
+
+        @allure.title("TC 13.01.52 - Check if block 3 'home-erin' in section 2 is clickable"
+                      "in the Promo Block on the main page")
+        def test_tc_13_01_52_check_section2_block3_clickability(self, driver):
+            """This test checks if block 3 'home-erin' in section 2 in Promo Block under header is clickable"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2_block3 = page.check_section2_block3_clickability()
+            assert section2_block3, "The block 3 'home-erin' in the Section 2 in the Promo Blck is not clickable"
+
+        @allure.title("TC 13.01.53 - Check if block 4 'home-performance' in section 2 is clickable"
+                      "in the Promo Block on the main page")
+        def test_tc_13_01_53_check_section2_block4_clickability(self, driver):
+            """This test checks if block 4 'home-performance' in section 2 in Promo Block under header is clickable"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2_block4 = page.check_section2_block4_clickability()
+            assert section2_block4, "The block 4 'home-performance' in the Section 2 in the Promo Blck is not clickable"
+
+        @allure.title("TC 13.01.54 - Check if block 5 'home-eco' in section 2 is clickable"
+                      "in the Promo Block on the main page")
+        def test_tc_13_01_54_check_section2_block5_clickability(self, driver):
+            """This test checks if block 5 'home-eco' in section 2 in Promo Block under header is clickable"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section2_block5 = page.check_section2_block5_clickability()
+            assert section2_block5, "The block 5 'home-eco' in the Section 2 in the Promo Blck is not clickable"
 
         @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
         def test_tc_13_02_01_check_section1_link(self, driver):
