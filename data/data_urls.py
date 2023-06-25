@@ -43,8 +43,6 @@ ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
 SHIPPING_PAGE = "https://magento.softwaretestingboard.com/checkout/#shipping"
 
 
-
-
 # Links in the Promo Block on the Main Page
 class PromoBlockLinks:
     YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"

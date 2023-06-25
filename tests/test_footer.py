@@ -1,28 +1,38 @@
+"""This section contains footer tests"""
+import allure
 import pytest
 from selenium.webdriver.common.by import By
 from data.data_urls import MAIN_PAGE_URL, DATA_1
 from pages.footer_page import FooterPage
-from locators.footer_page_locators import FooterPageLocators
 
 
+@allure.epic("Test Footer")
 class TestFooter:
 
+    @allure.title("TC 02.01.01 - Check Footer is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_01_05_verify_the_search_terms_link_is_visible_on_each_page_specified_in_data(self, driver, URL):
-        """Check search terms link is displayed on each page in DATA_1"""
+    def test_tc_02_01_01_check_footer_is_present_on_each_page_specified_in_data(self, driver, URL):
+        """Check if the footer is present in the DOM tree on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        search_terms_link = page.check_search_terms_link_is_visible()
-        assert search_terms_link is True, "The element is not visible"
+        footer_section = page.check_footer_is_present()
+        assert footer_section, "Footer is not present in the DOM tree"
 
-
-class TestFooterSuits:
-
-    @pytest.mark.parametrize('element', FooterPageLocators.DATA_2)
+    @allure.title("TC 02.01.02 - Check Footer display on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_01_01_uniform_footer_elements_display_on_each_page_specified_in_data(self, driver, URL, element):
-        """Check search footer elements in DATA_2 are displayed on each page in DATA_1"""
+    def test_tc_02_01_02_check_footer_visibility_on_each_page_specified_in_data(self, driver, URL):
+        """Check if Footer is visible on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        search_terms_link = page.check_search_terms_link_is_visible()
-        assert search_terms_link is True, "The element is not visible"
+        footer_section = page.check_footer_is_visible()
+        assert footer_section, "Footer is not visible"
+
+    @allure.title("TC 02.01.05 - Check display of Search Terms link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_05_check_the_search_terms_link_visibility_on_each_page_specified_in_data(self, driver, URL):
+        """Check search terms link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_search_terms_link_is_visible()
+        search_terms_link_text = link.text
+        assert search_terms_link_text == "Search Terms", "The link is not visible or correct"
