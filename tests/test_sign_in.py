@@ -1,10 +1,13 @@
+import time
+
 import pytest
 import allure
 
 from locators.sign_in_page_locators import SingInPageLocators
 from pages.sign_in_page import SignInPage
 from data.sign_in_data import sign_in_data, LOGIN, sign_in_errors
-from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN
+from data.data_urls import SIGN_IN_URL, URL_AFTER_LOGIN, URL_AFTER_SUCCESS_LOGIN, FORGOT_YOUR_PASSWORD_URL, \
+    CREATE_ACCOUNT_PAGE_URL
 from data.credentials import credentials
 
 
@@ -34,8 +37,8 @@ class TestRegisteredCustomers:
     @allure.title('TC 03.01.03 Verify Registered Customers note')
     def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
         """Check Registered Customers note is present """
-        h1_heading = sign_in_page.check_registered_customers_note()
-        assert h1_heading is not None and h1_heading.text == sign_in_data["customer_login_note"], \
+        note = sign_in_page.check_registered_customers_note()
+        assert note is not None and note.text == sign_in_data["customer_login_note"], \
             "Registered Customers note is incorrect or not present"
 
     @allure.title('TC 03.01.04 Verify Email field is present')
@@ -45,8 +48,8 @@ class TestRegisteredCustomers:
         assert email_input.is_displayed(), "Email input field is not displayed"
 
     @allure.title('TC 03.01.05 Verify Email field is correct format and clickable')
-    def test_03_01_04_email_field_is_correct_format(self, driver, sign_in_page):
-        """Check if the password input field is present"""
+    def test_03_01_05_email_field_is_correct_format_and_clickable(self, driver, sign_in_page):
+        """Check if the Email input is of correct format (input-text) and clickable"""
         email_input = sign_in_page.check_customer_email_field_is_clickable()
         assert "input-text" in email_input.get_attribute("class") \
                and email_input.is_enabled(), \
@@ -64,7 +67,6 @@ class TestRegisteredCustomers:
     def test_03_01_07_email_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
         """
         Check the Email field is activated with a cursor and gets highlighted when clicked
-        and change color back when focus is removed from the Email field (by clicking another element)
         """
         initial_box_shadow, active_box_shadow = sign_in_page.activate_email_field_and_check_style()
         assert active_box_shadow != initial_box_shadow, \
@@ -83,6 +85,31 @@ class TestRegisteredCustomers:
         password_input = sign_in_page.check_customer_password_field_is_clickable()
         assert password_input.is_displayed(), "Password input field is not displayed"
 
+    @allure.title('TC 03.01.10 Verify Password field is correct format and clickable')
+    def test_03_01_10_password_field_is_correct_format_and_clickable(self, driver, sign_in_page):
+        """Check if the password input field is of correct format (input-text) and clickable"""
+        password_input = sign_in_page.check_customer_password_field_is_clickable()
+        assert "input-text" in password_input.get_attribute("class") \
+               and password_input.is_enabled(), \
+            "Password input field does not accept text or is not clickable"
+
+    @allure.title('TC 03.01.11 Verify Password field is appropriately labeled')
+    def test_03_01_11_password_is_appropriately_labeled(self, driver, sign_in_page):
+        """Check if Password field is appropriately labeled """
+        label = sign_in_page.check_customer_password_label()
+        asterisk = sign_in_page.check_customer_password_asterisk()
+        assert asterisk is not None and label.text == sign_in_data["password_label"], \
+            "Password label or asterisk is not present for Password field"
+
+    @allure.title('TC 03.01.12 Verify Password field highlighting on click')
+    def test_03_01_12_password_field_gets_highlighted_when_clicked(self, driver, sign_in_page):
+        """
+        Check the Password field is activated with a cursor and gets highlighted when clicked
+        """
+        initial_psw_box_shadow, active_psw_box_shadow = sign_in_page.activate_password_field_and_check_style()
+        assert active_psw_box_shadow != initial_psw_box_shadow, \
+            "Error: Password field style doesn't change on activation"
+
     @allure.title('TC 03.01.13 Verify Password is masked')
     def test_03_01_13_password_masking(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
@@ -95,6 +122,29 @@ class TestRegisteredCustomers:
         assert button is not None and button.text == sign_in_data['sign_in_btn'], \
             f'''The {sign_in_data['sign_in_btn']} is not visible'''
 
+    @allure.title('TC 03.01.15 Verify Sign in button is clickable')
+    def test_03_01_15_sign_in_button_is_clickable(self, driver, sign_in_page):
+        """Check if Sign In button is clickable"""
+        sign_in_button = sign_in_page.check_sign_in_button_is_clickable()
+        assert sign_in_button is not None, "Sign In button element not found"
+
+    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that the 'Forgot your password?' link is present"""
+        element = sign_in_page.check_forgot_your_password_link()
+        element_href = element.get_attribute("href")
+        assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD_URL, "Forgot Your Password link is not present"
+
+    @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
+    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+        """Verify that click 'Forgot your password?' link opens correct page"""
+        sign_in_page.click_forgot_your_password_link()
+        header = sign_in_page.check_h1_header()
+        assert driver.current_url == FORGOT_YOUR_PASSWORD_URL \
+               and header is not None and header.text == "Forgot Your Password?", \
+            "Verify Forgot Your Password link is incorrect or not redirect to correct page"
+
+    @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
         """Check if the entered value is masked in password field"""
         sign_in_page.fill_in_email_field(credentials['incorrect_email'])
@@ -104,12 +154,6 @@ class TestRegisteredCustomers:
             error_message = sign_in_page.get_error_message(SingInPageLocators.EMAIL_ERROR)
             assert error_message == sign_in_errors['incorrect_email_format_msg'], \
                 "The error message is incorrect or missing"
-
-    @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
-    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
-        """Verify that the 'Forgot your password?' link is present"""
-        element = sign_in_page.check_forgot_your_password_link()
-        assert element.is_displayed()
 
 
 @allure.feature('New Customers')
@@ -128,6 +172,29 @@ class TestNewCustomers:
         assert note is not None and note.text == sign_in_data["new_customers_note"], \
             "Note is incorrect or not present under New Customers"
 
+    @allure.title('TC 03.01.21 Verify presence of Create an Account button ')
+    def test_03_01_21_create_an_account_button_is_present(self, driver, sign_in_page):
+        """Check if 'Create an Account' button is present"""
+        button = sign_in_page.check_create_an_account_button()
+        assert button.is_displayed() and button.text == sign_in_data["create_account_btn"], \
+            f"{sign_in_data['create_account_btn']} is not visible"
+
+    @allure.title('TC 03.01.22 Verify Create an Account button link')
+    def test_03_01_22_create_an_account_button_link(self, driver, sign_in_page):
+        """Check if 'Create an Account' button has correct link and is clickable"""
+        button = sign_in_page.check_create_an_account_button()
+        button_href = button.get_attribute("href")
+        assert button.is_enabled() and button_href == CREATE_ACCOUNT_PAGE_URL, \
+            f"{sign_in_data['create_account_btn']} doesn't have link ot is not clickable"
+
+    @allure.title('TC 03.01.23 Verify Create an Account button is functional')
+    def test_03_01_23_create_an_account_button_(self, driver, sign_in_page):
+        """Check if 'Create an Account' button link opens correct page"""
+        sign_in_page.click_create_an_account_button()
+        header = sign_in_page.check_h1_header()
+        assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \
+               and header is not None and header.text == "Create New Customer Account", \
+               "Verify Create an Account button is incorrect or not redirect to correct page"
 
 @allure.feature('Login Functionality')
 class TestLogin:

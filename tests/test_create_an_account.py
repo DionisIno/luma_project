@@ -14,7 +14,6 @@ def create_account_page(driver):
 
 
 @allure.epic('Create An Account')
-@allure.feature('Personal Information')
 class TestCreateAnAccount:
     @allure.title('TC 04_01_01 Verify Create An Account Page h1 Header')
     def test_04_01_01_h1_heading(self, create_account_page):
@@ -84,3 +83,46 @@ class TestCreateAnAccount:
         assert sign_up_checkbox.text == "Sign Up for Newsletter" \
             and flag_checkbox is False, \
             "Sign Up for Newsletter checkbox is not presented or not unchecked"
+
+    @allure.title('test 04.02.08 create an account with registered email')
+    def test_tc_04_02_08_create_account_with_registered_email(self, driver):
+        """ Verify that customer can't Create An Account with registered email before """
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_email()
+        assert message == 'There is already an account with this email address. If you are sure that it is your' \
+                          ' email address, click here to get your password and access your account.', "No error message"
+
+    @allure.title('test 04.02.01 create an account with correct data')
+    @pytest.mark.skip(reason="customer will Create An Account with correct data")
+    def test_tc_04_02_01_create_account_with_correct_data(self, driver):
+        """ Verify that customer can Create An Account with correct data"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_correct_data()
+        assert message == 'Thank you for registering with Main Website Store.', "No success message"
+
+    @allure.title('test 04.02.02 create an account with empty first name')
+    def test_tc_04_02_02_create_account_with_empty_first_name(self, driver):
+        """ Verify that customer can't Create An Account with empty first name"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_first_name()
+        assert message == 'This is a required field.', "No message"
+
+    @allure.title('test 04.02.03 create an account with empty last name')
+    def test_tc_04_02_03_create_account_with_empty_last_name(self, driver):
+        """ Verify that customer can't Create An Account with empty last name"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_last_name()
+        assert message == 'This is a required field.', "No message"
+
+    @allure.title('test 04.02.04 create an account with empty e-mail')
+    def test_tc_04_02_04_create_account_with_empty_email(self, driver):
+        """ Verify that customer can't Create An Account with empty e-mail"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_email()
+        assert message == 'This is a required field.', "No message"
+

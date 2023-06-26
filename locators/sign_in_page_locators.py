@@ -13,7 +13,7 @@ class SingInPageLocators:
     CUSTOMER_EMAIL_ASTERISK = (By.CSS_SELECTOR, "+ span.required")
     CUSTOMER_PASSWORD_LABEL = (By.CSS_SELECTOR, "label[for ='pass'] span")
     CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
-    SIGN_IN_BUTTON = (By.ID, 'send2')
+    SIGN_IN_BUTTON = (By.XPATH, '//button[@id="send2"]')
     FORGOT_PASSWORD = (By.XPATH, '//*[@id="login-form"]/fieldset/div[4]/div[2]/a/span')
     EMAIL_ERROR = (By.CSS_SELECTOR, "#email-error")
     PASSWORD_ERROR = By.XPATH, "//div[@id='pass-error']"
@@ -23,3 +23,4 @@ class SingInPageLocators:
     # SignIn form > New Customers
     NEW_CUSTOMERS_HEADER = (By.CSS_SELECTOR, "#block-new-customer-heading")
     NEW_CUSTOMERS_NOTE = (By.CSS_SELECTOR, ".block-new-customer > div.block-content > p")
+    CREATE_ACCOUNT_BUTTON = (By.CSS_SELECTOR, ".action.create.primary")

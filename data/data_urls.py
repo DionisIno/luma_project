@@ -5,22 +5,54 @@ SALE_PAGE_URL = "https://magento.softwaretestingboard.com/sale.html"
 GEAR_PAGE_URL = "https://magento.softwaretestingboard.com/gear.html"
 SHOPPING_CART_PAGE = "https://magento.softwaretestingboard.com/checkout/cart/"
 MY_ACCOUNT_URL = MAIN_PAGE_URL + 'customer/account/'
+MY_WISHLIST_URL = "https://magento.softwaretestingboard.com/wishlist/"
+SIGN_OUT_URL = "https://magento.softwaretestingboard.com/customer/account/logoutSuccess/"
 URL_AFTER_LOGIN = MAIN_PAGE_URL + \
-                   'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+                  'customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 URL_AFTER_SUCCESS_LOGIN = MAIN_PAGE_URL + \
-                   'customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
+                          'customer/account/loginPost/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/'
 WOMEN_PAGE_URL = 'https://magento.softwaretestingboard.com/women.html'
+WOMEN_TOPS_URL = 'https://magento.softwaretestingboard.com/women/tops-women.html'
+WOMEN_JACKETS_URL = 'https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html'
+WOMEN_HOODIES_URL = 'https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html'
+WOMEN_TEES_URL = 'https://magento.softwaretestingboard.com/women/tops-women/tees-women.html'
+WOMEN_BRAS_TANKS_URL = 'https://magento.softwaretestingboard.com/women/tops-women/tanks-women.html'
+WOMEN_BOTTOMS_URL = 'https://magento.softwaretestingboard.com/women/bottoms-women.html'
+WOMEN_BOTTOMS_PANTS_URL = 'https://magento.softwaretestingboard.com/women/bottoms-women/pants-women.html'
+WOMEN_BOTTOMS_SHORTS_URL = 'https://magento.softwaretestingboard.com/women/bottoms-women/shorts-women.html'
 TRAINING_PAGE_URL = "https://magento.softwaretestingboard.com/training.html"
 VIDEO_DOWNLOAD_PAGE_URL = "https://magento.softwaretestingboard.com/training/training-video.html"
 WHAT_IS_NEW_PAGE_URL = "https://magento.softwaretestingboard.com/what-is-new.html"
-MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
+REVIEWS_URL_DIRECT_ANCHOR_LINK = "https://magento.softwaretestingboard.com/meteor-workout-short.html#reviews"
+REVIEWS_URL_GENERAL = "https://magento.softwaretestingboard.com/meteor-workout-short.html"
 MEN_BOTTOMS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men.html"
 MEN_BOTTOMS_PANTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html"
+MEN_PAGE_URL = "https://magento.softwaretestingboard.com/men.html"
 MEN_BOTTOMS_SHORTS_URL = "https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html"
+MEN_TOPS_URL = "https://magento.softwaretestingboard.com/men/tops-men.html"
+MEN_JACKETS_URL = 'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'
+MEN_HOODIES_URL = 'https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html'
+MEN_TEES_URL = 'https://magento.softwaretestingboard.com/men/tops-men/tees-men.html'
+MEN_TANKS_URL = 'https://magento.softwaretestingboard.com/men/tops-men/tanks-men.html'
 ORDERS_AND_RETURNS_PAGE_URL = MAIN_PAGE_URL + "sales/guest/form/"
 BAGS_PAGE_URL = "https://magento.softwaretestingboard.com/gear/bags.html"
 FITNESS_EQUIPMENT_PAGE_URL = "https://magento.softwaretestingboard.com/gear/fitness-equipment.html"
 WATCHES_PAGE_URL = "https://magento.softwaretestingboard.com/gear/watches.html"
+FORGOT_YOUR_PASSWORD_URL = "https://magento.softwaretestingboard.com/customer/account/forgotpassword/"
+ITEM_CART_URL = "https://magento.softwaretestingboard.com/maya-tunic.html"
+SHIPPING_PAGE = "https://magento.softwaretestingboard.com/checkout/#shipping"
+
+
+# Links in the Promo Block on the Main Page
+class PromoBlockLinks:
+    YOGA_COLLECTION_URL = "https://magento.softwaretestingboard.com/collections/yoga-new.html"
+    PANTS_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/pants-all.html"
+    TEES_PROMO_URL = "https://magento.softwaretestingboard.com/promotions/tees-all.html"
+    ERIN_RECOMMENDS_PROMO_URL = "https://magento.softwaretestingboard.com/collections/erin-recommends.html"
+    PERFORMANCE_FABRICS_PROMO_URL = "https://magento.softwaretestingboard.com/collections/performance-fabrics.html"
+    ECO_FRIENDLY_PROMO_URL = "https://magento.softwaretestingboard.com/collections/eco-friendly.html"
+
+
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
@@ -54,10 +86,13 @@ DATA_1 = ["https://magento.softwaretestingboard.com/",
           # "https://magento.softwaretestingboard.com/catalogsearch/advanced/",
           # "https://magento.softwaretestingboard.com/sales/guest/form/",
           # "https://magento.softwaretestingboard.com/contact/"
-        ]
+          ]
 
 
 class ImageUrls:
     SECTION_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-main.jpg"
-    SECTION_2_BLOCK_1_IMAGE_URL = \
-        "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
+    SECTION_2_BLOCK_1_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-pants.jpg"
+    SECTION_2_BLOCK_2_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-t-shirts.png"
+    SECTION_2_BLOCK_3_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-erin.jpg"
+    SECTION_2_BLOCK_4_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-performance.jpg"
+    SECTION_2_BLOCK_5_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-eco.jpg"

@@ -29,11 +29,6 @@ class SignInPage(BasePage):
         """This method verifies if Email label is visible"""
         return self.element_is_visible(self.locators.CUSTOMER_EMAIL_LABEL)
 
-    @allure.step('Get required element visible')
-    def find_required_element(self):
-        """This method finds the required element, making it visible to the user."""
-        return "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"
-
     @allure.step('Check Email asterisk is visible')
     def check_customer_email_asterisk(self):
         """This method verifies if asterisk is displayed next to Email label"""
@@ -46,17 +41,6 @@ class SignInPage(BasePage):
         """This method verifies if Email field is clickable"""
         return self.element_is_clickable(self.locators.CUSTOMER_EMAIL)
 
-    @allure.step('Activate the field and get the styles before and after activation')
-    def activate_field_and_check_style(self, locator):
-        """
-        This method activates the field and checks if the style of the field changes upon activation.
-        It returns the styles before and after activation for comparison.
-        """
-        initial_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
-        self.click_and_return_element(locator)
-        active_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
-        return initial_box_shadow, active_box_shadow
-
     @allure.step('Activate Email field and check style')
     def activate_email_field_and_check_style(self):
         """
@@ -68,16 +52,11 @@ class SignInPage(BasePage):
     @allure.step('Fill in Email field')
     def fill_in_email_field(self, email):
         """This method fills in Email field with provided email"""
-        email_input = self.check_customer_email_field_is_clickable()
-        email_input.click()
-        email_input.clear()
-        email_input.send_keys(email)
-        return email_input
+        self.fill_in_field(self.check_customer_email_field_is_clickable(), email)
 
     @allure.step('Get Email field attribute')
     def get_email_field_attribute(self, attribute):
-        """This method fills in Email field with provided email"""
-        # email_input = self.check_customer_email_field_is_clickable()
+        """This method gets the entered value from Email field"""
         return self.check_customer_email_field_is_clickable().get_attribute(attribute)
 
     @allure.step('Check Password field is clickable')
@@ -85,12 +64,29 @@ class SignInPage(BasePage):
         """This method verifies if Password field is clickable"""
         return self.element_is_clickable(self.locators.CUSTOMER_PASSWORD)
 
+    @allure.step('Check Password label is visible')
+    def check_customer_password_label(self):
+        """This method verifies if Email label is visible"""
+        return self.element_is_visible(self.locators.CUSTOMER_PASSWORD_LABEL)
+
+    @allure.step('Check Password asterisk is visible')
+    def check_customer_password_asterisk(self):
+        """This method verifies if asterisk is displayed next to Email label"""
+        password_label = self.check_customer_password_label()
+        asterisk_script = self.find_required_element()
+        return self.driver.execute_script(asterisk_script, password_label)
+
+    @allure.step('Activate Password field and check style')
+    def activate_password_field_and_check_style(self):
+        """
+        This method activates the Password field
+        and checks if the style of the field changes upon activation.
+        """
+        return self.activate_field_and_check_style(self.locators.CUSTOMER_PASSWORD)
+
     @allure.step('Fill in Password field')
     def fill_in_password_field(self, password):
-        """This method fills in Password field with provided password"""
-        password_input = self.check_customer_password_field_is_clickable()
-        password_input.send_keys(password)
-        return password_input
+        return self.fill_in_field(self.check_customer_password_field_is_clickable(), password)
 
     @allure.step('Check Password field is clickable')
     def check_password_value_masking(self, password):
@@ -117,20 +113,31 @@ class SignInPage(BasePage):
         error = self.element_is_visible(locator)
         return error.text if error else None
 
-    @allure.step('Check Email field for correct email format')
+    @allure.step('Check Sign In button is visible')
     def check_sign_in_button_is_visible(self):
+        """This method verifies if sign-in button field is visible"""
+        return self.element_is_visible(self.locators.SIGN_IN_BUTTON)
+
+    @allure.step('Check Sign In button is clickable')
+    def check_sign_in_button_is_clickable(self):
         """This method verifies if sign-in button field is visible"""
         return self.element_is_clickable(self.locators.SIGN_IN_BUTTON)
 
-    @allure.step('Check Sign In button is visible')
+    @allure.step('Click on Sign In button')
     def click_sign_in_button(self):
         """This method clicks on sign-in button"""
-        self.check_sign_in_button_is_visible().click()
+        self.check_sign_in_button_is_clickable().click()
 
     @allure.step('Check Forgot Your Password_link')
     def check_forgot_your_password_link(self):
-        """This method finds 'Forgot your password? link"""
+        """This method finds 'Forgot your password?' link"""
         return self.element_is_visible(self.locators.FORGOT_PASSWORD)
+
+    @allure.step('Click Forgot Your Password_link')
+    def click_forgot_your_password_link(self):
+        """This method clicks 'Forgot your password?' link"""
+        forgot_your_password = self.check_forgot_your_password_link()
+        return forgot_your_password.click()
 
     @allure.step('Check New Customers heading is visible')
     def check_new_customers_heading(self):
@@ -141,3 +148,13 @@ class SignInPage(BasePage):
     def check_new_customers_note(self):
         """This method verifies if note is visible"""
         return self.element_is_visible(self.locators.NEW_CUSTOMERS_NOTE)
+
+    @allure.step('Check Create an Account button is visible')
+    def check_create_an_account_button(self):
+        """This method verifies if Create an Account button is visible"""
+        return self.element_is_visible(self.locators.CREATE_ACCOUNT_BUTTON)
+
+    @allure.step('Check Create an Account button is visible')
+    def click_create_an_account_button(self):
+        """This method verifies click on Create an Account button"""
+        return self.element_is_clickable(self.locators.CREATE_ACCOUNT_BUTTON).click()

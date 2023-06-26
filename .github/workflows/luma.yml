@@ -34,7 +34,28 @@ jobs:
       uses: tj-actions/changed-files@v23
       with:
           files: |
-            **/*.py
+            tests/*.py
+    - name: Start video recording
+      if: steps.changed-py-files.outputs.any_changed == 'true'
+      id: video-recording
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb ffmpeg
+        Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
+        sleep 1
+        ffmpeg -nostdin -f x11grab -framerate 30 -i :99.0 screen.mp4 >/dev/null 2>&1 &
+        echo "ffmpeg_pid=$!" >> "$GITHUB_OUTPUT"
     - name: Run Pytest on changed files
       if: steps.changed-py-files.outputs.any_changed == 'true'
-      run: pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+      run: |
+        DISPLAY=:99 pytest -s -v ${{ steps.changed-py-files.outputs.all_changed_files }}
+    - name: Stop video recording
+      if: always() && steps.changed-py-files.outputs.any_changed == 'true'
+      run: |
+        kill -s INT ${{ steps.video-recording.outputs.ffmpeg_pid }}
+        tail --pid=${{ steps.video-recording.outputs.ffmpeg_pid }} -f /dev/null
+    - uses: actions/upload-artifact@v2
+      if: always() && steps.changed-py-files.outputs.any_changed == 'true'
+      with:
+        name: recording
+        path: screen.mp4

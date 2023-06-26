@@ -1,11 +1,11 @@
 import time
-
 from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 from selenium.webdriver import ActionChains
 from locators.wish_list_locators import WishListPageLocators as wl
+from selenium.webdriver.common.by import By
 
 
 class BasePage:
@@ -19,7 +19,7 @@ class BasePage:
         self.driver.get(self.url)
 
     @allure.step('Find a visible element')
-    def element_is_visible(self, locator, timeout=5):
+    def element_is_visible(self, locator, timeout=10):
         """
         This method expects to verify that the element is present in the DOM tree, visible, and displayed on the page.
         Visibility means that the element is not only displayed but also has a height and width greater than 0.
@@ -157,3 +157,166 @@ class BasePage:
                     flag = False
         except StaleElementReferenceException:
             pass
+
+    @allure.step('Checking if 1 or more browser windows are open. If the 2nd is detected, then it returns to the 1st')
+    def switch_between_opened_windows(self):
+        """
+        Checking if 1 or more browser windows are open
+        If the 2nd is detected, then it returns to the 1st
+        """
+        try:
+            current_url = self.driver.current_url
+            print("Current URL (base_page try): ", current_url)
+            second_window = self.driver.window_handles[1]
+            if second_window:
+                first_window = self.driver.window_handles[0]
+                print('Window[0]: ', first_window)
+                self.driver.switch_to.window(first_window)
+                current_url = self.driver.current_url
+                print("Current URL (base_page try, if): ", current_url)
+
+        except:
+            print("There is only one window. The second window is not revealed. The presence of a third, not tested.")
+
+    @allure.step('Shows all opened windows')
+    def show_all_opened_windows(self):
+        """
+        Shows all opened windows
+        """
+        handles = self.driver.window_handles
+        size = len(handles)
+
+        if size == 1:
+            print('Additional windows not found. Only one active browser window found.')
+        else:
+            print('Number of detected windows: ', size)
+
+            for x in range(size):
+                self.driver.switch_to.window(handles[x])
+                print(self.driver.title)
+
+    @allure.step('Find element (unpacking)')
+    def find_element(self, locator):
+        """Find element (unpacking)"""
+        return self.driver.find_element(*locator)
+
+    @allure.step('Move cursor to element. Perform a click action without navigating to a new page')
+    def action_move_to_element_click_no_new_window(self, locator):
+        """
+        This method moves the mouse cursor to the center of the selected element.
+        Perform a click action without navigating to a new page
+        """
+        element = self.find_element(locator)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element).click().perform()
+
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 5 pixels')
+    def click_to_the_right_of_the_center_of_the_locator_by_5_pixels(self, locator, timeout=5):
+        """
+        Click not in the center of the selector, but in its right part,
+        to the right from the center by 5 pixels
+        """
+        element = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        actions = ActionChains(self.driver)
+        actions.move_to_element_with_offset(element, 5, 0)
+        actions.click().perform()
+
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, with a margin from the right edge of 5 pixels')
+    def count_the_number_of_elements_with_the_same_selectors(self, locator, timeout=5):
+        """
+        Count number of elements with same selectors
+        Can be used if there are fields to fill in and the field filling error has the same locator,
+        you can understand the number of incorrectly filled fields or not filled at all
+        """
+        elements = wait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
+        count = len(elements)
+        print("Number of elements with the same (or FAIL) locators: ", count)
+
+    def debug_headless_CI_in_GitHub_Actions_if_no_CSS_selector_found(self):
+        """
+        Getting all CSS elements on a page and outputting them to a CI report
+        CI debugging options
+        """
+        ALL_CSS_ELEMENTS_ON_PAGE = (By.CSS_SELECTOR, '*')
+        # elements = self.driver.find_element(ALL_CSS_ELEMENTS_ON_PAGE)
+        try:
+            elements = self.driver.execute_script("return document.querySelectorAll('*')")
+            for element in elements:
+                tag_name = element.tag_name
+                text = element.text
+                attributes = element.get_attribute("outerHTML")
+                print(f"Tag Name: {tag_name}")
+                print(f"Text: {text}")
+                print(f"Attributes: {attributes}")
+                print("--------")
+        except:
+            print('At this stage, an error appeared in the output of additional elements')
+
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
+    def click_to_the_right_of_the_center_of_the_locator_by_45_pixels(self, locator, timeout=5):
+        """
+        Click not in the center of the selector, but in its right part,
+        to the right from the center by 45 pixels
+        """
+        element = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        actions = ActionChains(self.driver)
+        actions.move_to_element_with_offset(element, 45, 0)
+        actions.click().perform()
+
+    @allure.step('Get required element visible')
+    def find_required_element(self):
+        """
+        This method finds a required element, making it visible to the user.
+        """
+        return "return window.getComputedStyle(arguments[0],'::after').getPropertyValue('content')"
+
+    @allure.step("Getting actual URL of the current webpage")
+    def get_actual_url_of_current_page(self):
+        """
+        This method allows to get URL of the current page
+        """
+        actual_url = self.driver.current_url
+        return actual_url
+
+    @allure.step("Getting actual title of the current webpage")
+    def get_actual_title_of_current_page(self):
+        """
+        This method allows to get a title of the current page
+        """
+        actual_title = self.driver.title
+        return actual_title
+
+    @allure.step(
+        'Click not in the center of the selector, but in its right part, to the right from the center by 45 pixels')
+    def click_to_the_right_of_the_center_of_the_locator_by_95_pixels(self, locator, timeout=5):
+        """
+        Click not in the center of the selector, but in its right part,
+        to the right from the center by 95 pixels
+        """
+        element = wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        actions = ActionChains(self.driver)
+        actions.move_to_element_with_offset(element, 95, 0)
+        actions.click().perform()
+
+    @allure.step('Activate the field and get the styles before and after activation')
+    def activate_field_and_check_style(self, locator):
+        """
+        This method activates the field and checks if the style of the field changes upon activation.
+        It returns the styles before and after activation for comparison.
+        """
+        initial_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
+        self.click_and_return_element(locator)
+        active_box_shadow = self.check_element_hover_style(locator, 'box-shadow', 5)
+        return initial_box_shadow, active_box_shadow
+
+    @allure.step('Fill in a field')
+    def fill_in_field(self, locator, value):
+        """This method fills in a specified field with provided value"""
+        input_field = self.element_is_clickable(locator)
+        input_field.click()
+        input_field.clear()
+        input_field.send_keys(value)
+        return input_field

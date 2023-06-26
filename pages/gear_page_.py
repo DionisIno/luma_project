@@ -24,3 +24,21 @@ class GearPage(BasePage):
     def get_actual_url(self, driver):
         actual_url = driver.current_url
         return actual_url
+
+    def check_fitness_equipment_element(self):
+        fitness_equipment = self.element_is_clickable(self.locators.FITNESS_EQUIPMENT)
+        return fitness_equipment
+
+    def check_fitness_equipment_functionality(self):
+        fitness_equipment = self.element_is_visible(self.locators.FITNESS_EQUIPMENT)
+        link = fitness_equipment.click()
+        return link
+
+    def check_watches_element(self):
+        watches = self.element_is_clickable(self.locators.WATCHES)
+        return watches
+
+    def check_watches_functionality(self):
+        watches = self.element_is_visible(self.locators.WATCHES)
+        link = watches.click()
+        return link
