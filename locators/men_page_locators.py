@@ -21,3 +21,5 @@ class MenPageLocators:
     MEN_SUBHEAD_TEXT_TANKS = (By.XPATH, '//*[@id="page-title-heading"]/span')
     SIDE_BAR_PANTS = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[2]/div[2]/div/ul[2]/li[1]/a')
     MEN_SUBHEAD_TEXT_PANTS = (By.XPATH, '//*[@id="page-title-heading"]/span')
+    SIDE_BAR_SHORTS = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[2]/div[2]/div/ul[2]/li[2]/a')
+    MEN_SUBHEAD_TEXT_SHORTS = (By.XPATH, '//*[@id="page-title-heading"]/span')
