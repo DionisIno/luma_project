@@ -1,9 +1,11 @@
 from selenium.webdriver.support.wait import WebDriverWait as wait, WebDriverWait
-from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL, MEN_TANKS_URL
+from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL, MEN_TANKS_URL, MEN_HOODIES_URL
 from locators.men_page_locators import MenPageLocators
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
 import allure
+import unittest
+
 
 
 class MenPage(BasePage):
@@ -120,3 +122,15 @@ class MenPage(BasePage):
         wait(self.driver, 15)
         element.click()
         return element
+
+    @allure.step('Correct redirection of the link "Hoodies&Sweatshirts" on Men page')
+    def verify_hoodies_redirects_to_a_correct_page(self):
+        """This method finds 'Hoodies&Sweatshirts' link and verifies it is correctly redirects to a new page"""
+        element = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located(self.side_bar_locators.SIDE_BAR_HOODIES)
+        )
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_HOODIES)
+        return url == MEN_HOODIES_URL and text == "Hoodies & Sweatshirts"
+
