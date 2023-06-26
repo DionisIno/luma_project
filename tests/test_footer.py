@@ -46,6 +46,15 @@ class TestFooter:
         search_terms_link_text = link.text
         assert search_terms_link_text == "Search Terms", "The link is not visible or correct"
 
+    @allure.title("TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_05_check_clickability_of_search_terms_link_on_pages(self, driver, URL):
+        """This test checks if Search Terms link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        search_terms_link = page.check_search_terms_link_clickability()
+        assert search_terms_link, "The Search Terms link is not clickable"
+
     @allure.title("TC 02.01.08 - Check Privacy and Cookie Policy link is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -55,6 +64,15 @@ class TestFooter:
         page.open()
         privacy_and_cookie_policy_link = page.check_privacy_and_cookie_policy_link_presence()
         assert privacy_and_cookie_policy_link, "The Privacy and Cookie Policy link is not present in the DOM tree"
+
+    @allure.title("TC 02.01.10 - Check if Privacy and Cookie Policy link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_10_check_clickability_of_privacy_and_cookie_policy_link_on_pages(self, driver, URL):
+        """This test checks if Privacy and Cookie Policy link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        privacy_and_cookie_policy_link = page.check_privacy_and_cookie_policy_link_clickability()
+        assert privacy_and_cookie_policy_link, "The Privacy and Cookie Policy link is not clickable"
 
     @allure.title("TC 02.01.13 - Check Advanced Search link is present in the DOM tree "
                   "on each page specified in DATA_1")
@@ -66,6 +84,15 @@ class TestFooter:
         advanced_search_link = page.check_advanced_search_link_presence()
         assert advanced_search_link, "The Advanced Search link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.15 - Check if Advanced Search link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_15_check_clickability_of_advanced_search_link_on_pages(self, driver, URL):
+        """This test checks if Advanced Search link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        advanced_search_link = page.check_advanced_search_link_clickability()
+        assert advanced_search_link, "The Advanced Search link is not clickable"
+
     @allure.title("TC 02.01.18 - Check Orders and Returns link is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -76,6 +103,15 @@ class TestFooter:
         orders_and_returns_link = page.check_orders_and_returns_link_presence()
         assert orders_and_returns_link, "The Orders and Returns link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.20 - Check if Orders and Returns link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_20_check_clickability_of_orders_and_returns_link_on_pages(self, driver, URL):
+        """This test checks if Orders and Returns link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        orders_and_returns_link = page.check_orders_and_returns_link_clickability()
+        assert orders_and_returns_link, "The Orders and Returns link is not clickable"
+
     @allure.title("TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_23_check_presence_of_contact_us_link_on_pages(self, driver, URL):
@@ -85,6 +121,15 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_presence()
         assert contact_us_link, "The Contact Us link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_25_check_clickability_of_contact_us_link_on_pages(self, driver, URL):
+        """This test checks if Contact Us link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        contact_us_link = page.check_contact_us_link_clickability()
+        assert contact_us_link, "The Contact Us link is not clickable"
+
     @allure.title("TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_28_check_presence_of_write_for_us_link_on_pages(self, driver, URL):
@@ -93,3 +138,12 @@ class TestFooter:
         page.open()
         write_for_us_link = page.check_write_for_us_link_presence()
         assert write_for_us_link, "The Write for us link is not present in the DOM tree"
+
+    @allure.title("TC 02.01.30 - Check if Write for us link is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_30_check_clickability_of_write_for_us_link_on_pages(self, driver, URL):
+        """This test checks if Write for us link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        write_for_us_link = page.check_write_for_us_link_clickability()
+        assert write_for_us_link, "The Write for us link is not clickable"
