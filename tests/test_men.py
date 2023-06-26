@@ -137,3 +137,21 @@ class TestMenPage:
         page.open()
         current_page = page.verify_pants_link_redirects_to_a_correct_page()
         assert current_page, "New page isn't open or the 'Pants' subhead is incorrect"
+
+    @allure.title("TC 14.04.04 Verify the link 'Shorts' is visible and clickable.")
+    def test_tc_14_04_04(self, driver):
+        """Verify that the link 'Shorts' is displayed and clickable"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        link = page.verify_shorts_link_is_visible_and_clickable()
+        assert link, "The link 'Shorts' is not visible"
+
+    @allure.title("TC 14.04.05 Verify the link 'Shorts' redirects to a correct page.")
+    def test_tc_14_04_05(self, driver):
+        """Verify that the link 'Shorts' correctly opens and redirects to a new webpage, the header 'Pants' is
+              displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_shorts_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open or the 'Shorts' subhead is incorrect"
+

@@ -1,6 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait as wait, WebDriverWait
 from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL, MEN_TANKS_URL, MEN_HOODIES_URL, \
-    MEN_BOTTOMS_PANTS_URL
+    MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL
 from locators.men_page_locators import MenPageLocators
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
@@ -149,3 +149,20 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_PANTS)
         return url == MEN_BOTTOMS_PANTS_URL and text == "Pants"
+
+    @allure.step("Find clickable elements link 'Shorts' on Men page")
+    def verify_shorts_link_is_visible_and_clickable(self):
+        """This method finds 'Shorts' link and verifies it is clickable"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_SHORTS)
+        wait(self.driver, 15)
+        element.click()
+        return element
+
+    @allure.step('Correct redirection of the link "Shorts" on Men page')
+    def verify_shorts_link_redirects_to_a_correct_page(self):
+        """This method finds 'Pants' link and verifies it is correctly redirects to a new page"""
+        element = self.element_is_visible(self.side_bar_locators.SIDE_BAR_SHORTS)
+        element.click()
+        url = self.driver.current_url
+        text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_SHORTS)
+        return url == MEN_BOTTOMS_SHORTS_URL and text == "Shorts"
