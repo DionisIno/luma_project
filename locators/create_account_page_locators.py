@@ -17,3 +17,4 @@ class CreateAccountPageLocators:
     MESSAGE_ERROR = (By.CSS_SELECTOR, '.message-error.error.message > div')
     MESSAGE_SUCCESS = (By.CSS_SELECTOR, '.message-success.success.message > div')
     MESSAGE_FIRST_NAME_ERROR = (By.ID, 'firstname-error')
+    MESSAGE_LAST_NAME_ERROR = (By.ID, 'lastname-error')
