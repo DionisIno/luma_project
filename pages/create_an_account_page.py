@@ -60,3 +60,14 @@ class CreateAccountPage(BasePage):
         self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
         message = self.element_is_visible(self.locators.MESSAGE_LAST_NAME_ERROR)
         return message.text if message else None
+
+    @allure.step('Create an account with empty e-mail')
+    def create_with_empty_email(self):
+        """ Verify that customer can't Create An Account with empty e-mail"""
+        self.element_is_visible(self.locators.FIRST_NAME).send_keys('test727')
+        self.element_is_visible(self.locators.LAST_NAME).send_keys('testoviy727')
+        self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
+        self.element_is_visible(self.locators.PASSWORD_CONFIRMATION).send_keys('!Q@W3e4rASD')
+        self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
+        message = self.element_is_visible(self.locators.MESSAGE_EMAIL_ERROR)
+        return message.text if message else None

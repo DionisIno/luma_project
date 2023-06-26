@@ -41,7 +41,7 @@ class TestCreateAnAccount:
 
     @allure.title('test 04.02.02 create an account with empty first name')
     def test_tc_04_02_02_create_account_with_empty_first_name(self, driver):
-        """ Verify that customer can Create An Account with empty first name"""
+        """ Verify that customer can't Create An Account with empty first name"""
         page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
         page.open()
         message = page.create_with_empty_first_name()
@@ -49,8 +49,16 @@ class TestCreateAnAccount:
 
     @allure.title('test 04.02.03 create an account with empty last name')
     def test_tc_04_02_03_create_account_with_empty_last_name(self, driver):
-        """ Verify that customer can Create An Account with empty first name"""
+        """ Verify that customer can't Create An Account with empty last name"""
         page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
         page.open()
         message = page.create_with_empty_last_name()
+        assert message == 'This is a required field.', "No message"
+
+    @allure.title('test 04.02.04 create an account with empty e-mail')
+    def test_tc_04_02_04_create_account_with_empty_email(self, driver):
+        """ Verify that customer can't Create An Account with empty e-mail"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_email()
         assert message == 'This is a required field.', "No message"
