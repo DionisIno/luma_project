@@ -1,5 +1,4 @@
 import allure
-import pytest
 from data.data_urls import MEN_PAGE_URL
 from pages.men_page import MenPage
 
@@ -112,3 +111,15 @@ class TestMenPage:
         page.open()
         link = page.verify_hoodies_link_is_visible_and_clickable()
         assert link, "The link 'Hoodies&Sweatshirts' is not visible"
+
+    @allure.title("TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.")
+    def test_tc_14_03_03(self, driver):
+        """Verify that the link 'Hoodies&Sweatshirts' correctly opens and redirects to a new webpage, the header \
+        'Hoodies&Sweatshirt' is displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_hoodies_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open or the 'Hoodies & Sweatshirts' subhead is incorrect"
+
+
+
