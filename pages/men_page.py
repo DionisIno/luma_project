@@ -166,3 +166,10 @@ class MenPage(BasePage):
         url = self.driver.current_url
         text = self.get_text(self.side_bar_locators.MEN_SUBHEAD_TEXT_SHORTS)
         return url == MEN_BOTTOMS_SHORTS_URL and text == "Shorts"
+
+    @allure.step('Verify subhead "BOTTOMS" on Men page')
+    def verify_subhead_bottoms_is_visible(self):
+        """This method finds subhead 'BOTTOMS' and verifies it is correctly displayed"""
+        subhead_title = self.element_is_visible(self.side_bar_locators.SIDE_BAR_SUBHEAD_BOTTOMS)
+        text_title = subhead_title.text
+        return text_title
