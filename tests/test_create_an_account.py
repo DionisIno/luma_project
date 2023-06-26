@@ -38,3 +38,11 @@ class TestCreateAnAccount:
         page.open()
         message = page.create_with_correct_data()
         assert message == 'Thank you for registering with Main Website Store.', "No success message"
+
+    @allure.title('test 04.02.02 create an account with empty first name')
+    def test_tc_04_02_02_create_account_with_empty_first_name(self, driver):
+        """ Verify that customer can Create An Account with empty first name"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_first_name()
+        assert message == 'This is a required field.', "No success message"
