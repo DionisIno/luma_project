@@ -19,3 +19,6 @@ class CreateAccountPageLocators:
     MESSAGE_FIRST_NAME_ERROR = (By.ID, 'firstname-error')
     MESSAGE_LAST_NAME_ERROR = (By.ID, 'lastname-error')
     MESSAGE_EMAIL_ERROR = (By.ID, 'email_address-error')
+    MESSAGE_PASSWORD_ERROR = (By.ID, 'password-error')
+    PASSWORD_STRENGTH = (By.ID, 'password-strength-meter')
+    PASSWORD_STRENGTH_LABEL = (By.ID, 'password-strength-meter-label')
