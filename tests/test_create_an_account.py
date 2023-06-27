@@ -141,3 +141,11 @@ class TestCreateAnAccount:
         page.open()
         message = page.create_with_empty_confirm_password()
         assert message == 'This is a required field.', "No message"
+
+    @allure.title('test 04.02.07 create an account with incorrect confirm password')
+    def test_tc_04_02_07_create_account_with_incorrect_confirm_password(self, driver):
+        """ Verify that customer can't Create An Account with incorrect confirm password"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_incorrect_confirm_password()
+        assert message == 'Please enter the same value again.', "No message"
