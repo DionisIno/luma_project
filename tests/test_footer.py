@@ -42,9 +42,8 @@ class TestFooter:
         """Checks if Search Terms link is visible on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_search_terms_link_is_visible()
-        search_terms_link_text = link.text
-        assert search_terms_link_text == "Search Terms", "The link is not visible or correct"
+        search_terms_link = page.check_search_terms_link_is_visible()
+        assert search_terms_link, "The Search Terms link is not visible"
 
     @allure.title("TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -54,6 +53,16 @@ class TestFooter:
         page.open()
         search_terms_link = page.check_search_terms_link_clickability()
         assert search_terms_link, "The Search Terms link is not clickable"
+
+    @allure.title("TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_07_check_text_of_search_terms_link_on_pages(self, driver, URL):
+        """Checks if text of Search Terms link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_search_terms_link_is_visible()
+        link_text = link.text
+        assert link_text == "Search Terms", "Text of Search Terms link is not correct"
 
     @allure.title("TC 02.01.08 - Check Privacy and Cookie Policy link is present in the DOM tree "
                   "on each page specified in DATA_1")
