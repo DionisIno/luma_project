@@ -133,3 +133,11 @@ class TestCreateAnAccount:
         page.open()
         message = page.create_with_empty_password()
         assert message == ('Password Strength: No Password', 'This is a required field.'), "No message"
+
+    @allure.title('test 04.02.06 create an account with empty confirm password')
+    def test_tc_04_02_06_create_account_with_empty_confirm_password(self, driver):
+        """ Verify that customer can't Create An Account with empty confirm password"""
+        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
+        page.open()
+        message = page.create_with_empty_confirm_password()
+        assert message == 'This is a required field.', "No message"
