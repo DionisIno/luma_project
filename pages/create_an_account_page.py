@@ -175,3 +175,14 @@ class CreateAccountPage(BasePage):
         message_strength = self.element_is_visible(self.locators.PASSWORD_STRENGTH)
         message = self.element_is_visible(self.locators.MESSAGE_PASSWORD_ERROR)
         return message_strength.text, message.text if message and message_strength else None
+
+    @allure.step('Create an account with empty confirm password')
+    def create_with_empty_confirm_password(self):
+        """ Verify that customer can't Create An Account with empty confirm password"""
+        self.element_is_visible(self.locators.FIRST_NAME).send_keys('test727')
+        self.element_is_visible(self.locators.LAST_NAME).send_keys('testoviy727')
+        self.element_is_visible(self.locators.EMAIL).send_keys('tes727ton754@mailitestov.test')
+        self.element_is_visible(self.locators.PASSWORD).send_keys('!Q@W3e4rASD')
+        self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON).click()
+        message = self.element_is_visible(self.locators.MESSAGE_PASSWORD_CONFIRMATION_ERROR)
+        return message.text if message else None

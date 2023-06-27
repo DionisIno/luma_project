@@ -24,4 +24,4 @@ class CreateAccountPageLocators:
     MESSAGE_EMAIL_ERROR = (By.ID, 'email_address-error')
     MESSAGE_PASSWORD_ERROR = (By.ID, 'password-error')
     PASSWORD_STRENGTH = (By.ID, 'password-strength-meter')
-    PASSWORD_STRENGTH_LABEL = (By.ID, 'password-strength-meter-label')
+    MESSAGE_PASSWORD_CONFIRMATION_ERROR = (By.ID, 'password-confirmation-error')
