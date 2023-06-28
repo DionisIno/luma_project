@@ -32,3 +32,61 @@ expected_urls_m = {
     "pants_men_url": 'https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html',
     "shorts_men_url": 'https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html'
 }
+
+expected_titles_gear = {
+    "gear_bags": "Bags - Gear",
+    "fitness_equipment": "Fitness Equipment - Gear",
+}
+
+expected_urls_gear = {
+    "gear_bags_url": 'https://magento.softwaretestingboard.com/gear/bags.html',
+    "fitness_equipment_url": 'https://magento.softwaretestingboard.com/gear/fitness-equipment.html'
+}
+
+img_src = {
+    "sale_women_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-main.jpg',
+    "sale_men_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-mens.jpg',
+    "sale_gear_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-gear.jpg'
+}
+
+promo_blocks_titles = {
+    "sale_women_title": "Women’s Deals",
+    "sale_men_title": "Men’s Bargains",
+    "sale_gear_title": "Luma Gear Steals"
+}
+
+promo_blocks_contents = {
+    "sale_women_content": "Pristine prices on pants, tanks and bras.",
+    "sale_men_content": "Stretch your budget with active attire",
+    "sale_gear_content": "Your best efforts deserve a deal"
+}
+
+expected_titles_promo_blocks = {
+    "main_block": "Women Sale",
+    "men_block": "Men Sale",
+    "gear_block": "Gear"
+}
+
+expected_urls_promo_blocks = {
+    "main_block": 'https://magento.softwaretestingboard.com/promotions/women-sale.html',
+    "men_block": 'https://magento.softwaretestingboard.com/promotions/men-sale.html',
+    "gear_block": 'https://magento.softwaretestingboard.com/gear.html'
+}
+
+img_src_three_columns = {
+    "first_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-20-off.png',
+    "second_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/sale/sale-free-shipping.png',
+    "third_column_img": 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/womens/womens-t-shirts.png'
+}
+
+three_columns_block_titles = {
+    "first_column": "20% OFF",
+    "second_column": "Spend $50 or more — shipping is free!",
+    "third_column": "You can't have too many tees"
+}
+
+three_columns_blocks_contents = {
+    "first_column": "Every $200-plus purchase!",
+    "second_column": "Buy more, save more",
+    "third_column": "4 tees for the price of 3. Right now"
+}
