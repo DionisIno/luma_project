@@ -1,5 +1,5 @@
 import allure
-from data.data_urls import MEN_PAGE_URL
+from data.data_urls import MEN_PAGE_URL, MenPageImageURLS
 from pages.men_page import MenPage
 
 
@@ -162,3 +162,29 @@ class TestMenPage:
         page.open()
         subhead_title = page.verify_subhead_bottoms_is_visible()
         assert subhead_title == "BOTTOMS"
+
+
+class TestMenPagePromoBlock:
+    @allure.title("TC 14.06.21 Verify the visibility of 'Luma shorts' promo block.")
+    def test_tc_14_06_21(self, driver):
+        """Verify that the block 'Luma shorts' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_shorts = page.check_block_shorts_display()
+        assert block_shorts is True, "The element is not visible"
+
+    @allure.title("TC 14.06.22 Verify the visibility of the image in the 'Luma shorts' promo block.")
+    def test_tc_14_06_22(self, driver):
+        """Verify that the image in the block 'Luma shorts' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_shorts_image = page.check_block_shorts_image_display()
+        assert block_shorts_image == MenPageImageURLS.LUMA_SHORTS_IMG_URL, "The image is not correct"
+
+    @allure.title("TC 14.06.26 Verify the click on the block 'Luma shorts' redirects to a correct page.")
+    def test_tc_14_06_26(self, driver):
+        """Verify that the click on the block 'Luma shorts' correctly redirects to a new webpage"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_block_shorts_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open"
