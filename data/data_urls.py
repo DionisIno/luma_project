@@ -96,3 +96,7 @@ class ImageUrls:
     SECTION_2_BLOCK_3_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-erin.jpg"
     SECTION_2_BLOCK_4_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-performance.jpg"
     SECTION_2_BLOCK_5_IMAGE_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/home/home-eco.jpg"
+
+
+class MenPageImageURLS:
+    LUMA_SHORTS_IMG_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-shorts.jpg"

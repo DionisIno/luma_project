@@ -1,7 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait as wait, WebDriverWait
 from data.data_urls import MEN_TOPS_URL, MEN_BOTTOMS_URL, MEN_JACKETS_URL, MEN_TEES_URL, MEN_TANKS_URL, MEN_HOODIES_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL
-from locators.men_page_locators import MenPageLocators
+from locators.men_page_locators import MenPageLocators, MenPagePromoLocators
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
 import allure
@@ -9,6 +9,7 @@ import allure
 
 class MenPage(BasePage):
     side_bar_locators = MenPageLocators
+    promo_locators = MenPagePromoLocators
 
     @allure.step('Find clickable elements')
     def verify_tops_link_is_visible_and_clickable(self):
@@ -173,3 +174,24 @@ class MenPage(BasePage):
         subhead_title = self.element_is_visible(self.side_bar_locators.SIDE_BAR_SUBHEAD_BOTTOMS)
         text_title = subhead_title.text
         return text_title
+
+    @allure.step("Check display of the 'Luma shorts' block on Men page")
+    def check_block_shorts_display(self):
+        """Check visibility of the 'Luma shorts' block on Men page under the yellow block"""
+        block_shorts = self.element_is_visible(self.promo_locators.LUMA_SHORTS_BLOCK)
+        return block_shorts.is_displayed()
+
+    @allure.step("Check display of the image in the 'Luma shorts' block on Men page")
+    def check_block_shorts_image_display(self):
+        """Check visibility of the 'Luma shorts' block on Men page under the yellow block"""
+        element = self.element_is_visible(self.promo_locators.LUMA_SHORTS_BLOCK_IMG)
+        block_shorts_image = element.get_attribute("src")
+        return block_shorts_image
+
+    @allure.step("Correct redirection of the click on the block 'Luma shorts' on Men page")
+    def verify_block_shorts_link_redirects_to_a_correct_page(self):
+        """This method verifies correct redirection to a new page after clicking on the block"""
+        element = self.element_is_visible(self.promo_locators.LUMA_SHORTS_BLOCK)
+        element.click()
+        url = self.driver.current_url
+        return url == MEN_BOTTOMS_SHORTS_URL

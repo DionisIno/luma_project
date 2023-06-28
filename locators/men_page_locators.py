@@ -23,3 +23,10 @@ class MenPageLocators:
     MEN_SUBHEAD_TEXT_PANTS = (By.XPATH, '//*[@id="page-title-heading"]/span')
     SIDE_BAR_SHORTS = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[2]/div[2]/div/ul[2]/li[2]/a')
     MEN_SUBHEAD_TEXT_SHORTS = (By.XPATH, '//*[@id="page-title-heading"]/span')
+
+
+    # Promo blocks locators
+
+class MenPagePromoLocators:
+    LUMA_SHORTS_BLOCK = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[1]')
+    LUMA_SHORTS_BLOCK_IMG = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[1]/span[2]/img')
