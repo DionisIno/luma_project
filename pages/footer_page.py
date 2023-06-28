@@ -85,6 +85,11 @@ class FooterPage(BasePage):
         """Checks Copyright section is visible"""
         return self.element_is_visible(self.footer_locators.COPYRIGHT_SECTION)
 
+    @allure.step("Check text of Copyright section is visible on the page")
+    def check_text_of_copyright_section_is_visible(self):
+        """Checks text of Copyright section is visible"""
+        return self.element_is_visible(self.footer_locators.COPYRIGHT_TEXT)
+
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
         """Checks Search Terms link clickability"""
