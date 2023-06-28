@@ -74,6 +74,15 @@ class TestFooter:
         privacy_and_cookie_policy_link = page.check_privacy_and_cookie_policy_link_presence()
         assert privacy_and_cookie_policy_link, "The Privacy and Cookie Policy link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.09 - Check display of Privacy and Cookie Policy link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_09_check_visibility_of_privacy_and_cookie_policy_link_on_pages(self, driver, URL):
+        """Checks if Privacy and Cookie Policy link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        privacy_and_cookie_policy_link = page.check_privacy_and_cookie_policy_link_is_visible()
+        assert privacy_and_cookie_policy_link, "The Privacy and Cookie Policy link is not visible"
+
     @allure.title("TC 02.01.10 - Check if Privacy and Cookie Policy link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_10_check_clickability_of_privacy_and_cookie_policy_link_on_pages(self, driver, URL):
@@ -93,6 +102,15 @@ class TestFooter:
         advanced_search_link = page.check_advanced_search_link_presence()
         assert advanced_search_link, "The Advanced Search link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.14 - Check display of Advanced Search link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_14_check_visibility_of_advanced_search_link_on_pages(self, driver, URL):
+        """Checks if Advanced Search link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        advanced_search_link = page.check_advanced_search_link_is_visible()
+        assert advanced_search_link, "The Advanced Search link is not visible"
+
     @allure.title("TC 02.01.15 - Check if Advanced Search link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_15_check_clickability_of_advanced_search_link_on_pages(self, driver, URL):
@@ -111,6 +129,15 @@ class TestFooter:
         page.open()
         orders_and_returns_link = page.check_orders_and_returns_link_presence()
         assert orders_and_returns_link, "The Orders and Returns link is not present in the DOM tree"
+
+    @allure.title("TC 02.01.19 - Check display of Orders and Returns link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_19_check_visibility_of_orders_and_returns_link_on_pages(self, driver, URL):
+        """Checks if Orders and Returns link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        orders_and_returns_link = page.check_orders_and_returns_link_is_visible()
+        assert orders_and_returns_link, "The Orders and Returns link is not visible"
 
     @allure.title("TC 02.01.20 - Check if Orders and Returns link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)

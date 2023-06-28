@@ -55,6 +55,21 @@ class FooterPage(BasePage):
         """Checks Search Terms link is visible"""
         return self.element_is_visible(self.footer_locators.SEARCH_TERMS_LINK)
 
+    @allure.step("Check Privacy and Cookie Policy link is visible on the page")
+    def check_privacy_and_cookie_policy_link_is_visible(self):
+        """Checks Privacy and Cookie Policy link is visible"""
+        return self.element_is_visible(self.footer_locators.PRIVACY_AND_COOKIE_POLICY_LINK)
+
+    @allure.step("Check Advanced Search link is visible on the page")
+    def check_advanced_search_link_is_visible(self):
+        """Checks Advanced Search link is visible"""
+        return self.element_is_visible(self.footer_locators.ADVANCED_SEARCH_LINK)
+
+    @allure.step("Check Orders and Returns link is visible on the page")
+    def check_orders_and_returns_link_is_visible(self):
+        """Checks Orders and Returns link is visible"""
+        return self.element_is_visible(self.footer_locators.ORDERS_AND_RETURNS_LINK)
+
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
         """Checks Search Terms link clickability"""
