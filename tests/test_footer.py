@@ -205,6 +205,16 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_clickability()
         assert contact_us_link, "The Contact Us link is not clickable"
 
+    @allure.title("TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_27_check_text_of_contact_us_link_on_pages(self, driver, URL):
+        """Checks if text of Contact Us link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_contact_us_link_is_visible()
+        link_text = link.text
+        assert link_text == "Contact Us", "Text of Contact Us link is not correct"
+
     @allure.title("TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_28_check_presence_of_write_for_us_link_on_pages(self, driver, URL):
@@ -232,6 +242,16 @@ class TestFooter:
         write_for_us_link = page.check_write_for_us_link_clickability()
         assert write_for_us_link, "The Write for us link is not clickable"
 
+    @allure.title("TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_32_check_text_of_write_for_us_link_on_pages(self, driver, URL):
+        """Checks if text of Write for us link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_write_for_us_link_is_visible()
+        link_text = link.text
+        assert link_text == "Write for us", "Text of Write for us link is not correct"
+
     @allure.title("TC 02.01.34 - Check display of Copyright section on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_34_check_visibility_of_copyright_section_on_pages(self, driver, URL):
@@ -240,3 +260,14 @@ class TestFooter:
         page.open()
         copyright_section = page.check_copyright_section_is_visible()
         assert copyright_section, "The Copyright section is not visible"
+
+    @allure.title("TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_37_check_text_of_copyright_section_on_pages(self, driver, URL):
+        """Checks if text of Copyright section is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        copyright_span = page.check_text_of_copyright_section_is_visible()
+        copyright_span_text = copyright_span.text
+        assert copyright_span_text == "Copyright © 2013-present Magento, Inc. All rights reserved.",\
+            "Text of Copyright section is not correct"
