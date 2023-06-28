@@ -92,6 +92,16 @@ class TestFooter:
         privacy_and_cookie_policy_link = page.check_privacy_and_cookie_policy_link_clickability()
         assert privacy_and_cookie_policy_link, "The Privacy and Cookie Policy link is not clickable"
 
+    @allure.title("TC 02.01.12 - Check text of Privacy and Cookie Policy link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_12_check_text_of_privacy_and_cookie_policy_link_on_pages(self, driver, URL):
+        """Checks if text of Privacy and Cookie Policy link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_privacy_and_cookie_policy_link_is_visible()
+        link_text = link.text
+        assert link_text == "Privacy and Cookie Policy", "Text of Privacy and Cookie Policy link is not correct"
+
     @allure.title("TC 02.01.13 - Check Advanced Search link is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -120,6 +130,16 @@ class TestFooter:
         advanced_search_link = page.check_advanced_search_link_clickability()
         assert advanced_search_link, "The Advanced Search link is not clickable"
 
+    @allure.title("TC 02.01.17 - Check text of Advanced Search link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_17_check_text_of_advanced_search_link_on_pages(self, driver, URL):
+        """Checks if text of Advanced Search link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_advanced_search_link_is_visible()
+        link_text = link.text
+        assert link_text == "Advanced Search", "Text of Advanced Search link is not correct"
+
     @allure.title("TC 02.01.18 - Check Orders and Returns link is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -147,6 +167,16 @@ class TestFooter:
         page.open()
         orders_and_returns_link = page.check_orders_and_returns_link_clickability()
         assert orders_and_returns_link, "The Orders and Returns link is not clickable"
+
+    @allure.title("TC 02.01.22 - Check text of Orders and Returns link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_22_check_text_of_orders_and_returns_link_on_pages(self, driver, URL):
+        """Checks if text of Orders and Returns link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        link = page.check_orders_and_returns_link_is_visible()
+        link_text = link.text
+        assert link_text == "Orders and Returns", "Text of Orders and Returns link is not correct"
 
     @allure.title("TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
