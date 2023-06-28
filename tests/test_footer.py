@@ -157,6 +157,15 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_presence()
         assert contact_us_link, "The Contact Us link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_24_check_visibility_of_contact_us_link_on_pages(self, driver, URL):
+        """Checks if Contact Us link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        contact_us_link = page.check_contact_us_link_is_visible()
+        assert contact_us_link, "The Contact Us link is not visible"
+
     @allure.title("TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_25_check_clickability_of_contact_us_link_on_pages(self, driver, URL):
@@ -175,6 +184,15 @@ class TestFooter:
         write_for_us_link = page.check_write_for_us_link_presence()
         assert write_for_us_link, "The Write for us link is not present in the DOM tree"
 
+    @allure.title("TC 02.01.29 - Check display of Write for us link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_29_check_visibility_of_write_for_us_link_on_pages(self, driver, URL):
+        """Checks if Write for us link is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        write_for_us_link = page.check_write_for_us_link_is_visible()
+        assert write_for_us_link, "The Write for us link is not visible"
+
     @allure.title("TC 02.01.30 - Check if Write for us link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_30_check_clickability_of_write_for_us_link_on_pages(self, driver, URL):
@@ -183,3 +201,12 @@ class TestFooter:
         page.open()
         write_for_us_link = page.check_write_for_us_link_clickability()
         assert write_for_us_link, "The Write for us link is not clickable"
+
+    @allure.title("TC 02.01.34 - Check display of Copyright section on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_34_check_visibility_of_copyright_section_on_pages(self, driver, URL):
+        """Checks if Copyright section is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        copyright_section = page.check_copyright_section_is_visible()
+        assert copyright_section, "The Copyright section is not visible"

@@ -70,6 +70,21 @@ class FooterPage(BasePage):
         """Checks Orders and Returns link is visible"""
         return self.element_is_visible(self.footer_locators.ORDERS_AND_RETURNS_LINK)
 
+    @allure.step("Check Contact Us link is visible on the page")
+    def check_contact_us_link_is_visible(self):
+        """Checks Contact Us link is visible"""
+        return self.element_is_visible(self.footer_locators.CONTACT_US_LINK)
+
+    @allure.step("Check Write for us link is visible on the page")
+    def check_write_for_us_link_is_visible(self):
+        """Checks Write for us link is visible"""
+        return self.element_is_visible(self.footer_locators.WRITE_FOR_US_LINK)
+
+    @allure.step("Check Copyright section is visible on the page")
+    def check_copyright_section_is_visible(self):
+        """Checks Copyright section is visible"""
+        return self.element_is_visible(self.footer_locators.COPYRIGHT_SECTION)
+
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
         """Checks Search Terms link clickability"""
