@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 class FooterPageLocators:
     ADVANCED_SEARCH_LINK = (By.CSS_SELECTOR, '.footer > :nth-child(3) > a')
     CONTACT_US_LINK = (By.CSS_SELECTOR, '.footer > :nth-child(5) > a')
+    COPYRIGHT_SECTION = (By.CSS_SELECTOR, '.copyright')
     COPYRIGHT_TEXT = (By.CSS_SELECTOR, '.copyright > span')
     FOOTER_SECTION = (By.CSS_SELECTOR, '.page-footer')
     FOOTER_CONTENT = (By.CSS_SELECTOR, '.footer.content')
