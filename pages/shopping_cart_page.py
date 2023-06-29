@@ -170,5 +170,14 @@ class ShoppingCartPage(BasePage):
         order_total = subtotal - discount + tax
         return order_total
 
+    @allure.step("Check remove button deletes item from the shipping page")
+    def check_remove_button_deletes_item_from_shopping_cart(self):
+        """This method checks that remove button (trash bin icon) deletes item from the shipping page"""
+        trash_bin = self.element_is_clickable(self.shopping_locators.DELETE_BUTTON)
+        trash_bin.click()
+        shopping_cart_message = self.element_is_visible(self.shopping_locators.IS_EMPTY_MESSAGE).text
+        return shopping_cart_message
+
+
 
 

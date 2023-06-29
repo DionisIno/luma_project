@@ -124,3 +124,11 @@ class TestShoppingCartFull:
         order_total = page.check_order_total()
         order_total_by_page = page.get_order_total_in_summary()
         assert order_total == order_total_by_page, 'Wrong count Order Total in summary'
+
+    @allure.title("tc 07.02.10 Verify that remove button deletes item from the shipping page")
+    def test_tc_07_02_10_verify_remove_button_delete_item(self, driver, full_cart_page):
+        """Check that remove button deletes item from the shipping page"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        message = page.check_remove_button_deletes_item_from_shopping_cart()
+        assert message == "You have no items in your shopping cart.", "Remove button doesn't works correctly"
+
