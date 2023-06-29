@@ -195,3 +195,24 @@ class MenPage(BasePage):
         element.click()
         url = self.driver.current_url
         return url == MEN_BOTTOMS_SHORTS_URL
+
+    @allure.step("Check display of the text-1 'Luma shorts' in the 'Luma shorts' block on Men page")
+    def verify_block_shorts_text_1(self):
+        """This method verifies correct display of the text-1 in the 'Luma shorts' block"""
+        shorts_block_title1 = self.element_is_visible(self.promo_locators.LUMA_SHORTS_TITLE)
+        shorts_block_title1_text = shorts_block_title1.text
+        return shorts_block_title1_text
+
+    @allure.step("Check display of the text-2 'Cool it now' in the 'Luma shorts' block on Men page")
+    def verify_block_shorts_text_2(self):
+        """This method verifies correct display of the text-2 in the 'Luma shorts' block"""
+        shorts_block_title2 = self.element_is_visible(self.promo_locators.LUMA_SHORTS_TITLE_2)
+        shorts_block_title2_text = shorts_block_title2.text
+        return shorts_block_title2_text
+
+    @allure.step("Check display of the text-3 'Shop Shorts' in the 'Luma shorts' block on Men page")
+    def verify_block_shorts_text_3(self):
+        """This method verifies correct display of the text-3 in the 'Luma shorts' block"""
+        shorts_block_title3 = self.element_is_visible(self.promo_locators.LUMA_SHORTS_TITLE_3)
+        shorts_block_title3_text = shorts_block_title3.text
+        return shorts_block_title3_text
