@@ -59,6 +59,21 @@ class FooterPage(BasePage):
         """Checks Subscribe section is present in the DOM tree"""
         return self.element_is_present(self.footer_locators.SUBSCRIBE_SECTION)
 
+    @allure.step("Check Subscribe Button is present in the DOM tree")
+    def check_subscribe_button_presence(self):
+        """Checks Subscribe Button is present in the DOM tree"""
+        return self.element_is_present(self.footer_locators.SUBSCRIBE_BUTTON)
+
+    @allure.step("Check text on Subscribe Button is present in the DOM tree")
+    def check_subscribe_button_text_presence(self):
+        """Checks text on Subscribe Button is present in the DOM tree"""
+        return self.element_is_present(self.footer_locators.SUBSCRIBE_BUTTON_TEXT)
+
+    @allure.step("Check text Email field in Subscribe section is present in the DOM tree")
+    def check_subscribe_email_field_presence(self):
+        """Checks Email field in Subscribe section is present in the DOM tree"""
+        return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)
+
     @allure.step("Check Footer is visible on the page")
     def check_footer_is_visible(self):
         """Checks Footer is visible"""
