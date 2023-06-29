@@ -17,7 +17,8 @@ class FooterPageLocators:
     SUBSCRIBE_BUTTON = (By.CSS_SELECTOR, '#newsletter-validate-detail > .actions > .action')
     SUBSCRIBE_BUTTON_TEXT = (By.CSS_SELECTOR, '#newsletter-validate-detail > .actions > .action > span')
     SUBSCRIBE_EMAIL_FIELD = (By.CSS_SELECTOR, '#newsletter')
-    SUBSCRIBE_EMAIL_FIELD_ICON = (By.CSS_SELECTOR, "div[class='control']")
+    SUBSCRIBE_EMAIL_FIELD_ICON = (By.CSS_SELECTOR, 'div[class="control"]')
+    SUBSCRIBE_SECTION = (By.CSS_SELECTOR, 'div.block.newsletter')
     WRITE_FOR_US_LINK = (By.CSS_SELECTOR, '.widget > ul > li > a')
 
     DATA_2 = [

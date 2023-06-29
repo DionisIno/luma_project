@@ -252,6 +252,15 @@ class TestFooter:
         link_text = link.text
         assert link_text == "Write for us", "Text of Write for us link is not correct"
 
+    @allure.title("TC 02.01.33 - Check Copyright section is present in the DOM tree on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_33_check_presence_of_copyright_section_on_pages(self, driver, URL):
+        """Checks if Copyright section is present in the DOM tree on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        copyright_section = page.check_copyright_section_presence()
+        assert copyright_section, "The Copyright section is not present in the DOM tree"
+
     @allure.title("TC 02.01.34 - Check display of Copyright section on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_34_check_visibility_of_copyright_section_on_pages(self, driver, URL):
@@ -260,6 +269,15 @@ class TestFooter:
         page.open()
         copyright_section = page.check_copyright_section_is_visible()
         assert copyright_section, "The Copyright section is not visible"
+
+    @allure.title("TC 02.01.35 - Check Copyright text is present in the DOM tree on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_35_check_presence_of_copyright_text_on_pages(self, driver, URL):
+        """Checks if Copyright text is present in the DOM tree on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        copyright_text = page.check_copyright_text_presence()
+        assert copyright_text, "The Copyright text is not present in the DOM tree"
 
     @allure.title("TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -271,3 +289,12 @@ class TestFooter:
         copyright_span_text = copyright_span.text
         assert copyright_span_text == "Copyright © 2013-present Magento, Inc. All rights reserved.",\
             "Text of Copyright section is not correct"
+
+    @allure.title("TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_38_check_presence_of_subscribe_section_on_pages(self, driver, URL):
+        """Checks if Subscribe section is present in the DOM tree on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_section = page.check_subscribe_section_presence()
+        assert subscribe_section, "The Subscribe section is not present in the DOM tree"
