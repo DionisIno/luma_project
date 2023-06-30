@@ -146,7 +146,7 @@ class TestRegisteredCustomers:
 
     @allure.title('TC 03.01.18 Verify Email field for correct email format')
     def test_03_01_18_email_field_for_correct_email_format(self, driver, sign_in_page):
-        """Check if the entered value is masked in password field"""
+        """Check error message for incorrect email format in email field"""
         sign_in_page.fill_in_email_field(credentials['incorrect_email'])
         email = sign_in_page.get_email_field_attribute('value')
         invalid_email = sign_in_page.is_valid_email(email)

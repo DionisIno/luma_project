@@ -52,3 +52,8 @@ class ForgotYourPasswordPage(BasePage):
     def get_forgot_psw_email_field_attribute(self, attribute):
         """This method gets the entered value from Email field"""
         return self.check_forgot_psw_email_field_is_clickable().get_attribute(attribute)
+
+    @allure.step('Check FYP captcha input field is clickable')
+    def check_forgot_psw_captcha_field_is_clickable(self):
+        """This method verifies if captcha field is clickable"""
+        return self.element_is_clickable(self.locators.FORGOT_YOUR_PASSWORD_CAPTCHA)

@@ -1,4 +1,4 @@
-import time
+import re
 from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
@@ -320,3 +320,10 @@ class BasePage:
         input_field.clear()
         input_field.send_keys(value)
         return input_field
+
+    @allure.step('Check Email field for correct email format')
+    def is_valid_email(self, email):
+        """This method is validation Email field for correct email format"""
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        valid_email = re.match(pattern, email)
+        return valid_email is not None
