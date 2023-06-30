@@ -276,8 +276,17 @@ class TestFooter:
         """Checks if Copyright text is present in the DOM tree on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        copyright_text = page.check_copyright_text_presence()
-        assert copyright_text, "The Copyright text is not present in the DOM tree"
+        copyright_span = page.check_copyright_text_presence()
+        assert copyright_span, "The Copyright text is not present in the DOM tree"
+
+    @allure.title("TC 02.01.36 - Check display of Copyright text on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_36_check_visibility_of_write_for_us_link_on_pages(self, driver, URL):
+        """Checks if Copyright text is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        copyright_span = page.check_text_of_copyright_section_is_visible()
+        assert copyright_span, "The Copyright text is not visible"
 
     @allure.title("TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -299,6 +308,15 @@ class TestFooter:
         subscribe_section = page.check_subscribe_section_presence()
         assert subscribe_section, "The Subscribe section is not present in the DOM tree"
 
+    @allure.title("TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_39_check_visibility_of_subscribe_section_on_pages(self, driver, URL):
+        """Checks if Subscribe section is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_section = page.check_subscribe_section_is_visible()
+        assert subscribe_section, "The Subscribe section is not visible"
+
     @allure.title("TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_40_check_presence_of_subscribe_button_on_pages(self, driver, URL):
@@ -307,6 +325,15 @@ class TestFooter:
         page.open()
         subscribe_button = page.check_subscribe_button_presence()
         assert subscribe_button, "The Subscribe Button is not present in the DOM tree"
+
+    @allure.title("TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_41_check_visibility_of_subscribe_button_on_pages(self, driver, URL):
+        """Checks if Subscribe Button is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_button = page.check_subscribe_button_is_visible()
+        assert subscribe_button, "The Subscribe Button is not visible"
 
     @allure.title("TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree "
                   "on each page specified in DATA_1")
@@ -327,6 +354,3 @@ class TestFooter:
         page.open()
         subscribe_email_field = page.check_subscribe_email_field_presence()
         assert subscribe_email_field, "Email field in Subscribe section is not present in the DOM tree"
-
-
-
