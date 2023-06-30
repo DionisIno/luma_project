@@ -130,6 +130,21 @@ class FooterPage(BasePage):
         """Checks Subscribe Button is visible"""
         return self.element_is_visible(self.footer_locators.SUBSCRIBE_BUTTON)
 
+    @allure.step("Check text on Subscribe Button is visible on the page")
+    def check_subscribe_button_text_is_visible(self):
+        """Checks text on Subscribe Button is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_BUTTON_TEXT)
+
+    @allure.step("Check Subscribe Email Field is visible on the page")
+    def check_subscribe_email_field_is_visible(self):
+        """Checks Subscribe Email Field is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)
+
+    @allure.step("Check placeholder in Subscribe Email Field is visible on the page")
+    def check_placeholder_in_subscribe_email_field_is_visible(self):
+        """Checks placeholder in Subscribe Email Field is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER)
+
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
         """Checks Search Terms link clickability"""

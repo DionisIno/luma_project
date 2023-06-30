@@ -345,6 +345,15 @@ class TestFooter:
         subscribe_button_text = page.check_subscribe_button_text_presence()
         assert subscribe_button_text, "Text on Subscribe Button is not present in the DOM tree"
 
+    @allure.title("TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_45_check_visibility_of_subscribe_button_text_on_pages(self, driver, URL):
+        """Checks if text on Subscribe Button is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_button_text = page.check_subscribe_button_text_is_visible()
+        assert subscribe_button_text, "The text on Subscribe Button is not visible"
+
     @allure.title("TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -354,3 +363,21 @@ class TestFooter:
         page.open()
         subscribe_email_field = page.check_subscribe_email_field_presence()
         assert subscribe_email_field, "Email field in Subscribe section is not present in the DOM tree"
+
+    @allure.title("TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_48_check_visibility_of_subscribe_email_field_on_pages(self, driver, URL):
+        """Checks if Subscribe Email Field is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_email_field = page.check_subscribe_email_field_is_visible()
+        assert subscribe_email_field, "The Subscribe Email Field is not visible"
+
+    @allure.title("TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_50_check_visibility_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
+        """Checks if placeholder in Subscribe Email Field is visible on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_email_field_placeholder = page.check_placeholder_in_subscribe_email_field_is_visible()
+        assert subscribe_email_field_placeholder, "The placeholder in Subscribe Email Field is not visible"
