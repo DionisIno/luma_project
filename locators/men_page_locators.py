@@ -37,3 +37,8 @@ class MenPagePromoLocators:
     LUMA_SHORTS_TITLE = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[1]/span[1]/strong')
     LUMA_SHORTS_TITLE_2 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[1]/span[1]/span[1]')
     LUMA_SHORTS_TITLE_3 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[1]/span[1]/span[2]')
+    LUMA_TEES_BLOCK = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[2]')
+    LUMA_TEES_BLOCK_IMG = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[2]/span[2]/img')
+    LUMA_TEES_TITLE = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[2]/span[1]/strong')
+    LUMA_TEES_TITLE_2 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[2]/span[1]/span[1]')
+    LUMA_TEES_TITLE_3 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[2]/a[2]/span[1]/span[2]')

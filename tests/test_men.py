@@ -213,3 +213,51 @@ class TestMenPagePromoBlock:
         page.open()
         current_page = page.verify_block_shorts_link_redirects_to_a_correct_page()
         assert current_page, "New page isn't open"
+
+    @allure.title("TC 14.06.27 Verify the visibility of 'Luma tees' promo block.")
+    def test_tc_14_06_27(self, driver):
+        """Verify that the block 'Luma tees' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_tees = page.check_block_tees_display()
+        assert block_tees is True, "The element is not visible"
+
+    @allure.title("TC 14.06.28 Verify the visibility of the image in the 'Luma tees' promo block.")
+    def test_tc_14_06_28(self, driver):
+        """Verify that the image in the block 'Luma tees' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_tees_image = page.check_block_tees_image_display()
+        assert block_tees_image == MenPageImageURLS.LUMA_TEES_IMG_URL, "The image is not correct"
+
+    @allure.title("TC 14.06.29 Verify that the 'Luma tees' text is visible.")
+    def test_tc_14_06_29(self, driver):
+        """Verify that text-1 in 'Luma tees' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_tees_text_1 = page.verify_block_tees_text_1()
+        assert block_tees_text_1 == "Luma tees", "The text is not correct"
+
+    @allure.title("TC 14.06.30 Verify that the 'Grab a tee or two!' text is visible.")
+    def test_tc_14_06_30(self, driver):
+        """Verify that text-2 in 'Luma tees' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_tees_text_2 = page.verify_block_tees_text_2()
+        assert block_tees_text_2 == "Grab a tee or two!", "The text is not correct"
+
+    @allure.title("TC 14.06.31 Verify that the 'Shop Tees' text is visible.")
+    def test_tc_14_06_31(self, driver):
+        """Verify that text-3 in 'Luma tees' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_tees_text_3 = page.verify_block_tees_text_3()
+        assert block_tees_text_3 == "Shop Tees", "The text is not correct"
+
+    @allure.title("TC 14.06.32 Verify the click on the block 'Luma tees' redirects to a correct page.")
+    def test_tc_14_06_32(self, driver):
+        """Verify that the click on the block 'Luma tees' correctly redirects to a new webpage"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_block_tees_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open"
