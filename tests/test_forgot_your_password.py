@@ -1,9 +1,11 @@
 import pytest
 import allure
+import random
+import string
 
-from locators.forgot_your_password_locators import ForgotYourPasswordPageLocators
+
 from pages.forgot_your_password_page import ForgotYourPasswordPage
-from data.forgot_your_password_data import forgot_your_password_data
+from data.forgot_your_password_data import forgot_your_password_data, forgot_your_password_errors
 from data.data_urls import FORGOT_YOUR_PASSWORD_URL
 from data.credentials import credentials
 
@@ -62,8 +64,33 @@ class TestForgotYourPassword:
             "Error: Email field style doesn't change on activation"
 
     @allure.title('TC 17.01.07 Verify displayed email matches the entered email in FYP Email field')
-    def test_17_01_07_value_in_email_matches(self, driver, forgot_psw_page):
+    def test_17_01_07_displayed_value_in_email_field_matches_entered(self, driver, forgot_psw_page):
         """Check if the displayed email matches the entered email in Email field"""
         forgot_psw_page.fill_in_forgot_psw_email_field(credentials['email'])
         displayed_email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
+
+    @allure.title('TC 03.01.08 Verify Email field for correct email format')
+    def test_03_01_08_email_field_for_correct_email_format(self, driver, forgot_psw_page):
+        """Check error message for incorrect email format in email field"""
+        forgot_psw_page.fill_in_forgot_psw_email_field(credentials['incorrect_email'])
+        email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')
+        invalid_email = forgot_psw_page.is_valid_email(email)
+        if invalid_email:
+            error_message = forgot_psw_page.get_error_message()
+            assert error_message == forgot_your_password_errors['incorrect_email_format_msg'], \
+                "The error message is incorrect or missing"
+
+    @allure.title('TC 17.01.09 Verify FYP captcha input field is present')
+    def test_17_01_09_email_field_is_present(self, driver, forgot_psw_page):
+        """Check if the captcha input field is present"""
+        captcha_input = forgot_psw_page.check_forgot_psw_captcha_field_is_clickable()
+        assert captcha_input.is_displayed(), "The captcha input field is not displayed"
+
+    @allure.title('TC 17.01.10 Verify FYP captcha input field is correct format and clickable')
+    def test_17_01_10_captcha_field_is_correct_format_and_clickable(self, driver, forgot_psw_page):
+        """Check if the captcha input is of correct format (input-text) and clickable"""
+        captcha_input = forgot_psw_page.check_forgot_psw_captcha_field_is_clickable()
+        assert "text" in captcha_input.get_attribute("type") \
+               and captcha_input.is_enabled(), \
+            "The captcha input field does not accept text or is not clickable"
