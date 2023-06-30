@@ -94,3 +94,29 @@ class TestForgotYourPassword:
         assert "text" in captcha_input.get_attribute("type") \
                and captcha_input.is_enabled(), \
             "The captcha input field does not accept text or is not clickable"
+
+    @allure.title('TC 17.01.11 Verify FYP captcha input field is appropriately labeled')
+    def test_17_01_11_captcha_field_is_appropriately_labeled(self, driver, forgot_psw_page):
+        """Check if Email field is appropriately labeled """
+        captcha_label = forgot_psw_page.check_forgot_psw_captcha_label()
+        captcha_asterisk = forgot_psw_page.check_forgot_psw_captcha_asterisk()
+        assert captcha_asterisk is not None \
+               and captcha_label.text == forgot_your_password_data["captcha_field_label"], \
+            "The captcha label or asterisk is not present for captcha field"
+
+    @allure.title('TC 17.01.12 Verify FYP Email field highlighting on click')
+    def test_17_01_12_captcha_field_gets_highlighted_when_clicked(self, driver, forgot_psw_page):
+        """
+        Check the captcha field is activated with a cursor and gets highlighted when clicked
+        """
+        initial_box_shadow, active_box_shadow = forgot_psw_page.activate_forgot_psw_captcha_field_and_check_style()
+        assert active_box_shadow != initial_box_shadow, \
+            "Error: captcha input field style doesn't change on activation"
+
+    @allure.title('TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field')
+    def test_17_01_13_displayed_value_in_captcha_field_matches_entered(self, driver, forgot_psw_page):
+        """Check if the displayed captcha matches the entered random value in the captcha field"""
+        captcha = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(6))
+        forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
+        displayed_captcha = forgot_psw_page.get_forgot_psw_captcha_field_attribute('value')
+        assert displayed_captcha == captcha, "Email value in the field doesn't match the entered email"
