@@ -70,8 +70,8 @@ class TestForgotYourPassword:
         displayed_email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')
         assert displayed_email == credentials['email'], "Email value in the field doesn't match the entered email"
 
-    @allure.title('TC 03.01.08 Verify Email field for correct email format')
-    def test_03_01_08_email_field_for_correct_email_format(self, driver, forgot_psw_page):
+    @allure.title('TC 17.01.08 Verify Email field for correct email format')
+    def test_17_01_08_email_field_for_correct_email_format(self, driver, forgot_psw_page):
         """Check error message for incorrect email format in email field"""
         forgot_psw_page.fill_in_forgot_psw_email_field(credentials['incorrect_email'])
         email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')

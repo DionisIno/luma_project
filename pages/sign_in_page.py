@@ -1,4 +1,3 @@
-import re
 import allure
 
 from locators.sign_in_page_locators import SingInPageLocators
@@ -96,13 +95,6 @@ class SignInPage(BasePage):
         """
         password_input = self.fill_in_password_field(password)
         return password_input.get_attribute('type')
-
-    @allure.step('Check Email field for correct email format')
-    def is_valid_email(self, email):
-        """This method is validation Email field for correct email format"""
-        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
-        valid_email = re.match(pattern, email)
-        return valid_email is not None
 
     @allure.step('Get error message')
     def get_error_message(self, locator):
