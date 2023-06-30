@@ -235,7 +235,7 @@ class TestMenPagePromoBlock:
         """Verify that text-1 in 'Luma tees' block correctly displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
-        block_tees_text_1 = page.verify_block_shorts_text_1()
+        block_tees_text_1 = page.verify_block_tees_text_1()
         assert block_tees_text_1 == "Luma tees", "The text is not correct"
 
     @allure.title("TC 14.06.30 Verify that the 'Grab a tee or two!' text is visible.")
@@ -243,7 +243,7 @@ class TestMenPagePromoBlock:
         """Verify that text-2 in 'Luma tees' block correctly displayed"""
         page = MenPage(driver, MEN_PAGE_URL)
         page.open()
-        block_tees_text_2 = page.verify_block_shorts_text_2()
+        block_tees_text_2 = page.verify_block_tees_text_2()
         assert block_tees_text_2 == "Grab a tee or two!", "The text is not correct"
 
     @allure.title("TC 14.06.31 Verify that the 'Shop Tees' text is visible.")

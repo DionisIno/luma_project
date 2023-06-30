@@ -231,14 +231,14 @@ class MenPage(BasePage):
         return block_tees_image
 
     @allure.step("Check display of the text-1 'Luma tees' in the 'Luma tees' block on Men page")
-    def verify_block_shorts_text_1(self):
+    def verify_block_tees_text_1(self):
         """This method verifies correct display of the text-1 in the 'Luma tees' block"""
         tees_block_title1 = self.element_is_visible(self.promo_locators.LUMA_TEES_TITLE)
         tees_block_title1_text = tees_block_title1.text
         return tees_block_title1_text
 
     @allure.step("Check display of the text-2 'Grab a tee or two!' in the 'Luma tees' block on Men page")
-    def verify_block_shorts_text_2(self):
+    def verify_block_tees_text_2(self):
         """This method verifies correct display of the text-2 in the 'Luma tees' block"""
         tees_block_title2 = self.element_is_visible(self.promo_locators.LUMA_TEES_TITLE_2)
         tees_block_title2_text = tees_block_title2.text
