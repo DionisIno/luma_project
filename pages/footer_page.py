@@ -120,6 +120,16 @@ class FooterPage(BasePage):
         """Checks text of Copyright section is visible"""
         return self.element_is_visible(self.footer_locators.COPYRIGHT_TEXT)
 
+    @allure.step("Check Subscribe section is visible on the page")
+    def check_subscribe_section_is_visible(self):
+        """Checks Subscribe section is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_SECTION)
+
+    @allure.step("Check Subscribe Button is visible on the page")
+    def check_subscribe_button_is_visible(self):
+        """Checks Subscribe Button is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_BUTTON)
+
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
         """Checks Search Terms link clickability"""
