@@ -373,6 +373,16 @@ class TestFooter:
         subscribe_email_field = page.check_subscribe_email_field_is_visible()
         assert subscribe_email_field, "The Subscribe Email Field is not visible"
 
+    @allure.title("TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree "
+                  "on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_49_check_presence_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
+        """Checks if placeholder in Email field is present in the DOM tree on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_email_field_placeholder = page.check_placeholder_presence_in_subscribe_email_field()
+        assert subscribe_email_field_placeholder, "Placeholder in Email field is not present in the DOM tree"
+
     @allure.title("TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_50_check_visibility_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
