@@ -21,6 +21,13 @@ class ShoppingCartPageLocators:
     ORDER_TOTAL = (By.CSS_SELECTOR, '.grand.totals > td > strong > span')
     CHECKOUT_BUTTON = (By.CSS_SELECTOR, "button.action.primary.checkout span")
     DELETE_BUTTON = (By.CSS_SELECTOR, "a.action.action-delete")
+    TABLE_HEADERS = {
+        "Item": (By.CSS_SELECTOR, 'th.col.item span'),
+        "Price": (By.CSS_SELECTOR, 'th.col.price span'),
+        "Qty": (By.CSS_SELECTOR, 'th.col.qty span'),
+        "Subtotal": (By.CSS_SELECTOR, 'th.col.subtotal span')
+    }
+
 
 
 
