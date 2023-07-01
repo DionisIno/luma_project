@@ -74,6 +74,11 @@ class FooterPage(BasePage):
         """Checks Email field in Subscribe section is present in the DOM tree"""
         return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)
 
+    @allure.step("Check text Email field in Subscribe section is present in the DOM tree")
+    def check_placeholder_presence_in_subscribe_email_field(self):
+        """Checks placeholder in Email field in Subscribe section is present in the DOM tree"""
+        return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD).get_attribute('placeholder')
+
     @allure.step("Check Footer is visible on the page")
     def check_footer_is_visible(self):
         """Checks Footer is visible"""
