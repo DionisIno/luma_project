@@ -102,6 +102,15 @@ class TestCreateAnAccount:
                and before_activate != after_activate, \
             "Email label is not present or not displayed or email field is not highlighted when clicked"
 
+    @allure.title('TC 04_01_12 Verify Email input field highlighting on click')
+    def test_04_01_12_email_field_is_highlighted(self, create_account_page):
+        """ Verify that Email input field highlighted when clicked"""
+        email_input = create_account_page.check_email_input()
+        before_activate, after_activate = create_account_page. \
+            check_email_field_style_before_and_after_click()
+        assert before_activate != after_activate and email_input.is_displayed() and email_input.is_enabled(), \
+            "Email field is not highlighted when clicked"
+
     @allure.title('TC 04_01_13 Verify presence of Password label and the required asterisk')
     def test_04_01_13_password_labeled(self, create_account_page):
         """ Verify presence of Password label and the required asterisk """
@@ -111,7 +120,16 @@ class TestCreateAnAccount:
             check_password_field_style_before_and_after_click_on_label()
         assert password_label.text == create_account_data['password_label'] and asterisk == '"*"'\
             and before_activate != after_activate, \
-            "First name label is not present or not displayed or password field is not highlighted when clicked"
+            "Password label is not present or not displayed or password field is not highlighted when clicked"
+
+    @allure.title('TC 04_01_14 Verify Password input field highlighting on click')
+    def test_04_01_14_password_field_is_highlighted(self, create_account_page):
+        """ Verify that Password input field highlighted when clicked"""
+        password_input = create_account_page.check_password_input()
+        before_activate, after_activate = create_account_page. \
+            check_password_field_style_before_and_after_click()
+        assert before_activate != after_activate and password_input.is_displayed() and password_input.is_enabled(), \
+            "Password field is not highlighted when clicked"
 
     @allure.title('TC 04_01_16 Verify presence of Confirm Password label and the required asterisk')
     def test_04_01_16_confirm_password_labeled(self, create_account_page):
@@ -123,6 +141,16 @@ class TestCreateAnAccount:
         assert confirm_password_label.text == create_account_data['confirm_password_label'] and asterisk == '"*"'\
             and before_activate != after_activate, \
             "First name label is not present or not displayed or confirm password field is not highlighted when clicked"
+
+    @allure.title('TC 04_01_17 Verify Confirm Password input field highlighting on click')
+    def test_04_01_17_confirm_password_field_is_highlighted(self, create_account_page):
+        """ Verify that Confirm Password input field highlighted when clicked"""
+        confirm_password_input = create_account_page.check_password_confirmation_label()
+        before_activate, after_activate = create_account_page. \
+            check_password_field_style_before_and_after_click()
+        assert before_activate != after_activate and \
+               confirm_password_input.is_displayed() and confirm_password_input.is_enabled(), \
+            "Confirm Password field is not highlighted when clicked"
 
     @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):

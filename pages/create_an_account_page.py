@@ -40,6 +40,21 @@ class CreateAccountPage(BasePage):
         """ This method verifies if Password label is visible """
         return self.element_is_visible(self.locators.PASSWORD_LABEL)
 
+    @allure.step('Check Email input field is visible')
+    def check_email_input(self):
+        """ This method verifies if Email input is visible """
+        return self.element_is_visible(self.locators.EMAIL)
+
+    @allure.step('Check Password input field is visible')
+    def check_password_input(self):
+        """ This method verifies if Password input is visible """
+        return self.element_is_visible(self.locators.PASSWORD)
+
+    @allure.step('Check Confirm Password input field is visible')
+    def check_confirm_password_input(self):
+        """ This method verifies if Confirm Password input is visible """
+        return self.element_is_visible(self.locators.PASSWORD_CONFIRMATION)
+
     @allure.step('Check Confirm Password label is visible')
     def check_password_confirmation_label(self):
         """ This method verifies if Confirm Password label is visible """
@@ -89,6 +104,15 @@ class CreateAccountPage(BasePage):
         after_activate = self.check_element_hover_style(self.locators.FIRST_NAME, 'box-shadow')
         return before_activate, after_activate
 
+    @allure.step("Check Email field is highlighted when clicked")
+    def check_email_field_style_before_and_after_click(self):
+        """ This method verifies if Email input field is highlighted when clicked """
+        before_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        element = self.element_is_visible(self.locators.EMAIL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        return before_activate, after_activate
+
     @allure.step('Check First Name label is highlighted when label is clicked')
     def check_first_name_field_style_before_and_after_click_on_label(self):
         """ This method verifies if First name input field is highlighted when label is clicked"""
@@ -125,6 +149,15 @@ class CreateAccountPage(BasePage):
         after_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
         return before_activate, after_activate
 
+    @allure.step('Check Email label is highlighted when clicked')
+    def check_email_field_style_before_and_after_click(self):
+        """ This method verifies if Email input field is highlighted when clicked"""
+        before_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        element = self.element_is_visible(self.locators.EMAIL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        return before_activate, after_activate
+
     @allure.step('Check Password label is highlighted when label is clicked')
     def check_password_field_style_before_and_after_click_on_label(self):
         """ This method verifies if Password input field is highlighted when label is clicked"""
@@ -134,11 +167,29 @@ class CreateAccountPage(BasePage):
         after_activate = self.check_element_hover_style(self.locators.PASSWORD, 'box-shadow')
         return before_activate, after_activate
 
+    @allure.step('Check Password label is highlighted when clicked')
+    def check_password_field_style_before_and_after_click(self):
+        """ This method verifies if Password input field is highlighted when clicked"""
+        before_activate = self.check_element_hover_style(self.locators.PASSWORD, 'box-shadow')
+        element = self.element_is_visible(self.locators.PASSWORD)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.PASSWORD, 'box-shadow')
+        return before_activate, after_activate
+
     @allure.step('Check Confirm Password label is highlighted when label is clicked')
     def check_confirm_password_field_style_before_and_after_click_on_label(self):
         """ This method verifies if Confirm Password input field is highlighted when label is clicked"""
         before_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
         element = self.element_is_visible(self.locators.PASSWORD_CONFIRMATION_LABEL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
+        return before_activate, after_activate
+
+    @allure.step('Check Confirm Password label is highlighted when clicked')
+    def check_confirm_password_field_style_before_and_after_click(self):
+        """ This method verifies if Confirm Password input field is highlighted when clicked"""
+        before_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
+        element = self.element_is_visible(self.locators.PASSWORD_CONFIRMATION)
         element.click()
         after_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
         return before_activate, after_activate
