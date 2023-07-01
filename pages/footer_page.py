@@ -143,7 +143,7 @@ class FooterPage(BasePage):
     @allure.step("Check placeholder in Subscribe Email Field is visible on the page")
     def check_placeholder_in_subscribe_email_field_is_visible(self):
         """Checks placeholder in Subscribe Email Field is visible"""
-        return self.element_is_visible(self.footer_locators.SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER)
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_EMAIL_FIELD).get_attribute('placeholder')
 
     @allure.step("Check Search Terms link is clickable")
     def check_search_terms_link_clickability(self):
