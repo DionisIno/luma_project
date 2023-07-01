@@ -26,7 +26,7 @@ class TestCreateAnAccount:
     def test_04_01_02_personal_information_heading(self, create_account_page):
         """ Verify that Personal Information heading is present """
         personal_information_legend = create_account_page.check_personal_information_label()
-        assert personal_information_legend.text == "Personal Information", \
+        assert personal_information_legend.text == create_account_data['personal_information_label'], \
             "Personal information legend is incorrect or not present"
 
     @allure.title('TC 04_01_03 Verify presence of First name label and the required asterisk')
@@ -34,7 +34,7 @@ class TestCreateAnAccount:
         """ Verify presence of First name label and the required asterisk """
         firstname_label = create_account_page.check_firstname_label()
         asterisk = create_account_page.check_firstname_label_asteriks()
-        assert firstname_label.text == "First Name" and asterisk == '"*"', \
+        assert firstname_label.text == create_account_data['firstname_label'] and asterisk == '"*"', \
             "First name label is not present or not displayed"
 
     @allure.title('TC 04_01_04 Verify First name input field highlighting on label click')
@@ -56,7 +56,7 @@ class TestCreateAnAccount:
         """ Verify presence of Last name label and the required asterisk """
         lastname_label = create_account_page.check_lastname_label()
         asterisk = create_account_page.check_firstname_label_asteriks()
-        assert lastname_label.text == "Last Name" and asterisk == '"*"', \
+        assert lastname_label.text == create_account_data['lastname_label'] and asterisk == '"*"', \
             "Last name label is not present or not displayed"
 
     @allure.title('TC 04_01_07 Verify Last name input field highlighting on label click')
@@ -71,7 +71,6 @@ class TestCreateAnAccount:
         """ Verify that Last name input field highlighted when clicked"""
         before_activate, after_activate = create_account_page. \
             check_last_name_field_style_before_and_after_click()
-        # print("click:", before_activate, after_activate)
         assert before_activate != after_activate, "Last name field is not highlighted when clicked"
 
     @allure.title('TC 04_01_09 Verify checkbox is present and unchecked')
@@ -80,9 +79,16 @@ class TestCreateAnAccount:
         sign_up_checkbox = create_account_page.check_sign_up_checkbox_label()
         flag_checkbox = create_account_page.check_checkbox_flag()
         # flag_checkbox = sign_up_checkbox.is_selected()
-        assert sign_up_checkbox.text == "Sign Up for Newsletter" \
+        assert sign_up_checkbox.text == create_account_data['sign_up_label'] \
             and flag_checkbox is False, \
             "Sign Up for Newsletter checkbox is not presented or not unchecked"
+
+    @allure.title('TC 04_01_09 Verify checkbox is present and unchecked')
+    def test_04_01_10_sign_in_information_label(self, create_account_page):
+        """ Verify that checkbox is present and unchecked"""
+        sign_in_information_label = create_account_page.check_sign_in_information_label()
+        assert sign_in_information_label.text == create_account_data["sign_in_information_label"], \
+            "Sign in Information label is not presented or not visible"
 
     @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):

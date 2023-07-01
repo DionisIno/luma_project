@@ -1,10 +1,19 @@
 import allure
+import pytest
+
 from data.data_urls import MAIN_PAGE_URL, CREATE_ACCOUNT_PAGE_URL, SIGN_IN_URL, MEN_BOTTOMS_URL, \
     MEN_BOTTOMS_PANTS_URL, MEN_BOTTOMS_SHORTS_URL, MEN_PAGE_URL, MEN_TOPS_URL, MEN_JACKETS_URL, MEN_HOODIES_URL, \
     MEN_TEES_URL, MEN_TANKS_URL, MY_ACCOUNT_URL, MY_WISHLIST_URL, SIGN_OUT_URL, WOMEN_TOPS_URL, WOMEN_JACKETS_URL, \
     WOMEN_HOODIES_URL, WOMEN_TEES_URL, WOMEN_BRAS_TANKS_URL, WOMEN_BOTTOMS_URL, WOMEN_BOTTOMS_PANTS_URL, \
     WOMEN_BOTTOMS_SHORTS_URL
 from pages.header_page import HeaderPage
+
+
+@pytest.fixture(scope="function")
+def header_page(driver):
+    header_page = HeaderPage(driver, MAIN_PAGE_URL)
+    header_page.open()
+    return header_page
 
 
 @allure.epic('Test Header')
@@ -149,6 +158,12 @@ class TestHeader:
         page.open()
         link = page.link_what_is_new_is_visible_and_interactive()
         assert link, "The link 'What's new' isn't visible and non-interactive"
+
+    @allure.title('TC 01.03.03 display and interactivity of the "Women" section')
+    def test_tc_01_03_03_display_and_interactivity_of_the_woman_section(self, header_page):
+        """Verify that the section Women in the header is visible and interactive"""
+        dropdown_items = header_page.check_women_subsection()
+        assert dropdown_items.is_displayed(), "'Women' section in the header isn't displayed "
 
     @allure.title('TC 01.03.04 correct redirection of the link "Women"')
     def test_tc_01_03_04_correct_redirection_of_the_link_women(self, driver):
