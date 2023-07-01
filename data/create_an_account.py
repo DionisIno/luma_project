@@ -5,6 +5,7 @@ create_account_data = {
     "firstname_label": 'First Name',
     "lastname_label": 'Last Name',
     "sign_up_label": 'Sign Up for Newsletter',
+    "sign_in_information_label": 'Sign-in Information',
     "email_label": 'Email',
     "password_label": 'Password',
     "confirm_password_label": 'Confirm Password',

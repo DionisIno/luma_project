@@ -1,5 +1,6 @@
 import allure
 
+from locators.common_locators import CommonLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from pages.base_page import BasePage
 
@@ -7,11 +8,12 @@ from pages.base_page import BasePage
 @allure.epic('Create An Account Page')
 class CreateAccountPage(BasePage):
     locators = CreateAccountPageLocators
+    common_locators = CommonLocators
 
     @allure.step('Check Create An Account h1 header is visible')
     def check_h1_header(self):
         """ This method verifies if h1 header is visible on the page """
-        return self.element_is_visible(self.locators.CREATE_AN_ACCOUNT_HEADER)
+        return self.element_is_visible(self.common_locators.HEADER_PAGE)
 
     @allure.step('Check Personal Informatio label is visible')
     def check_personal_information_label(self):
@@ -91,10 +93,10 @@ class CreateAccountPage(BasePage):
         """ This method verifies if Sign Up checkbox label is visible """
         return self.element_is_visible(self.locators.SIGN_UP_CHECKBOX_LABEL)
 
-    # def get_active_element(self):
-    #     """ This method gets active elements using js """
-    #     get_active_script = "return document.activeElement"
-    #     return self.driver.execute_script(get_active_script)
+    @allure.step('Check Sign In Information label is visible')
+    def check_sign_in_information_label(self):
+        """ This method verifies if Sign in information label is visible """
+        return self.element_is_visible(self.locators.SIGN_IN_INFORMATION_LABEL)
 
     @allure.step('Get checked property of checkbox using js')
     def get_checkbox_element(self):

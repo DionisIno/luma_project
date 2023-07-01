@@ -319,6 +319,13 @@ class HeaderPage(BasePage):
         self.element_is_visible(self.header_locators.SIGN_OUT).click()
         return self.check_common_header()
 
+    @allure.step('Check the visibility of the "Women" section')
+    def check_women_subsection(self):
+        """This method moves the cursor over the 'Women' section and returns \
+        subsection contains 'Tops', 'Bottoms' subsections"""
+        self.action_move_to_element(self.element_is_visible(self.header_locators.WOMEN_SECTION))
+        return self.element_is_visible(self.header_locators.WOMEN_SECTION)
+
     @allure.step('Check the "Tops" link of the "Women" section')
     def check_women_tops_subsection(self):
         """This method moves the cursor over the 'Women' section, then over the 'Tops' subsection and returns \

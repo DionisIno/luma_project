@@ -13,6 +13,7 @@ class CreateAccountPageLocators:
     LAST_NAME = (By.ID, "lastname")
     SIGN_UP_CHECKBOX = (By.ID, "is_subscribed")
     SIGN_UP_CHECKBOX_LABEL = (By.CSS_SELECTOR, "label[for='is_subscribed']")
+    SIGN_IN_INFORMATION_LABEL = (By.CSS_SELECTOR, ".fieldset.create.account legend")
     EMAIL = (By.ID, 'email_address')
     PASSWORD = (By.CSS_SELECTOR, '[id="password"]')
     PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, '[id="password-confirmation"]')
