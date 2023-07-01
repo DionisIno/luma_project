@@ -30,6 +30,21 @@ class CreateAccountPage(BasePage):
         """ This method verifies if Last Name label is visible """
         return self.element_is_visible(self.locators.LAST_NAME_LABEL)
 
+    @allure.step('Check Email label is visible')
+    def check_email_label(self):
+        """ This method verifies if Email label is visible """
+        return self.element_is_visible(self.locators.EMAIL_LABEL)
+
+    @allure.step('Check Password label is visible')
+    def check_password_label(self):
+        """ This method verifies if Password label is visible """
+        return self.element_is_visible(self.locators.PASSWORD_LABEL)
+
+    @allure.step('Check Confirm Password label is visible')
+    def check_password_confirmation_label(self):
+        """ This method verifies if Confirm Password label is visible """
+        return self.element_is_visible(self.locators.PASSWORD_CONFIRMATION_LABEL)
+
     @allure.step('Get property of the pseudo-class for required elements')
     def check_element_asteriks(self):
         """ This method gets property 'content' of the ':after' pseudo-class """
@@ -46,6 +61,24 @@ class CreateAccountPage(BasePage):
         """ This method verifies if required last name field is marked with asterisk """
         lastname_label = self.check_lastname_label()
         return self.driver.execute_script(self.check_element_asteriks(), lastname_label)
+
+    @allure.step('Check Email label is marked with asterisk')
+    def check_email_label_asteriks(self):
+        """ This method verifies if required email label is marked with asterisk """
+        email_label = self.check_email_label()
+        return self.driver.execute_script(self.check_element_asteriks(), email_label)
+
+    @allure.step('Check Password label is marked with asterisk')
+    def check_password_label_asteriks(self):
+        """ This method verifies if required Password label is marked with asterisk """
+        password_label = self.check_password_label()
+        return self.driver.execute_script(self.check_element_asteriks(), password_label)
+
+    @allure.step('Check Confirm Password label is marked with asterisk')
+    def check_confirm_password_label_asteriks(self):
+        """ This method verifies if required Confirm Passworde label is marked with asterisk """
+        confirm_password_label = self.check_firstname_label()
+        return self.driver.execute_script(self.check_element_asteriks(), confirm_password_label)
 
     @allure.step('Check First Name field is highlighted when clicked')
     def check_first_name_field_style_before_and_after_click(self):
@@ -83,10 +116,37 @@ class CreateAccountPage(BasePage):
         after_activate = self.check_element_hover_style(self.locators.LAST_NAME, 'box-shadow')
         return before_activate, after_activate
 
-    # @allure.step('Check First Name field is clickable')
-    # def check_first_name_field_is_clickable(self):
-    #     """This method verifies if First Name field is clickable"""
-    #     return self.element_is_clickable(self.locators.FIRST_NAME)
+    @allure.step('Check Email label is highlighted when label is clicked')
+    def check_email_field_style_before_and_after_click_on_label(self):
+        """ This method verifies if Email input field is highlighted when label is clicked"""
+        before_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        element = self.element_is_visible(self.locators.EMAIL_LABEL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.EMAIL, 'box-shadow')
+        return before_activate, after_activate
+
+    @allure.step('Check Password label is highlighted when label is clicked')
+    def check_password_field_style_before_and_after_click_on_label(self):
+        """ This method verifies if Password input field is highlighted when label is clicked"""
+        before_activate = self.check_element_hover_style(self.locators.PASSWORD, 'box-shadow')
+        element = self.element_is_visible(self.locators.PASSWORD_LABEL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.PASSWORD, 'box-shadow')
+        return before_activate, after_activate
+
+    @allure.step('Check Confirm Password label is highlighted when label is clicked')
+    def check_confirm_password_field_style_before_and_after_click_on_label(self):
+        """ This method verifies if Confirm Password input field is highlighted when label is clicked"""
+        before_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
+        element = self.element_is_visible(self.locators.PASSWORD_CONFIRMATION_LABEL)
+        element.click()
+        after_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
+        return before_activate, after_activate
+
+    # @allure.step('Check Email label is clickable')
+    # def check_email_field_is_clickable(self):
+    #     """This method verifies if Email label is clickable"""
+    #     return self.element_is_clickable(self.locators.EMAIL_LABEL)
 
     @allure.step('Check Sign Up checkbox label is visible')
     def check_sign_up_checkbox_label(self):

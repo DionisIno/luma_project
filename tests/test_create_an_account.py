@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 
@@ -83,12 +85,44 @@ class TestCreateAnAccount:
             and flag_checkbox is False, \
             "Sign Up for Newsletter checkbox is not presented or not unchecked"
 
-    @allure.title('TC 04_01_09 Verify checkbox is present and unchecked')
+    @allure.title('TC 04_01_10 Verify Sign in Information heading')
     def test_04_01_10_sign_in_information_label(self, create_account_page):
-        """ Verify that checkbox is present and unchecked"""
+        """ Verify that Sign in Information heading is present"""
         sign_in_information_label = create_account_page.check_sign_in_information_label()
         assert sign_in_information_label.text == create_account_data["sign_in_information_label"], \
             "Sign in Information label is not presented or not visible"
+
+    @allure.title('TC 04_01_11 Verify presence of email label and the required asterisk')
+    def test_04_01_11_email_labeled(self, create_account_page):
+        """ Verify presence of Email label and the required asterisk """
+        email_label = create_account_page.check_email_label()
+        asterisk = create_account_page.check_email_label_asteriks()
+        before_activate, after_activate = create_account_page.check_email_field_style_before_and_after_click_on_label()
+        assert email_label.text == create_account_data['email_label'] and asterisk == '"*"' \
+               and before_activate != after_activate, \
+            "Email label is not present or not displayed or email field is not highlighted when clicked"
+
+    @allure.title('TC 04_01_13 Verify presence of Password label and the required asterisk')
+    def test_04_01_13_password_labeled(self, create_account_page):
+        """ Verify presence of Password label and the required asterisk """
+        password_label = create_account_page.check_password_label()
+        asterisk = create_account_page.check_password_label_asteriks()
+        before_activate, after_activate = create_account_page.\
+            check_password_field_style_before_and_after_click_on_label()
+        assert password_label.text == create_account_data['password_label'] and asterisk == '"*"'\
+            and before_activate != after_activate, \
+            "First name label is not present or not displayed or password field is not highlighted when clicked"
+
+    @allure.title('TC 04_01_16 Verify presence of Confirm Password label and the required asterisk')
+    def test_04_01_16_confirm_password_labeled(self, create_account_page):
+        """ Verify presence of Confirm Password label and the required asterisk """
+        confirm_password_label = create_account_page.check_password_confirmation_label()
+        asterisk = create_account_page.check_confirm_password_label_asteriks()
+        before_activate, after_activate = create_account_page.\
+            check_confirm_password_field_style_before_and_after_click_on_label()
+        assert confirm_password_label.text == create_account_data['confirm_password_label'] and asterisk == '"*"'\
+            and before_activate != after_activate, \
+            "First name label is not present or not displayed or confirm password field is not highlighted when clicked"
 
     @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):
