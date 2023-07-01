@@ -15,9 +15,8 @@ class FooterPageLocators:
     SEARCH_TERMS_LINK = (By.CSS_SELECTOR, ".footer > :nth-child(1) > a")
     SUBSCRIBE_BUTTON = (By.CSS_SELECTOR, '.block.newsletter .actions')
     SUBSCRIBE_BUTTON_TEXT = (By.CSS_SELECTOR, '.block.newsletter .actions span')
-    SUBSCRIBE_EMAIL_FIELD = (By.CSS_SELECTOR, '.field.newsletter')
+    SUBSCRIBE_EMAIL_FIELD = (By.CSS_SELECTOR, '.field.newsletter input')
     SUBSCRIBE_EMAIL_FIELD_ICON = (By.CSS_SELECTOR, 'div[class="control"]')
-    SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER = (By.CSS_SELECTOR, 'input[placeholder="Enter your email address"]')
     SUBSCRIBE_SECTION = (By.CSS_SELECTOR, '.block.newsletter')
     WRITE_FOR_US_LINK = (By.CSS_SELECTOR, '.widget > ul > li > a')
 

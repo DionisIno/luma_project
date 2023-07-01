@@ -381,3 +381,13 @@ class TestFooter:
         page.open()
         subscribe_email_field_placeholder = page.check_placeholder_in_subscribe_email_field_is_visible()
         assert subscribe_email_field_placeholder, "The placeholder in Subscribe Email Field is not visible"
+
+    @allure.title("TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_51_check_text_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
+        """Checks if text of placeholder in Subscribe Email Field is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_email_field_placeholder_text = page.check_placeholder_in_subscribe_email_field_is_visible()
+        assert subscribe_email_field_placeholder_text == "Enter your email address",\
+            "Text of placeholder in Subscribe Email Field is not correct"
