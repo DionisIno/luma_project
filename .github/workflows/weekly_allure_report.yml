@@ -3,7 +3,6 @@ name: Weekly Allure Report
 on:
   schedule:
     - cron: '0 0 * * 0'  # запуск каждое воскресенье в полночь
-  workflow_dispatch:
 
 jobs:
   build:
@@ -27,40 +26,20 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      - name: Run pytest on all files
+      - name: Start X-server
         run: |
-          pytest --alluredir=allure_result
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
+          sleep 1
+
+      - name: Run Pytest
+        run: |
+          DISPLAY=:99 pytest -s -v --alluredir=allure_result
         continue-on-error: true
 
-      - name: Get Allure history
-        uses: actions/checkout@v3
-        if: always()
+      - name: Copy Allure Reports to gh-pages branch
+        run: |
+          mkdir gh-pages
+          cp -R allure_result/* gh-pages/
         continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Allure Report action
-        uses: simple-elf/allure-report-action@v1.6
-        if: always()
-        with:
-          allure_results: allure_result
-          allure_report: allure-report
-          gh_pages: gh-pages
-          allure_history: allure-history
-          keep_reports: 20
-          github_run_num: ${{ github.run_number }}
-          github_run_id: ${{ github.run_id }}
-          github_repo: ${{ github.repository }}
-          github_repo_owner: ${{ github.repository_owner }}
-
-      - name: Commit Allure report
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.MY_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-report
-          BUILD_SCRIPT: |
-            mkdir allure-report
-            cp -R allure_result/* allure-report/
