@@ -5,11 +5,11 @@
     "name" : "Test defects",
     "statistic" : {
       "failed" : 0,
-      "broken" : 401,
+      "broken" : 407,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 401
+      "total" : 407
     }
   } ]
 }
