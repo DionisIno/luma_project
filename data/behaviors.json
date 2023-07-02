@@ -1,0 +1,5634 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Create An Account",
+    "children" : [ {
+      "name" : "TC 04_01_01 Verify Create An Account Page h1 Header",
+      "uid" : "30e1ca7cee55c702",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255840772,
+        "stop" : 1688255840772,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_02 Verify Personal Information heading",
+      "uid" : "e058a1ef86f0e367",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255842392,
+        "stop" : 1688255842392,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_03 Verify presence of First name label and the required asterisk",
+      "uid" : "4cbfc2b389825186",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255843083,
+        "stop" : 1688255843083,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_04 Verify First name input field highlighting on label click",
+      "uid" : "b7b34b2ce11cfa4b",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255843772,
+        "stop" : 1688255843772,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_05 Verify First name input field highlighting on click",
+      "uid" : "97af8fc004c853dc",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255844461,
+        "stop" : 1688255844461,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_06",
+      "uid" : "b0ddf906e149ff55",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255845152,
+        "stop" : 1688255845152,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_07 Verify Last name input field highlighting on label click",
+      "uid" : "ce6aa068b59c69d",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255845840,
+        "stop" : 1688255845840,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_08 Verify Last name input field highlighting on click",
+      "uid" : "10d4e900a84ffb09",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255846552,
+        "stop" : 1688255846552,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_09 Verify checkbox is present and unchecked",
+      "uid" : "d88ad36bf51cf987",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255847240,
+        "stop" : 1688255847240,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_10 Verify Sign in Information heading",
+      "uid" : "c68a691746d93e8c",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255847927,
+        "stop" : 1688255847927,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_11 Verify presence of email label and the required asterisk",
+      "uid" : "94c2af739054cf40",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255848617,
+        "stop" : 1688255848617,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_12 Verify Email input field highlighting on click",
+      "uid" : "35904cb211bbae5d",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255849303,
+        "stop" : 1688255849303,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_13 Verify presence of Password label and the required asterisk",
+      "uid" : "4490059e9b5c6c4f",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255849991,
+        "stop" : 1688255849991,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_14 Verify Password input field highlighting on click",
+      "uid" : "d67ebe0caf654a38",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255850678,
+        "stop" : 1688255850678,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_16 Verify presence of Confirm Password label and the required asterisk",
+      "uid" : "5142965c1d84bb4a",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255851388,
+        "stop" : 1688255851388,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 04_01_17 Verify Confirm Password input field highlighting on click",
+      "uid" : "6f8caafea7823347",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255852075,
+        "stop" : 1688255852075,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.08 create an account with registered email",
+      "uid" : "6afaa8fb7e44ffa3",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255852763,
+        "stop" : 1688255852763,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.01 create an account with correct data",
+      "uid" : "c05f7c643bbd43d",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688255853452,
+        "stop" : 1688255853452,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.02 create an account with empty first name",
+      "uid" : "b85f435b6de52cd0",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255853453,
+        "stop" : 1688255853453,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.03 create an account with empty last name",
+      "uid" : "3bd5b4399ba05d67",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255854139,
+        "stop" : 1688255854139,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.04 create an account with empty e-mail",
+      "uid" : "133de1913868cc57",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255854828,
+        "stop" : 1688255854828,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.05 create an account with empty password",
+      "uid" : "ce1aa5c0a08d2154",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255855518,
+        "stop" : 1688255855518,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.06 create an account with empty confirm password",
+      "uid" : "948a33ca4a9198c1",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255856230,
+        "stop" : 1688255856230,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test 04.02.07 create an account with incorrect confirm password",
+      "uid" : "e409fecd103baf85",
+      "parentUid" : "6ce152b7404524d631b96f91e1c4223c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255856919,
+        "stop" : 1688255856919,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6ce152b7404524d631b96f91e1c4223c"
+  }, {
+    "name" : "Test Footer",
+    "children" : [ {
+      "name" : "TC 02.01.01 - Check Footer is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "a35611e1522873b1",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255857608,
+        "stop" : 1688255857608,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.01 - Check Footer is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "653d248d31e73ef5",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255858294,
+        "stop" : 1688255858294,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.02 - Check Footer display on each page specified in DATA_1",
+      "uid" : "8dbcec42b2134604",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255858982,
+        "stop" : 1688255858982,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.02 - Check Footer display on each page specified in DATA_1",
+      "uid" : "81ca73908254648c",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255859669,
+        "stop" : 1688255859669,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.03 - Check Search Terms link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "7ec24749c872e5ca",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255860356,
+        "stop" : 1688255860356,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.03 - Check Search Terms link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "f59f88749829dda1",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255861045,
+        "stop" : 1688255861045,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.04 - Check display of Search Terms link on each page specified in DATA_1",
+      "uid" : "983af7abed37ff47",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255861764,
+        "stop" : 1688255861764,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.04 - Check display of Search Terms link on each page specified in DATA_1",
+      "uid" : "c82b81b0c77b6c95",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255862451,
+        "stop" : 1688255862451,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1",
+      "uid" : "145c758744c12dba",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255863139,
+        "stop" : 1688255863139,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.05 - Check if Search Terms link is clickable on each page specified in DATA_1",
+      "uid" : "a532e97a9a3223ae",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255863828,
+        "stop" : 1688255863828,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1",
+      "uid" : "83889c3e604f75e7",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255864516,
+        "stop" : 1688255864516,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1",
+      "uid" : "79ff6c311999a15b",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255865204,
+        "stop" : 1688255865204,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.08 - Check Privacy and Cookie Policy link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "daf8449f4c62427f",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255865892,
+        "stop" : 1688255865892,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.08 - Check Privacy and Cookie Policy link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "306192471d84030d",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255866605,
+        "stop" : 1688255866605,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.09 - Check display of Privacy and Cookie Policy link on each page specified in DATA_1",
+      "uid" : "13bd73a3cef32df9",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255867292,
+        "stop" : 1688255867292,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.09 - Check display of Privacy and Cookie Policy link on each page specified in DATA_1",
+      "uid" : "64416fb681a58587",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255867979,
+        "stop" : 1688255867979,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.10 - Check if Privacy and Cookie Policy link is clickable on each page specified in DATA_1",
+      "uid" : "d2194d1807a0d75b",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255868670,
+        "stop" : 1688255868670,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.10 - Check if Privacy and Cookie Policy link is clickable on each page specified in DATA_1",
+      "uid" : "deede86f7ecf28c",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255869357,
+        "stop" : 1688255869357,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.12 - Check text of Privacy and Cookie Policy link on each page specified in DATA_1",
+      "uid" : "cff39c3f57c273ba",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255870045,
+        "stop" : 1688255870045,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.12 - Check text of Privacy and Cookie Policy link on each page specified in DATA_1",
+      "uid" : "b4be4114d5905107",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255870735,
+        "stop" : 1688255870735,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.13 - Check Advanced Search link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "c12e514081806258",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255871422,
+        "stop" : 1688255871422,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.13 - Check Advanced Search link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "2423b4fcc819a63d",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255872132,
+        "stop" : 1688255872132,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.14 - Check display of Advanced Search link on each page specified in DATA_1",
+      "uid" : "7fc633e14b0d2386",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255872821,
+        "stop" : 1688255872821,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.14 - Check display of Advanced Search link on each page specified in DATA_1",
+      "uid" : "37548a2795a9e892",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255873510,
+        "stop" : 1688255873510,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.15 - Check if Advanced Search link is clickable on each page specified in DATA_1",
+      "uid" : "685af45d5b0819f2",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255874200,
+        "stop" : 1688255874200,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.15 - Check if Advanced Search link is clickable on each page specified in DATA_1",
+      "uid" : "e4dad3eecef4ae41",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255874890,
+        "stop" : 1688255874890,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.17 - Check text of Advanced Search link on each page specified in DATA_1",
+      "uid" : "bf448a58134a6d58",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255875577,
+        "stop" : 1688255875577,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.17 - Check text of Advanced Search link on each page specified in DATA_1",
+      "uid" : "4cedf84d724bfc63",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255876266,
+        "stop" : 1688255876266,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.18 - Check Orders and Returns link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "2c73cfec2716be50",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255876977,
+        "stop" : 1688255876977,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.18 - Check Orders and Returns link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "de27c844928323b5",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255877666,
+        "stop" : 1688255877666,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.19 - Check display of Orders and Returns link on each page specified in DATA_1",
+      "uid" : "2bcb88000ede6cc1",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255878354,
+        "stop" : 1688255878354,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.19 - Check display of Orders and Returns link on each page specified in DATA_1",
+      "uid" : "46a191c5612fd125",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255879041,
+        "stop" : 1688255879041,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.20 - Check if Orders and Returns link is clickable on each page specified in DATA_1",
+      "uid" : "adec27d7aa320d27",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255879728,
+        "stop" : 1688255879728,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.20 - Check if Orders and Returns link is clickable on each page specified in DATA_1",
+      "uid" : "b171210d8acbd301",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255880416,
+        "stop" : 1688255880416,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.22 - Check text of Orders and Returns link on each page specified in DATA_1",
+      "uid" : "37e82b1464959241",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255881104,
+        "stop" : 1688255881104,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.22 - Check text of Orders and Returns link on each page specified in DATA_1",
+      "uid" : "4551f54a8fba2087",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255881819,
+        "stop" : 1688255881819,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "37d427aa2e643314",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255882506,
+        "stop" : 1688255882506,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "98c509d4cb52a642",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255883194,
+        "stop" : 1688255883194,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1",
+      "uid" : "58229d2728b09af7",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255883881,
+        "stop" : 1688255883881,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1",
+      "uid" : "a41fc412f60e8185",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255884570,
+        "stop" : 1688255884570,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1",
+      "uid" : "56b0a2b52e41d3f1",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255885259,
+        "stop" : 1688255885259,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1",
+      "uid" : "f2fd34db72081873",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255885948,
+        "stop" : 1688255885948,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1",
+      "uid" : "9c2e36dfff4aa9db",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255886636,
+        "stop" : 1688255886636,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1",
+      "uid" : "5adefcb623810ec9",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255887350,
+        "stop" : 1688255887350,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "e5a2c3b996bd3292",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255888041,
+        "stop" : 1688255888041,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "e7d97257f74d3b04",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255888732,
+        "stop" : 1688255888732,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.29 - Check display of Write for us link on each page specified in DATA_1",
+      "uid" : "d732b7ba8ab24ff8",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255889420,
+        "stop" : 1688255889420,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.29 - Check display of Write for us link on each page specified in DATA_1",
+      "uid" : "939ff5c5e97b2642",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255890109,
+        "stop" : 1688255890109,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.30 - Check if Write for us link is clickable on each page specified in DATA_1",
+      "uid" : "9dc271d67baacf74",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255890796,
+        "stop" : 1688255890796,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.30 - Check if Write for us link is clickable on each page specified in DATA_1",
+      "uid" : "d037c740e2dab1b3",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255891485,
+        "stop" : 1688255891485,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1",
+      "uid" : "bc2c6cde208ac16f",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255892197,
+        "stop" : 1688255892197,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1",
+      "uid" : "a812f0a94afb6050",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255892885,
+        "stop" : 1688255892885,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.33 - Check Copyright section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "e9ad33dcbbc51b9b",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255893573,
+        "stop" : 1688255893573,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.33 - Check Copyright section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "80ee817c9d1c6d63",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255894262,
+        "stop" : 1688255894262,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.34 - Check display of Copyright section on each page specified in DATA_1",
+      "uid" : "19e1f0e02c3ef80e",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255894950,
+        "stop" : 1688255894950,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.34 - Check display of Copyright section on each page specified in DATA_1",
+      "uid" : "45d823be7c555215",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255895639,
+        "stop" : 1688255895639,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.35 - Check Copyright text is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "c5b4f95aa1710557",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255896328,
+        "stop" : 1688255896328,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.35 - Check Copyright text is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "8f20b905f16889e6",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255897018,
+        "stop" : 1688255897018,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.36 - Check display of Copyright text on each page specified in DATA_1",
+      "uid" : "d7c23dfb568d5daa",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255897730,
+        "stop" : 1688255897731,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.36 - Check display of Copyright text on each page specified in DATA_1",
+      "uid" : "ddcda5332dc9a397",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255898420,
+        "stop" : 1688255898420,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1",
+      "uid" : "53c818d8ac0b2f74",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255899108,
+        "stop" : 1688255899108,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.37 - Check text of Copyright section on each page specified in DATA_1",
+      "uid" : "71f5da1f4648a972",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255899796,
+        "stop" : 1688255899796,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "e789bc7a816a3b56",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255900484,
+        "stop" : 1688255900484,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "ed92930294e19ef4",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255901173,
+        "stop" : 1688255901173,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1",
+      "uid" : "a634717192c57c82",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255901861,
+        "stop" : 1688255901861,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1",
+      "uid" : "a57f31a68b90e1cc",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255902573,
+        "stop" : 1688255902573,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "b2adc8e8edb6596e",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255903263,
+        "stop" : 1688255903263,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "43b9b17b1d056b34",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255903950,
+        "stop" : 1688255903950,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1",
+      "uid" : "b03a39ef742be09a",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255904638,
+        "stop" : 1688255904638,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1",
+      "uid" : "6e17b300991c714d",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255905327,
+        "stop" : 1688255905327,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "eace4eec3a06e590",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255906015,
+        "stop" : 1688255906015,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "c7387b569a4031b6",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255906703,
+        "stop" : 1688255906703,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1",
+      "uid" : "1af4fa567ed14b31",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255907424,
+        "stop" : 1688255907424,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1",
+      "uid" : "8cc0ccb8b1760575",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255908111,
+        "stop" : 1688255908111,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "5039ea1616343f8f",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255908799,
+        "stop" : 1688255908799,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "8b9700f12d69530f",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255909488,
+        "stop" : 1688255909488,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "3f23308ce05d270a",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255910177,
+        "stop" : 1688255910177,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "84e0431294a56a09",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255910866,
+        "stop" : 1688255910866,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "c92f0c7d80e46f7",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255911555,
+        "stop" : 1688255911555,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree on each page specified in DATA_1",
+      "uid" : "bdf947fb812e837b",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255912242,
+        "stop" : 1688255912242,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "2848b61b5d0291c3",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255912955,
+        "stop" : 1688255912955,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "27988c5d4cc1d511",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255913644,
+        "stop" : 1688255913644,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    }, {
+      "name" : "TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "7e59153659732e2",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255914339,
+        "stop" : 1688255914339,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+    }, {
+      "name" : "TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1",
+      "uid" : "c1eb453b9b61fe83",
+      "parentUid" : "9c973e472e187a343dec1bd036d450c3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255915027,
+        "stop" : 1688255915027,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+    } ],
+    "uid" : "9c973e472e187a343dec1bd036d450c3"
+  }, {
+    "name" : "Forgot Your Password Page",
+    "children" : [ {
+      "name" : "TC 17.01.01 Verify Forgot Your Password Page h1 Header",
+      "uid" : "8ec9b2d957d7b660",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255915716,
+        "stop" : 1688255915716,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.02 Verify Forgot Your Password note",
+      "uid" : "a1a45fcd8023cdb9",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255916407,
+        "stop" : 1688255916407,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.03 Verify FYP Email field is present",
+      "uid" : "ce590449196ec8f6",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255917098,
+        "stop" : 1688255917098,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.04 Verify FYP Email field is correct format and clickable",
+      "uid" : "1b49e45f425b74d5",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255917811,
+        "stop" : 1688255917811,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.05 Verify FYP Email field is appropriately labeled",
+      "uid" : "cabd5da750e1ab3a",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255918499,
+        "stop" : 1688255918499,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.06 Verify FYP Email field highlighting on click",
+      "uid" : "21d172f1255b6544",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255919189,
+        "stop" : 1688255919189,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.07 Verify displayed email matches the entered email in FYP Email field",
+      "uid" : "dfedf0545ad8100e",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255919879,
+        "stop" : 1688255919879,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.08 Verify Email field for correct email format",
+      "uid" : "e064ef6aa9504886",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255920567,
+        "stop" : 1688255920567,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.09 Verify FYP captcha input field is present",
+      "uid" : "1174ddff54f798bc",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255921256,
+        "stop" : 1688255921256,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.10 Verify FYP captcha input field is correct format and clickable",
+      "uid" : "f49ad8664ef48999",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255921944,
+        "stop" : 1688255921944,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.11 Verify FYP captcha input field is appropriately labeled",
+      "uid" : "427d1da9abbb2eb0",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255922668,
+        "stop" : 1688255922668,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.12 Verify FYP Email field highlighting on click",
+      "uid" : "48108d113e6a5916",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255923360,
+        "stop" : 1688255923360,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field",
+      "uid" : "14b3047ac2d066cb",
+      "parentUid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255924049,
+        "stop" : 1688255924049,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b99b8d8d24b3d6014326bc24b8c0de91"
+  }, {
+    "name" : "test_tc_10_01_01",
+    "uid" : "dbf5ee956881697f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255924738,
+      "stop" : 1688255924738,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_11_01_02",
+    "uid" : "22d41601260c1270",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255926427,
+      "stop" : 1688255926427,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_TC_11_01_03",
+    "uid" : "8e9042d2325d1cd1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255927116,
+      "stop" : 1688255927116,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_11_01_04",
+    "uid" : "e991e4ce5e17cdb8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255927806,
+      "stop" : 1688255927806,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_TC_11_01_05",
+    "uid" : "57d08208ffabc22b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255928494,
+      "stop" : 1688255928494,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_11_01_06",
+    "uid" : "dbb2098129b50b74",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255929208,
+      "stop" : 1688255929208,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_TC_11_01_07",
+    "uid" : "acd7421832c58b30",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688255929897,
+      "stop" : 1688255929897,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Test Header",
+    "children" : [ {
+      "name" : "TC 01.01.01 greeting message is visible",
+      "uid" : "40ffd16391e3aa52",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255930586,
+        "stop" : 1688255930586,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.02 display and interactivity of the \"Create an account\" link",
+      "uid" : "9490fb93f076054c",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255931273,
+        "stop" : 1688255931273,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.03 correctness of the \"Create an account\" link",
+      "uid" : "12ae624d03de0cc7",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255931962,
+        "stop" : 1688255931962,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.04 display and interactivity of the \"Sign In\" link",
+      "uid" : "2d7038feb1b48b6e",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255932649,
+        "stop" : 1688255932649,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.05 correctness of the \"Sign In\" link",
+      "uid" : "a2bc2e74d56e3dff",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255933339,
+        "stop" : 1688255933339,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.02.04 display and interactivity of the logo",
+      "uid" : "38ba3c13facaf0fc",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255934054,
+        "stop" : 1688255934054,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.36 correctly redirected the link sale",
+      "uid" : "1cb81e867b2b868",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255934742,
+        "stop" : 1688255934742,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.02.05 display and interactivity of the cart icon",
+      "uid" : "328bd24599e60d10",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255935430,
+        "stop" : 1688255935430,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.02.03 presence of a  placeholder in the \"Search\" field",
+      "uid" : "5b495c7fe7af8756",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255936117,
+        "stop" : 1688255936117,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.02.02 functionality of the \"Search\" field",
+      "uid" : "6e8a5661a2852c95",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255936807,
+        "stop" : 1688255936807,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.02.01 display and interactivity of the \"Search\" field",
+      "uid" : "1bd398d57500c852",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255937495,
+        "stop" : 1688255937495,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.35 visible and interactive the link \"Sale\"",
+      "uid" : "36fb3efcccd5db38",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255938184,
+        "stop" : 1688255938184,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.33 correctly redirected the link \"Training\"",
+      "uid" : "9e0a010aa2b03d98",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255938871,
+        "stop" : 1688255938871,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.34 correctly redirected the link \"Training Video Download\"",
+      "uid" : "68b54a51d5d4936f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255939586,
+        "stop" : 1688255939586,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC_01_03_32_visible_and_interactive_the_link_\"Training\"",
+      "uid" : "e3bbffd02f5ac57c",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255940275,
+        "stop" : 1688255940275,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.01 visible and interactive the link \"What is New\"",
+      "uid" : "2c698b5f1c55d49f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255940963,
+        "stop" : 1688255940963,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.03 display and interactivity of the \"Women\" section",
+      "uid" : "f1777392f3e2edb2",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255941652,
+        "stop" : 1688255941652,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.04 correct redirection of the link \"Women\"",
+      "uid" : "b982e2ba1ddf4e4b",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255942341,
+        "stop" : 1688255942341,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.02 correctly redirected the_link \"What is New\"",
+      "uid" : "3bc429ad8c5bd706",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255943029,
+        "stop" : 1688255943029,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.27 visible and interactive the link \"Gear\"",
+      "uid" : "87f04558a3239b09",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255943717,
+        "stop" : 1688255943717,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.23 display and interactivity of the \"Bottoms\" section of the \"Men\" section",
+      "uid" : "c61133e9bf462f0e",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255944432,
+        "stop" : 1688255944432,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.24 correctness of the \"Bottoms\" link of the \"Men\" section",
+      "uid" : "cbbdb1de72b5eeca",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255945120,
+        "stop" : 1688255945120,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.25 correctness of the \"Pants\" link of the \"Men\" section",
+      "uid" : "2e1616ea9fa5b887",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255945808,
+        "stop" : 1688255945808,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.26 correctness \"Shorts\" link",
+      "uid" : "4d12e10b523bd760",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255946498,
+        "stop" : 1688255946498,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.15 display and interactivity of the \"Men\" section",
+      "uid" : "8d1f56153f4fa644",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255947185,
+        "stop" : 1688255947185,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.28 correctly redirected the link \"Gear\"",
+      "uid" : "847f2abe112b4586",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255947874,
+        "stop" : 1688255947874,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.29 correctly redirected the link \"Gear - Bags\"",
+      "uid" : "aec5ec9bd0b3a7e4",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255948561,
+        "stop" : 1688255948561,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.30 correctly redirected the link \"Gear - Fitness Equipment\"",
+      "uid" : "5f542ba4c4d21cad",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255949276,
+        "stop" : 1688255949276,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.31 correctly redirected the link \"Gear - Watches\"",
+      "uid" : "d0cd85cdbe0142cd",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255949966,
+        "stop" : 1688255949966,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.16 correctness of the \"Men\" section link",
+      "uid" : "8a597f757338673b",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255950655,
+        "stop" : 1688255950655,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.17 display and interactivity of the \"Tops\" section of the \"Men\" section",
+      "uid" : "f3a2833b8a813459",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255951344,
+        "stop" : 1688255951344,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.06 absence of the \"Create an account\" link display",
+      "uid" : "9ee64801484a63d4",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255952034,
+        "stop" : 1688255952034,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.07 absence of the \"Sign In\" link display",
+      "uid" : "623a3bab928667f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255952722,
+        "stop" : 1688255952722,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.08 display of the dropdown list button ",
+      "uid" : "a99ca3d806614f2f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255953412,
+        "stop" : 1688255953412,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.09 functionality of the dropdown list button",
+      "uid" : "389dec2fa190761",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255954102,
+        "stop" : 1688255954102,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.18 correctness of the \"Tops\" link of the \"Men\" section",
+      "uid" : "cf5e1125b395a594",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255954821,
+        "stop" : 1688255954821,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.19 correctness of the \"Jackets\" link of the \"Men\" section",
+      "uid" : "3ea780551f107b46",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255955510,
+        "stop" : 1688255955510,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.20 correctness of the \"Hoodies & Sweatshirts\" link of the \"Men\" section",
+      "uid" : "4ba7d57d265c961f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255956201,
+        "stop" : 1688255956201,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.21 correctness of the \"Tees\" link of the \"Men\" section",
+      "uid" : "f4bd0dd9c31ed58",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255956890,
+        "stop" : 1688255956890,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.22 correctness of the \"Tanks\" link of the \"Men\" section",
+      "uid" : "3534e779b94db710",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255957580,
+        "stop" : 1688255957580,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.10 functionality of the \"My account\" section in the dropdown list",
+      "uid" : "f8593141b68bf405",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255958269,
+        "stop" : 1688255958269,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.11 functionality of the \"My Wish List\" section in the dropdown list",
+      "uid" : "d467d556b3aad33d",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255958958,
+        "stop" : 1688255958958,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.01.12 functionality of the \"Sign In\" section in the dropdown list",
+      "uid" : "9742c932e51bd6e7",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255959677,
+        "stop" : 1688255959677,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.05 display and interactivity of the \"Tops\" section of the \"Women\" section",
+      "uid" : "3b8a5a4f7cb84d5d",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255960366,
+        "stop" : 1688255960366,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.06 correctness of the \"Tops\" link of the \"Women\" section",
+      "uid" : "e24e1d6de79c8d36",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255961055,
+        "stop" : 1688255961055,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.07 correctness of the \"Jackets\" link of the \"Women\" section",
+      "uid" : "53e87ab6479eaf27",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255961743,
+        "stop" : 1688255961743,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.08 correctness of the \"Hoodies & Sweatshirts\" link of the \"Women\" section",
+      "uid" : "901d707176f54b3f",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255962432,
+        "stop" : 1688255962432,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.09 correctness of the \"Tees\" link of the \"Women\" section",
+      "uid" : "577858a2e07c508c",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255963121,
+        "stop" : 1688255963122,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.10 correctness of the \"Bras\" link of the \"Women\" section",
+      "uid" : "57720bdca35cb316",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255963810,
+        "stop" : 1688255963810,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.11 display and interactivity of the \"Bottoms\" section of the \"Women\" section",
+      "uid" : "c23e888e311c7ed1",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255964500,
+        "stop" : 1688255964500,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.12 correctness of the \"Bottoms\" link of the \"Women\" section",
+      "uid" : "af056d310863019d",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255965216,
+        "stop" : 1688255965216,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.13 correctness of the \"Pants\" link of the \"Women\" section",
+      "uid" : "41efddb83ddc000e",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255965904,
+        "stop" : 1688255965904,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 01.03.14 correctness of the \"Shorts\" link of the \"Women\" section",
+      "uid" : "9f8488721e891f76",
+      "parentUid" : "da06872e440589d21aba946d1a86adfd",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688255966593,
+        "stop" : 1688255966593,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "da06872e440589d21aba946d1a86adfd"
+  }, {
+    "name" : "Main Page",
+    "children" : [ {
+      "name" : "Testing Hot Seller Section",
+      "children" : [ {
+        "name" : "TC 06.01.02 - verify the card is interactive on hover",
+        "uid" : "50044726c617b4f2",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255967283,
+          "stop" : 1688255967283,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_verify_the_card_has_title",
+        "uid" : "d01fc9ff1312c3bb",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255967971,
+          "stop" : 1688255967971,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_check_for_duplicate_titles_after_clicking_on_the_card",
+        "uid" : "8a23709e16b35170",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255968659,
+          "stop" : 1688255968659,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_check_card_price",
+        "uid" : "ca262f5438223373",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255969349,
+          "stop" : 1688255969349,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_check_card_rating",
+        "uid" : "8353e17110064b3c",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255970069,
+          "stop" : 1688255970069,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_tc_06_01_08_check_btn_add_to_cart_is_visible",
+        "uid" : "5df76d4bdf54218d",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255970759,
+          "stop" : 1688255970759,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 06.01.09 - check the color change to add to cart button",
+        "uid" : "a64e800eacb88a93",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255971450,
+          "stop" : 1688255971450,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_tc_06_01_10_check_the_cursor_change_to_cart_button[add_to_card]",
+        "uid" : "a8b0b0ed7a288f",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255972139,
+          "stop" : 1688255972139,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_card'" ]
+      }, {
+        "name" : "test_tc_06_01_10_check_the_cursor_change_to_cart_button[add_to_wish_list]",
+        "uid" : "519eb6a72740cea4",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255972828,
+          "stop" : 1688255972828,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_wish_list'" ]
+      }, {
+        "name" : "test_tc_06_01_10_check_the_cursor_change_to_cart_button[add_to_compare]",
+        "uid" : "e90ee43cdb69757",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255973518,
+          "stop" : 1688255973518,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_compare'" ]
+      }, {
+        "name" : "test_tc_06_01_12_the_color_change_my_wish_and_add_to_compare_button[add_to_wish_list]",
+        "uid" : "9f6f72c44f28340d",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255974206,
+          "stop" : 1688255974206,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_wish_list'" ]
+      }, {
+        "name" : "test_tc_06_01_12_the_color_change_my_wish_and_add_to_compare_button[add_to_compare]",
+        "uid" : "bf0a1b850c79d9d9",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255974927,
+          "stop" : 1688255974927,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_compare'" ]
+      }, {
+        "name" : "Check the display of the add to wish and add to compare buttons",
+        "uid" : "dd108e05245e378e",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255975616,
+          "stop" : 1688255975616,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_card'" ]
+      }, {
+        "name" : "Check the display of the add to wish and add to compare buttons",
+        "uid" : "992d504e23301c0b",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255976306,
+          "stop" : 1688255976306,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_wish_list'" ]
+      }, {
+        "name" : "Check the display of the add to wish and add to compare buttons",
+        "uid" : "949a8a856473356d",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255976996,
+          "stop" : 1688255976996,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'add_to_compare'" ]
+      }, {
+        "name" : "Check the transition to the page my wish after clicking on the button. User is not authorized",
+        "uid" : "13d46b9593a20012",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255977688,
+          "stop" : 1688255977688,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check the transition to the page my wish after clicking on the button. User is authorized",
+        "uid" : "5cef09a52103d3ba",
+        "parentUid" : "63fa6c22e6c69e209455e113894699a2",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688255978377,
+          "stop" : 1688255978377,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "63fa6c22e6c69e209455e113894699a2"
+    }, {
+      "name" : "Testing Promo Block",
+      "children" : [ {
+        "name" : "TC 13.01.01 - Check the display of the Promo Block under header on the main page",
+        "uid" : "c21622d10464d431",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255979066,
+          "stop" : 1688255979066,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.02 - Check the display of section 1 in the Promo Block",
+        "uid" : "d90114f0cb35ad3f",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255979757,
+          "stop" : 1688255979757,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.03 - Check the display of the image in section 1 'home-main' in the Promo Block page",
+        "uid" : "7ca42e303aeb95ee",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255980479,
+          "stop" : 1688255980479,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.06 - Check the display of the info block text in section 1 'home-main' in the Promo Block",
+        "uid" : "4c4dcb3fd5ea620a",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255981168,
+          "stop" : 1688255981168,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.07 - Check the display of the info block title in section 1 'home-main' in the Promo Block",
+        "uid" : "488082359bdb994d",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255981858,
+          "stop" : 1688255981858,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.09 - Check the display of section 2 in the Promo Block",
+        "uid" : "2afa26bfd5228bb7",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255982545,
+          "stop" : 1688255982545,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.10 - Check display of block 1 'home-pants' in section 2 in the Promo Block",
+        "uid" : "66e6bdcaabecaec7",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255983235,
+          "stop" : 1688255983235,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.11 - Check display of block 2 'home-t-shirts' in section 2 in the Promo Block",
+        "uid" : "243f8ff626ec3a7e",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255983924,
+          "stop" : 1688255983924,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.12 - Check display of block 3 'home-erin' in section 2 in the Promo Block",
+        "uid" : "e0a045bd4394fbbf",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255984614,
+          "stop" : 1688255984614,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.13 - Check display of block 4 'home-performance' in section 2 in the Promo Block",
+        "uid" : "963b11cb93ba6e8a",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255985337,
+          "stop" : 1688255985337,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.14 - Check display of block 5 'home-eco' in section 2 in the Promo Block",
+        "uid" : "c791486b7e90821",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255986027,
+          "stop" : 1688255986027,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.16 - Check the display of the image in block 1 'home-pants' in the Promo Block",
+        "uid" : "d714f294458fb0a7",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255986716,
+          "stop" : 1688255986716,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.17 - Check the display of the info block in block 1 'home-pants' in the Promo Block",
+        "uid" : "24d3c0485fa86771",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255987405,
+          "stop" : 1688255987405,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.18 - Check the display of the title in block 1 'home-pants' in the Promo Block",
+        "uid" : "b269dc815cbb4cb9",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255988093,
+          "stop" : 1688255988093,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.19 - Check the display of the text in block 1 'home-pants' in the Promo Block",
+        "uid" : "8ba22701e8c6d46b",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255988782,
+          "stop" : 1688255988782,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.20 - Check the display of the sign in block 1 'home-pants' in the Promo Block",
+        "uid" : "3a82e385a9a8e688",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255989472,
+          "stop" : 1688255989472,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.21 - Check the display of the image in block 2 'home-t-shirts' in the Promo Block",
+        "uid" : "13e3b8c6bfb2026",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255990162,
+          "stop" : 1688255990162,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block",
+        "uid" : "e7db779f47d90859",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255990881,
+          "stop" : 1688255990881,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block",
+        "uid" : "d26ed13359f8221d",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255991569,
+          "stop" : 1688255991569,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.24 - Check the display of the text in block 2 'home-t-shirts' in the Promo Block",
+        "uid" : "38bd04535558156a",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255992258,
+          "stop" : 1688255992258,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.25 - Check the display of the sign in block 2 'home-t-shirts' in the Promo Block",
+        "uid" : "76c4d366ca7f1c66",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255992947,
+          "stop" : 1688255992947,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block",
+        "uid" : "a72a2b45a0e6141b",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255993636,
+          "stop" : 1688255993636,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.27 - Check the display of the info block in block 3 'home-erin' in the Promo Block",
+        "uid" : "63137275b81d585a",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255994325,
+          "stop" : 1688255994325,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block",
+        "uid" : "6d965ac9c2ff49f8",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255995015,
+          "stop" : 1688255995015,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.29 - Check the display of the text in block 3 'home-erin' in the Promo Block",
+        "uid" : "1aa5bba98280526f",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255995731,
+          "stop" : 1688255995731,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.30 - Check the display of the sign in block 3 'home-erin' in the Promo Block",
+        "uid" : "6f2eee36961cdc6f",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255996422,
+          "stop" : 1688255996422,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block",
+        "uid" : "ac2baefcfef0934b",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255997109,
+          "stop" : 1688255997109,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo Block",
+        "uid" : "3b1ddccbf8cfebbe",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255997799,
+          "stop" : 1688255997799,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.33 - Check the display of the title in block 4 'home-performance' in the Promo Block",
+        "uid" : "e0f91197ad2d5004",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255998487,
+          "stop" : 1688255998487,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.34 - Check the display of the text in block 4 'home-performance' in the Promo Block",
+        "uid" : "f68f6a806d152426",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255999178,
+          "stop" : 1688255999178,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.35 - Check the display of the sign in block 4 'home-performance' in the Promo Block",
+        "uid" : "79fd55716dea5b2",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688255999873,
+          "stop" : 1688255999873,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block",
+        "uid" : "8ba7210e5ce7533a",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256000608,
+          "stop" : 1688256000608,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.37 - Check the display of the info block in block 5 'home-eco' in the Promo Block",
+        "uid" : "da8f942824330e1e",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256001617,
+          "stop" : 1688256001617,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.38 - Check the display of the title in block 5 'home-eco' in the Promo Block",
+        "uid" : "c4c1d578165c7ae7",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256002306,
+          "stop" : 1688256002306,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.39 - Check the display of the text in block 5 'home-eco' in the Promo Block",
+        "uid" : "3571936a594ac6a8",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256002995,
+          "stop" : 1688256002995,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.40 - Check the display of the sign in block 5 'home-eco' in the Promo Block",
+        "uid" : "4695a47bcbeaf9d",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256003686,
+          "stop" : 1688256003686,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.41 - Check Promo Block is present in the DOM tree",
+        "uid" : "49f27ef73a2bf1c6",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256004375,
+          "stop" : 1688256004375,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.42 - Check section 1 in the Promo Block is present in the DOM tree",
+        "uid" : "c0bf0a6b7aab6760",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256005065,
+          "stop" : 1688256005065,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.43 - Check section 2 in the Promo Block is present in the DOM tree",
+        "uid" : "352f7fe45e633a12",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256005754,
+          "stop" : 1688256005754,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.44 - Check block 1 'home-pants' in section 2 of the Promo Block is present in the DOM tree",
+        "uid" : "ef582c6595f704da",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256006477,
+          "stop" : 1688256006477,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.45 - Check block 2 'home-t-shirts' in section 2 of the Promo Block is present in the DOM tree",
+        "uid" : "2217e26e97541ba2",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256007167,
+          "stop" : 1688256007167,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.46 - Check block 3 'home-erin' in section 2 of the Promo Block is present in the DOM tree",
+        "uid" : "11984ae1daecb57c",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256007856,
+          "stop" : 1688256007856,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.47 - Check block 4 'home-performance' in section 2 of the Promo Block is present in the DOM tree",
+        "uid" : "63778300d3714b21",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256008546,
+          "stop" : 1688256008546,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.48 - Check block 5 'home-eco' in section 2 of the Promo Block is present in the DOM tree",
+        "uid" : "43ac63326298e2f0",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256009236,
+          "stop" : 1688256009236,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.49 - Check if section 1 is clickable in the Promo Block on the main page",
+        "uid" : "dfed951f8416c5b",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256009926,
+          "stop" : 1688256009926,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.50 - Check if block 1 'home-pants' in section 2 is clickablein the Promo Block on the main page",
+        "uid" : "6cf6b666589c9a50",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256010616,
+          "stop" : 1688256010616,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickablein the Promo Block on the main page",
+        "uid" : "ea34496dfa829cb8",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256011335,
+          "stop" : 1688256011335,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.52 - Check if block 3 'home-erin' in section 2 is clickablein the Promo Block on the main page",
+        "uid" : "332fc0b344903fc",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256012024,
+          "stop" : 1688256012024,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.53 - Check if block 4 'home-performance' in section 2 is clickablein the Promo Block on the main page",
+        "uid" : "988563c4a6ba142",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256012714,
+          "stop" : 1688256012714,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.01.54 - Check if block 5 'home-eco' in section 2 is clickablein the Promo Block on the main page",
+        "uid" : "c43d5cd2ba6b93e3",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256013406,
+          "stop" : 1688256013406,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page",
+        "uid" : "9b6500c7b0236703",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256014099,
+          "stop" : 1688256014099,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block leads to the correct page",
+        "uid" : "fd1414748d4e3c68",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256014792,
+          "stop" : 1688256014792,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block leads to the correct page",
+        "uid" : "f056afa701dd4db4",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256015481,
+          "stop" : 1688256015481,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.04 - Check the link in section 2 block 3 'home-erin' in the Promo Block leads to the correct page",
+        "uid" : "396644cf38885a4d",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256016200,
+          "stop" : 1688256016200,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.05 - Check the link in section 2 block 4 'home-performance' in the Promo Block leads to the correct page",
+        "uid" : "64e3688711e3646b",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256016889,
+          "stop" : 1688256016889,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 13.02.06 - Check the link in section 2 block 5 'home-eco' in the Promo Block leads to the correct page",
+        "uid" : "cf62a5f0fe19c551",
+        "parentUid" : "ca2182861077291fe93a1efed54aea6c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256017578,
+          "stop" : 1688256017578,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ca2182861077291fe93a1efed54aea6c"
+    } ],
+    "uid" : "79f1a1b5086897e862723d640242384c"
+  }, {
+    "name" : "MenPage",
+    "children" : [ {
+      "name" : "TC 14.02.02 Verify the link Tops is visible and clickable.",
+      "uid" : "10d55d43dd03a559",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256018268,
+        "stop" : 1688256018268,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.02.03 Verify the link Tops redirects to a correct page.",
+      "uid" : "aebc8385190db6e2",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256018958,
+        "stop" : 1688256018958,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.02.04 Verify the link 'Bottoms' is visible and clickable.",
+      "uid" : "37603b9dc99fe3c5",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256019647,
+        "stop" : 1688256019647,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.02.05 Verify the link 'Bottoms' redirects to a correct page.",
+      "uid" : "c019a8ea74f85df5",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256020336,
+        "stop" : 1688256020336,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.01 Verify the 'TOPS' subhead is displayed",
+      "uid" : "160559d86e1567f2",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256021025,
+        "stop" : 1688256021025,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.02 Verify the link 'Hoodies&Sweatshirts' is visible and clickable.",
+      "uid" : "ce4665aeb3a58cb7",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256021744,
+        "stop" : 1688256021744,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.03 Verify the link 'Hoodies&Sweatshirts' redirects to a correct page.",
+      "uid" : "265ebaf901c6642f",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256022433,
+        "stop" : 1688256022433,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.04 Verify the link 'Jackets' is visible and clickable.",
+      "uid" : "1aa17301066f47c7",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256023121,
+        "stop" : 1688256023121,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.05 Verify the link 'Jackets' redirects to a correct page.",
+      "uid" : "359e9df5952ed02a",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256023809,
+        "stop" : 1688256023809,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.06 Verify the link 'Tees' is visible and clickable.",
+      "uid" : "5f538229b05e3344",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256024499,
+        "stop" : 1688256024499,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.07 Verify the link 'Tees' redirects to a correct page.",
+      "uid" : "9d982967f4f1e161",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256025188,
+        "stop" : 1688256025188,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.08 Verify the link 'Tanks' is visible and clickable.",
+      "uid" : "7147948cb55ddfc5",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256025876,
+        "stop" : 1688256025876,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.03.09 Verify the link 'Tanks' redirects to a correct page.",
+      "uid" : "c642cc952644d259",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256026597,
+        "stop" : 1688256026597,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.04.01 Verify the 'BOTTOMS' subhead is displayed",
+      "uid" : "c4c72cacf8e62957",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256027285,
+        "stop" : 1688256027285,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.04.02 Verify the link 'Pants' is visible and clickable.",
+      "uid" : "eeef49038a6ee126",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256027974,
+        "stop" : 1688256027974,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.04.03 Verify the link 'Pants' redirects to a correct page.",
+      "uid" : "570631d2274bc1",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256028664,
+        "stop" : 1688256028664,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.04.04 Verify the link 'Shorts' is visible and clickable.",
+      "uid" : "17eb683bf3309537",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256029354,
+        "stop" : 1688256029354,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 14.04.05 Verify the link 'Shorts' redirects to a correct page.",
+      "uid" : "9c7f7f78412ffcf5",
+      "parentUid" : "594bff6a38476713ad94a26da179b87f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256030043,
+        "stop" : 1688256030043,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "594bff6a38476713ad94a26da179b87f"
+  }, {
+    "name" : "TC 14.06.01 Verify the 'Men' header is displayed",
+    "uid" : "815cbe3eb1d0b4dc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256030733,
+      "stop" : 1688256030733,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.21 Verify the visibility of 'Luma shorts' promo block.",
+    "uid" : "f4ea72d3ff23eeab",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256031422,
+      "stop" : 1688256031422,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.22 Verify the visibility of the image in the 'Luma shorts' promo block.",
+    "uid" : "ffea3c43f1ef80a9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256032143,
+      "stop" : 1688256032143,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.23 Verify that the 'Luma shorts' text is visible.",
+    "uid" : "5d9dc8f7fe8ce6d3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256032833,
+      "stop" : 1688256032833,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.24 Verify that the 'Cool it now' text is visible.",
+    "uid" : "2f91d769f221ba36",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256033523,
+      "stop" : 1688256033523,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.25 Verify that the 'Shop Shorts' text is visible.",
+    "uid" : "2d0935de0011bd2f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256034211,
+      "stop" : 1688256034211,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.26 Verify the click on the block 'Luma shorts' redirects to a correct page.",
+    "uid" : "8eb9d40431977248",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256034901,
+      "stop" : 1688256034901,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.27 Verify the visibility of 'Luma tees' promo block.",
+    "uid" : "726f2d0cfafb1da4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256035590,
+      "stop" : 1688256035590,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.28 Verify the visibility of the image in the 'Luma tees' promo block.",
+    "uid" : "416095b198ab36f4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256036279,
+      "stop" : 1688256036279,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.29 Verify that the 'Luma tees' text is visible.",
+    "uid" : "3d1988449b38b11",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256036999,
+      "stop" : 1688256036999,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.30 Verify that the 'Grab a tee or two!' text is visible.",
+    "uid" : "2f9f2204053c9cf7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256037688,
+      "stop" : 1688256037688,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.31 Verify that the 'Shop Tees' text is visible.",
+    "uid" : "bf938ffbf01d29cf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256038377,
+      "stop" : 1688256038377,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC 14.06.32 Verify the click on the block 'Luma tees' redirects to a correct page.",
+    "uid" : "19d95bd90cedd8b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256039067,
+      "stop" : 1688256039067,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Orders and Returns",
+    "children" : [ {
+      "name" : "TC 05.01.01 - Verify that 'Order and Returns' Page Heading is present",
+      "uid" : "e02593c7f1dda3a0",
+      "parentUid" : "2e76d4e09614147a1b0181ac50441246",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256039756,
+        "stop" : 1688256039756,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 05.01.02 - Verify that 'Order and Returns' form header is present",
+      "uid" : "9c6c77d1c16a3efe",
+      "parentUid" : "2e76d4e09614147a1b0181ac50441246",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256040445,
+        "stop" : 1688256040445,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 05.01.03 - Verify that 'Order ID' input field is visible",
+      "uid" : "4de378037fe81a8d",
+      "parentUid" : "2e76d4e09614147a1b0181ac50441246",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256041133,
+        "stop" : 1688256041133,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2e76d4e09614147a1b0181ac50441246"
+  }, {
+    "name" : "test_tc_19_01_01",
+    "uid" : "4fc345bea4f0a5ef",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256041852,
+      "stop" : 1688256041852,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_19_01_02",
+    "uid" : "4f8dabf6ae91847d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256042540,
+      "stop" : 1688256042540,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star",
+    "uid" : "531585c9357cef0e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256043290,
+      "stop" : 1688256043290,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_01_15_02_check_that_it_is_possible_to_vote_for_2_star",
+    "uid" : "d9b7d29c165898e5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256043984,
+      "stop" : 1688256043984,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star",
+    "uid" : "555b8b81fab96a2e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256044672,
+      "stop" : 1688256044672,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_01_15_04_check_that_it_is_possible_to_vote_for_4_star",
+    "uid" : "3df63e3f8e278ebf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256045362,
+      "stop" : 1688256045362,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star",
+    "uid" : "6bb890359e0d89d1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1688256046052,
+      "stop" : 1688256046052,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Sale Page",
+    "children" : [ {
+      "name" : "Testing Side Menu Bar - Women's Deals Section",
+      "children" : [ {
+        "name" : "TC 10.01.01 - Verify 'WOMEN'S DEALS' title is correct",
+        "uid" : "fadd0ec96264e73c",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256046741,
+          "stop" : 1688256046741,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "200822fea28e0320",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256047463,
+          "stop" : 1688256047463,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(1) > a')" ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "680135e0bb81e1b",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256048151,
+          "stop" : 1688256048151,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a')" ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "6698f408eec4d092",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256048842,
+          "stop" : 1688256048842,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(3) > a')" ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "105379169eee36f1",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256049532,
+          "stop" : 1688256049532,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(4) > a')" ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "a79a5350dddcb424",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256050223,
+          "stop" : 1688256050223,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(5) > a')" ]
+      }, {
+        "name" : "TC 10.01.02, 10.01.04, 10.01.06, 10.01.08, 10.01.10, 10.01.12 - Verify 6 links in Women's Deals section are visible and clickable",
+        "uid" : "fc6ba4a81844a38e",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256050912,
+          "stop" : 1688256050912,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(6) > a')" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "e6bad35cd058fd",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256051602,
+          "stop" : 1688256051602,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(1) > a')", "'Hoodies & Sweatshirts - Tops - Women'", "'https://magento.softwaretestingboard.com/women/tops-women/hoodies-and-sweatshirts-women.html'" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "d772d796ec79ba4d",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256052322,
+          "stop" : 1688256052322,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a')", "'Jackets - Tops - Women'", "'https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html'" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "b21d959c131435ca",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256053010,
+          "stop" : 1688256053010,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(3) > a')", "'Tees - Tops - Women'", "'https://magento.softwaretestingboard.com/women/tops-women/tees-women.html'" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "ceb87fb98bf6826f",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256053700,
+          "stop" : 1688256053700,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(4) > a')", "'Bras & Tanks - Tops - Women'", "'https://magento.softwaretestingboard.com/women/tops-women/tanks-women.html'" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "50b63ef63c246a43",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256054390,
+          "stop" : 1688256054390,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(5) > a')", "'Pants - Bottoms - Women'", "'https://magento.softwaretestingboard.com/women/bottoms-women/pants-women.html'" ]
+      }, {
+        "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+        "uid" : "ecbc34d67d867b22",
+        "parentUid" : "69bf92d204b6d0971e124a2e678df1e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256055080,
+          "stop" : 1688256055080,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(6) > a')", "'Shorts - Bottoms - Women'", "'https://magento.softwaretestingboard.com/women/bottoms-women/shorts-women.html'" ]
+      } ],
+      "uid" : "69bf92d204b6d0971e124a2e678df1e9"
+    }, {
+      "name" : "Testing Side Menu Bar - Men's Deals Section",
+      "children" : [ {
+        "name" : "TC 10.02.01 - Verify 'MEN'S DEALS' title is correct",
+        "uid" : "9f95eba6ac1d5e5c",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1688256055769,
+          "stop" : 1688256055769,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.02.02, 10.02.04, 10.02.06, 10.02.08, 10.02.10 - Verify 5 links in Men's Deals section are visible and clickable",
+        "uid" : "15c3cb04d0e233c4",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256056459,
+          "stop" : 1688256056459,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(1) > a')" ]
+      }, {
+        "name" : "TC 10.02.02, 10.02.04, 10.02.06, 10.02.08, 10.02.10 - Verify 5 links in Men's Deals section are visible and clickable",
+        "uid" : "41e0c8a9d4a02e2f",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256057148,
+          "stop" : 1688256057148,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')" ]
+      }, {
+        "name" : "TC 10.02.02, 10.02.04, 10.02.06, 10.02.08, 10.02.10 - Verify 5 links in Men's Deals section are visible and clickable",
+        "uid" : "488ca11c506cd53d",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256057868,
+          "stop" : 1688256057868,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(3) > a')" ]
+      }, {
+        "name" : "TC 10.02.02, 10.02.04, 10.02.06, 10.02.08, 10.02.10 - Verify 5 links in Men's Deals section are visible and clickable",
+        "uid" : "756fffc27e6f8154",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256058556,
+          "stop" : 1688256058556,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(4) > a')" ]
+      }, {
+        "name" : "TC 10.02.02, 10.02.04, 10.02.06, 10.02.08, 10.02.10 - Verify 5 links in Men's Deals section are visible and clickable",
+        "uid" : "fd49c73cb6b71a9d",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256059246,
+          "stop" : 1688256059246,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(5) > a')" ]
+      }, {
+        "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+        "uid" : "8eec41c9a748d726",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256059936,
+          "stop" : 1688256059936,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(1) > a')", "'Hoodies & Sweatshirts - Tops - Men'", "'https://magento.softwaretestingboard.com/men/tops-men/hoodies-and-sweatshirts-men.html'" ]
+      }, {
+        "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+        "uid" : "b509d9ec2b0b2983",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256060626,
+          "stop" : 1688256060626,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(2) > a')", "'Jackets - Tops - Men'", "'https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html'" ]
+      }, {
+        "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+        "uid" : "43454fea0e42cf55",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256061314,
+          "stop" : 1688256061314,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(3) > a')", "'Tees - Tops - Men'", "'https://magento.softwaretestingboard.com/men/tops-men/tees-men.html'" ]
+      }, {
+        "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+        "uid" : "381ad9309c8d05dd",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256062004,
+          "stop" : 1688256062004,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(4) > a')", "'Pants - Bottoms - Men'", "'https://magento.softwaretestingboard.com/men/bottoms-men/pants-men.html'" ]
+      }, {
+        "name" : "TC 10.02.03, 10.02.05, 10.02.07, 10.02.09, 10.02.11 - Verify 5 links in Men's Deals open the correct pages",
+        "uid" : "4836974ca12a35f0",
+        "parentUid" : "3ad4a7c461555079a1cebb5610de23fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256062723,
+          "stop" : 1688256062723,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(4) > li:nth-child(5) > a')", "'Shorts - Bottoms - Men'", "'https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html'" ]
+      } ],
+      "uid" : "3ad4a7c461555079a1cebb5610de23fe"
+    }, {
+      "name" : "Testing Side Menu Bar - Gear Deals Section",
+      "children" : [ {
+        "name" : "TC 10.03.01 - Verify 'GEAR DEALS' title is correct",
+        "uid" : "8b3a24a7310f4e23",
+        "parentUid" : "5e1818c03b5d587f9bfc7bddfd57051f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256063413,
+          "stop" : 1688256063413,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.03.02, 10.02.04 - Verify 2 links in Gear Deals section are visible and clickable",
+        "uid" : "1b9f2459dbb98710",
+        "parentUid" : "5e1818c03b5d587f9bfc7bddfd57051f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256064102,
+          "stop" : 1688256064102,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(6) > li:nth-child(1) > a')" ]
+      }, {
+        "name" : "TC 10.03.02, 10.02.04 - Verify 2 links in Gear Deals section are visible and clickable",
+        "uid" : "d9cb40ef8d7113c4",
+        "parentUid" : "5e1818c03b5d587f9bfc7bddfd57051f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256064792,
+          "stop" : 1688256064792,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(6) > li:nth-child(2) > a')" ]
+      }, {
+        "name" : "TC 10.03.03, 10.03.05 - Verify 2 links in Gear Deals open the correct pages",
+        "uid" : "bb69d7156e16ffc7",
+        "parentUid" : "5e1818c03b5d587f9bfc7bddfd57051f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256065481,
+          "stop" : 1688256065481,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(6) > li:nth-child(1) > a')", "'Bags - Gear'", "'https://magento.softwaretestingboard.com/gear/bags.html'" ]
+      }, {
+        "name" : "TC 10.03.03, 10.03.05 - Verify 2 links in Gear Deals open the correct pages",
+        "uid" : "62084225f777ae8",
+        "parentUid" : "5e1818c03b5d587f9bfc7bddfd57051f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256066171,
+          "stop" : 1688256066171,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.categories-menu > ul:nth-child(6) > li:nth-child(2) > a')", "'Fitness Equipment - Gear'", "'https://magento.softwaretestingboard.com/gear/fitness-equipment.html'" ]
+      } ],
+      "uid" : "5e1818c03b5d587f9bfc7bddfd57051f"
+    }, {
+      "name" : "Testing Promo Blocks, Main Block (Women's Deals) and 2 columns block - Men's Bargain, Gear Steals",
+      "children" : [ {
+        "name" : "TC 10.04.01 - Verify that the Women Deals contains an image",
+        "uid" : "1b3d315967dc8cfe",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256066861,
+          "stop" : 1688256066861,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.04 - Verify that the Men's Deals contains an image",
+        "uid" : "a4f9add9ec848ab",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256067586,
+          "stop" : 1688256067586,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.07 - Verify that the Gear Deals contains an image",
+        "uid" : "ba11e7ae8cc409aa",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256068276,
+          "stop" : 1688256068276,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.02 - Verify the text in main block - Women's Deals",
+        "uid" : "4615369d43508483",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256068966,
+          "stop" : 1688256068966,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.05 - Verify the text in 2 columns block - Men's Deals",
+        "uid" : "13e4eed5a6550e64",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256069657,
+          "stop" : 1688256069657,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.08 - Verify the text in 2 columns block - Gear Deals",
+        "uid" : "ab7a8e7f9ff35c29",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256070346,
+          "stop" : 1688256070346,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.03, 10.04.06, 10.04.09 - Verify that links in Main block, 2 columns block open the correct pages",
+        "uid" : "8809fc13fcf3ace5",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256071036,
+          "stop" : 1688256071036,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.sale-main .more')", "'Women Sale'", "'https://magento.softwaretestingboard.com/promotions/women-sale.html'" ]
+      }, {
+        "name" : "TC 10.04.03, 10.04.06, 10.04.09 - Verify that links in Main block, 2 columns block open the correct pages",
+        "uid" : "7d9efc0bb5df830a",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256071725,
+          "stop" : 1688256071725,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.sale-mens .more')", "'Men Sale'", "'https://magento.softwaretestingboard.com/promotions/men-sale.html'" ]
+      }, {
+        "name" : "TC 10.04.03, 10.04.06, 10.04.09 - Verify that links in Main block, 2 columns block open the correct pages",
+        "uid" : "436c6cd5c1b507c8",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256072414,
+          "stop" : 1688256072414,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "('css selector', '.sale-women .more')", "'Gear'", "'https://magento.softwaretestingboard.com/gear.html'" ]
+      }, {
+        "name" : "TC 10.04.10 - Verify that the sale-20-off contains an image",
+        "uid" : "8c22d784196acdc2",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256073137,
+          "stop" : 1688256073137,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.12 - Verify that the sale-free-shipping contains an image",
+        "uid" : "c62f1570ab00acd9",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256073826,
+          "stop" : 1688256073826,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.14 - Verify that the sale-women-t-shirts contains an image",
+        "uid" : "641126a3f4496950",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256074517,
+          "stop" : 1688256074517,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.11 - Verify the text in 3-columns block- sale-20-off",
+        "uid" : "e24e8b1813ef06f5",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256075207,
+          "stop" : 1688256075207,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.13 - Verify the text in 3-columns block - sale-free-shipping",
+        "uid" : "e939f2e8657c5651",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256075897,
+          "stop" : 1688256075897,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 10.04.15 - Verify the text in 3-columns block - sale-women-t-shirts",
+        "uid" : "e756455e05a6dc2",
+        "parentUid" : "3f572f6ab3f40294b9e760b032e04f33",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256076587,
+          "stop" : 1688256076587,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3f572f6ab3f40294b9e760b032e04f33"
+    } ],
+    "uid" : "bf98ff88cb4e661a41213369f6edc263"
+  }, {
+    "name" : "Shopping Cart",
+    "children" : [ {
+      "name" : "Shopping Cart is empty",
+      "children" : [ {
+        "name" : "tc 07.01.01 Verify that title Shopping Cart is displayed correctly",
+        "uid" : "a657d7453eb06177",
+        "parentUid" : "59043455df4e5153e88757a9fd793410",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256077276,
+          "stop" : 1688256077276,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "tc 07.01.03 Verify that here link is displayed and clickable",
+        "uid" : "8e27effa0e244a43",
+        "parentUid" : "59043455df4e5153e88757a9fd793410",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256078000,
+          "stop" : 1688256078000,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "tc 07.01.04 Verify that here link leads to the main page",
+        "uid" : "e3419dc6d6af5c21",
+        "parentUid" : "59043455df4e5153e88757a9fd793410",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256078690,
+          "stop" : 1688256078690,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "59043455df4e5153e88757a9fd793410"
+    } ],
+    "uid" : "4694bff3cec914c560e3e3d80f50deb2"
+  }, {
+    "name" : "Shopping Cart is full",
+    "children" : [ {
+      "name" : "tc 07.02.01 Verify that title Shopping Cart is displayed correctly when it is full",
+      "uid" : "365be115b74f7871",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256079379,
+        "stop" : 1688256079379,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.03 Verify that quantity field is displayed and clickable",
+      "uid" : "a8c41f1299fe967f",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256080070,
+        "stop" : 1688256080070,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.04 Verify that entered quantity displayed correctly after changing",
+      "uid" : "51159c95b0a0eba8",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256080759,
+        "stop" : 1688256080759,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.",
+      "uid" : "5dad5059338d7dce",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256081451,
+        "stop" : 1688256081451,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.07 Verify that 'Proceed to checkout' button is displayed and clickable",
+      "uid" : "efc5dab1388bb004",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256082140,
+        "stop" : 1688256082140,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.08 Verify that 'Proceed to checkout' button redirects to the shipping page",
+      "uid" : "dfcc2838aa6ef7b5",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256082830,
+        "stop" : 1688256082830,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.",
+      "uid" : "31e153482766f3e5",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256083558,
+        "stop" : 1688256083558,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.22 Verify subtotal in Summury Card: subtotal = price * qty and displayed correctly.",
+      "uid" : "e17a6cf81a92d1ac",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256084249,
+        "stop" : 1688256084249,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.23 Verify Order Total in Summury displayed correctly.",
+      "uid" : "eb0db0cf87c8c34",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256084940,
+        "stop" : 1688256084940,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "tc 07.02.10 Verify that remove button deletes item from the shipping page",
+      "uid" : "7985cb2c0c14758e",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256085630,
+        "stop" : 1688256085630,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header0]",
+      "uid" : "a5f3d5072f7327c2",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256086321,
+        "stop" : 1688256086321,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "('css selector', 'th.col.item span')" ]
+    }, {
+      "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header1]",
+      "uid" : "a9d62eb9880ee399",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256087010,
+        "stop" : 1688256087010,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "('css selector', 'th.col.price span')" ]
+    }, {
+      "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header2]",
+      "uid" : "6b7850df11d12362",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256087700,
+        "stop" : 1688256087700,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "('css selector', 'th.col.qty span')" ]
+    }, {
+      "name" : "test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible[t_header3]",
+      "uid" : "2af08cf890bc982c",
+      "parentUid" : "612c090da606d29c94adba7a39fb264c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256088421,
+        "stop" : 1688256088421,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "('css selector', 'th.col.subtotal span')" ]
+    } ],
+    "uid" : "612c090da606d29c94adba7a39fb264c"
+  }, {
+    "name" : "Sign In Page",
+    "children" : [ {
+      "name" : "Registered Customers",
+      "children" : [ {
+        "name" : "TC 03.01.01 Verify Sign In Page h1 Header",
+        "uid" : "5dd597fed58a83d2",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256089110,
+          "stop" : 1688256089110,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.02 Verify Registered Customers Heading",
+        "uid" : "1caa22ab5fe6426a",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256089800,
+          "stop" : 1688256089800,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.03 Verify Registered Customers note",
+        "uid" : "cf92802457b93a35",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256090491,
+          "stop" : 1688256090491,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.04 Verify Email field is present",
+        "uid" : "d6610555b0d4686b",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256091179,
+          "stop" : 1688256091179,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.05 Verify Email field is correct format and clickable",
+        "uid" : "bfb145331f17b4b",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256091869,
+          "stop" : 1688256091869,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.06 Verify Email field is appropriately labeled",
+        "uid" : "3630007d857ec055",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256092558,
+          "stop" : 1688256092558,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.07 Verify Email field highlighting on click",
+        "uid" : "4b2910a8df544613",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256093284,
+          "stop" : 1688256093284,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.08 Verify displayed email matches the entered email in Email field",
+        "uid" : "1aba881bcb471827",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256093972,
+          "stop" : 1688256093972,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.09 Verify Password field is present",
+        "uid" : "b618a38417f0dba2",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256094663,
+          "stop" : 1688256094663,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.10 Verify Password field is correct format and clickable",
+        "uid" : "19bfe7d03283da68",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256095351,
+          "stop" : 1688256095351,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.11 Verify Password field is appropriately labeled",
+        "uid" : "88b9ff44426db35a",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256096041,
+          "stop" : 1688256096041,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.12 Verify Password field highlighting on click",
+        "uid" : "671db4c0501fbef3",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256096731,
+          "stop" : 1688256096731,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.13 Verify Password is masked",
+        "uid" : "8bdf19d1b6ddcaf1",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256097421,
+          "stop" : 1688256097421,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.14 Verify Sign in button is present",
+        "uid" : "c198b746fc3a7091",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256098110,
+          "stop" : 1688256098110,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.15 Verify Sign in button is clickable",
+        "uid" : "1a976cc59b7374a3",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256098838,
+          "stop" : 1688256098838,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.17 Verify Forgot Your Password link is functional",
+        "uid" : "240513815148969b",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256099527,
+          "stop" : 1688256099527,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 03.01.18 Verify Email field for correct email format",
+        "uid" : "97ba3ee4181d499d",
+        "parentUid" : "da522a6c04fbc1af3adaefe37886cda3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256100218,
+          "stop" : 1688256100218,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "da522a6c04fbc1af3adaefe37886cda3"
+    } ],
+    "uid" : "391fc69a0250e49a436520e8f80e2deb"
+  }, {
+    "name" : "New Customers",
+    "children" : [ {
+      "name" : "TC 03.01.19 Verify New Customers Heading",
+      "uid" : "580a67cabbf20fc1",
+      "parentUid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256100909,
+        "stop" : 1688256100909,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.01.20 Verify New Customers note",
+      "uid" : "d8dd7daacb17d845",
+      "parentUid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256101600,
+        "stop" : 1688256101600,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.01.21 Verify presence of Create an Account button ",
+      "uid" : "b21d797b873fb106",
+      "parentUid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256102289,
+        "stop" : 1688256102289,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.01.22 Verify Create an Account button link",
+      "uid" : "bef68725e8e7c6d5",
+      "parentUid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256102978,
+        "stop" : 1688256102978,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.01.23 Verify Create an Account button is functional",
+      "uid" : "1d3ffa15fe26f1fa",
+      "parentUid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256103704,
+        "stop" : 1688256103704,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1"
+  }, {
+    "name" : "Login Functionality",
+    "children" : [ {
+      "name" : "TC 03.02.01 Verify login with valid email valid password - Positive",
+      "uid" : "148ae6b2c341967d",
+      "parentUid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256104395,
+        "stop" : 1688256104395,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.02.04 Verify error on attempting to log in with empty email - Negative",
+      "uid" : "7645f8630e5291a4",
+      "parentUid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256105085,
+        "stop" : 1688256105085,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.02.05 Verify error on attempting to log in with empty email - Negative",
+      "uid" : "c38579cbc33c8d90",
+      "parentUid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256105773,
+        "stop" : 1688256105773,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.02.06 Verify login with valid mix-cased email valid password - Positive",
+      "uid" : "3590af7c1660c777",
+      "parentUid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256106462,
+        "stop" : 1688256106462,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 03.02.09 Verify login with valid mail containing trailing leading_spaces - Positive",
+      "uid" : "3d5203f29902b8e4",
+      "parentUid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256107152,
+        "stop" : 1688256107152,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "cfe439a8cb5b4e3afb016ca4dfc57392"
+  }, {
+    "name" : "Login Functionality with captcha",
+    "children" : [ {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "ca389cf9c9865e4b",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107841,
+        "stop" : 1688256107841,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "90c85d4754913e2",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107843,
+        "stop" : 1688256107843,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston110@mailinator.com'", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "f24dbbe2e1a0d736",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107844,
+        "stop" : 1688256107844,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'Test#12p@ssw0rd'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "3e18e34175193c4f",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107845,
+        "stop" : 1688256107845,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "''", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "bd1d9f827c357bd",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107847,
+        "stop" : 1688256107847,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "''" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "18e2f23e8a4b4fce",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107848,
+        "stop" : 1688256107848,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'TestOn120@Mailinator.com'", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "d071be056fe03b5b",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107849,
+        "stop" : 1688256107849,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "e1082696cb0f4c3e",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107851,
+        "stop" : 1688256107851,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "' teston120@mailinator.com '", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "2474d1b6b35b47b5",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107852,
+        "stop" : 1688256107852,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "' Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation",
+      "uid" : "8100689dd914d249",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107853,
+        "stop" : 1688256107853,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'Test#12p@ssword '" ]
+    }, {
+      "name" : "TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials",
+      "uid" : "8730b167a95fa0d2",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107855,
+        "stop" : 1688256107855,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston110@mailinator.com'", "'Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials",
+      "uid" : "7dd39a6be06a3196",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107856,
+        "stop" : 1688256107856,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'Test#12p@ssw0rd'" ]
+    }, {
+      "name" : "TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials",
+      "uid" : "e853138f1550ea24",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107857,
+        "stop" : 1688256107857,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials",
+      "uid" : "31b39e26cdb68f75",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107859,
+        "stop" : 1688256107859,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "' Test#12p@ssword'" ]
+    }, {
+      "name" : "TC 03.02.02 to 03_02_10 Verify Error on Failed Login with invalid credentials",
+      "uid" : "3139fb82c85ad416",
+      "parentUid" : "e3b442dabec39f6baca884bdae9ee94a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1688256107860,
+        "stop" : 1688256107860,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'teston120@mailinator.com'", "'Test#12p@ssword '" ]
+    } ],
+    "uid" : "e3b442dabec39f6baca884bdae9ee94a"
+  }, {
+    "name" : "Training Page",
+    "children" : [ {
+      "name" : "Testing Training Page Sidebar",
+      "children" : [ {
+        "name" : "TC 16.01.01 Verify Sidebar panel title Shop By is visible and contains text 'Shop By'",
+        "uid" : "97abdbe74f2ca118",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256107861,
+          "stop" : 1688256107861,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.01.02 Verify Sidebar panel title Category is visible and contains text 'Category'",
+        "uid" : "f5efb6239289f928",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256108584,
+          "stop" : 1688256108584,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.01.03 Verify Sidebar title Video Download is visible and contains text 'Video Download'",
+        "uid" : "fec9410425cdc07a",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256109275,
+          "stop" : 1688256109275,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.01.04 Verify Sidebar panel title Video Download contains URL",
+        "uid" : "b2210b69d2ff0e77",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256109966,
+          "stop" : 1688256109966,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.01.05 Verify Sidebar panel title Compare Products is visible and contains text 'Compare Products'",
+        "uid" : "38ad88f9ac9e28f8",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256110656,
+          "stop" : 1688256110656,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.01.06 Verify Sidebar panel title My Wish List is visible and contains text 'My Wish List'",
+        "uid" : "65db74ba49d29b8",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256111347,
+          "stop" : 1688256111347,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.01 Verify title Training is visible and contains text 'Training'",
+        "uid" : "410eccfa42f91b83",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256112037,
+          "stop" : 1688256112037,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.02 - Check the display of block 1 main",
+        "uid" : "a68a5d711c2c701e",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256112727,
+          "stop" : 1688256112727,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.03 - Check the display of block 2 erin",
+        "uid" : "8415ebb4e83bdab1",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256113417,
+          "stop" : 1688256113417,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.04 - Check the display of block 3 on demand",
+        "uid" : "d440a12c2371f0ac",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256114143,
+          "stop" : 1688256114143,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.05 Verify title Training is visible and contains text 'Top Videos'",
+        "uid" : "25b7f1b3162b8798",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256114833,
+          "stop" : 1688256114833,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.06 Check the cursor change to block training main ",
+        "uid" : "7cdfa258b97d89f4",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256115524,
+          "stop" : 1688256115524,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.07 Check the cursor change to block training erin",
+        "uid" : "e99cffc0d3a33a9d",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256116214,
+          "stop" : 1688256116214,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.08 Check the cursor change to block training on demand",
+        "uid" : "9c1af643498d4510",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256116903,
+          "stop" : 1688256116903,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC 16.02.08 Check the title page",
+        "uid" : "91f9d34f06d7574b",
+        "parentUid" : "01690f8a40ad60b325077a3f5e3323e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688256117594,
+          "stop" : 1688256117594,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "01690f8a40ad60b325077a3f5e3323e1"
+    } ],
+    "uid" : "6b8669f8056eed2e66db2b5eafb6ca6c"
+  }, {
+    "name" : "Test Training Video",
+    "children" : [ {
+      "name" : "TC 18.01.01 subtitle is displayed text compare products",
+      "uid" : "ef329b7d436a741b",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256118285,
+        "stop" : 1688256118285,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 18.01.02 subtitle is displayed text My Wish List",
+      "uid" : "33bbac6a18af1f18",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256119012,
+        "stop" : 1688256119012,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 18.01.03 message \"You have no items to compare.\" is displayed",
+      "uid" : "183276d56b8b0852",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256119702,
+        "stop" : 1688256119702,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 18.01.04 message no items to compare is displayed",
+      "uid" : "cc533b89511418b4",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256120392,
+        "stop" : 1688256120392,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 18.02.01 title \"Video Download\" is visible",
+      "uid" : "6a237e92b04ba6b2",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256121083,
+        "stop" : 1688256121083,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 18.02.02 Verify message \"We can not find products matching the selection.\" is visible",
+      "uid" : "fee9730336e59020",
+      "parentUid" : "318050418807110ca6a68aed2bfc9a93",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256121773,
+        "stop" : 1688256121773,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "318050418807110ca6a68aed2bfc9a93"
+  }, {
+    "name" : "WomenPage",
+    "children" : [ {
+      "name" : "TC 12.01.01 Check side panel title Shop By is visible",
+      "uid" : "cc1ca52e7dc9a241",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256122462,
+        "stop" : 1688256122462,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 12.02.01 Check side panel title Category is visible",
+      "uid" : "d031325eb1fc698c",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256123152,
+        "stop" : 1688256123152,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TC 12.05.01/02/03/04 Check the Sidebar text is visible",
+      "uid" : "59757a3014bdacf6",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256123880,
+        "stop" : 1688256123880,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'Compare Products'", "('xpath', \"//strong[@id='block-compare-heading']\")" ]
+    }, {
+      "name" : "TC 12.05.01/02/03/04 Check the Sidebar text is visible",
+      "uid" : "f00a8bf4c4d50c5a",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256124570,
+        "stop" : 1688256124570,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'You have no items to compare.'", "('xpath', \"// div[normalize-space() = 'You have no items to compare.']\")" ]
+    }, {
+      "name" : "TC 12.05.01/02/03/04 Check the Sidebar text is visible",
+      "uid" : "9601237e27afdfeb",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256125260,
+        "stop" : 1688256125260,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'My Wish List'", "('xpath', \"//strong[normalize-space()='My Wish List']\")" ]
+    }, {
+      "name" : "TC 12.05.01/02/03/04 Check the Sidebar text is visible",
+      "uid" : "c6d59a20ad2b9549",
+      "parentUid" : "8add306841c3fde351cce30c0f23546c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1688256125950,
+        "stop" : 1688256125950,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'You have no items in your wish list.'", "('xpath', \"//div[normalize-space()='You have no items in your wish list.']\")" ]
+    } ],
+    "uid" : "8add306841c3fde351cce30c0f23546c"
+  } ],
+  "name" : "behaviors"
+}
