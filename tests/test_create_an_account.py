@@ -1,11 +1,9 @@
-import time
-
 import allure
 import pytest
 
 from data.data_urls import CREATE_ACCOUNT_PAGE_URL
 from pages.create_an_account_page import CreateAccountPage
-from data.create_an_account import create_account_data
+from data.create_an_account import create_account_data, warning_colors
 
 
 @pytest.fixture(scope="function")
@@ -150,7 +148,24 @@ class TestCreateAnAccount:
             check_password_field_style_before_and_after_click()
         assert before_activate != after_activate and \
                confirm_password_input.is_displayed() and confirm_password_input.is_enabled(), \
-            "Confirm Password field is not highlighted when clicked"
+                "Confirm Password field is not highlighted when clicked"
+
+    @allure.title('TC 04_01_15 Verify presence of password strength hint')
+    def test_04_01_15_password_strength_labeled(self, create_account_page):
+        """ Verify presence of Password Strength note """
+        password_strength_hint = create_account_page.check_password_strength_hint()
+        assert password_strength_hint.text == create_account_data['no_password_message'], \
+            "Password Strength label is not present or not displayed"
+
+    @allure.title('TC 04_01_15_1 Verify presence of weak password strength hint when password is less than 8 symbols')
+    def test_04_01_15_2_weak_password_strength_hint(self, create_account_page, wait):
+        """ Verify presence of Password Strength hint and warning color of weak password """
+        password_strength_hint_message, message_error, hex_color = \
+            create_account_page.check_password_strength_hint_with_weak_password()
+        assert password_strength_hint_message == create_account_data['weak_password_message'] \
+            and hex_color == warning_colors["weak_password"]\
+            and message_error == create_account_data['warning_password_message1'], \
+            "Password Strength hint is not present or not displayed or has wrong color"
 
     @allure.title('test 04.02.08 create an account with registered email')
     def test_tc_04_02_08_create_account_with_registered_email(self, driver):
