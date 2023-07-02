@@ -261,3 +261,51 @@ class TestMenPagePromoBlock:
         page.open()
         current_page = page.verify_block_tees_link_redirects_to_a_correct_page()
         assert current_page, "New page isn't open"
+
+    @allure.title("TC 14.06.33 Verify the visibility of 'Luma hoodies' promo block.")
+    def test_tc_14_06_33(self, driver):
+        """Verify that the block 'Luma hoodies' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_hoodies = page.check_block_hoodies_display()
+        assert block_hoodies is True, "The element is not visible"
+
+    @allure.title("TC 14.06.34 Verify the visibility of the image in the 'Luma hoodies' promo block.")
+    def test_tc_14_06_34(self, driver):
+        """Verify that the image in the block 'Luma hoodies' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_hoodies_image = page.check_block_hoodies_image_display()
+        assert block_hoodies_image == MenPageImageURLS.LUMA_HOODIES_IMG_URL, "The image is not correct"
+
+    @allure.title("TC 14.06.35 Verify that the 'Luma hoodies' text is visible.")
+    def test_tc_14_06_35(self, driver):
+        """Verify that text-1 in 'Luma hoodies' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_hoodies_text_1 = page.verify_block_hoodies_text_1()
+        assert block_hoodies_text_1 == "Luma hoodies", "The text is not correct"
+
+    @allure.title("TC 14.06.36 Verify that the 'Dress for fitness' text is visible.")
+    def test_tc_14_06_36(self, driver):
+        """Verify that text-2 in 'Luma hoodies' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_hoodies_text_2 = page.verify_block_hoodies_text_2()
+        assert block_hoodies_text_2 == "Dress for fitness", "The text is not correct"
+
+    @allure.title("TC 14.06.37 Verify that the 'Shop Hoodies' text is visible.")
+    def test_tc_14_06_37(self, driver):
+        """Verify that text-3 in 'Luma hoodies' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_hoodies_text_3 = page.verify_block_hoodies_text_3()
+        assert block_hoodies_text_3 == "Shop Hoodies", "The text is not correct"
+
+    @allure.title("TC 14.06.38 Verify the click on the block 'Luma hoodies' redirects to a correct page.")
+    def test_tc_14_06_38(self, driver):
+        """Verify that the click on the block 'Luma hoodies' correctly redirects to a new webpage"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_block_hoodies_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open"
