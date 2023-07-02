@@ -335,6 +335,15 @@ class TestFooter:
         subscribe_button = page.check_subscribe_button_is_visible()
         assert subscribe_button, "The Subscribe Button is not visible"
 
+    @allure.title("TC 02.01.42 - Check if Subscribe Button is clickable on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_42_check_clickability_of_subscribe_button_on_pages(self, driver, URL):
+        """This test checks if Subscribe Button is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_button = page.check_subscribe_button_clickability()
+        assert subscribe_button, "The Subscribe Button is not clickable"
+
     @allure.title("TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -353,6 +362,15 @@ class TestFooter:
         page.open()
         subscribe_button_text = page.check_subscribe_button_text_is_visible()
         assert subscribe_button_text, "The text on Subscribe Button is not visible"
+
+    @allure.title("TC 02.01.46 - Check text on Subscribe Button on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_46_check_text_on_subscribe_button_on_pages(self, driver, URL):
+        """Checks if text on Subscribe Button is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_button_text = page.check_subscribe_button_text_is_visible().text
+        assert subscribe_button_text == "Subscribe", "Text on Subscribe Button is not correct"
 
     @allure.title("TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree "
                   "on each page specified in DATA_1")
