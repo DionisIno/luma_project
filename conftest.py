@@ -5,6 +5,7 @@ import shutil
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from locators.sign_in_page_locators import SingInPageLocators as sil
 from locators.header_page_locators import HeaderPageLocators as hpl
@@ -31,6 +32,12 @@ def driver():
     driver.quit()
 
 
+@pytest.fixture()
+def wait(driver):
+    wait = WebDriverWait(driver, 15)
+    yield wait
+
+
 @pytest.fixture(scope="session")
 def config():
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -51,6 +58,7 @@ def sing_in(driver, config):
     password.send_keys(config["password"])
     button = wait(driver, config["timeout"]).until(EC.element_to_be_clickable(sil.SIGN_IN_BUTTON))
     button.click()
+
 
 @pytest.fixture(scope="session", autouse=True)
 def clear_allure_result_folder():

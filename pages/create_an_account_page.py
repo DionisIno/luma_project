@@ -1,5 +1,8 @@
+import time
+
 import allure
 
+from data.create_an_account import create_account_credentials
 from locators.common_locators import CommonLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from pages.base_page import BasePage
@@ -60,10 +63,30 @@ class CreateAccountPage(BasePage):
         """ This method verifies if Confirm Password label is visible """
         return self.element_is_visible(self.locators.PASSWORD_CONFIRMATION_LABEL)
 
+    @allure.step('Check Create An Account Button is visible')
+    def check_create_an_account_is_visible(self):
+        """ This method verifies if Create An Account is visible """
+        return self.element_is_visible(self.locators.CREATE_AN_ACCOUNT_BUTTON)
+
+    @allure.step('Check Message Password Error hint is visible')
+    def check_message_password_error_hint(self):
+        """ This method verifies if Message Password Error hint is visible """
+        return self.element_is_visible(self.locators.MESSAGE_PASSWORD_ERROR)
+
+    @allure.step('Check Create An Account Button is clickable')
+    def check_create_an_account_is_clickable(self):
+        """ This method verifies if Create An Account is clickable """
+        return self.element_is_clickable(self.locators.CREATE_AN_ACCOUNT_BUTTON)
+
     @allure.step('Get property of the pseudo-class for required elements')
     def check_element_asteriks(self):
         """ This method gets property 'content' of the ':after' pseudo-class """
         return "return window.getComputedStyle(arguments[0], '::after').getPropertyValue('content')"
+
+    @allure.step('Get property "background-color" of the pseudo-class')
+    def check_element_color(self):
+        """ This method gets property 'background-color' of the ':before' pseudo-class """
+        return "return window.getComputedStyle(arguments[0],'::before').getPropertyValue('background-color')"
 
     @allure.step('Check First Name label is marked with asterisk')
     def check_firstname_label_asteriks(self):
@@ -91,7 +114,7 @@ class CreateAccountPage(BasePage):
 
     @allure.step('Check Confirm Password label is marked with asterisk')
     def check_confirm_password_label_asteriks(self):
-        """ This method verifies if required Confirm Passworde label is marked with asterisk """
+        """ This method verifies if required Confirm Password label is marked with asterisk """
         confirm_password_label = self.check_firstname_label()
         return self.driver.execute_script(self.check_element_asteriks(), confirm_password_label)
 
@@ -194,11 +217,6 @@ class CreateAccountPage(BasePage):
         after_activate = self.check_element_hover_style(self.locators.PASSWORD_CONFIRMATION, 'box-shadow')
         return before_activate, after_activate
 
-    # @allure.step('Check Email label is clickable')
-    # def check_email_field_is_clickable(self):
-    #     """This method verifies if Email label is clickable"""
-    #     return self.element_is_clickable(self.locators.EMAIL_LABEL)
-
     @allure.step('Check Sign Up checkbox label is visible')
     def check_sign_up_checkbox_label(self):
         """ This method verifies if Sign Up checkbox label is visible """
@@ -219,6 +237,34 @@ class CreateAccountPage(BasePage):
         """ This method gets checked property of checkbox"""
         checkbox = self.element_is_visible(self.locators.SIGN_UP_CHECKBOX)
         return self.driver.execute_script(self.get_checkbox_element(), checkbox)
+
+    @allure.step('Check Password Strength hint is visible')
+    def check_password_strength_hint(self):
+        """ This method verifies if Password Strength hint is visible on the page """
+        return self.element_is_visible(self.locators.PASSWORD_STRENGTH)
+
+    @allure.step('Transform rgb color to hex form')
+    def rgb_to_hex(self, rgb_color):
+        red, green, blue = rgb_color[rgb_color.find("(") + 1:-1].split(",")
+        hex_color = "".join(["#", format(int(red), '02x'), format(int(green), '02x'), format(int(blue), '02x')])
+        return hex_color
+
+    @allure.step('Check color password strength hint')
+    def check_color_of_password_strength_hint(self):
+        """ This method verifies if password strength hint has correct color """
+        password_strength_note = self.check_password_strength_hint()
+        return self.driver.execute_script(self.check_element_color(), password_strength_note)
+
+    @allure.step('Check password strength hint and color')
+    def check_password_strength_hint_with_weak_password(self):
+        """ Verify password strength hint and color when password is weak less than 8 symbols """
+        password_input = self.check_password_input()
+        password_input.send_keys(create_account_credentials['weak_password1'])
+        message_error_text = self.check_message_password_error_hint().text
+        password_strength_hint_text = self.check_password_strength_hint().text
+        rgb_color = self.check_color_of_password_strength_hint()
+        hex_color = self.rgb_to_hex(rgb_color)
+        return password_strength_hint_text, message_error_text, hex_color
 
     @allure.step('Create an account with registered e-mail')
     def create_with_email(self):
