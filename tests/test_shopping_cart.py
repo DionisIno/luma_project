@@ -132,3 +132,10 @@ class TestShoppingCartFull:
         message = page.check_remove_button_deletes_item_from_shopping_cart()
         assert message == "You have no items in your shopping cart.", "Remove button doesn't works correctly"
 
+
+    @pytest.mark.parametrize("t_header", shopping_locators.TABLE_HEADERS.values())
+    def test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible(self, driver, t_header, full_cart_page):
+        """Check that table headers in item cart are visible"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        headers_in_item_cart = page.element_is_visible(t_header)
+        assert headers_in_item_cart is not None, "Table headers are not displayed"

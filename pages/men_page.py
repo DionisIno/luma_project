@@ -225,7 +225,7 @@ class MenPage(BasePage):
 
     @allure.step("Check display of the image in the 'Luma tees' block on Men page")
     def check_block_tees_image_display(self):
-        """Check visibility of the 'Luma tees' block on Men page under the yellow block"""
+        """Check visibility of the image of the 'Luma tees' block on Men page under the yellow block"""
         element = self.element_is_visible(self.promo_locators.LUMA_TEES_BLOCK_IMG)
         block_tees_image = element.get_attribute("src")
         return block_tees_image
@@ -258,3 +258,45 @@ class MenPage(BasePage):
         element.click()
         url = self.driver.current_url
         return url == MEN_TEES_URL
+
+    @allure.step("Check display of the 'Luma hoodies' block on Men page")
+    def check_block_hoodies_display(self):
+        """Check visibility of the 'Luma hoodies' block on Men page under the 'Last chance block'"""
+        block_hoodies = self.element_is_visible(self.promo_locators.LUMA_HOODIES_BLOCK)
+        return block_hoodies.is_displayed()
+
+    @allure.step("Check display of the image in the 'Luma hoodies' block on Men page")
+    def check_block_hoodies_image_display(self):
+        """Check visibility of the image of the 'Luma tees' block on Men page under the 'Last chance block'"""
+        element = self.element_is_visible(self.promo_locators.LUMA_HOODIES_BLOCK_IMG)
+        block_hoodies_image = element.get_attribute("src")
+        return block_hoodies_image
+
+    @allure.step("Check display of the text-1 'Luma hoodies' in the 'Luma hoodies' block on Men page")
+    def verify_block_hoodies_text_1(self):
+        """This method verifies correct display of the text-1 in the 'Luma hoodies' block"""
+        hoodies_block_title1 = self.element_is_visible(self.promo_locators.LUMA_HOODIES_TITLE)
+        hoodies_block_title1_text = hoodies_block_title1.text
+        return hoodies_block_title1_text
+
+    @allure.step("Check display of the text-2 'Dress for fitness' in the 'Luma hoodies' block on Men page")
+    def verify_block_hoodies_text_2(self):
+        """This method verifies correct display of the text-2 in the 'Luma hoodies' block"""
+        hoodies_block_title2 = self.element_is_visible(self.promo_locators.LUMA_HOODIES_TITLE_2)
+        hoodies_block_title2_text = hoodies_block_title2.text
+        return hoodies_block_title2_text
+
+    @allure.step("Check display of the text-3 'Shop Hoodies' in the 'Luma hoodies' block on Men page")
+    def verify_block_hoodies_text_3(self):
+        """This method verifies correct display of the text-3 in the 'Luma hoodies' block"""
+        hoodies_block_title3 = self.element_is_visible(self.promo_locators.LUMA_HOODIES_TITLE_3)
+        hoodies_block_title3_text = hoodies_block_title3.text
+        return hoodies_block_title3_text
+
+    @allure.step("Correct redirection of the click on the block 'Luma hoodies' on Men page")
+    def verify_block_hoodies_link_redirects_to_a_correct_page(self):
+        """This method verifies correct redirection to a new page after clicking on the block"""
+        element = self.element_is_visible(self.promo_locators.LUMA_HOODIES_BLOCK)
+        element.click()
+        url = self.driver.current_url
+        return url == MEN_HOODIES_URL

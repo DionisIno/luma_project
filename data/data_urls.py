@@ -101,3 +101,4 @@ class ImageUrls:
 class MenPageImageURLS:
     LUMA_SHORTS_IMG_URL = "https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-shorts.jpg"
     LUMA_TEES_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-tees.jpg'
+    LUMA_HOODIES_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-hoodies.jpg'
