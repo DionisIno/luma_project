@@ -1,8 +1,9 @@
 import time
 
 import allure
+from selenium.common import TimeoutException
 
-from data.create_an_account import create_account_credentials
+from data.create_an_account import create_an_account_credentials
 from locators.common_locators import CommonLocators
 from locators.create_account_page_locators import CreateAccountPageLocators
 from pages.base_page import BasePage
@@ -257,14 +258,68 @@ class CreateAccountPage(BasePage):
 
     @allure.step('Check password strength hint and color')
     def check_password_strength_hint_with_weak_password(self):
-        """ Verify password strength hint and color when password is weak less than 8 symbols """
+        """ Verify password strength hint and color when weak password is less than 8 symbols """
         password_input = self.check_password_input()
-        password_input.send_keys(create_account_credentials['weak_password1'])
-        message_error_text = self.check_message_password_error_hint().text
-        password_strength_hint_text = self.check_password_strength_hint().text
+        password_input.send_keys(create_an_account_credentials['weak_password'])
+        message_error = self.check_message_password_error_hint()
+        password_strength_hint = self.check_password_strength_hint()
         rgb_color = self.check_color_of_password_strength_hint()
         hex_color = self.rgb_to_hex(rgb_color)
-        return password_strength_hint_text, message_error_text, hex_color
+        return password_strength_hint.text, message_error.text if message_error else None, hex_color
+
+    @allure.step('Check password strength hint and color')
+    def check_password_strength_hint_with_weak2_password(self):
+        """ Verify password strength hint and color when weak password is less than 8 symbols
+        and has not 3 character classes """
+        password_input = self.check_password_input()
+        password_input.send_keys(create_an_account_credentials['weak_password_2'])
+        message_error = self.check_message_password_error_hint()
+        password_strength_hint = self.check_password_strength_hint()
+        rgb_color = self.check_color_of_password_strength_hint()
+        hex_color = self.rgb_to_hex(rgb_color)
+        return password_strength_hint.text, message_error.text if message_error else None, hex_color
+
+    @allure.step('Check password strength hint and color')
+    def check_password_strength_hint_with_medium_password(self):
+        """ Verify password strength hint and color when password is medium """
+        password_input = self.check_password_input()
+        password_input.send_keys(create_an_account_credentials['medium_password'])
+        try:
+            message_error = self.check_message_password_error_hint()
+        except TimeoutException:
+            message_error = None
+        password_strength_hint = self.check_password_strength_hint()
+        rgb_color = self.check_color_of_password_strength_hint()
+        hex_color = self.rgb_to_hex(rgb_color)
+        return password_strength_hint.text, message_error.text if message_error else None, hex_color
+
+    @allure.step('Check password strength hint and color')
+    def check_password_strength_hint_with_strong_password(self):
+        """ Verify password strength hint and color when password is strong """
+        password_input = self.check_password_input()
+        password_input.send_keys(create_an_account_credentials['strong_password'])
+        try:
+            message_error = self.check_message_password_error_hint()
+        except TimeoutException:
+            message_error = None
+        password_strength_hint = self.check_password_strength_hint()
+        rgb_color = self.check_color_of_password_strength_hint()
+        hex_color = self.rgb_to_hex(rgb_color)
+        return password_strength_hint.text, message_error.text if message_error else None, hex_color
+
+    @allure.step('Check password strength hint and color')
+    def check_password_strength_hint_with_very_strong_password(self):
+        """ Verify password strength hint and color when password is strong """
+        password_input = self.check_password_input()
+        password_input.send_keys(create_an_account_credentials['very_strong_password'])
+        try:
+            message_error = self.check_message_password_error_hint()
+        except TimeoutException:
+            message_error = None
+        password_strength_hint = self.check_password_strength_hint()
+        rgb_color = self.check_color_of_password_strength_hint()
+        hex_color = self.rgb_to_hex(rgb_color)
+        return password_strength_hint.text, message_error.text if message_error else None, hex_color
 
     @allure.step('Create an account with registered e-mail')
     def create_with_email(self):
