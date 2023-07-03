@@ -3,6 +3,7 @@ name: Weekly Allure Report
 on:
   schedule:
     - cron: '0 0 * * 0'  # запуск каждое воскресенье в полночь
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,28 +19,58 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 pytest allure-pytest
+          pip install flake8 pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Lint with flake8
         run: |
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
+            # stop the build if there are Python syntax errors or undefined names
+            flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+            # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+            flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Start X-server
         run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
-          sleep 1
+            sudo apt-get update
+            sudo apt-get install -y xvfb
+            Xvfb :99 -screen 0 1900x1000x24 >/dev/null 2>&1 &
+            sleep 1
+
+#      - name: Run pytest on all files
+#        run: |
+#          pytest --alluredir=allure-results
+#        continue-on-error: true
+
+#      - name: Get Allure history
+#        uses: actions/checkout@v3
+#        if: always()
+#        continue-on-error: true
+#        with:
+#          ref: gh-pages
+#          path: gh-pages
+
+      - name: Allure Report action
+        uses: simple-elf/allure-report-action@v1.6
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: allure-history
+          keep_reports: 20
+          github_run_num: ${{ github.run_number }}
+          github_run_id: ${{ github.run_id }}
+          github_repo: ${{ github.repository }}
+          github_repo_owner: ${{ github.repository_owner }}
 
       - name: Run Pytest
         run: |
-          DISPLAY=:99 pytest -s -v --alluredir=allure_result
-        continue-on-error: true
+            DISPLAY=:99 pytest -s -v --alluredir=allure-results
+          continue-on-error: true
 
-      - name: Copy Allure Reports to gh-pages branch
-        run: |
-          mkdir gh-pages
-          cp -R allure_result/* gh-pages/
-        continue-on-error: true
+      - name: Commit Allure report
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.MY_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-report
