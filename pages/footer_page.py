@@ -184,3 +184,9 @@ class FooterPage(BasePage):
     def check_subscribe_button_clickability(self):
         """Checks Subscribe Button clickability"""
         return self.element_is_clickable(self.footer_locators.SUBSCRIBE_BUTTON)
+
+    @allure.step("Check Search Terms link is interactive")
+    def check_search_terms_link_interactivity(self):
+        """Checks Search Terms link is interactive"""
+        interactive_link = self.check_element_hover_style(self.footer_locators.SEARCH_TERMS_LINK, "text-decoration", 2)
+        return "underline" in interactive_link
