@@ -1,0 +1,287 @@
+{
+  "uid" : "8b22a57a9d6c849b",
+  "name" : "TC 02.01.06 Check if Search Terms link is interactive",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_06_check_interactivity_of_search_terms_link",
+  "historyId" : "2ec5175ab49cd51021eb8da58d481c73",
+  "time" : {
+    "start" : 1688400628120,
+    "stop" : 1688400629503,
+    "duration" : 1383
+  },
+  "description" : "This test checks if Search Terms link is underlined while hovering over it",
+  "descriptionHtml" : "<p>This test checks if Search Terms link is underlined while hovering over it</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: The Search Terms link is not underlined while hovering over it\nassert False",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7f98c81cd2d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"feaac60ad3d987ab381485aa147d87a4\")>\n\n    @allure.title(\"TC 02.01.06 Check if Search Terms link is interactive\")\n    def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):\n        \"\"\"This test checks if Search Terms link is underlined while hovering over it\"\"\"\n        page = FooterPage(driver, MAIN_PAGE_URL)\n        page.open()\n        underlined_link = page.check_search_terms_link_interactivity()\n>       assert underlined_link, \"The Search Terms link is not underlined while hovering over it\"\nE       AssertionError: The Search Terms link is not underlined while hovering over it\nE       assert False\n\ntests/test_footer.py:63: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1688400627045,
+      "stop" : 1688400628120,
+      "duration" : 1075
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1688400520456,
+      "stop" : 1688400520541,
+      "duration" : 85
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1688400520541,
+      "stop" : 1688400520541,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "This test checks if Search Terms link is underlined while hovering over it",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: The Search Terms link is not underlined while hovering over it\nassert False",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7f98c81cd2d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"feaac60ad3d987ab381485aa147d87a4\")>\n\n    @allure.title(\"TC 02.01.06 Check if Search Terms link is interactive\")\n    def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):\n        \"\"\"This test checks if Search Terms link is underlined while hovering over it\"\"\"\n        page = FooterPage(driver, MAIN_PAGE_URL)\n        page.open()\n        underlined_link = page.check_search_terms_link_interactivity()\n>       assert underlined_link, \"The Search Terms link is not underlined while hovering over it\"\nE       AssertionError: The Search Terms link is not underlined while hovering over it\nE       assert False\n\ntests/test_footer.py:63: AssertionError",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1688400628120,
+        "stop" : 1688400629105,
+        "duration" : 985
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check Search Terms link is interactive",
+      "time" : {
+        "start" : 1688400629105,
+        "stop" : 1688400629503,
+        "duration" : 398
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check element hover style",
+        "time" : {
+          "start" : 1688400629105,
+          "stop" : 1688400629503,
+          "duration" : 398
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1688400629105,
+            "stop" : 1688400629158,
+            "duration" : 53
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1688400629105,
+              "stop" : 1688400629120,
+              "duration" : 15
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '.footer > :nth-child(1) > a')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1688400629120,
+              "stop" : 1688400629131,
+              "duration" : 11
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"feaac60ad3d987ab381485aa147d87a4\", element=\"62C88DD3976002847F3B346D0B9D9CAF_element_28\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.footer > :nth-child(1) > a')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Move cursor to element",
+          "time" : {
+            "start" : 1688400629158,
+            "stop" : 1688400629446,
+            "duration" : 288
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"feaac60ad3d987ab381485aa147d87a4\", element=\"62C88DD3976002847F3B346D0B9D9CAF_element_28\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.footer > :nth-child(1) > a')"
+        }, {
+          "name" : "css_property",
+          "value" : "'text-decoration'"
+        }, {
+          "name" : "seconds",
+          "value" : "2"
+        } ],
+        "stepsCount" : 4,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1688400629514,
+      "stop" : 1688400629576,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1688401772163,
+      "stop" : 1688401772163,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1028-912"
+  }, {
+    "name" : "thread",
+    "value" : "3322-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8b22a57a9d6c849b.json",
+  "parameterValues" : [ ]
+}
