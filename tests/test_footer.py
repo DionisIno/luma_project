@@ -54,6 +54,14 @@ class TestFooter:
         search_terms_link = page.check_search_terms_link_clickability()
         assert search_terms_link, "The Search Terms link is not clickable"
 
+    @allure.title("TC 02.01.06 Check if Search Terms link is interactive")
+    def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):
+        """This test checks if Search Terms link is underlined while hovering over it"""
+        page = FooterPage(driver, MAIN_PAGE_URL)
+        page.open()
+        underlined_link = page.check_search_terms_link_interactivity()
+        assert underlined_link, "The Search Terms link is not underlined while hovering over it"
+
     @allure.title("TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_07_check_text_of_search_terms_link_on_pages(self, driver, URL):
