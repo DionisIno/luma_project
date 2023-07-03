@@ -1,1 +1,9 @@
-[{"buildOrder":5,"reportUrl":"https://DionisIno.github.io/luma_project/5/","reportName":"Allure Report with history","data":{}}]
+[ {
+  "buildOrder" : 10,
+  "reportUrl" : "https://DionisIno.github.io/luma_project/10/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "Product defects" : 1,
+    "Test defects" : 2
+  }
+} ]

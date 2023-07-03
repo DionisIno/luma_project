@@ -1,1 +1,8 @@
-[{"buildOrder":5,"reportUrl":"https://DionisIno.github.io/luma_project/5/","reportName":"Allure Report with history","data":{"duration":1481415}}]
+[ {
+  "buildOrder" : 10,
+  "reportUrl" : "https://DionisIno.github.io/luma_project/10/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "duration" : 1224180
+  }
+} ]

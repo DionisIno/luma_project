@@ -1,1 +1,64 @@
-{"uid":"4b4757e66a1912dae1a509f688f20b0f","children":[],"name":"categories"}
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5586814344e3 <unknown>\n#1 0x558681163c76 <unknown>\n#2 0x55868119fc96 <unknown>\n#3 0x55868119fdc1 <unknown>\n#4 0x5586811d97f4 <unknown>\n#5 0x5586811bf03d <unknown>\n#6 0x5586811d730e <unknown>\n#7 0x5586811bede3 <unknown>\n#8 0x5586811942dd <unknown>\n#9 0x55868119534e <unknown>\n#10 0x5586813f43e4 <unknown>\n#11 0x5586813f83d7 <unknown>\n#12 0x558681402b20 <unknown>\n#13 0x5586813f9023 <unknown>\n#14 0x5586813c71aa <unknown>\n#15 0x55868141d6b8 <unknown>\n#16 0x55868141d847 <unknown>\n#17 0x55868142d243 <unknown>\n#18 0x7f42a9d6cb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 04_01_15_1 Verify presence of weak password strength hint when password is less than 8 symbols",
+        "uid" : "3894316dc74c312d",
+        "parentUid" : "7ebd2ce536a8b99310b8c3c0f5532bc2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688398613005,
+          "stop" : 1688398618214,
+          "duration" : 5209
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ebd2ce536a8b99310b8c3c0f5532bc2"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "TC 01.02.02 functionality of the \"Search\" field",
+        "uid" : "5e934306bf026f58",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1688398905525,
+          "stop" : 1688398916920,
+          "duration" : 11395
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: The Search Terms link is not underlined while hovering over it\nassert False",
+      "children" : [ {
+        "name" : "TC 02.01.06 Check if Search Terms link is interactive",
+        "uid" : "1c01128452127eb1",
+        "parentUid" : "cc9ccc8dc7d0755463fdb8ad12d5f1ec",
+        "status" : "failed",
+        "time" : {
+          "start" : 1688398665454,
+          "stop" : 1688398666974,
+          "duration" : 1520
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cc9ccc8dc7d0755463fdb8ad12d5f1ec"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
