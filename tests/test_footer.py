@@ -60,7 +60,7 @@ class TestFooter:
         page = FooterPage(driver, MAIN_PAGE_URL)
         page.open()
         underlined_link = page.check_element_hover_style(page.footer_locators.SEARCH_TERMS_LINK, "text-decoration", 2)
-        assert underlined_link in underlined_link, "The Search Terms link is not underlined while hovering over it"
+        assert "underline" in underlined_link, "The Search Terms link is not underlined while hovering over it"
 
     @allure.title("TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
