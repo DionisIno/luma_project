@@ -2,12 +2,14 @@
 
 import allure
 from locators.footer_page_locators import FooterPageLocators
+from locators.popular_search_terms_page_locators import PopularSearchTermsPageLocators
 from pages.base_page import BasePage
 
 
 @allure.epic("Footer Page")
 class FooterPage(BasePage):
     footer_locators = FooterPageLocators()
+    locators1 = PopularSearchTermsPageLocators()
 
     @allure.step("Check Footer is present in the DOM tree")
     def check_footer_presence(self):
@@ -185,8 +187,16 @@ class FooterPage(BasePage):
         """Checks Subscribe Button clickability"""
         return self.element_is_clickable(self.footer_locators.SUBSCRIBE_BUTTON)
 
-    @allure.step("Check Search Terms link is interactive")
-    def check_search_terms_link_interactivity(self):
-        """Checks Search Terms link is interactive"""
-        interactive_link = self.check_element_hover_style(self.footer_locators.SEARCH_TERMS_LINK, "text-decoration", 2)
-        return "underline" in interactive_link
+    @allure.step("Check Search Terms link leads to the correct page")
+    def check_search_terms_link_functionality(self):
+        """Checks that Search Terms link leads to the correct page"""
+        search_terms_link = self.element_is_visible(self.footer_locators.SEARCH_TERMS_LINK)
+        link_functionality = search_terms_link.click()
+        return link_functionality
+
+    @allure.step("Check the title of opened page Popular Search Terms is displayed")
+    def check_title_display_of_popular_search_terms_page(self):
+        """Checks that the title of opened page Popular Search Terms is displayed"""
+        element = self.element_is_visible(self.locators1.POPULAR_SEARCH_TERMS_TITLE)
+        page_title = element.text
+        return page_title
