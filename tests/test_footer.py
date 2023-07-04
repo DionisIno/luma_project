@@ -2,7 +2,7 @@
 import allure
 import pytest
 from selenium.webdriver.common.by import By
-from data.data_urls import MAIN_PAGE_URL, DATA_1
+from data.data_urls import MAIN_PAGE_URL, DATA_1, FooterLinks
 from pages.footer_page import FooterPage
 
 
@@ -59,8 +59,8 @@ class TestFooter:
         """This test checks if Search Terms link is underlined while hovering over it"""
         page = FooterPage(driver, MAIN_PAGE_URL)
         page.open()
-        underlined_link = page.check_search_terms_link_interactivity()
-        assert underlined_link, "The Search Terms link is not underlined while hovering over it"
+        underlined_link = page.check_element_hover_style(page.footer_locators.SEARCH_TERMS_LINK, "text-decoration", 2)
+        assert underlined_link in underlined_link, "The Search Terms link is not underlined while hovering over it"
 
     @allure.title("TC 02.01.07 - Check text of Search Terms link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -427,3 +427,15 @@ class TestFooter:
         subscribe_email_field_placeholder_text = page.check_placeholder_in_subscribe_email_field_is_visible()
         assert subscribe_email_field_placeholder_text == "Enter your email address",\
             "Text of placeholder in Subscribe Email Field is not correct"
+
+    @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_01_check_search_terms_link_functionality(self, driver, URL):
+        """Check that Search Terms link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_search_terms_link_functionality()
+        title = page.check_title_display_of_popular_search_terms_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.POPULAR_SEARCH_TERMS_URL \
+               and title == "Popular Search Terms", "The link is not correct or the new page is not loaded"

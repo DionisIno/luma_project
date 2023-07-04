@@ -53,6 +53,16 @@ class PromoBlockLinks:
     ECO_FRIENDLY_PROMO_URL = "https://magento.softwaretestingboard.com/collections/eco-friendly.html"
 
 
+# Links in Footer on any page
+class FooterLinks:
+    ADVANCED_SEARCH_URL = "https://magento.softwaretestingboard.com/catalogsearch/advanced/"
+    CONTACT_US_URL = "https://magento.softwaretestingboard.com/contact/"
+    ORDERS_AND_RETURNS_URL = "https://magento.softwaretestingboard.com/sales/guest/form/"
+    POPULAR_SEARCH_TERMS_URL = "https://magento.softwaretestingboard.com/search/term/popular/"
+    PRIVACY_POLICY_URL = "https://magento.softwaretestingboard.com/privacy-policy-cookie-restriction-mode"
+    WRITE_FOR_US_URL = "https://softwaretestingboard.com/write-for-us/"
+
+
 # URL SETS
 DATA_1 = ["https://magento.softwaretestingboard.com/",
           "https://magento.softwaretestingboard.com/what-is-new.html",
