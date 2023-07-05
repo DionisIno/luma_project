@@ -304,7 +304,7 @@ class TestFooter:
         page.open()
         copyright_span = page.check_text_of_copyright_section_is_visible()
         copyright_span_text = copyright_span.text
-        assert copyright_span_text == "Copyright © 2013-present Magento, Inc. All rights reserved.",\
+        assert copyright_span_text == "Copyright © 2013-present Magento, Inc. All rights reserved.", \
             "Text of Copyright section is not correct"
 
     @allure.title("TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1")
@@ -409,7 +409,8 @@ class TestFooter:
         subscribe_email_field_placeholder = page.check_placeholder_presence_in_subscribe_email_field()
         assert subscribe_email_field_placeholder, "Placeholder in Email field is not present in the DOM tree"
 
-    @allure.title("TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1")
+    @allure.title(
+        "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_50_check_visibility_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
         """Checks if placeholder in Subscribe Email Field is visible on each page in DATA_1"""
@@ -425,7 +426,7 @@ class TestFooter:
         page = FooterPage(driver, url=URL)
         page.open()
         subscribe_email_field_placeholder_text = page.check_placeholder_in_subscribe_email_field_is_visible()
-        assert subscribe_email_field_placeholder_text == "Enter your email address",\
+        assert subscribe_email_field_placeholder_text == "Enter your email address", \
             "Text of placeholder in Subscribe Email Field is not correct"
 
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
@@ -438,4 +439,17 @@ class TestFooter:
         page.check_search_terms_link_functionality()
         title = page.check_title_display_of_popular_search_terms_page()
         assert page.get_actual_url_of_current_page() == FooterLinks.POPULAR_SEARCH_TERMS_URL \
-               and title == "Popular Search Terms", "The link is not correct or the new page is not loaded"
+               and title == "Popular Search Terms", "The Search Terms link is not correct or the new page is not loaded"
+
+    @allure.title("TC 02.02.02 - Check Privacy and Cookie Policy link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_01_check_privacy_and_cookie_policy_link_functionality(self, driver, URL):
+        """Check that Privacy and Cookie Policy link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_privacy_and_cookie_policy_link_functionality()
+        title = page.check_title_display_of_privacy_policy_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.PRIVACY_AND_COOKIE_POLICY_URL \
+               and title == "Privacy Policy", "The Privacy and Cookie Policy link is not correct or the new page is " \
+                                              "not loaded"
