@@ -37,3 +37,11 @@ create_an_account_credentials = {
     "strong_password": '1234qweREe',
     "very_strong_password": '1234qweREewe'
 }
+
+password_strength_msg = [
+    {"strength_password": 'Weak', "password": 'we', "warning_color": "#ffafae", "strength_password_hint": 'Password Strength: Weak', "warning_password_message": 'Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.'},
+    {"strength_password": 'Weak', "password": '1234qwere', "warning_color": "#ffafae", "strength_password_hint": 'Password Strength: Weak', "warning_password_message": 'Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.'},
+    {"strength_password": 'Medium', "password": '1234qweRE', "warning_color": "#ffd6b3", "strength_password_hint": 'Password Strength: Medium', "warning_password_message": None},
+    {"strength_password": 'Strong', "password": '1234qweREe', "warning_color": "#c5eeac", "strength_password_hint": 'Password Strength: Strong', "warning_password_message": None},
+    {"strength_password": 'Very Strong', "password": '1234qweREewe', "warning_color": "#81b562", "strength_password_hint": 'Password Strength: Very Strong', "warning_password_message": None}
+]
