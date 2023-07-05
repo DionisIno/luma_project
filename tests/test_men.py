@@ -156,6 +156,7 @@ class TestMenPage:
         assert current_page, "New page isn't open or the 'Shorts' subhead is incorrect"
 
 
+@allure.epic("MenPage")
 class TestMenPagePromoBlock:
 
     @allure.title("TC 14.06.01 Verify the 'Men' header is displayed")

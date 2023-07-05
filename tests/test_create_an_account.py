@@ -3,7 +3,7 @@ import pytest
 
 from data.data_urls import CREATE_ACCOUNT_PAGE_URL
 from pages.create_an_account_page import CreateAccountPage
-from data.create_an_account import create_account_data, warning_colors
+from data.create_an_account import create_account_data, password_strength_msg
 
 
 @pytest.fixture(scope="function")
@@ -223,50 +223,13 @@ class TestCreateAnAccount:
         message = page.create_with_incorrect_confirm_password()
         assert message == 'Please enter the same value again.', "No message"
 
-    @allure.title('TC 04_02_09 Verify presence of weak password strength hint when password is less than 8 symbols')
-    def test_04_02_09_weak_password_strength_hint(self, create_account_page, wait):
+    @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')
+    @pytest.mark.parametrize('password_strength_msg', password_strength_msg)
+    def test_04_02_09_13_password_strength_hint(self, create_account_page, password_strength_msg):
         """ Verify presence of Password Strength hint and warning color of weak password """
         password_strength_hint_message, message_error, hex_color = \
-            create_account_page.check_password_strength_hint_with_weak_password()
-        assert password_strength_hint_message == create_account_data['weak_password_message'] \
-            and hex_color == warning_colors["weak_password"]\
-            and message_error == create_account_data['warning_password_message1'], \
-            "Password Strength hint is not present or not displayed or has wrong color"
-
-    @allure.title('TC 04_02_10 Verify presence of weak password strength hint when password is greater than 8 symbols '
-                  'but has not 3 character classes')
-    def test_04_02_10_weak_password_strength_hint(self, create_account_page, wait):
-        """ Verify presence of Password Strength hint and warning color of weak password """
-        password_strength_hint_message, message_error, hex_color = \
-            create_account_page.check_password_strength_hint_with_weak2_password()
-        assert password_strength_hint_message == create_account_data['weak_password_message'] \
-               and hex_color == warning_colors["weak_password"] \
-               and message_error == create_account_data['warning_password_message2'], \
-            "Password Strength hint is not present or not displayed or has wrong color"
-
-    @allure.title('TC 04_02_11 Verify presence of medium password strength hint when password is equal 8 symbols')
-    def test_04_02_11_medium_password_strength_hint(self, create_account_page, wait):
-        """ Verify presence of Password Strength hint and warning color of medium password """
-        password_strength_hint_message, message_error, hex_color = \
-            create_account_page.check_password_strength_hint_with_medium_password()
-        assert password_strength_hint_message == create_account_data['medium_password_message'] \
-               and hex_color == warning_colors["medium_password"] and message_error is None, \
-            "Password Strength hint is not present or not displayed or has wrong color"
-
-    @allure.title('TC 04_02_12 Verify presence of strong password strength hint')
-    def test_04_02_12_strong_password_strength_hint(self, create_account_page, wait):
-        """ Verify presence of Password Strength hint and warning color of weak password """
-        password_strength_hint_message, message_error, hex_color = \
-            create_account_page.check_password_strength_hint_with_strong_password()
-        assert password_strength_hint_message == create_account_data['strong_password_message'] \
-               and hex_color == warning_colors["strong_password"] and message_error is None, \
-            "Password Strength hint is not present or not displayed or has wrong color"
-
-    @allure.title('TC 04_02_13 Verify presence of strong password strength hint')
-    def test_04_02_13_very_strong_password_strength_hint(self, create_account_page, wait):
-        """ Verify presence of Password Strength hint and warning color of weak password """
-        password_strength_hint_message, message_error, hex_color = \
-            create_account_page.check_password_strength_hint_with_very_strong_password()
-        assert password_strength_hint_message == create_account_data['very_strong_password_message'] \
-               and hex_color == warning_colors["very_strong_password"] and message_error is None, \
+            create_account_page.check_password_strength_hint_with_different_passwords(password_strength_msg)
+        assert password_strength_hint_message == password_strength_msg['strength_password_hint'] \
+               and hex_color == password_strength_msg["warning_color"] \
+               and password_strength_msg['warning_password_message'] == message_error, \
             "Password Strength hint is not present or not displayed or has wrong color"

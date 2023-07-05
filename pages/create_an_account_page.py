@@ -65,7 +65,7 @@ class CreateAccountPage(BasePage):
         return self.element_is_visible(self.locators.PASSWORD_CONFIRMATION_LABEL)
 
     @allure.step('Check Create An Account Button is visible')
-    def check_create_an_account_is_visible(self):
+    def check_create_an_account_button_is_visible(self):
         """ This method verifies if Create An Account is visible """
         return self.element_is_visible(self.locators.CREATE_AN_ACCOUNT_BUTTON)
 
@@ -246,8 +246,13 @@ class CreateAccountPage(BasePage):
 
     @allure.step('Transform rgb color to hex form')
     def rgb_to_hex(self, rgb_color):
-        red, green, blue = rgb_color[rgb_color.find("(") + 1:-1].split(",")
-        hex_color = "".join(["#", format(int(red), '02x'), format(int(green), '02x'), format(int(blue), '02x')])
+        rgb_colors = rgb_color[rgb_color.find("(") + 1:-1].split(",")
+        if len(rgb_colors) == 3:
+            red, green, blue = rgb_colors
+            hex_color = "".join(["#", format(int(red), '02x'), format(int(green), '02x'), format(int(blue), '02x')])
+        else:
+            # return transparent color value
+            hex_color = "#000000"
         return hex_color
 
     @allure.step('Check color password strength hint')
@@ -257,63 +262,16 @@ class CreateAccountPage(BasePage):
         return self.driver.execute_script(self.check_element_color(), password_strength_note)
 
     @allure.step('Check password strength hint and color')
-    def check_password_strength_hint_with_weak_password(self):
-        """ Verify password strength hint and color when weak password is less than 8 symbols """
+    def check_password_strength_hint_with_different_passwords(self, password_strength_msg):
+        """ Verify password strength hint and warning color """
         password_input = self.check_password_input()
-        password_input.send_keys(create_an_account_credentials['weak_password'])
-        message_error = self.check_message_password_error_hint()
-        password_strength_hint = self.check_password_strength_hint()
-        rgb_color = self.check_color_of_password_strength_hint()
-        hex_color = self.rgb_to_hex(rgb_color)
-        return password_strength_hint.text, message_error.text if message_error else None, hex_color
-
-    @allure.step('Check password strength hint and color')
-    def check_password_strength_hint_with_weak2_password(self):
-        """ Verify password strength hint and color when weak password is less than 8 symbols
-        and has not 3 character classes """
-        password_input = self.check_password_input()
-        password_input.send_keys(create_an_account_credentials['weak_password_2'])
-        message_error = self.check_message_password_error_hint()
-        password_strength_hint = self.check_password_strength_hint()
-        rgb_color = self.check_color_of_password_strength_hint()
-        hex_color = self.rgb_to_hex(rgb_color)
-        return password_strength_hint.text, message_error.text if message_error else None, hex_color
-
-    @allure.step('Check password strength hint and color')
-    def check_password_strength_hint_with_medium_password(self):
-        """ Verify password strength hint and color when password is medium """
-        password_input = self.check_password_input()
-        password_input.send_keys(create_an_account_credentials['medium_password'])
+        password_input.send_keys(password_strength_msg['password'])
+        self.check_create_an_account_button_is_visible().click()
         try:
-            message_error = self.check_message_password_error_hint()
-        except TimeoutException:
-            message_error = None
-        password_strength_hint = self.check_password_strength_hint()
-        rgb_color = self.check_color_of_password_strength_hint()
-        hex_color = self.rgb_to_hex(rgb_color)
-        return password_strength_hint.text, message_error.text if message_error else None, hex_color
-
-    @allure.step('Check password strength hint and color')
-    def check_password_strength_hint_with_strong_password(self):
-        """ Verify password strength hint and color when password is strong """
-        password_input = self.check_password_input()
-        password_input.send_keys(create_an_account_credentials['strong_password'])
-        try:
-            message_error = self.check_message_password_error_hint()
-        except TimeoutException:
-            message_error = None
-        password_strength_hint = self.check_password_strength_hint()
-        rgb_color = self.check_color_of_password_strength_hint()
-        hex_color = self.rgb_to_hex(rgb_color)
-        return password_strength_hint.text, message_error.text if message_error else None, hex_color
-
-    @allure.step('Check password strength hint and color')
-    def check_password_strength_hint_with_very_strong_password(self):
-        """ Verify password strength hint and color when password is strong """
-        password_input = self.check_password_input()
-        password_input.send_keys(create_an_account_credentials['very_strong_password'])
-        try:
-            message_error = self.check_message_password_error_hint()
+            if password_strength_msg['strength_password'] == 'Weak':
+                message_error = self.check_message_password_error_hint()
+            else:
+                message_error = None
         except TimeoutException:
             message_error = None
         password_strength_hint = self.check_password_strength_hint()
