@@ -4,6 +4,7 @@ import allure
 from locators.footer_page_locators import FooterPageLocators
 from locators.popular_search_terms_page_locators import PopularSearchTermsPageLocators
 from locators.privacy_policy_page_locators import PrivacyPolicyPageLocators
+from locators.advanced_search_page_locators import AdvancedSearchPageLocators
 from pages.base_page import BasePage
 
 
@@ -12,6 +13,7 @@ class FooterPage(BasePage):
     footer_locators = FooterPageLocators()
     locators1 = PopularSearchTermsPageLocators()
     locators2 = PrivacyPolicyPageLocators()
+    locators3 = AdvancedSearchPageLocators()
 
     @allure.step("Check Footer is present in the DOM tree")
     def check_footer_presence(self):
@@ -214,5 +216,19 @@ class FooterPage(BasePage):
     def check_title_display_of_privacy_policy_page(self):
         """Checks that the title of opened page Privacy Policy is displayed"""
         element = self.element_is_visible(self.locators2.PRIVACY_POLICY_TITLE)
+        page_title = element.text
+        return page_title
+
+    @allure.step("Check Advanced Search link leads to the correct page")
+    def check_advanced_search_link_functionality(self):
+        """Checks that Advanced Search link leads to the correct page"""
+        advanced_search_link = self.element_is_visible(self.footer_locators.ADVANCED_SEARCH_LINK)
+        link_functionality = advanced_search_link.click()
+        return link_functionality
+
+    @allure.step("Check the title of opened page Advanced Search is displayed")
+    def check_title_display_of_advanced_search_page(self):
+        """Checks that the title of opened page Advanced Search is displayed"""
+        element = self.element_is_visible(self.locators3.ADVANCED_SEARCH_TITLE)
         page_title = element.text
         return page_title
