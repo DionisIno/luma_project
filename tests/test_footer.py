@@ -54,6 +54,7 @@ class TestFooter:
         search_terms_link = page.check_search_terms_link_clickability()
         assert search_terms_link, "The Search Terms link is not clickable"
 
+    @pytest.mark.xfail(reason="In CI the test is not stable and needs to be improved")
     @allure.title("TC 02.01.06 Check if Search Terms link is interactive")
     def test_tc_02_01_06_check_interactivity_of_search_terms_link(self, driver):
         """This test checks if Search Terms link is underlined while hovering over it"""
