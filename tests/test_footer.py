@@ -444,7 +444,7 @@ class TestFooter:
     @allure.title("TC 02.02.02 - Check Privacy and Cookie Policy link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_02_01_check_privacy_and_cookie_policy_link_functionality(self, driver, URL):
+    def test_tc_02_02_02_check_privacy_and_cookie_policy_link_functionality(self, driver, URL):
         """Check that Privacy and Cookie Policy link in footer is correct"""
         page = FooterPage(driver, url=URL)
         page.open()
@@ -453,3 +453,15 @@ class TestFooter:
         assert page.get_actual_url_of_current_page() == FooterLinks.PRIVACY_AND_COOKIE_POLICY_URL \
                and title == "Privacy Policy", "The Privacy and Cookie Policy link is not correct or the new page is " \
                                               "not loaded"
+
+    @allure.title("TC 02.02.03 - Check Advanced Search link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_03_check_advanced_search_link_functionality(self, driver, URL):
+        """Check that Advanced Search link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_advanced_search_link_functionality()
+        title = page.check_title_display_of_advanced_search_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.ADVANCED_SEARCH_URL \
+               and title == "Advanced Search", "The Advanced Search link is not correct or the new page is not loaded"
