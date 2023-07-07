@@ -6,6 +6,7 @@ from locators.popular_search_terms_page_locators import PopularSearchTermsPageLo
 from locators.privacy_policy_page_locators import PrivacyPolicyPageLocators
 from locators.advanced_search_page_locators import AdvancedSearchPageLocators
 from locators.orders_and_returns_page_locators import OrdersAndReturnsPageLocators
+from locators.contact_us_page_locators import ContactUsPageLocators
 from pages.base_page import BasePage
 
 
@@ -16,6 +17,7 @@ class FooterPage(BasePage):
     locators2 = PrivacyPolicyPageLocators()
     locators3 = AdvancedSearchPageLocators()
     locators4 = OrdersAndReturnsPageLocators()
+    locators5 = ContactUsPageLocators()
 
     @allure.step("Check Footer is present in the DOM tree")
     def check_footer_presence(self):
@@ -246,5 +248,19 @@ class FooterPage(BasePage):
     def check_title_display_of_orders_and_returns_page(self):
         """Checks that the title of opened page Orders and Returns is displayed"""
         element = self.element_is_visible(self.locators4.ORDERS_AND_RETURNS_TITLE)
+        page_title = element.text
+        return page_title
+
+    @allure.step("Check Contact Us link leads to the correct page")
+    def check_contact_us_link_functionality(self):
+        """Checks that Contact Us link leads to the correct page"""
+        contact_us_link = self.element_is_visible(self.footer_locators.CONTACT_US_LINK)
+        link_functionality = contact_us_link.click()
+        return link_functionality
+
+    @allure.step("Check the title of opened page Contact Us is displayed")
+    def check_title_display_of_contact_us_page(self):
+        """Checks that the title of opened page Contact Us is displayed"""
+        element = self.element_is_visible(self.locators5.CONTACT_US_TITLE)
         page_title = element.text
         return page_title
