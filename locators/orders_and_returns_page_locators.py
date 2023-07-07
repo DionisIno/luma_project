@@ -3,6 +3,11 @@
 from selenium.webdriver.common.by import By
 
 
+class OrdersAndReturnsPageLocators:
+    """The class for "Orders and returns" page locators"""
+    ORDERS_AND_RETURNS_TITLE = (By.CSS_SELECTOR, '.page-title .base')
+
+
 class OrdersAndReturnsLocators:
     """A class for "Orders and returns" form locators"""
     # Headers
