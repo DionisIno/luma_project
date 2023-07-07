@@ -466,3 +466,16 @@ class TestFooter:
         title = page.check_title_display_of_advanced_search_page()
         assert page.get_actual_url_of_current_page() == FooterLinks.ADVANCED_SEARCH_URL \
                and title == "Advanced Search", "The Advanced Search link is not correct or the new page is not loaded"
+
+    @allure.title("TC 02.02.04 - Check Orders and Returns link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_04_check_orders_and_returns_link_functionality(self, driver, URL):
+        """Check that Orders and Returns link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_orders_and_returns_link_functionality()
+        title = page.check_title_display_of_orders_and_returns_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.ORDERS_AND_RETURNS_URL \
+               and title == "Orders and Returns", "The Orders and Returns link is not correct " \
+                                                  "or the new page is not loaded"
