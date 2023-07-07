@@ -479,3 +479,15 @@ class TestFooter:
         assert page.get_actual_url_of_current_page() == FooterLinks.ORDERS_AND_RETURNS_URL \
                and title == "Orders and Returns", "The Orders and Returns link is not correct " \
                                                   "or the new page is not loaded"
+
+    @allure.title("TC 02.02.05 - Check Contact Us link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_05_check_contact_us_link_functionality(self, driver, URL):
+        """Check that Contact Us link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_contact_us_link_functionality()
+        title = page.check_title_display_of_contact_us_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.CONTACT_US_URL \
+               and title == "Contact Us", "The Contact Us link is not correct or the new page is not loaded"
