@@ -252,7 +252,7 @@ class CreateAccountPage(BasePage):
             hex_color = "".join(["#", format(int(red), '02x'), format(int(green), '02x'), format(int(blue), '02x')])
         else:
             # return transparent color value
-            hex_color = "#000000"
+            hex_color = "#00000000"
         return hex_color
 
     @allure.step('Check color password strength hint')
