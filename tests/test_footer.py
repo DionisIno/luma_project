@@ -491,3 +491,15 @@ class TestFooter:
         title = page.check_title_display_of_contact_us_page()
         assert page.get_actual_url_of_current_page() == FooterLinks.CONTACT_US_URL \
                and title == "Contact Us", "The Contact Us link is not correct or the new page is not loaded"
+
+    @allure.title("TC 02.02.06 - Check Write for us link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_06_check_write_for_us_link_functionality(self, driver, URL):
+        """Check that Write for us link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_write_for_us_link_functionality()
+        title = page.check_item_display_of_write_for_us_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.WRITE_FOR_US_URL \
+               and title == "Write For Us", "The Write for us link is not correct or the new page is not loaded"

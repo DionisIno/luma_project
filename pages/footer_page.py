@@ -7,6 +7,7 @@ from locators.privacy_policy_page_locators import PrivacyPolicyPageLocators
 from locators.advanced_search_page_locators import AdvancedSearchPageLocators
 from locators.orders_and_returns_page_locators import OrdersAndReturnsPageLocators
 from locators.contact_us_page_locators import ContactUsPageLocators
+from locators.outside_pages_locators import WriteForUsPageLocators
 from pages.base_page import BasePage
 
 
@@ -18,6 +19,7 @@ class FooterPage(BasePage):
     locators3 = AdvancedSearchPageLocators()
     locators4 = OrdersAndReturnsPageLocators()
     locators5 = ContactUsPageLocators()
+    locators6 = WriteForUsPageLocators()
 
     @allure.step("Check Footer is present in the DOM tree")
     def check_footer_presence(self):
@@ -264,3 +266,17 @@ class FooterPage(BasePage):
         element = self.element_is_visible(self.locators5.CONTACT_US_TITLE)
         page_title = element.text
         return page_title
+
+    @allure.step("Check Write for us link leads to the correct page")
+    def check_write_for_us_link_functionality(self):
+        """Checks that Write for us leads to the correct page"""
+        write_for_us_link = self.element_is_visible(self.footer_locators.WRITE_FOR_US_LINK)
+        link_functionality = write_for_us_link.click()
+        return link_functionality
+
+    @allure.step("Check the item in menu of opened page Write For Us is displayed")
+    def check_item_display_of_write_for_us_page(self):
+        """Checks that the item in menu of opened page Write For Us is displayed"""
+        element = self.element_is_visible(self.locators6.WRITE_FOR_US_MENU_ITEM)
+        menu_item = element.text
+        return menu_item
