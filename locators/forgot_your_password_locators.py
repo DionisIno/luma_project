@@ -9,3 +9,5 @@ class ForgotYourPasswordPageLocators:
     EMAIL_LABEL = (By.CSS_SELECTOR, "label[for='email_address'] span")
     FORGOT_YOUR_PASSWORD_CAPTCHA = (By.CSS_SELECTOR, '#captcha_user_forgotpassword')
     FORGOT_YOUR_PASSWORD_CAPTCHA_LABEL = (By.CSS_SELECTOR, '.captcha.required > label > span')
+    RELOAD_CAPTCHA_BUTTON = (By.CSS_SELECTOR, 'button[title = "Reload captcha"]')
+    RELOAD_CAPTCHA_IMAGE = (By.XPATH, '//img[@class="captcha-img"]')
