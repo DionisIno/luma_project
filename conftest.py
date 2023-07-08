@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -71,3 +72,17 @@ def clear_allure_result_folder():
             if os.path.isfile(file_path):
                 os.remove(file_path)
     yield
+
+
+@allure.feature("Make a Screenshot")
+def pytest_runtest_makereport(item, call):
+    if call.when == 'call':
+        if call.excinfo is not None:
+            try:
+                driver = item.funcargs['driver']
+                driver.save_screenshot('allure-results/screenshot.png')
+                allure.attach.file('allure-results/screenshot.png', name='Screenshot',
+                                   attachment_type=allure.attachment_type.PNG)
+                allure.attach(driver.page_source, name="HTML source", attachment_type=allure.attachment_type.HTML)
+            except Exception as e:
+                print(f"Failed to take screenshot: {e}")
