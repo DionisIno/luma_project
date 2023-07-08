@@ -87,3 +87,23 @@ class ForgotYourPasswordPage(BasePage):
     def get_forgot_psw_captcha_field_attribute(self, attribute):
         """This method gets the entered value from captcha field"""
         return self.check_forgot_psw_captcha_field_is_clickable().get_attribute(attribute)
+
+    @allure.step('Check Reload captcha button is visible')
+    def check_reload_captcha_button_is_visible(self):
+        """This method verifies if reload_captcha button field is visible"""
+        return self.element_is_visible(self.locators.RELOAD_CAPTCHA_BUTTON)
+
+    @allure.step('Check Reload captcha button is clickable')
+    def check_reload_captcha_button_is_clickable(self):
+        """This method verifies if reload_captcha button field is visible"""
+        return self.element_is_clickable(self.locators.RELOAD_CAPTCHA_BUTTON)
+
+    @allure.step('Click on Reload captcha button')
+    def click_reload_captcha_button(self):
+        """This method clicks on reload captcha button"""
+        self.check_reload_captcha_button_is_clickable().click()
+
+    @allure.step('Check Captcha image button is visible')
+    def check_captcha_image_is_visible(self):
+        """This method verifies if reload_captcha button is visible"""
+        return self.element_is_visible(self.locators.RELOAD_CAPTCHA_IMAGE)

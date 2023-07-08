@@ -1,11 +1,10 @@
 import pytest
 import allure
-import random
-import string
 
 
 from pages.forgot_your_password_page import ForgotYourPasswordPage
-from data.forgot_your_password_data import forgot_your_password_data, forgot_your_password_errors
+from data.forgot_your_password_data import forgot_your_password_data, forgot_your_password_errors, \
+    captcha, captcha_img_link
 from data.data_urls import FORGOT_YOUR_PASSWORD_URL
 from data.credentials import credentials
 
@@ -115,8 +114,51 @@ class TestForgotYourPassword:
 
     @allure.title('TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field')
     def test_17_01_13_displayed_value_in_captcha_field_matches_entered(self, driver, forgot_psw_page):
-        """Check if the displayed captcha matches the entered random value in the captcha field"""
-        captcha = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(6))
+        """The test checks if the displayed captcha matches the entered value in the captcha field"""
         forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
         displayed_captcha = forgot_psw_page.get_forgot_psw_captcha_field_attribute('value')
         assert displayed_captcha == captcha, "Email value in the field doesn't match the entered email"
+
+    @allure.title('TC 17.01.14 Verify Reload captcha button is present')
+    def test_17_01_14_reload_captcha_id_displayed(self, driver, forgot_psw_page):
+        """Check if the 'Reload captcha' button is present
+        Verify captcha image alternative text  is present """
+        reload_captcha_button = forgot_psw_page.check_reload_captcha_button_is_visible()
+        assert reload_captcha_button is not None \
+               and reload_captcha_button.text == forgot_your_password_data['reload_captcha_btn'], \
+               f'''The {forgot_your_password_data['reload_captcha_btn']} button is not visible'''
+
+    @allure.title('TC 17.01.15 Verify Reload captcha button is clickable')
+    def test_17_01_15_reload_captcha_is_clickable(self, driver, forgot_psw_page):
+        '''Check that the 'Reload captcha' button is clickable'''
+        reload_captcha_button = forgot_psw_page.check_reload_captcha_button_is_clickable()
+        assert reload_captcha_button is not None, "Reload captcha button element not found"
+
+    @allure.title('TC 17.01.16 Verify click Reload captcha button generates a new captcha image')
+    def test_17_01_16_click_reload_captcha_generates_captcha_image(self, driver, forgot_psw_page):
+        '''
+        Check that the 'Reload captcha' button generates a new captcha image
+        and ensure the new image source is different from the original image source
+        '''
+        captcha_image = forgot_psw_page.check_captcha_image_is_visible()
+        image_src = captcha_image.get_attribute("src")
+        forgot_psw_page.click_reload_captcha_button()
+        new_image_src = captcha_image.get_attribute("src")
+        assert new_image_src.endswith("png") and new_image_src != image_src, \
+            "The new captcha image source is empty or incorrect or did not reload"
+
+    @allure.title('TC 17.01.17 Verify captcha image is present by default')
+    def test_17_01_17_captcha_image_is_displayed(self, driver, forgot_psw_page):
+        '''Check that the captcha image is present by default'''
+        captcha_image = forgot_psw_page.check_captcha_image_is_visible()
+        image_src = captcha_image.get_attribute("src")
+        assert captcha_image.is_displayed(), "The captcha image is not visible"
+        assert image_src and image_src.endswith("png"), "The new captcha image source is empty or incorrect"
+
+    @allure.title('TC 17.01.18 Verify captcha image has alternative text')
+    def test_17_01_18_captcha_image_is_displayed(self, driver, forgot_psw_page):
+        '''Check that the captcha image is present by default'''
+        captcha_image = forgot_psw_page.check_captcha_image_is_visible()
+        image_alt_text = captcha_image.get_attribute("alt")
+        assert image_alt_text == forgot_your_password_data['captcha_image_alt_text'], \
+            "The captcha image is incorrect or missing"

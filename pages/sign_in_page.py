@@ -146,7 +146,7 @@ class SignInPage(BasePage):
         """This method verifies if Create an Account button is visible"""
         return self.element_is_visible(self.locators.CREATE_ACCOUNT_BUTTON)
 
-    @allure.step('Check Create an Account button is visible')
+    @allure.step('Check Create an Account button is clickable')
     def click_create_an_account_button(self):
         """This method verifies click on Create an Account button"""
         return self.element_is_clickable(self.locators.CREATE_ACCOUNT_BUTTON).click()
