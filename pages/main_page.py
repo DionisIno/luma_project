@@ -185,12 +185,6 @@ class PromoBlock(BasePage):
     locators5 = PerformanceFabricsPromoPageLocators
     locators6 = EcoFriendlyPromoPageLocators
 
-    @allure.step("Getting of URL of the current page")
-    def get_actual_url(self, driver):
-        """This method allows to get URL of the current page"""
-        actual_url = driver.current_url
-        return actual_url
-
     @allure.step("Check Promo Block is present in the DOM tree")
     def check_promo_block_is_present(self):
         """Checks promo block is present in the DOM tree"""
