@@ -593,7 +593,7 @@ class TestMainPage:
             page.check_section1_link()
             get_actual_url = driver.current_url
             title = page.check_page1_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.YOGA_COLLECTION_URL \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.YOGA_COLLECTION_URL \
                    and title == "New Luma Yoga Collection", "The link is not correct or the new page is not loaded"
 
         @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
@@ -604,7 +604,7 @@ class TestMainPage:
             page.open()
             page.check_section2_block1_link()
             title = page.check_page2_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.PANTS_PROMO_URL and title == "Pants", \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.PANTS_PROMO_URL and title == "Pants", \
                 'The link is not correct or the new page is not loaded'
 
         @allure.title("TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block "
@@ -615,7 +615,7 @@ class TestMainPage:
             page.open()
             page.check_section2_block2_link()
             title = page.check_page3_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.TEES_PROMO_URL and title == "Tees", \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.TEES_PROMO_URL and title == "Tees", \
                 "The link is not correct or the new page is not loaded"
 
         @allure.title("TC 13.02.04 - Check the link in section 2 block 3 'home-erin' in the Promo Block "
@@ -626,7 +626,7 @@ class TestMainPage:
             page.open()
             page.check_section2_block3_link()
             title = page.check_page4_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.ERIN_RECOMMENDS_PROMO_URL \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.ERIN_RECOMMENDS_PROMO_URL \
                    and title == "Erin Recommends", "The link is not correct or the new page is not loaded"
 
         @allure.title("TC 13.02.05 - Check the link in section 2 block 4 'home-performance' in the Promo Block "
@@ -637,7 +637,7 @@ class TestMainPage:
             page.open()
             page.check_section2_block4_link()
             title = page.check_page5_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.PERFORMANCE_FABRICS_PROMO_URL \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.PERFORMANCE_FABRICS_PROMO_URL \
                    and title == "Performance Fabrics", "The link is not correct or the new page is not loaded"
 
         @allure.title("TC 13.02.06 - Check the link in section 2 block 5 'home-eco' in the Promo Block "
@@ -648,5 +648,5 @@ class TestMainPage:
             page.open()
             page.check_section2_block5_link()
             title = page.check_page6_title_display()
-            assert page.get_actual_url(driver) == PromoBlockLinks.ECO_FRIENDLY_PROMO_URL \
+            assert page.get_actual_url_of_current_page() == PromoBlockLinks.ECO_FRIENDLY_PROMO_URL \
                    and title == "Eco Friendly", "The link is not correct or the new page is not loaded"
