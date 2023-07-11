@@ -207,9 +207,7 @@ class FooterPage(BasePage):
     @allure.step("Check the title of opened page Popular Search Terms is displayed")
     def check_title_display_of_popular_search_terms_page(self):
         """Checks that the title of opened page Popular Search Terms is displayed"""
-        element = self.element_is_visible(self.locators1.POPULAR_SEARCH_TERMS_TITLE)
-        page_title = element.text
-        return page_title
+        return self.get_text(self.locators1.POPULAR_SEARCH_TERMS_TITLE)
 
     @allure.step("Check Privacy and Cookie Policy link leads to the correct page")
     def check_privacy_and_cookie_policy_link_functionality(self):
@@ -221,9 +219,7 @@ class FooterPage(BasePage):
     @allure.step("Check the title of opened page Privacy Policy is displayed")
     def check_title_display_of_privacy_policy_page(self):
         """Checks that the title of opened page Privacy Policy is displayed"""
-        element = self.element_is_visible(self.locators2.PRIVACY_POLICY_TITLE)
-        page_title = element.text
-        return page_title
+        return self.get_text(self.locators2.PRIVACY_POLICY_TITLE)
 
     @allure.step("Check Advanced Search link leads to the correct page")
     def check_advanced_search_link_functionality(self):
@@ -235,9 +231,7 @@ class FooterPage(BasePage):
     @allure.step("Check the title of opened page Advanced Search is displayed")
     def check_title_display_of_advanced_search_page(self):
         """Checks that the title of opened page Advanced Search is displayed"""
-        element = self.element_is_visible(self.locators3.ADVANCED_SEARCH_TITLE)
-        page_title = element.text
-        return page_title
+        return self.get_text(self.locators3.ADVANCED_SEARCH_TITLE)
 
     @allure.step("Check Orders and Returns link leads to the correct page")
     def check_orders_and_returns_link_functionality(self):
@@ -249,9 +243,7 @@ class FooterPage(BasePage):
     @allure.step("Check the title of opened page Orders and Returns is displayed")
     def check_title_display_of_orders_and_returns_page(self):
         """Checks that the title of opened page Orders and Returns is displayed"""
-        element = self.element_is_visible(self.locators4.ORDERS_AND_RETURNS_TITLE)
-        page_title = element.text
-        return page_title
+        return self.get_text(self.locators4.ORDERS_AND_RETURNS_TITLE)
 
     @allure.step("Check Contact Us link leads to the correct page")
     def check_contact_us_link_functionality(self):
@@ -263,20 +255,14 @@ class FooterPage(BasePage):
     @allure.step("Check the title of opened page Contact Us is displayed")
     def check_title_display_of_contact_us_page(self):
         """Checks that the title of opened page Contact Us is displayed"""
-        element = self.element_is_visible(self.locators5.CONTACT_US_TITLE)
-        page_title = element.text
-        return page_title
+        return self.get_text(self.locators5.CONTACT_US_TITLE)
 
     @allure.step("Check Write for us link leads to the correct page")
     def check_write_for_us_link_functionality(self):
         """Checks that Write for us leads to the correct page"""
-        write_for_us_link = self.element_is_visible(self.footer_locators.WRITE_FOR_US_LINK)
-        link_functionality = write_for_us_link.click()
-        return link_functionality
+        return self.element_is_visible(self.footer_locators.WRITE_FOR_US_LINK).click()
 
     @allure.step("Check the item in menu of opened page Write For Us is displayed")
     def check_item_display_of_write_for_us_page(self):
         """Checks that the item in menu of opened page Write For Us is displayed"""
-        element = self.element_is_visible(self.locators6.WRITE_FOR_US_MENU_ITEM)
-        menu_item = element.text
-        return menu_item
+        return self.get_text(self.locators6.WRITE_FOR_US_MENU_ITEM)
