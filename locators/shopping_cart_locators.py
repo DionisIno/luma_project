@@ -28,8 +28,10 @@ class ShoppingCartPageLocators:
         "Subtotal": (By.CSS_SELECTOR, 'th.col.subtotal span')
     }
 
-
-
+    # Apply Discount Code
+    APPLY_DISCOUNT_CODE = (By.CSS_SELECTOR, "#block-discount-heading")
+    INPUT_DISCOUNT_CODE = (By.CSS_SELECTOR, "#coupon_code")
+    BTN_APPLY_DISCOUNT = (By.CSS_SELECTOR, "#discount-coupon-form > div > div.actions-toolbar > div > button")
 
 
 

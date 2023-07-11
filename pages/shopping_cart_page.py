@@ -178,6 +178,21 @@ class ShoppingCartPage(BasePage):
         shopping_cart_message = self.element_is_visible(self.shopping_locators.IS_EMPTY_MESSAGE).text
         return shopping_cart_message
 
+    @allure.step("Check Apply Discount Code is visible")
+    def get_text_apply_discount_code(self):
+        """This method checks that Apply Discount Code is visible"""
+        apply_discount_code = self.element_is_visible(self.shopping_locators.APPLY_DISCOUNT_CODE)
+        return apply_discount_code.text
+
+    @allure.step("Apply Discount Code on click")
+    def click_apply_discount_code(self):
+        """Apply Discount Code on click"""
+        self.element_is_clickable(self.shopping_locators.APPLY_DISCOUNT_CODE).click()
+
+    @allure.step("Check the button Apply Discount is displayed correct")
+    def check_btn_apply_discount(self):
+        """Check the button 'Apply Discount' is displayed correct'"""
+        return self.element_is_clickable(self.shopping_locators.BTN_APPLY_DISCOUNT).text
 
 
 

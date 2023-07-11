@@ -139,3 +139,20 @@ class TestShoppingCartFull:
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         headers_in_item_cart = page.element_is_visible(t_header)
         assert headers_in_item_cart is not None, "Table headers are not displayed"
+
+    @allure.title("tc 07.02.24 Verify the Apply Discount Code is displayed")
+    def test_tc_07_02_24_verify_field_apply_discount_code_is_displayed(self, driver, full_cart_page):
+        """Check that Apply Discount Code is displayed."""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        apply_discount_code = page.get_text_apply_discount_code()
+        assert apply_discount_code == "Apply Discount Code", 'The Apply Discount is not displayed correctly.'
+
+    @allure.title("tc 07.02.26 Verify the button 'Apply Discount' is displayed correct")
+    def test_tc_07_02_26_verify_button_apply_discount_is_displayed(self, driver, full_cart_page):
+        """Check that button 'Apply Discount' is displayed correct"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        page.click_apply_discount_code()
+        btn = page.check_btn_apply_discount()
+        assert btn == "Apply Discount", "The button Apply Discount is not displayed correctly."
