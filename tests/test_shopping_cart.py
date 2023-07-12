@@ -156,3 +156,15 @@ class TestShoppingCartFull:
         page.click_apply_discount_code()
         btn = page.check_btn_apply_discount()
         assert btn == "Apply Discount", "The button Apply Discount is not displayed correctly."
+
+    @allure.title("tc 07.02.25 Verify the message coupon code is not valid is displayed correct")
+    def test_tc_07_02_25_verify_msg_coupon_code_is_not_valid_is_displayed(self, driver, full_cart_page):
+        """Check that message coupon code is not valid is displayed correct"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        page.click_apply_discount_code()
+        page.send_discount_code(page.code)
+        page.click_btn_apply_discount()
+        msg = page.get_msg_discount_code_is_not_valid()
+        assert msg == page.get_valid_msg_coupon_code(page.code)
+
