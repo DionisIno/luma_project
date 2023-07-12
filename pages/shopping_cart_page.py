@@ -3,6 +3,7 @@ import allure
 from pages.base_page import BasePage
 from locators.shopping_cart_locators import ShoppingCartPageLocators
 import random
+import string
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 
@@ -194,5 +195,29 @@ class ShoppingCartPage(BasePage):
         """Check the button 'Apply Discount' is displayed correct'"""
         return self.element_is_clickable(self.shopping_locators.BTN_APPLY_DISCOUNT).text
 
+    # random discount code
+    code = ''.join(random.choice(string.ascii_lowercase) for _ in range(8))
+
+    @allure.step("Get valid message coupon code")
+    def get_valid_msg_coupon_code(self, code):
+        """Get valid message coupon code"""
+        valid_msg_coupon_code = f'The coupon code "{code}" is not valid.'
+        return valid_msg_coupon_code
+
+    @allure.step("Send discount code")
+    def send_discount_code(self, code):
+        """Send discount code"""
+        self.fill_in_field(self.shopping_locators.INPUT_DISCOUNT_CODE, code)
+
+    @allure.step("Click button Apply Discount")
+    def click_btn_apply_discount(self):
+        """Click button Apply Discount"""
+        self.element_is_clickable(self.shopping_locators.BTN_APPLY_DISCOUNT).click()
+
+    @allure.step("Get message discount code is not valid by page")
+    def get_msg_discount_code_is_not_valid(self):
+        """Get message discount code is not valid by page"""
+        msg = self.element_is_visible(self.shopping_locators.MSG_CODE_IS_NOT_VALID).text
+        return msg
 
 

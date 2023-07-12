@@ -32,7 +32,7 @@ class ShoppingCartPageLocators:
     APPLY_DISCOUNT_CODE = (By.CSS_SELECTOR, "#block-discount-heading")
     INPUT_DISCOUNT_CODE = (By.CSS_SELECTOR, "#coupon_code")
     BTN_APPLY_DISCOUNT = (By.CSS_SELECTOR, "#discount-coupon-form > div > div.actions-toolbar > div > button")
-
+    MSG_CODE_IS_NOT_VALID = (By.CSS_SELECTOR, "#maincontent > div.page.messages > div:nth-child(2) > div > div > div")
 
 
 
