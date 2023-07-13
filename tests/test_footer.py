@@ -4,6 +4,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from data.data_urls import MAIN_PAGE_URL, DATA_1, FooterLinks
 from pages.footer_page import FooterPage
+from data.footer_data import FooterElementsText
 
 
 @allure.epic("Test Footer")
@@ -104,12 +105,13 @@ class TestFooter:
     @allure.title("TC 02.01.12 - Check text of Privacy and Cookie Policy link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_12_check_text_of_privacy_and_cookie_policy_link_on_pages(self, driver, URL):
-        """Checks if text of Privacy and Cookie Policy link is correct on each page in DATA_1"""
+        """Checks if text of Privacy and Cookie Policy link matches expected on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_privacy_and_cookie_policy_link_is_visible()
-        link_text = link.text
-        assert link_text == "Privacy and Cookie Policy", "Text of Privacy and Cookie Policy link is not correct"
+        actual_text = page.check_text_of_privacy_and_cookie_policy_link()
+        expected_text = FooterElementsText.PRIVACY_AND_COOKIE_POLICY_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Privacy and Cookie Policy link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.13 - Check Advanced Search link is present in the DOM tree "
                   "on each page specified in DATA_1")
