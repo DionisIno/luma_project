@@ -197,6 +197,12 @@ class FooterPage(BasePage):
         """Checks Subscribe Button clickability"""
         return self.element_is_clickable(self.footer_locators.SUBSCRIBE_BUTTON)
 
+    @allure.step("Check the text of Privacy and Cookie Policy link")
+    def check_text_of_privacy_and_cookie_policy_link(self):
+        """Checks content of Privacy and Cookie Policy link"""
+        link_text = self.driver.find_element(*self.footer_locators.PRIVACY_AND_COOKIE_POLICY_LINK).text
+        return link_text
+
     @allure.step("Check Search Terms link leads to the correct page")
     def check_search_terms_link_functionality(self):
         """Checks that Search Terms link leads to the correct page"""
