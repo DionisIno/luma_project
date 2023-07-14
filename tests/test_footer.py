@@ -225,9 +225,10 @@ class TestFooter:
         """Checks if text of Contact Us link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_contact_us_link_is_visible()
-        link_text = link.text
-        assert link_text == "Contact Us", "Text of Contact Us link is not correct"
+        actual_text = page.check_text_of_contact_us_link()
+        expected_text = FooterElementsText.CONTACT_US_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Contact Us link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -262,9 +263,10 @@ class TestFooter:
         """Checks if text of Write for us link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_write_for_us_link_is_visible()
-        link_text = link.text
-        assert link_text == "Write for us", "Text of Write for us link is not correct"
+        actual_text = page.check_text_of_write_for_us_link()
+        expected_text = FooterElementsText.WRITE_FOR_US_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Write for us link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.33 - Check Copyright section is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -308,10 +310,10 @@ class TestFooter:
         """Checks if text of Copyright section is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        copyright_span = page.check_text_of_copyright_section_is_visible()
-        copyright_span_text = copyright_span.text
-        assert copyright_span_text == "Copyright © 2013-present Magento, Inc. All rights reserved.", \
-            "Text of Copyright section is not correct"
+        actual_text = page.check_text_of_copyright_section()
+        expected_text = FooterElementsText.COPYRIGHT_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Copyright section does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
