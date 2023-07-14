@@ -158,69 +158,53 @@ class TestCreateAnAccount:
                 "Confirm Password field is not highlighted when clicked"
 
     @allure.title('test 04.02.08 create an account with registered email')
-    def test_tc_04_02_08_create_account_with_registered_email(self, driver):
+    def test_tc_04_02_08_create_account_with_registered_email(self, create_account_page):
         """ Verify that customer can't Create An Account with registered email before """
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_email()
+        message = create_account_page.create_with_email()
         assert message == 'There is already an account with this email address. If you are sure that it is your' \
                           ' email address, click here to get your password and access your account.', "No error message"
 
     @allure.title('test 04.02.01 create an account with correct data')
     @pytest.mark.skip(reason="customer will Create An Account with correct data")
-    def test_tc_04_02_01_create_account_with_correct_data(self, driver):
+    def test_tc_04_02_01_create_account_with_correct_data(self, create_account_page):
         """ Verify that customer can Create An Account with correct data"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_correct_data()
+        message = create_account_page.create_with_correct_data()
         assert message == 'Thank you for registering with Main Website Store.', "No success message"
 
     @allure.title('test 04.02.02 create an account with empty first name')
-    def test_tc_04_02_02_create_account_with_empty_first_name(self, driver):
+    def test_tc_04_02_02_create_account_with_empty_first_name(self, create_account_page):
         """ Verify that customer can't Create An Account with empty first name"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_empty_first_name()
+        message = create_account_page.create_with_empty_first_name()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.03 create an account with empty last name')
-    def test_tc_04_02_03_create_account_with_empty_last_name(self, driver):
+    def test_tc_04_02_03_create_account_with_empty_last_name(self, create_account_page):
         """ Verify that customer can't Create An Account with empty last name"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_empty_last_name()
+        message = create_account_page.create_with_empty_last_name()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.04 create an account with empty e-mail')
-    def test_tc_04_02_04_create_account_with_empty_email(self, driver):
+    def test_tc_04_02_04_create_account_with_empty_email(self, create_account_page):
         """ Verify that customer can't Create An Account with empty e-mail"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_empty_email()
+        message = create_account_page.create_with_empty_email()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.05 create an account with empty password')
-    def test_tc_04_02_05_create_account_with_empty_password(self, driver):
+    def test_tc_04_02_05_create_account_with_empty_password(self, create_account_page):
         """ Verify that customer can't Create An Account with empty password"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_empty_password()
+        message = create_account_page.create_with_empty_password()
         assert message == ('Password Strength: No Password', 'This is a required field.'), "No message"
 
     @allure.title('test 04.02.06 create an account with empty confirm password')
-    def test_tc_04_02_06_create_account_with_empty_confirm_password(self, driver):
+    def test_tc_04_02_06_create_account_with_empty_confirm_password(self, create_account_page):
         """ Verify that customer can't Create An Account with empty confirm password"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_empty_confirm_password()
+        message = create_account_page.create_with_empty_confirm_password()
         assert message == 'This is a required field.', "No message"
 
     @allure.title('test 04.02.07 create an account with incorrect confirm password')
-    def test_tc_04_02_07_create_account_with_incorrect_confirm_password(self, driver):
+    def test_tc_04_02_07_create_account_with_incorrect_confirm_password(self, create_account_page):
         """ Verify that customer can't Create An Account with incorrect confirm password"""
-        page = CreateAccountPage(driver, CREATE_ACCOUNT_PAGE_URL)
-        page.open()
-        message = page.create_with_incorrect_confirm_password()
+        message = create_account_page.create_with_incorrect_confirm_password()
         assert message == 'Please enter the same value again.', "No message"
 
     @allure.title('TC 04_02_09_13 Verify presence of strong password strength hint')
