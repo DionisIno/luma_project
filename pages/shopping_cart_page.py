@@ -220,4 +220,31 @@ class ShoppingCartPage(BasePage):
         msg = self.element_is_visible(self.shopping_locators.MSG_CODE_IS_NOT_VALID).text
         return msg
 
+    @allure.step("Go down to More Choices")
+    def go_to_item_in_more_choices(self, driver):
+        """Go down to More Choices"""
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        self.action_move_to_element(self.element_is_visible(self.shopping_locators.CARD_ITEM_MORE_CHOICES))
+
+    @allure.step("Get title item in More Choices")
+    def get_title_item_in_more_choices(self):
+        """This method get title item in More Choices"""
+        title_item = self.element_is_visible(self.shopping_locators.TITLE_ITEM_MORE_CHOICES).text
+        return title_item
+
+    @allure.step("Get titles items in Shopping Cart")
+    def get_title_items(self):
+        """This method get titles items in Shopping Cart"""
+        title_item = self.elements_are_visible(self.shopping_locators.TITLE_ITEMS)
+        title_items_text = []
+        for i in title_item:
+            title_items_text.append(i.text)
+        title_items_text = list(map(str, title_items_text))
+        return title_items_text
+
+    @allure.step("Click button Add to Cart and refresh page")
+    def click_btn_add_to_cart(self, driver):
+        """Click button Add to Cart and refresh page"""
+        self.element_is_visible(self.shopping_locators.BTNS_ADD_TO_CART).click()
+        driver.refresh()
 
