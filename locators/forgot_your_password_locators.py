@@ -11,3 +11,5 @@ class ForgotYourPasswordPageLocators:
     FORGOT_YOUR_PASSWORD_CAPTCHA_LABEL = (By.CSS_SELECTOR, '.captcha.required > label > span')
     RELOAD_CAPTCHA_BUTTON = (By.CSS_SELECTOR, 'button[title = "Reload captcha"]')
     RELOAD_CAPTCHA_IMAGE = (By.XPATH, '//img[@class="captcha-img"]')
+    RESET_MY_PASSWORD_BUTTON = (By.CSS_SELECTOR,'button[class="action submit primary"]')
+
