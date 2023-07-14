@@ -70,9 +70,10 @@ class TestFooter:
         """Checks if text of Search Terms link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_search_terms_link_is_visible()
-        link_text = link.text
-        assert link_text == "Search Terms", "Text of Search Terms link is not correct"
+        actual_text = page.check_text_of_search_terms_link()
+        expected_text = FooterElementsText.SEARCH_TERMS_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Search Terms link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.08 - Check Privacy and Cookie Policy link is present in the DOM tree "
                   "on each page specified in DATA_1")
@@ -147,9 +148,10 @@ class TestFooter:
         """Checks if text of Advanced Search link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_advanced_search_link_is_visible()
-        link_text = link.text
-        assert link_text == "Advanced Search", "Text of Advanced Search link is not correct"
+        actual_text = page.check_text_of_advanced_search_link()
+        expected_text = FooterElementsText.ADVANCED_SEARCH_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Advanced Search link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.18 - Check Orders and Returns link is present in the DOM tree "
                   "on each page specified in DATA_1")
@@ -185,9 +187,10 @@ class TestFooter:
         """Checks if text of Orders and Returns link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        link = page.check_orders_and_returns_link_is_visible()
-        link_text = link.text
-        assert link_text == "Orders and Returns", "Text of Orders and Returns link is not correct"
+        actual_text = page.check_text_of_orders_and_returns_link()
+        expected_text = FooterElementsText.ORDERS_AND_RETURNS_LINK_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of Orders and Returns link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
