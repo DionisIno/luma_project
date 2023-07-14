@@ -95,7 +95,7 @@ class ForgotYourPasswordPage(BasePage):
 
     @allure.step('Check Reload captcha button is clickable')
     def check_reload_captcha_button_is_clickable(self):
-        """This method verifies if reload_captcha button field is visible"""
+        """This method verifies if reload_captcha button field is clickable"""
         return self.element_is_clickable(self.locators.RELOAD_CAPTCHA_BUTTON)
 
     @allure.step('Click on Reload captcha button')
@@ -103,7 +103,17 @@ class ForgotYourPasswordPage(BasePage):
         """This method clicks on reload captcha button"""
         self.check_reload_captcha_button_is_clickable().click()
 
-    @allure.step('Check Captcha image button is visible')
+    @allure.step('Check Captcha image is visible')
     def check_captcha_image_is_visible(self):
-        """This method verifies if reload_captcha button is visible"""
+        """This method verifies if captcha image is visible"""
         return self.element_is_visible(self.locators.RELOAD_CAPTCHA_IMAGE)
+
+    @allure.step('Check Reset My Password button is visible')
+    def check_reset_my_password_button_is_visible(self):
+        """This method verifies if reset_my_password button field is visible"""
+        return self.element_is_visible(self.locators.RESET_MY_PASSWORD_BUTTON)
+
+    @allure.step('Check Reset My Password button is clickable')
+    def check_reset_my_password_button_is_clickable(self):
+        """This method verifies if reset_my_password button field is clickable"""
+        return self.element_is_clickable(self.locators.RESET_MY_PASSWORD_BUTTON)
