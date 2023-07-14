@@ -1,5 +1,3 @@
-import time
-
 import allure
 import pytest
 from selenium.webdriver.support.ui import WebDriverWait as wait
@@ -167,4 +165,16 @@ class TestShoppingCartFull:
         page.click_btn_apply_discount()
         msg = page.get_msg_discount_code_is_not_valid()
         assert msg == page.get_valid_msg_coupon_code(page.code)
+
+    @allure.title("TC 07.02.28 Verify that the list of items in the Shopping Cart is displayed correct")
+    def test_tc_07_02_28_verify_verify_title_in_cart_vs_title_item_from_more_choicesis_displayed_correct(self, driver, full_cart_page):
+        """Check that the list of items in the Shopping Cart contains title item which was added from More Choices"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        page.go_to_item_in_more_choices(driver)
+        expected_title = page.get_title_item_in_more_choices()
+        page.click_btn_add_to_cart(driver)
+        actual_titles = page.get_title_items()
+        assert expected_title in actual_titles, 'The list of items in the Shopping Cart does not contain ' \
+                                                'the added product from More Choices'
 

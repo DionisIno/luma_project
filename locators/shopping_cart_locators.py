@@ -1,5 +1,6 @@
 """This section contains locators for Shopping Cart page"""
-
+import random
+# from pages.shopping_cart_page import ShoppingCartPage
 from selenium.webdriver.common.by import By
 
 
@@ -27,6 +28,7 @@ class ShoppingCartPageLocators:
         "Qty": (By.CSS_SELECTOR, 'th.col.qty span'),
         "Subtotal": (By.CSS_SELECTOR, 'th.col.subtotal span')
     }
+    TITLE_ITEMS = (By.CSS_SELECTOR, " td.col.item > div > strong > a")
 
     # Apply Discount Code
     APPLY_DISCOUNT_CODE = (By.CSS_SELECTOR, "#block-discount-heading")
@@ -34,8 +36,11 @@ class ShoppingCartPageLocators:
     BTN_APPLY_DISCOUNT = (By.CSS_SELECTOR, "#discount-coupon-form > div > div.actions-toolbar > div > button")
     MSG_CODE_IS_NOT_VALID = (By.CSS_SELECTOR, "#maincontent > div.page.messages > div:nth-child(2) > div > div > div")
 
-
-
-
-
+    # More Choices
+    num = random.randint(2, 4)
+    MORE_CHOICES_ITEMS_LIST = (By.CSS_SELECTOR, f"div.block-content.content > div > ol > li > div")
+    CARD_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, f"div.block-content.content > div > ol > li:nth-child({num}) > div")
+    TITLE_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, f".block-content.content > div > ol > li:nth-child({num}) > div > div > strong > a")
+    PRICE_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, "div.price-box.price-final_price > span")
+    BTNS_ADD_TO_CART = (By.XPATH, f"//div[1]/ol[1]/li[{num}]//button[1]")
     
