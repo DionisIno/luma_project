@@ -96,15 +96,6 @@ class SignInPage(BasePage):
         password_input = self.fill_in_password_field(password)
         return password_input.get_attribute('type')
 
-    @allure.step('Get error message')
-    def get_error_message(self, locator):
-        """
-        This method validates that the error message is displayed
-        on attempt to sign in with incorrect credentials.
-        """
-        error = self.element_is_visible(locator)
-        return error.text if error else None
-
     @allure.step('Check Sign In button is visible')
     def check_sign_in_button_is_visible(self):
         """This method verifies if sign-in button field is visible"""
