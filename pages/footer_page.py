@@ -248,8 +248,8 @@ class FooterPage(BasePage):
     @allure.step("Check the text of placeholder in Subscribe Email Field")
     def check_text_of_subscribe_email_field_placeholder(self):
         """Checks content of text of placeholder in Subscribe Email Field"""
-        button_text = self.driver.find_element(*self.footer_locators.SUBSCRIBE_EMAIL_FIELD).text
-        return button_text
+        placeholder_text = self.driver.find_element(*self.footer_locators.SUBSCRIBE_EMAIL_FIELD).get_attribute('placeholder')
+        return placeholder_text
 
     @allure.step("Check Search Terms link leads to the correct page")
     def check_search_terms_link_functionality(self):
