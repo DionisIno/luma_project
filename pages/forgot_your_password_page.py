@@ -110,10 +110,41 @@ class ForgotYourPasswordPage(BasePage):
 
     @allure.step('Check Reset My Password button is visible')
     def check_reset_my_password_button_is_visible(self):
-        """This method verifies if reset_my_password button field is visible"""
+        """This method verifies if reset my password button field is visible"""
         return self.element_is_visible(self.locators.RESET_MY_PASSWORD_BUTTON)
 
     @allure.step('Check Reset My Password button is clickable')
     def check_reset_my_password_button_is_clickable(self):
-        """This method verifies if reset_my_password button field is clickable"""
+        """This method verifies if reset my password button field is clickable"""
         return self.element_is_clickable(self.locators.RESET_MY_PASSWORD_BUTTON)
+
+    @allure.step('Click on Reset My Password button button')
+    def click_reset_my_password_button(self):
+        """This method clicks on reset my password button"""
+        self.check_reset_my_password_button_is_clickable().click()
+
+    @allure.step('Get FYP Email input field error')
+    def get_error_field_is_required(self):
+        """This method clicks on reset my password button"""
+        return self.get_error_message(self.locators.RESET_MY_PASSWORD_CAPTCHA_ERROR)
+
+    @allure.step('Fill in Email field')
+    def fill_in_email_field(self, email):
+        """This method fills in Email field with provided email"""
+        self.fill_in_field(self.check_forgot_psw_email_field_is_clickable(), email)
+
+    @allure.step('Get error for email input is required ')
+    def get_error_email_input_is_required(self):
+        """This method to get the error indicating the captcha input was invalid"""
+        return self.get_error_message(self.locators.RESET_MY_PASSWORD_EMAIL_ERROR)
+
+    @allure.step('Get error for incorrect captcha input')
+    def get_error_incorrect_captcha_message_(self):
+        """This method to get the error indicating the email input is required"""
+        return self.get_error_message(self.locators.ERROR_MESSAGE)
+
+    @allure.step('Get error captcha input field required ')
+    def get_error_captcha_input_is_required(self):
+        """This method to get the error indicating the captcha input is required"""
+        return self.get_error_message(self.locators.RESET_MY_PASSWORD_CAPTCHA_ERROR)
+

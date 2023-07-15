@@ -3,6 +3,7 @@ import allure
 
 
 from pages.forgot_your_password_page import ForgotYourPasswordPage
+from locators.forgot_your_password_locators import ForgotYourPasswordPageLocators
 from data.forgot_your_password_data import forgot_your_password_data, forgot_your_password_errors, \
     captcha, captcha_img_link
 from data.data_urls import FORGOT_YOUR_PASSWORD_URL
@@ -117,7 +118,7 @@ class TestForgotYourPassword:
         """The test checks if the displayed captcha matches the entered value in the captcha field"""
         forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
         displayed_captcha = forgot_psw_page.get_forgot_psw_captcha_field_attribute('value')
-        assert displayed_captcha == captcha, "Email value in the field doesn't match the entered email"
+        assert displayed_captcha == captcha, "Captcha value in the field doesn't match the entered captcha"
 
     @allure.title('TC 17.01.14 Verify Reload captcha button is present')
     def test_17_01_14_reload_captcha_id_displayed(self, driver, forgot_psw_page):
@@ -163,7 +164,7 @@ class TestForgotYourPassword:
             "The captcha image is incorrect or missing"
 
     @allure.title('TC 17.01.19 Verify Reset My Password button is present')
-    def test_17_01_14_reload_captcha_id_displayed(self, driver, forgot_psw_page):
+    def test_17_01_19_reload_captcha_id_displayed(self, driver, forgot_psw_page):
         """Check if the 'Reload captcha' button is present"""
         reload_captcha_button = forgot_psw_page.check_reset_my_password_button_is_visible()
         assert reload_captcha_button is not None \
@@ -171,7 +172,49 @@ class TestForgotYourPassword:
             f'''The {forgot_your_password_data['reset_my_password_btn']} button is not visible'''
 
     @allure.title('TC 17.01.20 Verify Reset My Password button is clickable')
-    def test_17_01_15_reset_my_password_button_is_clickable(self, driver, forgot_psw_page):
+    def test_17_01_20_reset_my_password_button_is_clickable(self, driver, forgot_psw_page):
         """Check that the 'Reset My Password' button is clickable"""
         reset_my_psw_button = forgot_psw_page.check_reset_my_password_button_is_clickable()
         assert reset_my_psw_button is not None, "Reload captcha button element not found"
+
+
+@allure.epic('Forgot Your Password Functionality')
+class TestForgotYourPasswordFunctionality:
+    @allure.title('TC 17.01.24 Verify Error on resetting My Password with invalid captcha')
+    def test_17_01_24_error_if_reset_my_password_with_invalid_captcha(self, driver, forgot_psw_page):
+        """Check error message on attempt to reset password with invalid captcha"""
+        forgot_psw_page.fill_in_email_field(credentials['valid_email'])
+        forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
+        forgot_psw_page.click_reset_my_password_button()
+        error_message = forgot_psw_page.get_error_incorrect_captcha_message_()
+        assert error_message == forgot_your_password_errors['incorrect_captcha_msg'], \
+            "The error message is incorrect or missing"
+
+    @allure.title('TC 17.01.25 Verify error on resetting My Password with empty email')
+    def test_17_01_25_error_if_reset_my_password_with_empty_email(self, driver, forgot_psw_page):
+        """Check error message on attempt to reset password with empty email field"""
+        forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
+        forgot_psw_page.click_reset_my_password_button()
+        error_message = forgot_psw_page.get_error_email_input_is_required()
+        assert error_message == forgot_your_password_errors['required_field_msg'], \
+            "The error message is incorrect or missing"
+
+    @allure.title('TC 17.01.26 Verify error on resetting My Password with empty captcha')
+    def test_17_01_26_error_if_reset_my_password_with_empty_captcha(self, driver, forgot_psw_page):
+        """Check error message on attempt to reset password with empty captcha input field"""
+        forgot_psw_page.fill_in_email_field(credentials['valid_email'])
+        forgot_psw_page.click_reset_my_password_button()
+        error_message = forgot_psw_page.get_error_captcha_input_is_required()
+        assert error_message == forgot_your_password_errors['required_field_msg'], \
+            "The error message is incorrect or missing"
+
+    @allure.title('TC 17.01.27 Verify all fields got cleared after the failed attempt to reset password')
+    def test_17_01_27_fields_are_cleared_after_failed_attempt_to_reset_password(self, driver, forgot_psw_page):
+        """Check if all the fields are getting cleared after failed attempt to reset password with invalid captcha"""
+        forgot_psw_page.fill_in_email_field(credentials['valid_email'])
+        forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
+        forgot_psw_page.click_reset_my_password_button()
+        displayed_email = forgot_psw_page.get_forgot_psw_email_field_attribute('value')
+        displayed_captcha = forgot_psw_page.get_forgot_psw_captcha_field_attribute('value')
+        assert displayed_email == "" and displayed_captcha == "", \
+            "Inputs fields weren't cleared after failed attempt to reset password"

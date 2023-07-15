@@ -327,3 +327,12 @@ class BasePage:
         pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
         valid_email = re.match(pattern, email)
         return valid_email is not None
+
+    @allure.step('Get error message')
+    def get_error_message(self, locator):
+        """
+        This method validates that the error message is displayed
+        on attempt to sign in with incorrect credentials.
+        """
+        error = self.element_is_visible(locator)
+        return error.text if error else None
