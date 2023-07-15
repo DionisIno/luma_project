@@ -239,6 +239,18 @@ class FooterPage(BasePage):
         copyright_text = self.driver.find_element(*self.footer_locators.COPYRIGHT_SECTION).text
         return copyright_text
 
+    @allure.step("Check the text on Subscribe Button")
+    def check_text_on_subscribe_button(self):
+        """Checks content of text on Subscribe Button"""
+        button_text = self.driver.find_element(*self.footer_locators.SUBSCRIBE_BUTTON_TEXT).text
+        return button_text
+
+    @allure.step("Check the text of placeholder in Subscribe Email Field")
+    def check_text_of_subscribe_email_field_placeholder(self):
+        """Checks content of text of placeholder in Subscribe Email Field"""
+        placeholder_text = self.driver.find_element(*self.footer_locators.SUBSCRIBE_EMAIL_FIELD).get_attribute('placeholder')
+        return placeholder_text
+
     @allure.step("Check Search Terms link leads to the correct page")
     def check_search_terms_link_functionality(self):
         """Checks that Search Terms link leads to the correct page"""
