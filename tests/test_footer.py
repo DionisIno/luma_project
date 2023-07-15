@@ -385,8 +385,10 @@ class TestFooter:
         """Checks if text on Subscribe Button is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        subscribe_button_text = page.check_subscribe_button_text_is_visible().text
-        assert subscribe_button_text == "Subscribe", "Text on Subscribe Button is not correct"
+        actual_text = page.check_text_on_subscribe_button()
+        expected_text = FooterElementsText.SUBSCRIBE_BUTTON_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' on Subscribe Button does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree "
                   "on each page specified in DATA_1")
@@ -433,9 +435,11 @@ class TestFooter:
         """Checks if text of placeholder in Subscribe Email Field is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        subscribe_email_field_placeholder_text = page.check_placeholder_in_subscribe_email_field_is_visible()
-        assert subscribe_email_field_placeholder_text == "Enter your email address", \
-            "Text of placeholder in Subscribe Email Field is not correct"
+        actual_text = page.check_text_of_subscribe_email_field_placeholder()
+        expected_text = FooterElementsText.SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of placeholder in Subscribe Email Field " \
+            f"does not match expected '{expected_text}'"
 
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
