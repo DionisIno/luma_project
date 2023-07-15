@@ -221,6 +221,24 @@ class FooterPage(BasePage):
         link_text = self.driver.find_element(*self.footer_locators.ORDERS_AND_RETURNS_LINK).text
         return link_text
 
+    @allure.step("Check the text of Contact Us link")
+    def check_text_of_contact_us_link(self):
+        """Checks content of Contact Us link"""
+        link_text = self.driver.find_element(*self.footer_locators.CONTACT_US_LINK).text
+        return link_text
+
+    @allure.step("Check the text of Write for us link")
+    def check_text_of_write_for_us_link(self):
+        """Checks content of Write for us link"""
+        link_text = self.driver.find_element(*self.footer_locators.WRITE_FOR_US_LINK).text
+        return link_text
+
+    @allure.step("Check the text of Write for us link")
+    def check_text_of_copyright_section(self):
+        """Checks content of Write for us link"""
+        copyright_text = self.driver.find_element(*self.footer_locators.COPYRIGHT_SECTION).text
+        return copyright_text
+
     @allure.step("Check Search Terms link leads to the correct page")
     def check_search_terms_link_functionality(self):
         """Checks that Search Terms link leads to the correct page"""
