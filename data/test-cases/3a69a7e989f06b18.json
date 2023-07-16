@@ -1,0 +1,498 @@
+{
+  "uid" : "3a69a7e989f06b18",
+  "name" : "TC 03.01.07 Verify Email field highlighting on click",
+  "fullName" : "tests.test_sign_in.TestRegisteredCustomers#test_03_01_07_email_field_gets_highlighted_when_clicked",
+  "historyId" : "5fc6e0fd11003afdf9c23d12edce02bd",
+  "time" : {
+    "start" : 1689470753618,
+    "stop" : 1689470754403,
+    "duration" : 785
+  },
+  "description" : "\n        Check the Email field is activated with a cursor and gets highlighted when clicked\n        ",
+  "descriptionHtml" : "<pre><code>    Check the Email field is activated with a cursor and gets highlighted when clicked\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1689469248290,
+      "stop" : 1689469248290,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1689470752097,
+      "stop" : 1689470753618,
+      "duration" : 1521
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1689470752097,
+        "stop" : 1689470753618,
+        "duration" : 1521
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1689469248185,
+      "stop" : 1689469248290,
+      "duration" : 105
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1689470750983,
+      "stop" : 1689470752097,
+      "duration" : 1114
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        Check the Email field is activated with a cursor and gets highlighted when clicked\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Activate Email field and check style",
+      "time" : {
+        "start" : 1689470753619,
+        "stop" : 1689470754403,
+        "duration" : 784
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Activate the field and get the styles before and after activation",
+        "time" : {
+          "start" : 1689470753619,
+          "stop" : 1689470754403,
+          "duration" : 784
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Check element hover style",
+          "time" : {
+            "start" : 1689470753619,
+            "stop" : 1689470753978,
+            "duration" : 359
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a visible element",
+            "time" : {
+              "start" : 1689470753619,
+              "stop" : 1689470753704,
+              "duration" : 85
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Find a present element",
+              "time" : {
+                "start" : 1689470753619,
+                "stop" : 1689470753633,
+                "duration" : 14
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "locator",
+                "value" : "('css selector', '#email')"
+              }, {
+                "name" : "timeout",
+                "value" : "5"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "Go to specified element",
+              "time" : {
+                "start" : 1689470753633,
+                "stop" : 1689470753677,
+                "duration" : 44
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "element",
+                "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"02ea738bb581efe796d9ba4c0431f83b\", element=\"9F7AB8BA1EC3DDCD7CC1F8DBC4AE30A6_element_43\")>"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#email')"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Move cursor to element",
+            "time" : {
+              "start" : 1689470753704,
+              "stop" : 1689470753967,
+              "duration" : 263
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"02ea738bb581efe796d9ba4c0431f83b\", element=\"9F7AB8BA1EC3DDCD7CC1F8DBC4AE30A6_element_43\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "css_property",
+            "value" : "'box-shadow'"
+          }, {
+            "name" : "seconds",
+            "value" : "5"
+          } ],
+          "stepsCount" : 4,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Click on element and return it",
+          "time" : {
+            "start" : 1689470753978,
+            "stop" : 1689470754083,
+            "duration" : 105
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a visible element",
+            "time" : {
+              "start" : 1689470753978,
+              "stop" : 1689470754015,
+              "duration" : 37
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Find a present element",
+              "time" : {
+                "start" : 1689470753978,
+                "stop" : 1689470753989,
+                "duration" : 11
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "locator",
+                "value" : "('css selector', '#email')"
+              }, {
+                "name" : "timeout",
+                "value" : "5"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "Go to specified element",
+              "time" : {
+                "start" : 1689470753989,
+                "stop" : 1689470753994,
+                "duration" : 5
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "element",
+                "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"02ea738bb581efe796d9ba4c0431f83b\", element=\"9F7AB8BA1EC3DDCD7CC1F8DBC4AE30A6_element_43\")>"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#email')"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "seconds",
+            "value" : "15"
+          } ],
+          "stepsCount" : 3,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check element hover style",
+          "time" : {
+            "start" : 1689470754083,
+            "stop" : 1689470754403,
+            "duration" : 320
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a visible element",
+            "time" : {
+              "start" : 1689470754083,
+              "stop" : 1689470754135,
+              "duration" : 52
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Find a present element",
+              "time" : {
+                "start" : 1689470754083,
+                "stop" : 1689470754112,
+                "duration" : 29
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "locator",
+                "value" : "('css selector', '#email')"
+              }, {
+                "name" : "timeout",
+                "value" : "5"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            }, {
+              "name" : "Go to specified element",
+              "time" : {
+                "start" : 1689470754113,
+                "stop" : 1689470754117,
+                "duration" : 4
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ ],
+              "parameters" : [ {
+                "name" : "element",
+                "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"02ea738bb581efe796d9ba4c0431f83b\", element=\"9F7AB8BA1EC3DDCD7CC1F8DBC4AE30A6_element_43\")>"
+              } ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 0,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '#email')"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Move cursor to element",
+            "time" : {
+              "start" : 1689470754135,
+              "stop" : 1689470754394,
+              "duration" : 259
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"02ea738bb581efe796d9ba4c0431f83b\", element=\"9F7AB8BA1EC3DDCD7CC1F8DBC4AE30A6_element_43\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "css_property",
+            "value" : "'box-shadow'"
+          }, {
+            "name" : "seconds",
+            "value" : "5"
+          } ],
+          "stepsCount" : 4,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#email')"
+        } ],
+        "stepsCount" : 14,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 15,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 16,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1689470886462,
+      "stop" : 1689470886462,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1689470754404,
+      "stop" : 1689470754468,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Registered Customers"
+  }, {
+    "name" : "epic",
+    "value" : "Sign In Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegisteredCustomers"
+  }, {
+    "name" : "host",
+    "value" : "fv-az621-935"
+  }, {
+    "name" : "thread",
+    "value" : "3406-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3a69a7e989f06b18.json",
+  "parameterValues" : [ ]
+}

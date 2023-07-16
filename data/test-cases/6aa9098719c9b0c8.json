@@ -1,0 +1,341 @@
+{
+  "uid" : "6aa9098719c9b0c8",
+  "name" : "Check the transition to the page my wish after clicking on the button. User is not authorized",
+  "fullName" : "tests.test_main_page.TestHotSellerSection#test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button",
+  "historyId" : "0a4f97c306f2cceb030ba035cd56202a",
+  "time" : {
+    "start" : 1689470075946,
+    "stop" : 1689470088041,
+    "duration" : 12095
+  },
+  "description" : "\n            This test will check that after clicking on the add to wishlist button,\n            you are redirected to the My Wishlist page\n            User is not authorized\n            ",
+  "descriptionHtml" : "<pre><code>        This test will check that after clicking on the add to wishlist button,\n        you are redirected to the My Wishlist page\n        User is not authorized\n</code></pre>\n",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL In CI, there is no transition to the user registration page, so the test fails\n\nselenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7f982da46a90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\")>\n\n    @pytest.mark.xfail(reason=\"In CI, there is no transition to the user registration page, so the test fails\")\n    @allure.title(\"Check the transition to the page my wish after clicking on the button. User is not authorized\")\n    def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):\n        \"\"\"\n        This test will check that after clicking on the add to wishlist button,\n        you are redirected to the My Wishlist page\n        User is not authorized\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n>       error_message_text = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button()\n\ntests/test_main_page.py:108: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:137: in check_the_transition_to_the_page_my_wish_after_click_on_the_button\n    button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_wish_list\"])\npages/base_page.py:30: in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f982e7474c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1689469248290,
+      "stop" : 1689469248290,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1689469248185,
+      "stop" : 1689469248290,
+      "duration" : 105
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1689470074736,
+      "stop" : 1689470075945,
+      "duration" : 1209
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "\n            This test will check that after clicking on the add to wishlist button,\n            you are redirected to the My Wishlist page\n            User is not authorized\n            ",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL In CI, there is no transition to the user registration page, so the test fails\n\nselenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <test_main_page.TestMainPage.TestHotSellerSection object at 0x7f982da46a90>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\")>\n\n    @pytest.mark.xfail(reason=\"In CI, there is no transition to the user registration page, so the test fails\")\n    @allure.title(\"Check the transition to the page my wish after clicking on the button. User is not authorized\")\n    def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):\n        \"\"\"\n        This test will check that after clicking on the add to wishlist button,\n        you are redirected to the My Wishlist page\n        User is not authorized\n        \"\"\"\n        page = MainPage(driver, MAIN_PAGE_URL)\n        page.open()\n>       error_message_text = page.check_the_transition_to_the_page_my_wish_after_click_on_the_button()\n\ntests/test_main_page.py:108: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:137: in check_the_transition_to_the_page_my_wish_after_click_on_the_button\n    button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_wish_list\"])\npages/base_page.py:30: in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f982e7474c0>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1689470075946,
+        "stop" : 1689470076965,
+        "duration" : 1019
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the transition to the page my desires when clicking on the button. User is not authorized",
+      "time" : {
+        "start" : 1689470076965,
+        "stop" : 1689470088040,
+        "duration" : 11075
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/main_page.py\", line 137, in check_the_transition_to_the_page_my_wish_after_click_on_the_button\n    button = self.element_is_visible(self.locators.PRODUCT_CARD_BUTTONS[\"add_to_wish_list\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 30, in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1689470076965,
+          "stop" : 1689470077181,
+          "duration" : 216
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1689470076965,
+            "stop" : 1689470076985,
+            "duration" : 20
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(5) div[class='product-item-info']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1689470076985,
+            "stop" : 1689470077018,
+            "duration" : 33
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\", element=\"85D16866A3B1CB7E788BE5A575204385_element_28\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(5) div[class='product-item-info']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Move cursor to element",
+        "time" : {
+          "start" : 1689470077181,
+          "stop" : 1689470077580,
+          "duration" : 399
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\", element=\"85D16866A3B1CB7E788BE5A575204385_element_28\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1689470077580,
+          "stop" : 1689470088039,
+          "duration" : 10459
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 30, in element_is_visible\n    return wait(self.driver, timeout).until(EC.visibility_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1689470077580,
+            "stop" : 1689470077594,
+            "duration" : 14
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"li[class='product-item']:nth-child(5) a[data-action='add-to-wishlist']\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1689470077595,
+            "stop" : 1689470077610,
+            "duration" : 15
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"55ad7c2cacdd6b0b789c84b6c132e7e6\", element=\"85D16866A3B1CB7E788BE5A575204385_element_35\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"li[class='product-item']:nth-child(5) a[data-action='add-to-wishlist']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "269a0c492bd00f18",
+      "name" : "Screenshot",
+      "source" : "269a0c492bd00f18.png",
+      "type" : "image/png",
+      "size" : 92050
+    }, {
+      "uid" : "a6b16162464edd61",
+      "name" : "HTML source",
+      "source" : "a6b16162464edd61.html",
+      "type" : "text/html",
+      "size" : 117241
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1689470886462,
+      "stop" : 1689470886462,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1689470088278,
+      "stop" : 1689470088346,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "feature",
+    "value" : "Testing Hot Seller Section"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='In CI, there is no transition to the user registration page, so the test fails')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az621-935"
+  }, {
+    "name" : "thread",
+    "value" : "3406-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='In CI, there is no transition to the user registration page, so the test fails')" ]
+  },
+  "source" : "6aa9098719c9b0c8.json",
+  "parameterValues" : [ ]
+}

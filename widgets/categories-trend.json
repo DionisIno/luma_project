@@ -1,9 +1,6 @@
 [ {
-  "buildOrder" : 12,
-  "reportUrl" : "https://DionisIno.github.io/luma_project/12/",
+  "buildOrder" : 13,
+  "reportUrl" : "https://DionisIno.github.io/luma_project/13/",
   "reportName" : "Allure Report with history",
-  "data" : {
-    "Product defects" : 1,
-    "Test defects" : 2
-  }
+  "data" : { }
 } ]

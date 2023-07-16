@@ -1,37 +1,26 @@
 {
-  "total" : 31,
+  "total" : 32,
   "items" : [ {
-    "uid" : "b99b8d8d24b3d6014326bc24b8c0de91",
-    "name" : "Forgot Your Password Page",
+    "uid" : "9c973e472e187a343dec1bd036d450c3",
+    "name" : "Test Footer",
     "statistic" : {
-      "failed" : 1,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 17,
+      "passed" : 101,
       "unknown" : 0,
-      "total" : 18
+      "total" : 101
     }
   }, {
     "uid" : "da06872e440589d21aba946d1a86adfd",
     "name" : "Test Header",
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 52,
+      "passed" : 53,
       "unknown" : 0,
       "total" : 53
-    }
-  }, {
-    "uid" : "9c973e472e187a343dec1bd036d450c3",
-    "name" : "Test Footer",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 1,
-      "passed" : 100,
-      "unknown" : 0,
-      "total" : 101
     }
   }, {
     "uid" : "594bff6a38476713ad94a26da179b87f",
@@ -56,15 +45,26 @@
       "total" : 30
     }
   }, {
+    "uid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+    "name" : "Forgot Your Password Page",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 20,
+      "unknown" : 0,
+      "total" : 20
+    }
+  }, {
     "uid" : "612c090da606d29c94adba7a39fb264c",
     "name" : "Shopping Cart is full",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 14,
+      "passed" : 18,
       "unknown" : 0,
-      "total" : 14
+      "total" : 18
     }
   }, {
     "uid" : "318050418807110ca6a68aed2bfc9a93",
