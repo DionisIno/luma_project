@@ -115,7 +115,6 @@ class ShoppingCartPage(BasePage):
         current_url = self.driver.current_url
         return current_url
 
-
     @allure.step("Get Subtotal in the Summary Card")
     def get_subtotal_in_summary(self):
         """This method gets Subtotal in the Summary Card"""
@@ -232,6 +231,12 @@ class ShoppingCartPage(BasePage):
         title_item = self.element_is_visible(self.shopping_locators.TITLE_ITEM_MORE_CHOICES).text
         return title_item
 
+    @allure.step("Get price item in More Choices")
+    def get_price_item_in_more_choices(self):
+        """This method get title item in More Choices"""
+        price_item = self.element_is_visible(self.shopping_locators.PRICE_ITEM_MORE_CHOICES).text
+        return price_item
+
     @allure.step("Get titles items in Shopping Cart")
     def get_title_items(self):
         """This method get titles items in Shopping Cart"""
@@ -241,6 +246,16 @@ class ShoppingCartPage(BasePage):
             title_items_text.append(i.text)
         title_items_text = list(map(str, title_items_text))
         return title_items_text
+
+    @allure.step("Get the last price in items list in Shopping Cart")
+    def get_price_last_item(self):
+        """This method get last price in items list in Shopping Cart"""
+        price_item = self.elements_are_visible(self.shopping_locators.PRICES_ITEMS)
+        prices_items_text = []
+        for i in price_item:
+            prices_items_text.append(i.text)
+        title_items_text = list(map(str, prices_items_text))
+        return title_items_text[-1]
 
     @allure.step("Click button Add to Cart and refresh page")
     def click_btn_add_to_cart(self, driver):
