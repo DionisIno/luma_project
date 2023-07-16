@@ -233,9 +233,9 @@ class FooterPage(BasePage):
         link_text = self.driver.find_element(*self.footer_locators.WRITE_FOR_US_LINK).text
         return link_text
 
-    @allure.step("Check the text of Write for us link")
+    @allure.step("Check the text of Copyright section")
     def check_text_of_copyright_section(self):
-        """Checks content of Write for us link"""
+        """Checks content of Copyright section"""
         copyright_text = self.driver.find_element(*self.footer_locators.COPYRIGHT_SECTION).text
         return copyright_text
 
