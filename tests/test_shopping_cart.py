@@ -166,8 +166,8 @@ class TestShoppingCartFull:
         msg = page.get_msg_discount_code_is_not_valid()
         assert msg == page.get_valid_msg_coupon_code(page.code)
 
-    @allure.title("TC 07.02.28 Verify that the list of items in the Shopping Cart is displayed correct")
-    def test_tc_07_02_28_verify_verify_title_in_cart_vs_title_item_from_more_choicesis_displayed_correct(self, driver, full_cart_page):
+    @allure.title("TC 07.02.27 Verify that the list of items in the Shopping Cart is displayed correct")
+    def test_tc_07_02_27_verify_title_in_cart_vs_title_item_from_more_choices_is_displayed_correct(self, driver, full_cart_page):
         """Check that the list of items in the Shopping Cart contains title item which was added from More Choices"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -177,4 +177,18 @@ class TestShoppingCartFull:
         actual_titles = page.get_title_items()
         assert expected_title in actual_titles, 'The list of items in the Shopping Cart does not contain ' \
                                                 'the added product from More Choices'
+
+    @allure.title("TC 07.02.28 Verify that the price in list of items in the Shopping Cart "
+                  "is displayed correct")
+    def test_tc_07_02_28_verify_price_in_cart_vs_price_item_from_more_choicesis(self, driver, full_cart_page):
+        """Check that the price in list of items in the Shopping Cart
+        contains item with correct price which was added from More Choices"""
+        page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
+        page.open()
+        page.go_to_item_in_more_choices(driver)
+        expected_price = page.get_price_item_in_more_choices()
+        page.click_btn_add_to_cart(driver)
+        actual_price = page.get_price_last_item()
+        assert expected_price in actual_price, 'The list of items in the Shopping Cart does not contains ' \
+                                                'the added product from More Choices with correct price'
 

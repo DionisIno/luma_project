@@ -1,6 +1,5 @@
 """This section contains locators for Shopping Cart page"""
 import random
-# from pages.shopping_cart_page import ShoppingCartPage
 from selenium.webdriver.common.by import By
 
 
@@ -29,6 +28,7 @@ class ShoppingCartPageLocators:
         "Subtotal": (By.CSS_SELECTOR, 'th.col.subtotal span')
     }
     TITLE_ITEMS = (By.CSS_SELECTOR, " td.col.item > div > strong > a")
+    PRICES_ITEMS = (By.CSS_SELECTOR, "td.col.price > span > span > span")
 
     # Apply Discount Code
     APPLY_DISCOUNT_CODE = (By.CSS_SELECTOR, "#block-discount-heading")
@@ -41,6 +41,6 @@ class ShoppingCartPageLocators:
     MORE_CHOICES_ITEMS_LIST = (By.CSS_SELECTOR, f"div.block-content.content > div > ol > li > div")
     CARD_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, f"div.block-content.content > div > ol > li:nth-child({num}) > div")
     TITLE_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, f".block-content.content > div > ol > li:nth-child({num}) > div > div > strong > a")
-    PRICE_ITEM_MORE_CHOICES = (By.CSS_SELECTOR, "div.price-box.price-final_price > span")
+    PRICE_ITEM_MORE_CHOICES = (By.XPATH, f"//div[1]/ol[1]/li[{num}]/div[1]/div[1]/div[1]//span[1]/span[1]")
     BTNS_ADD_TO_CART = (By.XPATH, f"//div[1]/ol[1]/li[{num}]//button[1]")
     
