@@ -7,7 +7,7 @@ import pytest
 
 from pages.main_page import MainPage, PromoBlock
 from data.data_urls import MAIN_PAGE_URL, ImageUrls, PromoBlockLinks
-from data.main_data import product_card_button, error_message
+from data.main_data import product_card_button, error_message, PromoBlockElementsText
 
 
 @allure.epic("Main Page")
@@ -158,8 +158,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_text = page.check_info_block_text_in_section1()
-            assert info_block_text == "New Luma Yoga Collection", "The text is not correct"
+            actual_text = page.check_info_block_text_in_section1()
+            expected_text = PromoBlockElementsText.SECTION_1_INFO_BLOCK_TEXT
+            assert actual_text == expected_text, f"Actual text '{actual_text}' of info block in section 1 " \
+                                                 f"of Promo Block does not match expected '{expected_text}'"
 
         @allure.title("TC 13.01.07 - Check the display of the info block title "
                       "in section 1 'home-main' in the Promo Block")
@@ -168,8 +170,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section1()
-            assert info_block_title == "Get fit and look fab in new seasonal styles", "The text is not correct"
+            actual_text = page.check_info_block_title_in_section1()
+            expected_text = PromoBlockElementsText.SECTION_1_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 1 " \
+                                                 f"of Promo Block does not match expected '{expected_text}'"
 
         @allure.title("TC 13.01.09 - Check the display of section 2 in the Promo Block")
         def test_tc_13_01_09_check_section2_display(self, driver):
