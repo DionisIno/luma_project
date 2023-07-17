@@ -390,36 +390,31 @@ class PromoBlock(BasePage):
     @allure.step("Check the text of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
     def check_info_block_text_in_section2_block1(self):
         """Checks the text of info-block in block 1 'home-pants'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TEXT)
-        info_block_text = element.text
+        info_block_text = self.find_element(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TEXT).text
         return info_block_text
 
     @allure.step("Check the text of info block in section 2 block 2 'home-t-shirts' in the Promo Block is correct")
     def check_info_block_text_in_section2_block2(self):
         """Checks the text of info-block in block 2 'home-t-shirts'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_TEXT)
-        info_block_text = element.text
+        info_block_text = self.find_element(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK_TEXT).text
         return info_block_text
 
     @allure.step("Check the text of info block in section 2 block 3 'home-erin' in the Promo Block is correct")
     def check_info_block_text_in_section2_block3(self):
         """Checks the text of info-block in block 3 'home-erin'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_TEXT)
-        info_block_text = element.text
+        info_block_text = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK_TEXT).text
         return info_block_text
 
     @allure.step("Check the text of info block in section 2 block 4 'home-performance' in the Promo Block is correct")
     def check_info_block_text_in_section2_block4(self):
         """Checks the text of info-block in block 4 'home-performance'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_TEXT)
-        info_block_text = element.text
+        info_block_text = self.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK_TEXT).text
         return info_block_text
 
     @allure.step("Check the text of info block in section 2 block 5 'home-eco' in the Promo Block is correct")
     def check_info_block_text_in_section2_block5(self):
         """Checks the text of info-block in block 5 'home-eco'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_TEXT)
-        info_block_text = element.text
+        info_block_text = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK_TEXT).text
         return info_block_text
 
     @allure.step("Check the sign of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
