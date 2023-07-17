@@ -252,8 +252,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section2_block1()
-            assert info_block_title == "20% OFF", "The title is not correct"
+            actual_text = page.check_info_block_title_in_section2_block1()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_1_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 1 " \
+                                                 f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
         @allure.title("TC 13.01.19 - Check the display of the text in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_19_check_info_block_text_in_section2_block1(self, driver):
@@ -292,13 +294,16 @@ class TestMainPage:
             assert info_block is True, "The element is not visible"
 
         @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_23_check_info_block_title_in_section2_block1(self, driver):
+        def test_tc_13_01_23_check_info_block_title_in_section2_block2(self, driver):
             """This test checks if the info block title in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section2_block2()
-            assert info_block_title == "Even more ways to mix and match", "The title is not correct"
+            actual_text = page.check_info_block_title_in_section2_block2()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_2_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 2 " \
+                                                 f"'home-t-shirts' of Promo Block does not match expected " \
+                                                 f"'{expected_text}'"
 
         @allure.title("TC 13.01.24 - Check the display of the text in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_24_check_info_block_text_in_section2_block2(self, driver):
@@ -342,8 +347,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section2_block3()
-            assert info_block_title == "Take it from Erin", "The title is not correct"
+            actual_text = page.check_info_block_title_in_section2_block3()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_3_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 3 " \
+                                                 f"'home-erin' of Promo Block does not match expected '{expected_text}'"
 
         @allure.title("TC 13.01.29 - Check the display of the text in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_29_check_info_block_text_in_section2_block3(self, driver):
@@ -388,8 +395,11 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section2_block4()
-            assert info_block_title == "Science meets performance", "The title is not correct"
+            actual_text = page.check_info_block_title_in_section2_block4()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_4_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 4 " \
+                                                 f"'home-performance' of Promo Block does not match expected " \
+                                                 f"'{expected_text}'"
 
         @allure.title("TC 13.01.34 - Check the display of the text in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_34_check_info_block_text_in_section2_block4(self, driver):
@@ -433,8 +443,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_title = page.check_info_block_title_in_section2_block5()
-            assert info_block_title == "Twice around, twice as nice", "The title is not correct"
+            actual_text = page.check_info_block_title_in_section2_block5()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_5_INFO_BLOCK_TITLE
+            assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 5 " \
+                                                 f"'home-eco' of Promo Block does not match expected '{expected_text}'"
 
         @allure.title("TC 13.01.39 - Check the display of the text in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_39_check_info_block_text_in_section2_block5(self, driver):
