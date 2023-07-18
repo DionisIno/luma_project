@@ -274,8 +274,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign_in_section2_block1()
-            assert info_block_sign == "Shop Pants", "The text is not correct"
+            actual_text = page.check_info_block_sign_in_section2_block1()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_1_INFO_BLOCK_SIGN
+            assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 1 " \
+                                                 f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
         @allure.title("TC 13.01.21 - Check the display of the image in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_21_check_image_in_section2_block2(self, driver):
@@ -325,8 +327,11 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign_in_section2_block2()
-            assert info_block_sign == "Shop Tees", "The text is not correct"
+            actual_text = page.check_info_block_sign_in_section2_block2()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_2_INFO_BLOCK_SIGN
+            assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 2 " \
+                                                 f"'home-t-shirts' of Promo Block doesn't match expected " \
+                                                 f"'{expected_text}'"
 
         @allure.title("TC 13.01.26 - Check the display of the image in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_26_check_image_in_section2_block3(self, driver):
@@ -374,8 +379,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign_in_section2_block3()
-            assert info_block_sign == "Shop Erin Recommends", "The text is not correct"
+            actual_text = page.check_info_block_sign_in_section2_block3()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_3_INFO_BLOCK_SIGN
+            assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 3 " \
+                                                 f"'home-erin' of Promo Block doesn't match expected '{expected_text}'"
 
         @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
@@ -426,8 +433,11 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign_in_section2_block4()
-            assert info_block_sign == "Shop Performance", "The text is not correct"
+            actual_text = page.check_info_block_sign_in_section2_block4()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_4_INFO_BLOCK_SIGN
+            assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 4 " \
+                                                 f"'home-performance' of Promo Block doesn't match expected " \
+                                                 f"'{expected_text}'"
 
         @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
@@ -475,8 +485,10 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block_sign = page.check_info_block_sign_in_section2_block5()
-            assert info_block_sign == "Shop Eco-Friendly", "The text is not correct"
+            actual_text = page.check_info_block_sign_in_section2_block5()
+            expected_text = PromoBlockElementsText.SECTION_2_BLOCK_5_INFO_BLOCK_SIGN
+            assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 5 " \
+                                                 f"'home-eco' of Promo Block doesn't match expected '{expected_text}'"
 
         @allure.title("TC 13.01.41 - Check Promo Block is present in the DOM tree")
         def test_tc_13_01_41_check_promo_block_is_present(self, driver):
