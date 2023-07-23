@@ -1,0 +1,225 @@
+{
+  "uid" : "6e61a94b37f53a37",
+  "name" : "TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_47_check_presence_of_subscribe_email_field_on_pages",
+  "historyId" : "3f2155c30c7f4749f6c10a8b13b3a1b5",
+  "time" : {
+    "start" : 1690073899445,
+    "stop" : 1690073905653,
+    "duration" : 6208
+  },
+  "description" : "Checks if Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+  "descriptionHtml" : "<p>Checks if Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed48bb04e3 <unknown>\n#1 0x55ed488dfc76 <unknown>\n#2 0x55ed4891bc96 <unknown>\n#3 0x55ed4891bdc1 <unknown>\n#4 0x55ed489557f4 <unknown>\n#5 0x55ed4893b03d <unknown>\n#6 0x55ed4895330e <unknown>\n#7 0x55ed4893ade3 <unknown>\n#8 0x55ed489102dd <unknown>\n#9 0x55ed4891134e <unknown>\n#10 0x55ed48b703e4 <unknown>\n#11 0x55ed48b743d7 <unknown>\n#12 0x55ed48b7eb20 <unknown>\n#13 0x55ed48b75023 <unknown>\n#14 0x55ed48b431aa <unknown>\n#15 0x55ed48b996b8 <unknown>\n#16 0x55ed48b99847 <unknown>\n#17 0x55ed48ba9243 <unknown>\n#18 0x7fedd7a90b43 <unknown>",
+  "statusTrace" : "self = <test_footer.TestFooter object at 0x7fcb8c961dd0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1aaf835d00f0ed2139dc6134bffac10f\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree \"\n                  \"on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_47_check_presence_of_subscribe_email_field_on_pages(self, driver, URL):\n        \"\"\"Checks if Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       subscribe_email_field = page.check_subscribe_email_field_presence()\n\ntests/test_footer.py:400: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:87: in check_subscribe_email_field_presence\n    return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"1aaf835d00f0ed2139dc6134bffac10f\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fcb8d73a700>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ed48bb04e3 <unknown>\nE       #1 0x55ed488dfc76 <unknown>\nE       #2 0x55ed4891bc96 <unknown>\nE       #3 0x55ed4891bdc1 <unknown>\nE       #4 0x55ed489557f4 <unknown>\nE       #5 0x55ed4893b03d <unknown>\nE       #6 0x55ed4895330e <unknown>\nE       #7 0x55ed4893ade3 <unknown>\nE       #8 0x55ed489102dd <unknown>\nE       #9 0x55ed4891134e <unknown>\nE       #10 0x55ed48b703e4 <unknown>\nE       #11 0x55ed48b743d7 <unknown>\nE       #12 0x55ed48b7eb20 <unknown>\nE       #13 0x55ed48b75023 <unknown>\nE       #14 0x55ed48b431aa <unknown>\nE       #15 0x55ed48b996b8 <unknown>\nE       #16 0x55ed48b99847 <unknown>\nE       #17 0x55ed48ba9243 <unknown>\nE       #18 0x7fedd7a90b43 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1690073506870,
+      "stop" : 1690073506962,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1690073506962,
+      "stop" : 1690073506962,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1690073898403,
+      "stop" : 1690073899444,
+      "duration" : 1041
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Checks if Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed48bb04e3 <unknown>\n#1 0x55ed488dfc76 <unknown>\n#2 0x55ed4891bc96 <unknown>\n#3 0x55ed4891bdc1 <unknown>\n#4 0x55ed489557f4 <unknown>\n#5 0x55ed4893b03d <unknown>\n#6 0x55ed4895330e <unknown>\n#7 0x55ed4893ade3 <unknown>\n#8 0x55ed489102dd <unknown>\n#9 0x55ed4891134e <unknown>\n#10 0x55ed48b703e4 <unknown>\n#11 0x55ed48b743d7 <unknown>\n#12 0x55ed48b7eb20 <unknown>\n#13 0x55ed48b75023 <unknown>\n#14 0x55ed48b431aa <unknown>\n#15 0x55ed48b996b8 <unknown>\n#16 0x55ed48b99847 <unknown>\n#17 0x55ed48ba9243 <unknown>\n#18 0x7fedd7a90b43 <unknown>",
+    "statusTrace" : "self = <test_footer.TestFooter object at 0x7fcb8c961dd0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1aaf835d00f0ed2139dc6134bffac10f\")>\nURL = 'https://magento.softwaretestingboard.com/what-is-new.html'\n\n    @allure.title(\"TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree \"\n                  \"on each page specified in DATA_1\")\n    @pytest.mark.parametrize('URL', DATA_1)\n    def test_tc_02_01_47_check_presence_of_subscribe_email_field_on_pages(self, driver, URL):\n        \"\"\"Checks if Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1\"\"\"\n        page = FooterPage(driver, url=URL)\n        page.open()\n>       subscribe_email_field = page.check_subscribe_email_field_presence()\n\ntests/test_footer.py:400: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/footer_page.py:87: in check_subscribe_email_field_presence\n    return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)\npages/base_page.py:50: in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"1aaf835d00f0ed2139dc6134bffac10f\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fcb8d73a700>\nmessage = ''\n\n    def until(self, method, message: str = \"\"):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x55ed48bb04e3 <unknown>\nE       #1 0x55ed488dfc76 <unknown>\nE       #2 0x55ed4891bc96 <unknown>\nE       #3 0x55ed4891bdc1 <unknown>\nE       #4 0x55ed489557f4 <unknown>\nE       #5 0x55ed4893b03d <unknown>\nE       #6 0x55ed4895330e <unknown>\nE       #7 0x55ed4893ade3 <unknown>\nE       #8 0x55ed489102dd <unknown>\nE       #9 0x55ed4891134e <unknown>\nE       #10 0x55ed48b703e4 <unknown>\nE       #11 0x55ed48b743d7 <unknown>\nE       #12 0x55ed48b7eb20 <unknown>\nE       #13 0x55ed48b75023 <unknown>\nE       #14 0x55ed48b431aa <unknown>\nE       #15 0x55ed48b996b8 <unknown>\nE       #16 0x55ed48b99847 <unknown>\nE       #17 0x55ed48ba9243 <unknown>\nE       #18 0x7fedd7a90b43 <unknown>\n\n/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1690073899445,
+        "stop" : 1690073900514,
+        "duration" : 1069
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check text Email field in Subscribe section is present in the DOM tree",
+      "time" : {
+        "start" : 1690073900514,
+        "stop" : 1690073905652,
+        "duration" : 5138
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed48bb04e3 <unknown>\n#1 0x55ed488dfc76 <unknown>\n#2 0x55ed4891bc96 <unknown>\n#3 0x55ed4891bdc1 <unknown>\n#4 0x55ed489557f4 <unknown>\n#5 0x55ed4893b03d <unknown>\n#6 0x55ed4895330e <unknown>\n#7 0x55ed4893ade3 <unknown>\n#8 0x55ed489102dd <unknown>\n#9 0x55ed4891134e <unknown>\n#10 0x55ed48b703e4 <unknown>\n#11 0x55ed48b743d7 <unknown>\n#12 0x55ed48b7eb20 <unknown>\n#13 0x55ed48b75023 <unknown>\n#14 0x55ed48b431aa <unknown>\n#15 0x55ed48b996b8 <unknown>\n#16 0x55ed48b99847 <unknown>\n#17 0x55ed48ba9243 <unknown>\n#18 0x7fedd7a90b43 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/footer_page.py\", line 87, in check_subscribe_email_field_presence\n    return self.element_is_present(self.footer_locators.SUBSCRIBE_EMAIL_FIELD)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1690073900514,
+          "stop" : 1690073905651,
+          "duration" : 5137
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed48bb04e3 <unknown>\n#1 0x55ed488dfc76 <unknown>\n#2 0x55ed4891bc96 <unknown>\n#3 0x55ed4891bdc1 <unknown>\n#4 0x55ed489557f4 <unknown>\n#5 0x55ed4893b03d <unknown>\n#6 0x55ed4895330e <unknown>\n#7 0x55ed4893ade3 <unknown>\n#8 0x55ed489102dd <unknown>\n#9 0x55ed4891134e <unknown>\n#10 0x55ed48b703e4 <unknown>\n#11 0x55ed48b743d7 <unknown>\n#12 0x55ed48b7eb20 <unknown>\n#13 0x55ed48b75023 <unknown>\n#14 0x55ed48b431aa <unknown>\n#15 0x55ed48b996b8 <unknown>\n#16 0x55ed48b99847 <unknown>\n#17 0x55ed48ba9243 <unknown>\n#18 0x7fedd7a90b43 <unknown>\n\n",
+        "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/luma_project/luma_project/pages/base_page.py\", line 50, in element_is_present\n    return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 95, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.field.newsletter input')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "827d01e0aca408d8",
+      "name" : "Screenshot",
+      "source" : "827d01e0aca408d8.png",
+      "type" : "image/png",
+      "size" : 799480
+    }, {
+      "uid" : "ac4d23990617f373",
+      "name" : "HTML source",
+      "source" : "ac4d23990617f373.html",
+      "type" : "text/html",
+      "size" : 113065
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1690075074103,
+      "stop" : 1690075074103,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1690073906020,
+      "stop" : 1690073906085,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az622-781"
+  }, {
+    "name" : "thread",
+    "value" : "3345-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "6e61a94b37f53a37.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}

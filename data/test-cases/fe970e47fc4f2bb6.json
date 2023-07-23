@@ -1,0 +1,308 @@
+{
+  "uid" : "fe970e47fc4f2bb6",
+  "name" : "TC 03.01.23 Verify Create an Account button is functional",
+  "fullName" : "tests.test_sign_in.TestNewCustomers#test_03_01_23_create_an_account_button_",
+  "historyId" : "62dc73bef87974182479566edd960df0",
+  "time" : {
+    "start" : 1690074992856,
+    "stop" : 1690074993150,
+    "duration" : 294
+  },
+  "description" : "Check if 'Create an Account' button link opens correct page",
+  "descriptionHtml" : "<p>Check if 'Create an Account' button link opens correct page</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nassert ('https://mage...JkLmNvbS8%2C/' == 'https://mage...count/create/'\n  - https://magento.softwaretestingboard.com/customer/account/create/\n  + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/)",
+  "statusTrace" : "self = <test_sign_in.TestNewCustomers object at 0x7fcb8b803910>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"565b69902f0e217d0a2240b2ba35211d\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7fcb8d809b10>\n\n    @allure.title('TC 03.01.23 Verify Create an Account button is functional')\n    def test_03_01_23_create_an_account_button_(self, driver, sign_in_page):\n        \"\"\"Check if 'Create an Account' button link opens correct page\"\"\"\n        sign_in_page.click_create_an_account_button()\n        header = sign_in_page.check_h1_header()\n>       assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \\\n               and header is not None and header.text == \"Create New Customer Account\", \\\n               \"Verify Create an Account button is incorrect or not redirect to correct page\"\nE       AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nE       assert ('https://mage...JkLmNvbS8%2C/' == 'https://mage...count/create/'\nE         - https://magento.softwaretestingboard.com/customer/account/create/\nE         + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/)\n\ntests/test_sign_in.py:195: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1690073506870,
+      "stop" : 1690073506962,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1690073506962,
+      "stop" : 1690073506962,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1690074990764,
+      "stop" : 1690074991781,
+      "duration" : 1017
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1690074991781,
+      "stop" : 1690074992856,
+      "duration" : 1075
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1690074991781,
+        "stop" : 1690074992856,
+        "duration" : 1075
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "Check if 'Create an Account' button link opens correct page",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nassert ('https://mage...JkLmNvbS8%2C/' == 'https://mage...count/create/'\n  - https://magento.softwaretestingboard.com/customer/account/create/\n  + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/)",
+    "statusTrace" : "self = <test_sign_in.TestNewCustomers object at 0x7fcb8b803910>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"565b69902f0e217d0a2240b2ba35211d\")>\nsign_in_page = <pages.sign_in_page.SignInPage object at 0x7fcb8d809b10>\n\n    @allure.title('TC 03.01.23 Verify Create an Account button is functional')\n    def test_03_01_23_create_an_account_button_(self, driver, sign_in_page):\n        \"\"\"Check if 'Create an Account' button link opens correct page\"\"\"\n        sign_in_page.click_create_an_account_button()\n        header = sign_in_page.check_h1_header()\n>       assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \\\n               and header is not None and header.text == \"Create New Customer Account\", \\\n               \"Verify Create an Account button is incorrect or not redirect to correct page\"\nE       AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nE       assert ('https://mage...JkLmNvbS8%2C/' == 'https://mage...count/create/'\nE         - https://magento.softwaretestingboard.com/customer/account/create/\nE         + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/)\n\ntests/test_sign_in.py:195: AssertionError",
+    "steps" : [ {
+      "name" : "Check Create an Account button is clickable",
+      "time" : {
+        "start" : 1690074992856,
+        "stop" : 1690074992947,
+        "duration" : 91
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find clickable elements",
+        "time" : {
+          "start" : 1690074992856,
+          "stop" : 1690074992890,
+          "duration" : 34
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.action.create.primary')"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check Sign In h1 header is visible",
+      "time" : {
+        "start" : 1690074992947,
+        "stop" : 1690074993075,
+        "duration" : 128
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1690074992948,
+          "stop" : 1690074993075,
+          "duration" : 127
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1690074992948,
+            "stop" : 1690074992993,
+            "duration" : 45
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'h1')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1690074992993,
+            "stop" : 1690074993014,
+            "duration" : 21
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"565b69902f0e217d0a2240b2ba35211d\", element=\"730DF6A2A3EEE3887310B37666BCF544_element_39\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'h1')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "98bd0131a38a18da",
+      "name" : "Screenshot",
+      "source" : "98bd0131a38a18da.png",
+      "type" : "image/png",
+      "size" : 75813
+    }, {
+      "uid" : "6d242de08e5ccd6c",
+      "name" : "HTML source",
+      "source" : "6d242de08e5ccd6c.html",
+      "type" : "text/html",
+      "size" : 79050
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1690075074103,
+      "stop" : 1690075074103,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1690074993407,
+      "stop" : 1690074993470,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "New Customers"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewCustomers"
+  }, {
+    "name" : "host",
+    "value" : "fv-az622-781"
+  }, {
+    "name" : "thread",
+    "value" : "3345-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "fe970e47fc4f2bb6.json",
+  "parameterValues" : [ ]
+}

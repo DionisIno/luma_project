@@ -1,5 +1,676 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x555635bc44e3 <unknown>\n#1 0x5556358f3c76 <unknown>\n#2 0x55563592fc96 <unknown>\n#3 0x55563592fdc1 <unknown>\n#4 0x5556359697f4 <unknown>\n#5 0x55563594f03d <unknown>\n#6 0x55563596730e <unknown>\n#7 0x55563594ede3 <unknown>\n#8 0x5556359242dd <unknown>\n#9 0x55563592534e <unknown>\n#10 0x555635b843e4 <unknown>\n#11 0x555635b883d7 <unknown>\n#12 0x555635b92b20 <unknown>\n#13 0x555635b89023 <unknown>\n#14 0x555635b571aa <unknown>\n#15 0x555635bad6b8 <unknown>\n#16 0x555635bad847 <unknown>\n#17 0x555635bbd243 <unknown>\n#18 0x7f79f62abb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 04_01_09 Verify checkbox is present and unchecked",
+        "uid" : "294c802ec610cf77",
+        "parentUid" : "9e2ab7a23b8524e62657ce7893047673",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073541211,
+          "stop" : 1690073546368,
+          "duration" : 5157
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9e2ab7a23b8524e62657ce7893047673"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5560783224e3 <unknown>\n#1 0x556078051c76 <unknown>\n#2 0x55607808dc96 <unknown>\n#3 0x55607808ddc1 <unknown>\n#4 0x5560780c77f4 <unknown>\n#5 0x5560780ad03d <unknown>\n#6 0x5560780c530e <unknown>\n#7 0x5560780acde3 <unknown>\n#8 0x5560780822dd <unknown>\n#9 0x55607808334e <unknown>\n#10 0x5560782e23e4 <unknown>\n#11 0x5560782e63d7 <unknown>\n#12 0x5560782f0b20 <unknown>\n#13 0x5560782e7023 <unknown>\n#14 0x5560782b51aa <unknown>\n#15 0x55607830b6b8 <unknown>\n#16 0x55607830b847 <unknown>\n#17 0x55607831b243 <unknown>\n#18 0x7f81f781fb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "d0880542e9502250",
+        "parentUid" : "fb7cd3b6ffa5212e94ecceb3a4c46f7c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073690773,
+          "stop" : 1690073696847,
+          "duration" : 6074
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "fb7cd3b6ffa5212e94ecceb3a4c46f7c"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556f1f17a4e3 <unknown>\n#1 0x556f1eea9c76 <unknown>\n#2 0x556f1eee5c96 <unknown>\n#3 0x556f1eee5dc1 <unknown>\n#4 0x556f1ef1f7f4 <unknown>\n#5 0x556f1ef0503d <unknown>\n#6 0x556f1ef1d30e <unknown>\n#7 0x556f1ef04de3 <unknown>\n#8 0x556f1eeda2dd <unknown>\n#9 0x556f1eedb34e <unknown>\n#10 0x556f1f13a3e4 <unknown>\n#11 0x556f1f13e3d7 <unknown>\n#12 0x556f1f148b20 <unknown>\n#13 0x556f1f13f023 <unknown>\n#14 0x556f1f10d1aa <unknown>\n#15 0x556f1f1636b8 <unknown>\n#16 0x556f1f163847 <unknown>\n#17 0x556f1f173243 <unknown>\n#18 0x7f5a7b0ebb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "69607ac14894e1e0",
+        "parentUid" : "1e70f215cdd1b15194b3e26b4cbbe3f8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073698379,
+          "stop" : 1690073704501,
+          "duration" : 6122
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "1e70f215cdd1b15194b3e26b4cbbe3f8"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c48c27f4e3 <unknown>\n#1 0x55c48bfaec76 <unknown>\n#2 0x55c48bfeac96 <unknown>\n#3 0x55c48bfeadc1 <unknown>\n#4 0x55c48c0247f4 <unknown>\n#5 0x55c48c00a03d <unknown>\n#6 0x55c48c02230e <unknown>\n#7 0x55c48c009de3 <unknown>\n#8 0x55c48bfdf2dd <unknown>\n#9 0x55c48bfe034e <unknown>\n#10 0x55c48c23f3e4 <unknown>\n#11 0x55c48c2433d7 <unknown>\n#12 0x55c48c24db20 <unknown>\n#13 0x55c48c244023 <unknown>\n#14 0x55c48c2121aa <unknown>\n#15 0x55c48c2686b8 <unknown>\n#16 0x55c48c268847 <unknown>\n#17 0x55c48c278243 <unknown>\n#18 0x7f32a3795b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1",
+        "uid" : "cd433fa00222ad4c",
+        "parentUid" : "9cb64bc5475f40ec2fb15eb9788eb978",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073705969,
+          "stop" : 1690073712109,
+          "duration" : 6140
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "9cb64bc5475f40ec2fb15eb9788eb978"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55974d7c94e3 <unknown>\n#1 0x55974d4f8c76 <unknown>\n#2 0x55974d534c96 <unknown>\n#3 0x55974d534dc1 <unknown>\n#4 0x55974d56e7f4 <unknown>\n#5 0x55974d55403d <unknown>\n#6 0x55974d56c30e <unknown>\n#7 0x55974d553de3 <unknown>\n#8 0x55974d5292dd <unknown>\n#9 0x55974d52a34e <unknown>\n#10 0x55974d7893e4 <unknown>\n#11 0x55974d78d3d7 <unknown>\n#12 0x55974d797b20 <unknown>\n#13 0x55974d78e023 <unknown>\n#14 0x55974d75c1aa <unknown>\n#15 0x55974d7b26b8 <unknown>\n#16 0x55974d7b2847 <unknown>\n#17 0x55974d7c2243 <unknown>\n#18 0x7f0b2e749b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1",
+        "uid" : "da4781867e509554",
+        "parentUid" : "fae95785d7c6d9ef91ad8fb84a21e595",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073713611,
+          "stop" : 1690073719730,
+          "duration" : 6119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "fae95785d7c6d9ef91ad8fb84a21e595"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a1467e14e3 <unknown>\n#1 0x55a146510c76 <unknown>\n#2 0x55a14654cc96 <unknown>\n#3 0x55a14654cdc1 <unknown>\n#4 0x55a1465867f4 <unknown>\n#5 0x55a14656c03d <unknown>\n#6 0x55a14658430e <unknown>\n#7 0x55a14656bde3 <unknown>\n#8 0x55a1465412dd <unknown>\n#9 0x55a14654234e <unknown>\n#10 0x55a1467a13e4 <unknown>\n#11 0x55a1467a53d7 <unknown>\n#12 0x55a1467afb20 <unknown>\n#13 0x55a1467a6023 <unknown>\n#14 0x55a1467741aa <unknown>\n#15 0x55a1467ca6b8 <unknown>\n#16 0x55a1467ca847 <unknown>\n#17 0x55a1467da243 <unknown>\n#18 0x7f1994435b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1",
+        "uid" : "7530a40162fcc754",
+        "parentUid" : "7de920396f707c41a3c1c22bf198ff3d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073721217,
+          "stop" : 1690073727363,
+          "duration" : 6146
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "7de920396f707c41a3c1c22bf198ff3d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56521846a4e3 <unknown>\n#1 0x565218199c76 <unknown>\n#2 0x5652181d5c96 <unknown>\n#3 0x5652181d5dc1 <unknown>\n#4 0x56521820f7f4 <unknown>\n#5 0x5652181f503d <unknown>\n#6 0x56521820d30e <unknown>\n#7 0x5652181f4de3 <unknown>\n#8 0x5652181ca2dd <unknown>\n#9 0x5652181cb34e <unknown>\n#10 0x56521842a3e4 <unknown>\n#11 0x56521842e3d7 <unknown>\n#12 0x565218438b20 <unknown>\n#13 0x56521842f023 <unknown>\n#14 0x5652183fd1aa <unknown>\n#15 0x5652184536b8 <unknown>\n#16 0x565218453847 <unknown>\n#17 0x565218463243 <unknown>\n#18 0x7f32ac06cb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1",
+        "uid" : "8ae17375cc270f67",
+        "parentUid" : "bd41fdba512f6f70452945a3bb46c631",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073728873,
+          "stop" : 1690073734992,
+          "duration" : 6119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "bd41fdba512f6f70452945a3bb46c631"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".footer > :nth-child(5) > a\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x55f0e83984e3 <unknown>\n#1 0x55f0e80c7c76 <unknown>\n#2 0x55f0e8103c96 <unknown>\n#3 0x55f0e8103dc1 <unknown>\n#4 0x55f0e813d7f4 <unknown>\n#5 0x55f0e812303d <unknown>\n#6 0x55f0e813b30e <unknown>\n#7 0x55f0e8122de3 <unknown>\n#8 0x55f0e80f82dd <unknown>\n#9 0x55f0e80f934e <unknown>\n#10 0x55f0e83583e4 <unknown>\n#11 0x55f0e835c3d7 <unknown>\n#12 0x55f0e8366b20 <unknown>\n#13 0x55f0e835d023 <unknown>\n#14 0x55f0e832b1aa <unknown>\n#15 0x55f0e83816b8 <unknown>\n#16 0x55f0e8381847 <unknown>\n#17 0x55f0e8391243 <unknown>\n#18 0x7f8ba961bb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1",
+        "uid" : "18c9ea69fb076fee",
+        "parentUid" : "68e48989124027305304db121f6458c6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073736448,
+          "stop" : 1690073737491,
+          "duration" : 1043
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "68e48989124027305304db121f6458c6"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".footer > :nth-child(5) > a\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x562a84e014e3 <unknown>\n#1 0x562a84b30c76 <unknown>\n#2 0x562a84b6cc96 <unknown>\n#3 0x562a84b6cdc1 <unknown>\n#4 0x562a84ba67f4 <unknown>\n#5 0x562a84b8c03d <unknown>\n#6 0x562a84ba430e <unknown>\n#7 0x562a84b8bde3 <unknown>\n#8 0x562a84b612dd <unknown>\n#9 0x562a84b6234e <unknown>\n#10 0x562a84dc13e4 <unknown>\n#11 0x562a84dc53d7 <unknown>\n#12 0x562a84dcfb20 <unknown>\n#13 0x562a84dc6023 <unknown>\n#14 0x562a84d941aa <unknown>\n#15 0x562a84dea6b8 <unknown>\n#16 0x562a84dea847 <unknown>\n#17 0x562a84dfa243 <unknown>\n#18 0x7fbe55bf1b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1",
+        "uid" : "83d35221d42c749b",
+        "parentUid" : "5157ecc5f2c119b8d6268c3df25a65d6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073739151,
+          "stop" : 1690073740029,
+          "duration" : 878
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "5157ecc5f2c119b8d6268c3df25a65d6"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5642e36de4e3 <unknown>\n#1 0x5642e340dc76 <unknown>\n#2 0x5642e3449c96 <unknown>\n#3 0x5642e3449dc1 <unknown>\n#4 0x5642e34837f4 <unknown>\n#5 0x5642e346903d <unknown>\n#6 0x5642e348130e <unknown>\n#7 0x5642e3468de3 <unknown>\n#8 0x5642e343e2dd <unknown>\n#9 0x5642e343f34e <unknown>\n#10 0x5642e369e3e4 <unknown>\n#11 0x5642e36a23d7 <unknown>\n#12 0x5642e36acb20 <unknown>\n#13 0x5642e36a3023 <unknown>\n#14 0x5642e36711aa <unknown>\n#15 0x5642e36c76b8 <unknown>\n#16 0x5642e36c7847 <unknown>\n#17 0x5642e36d7243 <unknown>\n#18 0x7ff381817b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "cfcd8a0a5290b9dd",
+        "parentUid" : "14dff9847547930ced17ab86bb47f272",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073779835,
+          "stop" : 1690073786078,
+          "duration" : 6243
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "14dff9847547930ced17ab86bb47f272"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559000bbc4e3 <unknown>\n#1 0x5590008ebc76 <unknown>\n#2 0x559000927c96 <unknown>\n#3 0x559000927dc1 <unknown>\n#4 0x5590009617f4 <unknown>\n#5 0x55900094703d <unknown>\n#6 0x55900095f30e <unknown>\n#7 0x559000946de3 <unknown>\n#8 0x55900091c2dd <unknown>\n#9 0x55900091d34e <unknown>\n#10 0x559000b7c3e4 <unknown>\n#11 0x559000b803d7 <unknown>\n#12 0x559000b8ab20 <unknown>\n#13 0x559000b81023 <unknown>\n#14 0x559000b4f1aa <unknown>\n#15 0x559000ba56b8 <unknown>\n#16 0x559000ba5847 <unknown>\n#17 0x559000bb5243 <unknown>\n#18 0x7f33bb8beb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "6141487d949fdcbf",
+        "parentUid" : "b722681394c90a8ccbd974c85c4ab9b5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073787577,
+          "stop" : 1690073793681,
+          "duration" : 6104
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "b722681394c90a8ccbd974c85c4ab9b5"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5617eac984e3 <unknown>\n#1 0x5617ea9c7c76 <unknown>\n#2 0x5617eaa03c96 <unknown>\n#3 0x5617eaa03dc1 <unknown>\n#4 0x5617eaa3d7f4 <unknown>\n#5 0x5617eaa2303d <unknown>\n#6 0x5617eaa3b30e <unknown>\n#7 0x5617eaa22de3 <unknown>\n#8 0x5617ea9f82dd <unknown>\n#9 0x5617ea9f934e <unknown>\n#10 0x5617eac583e4 <unknown>\n#11 0x5617eac5c3d7 <unknown>\n#12 0x5617eac66b20 <unknown>\n#13 0x5617eac5d023 <unknown>\n#14 0x5617eac2b1aa <unknown>\n#15 0x5617eac816b8 <unknown>\n#16 0x5617eac81847 <unknown>\n#17 0x5617eac91243 <unknown>\n#18 0x7fbd152e6b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1",
+        "uid" : "e7dfaea85b9e422a",
+        "parentUid" : "ef43317ecfe65c97857c88a01e5c1a40",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073795162,
+          "stop" : 1690073801282,
+          "duration" : 6120
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "ef43317ecfe65c97857c88a01e5c1a40"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b03e0f64e3 <unknown>\n#1 0x55b03de25c76 <unknown>\n#2 0x55b03de61c96 <unknown>\n#3 0x55b03de61dc1 <unknown>\n#4 0x55b03de9b7f4 <unknown>\n#5 0x55b03de8103d <unknown>\n#6 0x55b03de9930e <unknown>\n#7 0x55b03de80de3 <unknown>\n#8 0x55b03de562dd <unknown>\n#9 0x55b03de5734e <unknown>\n#10 0x55b03e0b63e4 <unknown>\n#11 0x55b03e0ba3d7 <unknown>\n#12 0x55b03e0c4b20 <unknown>\n#13 0x55b03e0bb023 <unknown>\n#14 0x55b03e0891aa <unknown>\n#15 0x55b03e0df6b8 <unknown>\n#16 0x55b03e0df847 <unknown>\n#17 0x55b03e0ef243 <unknown>\n#18 0x7fd924f4cb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1",
+        "uid" : "48ea6957ad8f6efb",
+        "parentUid" : "12b67fe1f051077e804c9dcb31aa3fc7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073802809,
+          "stop" : 1690073808951,
+          "duration" : 6142
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "12b67fe1f051077e804c9dcb31aa3fc7"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55eff0b374e3 <unknown>\n#1 0x55eff0866c76 <unknown>\n#2 0x55eff08a2c96 <unknown>\n#3 0x55eff08a2dc1 <unknown>\n#4 0x55eff08dc7f4 <unknown>\n#5 0x55eff08c203d <unknown>\n#6 0x55eff08da30e <unknown>\n#7 0x55eff08c1de3 <unknown>\n#8 0x55eff08972dd <unknown>\n#9 0x55eff089834e <unknown>\n#10 0x55eff0af73e4 <unknown>\n#11 0x55eff0afb3d7 <unknown>\n#12 0x55eff0b05b20 <unknown>\n#13 0x55eff0afc023 <unknown>\n#14 0x55eff0aca1aa <unknown>\n#15 0x55eff0b206b8 <unknown>\n#16 0x55eff0b20847 <unknown>\n#17 0x55eff0b30243 <unknown>\n#18 0x7f27aa2acb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "4e73880e77a2c095",
+        "parentUid" : "28686253f7e022040cf75712f2afd886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073810486,
+          "stop" : 1690073816642,
+          "duration" : 6156
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "28686253f7e022040cf75712f2afd886"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5564a9fbb4e3 <unknown>\n#1 0x5564a9ceac76 <unknown>\n#2 0x5564a9d26c96 <unknown>\n#3 0x5564a9d26dc1 <unknown>\n#4 0x5564a9d607f4 <unknown>\n#5 0x5564a9d4603d <unknown>\n#6 0x5564a9d5e30e <unknown>\n#7 0x5564a9d45de3 <unknown>\n#8 0x5564a9d1b2dd <unknown>\n#9 0x5564a9d1c34e <unknown>\n#10 0x5564a9f7b3e4 <unknown>\n#11 0x5564a9f7f3d7 <unknown>\n#12 0x5564a9f89b20 <unknown>\n#13 0x5564a9f80023 <unknown>\n#14 0x5564a9f4e1aa <unknown>\n#15 0x5564a9fa46b8 <unknown>\n#16 0x5564a9fa4847 <unknown>\n#17 0x5564a9fb4243 <unknown>\n#18 0x7f7f02ba1b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "15509c1981a3a72c",
+        "parentUid" : "67004f8f09b76dd264d04880ad3813fe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073818241,
+          "stop" : 1690073824446,
+          "duration" : 6205
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "67004f8f09b76dd264d04880ad3813fe"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563c776d34e3 <unknown>\n#1 0x563c77402c76 <unknown>\n#2 0x563c7743ec96 <unknown>\n#3 0x563c7743edc1 <unknown>\n#4 0x563c774787f4 <unknown>\n#5 0x563c7745e03d <unknown>\n#6 0x563c7747630e <unknown>\n#7 0x563c7745dde3 <unknown>\n#8 0x563c774332dd <unknown>\n#9 0x563c7743434e <unknown>\n#10 0x563c776933e4 <unknown>\n#11 0x563c776973d7 <unknown>\n#12 0x563c776a1b20 <unknown>\n#13 0x563c77698023 <unknown>\n#14 0x563c776661aa <unknown>\n#15 0x563c776bc6b8 <unknown>\n#16 0x563c776bc847 <unknown>\n#17 0x563c776cc243 <unknown>\n#18 0x7fa49e44eb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1",
+        "uid" : "17d011c8395c4817",
+        "parentUid" : "e1b7ef6c2faaf39d2c95116eb53ff199",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073825905,
+          "stop" : 1690073831994,
+          "duration" : 6089
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "e1b7ef6c2faaf39d2c95116eb53ff199"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x563ec10384e3 <unknown>\n#1 0x563ec0d67c76 <unknown>\n#2 0x563ec0da3c96 <unknown>\n#3 0x563ec0da3dc1 <unknown>\n#4 0x563ec0ddd7f4 <unknown>\n#5 0x563ec0dc303d <unknown>\n#6 0x563ec0ddb30e <unknown>\n#7 0x563ec0dc2de3 <unknown>\n#8 0x563ec0d982dd <unknown>\n#9 0x563ec0d9934e <unknown>\n#10 0x563ec0ff83e4 <unknown>\n#11 0x563ec0ffc3d7 <unknown>\n#12 0x563ec1006b20 <unknown>\n#13 0x563ec0ffd023 <unknown>\n#14 0x563ec0fcb1aa <unknown>\n#15 0x563ec10216b8 <unknown>\n#16 0x563ec1021847 <unknown>\n#17 0x563ec1031243 <unknown>\n#18 0x7fd4add8bb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1",
+        "uid" : "37f01d916b2b3f5b",
+        "parentUid" : "0210e4c062ce6ee5d2b7df2dda4787c9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073833524,
+          "stop" : 1690073839670,
+          "duration" : 6146
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "0210e4c062ce6ee5d2b7df2dda4787c9"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5628f4e2d4e3 <unknown>\n#1 0x5628f4b5cc76 <unknown>\n#2 0x5628f4b98c96 <unknown>\n#3 0x5628f4b98dc1 <unknown>\n#4 0x5628f4bd27f4 <unknown>\n#5 0x5628f4bb803d <unknown>\n#6 0x5628f4bd030e <unknown>\n#7 0x5628f4bb7de3 <unknown>\n#8 0x5628f4b8d2dd <unknown>\n#9 0x5628f4b8e34e <unknown>\n#10 0x5628f4ded3e4 <unknown>\n#11 0x5628f4df13d7 <unknown>\n#12 0x5628f4dfbb20 <unknown>\n#13 0x5628f4df2023 <unknown>\n#14 0x5628f4dc01aa <unknown>\n#15 0x5628f4e166b8 <unknown>\n#16 0x5628f4e16847 <unknown>\n#17 0x5628f4e26243 <unknown>\n#18 0x7f69b2f72b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.42 - Check if Subscribe Button is clickable on each page specified in DATA_1",
+        "uid" : "be2f350977be76c0",
+        "parentUid" : "ac63a2a5c6716b6be93f0050fa07e2dc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073841141,
+          "stop" : 1690073847238,
+          "duration" : 6097
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "ac63a2a5c6716b6be93f0050fa07e2dc"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b8566064e3 <unknown>\n#1 0x55b856335c76 <unknown>\n#2 0x55b856371c96 <unknown>\n#3 0x55b856371dc1 <unknown>\n#4 0x55b8563ab7f4 <unknown>\n#5 0x55b85639103d <unknown>\n#6 0x55b8563a930e <unknown>\n#7 0x55b856390de3 <unknown>\n#8 0x55b8563662dd <unknown>\n#9 0x55b85636734e <unknown>\n#10 0x55b8565c63e4 <unknown>\n#11 0x55b8565ca3d7 <unknown>\n#12 0x55b8565d4b20 <unknown>\n#13 0x55b8565cb023 <unknown>\n#14 0x55b8565991aa <unknown>\n#15 0x55b8565ef6b8 <unknown>\n#16 0x55b8565ef847 <unknown>\n#17 0x55b8565ff243 <unknown>\n#18 0x7f0e6edffb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.42 - Check if Subscribe Button is clickable on each page specified in DATA_1",
+        "uid" : "9283d20a984ba378",
+        "parentUid" : "ac9518d68a2b044eb149fc623b97b39e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073848754,
+          "stop" : 1690073854880,
+          "duration" : 6126
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "ac9518d68a2b044eb149fc623b97b39e"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5613850564e3 <unknown>\n#1 0x561384d85c76 <unknown>\n#2 0x561384dc1c96 <unknown>\n#3 0x561384dc1dc1 <unknown>\n#4 0x561384dfb7f4 <unknown>\n#5 0x561384de103d <unknown>\n#6 0x561384df930e <unknown>\n#7 0x561384de0de3 <unknown>\n#8 0x561384db62dd <unknown>\n#9 0x561384db734e <unknown>\n#10 0x5613850163e4 <unknown>\n#11 0x56138501a3d7 <unknown>\n#12 0x561385024b20 <unknown>\n#13 0x56138501b023 <unknown>\n#14 0x561384fe91aa <unknown>\n#15 0x56138503f6b8 <unknown>\n#16 0x56138503f847 <unknown>\n#17 0x56138504f243 <unknown>\n#18 0x7fa7b5a56b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "4973c0cfb5ea9ed5",
+        "parentUid" : "9aef979107fcf8ecf9acf0456de83d0c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073856356,
+          "stop" : 1690073862474,
+          "duration" : 6118
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "9aef979107fcf8ecf9acf0456de83d0c"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fc6721f4e3 <unknown>\n#1 0x55fc66f4ec76 <unknown>\n#2 0x55fc66f8ac96 <unknown>\n#3 0x55fc66f8adc1 <unknown>\n#4 0x55fc66fc47f4 <unknown>\n#5 0x55fc66faa03d <unknown>\n#6 0x55fc66fc230e <unknown>\n#7 0x55fc66fa9de3 <unknown>\n#8 0x55fc66f7f2dd <unknown>\n#9 0x55fc66f8034e <unknown>\n#10 0x55fc671df3e4 <unknown>\n#11 0x55fc671e33d7 <unknown>\n#12 0x55fc671edb20 <unknown>\n#13 0x55fc671e4023 <unknown>\n#14 0x55fc671b21aa <unknown>\n#15 0x55fc672086b8 <unknown>\n#16 0x55fc67208847 <unknown>\n#17 0x55fc67218243 <unknown>\n#18 0x7f64b2525b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "6175edc9cd78bc43",
+        "parentUid" : "681f15e9861d5392b93e213bf7583a27",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073864016,
+          "stop" : 1690073870108,
+          "duration" : 6092
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "681f15e9861d5392b93e213bf7583a27"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e43ef2a4e3 <unknown>\n#1 0x55e43ec59c76 <unknown>\n#2 0x55e43ec95c96 <unknown>\n#3 0x55e43ec95dc1 <unknown>\n#4 0x55e43eccf7f4 <unknown>\n#5 0x55e43ecb503d <unknown>\n#6 0x55e43eccd30e <unknown>\n#7 0x55e43ecb4de3 <unknown>\n#8 0x55e43ec8a2dd <unknown>\n#9 0x55e43ec8b34e <unknown>\n#10 0x55e43eeea3e4 <unknown>\n#11 0x55e43eeee3d7 <unknown>\n#12 0x55e43eef8b20 <unknown>\n#13 0x55e43eeef023 <unknown>\n#14 0x55e43eebd1aa <unknown>\n#15 0x55e43ef136b8 <unknown>\n#16 0x55e43ef13847 <unknown>\n#17 0x55e43ef23243 <unknown>\n#18 0x7f9af7d6ab43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1",
+        "uid" : "21353c7a37babaef",
+        "parentUid" : "91ba8701623b1c7d5d7851861c539be9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073871550,
+          "stop" : 1690073877621,
+          "duration" : 6071
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "91ba8701623b1c7d5d7851861c539be9"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f1a2bfe4e3 <unknown>\n#1 0x55f1a292dc76 <unknown>\n#2 0x55f1a2969c96 <unknown>\n#3 0x55f1a2969dc1 <unknown>\n#4 0x55f1a29a37f4 <unknown>\n#5 0x55f1a298903d <unknown>\n#6 0x55f1a29a130e <unknown>\n#7 0x55f1a2988de3 <unknown>\n#8 0x55f1a295e2dd <unknown>\n#9 0x55f1a295f34e <unknown>\n#10 0x55f1a2bbe3e4 <unknown>\n#11 0x55f1a2bc23d7 <unknown>\n#12 0x55f1a2bccb20 <unknown>\n#13 0x55f1a2bc3023 <unknown>\n#14 0x55f1a2b911aa <unknown>\n#15 0x55f1a2be76b8 <unknown>\n#16 0x55f1a2be7847 <unknown>\n#17 0x55f1a2bf7243 <unknown>\n#18 0x7f3d1e615b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1",
+        "uid" : "55754c545c440c7d",
+        "parentUid" : "28171efd720ac64559fa215a4db94265",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073879144,
+          "stop" : 1690073885250,
+          "duration" : 6106
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "28171efd720ac64559fa215a4db94265"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".block.newsletter .actions span\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x55bedf0794e3 <unknown>\n#1 0x55bededa8c76 <unknown>\n#2 0x55bedede4c96 <unknown>\n#3 0x55bedede4dc1 <unknown>\n#4 0x55bedee1e7f4 <unknown>\n#5 0x55bedee0403d <unknown>\n#6 0x55bedee1c30e <unknown>\n#7 0x55bedee03de3 <unknown>\n#8 0x55bededd92dd <unknown>\n#9 0x55bededda34e <unknown>\n#10 0x55bedf0393e4 <unknown>\n#11 0x55bedf03d3d7 <unknown>\n#12 0x55bedf047b20 <unknown>\n#13 0x55bedf03e023 <unknown>\n#14 0x55bedf00c1aa <unknown>\n#15 0x55bedf0626b8 <unknown>\n#16 0x55bedf062847 <unknown>\n#17 0x55bedf072243 <unknown>\n#18 0x7f556b435b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.46 - Check text on Subscribe Button on each page specified in DATA_1",
+        "uid" : "b4ad0fe609c66ce5",
+        "parentUid" : "914abf8a12a28e03b963f79e62ad01fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073886707,
+          "stop" : 1690073887700,
+          "duration" : 993
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "914abf8a12a28e03b963f79e62ad01fb"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".block.newsletter .actions span\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x5638150874e3 <unknown>\n#1 0x563814db6c76 <unknown>\n#2 0x563814df2c96 <unknown>\n#3 0x563814df2dc1 <unknown>\n#4 0x563814e2c7f4 <unknown>\n#5 0x563814e1203d <unknown>\n#6 0x563814e2a30e <unknown>\n#7 0x563814e11de3 <unknown>\n#8 0x563814de72dd <unknown>\n#9 0x563814de834e <unknown>\n#10 0x5638150473e4 <unknown>\n#11 0x56381504b3d7 <unknown>\n#12 0x563815055b20 <unknown>\n#13 0x56381504c023 <unknown>\n#14 0x56381501a1aa <unknown>\n#15 0x5638150706b8 <unknown>\n#16 0x563815070847 <unknown>\n#17 0x563815080243 <unknown>\n#18 0x7f9e961cab43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.46 - Check text on Subscribe Button on each page specified in DATA_1",
+        "uid" : "bb320dfce00d480",
+        "parentUid" : "e5e11e4ff4f46551088fa4ff3e8743df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073889316,
+          "stop" : 1690073890296,
+          "duration" : 980
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "e5e11e4ff4f46551088fa4ff3e8743df"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56003e13b4e3 <unknown>\n#1 0x56003de6ac76 <unknown>\n#2 0x56003dea6c96 <unknown>\n#3 0x56003dea6dc1 <unknown>\n#4 0x56003dee07f4 <unknown>\n#5 0x56003dec603d <unknown>\n#6 0x56003dede30e <unknown>\n#7 0x56003dec5de3 <unknown>\n#8 0x56003de9b2dd <unknown>\n#9 0x56003de9c34e <unknown>\n#10 0x56003e0fb3e4 <unknown>\n#11 0x56003e0ff3d7 <unknown>\n#12 0x56003e109b20 <unknown>\n#13 0x56003e100023 <unknown>\n#14 0x56003e0ce1aa <unknown>\n#15 0x56003e1246b8 <unknown>\n#16 0x56003e124847 <unknown>\n#17 0x56003e134243 <unknown>\n#18 0x7f06008cab43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "ce3543457990339a",
+        "parentUid" : "d4325567a71e97a3e0faa9bbe5618ffa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073891865,
+          "stop" : 1690073897917,
+          "duration" : 6052
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "d4325567a71e97a3e0faa9bbe5618ffa"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55ed48bb04e3 <unknown>\n#1 0x55ed488dfc76 <unknown>\n#2 0x55ed4891bc96 <unknown>\n#3 0x55ed4891bdc1 <unknown>\n#4 0x55ed489557f4 <unknown>\n#5 0x55ed4893b03d <unknown>\n#6 0x55ed4895330e <unknown>\n#7 0x55ed4893ade3 <unknown>\n#8 0x55ed489102dd <unknown>\n#9 0x55ed4891134e <unknown>\n#10 0x55ed48b703e4 <unknown>\n#11 0x55ed48b743d7 <unknown>\n#12 0x55ed48b7eb20 <unknown>\n#13 0x55ed48b75023 <unknown>\n#14 0x55ed48b431aa <unknown>\n#15 0x55ed48b996b8 <unknown>\n#16 0x55ed48b99847 <unknown>\n#17 0x55ed48ba9243 <unknown>\n#18 0x7fedd7a90b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "6e61a94b37f53a37",
+        "parentUid" : "36422143fc75143f45c2df2639d5e2de",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073899445,
+          "stop" : 1690073905653,
+          "duration" : 6208
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "36422143fc75143f45c2df2639d5e2de"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55623a6c94e3 <unknown>\n#1 0x55623a3f8c76 <unknown>\n#2 0x55623a434c96 <unknown>\n#3 0x55623a434dc1 <unknown>\n#4 0x55623a46e7f4 <unknown>\n#5 0x55623a45403d <unknown>\n#6 0x55623a46c30e <unknown>\n#7 0x55623a453de3 <unknown>\n#8 0x55623a4292dd <unknown>\n#9 0x55623a42a34e <unknown>\n#10 0x55623a6893e4 <unknown>\n#11 0x55623a68d3d7 <unknown>\n#12 0x55623a697b20 <unknown>\n#13 0x55623a68e023 <unknown>\n#14 0x55623a65c1aa <unknown>\n#15 0x55623a6b26b8 <unknown>\n#16 0x55623a6b2847 <unknown>\n#17 0x55623a6c2243 <unknown>\n#18 0x7f7139826b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "84bea58101ff85c2",
+        "parentUid" : "99533bc4ede96ecfd91ee44c9943e671",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073907137,
+          "stop" : 1690073913217,
+          "duration" : 6080
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "99533bc4ede96ecfd91ee44c9943e671"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55daf82a94e3 <unknown>\n#1 0x55daf7fd8c76 <unknown>\n#2 0x55daf8014c96 <unknown>\n#3 0x55daf8014dc1 <unknown>\n#4 0x55daf804e7f4 <unknown>\n#5 0x55daf803403d <unknown>\n#6 0x55daf804c30e <unknown>\n#7 0x55daf8033de3 <unknown>\n#8 0x55daf80092dd <unknown>\n#9 0x55daf800a34e <unknown>\n#10 0x55daf82693e4 <unknown>\n#11 0x55daf826d3d7 <unknown>\n#12 0x55daf8277b20 <unknown>\n#13 0x55daf826e023 <unknown>\n#14 0x55daf823c1aa <unknown>\n#15 0x55daf82926b8 <unknown>\n#16 0x55daf8292847 <unknown>\n#17 0x55daf82a2243 <unknown>\n#18 0x7f62526e0b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "35668d79c183ae77",
+        "parentUid" : "27d96a942136708a81c1511d1eef0b64",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073914726,
+          "stop" : 1690073920763,
+          "duration" : 6037
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "27d96a942136708a81c1511d1eef0b64"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560eb5eae4e3 <unknown>\n#1 0x560eb5bddc76 <unknown>\n#2 0x560eb5c19c96 <unknown>\n#3 0x560eb5c19dc1 <unknown>\n#4 0x560eb5c537f4 <unknown>\n#5 0x560eb5c3903d <unknown>\n#6 0x560eb5c5130e <unknown>\n#7 0x560eb5c38de3 <unknown>\n#8 0x560eb5c0e2dd <unknown>\n#9 0x560eb5c0f34e <unknown>\n#10 0x560eb5e6e3e4 <unknown>\n#11 0x560eb5e723d7 <unknown>\n#12 0x560eb5e7cb20 <unknown>\n#13 0x560eb5e73023 <unknown>\n#14 0x560eb5e411aa <unknown>\n#15 0x560eb5e976b8 <unknown>\n#16 0x560eb5e97847 <unknown>\n#17 0x560eb5ea7243 <unknown>\n#18 0x7f70a01f4b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "a25b141408664863",
+        "parentUid" : "1911813ec0bc15083da2f4bfd6833053",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073922214,
+          "stop" : 1690073928338,
+          "duration" : 6124
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "1911813ec0bc15083da2f4bfd6833053"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556fe92134e3 <unknown>\n#1 0x556fe8f42c76 <unknown>\n#2 0x556fe8f7ec96 <unknown>\n#3 0x556fe8f7edc1 <unknown>\n#4 0x556fe8fb87f4 <unknown>\n#5 0x556fe8f9e03d <unknown>\n#6 0x556fe8fb630e <unknown>\n#7 0x556fe8f9dde3 <unknown>\n#8 0x556fe8f732dd <unknown>\n#9 0x556fe8f7434e <unknown>\n#10 0x556fe91d33e4 <unknown>\n#11 0x556fe91d73d7 <unknown>\n#12 0x556fe91e1b20 <unknown>\n#13 0x556fe91d8023 <unknown>\n#14 0x556fe91a61aa <unknown>\n#15 0x556fe91fc6b8 <unknown>\n#16 0x556fe91fc847 <unknown>\n#17 0x556fe920c243 <unknown>\n#18 0x7fcb9d3b4b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree on each page specified in DATA_1",
+        "uid" : "8c42436bf57d85c7",
+        "parentUid" : "f462e0fe8674464ff9a5e6a126caf739",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073929870,
+          "stop" : 1690073935964,
+          "duration" : 6094
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "f462e0fe8674464ff9a5e6a126caf739"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55df45c9c4e3 <unknown>\n#1 0x55df459cbc76 <unknown>\n#2 0x55df45a07c96 <unknown>\n#3 0x55df45a07dc1 <unknown>\n#4 0x55df45a417f4 <unknown>\n#5 0x55df45a2703d <unknown>\n#6 0x55df45a3f30e <unknown>\n#7 0x55df45a26de3 <unknown>\n#8 0x55df459fc2dd <unknown>\n#9 0x55df459fd34e <unknown>\n#10 0x55df45c5c3e4 <unknown>\n#11 0x55df45c603d7 <unknown>\n#12 0x55df45c6ab20 <unknown>\n#13 0x55df45c61023 <unknown>\n#14 0x55df45c2f1aa <unknown>\n#15 0x55df45c856b8 <unknown>\n#16 0x55df45c85847 <unknown>\n#17 0x55df45c95243 <unknown>\n#18 0x7f9876207b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "5e38d3e7e818847f",
+        "parentUid" : "da2f124fc16738901be944933a53a05d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073937421,
+          "stop" : 1690073943590,
+          "duration" : 6169
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "da2f124fc16738901be944933a53a05d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560b9c5194e3 <unknown>\n#1 0x560b9c248c76 <unknown>\n#2 0x560b9c284c96 <unknown>\n#3 0x560b9c284dc1 <unknown>\n#4 0x560b9c2be7f4 <unknown>\n#5 0x560b9c2a403d <unknown>\n#6 0x560b9c2bc30e <unknown>\n#7 0x560b9c2a3de3 <unknown>\n#8 0x560b9c2792dd <unknown>\n#9 0x560b9c27a34e <unknown>\n#10 0x560b9c4d93e4 <unknown>\n#11 0x560b9c4dd3d7 <unknown>\n#12 0x560b9c4e7b20 <unknown>\n#13 0x560b9c4de023 <unknown>\n#14 0x560b9c4ac1aa <unknown>\n#15 0x560b9c5026b8 <unknown>\n#16 0x560b9c502847 <unknown>\n#17 0x560b9c512243 <unknown>\n#18 0x7f98361c7b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "dc654984157961e6",
+        "parentUid" : "ca0499ec676d5fb6758269ae8f2733b7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073945109,
+          "stop" : 1690073951242,
+          "duration" : 6133
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "ca0499ec676d5fb6758269ae8f2733b7"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".field.newsletter input\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x55c88b8274e3 <unknown>\n#1 0x55c88b556c76 <unknown>\n#2 0x55c88b592c96 <unknown>\n#3 0x55c88b592dc1 <unknown>\n#4 0x55c88b5cc7f4 <unknown>\n#5 0x55c88b5b203d <unknown>\n#6 0x55c88b5ca30e <unknown>\n#7 0x55c88b5b1de3 <unknown>\n#8 0x55c88b5872dd <unknown>\n#9 0x55c88b58834e <unknown>\n#10 0x55c88b7e73e4 <unknown>\n#11 0x55c88b7eb3d7 <unknown>\n#12 0x55c88b7f5b20 <unknown>\n#13 0x55c88b7ec023 <unknown>\n#14 0x55c88b7ba1aa <unknown>\n#15 0x55c88b8106b8 <unknown>\n#16 0x55c88b810847 <unknown>\n#17 0x55c88b820243 <unknown>\n#18 0x7f016f96eb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "a7633b325135bc8e",
+        "parentUid" : "abd5fb2efc88fe97b0e65d1ed89ca774",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073952691,
+          "stop" : 1690073953738,
+          "duration" : 1047
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "abd5fb2efc88fe97b0e65d1ed89ca774"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".field.newsletter input\"}\n  (Session info: chrome=114.0.5735.198)\nStacktrace:\n#0 0x55c49ff264e3 <unknown>\n#1 0x55c49fc55c76 <unknown>\n#2 0x55c49fc91c96 <unknown>\n#3 0x55c49fc91dc1 <unknown>\n#4 0x55c49fccb7f4 <unknown>\n#5 0x55c49fcb103d <unknown>\n#6 0x55c49fcc930e <unknown>\n#7 0x55c49fcb0de3 <unknown>\n#8 0x55c49fc862dd <unknown>\n#9 0x55c49fc8734e <unknown>\n#10 0x55c49fee63e4 <unknown>\n#11 0x55c49feea3d7 <unknown>\n#12 0x55c49fef4b20 <unknown>\n#13 0x55c49feeb023 <unknown>\n#14 0x55c49feb91aa <unknown>\n#15 0x55c49ff0f6b8 <unknown>\n#16 0x55c49ff0f847 <unknown>\n#17 0x55c49ff1f243 <unknown>\n#18 0x7f493af48b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1",
+        "uid" : "74d30f91c89ba096",
+        "parentUid" : "269e2c3183a9e1adfdb8b3514cf4f047",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073955382,
+          "stop" : 1690073956469,
+          "duration" : 1087
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "269e2c3183a9e1adfdb8b3514cf4f047"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c4272c24e3 <unknown>\n#1 0x55c426ff1c76 <unknown>\n#2 0x55c42702dc96 <unknown>\n#3 0x55c42702ddc1 <unknown>\n#4 0x55c4270677f4 <unknown>\n#5 0x55c42704d03d <unknown>\n#6 0x55c42706530e <unknown>\n#7 0x55c42704cde3 <unknown>\n#8 0x55c4270222dd <unknown>\n#9 0x55c42702334e <unknown>\n#10 0x55c4272823e4 <unknown>\n#11 0x55c4272863d7 <unknown>\n#12 0x55c427290b20 <unknown>\n#13 0x55c427287023 <unknown>\n#14 0x55c4272551aa <unknown>\n#15 0x55c4272ab6b8 <unknown>\n#16 0x55c4272ab847 <unknown>\n#17 0x55c4272bb243 <unknown>\n#18 0x7f43e49d0b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.02.05 - Check Contact Us link in footer leads to the correct page from each page specified in DATA_1",
+        "uid" : "e2c572a0588cad82",
+        "parentUid" : "7118f3037fd3caf9dbd0bfcdc27ebe42",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073985180,
+          "stop" : 1690073991324,
+          "duration" : 6144
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/'" ]
+      } ],
+      "uid" : "7118f3037fd3caf9dbd0bfcdc27ebe42"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56213bdcb4e3 <unknown>\n#1 0x56213bafac76 <unknown>\n#2 0x56213bb36c96 <unknown>\n#3 0x56213bb36dc1 <unknown>\n#4 0x56213bb707f4 <unknown>\n#5 0x56213bb5603d <unknown>\n#6 0x56213bb6e30e <unknown>\n#7 0x56213bb55de3 <unknown>\n#8 0x56213bb2b2dd <unknown>\n#9 0x56213bb2c34e <unknown>\n#10 0x56213bd8b3e4 <unknown>\n#11 0x56213bd8f3d7 <unknown>\n#12 0x56213bd99b20 <unknown>\n#13 0x56213bd90023 <unknown>\n#14 0x56213bd5e1aa <unknown>\n#15 0x56213bdb46b8 <unknown>\n#16 0x56213bdb4847 <unknown>\n#17 0x56213bdc4243 <unknown>\n#18 0x7f992e3eeb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 02.02.05 - Check Contact Us link in footer leads to the correct page from each page specified in DATA_1",
+        "uid" : "482a294cccb57025",
+        "parentUid" : "4935e0b7f6b51dc53bd34a157261da5b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690073992847,
+          "stop" : 1690073998982,
+          "duration" : 6135
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+      } ],
+      "uid" : "4935e0b7f6b51dc53bd34a157261da5b"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star",
+        "uid" : "8487142bfabd6ee8",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1690074620740,
+          "stop" : 1690074628301,
+          "duration" : 7561
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Verify Create an Account button is incorrect or not redirect to correct page\nassert ('https://mage...JkLmNvbS8%2C/' == 'https://mage...count/create/'\n  - https://magento.softwaretestingboard.com/customer/account/create/\n  + https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/)",
+      "children" : [ {
+        "name" : "TC 03.01.23 Verify Create an Account button is functional",
+        "uid" : "fe970e47fc4f2bb6",
+        "parentUid" : "379de1549be61d5629c76523bddcac79",
+        "status" : "failed",
+        "time" : {
+          "start" : 1690074992856,
+          "stop" : 1690074993150,
+          "duration" : 294
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "379de1549be61d5629c76523bddcac79"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
   "name" : "categories"
 }

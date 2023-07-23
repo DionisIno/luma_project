@@ -1,13 +1,13 @@
 [ {
-  "buildOrder" : 13,
-  "reportUrl" : "https://DionisIno.github.io/luma_project/13/",
+  "buildOrder" : 14,
+  "reportUrl" : "https://DionisIno.github.io/luma_project/14/",
   "reportName" : "Allure Report with history",
   "data" : {
-    "failed" : 0,
-    "broken" : 0,
-    "skipped" : 21,
-    "passed" : 448,
+    "failed" : 1,
+    "broken" : 38,
+    "skipped" : 19,
+    "passed" : 412,
     "unknown" : 0,
-    "total" : 469
+    "total" : 470
   }
 } ]
