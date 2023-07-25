@@ -192,43 +192,43 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of Orders and Returns link does not match expected '{expected_text}'"
 
-    @allure.title("TC 02.01.23 - Check Contact Us link is present in the DOM tree on each page specified in DATA_1")
+    @allure.title("TC 02.01.23 - Check 'Contact us' link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_23_check_presence_of_contact_us_link_on_pages(self, driver, URL):
-        """Checks if Contact Us link is present in the DOM tree on each page specified in DATA_1"""
+        """Checks if 'Contact us' link is present in the DOM tree on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         contact_us_link = page.check_contact_us_link_presence()
-        assert contact_us_link, "The Contact Us link is not present in the DOM tree"
+        assert contact_us_link, "The 'Contact us' link is not present in the DOM tree"
 
-    @allure.title("TC 02.01.24 - Check display of Contact Us link on each page specified in DATA_1")
+    @allure.title("TC 02.01.24 - Check display of 'Contact us' link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_24_check_visibility_of_contact_us_link_on_pages(self, driver, URL):
-        """Checks if Contact Us link is visible on each page in DATA_1"""
+        """Checks if 'Contact us' link is visible on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         contact_us_link = page.check_contact_us_link_is_visible()
-        assert contact_us_link, "The Contact Us link is not visible"
+        assert contact_us_link, "The 'Contact us' link is not visible"
 
-    @allure.title("TC 02.01.25 - Check if Contact Us link is clickable on each page specified in DATA_1")
+    @allure.title("TC 02.01.25 - Check if 'Contact us' link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_25_check_clickability_of_contact_us_link_on_pages(self, driver, URL):
-        """This test checks if Contact Us link is clickable on each page specified in DATA_1"""
+        """This test checks if 'Contact us' link is clickable on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         contact_us_link = page.check_contact_us_link_clickability()
-        assert contact_us_link, "The Contact Us link is not clickable"
+        assert contact_us_link, "The 'Contact us' link is not clickable"
 
-    @allure.title("TC 02.01.27 - Check text of Contact Us link on each page specified in DATA_1")
+    @allure.title("TC 02.01.27 - Check text of 'Contact us' link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_27_check_text_of_contact_us_link_on_pages(self, driver, URL):
-        """Checks if text of Contact Us link is correct on each page in DATA_1"""
+        """Checks if text of 'Contact us' link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         actual_text = page.check_text_of_contact_us_link()
         expected_text = FooterElementsText.CONTACT_US_LINK_TEXT
         assert actual_text == expected_text, \
-            f"Actual text '{actual_text}' of Contact Us link does not match expected '{expected_text}'"
+            f"Actual text '{actual_text}' of 'Contact us' link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.01.28 - Check Write for us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -315,6 +315,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of Copyright section does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.38 - Check Subscribe section is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_38_check_presence_of_subscribe_section_on_pages(self, driver, URL):
@@ -324,6 +325,7 @@ class TestFooter:
         subscribe_section = page.check_subscribe_section_presence()
         assert subscribe_section, "The Subscribe section is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.39 - Check display of Subscribe section on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_39_check_visibility_of_subscribe_section_on_pages(self, driver, URL):
@@ -333,6 +335,7 @@ class TestFooter:
         subscribe_section = page.check_subscribe_section_is_visible()
         assert subscribe_section, "The Subscribe section is not visible"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.40 - Check Subscribe Button is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_40_check_presence_of_subscribe_button_on_pages(self, driver, URL):
@@ -342,6 +345,7 @@ class TestFooter:
         subscribe_button = page.check_subscribe_button_presence()
         assert subscribe_button, "The Subscribe Button is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.41 - Check display of Subscribe Button on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_41_check_visibility_of_subscribe_button_on_pages(self, driver, URL):
@@ -351,6 +355,7 @@ class TestFooter:
         subscribe_button = page.check_subscribe_button_is_visible()
         assert subscribe_button, "The Subscribe Button is not visible"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.42 - Check if Subscribe Button is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_42_check_clickability_of_subscribe_button_on_pages(self, driver, URL):
@@ -360,6 +365,7 @@ class TestFooter:
         subscribe_button = page.check_subscribe_button_clickability()
         assert subscribe_button, "The Subscribe Button is not clickable"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.44 - Check text on Subscribe Button is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -370,6 +376,7 @@ class TestFooter:
         subscribe_button_text = page.check_subscribe_button_text_presence()
         assert subscribe_button_text, "Text on Subscribe Button is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.45 - Check display of text on Subscribe Button on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_45_check_visibility_of_subscribe_button_text_on_pages(self, driver, URL):
@@ -379,6 +386,7 @@ class TestFooter:
         subscribe_button_text = page.check_subscribe_button_text_is_visible()
         assert subscribe_button_text, "The text on Subscribe Button is not visible"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.46 - Check text on Subscribe Button on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_46_check_text_on_subscribe_button_on_pages(self, driver, URL):
@@ -390,6 +398,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' on Subscribe Button does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.47 - Check Email field in Subscribe section is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -400,6 +409,7 @@ class TestFooter:
         subscribe_email_field = page.check_subscribe_email_field_presence()
         assert subscribe_email_field, "Email field in Subscribe section is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.48 - Check display of Subscribe Email Field on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_48_check_visibility_of_subscribe_email_field_on_pages(self, driver, URL):
@@ -409,6 +419,7 @@ class TestFooter:
         subscribe_email_field = page.check_subscribe_email_field_is_visible()
         assert subscribe_email_field, "The Subscribe Email Field is not visible"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.49 - Check placeholder in Subscribe Email Field is present in the DOM tree "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -419,6 +430,7 @@ class TestFooter:
         subscribe_email_field_placeholder = page.check_placeholder_presence_in_subscribe_email_field()
         assert subscribe_email_field_placeholder, "Placeholder in Email field is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title(
         "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -429,6 +441,7 @@ class TestFooter:
         subscribe_email_field_placeholder = page.check_placeholder_in_subscribe_email_field_is_visible()
         assert subscribe_email_field_placeholder, "The placeholder in Subscribe Email Field is not visible"
 
+    @pytest.mark.skip(reason="Subscribe section has been replaced by 'Subscribe to our mailing list' link")
     @allure.title("TC 02.01.51 - Check text of placeholder in Subscribe Email Field on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_51_check_text_of_placeholder_in_subscribe_email_field_on_pages(self, driver, URL):
@@ -440,6 +453,15 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of placeholder in Subscribe Email Field " \
             f"does not match expected '{expected_text}'"
+
+    @allure.title("TC 02.01.52 - Check 'Contact us' link is present in the DOM tree on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_52_check_presence_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
+        """Checks if 'Contact us' link is present in the DOM tree on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        contact_us_link = page.check_subscribe_to_our_mailing_list_link_presence()
+        assert contact_us_link, "The 'Contact us' link is not present in the DOM tree"
 
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
@@ -499,9 +521,9 @@ class TestFooter:
         page = FooterPage(driver, url=URL)
         page.open()
         page.check_contact_us_link_functionality()
-        title = page.check_title_display_of_contact_us_page()
-        assert page.get_actual_url_of_current_page() == FooterLinks.CONTACT_US_URL \
-               and title == "Contact Us", "The Contact Us link is not correct or the new page is not loaded"
+        title = page.check_title_display_of_contact_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.CONTACT_URL \
+               and title == "Contact", "The Contact Us link is not correct or the new page is not loaded"
 
     @allure.title("TC 02.02.06 - Check Write for us link in footer leads to the correct page "
                   "from each page specified in DATA_1")
@@ -514,3 +536,4 @@ class TestFooter:
         title = page.check_item_display_of_write_for_us_page()
         assert page.get_actual_url_of_current_page() == FooterLinks.WRITE_FOR_US_URL \
                and title == "Write For Us", "The Write for us link is not correct or the new page is not loaded"
+

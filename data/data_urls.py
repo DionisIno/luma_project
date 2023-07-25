@@ -57,6 +57,7 @@ class PromoBlockLinks:
 class FooterLinks:
     ADVANCED_SEARCH_URL = "https://magento.softwaretestingboard.com/catalogsearch/advanced/"
     CONTACT_US_URL = "https://magento.softwaretestingboard.com/contact/"
+    CONTACT_URL = "https://softwaretestingboard.com/contact/"
     ORDERS_AND_RETURNS_URL = "https://magento.softwaretestingboard.com/sales/guest/form/"
     POPULAR_SEARCH_TERMS_URL = "https://magento.softwaretestingboard.com/search/term/popular/"
     PRIVACY_AND_COOKIE_POLICY_URL = "https://magento.softwaretestingboard.com/privacy-policy-cookie-restriction-mode"
