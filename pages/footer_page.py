@@ -56,6 +56,11 @@ class FooterPage(BasePage):
         """Checks Write for us link is present in the DOM tree"""
         return self.element_is_present(self.footer_locators.WRITE_FOR_US_LINK)
 
+    @allure.step("Check Contact Us link is present in the DOM tree")
+    def check_subscribe_to_our_mailing_list_link_presence(self):
+        """Checks Contact Us link is present in the DOM tree"""
+        return self.element_is_present(self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK)
+
     @allure.step("Check Copyright section is present in the DOM tree")
     def check_copyright_section_presence(self):
         """Checks Copyright section is present in the DOM tree"""
@@ -306,10 +311,10 @@ class FooterPage(BasePage):
         link_functionality = contact_us_link.click()
         return link_functionality
 
-    @allure.step("Check the title of opened page Contact Us is displayed")
-    def check_title_display_of_contact_us_page(self):
-        """Checks that the title of opened page Contact Us is displayed"""
-        return self.get_text(self.locators5.CONTACT_US_TITLE)
+    @allure.step("Check the title of opened page Contact is displayed")
+    def check_title_display_of_contact_page(self):
+        """Checks that the title of opened page Contact is displayed"""
+        return self.get_text(self.locators5.CONTACT_TITLE)
 
     @allure.step("Check Write for us link leads to the correct page")
     def check_write_for_us_link_functionality(self):
@@ -320,3 +325,4 @@ class FooterPage(BasePage):
     def check_item_display_of_write_for_us_page(self):
         """Checks that the item in menu of opened page Write For Us is displayed"""
         return self.get_text(self.locators6.WRITE_FOR_US_MENU_ITEM)
+
