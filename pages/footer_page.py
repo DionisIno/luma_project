@@ -56,9 +56,9 @@ class FooterPage(BasePage):
         """Checks Write for us link is present in the DOM tree"""
         return self.element_is_present(self.footer_locators.WRITE_FOR_US_LINK)
 
-    @allure.step("Check Contact Us link is present in the DOM tree")
+    @allure.step("Check 'Subscribe to our mailing list' link is present in the DOM tree")
     def check_subscribe_to_our_mailing_list_link_presence(self):
-        """Checks Contact Us link is present in the DOM tree"""
+        """Checks 'Subscribe to our mailing list' Us link is present in the DOM tree"""
         return self.element_is_present(self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK)
 
     @allure.step("Check Copyright section is present in the DOM tree")
@@ -131,6 +131,11 @@ class FooterPage(BasePage):
     def check_write_for_us_link_is_visible(self):
         """Checks Write for us link is visible"""
         return self.element_is_visible(self.footer_locators.WRITE_FOR_US_LINK)
+
+    @allure.step("Check 'Subscribe to our mailing list' link is visible on the page")
+    def check_subscribe_to_our_mailing_list_link_is_visible(self):
+        """Checks 'Subscribe to our mailing list' link is visible"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK)
 
     @allure.step("Check Copyright section is visible on the page")
     def check_copyright_section_is_visible(self):
