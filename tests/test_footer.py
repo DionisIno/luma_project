@@ -297,7 +297,7 @@ class TestFooter:
 
     @allure.title("TC 02.01.36 - Check display of Copyright text on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_01_36_check_visibility_of_write_for_us_link_on_pages(self, driver, URL):
+    def test_tc_02_01_36_check_visibility_of_copyright_text_on_pages(self, driver, URL):
         """Checks if Copyright text is visible on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
@@ -454,14 +454,26 @@ class TestFooter:
             f"Actual text '{actual_text}' of placeholder in Subscribe Email Field " \
             f"does not match expected '{expected_text}'"
 
-    @allure.title("TC 02.01.52 - Check 'Contact us' link is present in the DOM tree on each page specified in DATA_1")
+    @allure.title("TC 02.01.52 - Check 'Subscribe to our mailing list' link is present "
+                  "in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_52_check_presence_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
-        """Checks if 'Contact us' link is present in the DOM tree on each page specified in DATA_1"""
+        """Checks if 'Subscribe to our mailing list' link is present in the DOM tree on each page
+        specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         contact_us_link = page.check_subscribe_to_our_mailing_list_link_presence()
-        assert contact_us_link, "The 'Contact us' link is not present in the DOM tree"
+        assert contact_us_link, "The 'Subscribe to our mailing list' link is not present in the DOM tree"
+
+    @allure.title("TC 02.01.53 - Check 'Subscribe to our mailing list' link is visible "
+                  "on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_53_check_display_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
+        """Checks if 'Subscribe to our mailing list' link is visible on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_link = page.check_subscribe_to_our_mailing_list_link_is_visible()
+        assert subscribe_link, "The 'Subscribe to our mailing list' link is not visible in the DOM tree"
 
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
