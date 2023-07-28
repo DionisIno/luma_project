@@ -202,6 +202,10 @@ class FooterPage(BasePage):
         """Checks Write for us link clickability"""
         return self.element_is_clickable(self.footer_locators.WRITE_FOR_US_LINK)
 
+    def check_subscribe_to_our_mailing_list_link_clickability(self):
+        """Checks 'Subscribe to our mailing list' link clickability"""
+        return self.element_is_clickable(self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK)
+
     @allure.step("Check Subscribe Button is clickable")
     def check_subscribe_button_clickability(self):
         """Checks Subscribe Button clickability"""
