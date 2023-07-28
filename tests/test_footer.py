@@ -475,6 +475,16 @@ class TestFooter:
         subscribe_link = page.check_subscribe_to_our_mailing_list_link_is_visible()
         assert subscribe_link, "The 'Subscribe to our mailing list' link is not visible in the DOM tree"
 
+    @allure.title("TC 02.01.54 - Check if 'Subscribe to our mailing list' link is clickable "
+                  "on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_54_check_clickability_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
+        """This test checks if 'Subscribe to our mailing list' link is clickable on each page specified in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        subscribe_link = page.check_subscribe_to_our_mailing_list_link_clickability()
+        assert subscribe_link, "The 'Subscribe to our mailing list' link is not clickable"
+
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
