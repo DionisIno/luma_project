@@ -1,28 +1,6 @@
 {
   "total" : 32,
   "items" : [ {
-    "uid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
-    "name" : "New Customers",
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 4,
-      "unknown" : 0,
-      "total" : 5
-    }
-  }, {
-    "uid" : "9c973e472e187a343dec1bd036d450c3",
-    "name" : "Test Footer",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 36,
-      "skipped" : 1,
-      "passed" : 64,
-      "unknown" : 0,
-      "total" : 101
-    }
-  }, {
     "uid" : "6ce152b7404524d631b96f91e1c4223c",
     "name" : "Create An Account",
     "statistic" : {
@@ -32,6 +10,17 @@
       "passed" : 28,
       "unknown" : 0,
       "total" : 30
+    }
+  }, {
+    "uid" : "9c973e472e187a343dec1bd036d450c3",
+    "name" : "Test Footer",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 26,
+      "passed" : 81,
+      "unknown" : 0,
+      "total" : 107
     }
   }, {
     "uid" : "da06872e440589d21aba946d1a86adfd",
@@ -98,6 +87,17 @@
       "passed" : 6,
       "unknown" : 0,
       "total" : 6
+    }
+  }, {
+    "uid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
+    "name" : "New Customers",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
     }
   }, {
     "uid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
