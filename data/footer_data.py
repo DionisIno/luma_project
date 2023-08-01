@@ -8,6 +8,7 @@ class FooterElementsText:
     ORDERS_AND_RETURNS_LINK_TEXT = "Orders and Returns"
     PRIVACY_AND_COOKIE_POLICY_LINK_TEXT = "Privacy and Cookie Policy"
     SEARCH_TERMS_LINK_TEXT = "Search Terms"
-    SUBSCRIBE_BUTTON_TEXT = "Subscribe"
-    SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER_TEXT = "Enter your email address"
+    SUBSCRIBE_TO_OUR_MAILING_LIST_TEXT = "Subscribe to our mailing list"
     WRITE_FOR_US_LINK_TEXT = "Write for us"
+    # SUBSCRIBE_BUTTON_TEXT = "Subscribe"                                     # excluded from interface
+    # SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER_TEXT = "Enter your email address"     # excluded from interface
