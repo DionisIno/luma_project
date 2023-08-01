@@ -310,3 +310,51 @@ class TestMenPagePromoBlock:
         page.open()
         current_page = page.verify_block_hoodies_link_redirects_to_a_correct_page()
         assert current_page, "New page isn't open"
+
+    @allure.title("TC 14.06.15 Verify the visibility of 'Last chance for pants' promo block.")
+    def test_tc_14_06_15(self, driver):
+        """Verify that the block 'Last chance for pants' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_last_chance = page.check_block_last_chance_display()
+        assert block_last_chance is True, "The element is not visible"
+
+    @allure.title("TC 14.06.16 Verify the visibility of the image in the 'Last chance for pants' promo block.")
+    def test_tc_14_06_16(self, driver):
+        """Verify that the image in the block 'Last chance for pants' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_last_chance_image = page.check_block_last_chance_image_display()
+        assert block_last_chance_image == MenPageImageURLS.LUMA_LAST_CHANCE_IMG_URL, "The image is not correct"
+
+    @allure.title("TC 14.06.17 Verify that the 'Last chance for pants' text is visible.")
+    def test_tc_14_06_17(self, driver):
+        """Verify that text-1 in 'Last chance for pants' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_last_chance_text_1 = page.verify_block_last_chance_text_1()
+        assert block_last_chance_text_1 == "Last chance\nfor pants", "The text is not correct"
+
+    @allure.title("TC 14.06.18 Verify that the 'Take 20% OFF' text is visible.")
+    def test_tc_14_06_18(self, driver):
+        """Verify that text-2 in 'Last chance for pants' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_last_chance_text_2 = page.verify_block_last_chance_text_2()
+        assert block_last_chance_text_2 == "Take\n20% OFF\nand save bigtime*", "The text is not correct"
+
+    @allure.title("TC 14.06.19 Verify that the 'Shop Pants' text is visible.")
+    def test_tc_14_06_19(self, driver):
+        """Verify that text-3 in 'Last chance for pants' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_last_chance_text_3 = page.verify_block_last_chance_text_3()
+        assert block_last_chance_text_3 == "Shop Pants", "The text is not correct"
+
+    @allure.title("TC 14.06.20 Verify the click on the block 'Last chance for pants' redirects to a correct page.")
+    def test_tc_14_06_20(self, driver):
+        """Verify that the click on the block 'Last chance for pants' correctly redirects to a new webpage"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_block_last_chance_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open"
