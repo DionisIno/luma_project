@@ -247,6 +247,12 @@ class FooterPage(BasePage):
         link_text = self.driver.find_element(*self.footer_locators.WRITE_FOR_US_LINK).text
         return link_text
 
+    @allure.step("Check the text of 'Subscribe to our mailing list' link")
+    def check_text_of_subscribe_to_our_mailing_list_link(self):
+        """Checks content of 'Subscribe to our mailing list' link"""
+        link_text = self.driver.find_element(*self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK).text
+        return link_text
+
     @allure.step("Check the text of Copyright section")
     def check_text_of_copyright_section(self):
         """Checks content of Copyright section"""

@@ -462,8 +462,8 @@ class TestFooter:
         specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        contact_us_link = page.check_subscribe_to_our_mailing_list_link_presence()
-        assert contact_us_link, "The 'Subscribe to our mailing list' link is not present in the DOM tree"
+        subscribe_link = page.check_subscribe_to_our_mailing_list_link_presence()
+        assert subscribe_link, "The 'Subscribe to our mailing list' link is not present in the DOM tree"
 
     @allure.title("TC 02.01.53 - Check 'Subscribe to our mailing list' link is visible "
                   "on each page specified in DATA_1")
@@ -484,6 +484,17 @@ class TestFooter:
         page.open()
         subscribe_link = page.check_subscribe_to_our_mailing_list_link_clickability()
         assert subscribe_link, "The 'Subscribe to our mailing list' link is not clickable"
+
+    @allure.title("TC 02.01.56 - Check text of 'Subscribe to our mailing list' link on each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_01_56_check_text_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
+        """Checks if text of 'Subscribe to our mailing list' link is correct on each page in DATA_1"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        actual_text = page.check_text_of_subscribe_to_our_mailing_list_link()
+        expected_text = FooterElementsText.SUBSCRIBE_TO_OUR_MAILING_LIST_TEXT
+        assert actual_text == expected_text, \
+            f"Actual text '{actual_text}' of 'Subscribe to our mailing list' link does not match expected '{expected_text}'"
 
     @allure.title("TC 02.02.01 - Check Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
