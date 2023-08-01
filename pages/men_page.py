@@ -300,3 +300,45 @@ class MenPage(BasePage):
         element.click()
         url = self.driver.current_url
         return url == MEN_HOODIES_URL
+
+    @allure.step("Check display of the 'Last chance for pants' block on Men page")
+    def check_block_last_chance_display(self):
+        """Check visibility of the 'Last chance for pants' block on Men page under the 'Last chance block'"""
+        block_last_chance = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_BLOCK)
+        return block_last_chance.is_displayed()
+
+    @allure.step("Check display of the image in the 'Last chance for pants' block on Men page")
+    def check_block_last_chance_image_display(self):
+        """Check visibility of the image of the 'Last chance' block on Men page under the 'Last chance block'"""
+        element = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_BLOCK_BLOCK_IMG)
+        block_last_chance_image = element.get_attribute("src")
+        return block_last_chance_image
+
+    @allure.step("Check display of the text-1 'Last chance for pants' in the 'Last chance for pants' block on Men page")
+    def verify_block_last_chance_text_1(self):
+        """This method verifies correct display of the text-1 in the 'Luma last chance' block"""
+        last_chance_block_title1 = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_TITLE)
+        last_chance_block_title1_text = last_chance_block_title1.text
+        return last_chance_block_title1_text
+
+    @allure.step("Check display of the text-2 'Take 20% OFF' in the 'Last chance for pants' block on Men page")
+    def verify_block_last_chance_text_2(self):
+        """This method verifies correct display of the text-2 in the 'Luma last chance' block"""
+        last_chance_block_title2 = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_TITLE_2)
+        last_chance_block_title2_text = last_chance_block_title2.text
+        return last_chance_block_title2_text
+
+    @allure.step("Check display of the text-3 'Shop Pants' in the 'Last chance for pants' block on Men page")
+    def verify_block_last_chance_text_3(self):
+        """This method verifies correct display of the text-3 in the 'Luma last chance' block"""
+        last_chance_block_title3 = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_TITLE_3)
+        last_chance_block_title3_text = last_chance_block_title3.text
+        return last_chance_block_title3_text
+
+    @allure.step("Correct redirection of the click on the block 'Last chance for pants' on Men page")
+    def verify_block_last_chance_link_redirects_to_a_correct_page(self):
+        """This method verifies correct redirection to a new page after clicking on the block"""
+        element = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_BLOCK)
+        element.click()
+        url = self.driver.current_url
+        return url == MEN_BOTTOMS_PANTS_URL
