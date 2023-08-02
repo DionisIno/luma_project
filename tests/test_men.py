@@ -358,3 +358,51 @@ class TestMenPagePromoBlock:
         page.open()
         current_page = page.verify_block_last_chance_link_redirects_to_a_correct_page()
         assert current_page, "New page isn't open"
+
+    @allure.title("TC 14.06.09 Verify the visibility of 'Save up to $24!' promo block.")
+    def test_tc_14_06_09(self, driver):
+        """Verify that the block 'Save up to $24!' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_save = page.check_block_save_display()
+        assert block_save is True, "The element is not visible"
+
+    @allure.title("TC 14.06.10 Verify the visibility of the image in the 'Save up to $24!' promo block.")
+    def test_tc_14_06_10(self, driver):
+        """Verify that the image in the block 'Save up to $24!' is displayed on the Men page"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_save_image = page.check_block_save_image_display()
+        assert block_save_image == MenPageImageURLS.LUMA_SAVE_IMG_URL, "The image is not correct"
+
+    @allure.title("TC 14.06.11 Verify that the 'Save up to $24!' text in the 'Save up to $24!' promo block is visible.")
+    def test_tc_14_06_11(self, driver):
+        """Verify that text-1 in 'Save up to $24!' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_save_text_1 = page.verify_block_save_text_1()
+        assert block_save_text_1 == "Save up to $24!", "The text is not correct"
+
+    @allure.title("TC 14.06.12 Verify that the 'Buy 3 Luma tees' text in the 'Save up to $24!' promo block is visible.")
+    def test_tc_14_06_12(self, driver):
+        """Verify that text-2 in 'Save up to $24!' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_save_text_2 = page.verify_block_save_text_2()
+        assert block_save_text_2 == "Buy 3 Luma tees, get 4 instead", "The text is not correct"
+
+    @allure.title("TC 14.06.13 Verify that the 'Shop Tees' text in the 'Save up to $24!' promo block is visible.")
+    def test_tc_14_06_13(self, driver):
+        """Verify that text-3 in 'Save up to $24!' block correctly displayed"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        block_save_text_3 = page.verify_block_save_text_3()
+        assert block_save_text_3 == "Shop Tees", "The text is not correct"
+
+    @allure.title("TC 14.06.14 Verify the click on the block 'Save up to $24!' redirects to a correct page.")
+    def test_tc_14_06_14(self, driver):
+        """Verify that the click on the block 'Save up to $24!' correctly redirects to a new webpage"""
+        page = MenPage(driver, MEN_PAGE_URL)
+        page.open()
+        current_page = page.verify_block_save_link_redirects_to_a_correct_page()
+        assert current_page, "New page isn't open"

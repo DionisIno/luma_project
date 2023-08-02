@@ -52,3 +52,8 @@ class MenPagePromoLocators:
     LUMA_LAST_CHANCE_TITLE = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[2]/span/strong')
     LUMA_LAST_CHANCE_TITLE_2 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[2]/span/span[1]')
     LUMA_LAST_CHANCE_TITLE_3 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[2]/span/span[2]')
+    LUMA_SAVE_BLOCK = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]')
+    LUMA_SAVE_BLOCK_BLOCK_IMG = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]/span/img')
+    LUMA_SAVE_TITLE = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]/span/strong')
+    LUMA_SAVE_TITLE_2 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]/span/span[1]')
+    LUMA_SAVE_TITLE_3 = (By.XPATH, '//*[@id="maincontent"]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]/span/span[2]')

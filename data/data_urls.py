@@ -114,3 +114,4 @@ class MenPageImageURLS:
     LUMA_TEES_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-tees.jpg'
     LUMA_HOODIES_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-category-hoodies.jpg'
     LUMA_LAST_CHANCE_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-pants.jpg'
+    LUMA_SAVE_IMG_URL = 'https://magento.softwaretestingboard.com/pub/media/wysiwyg/mens/mens-t-shirts.png'
