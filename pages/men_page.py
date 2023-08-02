@@ -303,13 +303,13 @@ class MenPage(BasePage):
 
     @allure.step("Check display of the 'Last chance for pants' block on Men page")
     def check_block_last_chance_display(self):
-        """Check visibility of the 'Last chance for pants' block on Men page under the 'Last chance block'"""
+        """Check visibility of the 'Last chance for pants' block on Men page"""
         block_last_chance = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_BLOCK)
         return block_last_chance.is_displayed()
 
     @allure.step("Check display of the image in the 'Last chance for pants' block on Men page")
     def check_block_last_chance_image_display(self):
-        """Check visibility of the image of the 'Last chance' block on Men page under the 'Last chance block'"""
+        """Check visibility of the image of the 'Last chance' block on Men page"""
         element = self.element_is_visible(self.promo_locators.LUMA_LAST_CHANCE_BLOCK_BLOCK_IMG)
         block_last_chance_image = element.get_attribute("src")
         return block_last_chance_image
@@ -342,3 +342,46 @@ class MenPage(BasePage):
         element.click()
         url = self.driver.current_url
         return url == MEN_BOTTOMS_PANTS_URL
+
+    @allure.step("Check display of the 'Save up to $24!' block on Men page")
+    def check_block_save_display(self):
+        """Check visibility of the 'Save up to $24!' block on Men page"""
+        block_save = self.element_is_visible(self.promo_locators.LUMA_SAVE_BLOCK)
+        return block_save.is_displayed()
+
+    @allure.step("Check display of the image in the 'Save up to $24!' block on Men page")
+    def check_block_save_image_display(self):
+        """Check visibility of the image of the 'Save up to $24!' block on Men page"""
+        element = self.element_is_visible(self.promo_locators.LUMA_SAVE_BLOCK_BLOCK_IMG)
+        block_save_image = element.get_attribute("src")
+        return block_save_image
+
+    @allure.step("Check display of the text-1 'Save up to $24!' in the 'Save up to $24!' block on Men page")
+    def verify_block_save_text_1(self):
+        """This method verifies correct display of the text-1 in the 'Save up to $24!' block"""
+        save_block_title1 = self.element_is_visible(self.promo_locators.LUMA_SAVE_TITLE)
+        save_block_title1_text = save_block_title1.text
+        return save_block_title1_text
+
+    @allure.step("Check display of the text-2 'Buy 3 Luma tees' in the 'Save up to $24!' block on Men page")
+    def verify_block_save_text_2(self):
+        """This method verifies correct display of the text-2 in the 'Save up to $24!' block"""
+        save_block_title2 = self.element_is_visible(self.promo_locators.LUMA_SAVE_TITLE_2)
+        save_block_title2_text = save_block_title2.text
+        return save_block_title2_text
+
+    @allure.step("Check display of the text-3 'Shop Tees' in the 'Save up to $24!' block on Men page")
+    def verify_block_save_text_3(self):
+        """This method verifies correct display of the text-3 in the 'Save up to $24!' block"""
+        save_block_title3 = self.element_is_visible(self.promo_locators.LUMA_SAVE_TITLE_3)
+        save_block_title3_text = save_block_title3.text
+        return save_block_title3_text
+
+    @allure.step("Correct redirection of the click on the block 'Save up to $24!' on Men page")
+    def verify_block_save_link_redirects_to_a_correct_page(self):
+        """This method verifies correct redirection to a new page after clicking on the block"""
+        element = self.element_is_visible(self.promo_locators.LUMA_SAVE_BLOCK)
+        element.click()
+        url = self.driver.current_url
+        return url == MEN_TEES_URL
+
