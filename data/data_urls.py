@@ -61,6 +61,7 @@ class FooterLinks:
     ORDERS_AND_RETURNS_URL = "https://magento.softwaretestingboard.com/sales/guest/form/"
     POPULAR_SEARCH_TERMS_URL = "https://magento.softwaretestingboard.com/search/term/popular/"
     PRIVACY_AND_COOKIE_POLICY_URL = "https://magento.softwaretestingboard.com/privacy-policy-cookie-restriction-mode"
+    SUBSCRIBE_TO_OUR_MAILING_LIST_URL = "https://softwaretestingboard.com/subscribe/"
     WRITE_FOR_US_URL = "https://softwaretestingboard.com/write-for-us/"
 
 

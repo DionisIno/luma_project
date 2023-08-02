@@ -7,7 +7,7 @@ from locators.privacy_policy_page_locators import PrivacyPolicyPageLocators
 from locators.advanced_search_page_locators import AdvancedSearchPageLocators
 from locators.orders_and_returns_page_locators import OrdersAndReturnsPageLocators
 from locators.contact_us_page_locators import ContactUsPageLocators
-from locators.outside_pages_locators import WriteForUsPageLocators
+from locators.outside_pages_locators import WriteForUsPageLocators, SubscribePageLocators
 from pages.base_page import BasePage
 
 
@@ -20,6 +20,7 @@ class FooterPage(BasePage):
     locators4 = OrdersAndReturnsPageLocators()
     locators5 = ContactUsPageLocators()
     locators6 = WriteForUsPageLocators()
+    locators7 = SubscribePageLocators()
 
     @allure.step("Check Footer is present in the DOM tree")
     def check_footer_presence(self):
@@ -340,4 +341,16 @@ class FooterPage(BasePage):
     def check_item_display_of_write_for_us_page(self):
         """Checks that the item in menu of opened page Write For Us is displayed"""
         return self.get_text(self.locators6.WRITE_FOR_US_MENU_ITEM)
+
+    @allure.step("Check 'Subscribe to our mailing list' link leads to the correct page")
+    def check_subscribe_to_our_mailing_list_link_functionality(self):
+        """Checks that 'Subscribe to our mailing list' leads to the correct page"""
+        return self.element_is_visible(self.footer_locators.SUBSCRIBE_TO_OUR_MAILING_LIST_LINK).click()
+
+    @allure.step("Check the item in menu of opened page Write For Us is displayed")
+    def check_title_display_of_subscribe_page(self):
+        """Checks that the title of opened page Subscribe is displayed"""
+        return self.get_text(self.locators7.SUBSCRIBE_TITLE)
+
+
 

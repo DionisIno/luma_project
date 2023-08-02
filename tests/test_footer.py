@@ -570,3 +570,16 @@ class TestFooter:
         assert page.get_actual_url_of_current_page() == FooterLinks.WRITE_FOR_US_URL \
                and title == "Write For Us", "The Write for us link is not correct or the new page is not loaded"
 
+    @allure.title("TC 02.02.07 - Check 'Subscribe to our mailing list' link in footer leads to the correct page "
+                  "from each page specified in DATA_1")
+    @pytest.mark.parametrize('URL', DATA_1)
+    def test_tc_02_02_07_check_subscribe_to_our_mailing_list_link_functionality(self, driver, URL):
+        """Check that 'Subscribe to our mailing list' link in footer is correct"""
+        page = FooterPage(driver, url=URL)
+        page.open()
+        page.check_subscribe_to_our_mailing_list_link_functionality()
+        title = page.check_title_display_of_subscribe_page()
+        assert page.get_actual_url_of_current_page() == FooterLinks.SUBSCRIBE_TO_OUR_MAILING_LIST_URL \
+               and title == "Subscribe", "The 'Subscribe to our mailing list' link is not correct " \
+                                         "or the new page is not loaded"
+
