@@ -583,3 +583,36 @@ class TestFooter:
                and title == "Subscribe", "The 'Subscribe to our mailing list' link is not correct " \
                                          "or the new page is not loaded"
 
+    @allure.title("TC 02.03.01 - Check correct transfers by clicking on links in the footer")
+    def test_tc_02_03_01_check_correct_transfers_by_clicking_on_links_in_the_footer(self, driver):
+        """Check that transfers between pages by clicking on links in the footer are correct"""
+        page = FooterPage(driver, MAIN_PAGE_URL)
+        page.open()
+        page.check_search_terms_link_functionality()
+        url1 = page.get_actual_url_of_current_page()
+        title1 = page.check_title_display_of_popular_search_terms_page()
+        page.check_privacy_and_cookie_policy_link_functionality()
+        url2 = page.get_actual_url_of_current_page()
+        title2 = page.check_title_display_of_privacy_policy_page()
+        page.check_advanced_search_link_functionality()
+        url3 = page.get_actual_url_of_current_page()
+        title3 = page.check_title_display_of_advanced_search_page()
+        page.check_orders_and_returns_link_functionality()
+        url4 = page.get_actual_url_of_current_page()
+        title4 = page.check_title_display_of_orders_and_returns_page()
+        page.check_contact_us_link_functionality()
+        url5 = page.get_actual_url_of_current_page()
+        title5 = page.check_title_display_of_contact_page()
+        assert url1 == FooterLinks.POPULAR_SEARCH_TERMS_URL \
+               and title1 == "Popular Search Terms", "The Search Terms link is not correct or the new page " \
+                                                     "is not loaded"
+        assert url2 == FooterLinks.PRIVACY_AND_COOKIE_POLICY_URL \
+               and title2 == "Privacy Policy", "The Privacy and Cookie Policy link is not correct or the new page " \
+                                               "is not loaded"
+        assert url3 == FooterLinks.ADVANCED_SEARCH_URL \
+               and title3 == "Advanced Search", "The Advanced Search link is not correct or the new page is not loaded"
+        assert url4 == FooterLinks.ORDERS_AND_RETURNS_URL \
+               and title4 == "Orders and Returns", "The Orders and Returns link is not correct or the new page " \
+                                                   "is not loaded"
+        assert url5 == FooterLinks.CONTACT_URL \
+               and title5 == "Contact", "The Contact Us link is not correct or the new page is not loaded"
