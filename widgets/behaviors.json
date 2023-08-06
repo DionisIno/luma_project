@@ -1,6 +1,28 @@
 {
   "total" : 32,
   "items" : [ {
+    "uid" : "b99b8d8d24b3d6014326bc24b8c0de91",
+    "name" : "Forgot Your Password Page",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 10,
+      "skipped" : 0,
+      "passed" : 10,
+      "unknown" : 0,
+      "total" : 20
+    }
+  }, {
+    "uid" : "d010aa4c83432dc4d0f08d7b078e8643",
+    "name" : "Forgot Your Password Functionality",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
     "uid" : "6ce152b7404524d631b96f91e1c4223c",
     "name" : "Create An Account",
     "statistic" : {
@@ -18,9 +40,9 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 26,
-      "passed" : 81,
+      "passed" : 86,
       "unknown" : 0,
-      "total" : 107
+      "total" : 112
     }
   }, {
     "uid" : "da06872e440589d21aba946d1a86adfd",
@@ -40,20 +62,9 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 37,
+      "passed" : 49,
       "unknown" : 0,
-      "total" : 37
-    }
-  }, {
-    "uid" : "b99b8d8d24b3d6014326bc24b8c0de91",
-    "name" : "Forgot Your Password Page",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 20,
-      "unknown" : 0,
-      "total" : 20
+      "total" : 49
     }
   }, {
     "uid" : "612c090da606d29c94adba7a39fb264c",
@@ -91,17 +102,6 @@
   }, {
     "uid" : "6de8cfc21c4636e9ef3d0beaa75cb6e1",
     "name" : "New Customers",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 5,
-      "unknown" : 0,
-      "total" : 5
-    }
-  }, {
-    "uid" : "cfe439a8cb5b4e3afb016ca4dfc57392",
-    "name" : "Login Functionality",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

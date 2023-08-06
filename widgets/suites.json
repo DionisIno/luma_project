@@ -5,11 +5,11 @@
     "name" : "tests",
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
-      "skipped" : 45,
-      "passed" : 430,
+      "broken" : 15,
+      "skipped" : 44,
+      "passed" : 434,
       "unknown" : 0,
-      "total" : 476
+      "total" : 493
     }
   } ]
 }
