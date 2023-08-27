@@ -1,0 +1,330 @@
+{
+  "uid" : "2ddbbde0b574ada",
+  "name" : "TC 13.02.04 - Check the link in section 2 block 3 'home-erin' in the Promo Block leads to the correct page",
+  "fullName" : "tests.test_main_page.TestPromoBlock#test_tc_13_02_04_check_section2_block3_link",
+  "historyId" : "5d3b0b6226171412707a07ee4e2e97aa",
+  "time" : {
+    "start" : 1693097565195,
+    "stop" : 1693097568035,
+    "duration" : 2840
+  },
+  "description" : "Check that link in section 2 block 3 'home-erin' is correct",
+  "descriptionHtml" : "<p>Check that link in section 2 block 3 'home-erin' is correct</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693097564181,
+      "stop" : 1693097565195,
+      "duration" : 1014
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that link in section 2 block 3 'home-erin' is correct",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693097565195,
+        "stop" : 1693097566156,
+        "duration" : 961
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the link in section 2 block 3 'home-erin' in the Promo Block leads to the correct page",
+      "time" : {
+        "start" : 1693097566156,
+        "stop" : 1693097567740,
+        "duration" : 1584
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693097566156,
+          "stop" : 1693097566206,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693097566156,
+            "stop" : 1693097566174,
+            "duration" : 18
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.home-erin')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693097566175,
+            "stop" : 1693097566186,
+            "duration" : 11
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"de797da99ca5e5fbbd9e3f9b93c5fa30\", element=\"779B0C8B50023D7162B0F88552580699_element_28\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.home-erin')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check the title of opened page Erin Recommends is displayed",
+      "time" : {
+        "start" : 1693097567740,
+        "stop" : 1693097568029,
+        "duration" : 289
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693097567740,
+          "stop" : 1693097568003,
+          "duration" : 263
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693097567740,
+            "stop" : 1693097567811,
+            "duration" : 71
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#page-title-heading .base')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693097567811,
+            "stop" : 1693097567871,
+            "duration" : 60
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"de797da99ca5e5fbbd9e3f9b93c5fa30\", element=\"B08A5534380152EE678C152B7B55283D_element_87\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '#page-title-heading .base')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Getting actual URL of the current webpage",
+      "time" : {
+        "start" : 1693097568029,
+        "stop" : 1693097568035,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693097568036,
+      "stop" : 1693097568100,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Promo Block"
+  }, {
+    "name" : "epic",
+    "value" : "Main Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2ddbbde0b574ada.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,237 @@
+{
+  "uid" : "2a9cd486f49b8d7e",
+  "name" : "TC 18.02.02 Verify message \"We can not find products matching the selection.\" is visible",
+  "fullName" : "tests.test_training_video_download.TestTrainingVideoDownload#test_tc_18_02_02_title_video_download_is_displayed",
+  "historyId" : "739a8fe7fdddc61be5db7cb7f5d76485",
+  "time" : {
+    "start" : 1693098172350,
+    "stop" : 1693098173357,
+    "duration" : 1007
+  },
+  "description" : "Verify message \"We can not find products matching the selection.\" is visible",
+  "descriptionHtml" : "<p>Verify message &quot;We can not find products matching the selection.&quot; is visible</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693098171247,
+      "stop" : 1693098172350,
+      "duration" : 1103
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify message \"We can not find products matching the selection.\" is visible",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693098172351,
+        "stop" : 1693098173301,
+        "duration" : 950
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify message \"We can not find products matching the selection.\" is displayed",
+      "time" : {
+        "start" : 1693098173301,
+        "stop" : 1693098173357,
+        "duration" : 56
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693098173301,
+          "stop" : 1693098173345,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693098173301,
+            "stop" : 1693098173317,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('class name', 'info')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693098173317,
+            "stop" : 1693098173326,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"7b9d5f038c853e6e3c2cda1afa62419b\", element=\"BB2DD01AA0998347342A7F8943569590_element_21\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('class name', 'info')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693098173358,
+      "stop" : 1693098173417,
+      "duration" : 59
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Training Video"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_training_video_download"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTrainingVideoDownload"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_training_video_download"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2a9cd486f49b8d7e.json",
+  "parameterValues" : [ ]
+}

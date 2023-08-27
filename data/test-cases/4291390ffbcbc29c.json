@@ -1,0 +1,180 @@
+{
+  "uid" : "4291390ffbcbc29c",
+  "name" : "test_tc_11_01_02",
+  "fullName" : "tests.test_gear.TestGearPage#test_tc_11_01_02",
+  "historyId" : "52dc0bb9ba9cc1aa8c5eceb100a4bd07",
+  "time" : {
+    "start" : 1693097171730,
+    "stop" : 1693097172726,
+    "duration" : 996
+  },
+  "description" : "Check that Bags is displayed and enabled",
+  "descriptionHtml" : "<p>Check that Bags is displayed and enabled</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693097170632,
+      "stop" : 1693097171729,
+      "duration" : 1097
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that Bags is displayed and enabled",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693097171730,
+        "stop" : 1693097172688,
+        "duration" : 958
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1693097172688,
+        "stop" : 1693097172726,
+        "duration" : 38
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//dl[@id='narrow-by-list2']//a[text()='Bags']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693097172726,
+      "stop" : 1693097172787,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_gear"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGearPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_gear"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4291390ffbcbc29c.json",
+  "parameterValues" : [ ]
+}

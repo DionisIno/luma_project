@@ -1,0 +1,240 @@
+{
+  "uid" : "558088f86e23d66b",
+  "name" : "tc 07.01.04 Verify that here link leads to the main page",
+  "fullName" : "tests.test_shopping_cart.TestShoppingCart#test_tc_07_01_04_verify_here_link_leads_to_the_main_page",
+  "historyId" : "74ce87d1c1cd156eddc6d9ac3f3d65b1",
+  "time" : {
+    "start" : 1693097885990,
+    "stop" : 1693097887919,
+    "duration" : 1929
+  },
+  "description" : "Verify that the link \"here\" redirects to the main page.",
+  "descriptionHtml" : "<p>Verify that the link &quot;here&quot; redirects to the main page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693097884918,
+      "stop" : 1693097885989,
+      "duration" : 1071
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Verify that the link \"here\" redirects to the main page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693097885990,
+        "stop" : 1693097887193,
+        "duration" : 1203
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check that here link leads to the correct url",
+      "time" : {
+        "start" : 1693097887193,
+        "stop" : 1693097887919,
+        "duration" : 726
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693097887193,
+          "stop" : 1693097887239,
+          "duration" : 46
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693097887193,
+            "stop" : 1693097887207,
+            "duration" : 14
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', 'div.cart-empty > p:nth-child(2) > a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693097887207,
+            "stop" : 1693097887214,
+            "duration" : 7
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"c97f2d38c9082ff45309e0fd9429213c\", element=\"ED3BF4106E2E50EECDC9ABF95824E0B4_element_23\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', 'div.cart-empty > p:nth-child(2) > a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693097887919,
+      "stop" : 1693097887984,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Shopping Cart"
+  }, {
+    "name" : "feature",
+    "value" : "Shopping Cart is empty"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_shopping_cart"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestShoppingCart"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_shopping_cart"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "558088f86e23d66b.json",
+  "parameterValues" : [ ]
+}

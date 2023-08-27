@@ -1,0 +1,348 @@
+{
+  "uid" : "432386012bde417",
+  "name" : "TC 02.02.01 - Check Search Terms link in footer leads to the correct page from each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_02_01_check_search_terms_link_functionality",
+  "historyId" : "ea03f5d2a5cc823dd58a43009716b412",
+  "time" : {
+    "start" : 1693096980581,
+    "stop" : 1693096982578,
+    "duration" : 1997
+  },
+  "description" : "Check that Search Terms link in footer is correct",
+  "descriptionHtml" : "<p>Check that Search Terms link in footer is correct</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693096979583,
+      "stop" : 1693096980580,
+      "duration" : 997
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that Search Terms link in footer is correct",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693096980581,
+        "stop" : 1693096981525,
+        "duration" : 944
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check Search Terms link leads to the correct page",
+      "time" : {
+        "start" : 1693096981525,
+        "stop" : 1693096982385,
+        "duration" : 860
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693096981525,
+          "stop" : 1693096981585,
+          "duration" : 60
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693096981525,
+            "stop" : 1693096981537,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.footer > :nth-child(1) > a')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693096981537,
+            "stop" : 1693096981553,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e52abfa4ac9500c03c3b9e017750ee5f\", element=\"30DABBF8340365E50F05A35F7F61DDDD_element_30\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.footer > :nth-child(1) > a')"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check the title of opened page Popular Search Terms is displayed",
+      "time" : {
+        "start" : 1693096982385,
+        "stop" : 1693096982574,
+        "duration" : 189
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Get element text",
+        "time" : {
+          "start" : 1693096982385,
+          "stop" : 1693096982574,
+          "duration" : 189
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1693096982385,
+            "stop" : 1693096982558,
+            "duration" : 173
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1693096982385,
+              "stop" : 1693096982448,
+              "duration" : 63
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', '.page-title .base')"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1693096982448,
+              "stop" : 1693096982510,
+              "duration" : 62
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"e52abfa4ac9500c03c3b9e017750ee5f\", element=\"521F4C1B743404E6AEBFE16595C12AFE_element_39\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '.page-title .base')"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', '.page-title .base')"
+        } ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Getting actual URL of the current webpage",
+      "time" : {
+        "start" : 1693096982574,
+        "stop" : 1693096982577,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693096982579,
+      "stop" : 1693096982643,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "432386012bde417.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}

@@ -1,0 +1,219 @@
+{
+  "uid" : "fb0b3c5177b4f48",
+  "name" : "test_tc_19_01_02",
+  "fullName" : "tests.test_promotion_pants.TestPromotionPantsPage#test_tc_19_01_02",
+  "historyId" : "03259b33ac101f71318579b2ef39504d",
+  "time" : {
+    "start" : 1693097707911,
+    "stop" : 1693097708966,
+    "duration" : 1055
+  },
+  "description" : "Checking title of the Style section",
+  "descriptionHtml" : "<p>Checking title of the Style section</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693097706827,
+      "stop" : 1693097707910,
+      "duration" : 1083
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Checking title of the Style section",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693097707911,
+        "stop" : 1693097708898,
+        "duration" : 987
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Find a visible element",
+      "time" : {
+        "start" : 1693097708898,
+        "stop" : 1693097708952,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a present element",
+        "time" : {
+          "start" : 1693097708898,
+          "stop" : 1693097708914,
+          "duration" : 16
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//div[text()='Style']\")"
+        }, {
+          "name" : "timeout",
+          "value" : "5"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Go to specified element",
+        "time" : {
+          "start" : 1693097708914,
+          "stop" : 1693097708926,
+          "duration" : 12
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"a0151d856e843d84780d8d084dfb59c2\", element=\"C78ADDA18A2B0D256B2DDD63457DA27E_element_41\")>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('xpath', \"//div[text()='Style']\")"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693097708967,
+      "stop" : 1693097709027,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_promotion_pants"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPromotionPantsPage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_promotion_pants"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fb0b3c5177b4f48.json",
+  "parameterValues" : [ ]
+}

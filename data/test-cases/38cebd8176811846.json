@@ -1,0 +1,360 @@
+{
+  "uid" : "38cebd8176811846",
+  "name" : "TC 03.01.11 Verify Password field is appropriately labeled",
+  "fullName" : "tests.test_sign_in.TestRegisteredCustomers#test_03_01_11_password_is_appropriately_labeled",
+  "historyId" : "7acd7b9d3a697b3e6ab4ba6b0910a3db",
+  "time" : {
+    "start" : 1693098077187,
+    "stop" : 1693098077277,
+    "duration" : 90
+  },
+  "description" : "Check if Password field is appropriately labeled ",
+  "descriptionHtml" : "<p>Check if Password field is appropriately labeled</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1693098076155,
+      "stop" : 1693098077186,
+      "duration" : 1031
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693098076155,
+        "stop" : 1693098077186,
+        "duration" : 1031
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693098075146,
+      "stop" : 1693098076155,
+      "duration" : 1009
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check if Password field is appropriately labeled ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Check Password label is visible",
+      "time" : {
+        "start" : 1693098077187,
+        "stop" : 1693098077231,
+        "duration" : 44
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Find a visible element",
+        "time" : {
+          "start" : 1693098077187,
+          "stop" : 1693098077231,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a present element",
+          "time" : {
+            "start" : 1693098077187,
+            "stop" : 1693098077200,
+            "duration" : 13
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"label[for ='pass'] span\")"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Go to specified element",
+          "time" : {
+            "start" : 1693098077201,
+            "stop" : 1693098077208,
+            "duration" : 7
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"5488857a135f397cc3c3c69ccd21a253\", element=\"A474146F25221C1759216DF10A158178_element_32\")>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('css selector', \"label[for ='pass'] span\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check Password asterisk is visible",
+      "time" : {
+        "start" : 1693098077232,
+        "stop" : 1693098077265,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Password label is visible",
+        "time" : {
+          "start" : 1693098077232,
+          "stop" : 1693098077260,
+          "duration" : 28
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find a visible element",
+          "time" : {
+            "start" : 1693098077232,
+            "stop" : 1693098077260,
+            "duration" : 28
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Find a present element",
+            "time" : {
+              "start" : 1693098077232,
+              "stop" : 1693098077238,
+              "duration" : 6
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('css selector', \"label[for ='pass'] span\")"
+            }, {
+              "name" : "timeout",
+              "value" : "5"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Go to specified element",
+            "time" : {
+              "start" : 1693098077238,
+              "stop" : 1693098077242,
+              "duration" : 4
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "element",
+              "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"5488857a135f397cc3c3c69ccd21a253\", element=\"A474146F25221C1759216DF10A158178_element_32\")>"
+            } ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', \"label[for ='pass'] span\")"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Get required element visible",
+        "time" : {
+          "start" : 1693098077260,
+          "stop" : 1693098077260,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693098077278,
+      "stop" : 1693098077338,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Registered Customers"
+  }, {
+    "name" : "epic",
+    "value" : "Sign In Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegisteredCustomers"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "38cebd8176811846.json",
+  "parameterValues" : [ ]
+}

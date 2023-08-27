@@ -1,0 +1,330 @@
+{
+  "uid" : "aaf4dac71d7f2c50",
+  "name" : "TC 03.01.08 Verify displayed email matches the entered email in Email field",
+  "fullName" : "tests.test_sign_in.TestRegisteredCustomers#test_03_01_08_value_in_email_matches",
+  "historyId" : "0527a5aa90b8948774702f21c0b679c3",
+  "time" : {
+    "start" : 1693098070253,
+    "stop" : 1693098070762,
+    "duration" : 509
+  },
+  "description" : "Check if the displayed email matches the entered email in Email field",
+  "descriptionHtml" : "<p>Check if the displayed email matches the entered email in Email field</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sign_in_page",
+    "time" : {
+      "start" : 1693098069230,
+      "stop" : 1693098070253,
+      "duration" : 1023
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693098069230,
+        "stop" : 1693098070253,
+        "duration" : 1023
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693098068222,
+      "stop" : 1693098069230,
+      "duration" : 1008
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check if the displayed email matches the entered email in Email field",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Fill in Email field",
+      "time" : {
+        "start" : 1693098070254,
+        "stop" : 1693098070650,
+        "duration" : 396
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1693098070254,
+          "stop" : 1693098070288,
+          "duration" : 34
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1693098070254,
+            "stop" : 1693098070288,
+            "duration" : 34
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Fill in a field",
+        "time" : {
+          "start" : 1693098070288,
+          "stop" : 1693098070650,
+          "duration" : 362
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1693098070288,
+            "stop" : 1693098070305,
+            "duration" : 17
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"a13fdca8bdf3bac05a1e1f3ff6fa9486\", element=\"278E9CA40C73CD14EDF292898771CCA0_element_32\")>"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "<selenium.webdriver.remote.webelement.WebElement (session=\"a13fdca8bdf3bac05a1e1f3ff6fa9486\", element=\"278E9CA40C73CD14EDF292898771CCA0_element_32\")>"
+        }, {
+          "name" : "value",
+          "value" : "'teston120@mailinator.com'"
+        } ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "'teston120@mailinator.com'"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get Email field attribute",
+      "time" : {
+        "start" : 1693098070650,
+        "stop" : 1693098070762,
+        "duration" : 112
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check Email field is clickable",
+        "time" : {
+          "start" : 1693098070650,
+          "stop" : 1693098070750,
+          "duration" : 100
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Find clickable elements",
+          "time" : {
+            "start" : 1693098070650,
+            "stop" : 1693098070750,
+            "duration" : 100
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('css selector', '#email')"
+          }, {
+            "name" : "timeout",
+            "value" : "5"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "attribute",
+        "value" : "'value'"
+      } ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693098070763,
+      "stop" : 1693098070825,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Registered Customers"
+  }, {
+    "name" : "epic",
+    "value" : "Sign In Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sign_in"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegisteredCustomers"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sign_in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aaf4dac71d7f2c50.json",
+  "parameterValues" : [ ]
+}

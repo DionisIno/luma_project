@@ -3,300 +3,262 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c13ff3d613 <unknown>\n#1 0x55c13fc69537 <unknown>\n#2 0x55c13fca7f53 <unknown>\n#3 0x55c13fca8041 <unknown>\n#4 0x55c13fce32a4 <unknown>\n#5 0x55c13fcc8a5d <unknown>\n#6 0x55c13fce0d09 <unknown>\n#7 0x55c13fcc8803 <unknown>\n#8 0x55c13fc9c68b <unknown>\n#9 0x55c13fc9d42e <unknown>\n#10 0x55c13fefec28 <unknown>\n#11 0x55c13ff02af7 <unknown>\n#12 0x55c13ff0d01c <unknown>\n#13 0x55c13ff03723 <unknown>\n#14 0x55c13fed2457 <unknown>\n#15 0x55c13ff27628 <unknown>\n#16 0x55c13ff277b7 <unknown>\n#17 0x55c13ff36483 <unknown>\n#18 0x7ff6a69b8b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x557522f71e23 <unknown>\n#1 0x557522c9a7a7 <unknown>\n#2 0x557522cd91d3 <unknown>\n#3 0x557522cd92c1 <unknown>\n#4 0x557522d14a04 <unknown>\n#5 0x557522cfa03d <unknown>\n#6 0x557522d12369 <unknown>\n#7 0x557522cf9de3 <unknown>\n#8 0x557522ccda7b <unknown>\n#9 0x557522cce81e <unknown>\n#10 0x557522f33638 <unknown>\n#11 0x557522f37507 <unknown>\n#12 0x557522f41c4c <unknown>\n#13 0x557522f38136 <unknown>\n#14 0x557522f069cf <unknown>\n#15 0x557522f5bb98 <unknown>\n#16 0x557522f5bd68 <unknown>\n#17 0x557522f6acb3 <unknown>\n#18 0x7f829145ab43 <unknown>",
       "children" : [ {
         "name" : "TC 04_01_09 Verify checkbox is present and unchecked",
-        "uid" : "92ba5660a46e1965",
-        "parentUid" : "a59fd2e4f9bbe9bc28c51d31805e0afe",
+        "uid" : "31351cd36ed68f50",
+        "parentUid" : "fb624fc582e8ac44b31300317bae06dc",
         "status" : "broken",
         "time" : {
-          "start" : 1692491955455,
-          "stop" : 1692491960597,
-          "duration" : 5142
+          "start" : 1693096757198,
+          "stop" : 1693096762311,
+          "duration" : 5113
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "a59fd2e4f9bbe9bc28c51d31805e0afe"
+      "uid" : "fb624fc582e8ac44b31300317bae06dc"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559f050f7613 <unknown>\n#1 0x559f04e23537 <unknown>\n#2 0x559f04e61f53 <unknown>\n#3 0x559f04e62041 <unknown>\n#4 0x559f04e9d2a4 <unknown>\n#5 0x559f04e82a5d <unknown>\n#6 0x559f04e9ad09 <unknown>\n#7 0x559f04e82803 <unknown>\n#8 0x559f04e5668b <unknown>\n#9 0x559f04e5742e <unknown>\n#10 0x559f050b8c28 <unknown>\n#11 0x559f050bcaf7 <unknown>\n#12 0x559f050c701c <unknown>\n#13 0x559f050bd723 <unknown>\n#14 0x559f0508c457 <unknown>\n#15 0x559f050e1628 <unknown>\n#16 0x559f050e17b7 <unknown>\n#17 0x559f050f0483 <unknown>\n#18 0x7f33a4c0db43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5616ecb4ae23 <unknown>\n#1 0x5616ec8737a7 <unknown>\n#2 0x5616ec8b21d3 <unknown>\n#3 0x5616ec8b22c1 <unknown>\n#4 0x5616ec8eda04 <unknown>\n#5 0x5616ec8d303d <unknown>\n#6 0x5616ec8eb369 <unknown>\n#7 0x5616ec8d2de3 <unknown>\n#8 0x5616ec8a6a7b <unknown>\n#9 0x5616ec8a781e <unknown>\n#10 0x5616ecb0c638 <unknown>\n#11 0x5616ecb10507 <unknown>\n#12 0x5616ecb1ac4c <unknown>\n#13 0x5616ecb11136 <unknown>\n#14 0x5616ecadf9cf <unknown>\n#15 0x5616ecb34b98 <unknown>\n#16 0x5616ecb34d68 <unknown>\n#17 0x5616ecb43cb3 <unknown>\n#18 0x7f4e898afb43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.09 Verify FYP captcha input field is present",
-        "uid" : "ed649cb666cecbd7",
-        "parentUid" : "670e27f67e6d80166871dddb74c71442",
+        "uid" : "70ecd3814e458153",
+        "parentUid" : "feefade0603ac6bd174828e0012db2e7",
         "status" : "broken",
         "time" : {
-          "start" : 1692492273174,
-          "stop" : 1692492278314,
-          "duration" : 5140
+          "start" : 1693097057665,
+          "stop" : 1693097062782,
+          "duration" : 5117
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "670e27f67e6d80166871dddb74c71442"
+      "uid" : "feefade0603ac6bd174828e0012db2e7"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561647671613 <unknown>\n#1 0x56164739d537 <unknown>\n#2 0x5616473dbf53 <unknown>\n#3 0x5616473dc041 <unknown>\n#4 0x5616474172a4 <unknown>\n#5 0x5616473fca5d <unknown>\n#6 0x561647414d09 <unknown>\n#7 0x5616473fc803 <unknown>\n#8 0x5616473d068b <unknown>\n#9 0x5616473d142e <unknown>\n#10 0x561647632c28 <unknown>\n#11 0x561647636af7 <unknown>\n#12 0x56164764101c <unknown>\n#13 0x561647637723 <unknown>\n#14 0x561647606457 <unknown>\n#15 0x56164765b628 <unknown>\n#16 0x56164765b7b7 <unknown>\n#17 0x56164766a483 <unknown>\n#18 0x7f82d0ab7b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56199dae9e23 <unknown>\n#1 0x56199d8127a7 <unknown>\n#2 0x56199d8511d3 <unknown>\n#3 0x56199d8512c1 <unknown>\n#4 0x56199d88ca04 <unknown>\n#5 0x56199d87203d <unknown>\n#6 0x56199d88a369 <unknown>\n#7 0x56199d871de3 <unknown>\n#8 0x56199d845a7b <unknown>\n#9 0x56199d84681e <unknown>\n#10 0x56199daab638 <unknown>\n#11 0x56199daaf507 <unknown>\n#12 0x56199dab9c4c <unknown>\n#13 0x56199dab0136 <unknown>\n#14 0x56199da7e9cf <unknown>\n#15 0x56199dad3b98 <unknown>\n#16 0x56199dad3d68 <unknown>\n#17 0x56199dae2cb3 <unknown>\n#18 0x7fa159186b43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.10 Verify FYP captcha input field is correct format and clickable",
-        "uid" : "7090cf95b8522695",
-        "parentUid" : "b3f29272c3ede3237713fada7640d23e",
+        "uid" : "95e4598cb7f9a5f7",
+        "parentUid" : "c9459c196736c1da6f42dda799ab3df7",
         "status" : "broken",
         "time" : {
-          "start" : 1692492280752,
-          "stop" : 1692492285896,
+          "start" : 1693097065088,
+          "stop" : 1693097070210,
+          "duration" : 5122
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c9459c196736c1da6f42dda799ab3df7"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e165a2ae23 <unknown>\n#1 0x55e1657537a7 <unknown>\n#2 0x55e1657921d3 <unknown>\n#3 0x55e1657922c1 <unknown>\n#4 0x55e1657cda04 <unknown>\n#5 0x55e1657b303d <unknown>\n#6 0x55e1657cb369 <unknown>\n#7 0x55e1657b2de3 <unknown>\n#8 0x55e165786a7b <unknown>\n#9 0x55e16578781e <unknown>\n#10 0x55e1659ec638 <unknown>\n#11 0x55e1659f0507 <unknown>\n#12 0x55e1659fac4c <unknown>\n#13 0x55e1659f1136 <unknown>\n#14 0x55e1659bf9cf <unknown>\n#15 0x55e165a14b98 <unknown>\n#16 0x55e165a14d68 <unknown>\n#17 0x55e165a23cb3 <unknown>\n#18 0x7fb7e4a87b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.11 Verify FYP captcha input field is appropriately labeled",
+        "uid" : "2264ee661c8a2725",
+        "parentUid" : "02249cdd095a7b92b02b276e18b7d96c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097072611,
+          "stop" : 1693097077748,
+          "duration" : 5137
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "02249cdd095a7b92b02b276e18b7d96c"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562f8bca3e23 <unknown>\n#1 0x562f8b9cc7a7 <unknown>\n#2 0x562f8ba0b1d3 <unknown>\n#3 0x562f8ba0b2c1 <unknown>\n#4 0x562f8ba46a04 <unknown>\n#5 0x562f8ba2c03d <unknown>\n#6 0x562f8ba44369 <unknown>\n#7 0x562f8ba2bde3 <unknown>\n#8 0x562f8b9ffa7b <unknown>\n#9 0x562f8ba0081e <unknown>\n#10 0x562f8bc65638 <unknown>\n#11 0x562f8bc69507 <unknown>\n#12 0x562f8bc73c4c <unknown>\n#13 0x562f8bc6a136 <unknown>\n#14 0x562f8bc389cf <unknown>\n#15 0x562f8bc8db98 <unknown>\n#16 0x562f8bc8dd68 <unknown>\n#17 0x562f8bc9ccb3 <unknown>\n#18 0x7faacd0d5b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.12 Verify FYP Email field highlighting on click",
+        "uid" : "cc989e0f4973d4b7",
+        "parentUid" : "9a07db95c2bb8270afc1bacf73879e4b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097080085,
+          "stop" : 1693097085204,
+          "duration" : 5119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9a07db95c2bb8270afc1bacf73879e4b"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e78a62ce23 <unknown>\n#1 0x55e78a3557a7 <unknown>\n#2 0x55e78a3941d3 <unknown>\n#3 0x55e78a3942c1 <unknown>\n#4 0x55e78a3cfa04 <unknown>\n#5 0x55e78a3b503d <unknown>\n#6 0x55e78a3cd369 <unknown>\n#7 0x55e78a3b4de3 <unknown>\n#8 0x55e78a388a7b <unknown>\n#9 0x55e78a38981e <unknown>\n#10 0x55e78a5ee638 <unknown>\n#11 0x55e78a5f2507 <unknown>\n#12 0x55e78a5fcc4c <unknown>\n#13 0x55e78a5f3136 <unknown>\n#14 0x55e78a5c19cf <unknown>\n#15 0x55e78a616b98 <unknown>\n#16 0x55e78a616d68 <unknown>\n#17 0x55e78a625cb3 <unknown>\n#18 0x7f2693afab43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field",
+        "uid" : "82f09e242899ff7c",
+        "parentUid" : "6d9dcf834da966a793d90c5c1dfcff41",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097087643,
+          "stop" : 1693097092787,
           "duration" : 5144
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b3f29272c3ede3237713fada7640d23e"
+      "uid" : "6d9dcf834da966a793d90c5c1dfcff41"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562e2156a613 <unknown>\n#1 0x562e21296537 <unknown>\n#2 0x562e212d4f53 <unknown>\n#3 0x562e212d5041 <unknown>\n#4 0x562e213102a4 <unknown>\n#5 0x562e212f5a5d <unknown>\n#6 0x562e2130dd09 <unknown>\n#7 0x562e212f5803 <unknown>\n#8 0x562e212c968b <unknown>\n#9 0x562e212ca42e <unknown>\n#10 0x562e2152bc28 <unknown>\n#11 0x562e2152faf7 <unknown>\n#12 0x562e2153a01c <unknown>\n#13 0x562e21530723 <unknown>\n#14 0x562e214ff457 <unknown>\n#15 0x562e21554628 <unknown>\n#16 0x562e215547b7 <unknown>\n#17 0x562e21563483 <unknown>\n#18 0x7fbdf3324b43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.11 Verify FYP captcha input field is appropriately labeled",
-        "uid" : "b4e4128a603008d7",
-        "parentUid" : "62ae41a3c824b9a2249178e125c0e4d1",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492288375,
-          "stop" : 1692492293511,
-          "duration" : 5136
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "62ae41a3c824b9a2249178e125c0e4d1"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558802afa613 <unknown>\n#1 0x558802826537 <unknown>\n#2 0x558802864f53 <unknown>\n#3 0x558802865041 <unknown>\n#4 0x5588028a02a4 <unknown>\n#5 0x558802885a5d <unknown>\n#6 0x55880289dd09 <unknown>\n#7 0x558802885803 <unknown>\n#8 0x55880285968b <unknown>\n#9 0x55880285a42e <unknown>\n#10 0x558802abbc28 <unknown>\n#11 0x558802abfaf7 <unknown>\n#12 0x558802aca01c <unknown>\n#13 0x558802ac0723 <unknown>\n#14 0x558802a8f457 <unknown>\n#15 0x558802ae4628 <unknown>\n#16 0x558802ae47b7 <unknown>\n#17 0x558802af3483 <unknown>\n#18 0x7f789a21cb43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.12 Verify FYP Email field highlighting on click",
-        "uid" : "f797391719a6914d",
-        "parentUid" : "99bf400359a4c15bc4455eec5d16414b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492295809,
-          "stop" : 1692492300952,
-          "duration" : 5143
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "99bf400359a4c15bc4455eec5d16414b"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556efbaba613 <unknown>\n#1 0x556efb7e6537 <unknown>\n#2 0x556efb824f53 <unknown>\n#3 0x556efb825041 <unknown>\n#4 0x556efb8602a4 <unknown>\n#5 0x556efb845a5d <unknown>\n#6 0x556efb85dd09 <unknown>\n#7 0x556efb845803 <unknown>\n#8 0x556efb81968b <unknown>\n#9 0x556efb81a42e <unknown>\n#10 0x556efba7bc28 <unknown>\n#11 0x556efba7faf7 <unknown>\n#12 0x556efba8a01c <unknown>\n#13 0x556efba80723 <unknown>\n#14 0x556efba4f457 <unknown>\n#15 0x556efbaa4628 <unknown>\n#16 0x556efbaa47b7 <unknown>\n#17 0x556efbab3483 <unknown>\n#18 0x7f7689af9b43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field",
-        "uid" : "c00ef9a0a38d2d56",
-        "parentUid" : "854176c545abced7a0d79a9d0313bdd0",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492303876,
-          "stop" : 1692492309007,
-          "duration" : 5131
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "854176c545abced7a0d79a9d0313bdd0"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5636fd7d2613 <unknown>\n#1 0x5636fd4fe537 <unknown>\n#2 0x5636fd53cf53 <unknown>\n#3 0x5636fd53d041 <unknown>\n#4 0x5636fd5782a4 <unknown>\n#5 0x5636fd55da5d <unknown>\n#6 0x5636fd575d09 <unknown>\n#7 0x5636fd55d803 <unknown>\n#8 0x5636fd53168b <unknown>\n#9 0x5636fd53242e <unknown>\n#10 0x5636fd793c28 <unknown>\n#11 0x5636fd797af7 <unknown>\n#12 0x5636fd7a201c <unknown>\n#13 0x5636fd798723 <unknown>\n#14 0x5636fd767457 <unknown>\n#15 0x5636fd7bc628 <unknown>\n#16 0x5636fd7bc7b7 <unknown>\n#17 0x5636fd7cb483 <unknown>\n#18 0x7f09606f8b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560326fabe23 <unknown>\n#1 0x560326cd47a7 <unknown>\n#2 0x560326d131d3 <unknown>\n#3 0x560326d132c1 <unknown>\n#4 0x560326d4ea04 <unknown>\n#5 0x560326d3403d <unknown>\n#6 0x560326d4c369 <unknown>\n#7 0x560326d33de3 <unknown>\n#8 0x560326d07a7b <unknown>\n#9 0x560326d0881e <unknown>\n#10 0x560326f6d638 <unknown>\n#11 0x560326f71507 <unknown>\n#12 0x560326f7bc4c <unknown>\n#13 0x560326f72136 <unknown>\n#14 0x560326f409cf <unknown>\n#15 0x560326f95b98 <unknown>\n#16 0x560326f95d68 <unknown>\n#17 0x560326fa4cb3 <unknown>\n#18 0x7f6f59fecb43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.14 Verify Reload captcha button is present",
-        "uid" : "be0819e84b1d6ffc",
-        "parentUid" : "118223b55e831ffe477d0ea16c09a04e",
+        "uid" : "6df533c80636fc00",
+        "parentUid" : "3f47624d913fac6a5dc2a5b5ff31e5bd",
         "status" : "broken",
         "time" : {
-          "start" : 1692492311327,
-          "stop" : 1692492316445,
+          "start" : 1693097095225,
+          "stop" : 1693097100342,
+          "duration" : 5117
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3f47624d913fac6a5dc2a5b5ff31e5bd"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b4ab74ee23 <unknown>\n#1 0x55b4ab4777a7 <unknown>\n#2 0x55b4ab4b61d3 <unknown>\n#3 0x55b4ab4b62c1 <unknown>\n#4 0x55b4ab4f1a04 <unknown>\n#5 0x55b4ab4d703d <unknown>\n#6 0x55b4ab4ef369 <unknown>\n#7 0x55b4ab4d6de3 <unknown>\n#8 0x55b4ab4aaa7b <unknown>\n#9 0x55b4ab4ab81e <unknown>\n#10 0x55b4ab710638 <unknown>\n#11 0x55b4ab714507 <unknown>\n#12 0x55b4ab71ec4c <unknown>\n#13 0x55b4ab715136 <unknown>\n#14 0x55b4ab6e39cf <unknown>\n#15 0x55b4ab738b98 <unknown>\n#16 0x55b4ab738d68 <unknown>\n#17 0x55b4ab747cb3 <unknown>\n#18 0x7f558065cb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.15 Verify Reload captcha button is clickable",
+        "uid" : "e853192b6e8c9280",
+        "parentUid" : "fc6b095a32e44f338776248942d4ac2d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097102673,
+          "stop" : 1693097107807,
+          "duration" : 5134
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fc6b095a32e44f338776248942d4ac2d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561c2a46ee23 <unknown>\n#1 0x561c2a1977a7 <unknown>\n#2 0x561c2a1d61d3 <unknown>\n#3 0x561c2a1d62c1 <unknown>\n#4 0x561c2a211a04 <unknown>\n#5 0x561c2a1f703d <unknown>\n#6 0x561c2a20f369 <unknown>\n#7 0x561c2a1f6de3 <unknown>\n#8 0x561c2a1caa7b <unknown>\n#9 0x561c2a1cb81e <unknown>\n#10 0x561c2a430638 <unknown>\n#11 0x561c2a434507 <unknown>\n#12 0x561c2a43ec4c <unknown>\n#13 0x561c2a435136 <unknown>\n#14 0x561c2a4039cf <unknown>\n#15 0x561c2a458b98 <unknown>\n#16 0x561c2a458d68 <unknown>\n#17 0x561c2a467cb3 <unknown>\n#18 0x7fa516f8fb43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.16 Verify click Reload captcha button generates a new captcha image",
+        "uid" : "93661c4a5e4856fe",
+        "parentUid" : "c9b50cd0bd09bb7a8819548ff18676a8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097110246,
+          "stop" : 1693097115379,
+          "duration" : 5133
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c9b50cd0bd09bb7a8819548ff18676a8"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5638a3e9de23 <unknown>\n#1 0x5638a3bc67a7 <unknown>\n#2 0x5638a3c051d3 <unknown>\n#3 0x5638a3c052c1 <unknown>\n#4 0x5638a3c40a04 <unknown>\n#5 0x5638a3c2603d <unknown>\n#6 0x5638a3c3e369 <unknown>\n#7 0x5638a3c25de3 <unknown>\n#8 0x5638a3bf9a7b <unknown>\n#9 0x5638a3bfa81e <unknown>\n#10 0x5638a3e5f638 <unknown>\n#11 0x5638a3e63507 <unknown>\n#12 0x5638a3e6dc4c <unknown>\n#13 0x5638a3e64136 <unknown>\n#14 0x5638a3e329cf <unknown>\n#15 0x5638a3e87b98 <unknown>\n#16 0x5638a3e87d68 <unknown>\n#17 0x5638a3e96cb3 <unknown>\n#18 0x7f2d66938b43 <unknown>",
+      "children" : [ {
+        "name" : "TC 17.01.17 Verify captcha image is present by default",
+        "uid" : "3597bf5fc73d3c83",
+        "parentUid" : "0de75c2f34806e473679d4cec7e53e46",
+        "status" : "broken",
+        "time" : {
+          "start" : 1693097117770,
+          "stop" : 1693097122888,
           "duration" : 5118
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "118223b55e831ffe477d0ea16c09a04e"
+      "uid" : "0de75c2f34806e473679d4cec7e53e46"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55eab731a613 <unknown>\n#1 0x55eab7046537 <unknown>\n#2 0x55eab7084f53 <unknown>\n#3 0x55eab7085041 <unknown>\n#4 0x55eab70c02a4 <unknown>\n#5 0x55eab70a5a5d <unknown>\n#6 0x55eab70bdd09 <unknown>\n#7 0x55eab70a5803 <unknown>\n#8 0x55eab707968b <unknown>\n#9 0x55eab707a42e <unknown>\n#10 0x55eab72dbc28 <unknown>\n#11 0x55eab72dfaf7 <unknown>\n#12 0x55eab72ea01c <unknown>\n#13 0x55eab72e0723 <unknown>\n#14 0x55eab72af457 <unknown>\n#15 0x55eab7304628 <unknown>\n#16 0x55eab73047b7 <unknown>\n#17 0x55eab7313483 <unknown>\n#18 0x7f9b8cff8b43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.15 Verify Reload captcha button is clickable",
-        "uid" : "7cfed35ab29bb588",
-        "parentUid" : "4a3cf721a34b715f727e41e3391d1e38",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492319010,
-          "stop" : 1692492324152,
-          "duration" : 5142
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4a3cf721a34b715f727e41e3391d1e38"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55c1b7e29613 <unknown>\n#1 0x55c1b7b55537 <unknown>\n#2 0x55c1b7b93f53 <unknown>\n#3 0x55c1b7b94041 <unknown>\n#4 0x55c1b7bcf2a4 <unknown>\n#5 0x55c1b7bb4a5d <unknown>\n#6 0x55c1b7bccd09 <unknown>\n#7 0x55c1b7bb4803 <unknown>\n#8 0x55c1b7b8868b <unknown>\n#9 0x55c1b7b8942e <unknown>\n#10 0x55c1b7deac28 <unknown>\n#11 0x55c1b7deeaf7 <unknown>\n#12 0x55c1b7df901c <unknown>\n#13 0x55c1b7def723 <unknown>\n#14 0x55c1b7dbe457 <unknown>\n#15 0x55c1b7e13628 <unknown>\n#16 0x55c1b7e137b7 <unknown>\n#17 0x55c1b7e22483 <unknown>\n#18 0x7fa475c47b43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.16 Verify click Reload captcha button generates a new captcha image",
-        "uid" : "68c5d5140cc67b8e",
-        "parentUid" : "ea2e24a3f47ffab53b89c45e839edf30",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492326539,
-          "stop" : 1692492331782,
-          "duration" : 5243
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ea2e24a3f47ffab53b89c45e839edf30"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560dfda8d613 <unknown>\n#1 0x560dfd7b9537 <unknown>\n#2 0x560dfd7f7f53 <unknown>\n#3 0x560dfd7f8041 <unknown>\n#4 0x560dfd8332a4 <unknown>\n#5 0x560dfd818a5d <unknown>\n#6 0x560dfd830d09 <unknown>\n#7 0x560dfd818803 <unknown>\n#8 0x560dfd7ec68b <unknown>\n#9 0x560dfd7ed42e <unknown>\n#10 0x560dfda4ec28 <unknown>\n#11 0x560dfda52af7 <unknown>\n#12 0x560dfda5d01c <unknown>\n#13 0x560dfda53723 <unknown>\n#14 0x560dfda22457 <unknown>\n#15 0x560dfda77628 <unknown>\n#16 0x560dfda777b7 <unknown>\n#17 0x560dfda86483 <unknown>\n#18 0x7fe1dd248b43 <unknown>",
-      "children" : [ {
-        "name" : "TC 17.01.17 Verify captcha image is present by default",
-        "uid" : "166af77b1668b1d3",
-        "parentUid" : "d01e76b0c4990c195ce7aee5b0568a0b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492334098,
-          "stop" : 1692492339229,
-          "duration" : 5131
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d01e76b0c4990c195ce7aee5b0568a0b"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55f8eb960613 <unknown>\n#1 0x55f8eb68c537 <unknown>\n#2 0x55f8eb6caf53 <unknown>\n#3 0x55f8eb6cb041 <unknown>\n#4 0x55f8eb7062a4 <unknown>\n#5 0x55f8eb6eba5d <unknown>\n#6 0x55f8eb703d09 <unknown>\n#7 0x55f8eb6eb803 <unknown>\n#8 0x55f8eb6bf68b <unknown>\n#9 0x55f8eb6c042e <unknown>\n#10 0x55f8eb921c28 <unknown>\n#11 0x55f8eb925af7 <unknown>\n#12 0x55f8eb93001c <unknown>\n#13 0x55f8eb926723 <unknown>\n#14 0x55f8eb8f5457 <unknown>\n#15 0x55f8eb94a628 <unknown>\n#16 0x55f8eb94a7b7 <unknown>\n#17 0x55f8eb959483 <unknown>\n#18 0x7f7458e50b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564c1089fe23 <unknown>\n#1 0x564c105c87a7 <unknown>\n#2 0x564c106071d3 <unknown>\n#3 0x564c106072c1 <unknown>\n#4 0x564c10642a04 <unknown>\n#5 0x564c1062803d <unknown>\n#6 0x564c10640369 <unknown>\n#7 0x564c10627de3 <unknown>\n#8 0x564c105fba7b <unknown>\n#9 0x564c105fc81e <unknown>\n#10 0x564c10861638 <unknown>\n#11 0x564c10865507 <unknown>\n#12 0x564c1086fc4c <unknown>\n#13 0x564c10866136 <unknown>\n#14 0x564c108349cf <unknown>\n#15 0x564c10889b98 <unknown>\n#16 0x564c10889d68 <unknown>\n#17 0x564c10898cb3 <unknown>\n#18 0x7f7688b15b43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.18 Verify captcha image has alternative text",
-        "uid" : "acbb8ba1aa3e086e",
-        "parentUid" : "bdb764bc4bad5915f1317841cdc66b7a",
+        "uid" : "d828877996cf8476",
+        "parentUid" : "c8dd4c41c9d5255cfa9ee06d018d2d03",
         "status" : "broken",
         "time" : {
-          "start" : 1692492341648,
-          "stop" : 1692492346798,
-          "duration" : 5150
+          "start" : 1693097125210,
+          "stop" : 1693097130327,
+          "duration" : 5117
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "bdb764bc4bad5915f1317841cdc66b7a"
+      "uid" : "c8dd4c41c9d5255cfa9ee06d018d2d03"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558214331613 <unknown>\n#1 0x55821405d537 <unknown>\n#2 0x55821409bf53 <unknown>\n#3 0x55821409c041 <unknown>\n#4 0x5582140d72a4 <unknown>\n#5 0x5582140bca5d <unknown>\n#6 0x5582140d4d09 <unknown>\n#7 0x5582140bc803 <unknown>\n#8 0x55821409068b <unknown>\n#9 0x55821409142e <unknown>\n#10 0x5582142f2c28 <unknown>\n#11 0x5582142f6af7 <unknown>\n#12 0x55821430101c <unknown>\n#13 0x5582142f7723 <unknown>\n#14 0x5582142c6457 <unknown>\n#15 0x55821431b628 <unknown>\n#16 0x55821431b7b7 <unknown>\n#17 0x55821432a483 <unknown>\n#18 0x7f1161e7cb43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e0bc57de23 <unknown>\n#1 0x55e0bc2a67a7 <unknown>\n#2 0x55e0bc2e51d3 <unknown>\n#3 0x55e0bc2e52c1 <unknown>\n#4 0x55e0bc320a04 <unknown>\n#5 0x55e0bc30603d <unknown>\n#6 0x55e0bc31e369 <unknown>\n#7 0x55e0bc305de3 <unknown>\n#8 0x55e0bc2d9a7b <unknown>\n#9 0x55e0bc2da81e <unknown>\n#10 0x55e0bc53f638 <unknown>\n#11 0x55e0bc543507 <unknown>\n#12 0x55e0bc54dc4c <unknown>\n#13 0x55e0bc544136 <unknown>\n#14 0x55e0bc5129cf <unknown>\n#15 0x55e0bc567b98 <unknown>\n#16 0x55e0bc567d68 <unknown>\n#17 0x55e0bc576cb3 <unknown>\n#18 0x7ff7f53f0b43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.24 Verify Error on resetting My Password with invalid captcha",
-        "uid" : "5b67adf7237375bb",
-        "parentUid" : "d1f95b6bbaa6a1b4faaa21ffb8f5c046",
+        "uid" : "dd2362536ee08768",
+        "parentUid" : "533f895323883dbc576d5c5e46fa4318",
         "status" : "broken",
         "time" : {
-          "start" : 1692492354445,
-          "stop" : 1692492360143,
-          "duration" : 5698
+          "start" : 1693097137045,
+          "stop" : 1693097142639,
+          "duration" : 5594
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d1f95b6bbaa6a1b4faaa21ffb8f5c046"
+      "uid" : "533f895323883dbc576d5c5e46fa4318"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55802f39d613 <unknown>\n#1 0x55802f0c9537 <unknown>\n#2 0x55802f107f53 <unknown>\n#3 0x55802f108041 <unknown>\n#4 0x55802f1432a4 <unknown>\n#5 0x55802f128a5d <unknown>\n#6 0x55802f140d09 <unknown>\n#7 0x55802f128803 <unknown>\n#8 0x55802f0fc68b <unknown>\n#9 0x55802f0fd42e <unknown>\n#10 0x55802f35ec28 <unknown>\n#11 0x55802f362af7 <unknown>\n#12 0x55802f36d01c <unknown>\n#13 0x55802f363723 <unknown>\n#14 0x55802f332457 <unknown>\n#15 0x55802f387628 <unknown>\n#16 0x55802f3877b7 <unknown>\n#17 0x55802f396483 <unknown>\n#18 0x7f81f0858b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55be5cc6fe23 <unknown>\n#1 0x55be5c9987a7 <unknown>\n#2 0x55be5c9d71d3 <unknown>\n#3 0x55be5c9d72c1 <unknown>\n#4 0x55be5ca12a04 <unknown>\n#5 0x55be5c9f803d <unknown>\n#6 0x55be5ca10369 <unknown>\n#7 0x55be5c9f7de3 <unknown>\n#8 0x55be5c9cba7b <unknown>\n#9 0x55be5c9cc81e <unknown>\n#10 0x55be5cc31638 <unknown>\n#11 0x55be5cc35507 <unknown>\n#12 0x55be5cc3fc4c <unknown>\n#13 0x55be5cc36136 <unknown>\n#14 0x55be5cc049cf <unknown>\n#15 0x55be5cc59b98 <unknown>\n#16 0x55be5cc59d68 <unknown>\n#17 0x55be5cc68cb3 <unknown>\n#18 0x7f96e1732b43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.25 Verify error on resetting My Password with empty email",
-        "uid" : "2bada8ecb4ece538",
-        "parentUid" : "d6c0749491e344427980eaa0307ce3dc",
+        "uid" : "2a7c7e916d3cac48",
+        "parentUid" : "33b74199d0fbf1c2a33ee1a1851589db",
         "status" : "broken",
         "time" : {
-          "start" : 1692492362631,
-          "stop" : 1692492367756,
-          "duration" : 5125
+          "start" : 1693097144991,
+          "stop" : 1693097150113,
+          "duration" : 5122
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d6c0749491e344427980eaa0307ce3dc"
+      "uid" : "33b74199d0fbf1c2a33ee1a1851589db"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55fd224c9613 <unknown>\n#1 0x55fd221f5537 <unknown>\n#2 0x55fd22233f53 <unknown>\n#3 0x55fd22234041 <unknown>\n#4 0x55fd2226f2a4 <unknown>\n#5 0x55fd22254a5d <unknown>\n#6 0x55fd2226cd09 <unknown>\n#7 0x55fd22254803 <unknown>\n#8 0x55fd2222868b <unknown>\n#9 0x55fd2222942e <unknown>\n#10 0x55fd2248ac28 <unknown>\n#11 0x55fd2248eaf7 <unknown>\n#12 0x55fd2249901c <unknown>\n#13 0x55fd2248f723 <unknown>\n#14 0x55fd2245e457 <unknown>\n#15 0x55fd224b3628 <unknown>\n#16 0x55fd224b37b7 <unknown>\n#17 0x55fd224c2483 <unknown>\n#18 0x7f5aa6b55b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d2c5830e23 <unknown>\n#1 0x55d2c55597a7 <unknown>\n#2 0x55d2c55981d3 <unknown>\n#3 0x55d2c55982c1 <unknown>\n#4 0x55d2c55d3a04 <unknown>\n#5 0x55d2c55b903d <unknown>\n#6 0x55d2c55d1369 <unknown>\n#7 0x55d2c55b8de3 <unknown>\n#8 0x55d2c558ca7b <unknown>\n#9 0x55d2c558d81e <unknown>\n#10 0x55d2c57f2638 <unknown>\n#11 0x55d2c57f6507 <unknown>\n#12 0x55d2c5800c4c <unknown>\n#13 0x55d2c57f7136 <unknown>\n#14 0x55d2c57c59cf <unknown>\n#15 0x55d2c581ab98 <unknown>\n#16 0x55d2c581ad68 <unknown>\n#17 0x55d2c5829cb3 <unknown>\n#18 0x7fab2a3e0b43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.26 Verify error on resetting My Password with empty captcha",
-        "uid" : "2735f9829af2c02f",
-        "parentUid" : "2cbc7cdc6764d008acf9388c9e72983b",
+        "uid" : "f1526ded65dfe7c8",
+        "parentUid" : "27e0ddaf105fbb5187a41faecebf783e",
         "status" : "broken",
         "time" : {
-          "start" : 1692492370584,
-          "stop" : 1692492378874,
-          "duration" : 8290
+          "start" : 1693097152514,
+          "stop" : 1693097160470,
+          "duration" : 7956
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "2cbc7cdc6764d008acf9388c9e72983b"
+      "uid" : "27e0ddaf105fbb5187a41faecebf783e"
     }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55e090b26613 <unknown>\n#1 0x55e090852537 <unknown>\n#2 0x55e090890f53 <unknown>\n#3 0x55e090891041 <unknown>\n#4 0x55e0908cc2a4 <unknown>\n#5 0x55e0908b1a5d <unknown>\n#6 0x55e0908c9d09 <unknown>\n#7 0x55e0908b1803 <unknown>\n#8 0x55e09088568b <unknown>\n#9 0x55e09088642e <unknown>\n#10 0x55e090ae7c28 <unknown>\n#11 0x55e090aebaf7 <unknown>\n#12 0x55e090af601c <unknown>\n#13 0x55e090aec723 <unknown>\n#14 0x55e090abb457 <unknown>\n#15 0x55e090b10628 <unknown>\n#16 0x55e090b107b7 <unknown>\n#17 0x55e090b1f483 <unknown>\n#18 0x7fe450d26b43 <unknown>",
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55d7aefcce23 <unknown>\n#1 0x55d7aecf57a7 <unknown>\n#2 0x55d7aed341d3 <unknown>\n#3 0x55d7aed342c1 <unknown>\n#4 0x55d7aed6fa04 <unknown>\n#5 0x55d7aed5503d <unknown>\n#6 0x55d7aed6d369 <unknown>\n#7 0x55d7aed54de3 <unknown>\n#8 0x55d7aed28a7b <unknown>\n#9 0x55d7aed2981e <unknown>\n#10 0x55d7aef8e638 <unknown>\n#11 0x55d7aef92507 <unknown>\n#12 0x55d7aef9cc4c <unknown>\n#13 0x55d7aef93136 <unknown>\n#14 0x55d7aef619cf <unknown>\n#15 0x55d7aefb6b98 <unknown>\n#16 0x55d7aefb6d68 <unknown>\n#17 0x55d7aefc5cb3 <unknown>\n#18 0x7fd05fafbb43 <unknown>",
       "children" : [ {
         "name" : "TC 17.01.27 Verify all fields got cleared after the failed attempt to reset password",
-        "uid" : "35c65d732d58cdae",
-        "parentUid" : "f7c3a3d6febc8fafc05b3612c8dda2f1",
+        "uid" : "3f627a2deb2adb02",
+        "parentUid" : "b90f477a0ad53b4c42d7ba768aae7da5",
         "status" : "broken",
         "time" : {
-          "start" : 1692492381367,
-          "stop" : 1692492387037,
-          "duration" : 5670
+          "start" : 1693097162785,
+          "stop" : 1693097168310,
+          "duration" : 5525
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f7c3a3d6febc8fafc05b3612c8dda2f1"
-    }, {
-      "name" : "selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type=\"text\" name=\"title\" id=\"summary_field\" class=\"input-text\" data-validate=\"{required:true}\" data-bind=\"value: review().title\" aria-required=\"true\"> is not clickable at point (608, 861). Other element would receive the click: <fieldset class=\"field required review-field-ratings\">...</fieldset>\n  (Session info: chrome=115.0.5790.170)\nStacktrace:\n#0 0x560586ed3613 <unknown>\n#1 0x560586bff537 <unknown>\n#2 0x560586c43af2 <unknown>\n#3 0x560586c42044 <unknown>\n#4 0x560586c3ff68 <unknown>\n#5 0x560586c3f0ad <unknown>\n#6 0x560586c341a9 <unknown>\n#7 0x560586c5ea32 <unknown>\n#8 0x560586c33bc6 <unknown>\n#9 0x560586c5ebfe <unknown>\n#10 0x560586c76d09 <unknown>\n#11 0x560586c5e803 <unknown>\n#12 0x560586c3268b <unknown>\n#13 0x560586c3342e <unknown>\n#14 0x560586e94c28 <unknown>\n#15 0x560586e98af7 <unknown>\n#16 0x560586ea301c <unknown>\n#17 0x560586e99723 <unknown>\n#18 0x560586e68457 <unknown>\n#19 0x560586ebd628 <unknown>\n#20 0x560586ebd7b7 <unknown>\n#21 0x560586ecc483 <unknown>\n#22 0x7f10cff36b43 <unknown>",
-      "children" : [ {
-        "name" : "test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star",
-        "uid" : "c355986a47675f2b",
-        "parentUid" : "a635b44f9bf6944a0acae60fd72d7c76",
-        "status" : "broken",
-        "time" : {
-          "start" : 1692492956526,
-          "stop" : 1692492961027,
-          "duration" : 4501
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a635b44f9bf6944a0acae60fd72d7c76"
+      "uid" : "b90f477a0ad53b4c42d7ba768aae7da5"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "AssertionError: Leave a review failed\nassert (None == 'You submitted your review for moderation.' or 'https://magento.softwaretestingboard.com/review/product/post/id' in 'https://magento.softwaretestingboard.com/meteor-workout-short.html#reviews')",
-      "children" : [ {
-        "name" : "test_tc_01_15_04_check_that_it_is_possible_to_vote_for_4_star",
-        "uid" : "65e28ad0b4879b90",
-        "parentUid" : "23c2f9a89b0287fbbec64a82c46696f3",
-        "status" : "failed",
-        "time" : {
-          "start" : 1692492989433,
-          "stop" : 1692492999811,
-          "duration" : 10378
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "23c2f9a89b0287fbbec64a82c46696f3"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
   "name" : "categories"
 }

@@ -1,0 +1,240 @@
+{
+  "uid" : "53c1b0c20604272a",
+  "name" : "TC 10.01.03, 10.01.05, 10.01.07, 10.01.09, 10.01.11, 10.01.13 - Verify 6 links in Women's Deals open the correct pages",
+  "fullName" : "tests.test_sale.TestSideMenuBarWomen#test_tc_10_01_03__05_07_09_11_13",
+  "historyId" : "3fe2ba700ff5afba63aaea1e01c0a092",
+  "time" : {
+    "start" : 1693097789867,
+    "stop" : 1693097790876,
+    "duration" : 1009
+  },
+  "description" : "Check that six links in Women's Deals section lead to the correct pages after click",
+  "descriptionHtml" : "<p>Check that six links in Women's Deals section lead to the correct pages after click</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1693096725216,
+      "stop" : 1693096725308,
+      "duration" : 92
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sale_page",
+    "time" : {
+      "start" : 1693097788907,
+      "stop" : 1693097789866,
+      "duration" : 959
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open a browser",
+      "time" : {
+        "start" : 1693097788908,
+        "stop" : 1693097789866,
+        "duration" : 958
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1693097787809,
+      "stop" : 1693097788907,
+      "duration" : 1098
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1693096725308,
+      "stop" : 1693096725308,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Check that six links in Women's Deals section lead to the correct pages after click",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Find clickable elements",
+      "time" : {
+        "start" : 1693097789867,
+        "stop" : 1693097789905,
+        "duration" : 38
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a')"
+      }, {
+        "name" : "timeout",
+        "value" : "5"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Getting actual URL of the current webpage",
+      "time" : {
+        "start" : 1693097790764,
+        "stop" : 1693097790834,
+        "duration" : 70
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Getting actual title of the current webpage",
+      "time" : {
+        "start" : 1693097790834,
+        "stop" : 1693097790876,
+        "duration" : 42
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1693097790917,
+      "stop" : 1693097790981,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1693098186640,
+      "stop" : 1693098186640,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Testing Side Menu Bar - Women's Deals Section"
+  }, {
+    "name" : "epic",
+    "value" : "Sale Page"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_sale"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSalePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1032-305"
+  }, {
+    "name" : "thread",
+    "value" : "2867-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_sale"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "element_locator",
+    "value" : "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a')"
+  }, {
+    "name" : "expected_title",
+    "value" : "'Jackets - Tops - Women'"
+  }, {
+    "name" : "expected_url",
+    "value" : "'https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "53c1b0c20604272a.json",
+  "parameterValues" : [ "('css selector', '.categories-menu > ul:nth-child(2) > li:nth-child(2) > a')", "'Jackets - Tops - Women'", "'https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html'" ]
+}
