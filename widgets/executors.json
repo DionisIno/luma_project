@@ -2,9 +2,9 @@
   "name" : "GitHub Actions",
   "type" : "github",
   "url" : "https://DionisIno.github.io/luma_project",
-  "buildOrder" : 19,
-  "buildName" : "GitHub Actions Run #5987849266",
-  "buildUrl" : "https://github.com/DionisIno/luma_project/actions/runs/5987849266",
+  "buildOrder" : 20,
+  "buildName" : "GitHub Actions Run #6061407156",
+  "buildUrl" : "https://github.com/DionisIno/luma_project/actions/runs/6061407156",
   "reportName" : "Allure Report with history",
-  "reportUrl" : "https://DionisIno.github.io/luma_project/19/"
+  "reportUrl" : "https://DionisIno.github.io/luma_project/20/"
 } ]
