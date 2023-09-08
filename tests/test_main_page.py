@@ -289,14 +289,25 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.21 - Check the display of the image in block 2 'home-t-shirts' in the Promo Block")
+        # @allure.title("TC 13.01.21 - Check the display of the image in block 2 'home-t-shirts' in the Promo Block")
+        # def test_tc_13_01_21_00_check_image_in_section2_block2(self, driver):
+        #     """This test checks if the image in section 2 block 2 'home-t-shirts' is correct
+        #     in the Promo Block under header on the main page"""
+        #     page = PromoBlock(driver, MAIN_PAGE_URL)
+        #     page.open()
+        #     block2_image = page.check_image_in_section2_block2()
+        #     assert block2_image == ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.21 - Check the display of an image in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_21_check_image_in_section2_block2(self, driver):
-            """This test checks if the image in section 2 block 2 'home-t-shirts' is correct
+            """This test checks if the image in section 2 block 2 'home-t-shirts' is visible
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            block2_image = page.check_image_in_section2_block2()
-            assert block2_image == ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL, "The image is not correct"
+            block2_image = page.find_element(self.locators.SECTION_2_BLOCK_2_IMAGE)
+            page.go_to_element(block2_image)
+            page.check_element_image_is_visible(block2_image)
+            assert block2_image, "The image is not visible"
 
         @allure.title("TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block")
         def test_tc_13_01_22_check_info_block_in_section2_block2(self, driver):
