@@ -299,9 +299,13 @@ class PromoBlock(BasePage):
     #     block1_image = element.get_attribute("src")
     #     return block1_image
 
-    @allure.step("Check the image is visible in the Promo Block")
+    @allure.step("Check the image is visible on the page")
     def check_element_image_is_visible(self, element):
-        return element.is_displayed(), "The image is not visible in the element"
+        return element.is_displayed(), "The image is not visible"
+
+    @allure.step("Get the image src")
+    def check_image_src(self, element):
+        return element.get_attribute("src")
 
     # @allure.step("Check the image in section 2 block 2 'home-t-shirts' is correct in the Promo Block")
     # def check_image_in_section2_block2(self):
