@@ -39,8 +39,8 @@
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
-      "skipped" : 27,
-      "passed" : 85,
+      "skipped" : 26,
+      "passed" : 86,
       "unknown" : 0,
       "total" : 112
     }
