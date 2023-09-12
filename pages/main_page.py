@@ -300,13 +300,6 @@ class PromoBlock(BasePage):
     def check_image_src(self, element):
         return element.get_attribute("src")
 
-    @allure.step("Check the image in section 2 block 3 'home-erin' is correct in the Promo Block")
-    def check_image_in_section2_block3(self):
-        """Checks the image in block 3 'home-erin'"""
-        element = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_IMAGE)
-        block3_image = element.get_attribute("src")
-        return block3_image
-
     @allure.step("Check the image in section 2 block 4 'home-performance' is correct in the Promo Block")
     def check_image_in_section2_block4(self):
         """Checks the image in block 4 'home-performance'"""
