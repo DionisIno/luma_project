@@ -410,14 +410,22 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 3 " \
                                                  f"'home-erin' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.31 - Check the display of the image in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_31_check_image_in_section2_block4(self, driver):
-            """This test checks if the image in section 2 block 4 'home-performance' is correct
-            in the Promo Block under header on the main page"""
+        @allure.title("TC 13.01.31 - Check the display of an image in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_31_check_image_visibility_in_section2_block4(self, driver):
+            """This test checks if the image in section 2 block 4 'home-performance' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            block4_image = page.check_image_in_section2_block4()
-            assert block4_image == ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL, "The image is not correct"
+            block4_image = page.find_element(self.locators.SECTION_2_BLOCK_4_IMAGE)
+            assert page.check_element_image_is_visible(block4_image), "The image is not visible"
+
+        @allure.title("TC 13.01.31_01 - Check correctness of the image in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_31_01_check_image_correctness_in_section2_block4(self, driver):
+            """This test checks if the image in section 2 block 4 'home-performance' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block4_image = page.find_element(self.locators.SECTION_2_BLOCK_4_IMAGE)
+            block4_image_url = ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL
+            assert page.check_image_src(block4_image) == block4_image_url, "The image is not correct in the element"
 
         @allure.title("TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo "
                       "Block")
