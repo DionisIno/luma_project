@@ -127,13 +127,13 @@ class TestMainPage:
     class TestPromoBlock:
         locators = MainPageLocators
 
-        @allure.title("TC 13.01.01 - Check the display of the Promo Block under header on the main page")
+        @allure.title("TC 13.01.01 - Check the display of the Promo Block under header on the Main Page")
         def test_tc_13_01_01_check_promo_block_display(self, driver):
-            """This test checks if Promo Block under header is displayed on the main page"""
+            """This test checks if Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            promo_block = page.check_promo_block_display()
-            assert promo_block is True, "The element is not visible"
+            promo_block = page.find_element(self.locators.PROMO_BLOCK)
+            assert page.check_element_is_visible(promo_block), "Promo Block under header is invisible on the Main Page"
 
         @allure.title("TC 13.01.02 - Check the display of section 1 in the Promo Block")
         def test_tc_13_01_02_check_section1_display(self, driver):
@@ -236,7 +236,7 @@ class TestMainPage:
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block1_image = page.find_element(self.locators.SECTION_2_BLOCK_1_IMAGE)
-            assert page.check_element_image_is_visible(block1_image), "The image is not visible"
+            assert page.check_element_image_is_visible(block1_image), "The image in section 2 block 1 is invisible"
 
         @allure.title("TC 13.01.16_01 - Check correctness of the image in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_16_01_check_image_correctness_in_section2_block2(self, driver):
@@ -245,7 +245,7 @@ class TestMainPage:
             page.open()
             block1_image = page.find_element(self.locators.SECTION_2_BLOCK_1_IMAGE)
             block1_image_url = ImageUrls.SECTION_2_BLOCK_1_IMAGE_URL
-            assert page.check_image_src(block1_image) == block1_image_url, "The image is not correct in the element"
+            assert page.check_image_src(block1_image) == block1_image_url, "The image in section 2 block 1 is incorrect"
 
         @allure.title("TC 13.01.17 - Check the display of the info block in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_17_check_info_block_in_section2_block1(self, driver):
@@ -295,7 +295,7 @@ class TestMainPage:
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block2_image = page.find_element(self.locators.SECTION_2_BLOCK_2_IMAGE)
-            assert page.check_element_image_is_visible(block2_image), "The image is not visible"
+            assert page.check_element_image_is_visible(block2_image), "The image in section 2 block 2 is invisible"
 
         @allure.title("TC 13.01.21_01 - Check correctness of the image in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_21_01_check_image_correctness_in_section2_block2(self, driver):
@@ -304,7 +304,7 @@ class TestMainPage:
             page.open()
             block2_image = page.find_element(self.locators.SECTION_2_BLOCK_2_IMAGE)
             block2_image_url = ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL
-            assert page.check_image_src(block2_image) == block2_image_url, "The image is not correct in the element"
+            assert page.check_image_src(block2_image) == block2_image_url, "The image in section 2 block 2 is incorrect"
 
         @allure.title("TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block")
         def test_tc_13_01_22_check_info_block_in_section2_block2(self, driver):
@@ -357,7 +357,7 @@ class TestMainPage:
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block3_image = page.find_element(self.locators.SECTION_2_BLOCK_3_IMAGE)
-            assert page.check_element_image_is_visible(block3_image), "The image is not visible"
+            assert page.check_element_image_is_visible(block3_image), "The image in section 2 block 3 is invisible"
 
         @allure.title("TC 13.01.26_01 - Check correctness of the image in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_26_01_check_image_correctness_in_section2_block3(self, driver):
@@ -366,7 +366,7 @@ class TestMainPage:
             page.open()
             block3_image = page.find_element(self.locators.SECTION_2_BLOCK_3_IMAGE)
             block3_image_url = ImageUrls.SECTION_2_BLOCK_3_IMAGE_URL
-            assert page.check_image_src(block3_image) == block3_image_url, "The image is not correct in the element"
+            assert page.check_image_src(block3_image) == block3_image_url, "The image in section 2 block 3 is incorrect"
 
         @allure.title("TC 13.01.27 - Check the display of the info block in block 3 'home-erin' in the Promo Block")
         def test_tc_13_01_27_check_info_block_in_section2_block3(self, driver):
@@ -416,7 +416,7 @@ class TestMainPage:
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block4_image = page.find_element(self.locators.SECTION_2_BLOCK_4_IMAGE)
-            assert page.check_element_image_is_visible(block4_image), "The image is not visible"
+            assert page.check_element_image_is_visible(block4_image), "The image in section 2 block 4 is invisible"
 
         @allure.title("TC 13.01.31_01 - Check correctness of the image in block 4 'home-performance' in the Promo Block")
         def test_tc_13_01_31_01_check_image_correctness_in_section2_block4(self, driver):
@@ -425,7 +425,7 @@ class TestMainPage:
             page.open()
             block4_image = page.find_element(self.locators.SECTION_2_BLOCK_4_IMAGE)
             block4_image_url = ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL
-            assert page.check_image_src(block4_image) == block4_image_url, "The image is not correct in the element"
+            assert page.check_image_src(block4_image) == block4_image_url, "The image in section 2 block 4 is incorrect"
 
         @allure.title("TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo "
                       "Block")
