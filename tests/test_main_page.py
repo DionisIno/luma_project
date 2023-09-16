@@ -177,13 +177,12 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 1 " \
                                                  f"of Promo Block does not match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.09 - Check the display of section 2 in the Promo Block")
+        @allure.title("TC 13.01.09 - Check the display of Section 2 in the Promo Block")
         def test_tc_13_01_09_check_section2_display(self, driver):
-            """This test checks if section 2 in Promo Block under header is displayed on the main page"""
+            """This test checks if Section 2 in Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            section2 = page.check_section2_display()
-            assert section2, "The element is not visible"
+            assert page.element_is_visible(self.locators.SECTION_2), "Section 2 under header is invisible on the Main Page"
 
         @allure.title("TC 13.01.10 - Check display of block 1 'home-pants' in section 2 in the Promo Block")
         def test_tc_13_01_10_check_section2_block1_display(self, driver):
