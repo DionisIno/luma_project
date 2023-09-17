@@ -23,6 +23,17 @@
       "total" : 4
     }
   }, {
+    "uid" : "da06872e440589d21aba946d1a86adfd",
+    "name" : "Test Header",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 52,
+      "unknown" : 0,
+      "total" : 53
+    }
+  }, {
     "uid" : "6ce152b7404524d631b96f91e1c4223c",
     "name" : "Create An Account",
     "statistic" : {
@@ -43,17 +54,6 @@
       "passed" : 86,
       "unknown" : 0,
       "total" : 112
-    }
-  }, {
-    "uid" : "da06872e440589d21aba946d1a86adfd",
-    "name" : "Test Header",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 53,
-      "unknown" : 0,
-      "total" : 53
     }
   }, {
     "uid" : "594bff6a38476713ad94a26da179b87f",
