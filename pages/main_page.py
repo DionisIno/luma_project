@@ -244,12 +244,6 @@ class PromoBlock(BasePage):
         info_block_title = self.driver.find_element(*self.locators.SECTION_1_INFO_BLOCK_TITLE).text
         return info_block_title
 
-    @allure.step("Check the section 2 block 5 'home-eco' display in the Promo Block")
-    def check_section2_block5_display(self):
-        """Checks section 2 block 5 'home-eco' display"""
-        section2_block5 = self.element_is_visible(self.locators.SECTION_2_BLOCK_5)
-        return section2_block5.is_displayed()
-
     @allure.step("Check the element is visible on the page")
     def check_element_is_visible(self, element):
         return element.is_displayed()
