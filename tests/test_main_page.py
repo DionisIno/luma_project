@@ -143,15 +143,22 @@ class TestMainPage:
             section1 = page.find_element(self.locators.SECTION_1)
             assert page.check_element_is_visible(section1), "Section 1 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.03 - Check the display of the image in section 1 'home-main' in the Promo Block "
-                      "page")
-        def test_tc_13_01_03_check_image_in_section1(self, driver):
-            """This test checks if the image in section 1 'home-main' is correct
-            in the Promo Block under header on the main page"""
+        @allure.title("TC 13.01.03 - Check the display of an image in section 1 'home-main' in the Promo Block")
+        def test_tc_13_01_03_check_image_visibility_in_section1(self, driver):
+            """This test checks if an image in section 1 'home-main' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            section1_image = page.check_image_in_section1()
-            assert section1_image == ImageUrls.SECTION_1_IMAGE_URL, "The image is not correct"
+            section1_image = page.find_element(self.locators.SECTION_1_IMAGE)
+            assert page.check_element_image_is_visible(section1_image), "The image in section 1 is invisible"
+
+        @allure.title("TC 13.01.03_01 - Check correctness of the image in section 1 'home-main' in the Promo Block")
+        def test_tc_13_01_03_01_check_image_correctness_in_section1(self, driver):
+            """This test checks if the image in section 1 'home-main' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            section1_image = page.find_element(self.locators.SECTION_1_IMAGE)
+            section1_image_url = ImageUrls.SECTION_1_IMAGE_URL
+            assert page.check_image_src(section1_image) == section1_image_url, "The image in section 1 is incorrect"
 
         @allure.title("TC 13.01.06 - Check the display of the info block text "
                       "in section 1 'home-main' in the Promo Block")
