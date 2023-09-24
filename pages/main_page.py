@@ -225,13 +225,6 @@ class PromoBlock(BasePage):
         """Checks block 5 'home-eco' in section 2 of the promo block is present in the DOM tree"""
         return self.element_is_present(self.locators.SECTION_2_BLOCK_5)
 
-    @allure.step("Check the image in section 1 in the Promo Block is correct")
-    def check_image_in_section1(self):
-        """Checks the image in section 1 'home-main'"""
-        element = self.element_is_visible(self.locators.SECTION_1_IMAGE)
-        section1_image = element.get_attribute("src")
-        return section1_image
-
     @allure.step("Check the text in section 1 in the Promo Block is correct")
     def check_info_block_text_in_section1(self):
         """Checks the text of info-block in section 1 'home-main'"""
