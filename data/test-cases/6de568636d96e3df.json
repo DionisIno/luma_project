@@ -1,0 +1,144 @@
+{
+  "uid" : "6de568636d96e3df",
+  "name" : "TC 02.01.50 - Check display of placeholder in Subscribe Email Field on each page specified in DATA_1",
+  "fullName" : "tests.test_footer.TestFooter#test_tc_02_01_50_check_visibility_of_placeholder_in_subscribe_email_field_on_pages",
+  "historyId" : "75c25acd03904b5aa9d72c724c4461cc",
+  "time" : {
+    "start" : 1695516220856,
+    "stop" : 1695516220856,
+    "duration" : 0
+  },
+  "description" : "Checks if placeholder in Subscribe Email Field is visible on each page in DATA_1",
+  "descriptionHtml" : "<p>Checks if placeholder in Subscribe Email Field is visible on each page in DATA_1</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "Skipped: Subscribe section has been replaced by 'Subscribe to our mailing list' link",
+  "statusTrace" : "('/home/runner/work/luma_project/luma_project/tests/test_footer.py', 433, \"Skipped: Subscribe section has been replaced by 'Subscribe to our mailing list' link\")",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1695515982889,
+      "stop" : 1695515982964,
+      "duration" : 75
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1695516220860,
+      "stop" : 1695516222033,
+      "duration" : 1173
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder",
+    "time" : {
+      "start" : 1695515982964,
+      "stop" : 1695515982965,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1695516223057,
+      "stop" : 1695516223118,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_result_folder::0",
+    "time" : {
+      "start" : 1695517631857,
+      "stop" : 1695517631857,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Footer"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.skip(reason='Subscribe section has been replaced by 'Subscribe to our mailing list' link')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_footer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFooter"
+  }, {
+    "name" : "host",
+    "value" : "fv-az812-630"
+  }, {
+    "name" : "thread",
+    "value" : "2998-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_footer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "URL",
+    "value" : "'https://magento.softwaretestingboard.com/what-is-new.html'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.skip(reason='Subscribe section has been replaced by 'Subscribe to our mailing list' link')" ]
+  },
+  "source" : "6de568636d96e3df.json",
+  "parameterValues" : [ "'https://magento.softwaretestingboard.com/what-is-new.html'" ]
+}
