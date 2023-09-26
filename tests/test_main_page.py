@@ -132,16 +132,17 @@ class TestMainPage:
             """This test checks if Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            promo_block = page.find_element(self.locators.PROMO_BLOCK)
-            assert page.check_element_is_visible(promo_block), "Promo Block under header is invisible on the Main Page"
+            assert page.element_is_visible(self.locators.PROMO_BLOCK), \
+                "Promo Block under header is invisible on the Main Page"
+
 
         @allure.title("TC 13.01.02 - Check the display of Section 1 in the Promo Block")
         def test_tc_13_01_02_check_section1_display(self, driver):
             """This test checks if Section 1 in Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            section1 = page.find_element(self.locators.SECTION_1)
-            assert page.check_element_is_visible(section1), "Section 1 under header is invisible on the Main Page"
+            assert page.element_is_visible(self.locators.SECTION_1), \
+                "Section 1 in Promo Block under header is invisible on the Main Page"
 
         @allure.title("TC 13.01.03 - Check the display of an image in section 1 'home-main' in the Promo Block")
         def test_tc_13_01_03_check_image_visibility_in_section1(self, driver):
@@ -259,8 +260,8 @@ class TestMainPage:
             """This test checks if info block in section 2 block 1 'home-pants' is displayed"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block = page.find_element(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK)
-            assert page.check_element_is_visible(info_block), "The info block in section 2 block 1 is invisible"
+            assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK), \
+                "The info block in in section 2 block 1 under header is invisible on the Main Page"
 
         @allure.title("TC 13.01.18 - Check the display of the title in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_18_check_info_block_title_in_section2_block1(self, driver):
@@ -318,8 +319,8 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            info_block = page.check_info_block_display_in_section2_block2()
-            assert info_block is True, "The element is not visible"
+            assert page.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK), \
+                "The info block in block 2 of Section 2 under header is invisible on the Main Page"
 
         @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_23_check_info_block_title_in_section2_block2(self, driver):
