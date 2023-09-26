@@ -256,12 +256,6 @@ class PromoBlock(BasePage):
         block5_image = element.get_attribute("src")
         return block5_image
 
-    @allure.step("Check display of info block in section 2 block 3 'home-erin' in the Promo Block")
-    def check_info_block_display_in_section2_block3(self):
-        """Checks the info block 3 'home-erin' display in section 2 of promo block under header"""
-        info_block = self.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK)
-        return info_block.is_displayed()
-
     @allure.step("Check display of info block in section 2 block 4 'home-performance' in the Promo Block")
     def check_info_block_display_in_section2_block4(self):
         """Checks the info block 4 'home-performance' display in section 2 of promo block under header"""
