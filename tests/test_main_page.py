@@ -488,13 +488,30 @@ class TestMainPage:
                                                  f"'{expected_text}'"
 
         @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_36_check_image_in_section2_block5(self, driver):
+        def test_tc_13_01_36_check_image_in_section2_block5_01(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block5_image = page.check_image_in_section2_block5()
             assert block5_image == ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL, "The image is not correct"
+
+        @allure.title("TC 13.01.36 - Check the display of an image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_check_image_visibility_in_section2_block5(self, driver):
+            """This test checks if the image in section 2 block 5 'home-eco' is visible"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block5_image = page.find_element(self.locators.SECTION_2_BLOCK_5_IMAGE)
+            assert page.check_element_image_is_visible(block5_image), "The image in section 2 block 5 is invisible"
+
+        @allure.title("TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_01_check_image_correctness_in_section2_block5(self, driver):
+            """This test checks if the image in section 2 block 5 'home-eco' is correct"""
+            page = PromoBlock(driver, MAIN_PAGE_URL)
+            page.open()
+            block5_image = page.find_element(self.locators.SECTION_2_BLOCK_5_IMAGE)
+            block5_image_url = ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL
+            assert page.check_image_src(block5_image) == block5_image_url, "The image in section 2 block 5 is incorrect"
 
         @allure.title("TC 13.01.37 - Check the display of the info block in block 5 'home-eco' in the Promo Block")
         def test_tc_13_01_37_check_info_block_in_section2_block5(self, driver):
