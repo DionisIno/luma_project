@@ -135,7 +135,6 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.PROMO_BLOCK), \
                 "Promo Block under header is invisible on the Main Page"
 
-
         @allure.title("TC 13.01.02 - Check the display of Section 1 in the Promo Block")
         def test_tc_13_01_02_check_section1_display(self, driver):
             """This test checks if Section 1 in Promo Block under header is displayed on the Main Page"""
@@ -193,7 +192,6 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2), \
                 "Section 2 under header is invisible on the Main Page"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.10 - Check display of block 1 'home-pants' in section 2 in the Promo Block")
         def test_tc_13_01_10_check_section2_block1_display(self, driver):
             """This test checks if block 1 'home-pants' is displayed in section 2 of Promo Block under header
@@ -239,7 +237,6 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_5), \
                 "Block 5 in Section 2 under header is invisible on the Main Page"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.16 - Check the display of an image in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_16_check_image_visibility_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is visible"""
@@ -248,7 +245,6 @@ class TestMainPage:
             block1_image = page.find_element(self.locators.SECTION_2_BLOCK_1_IMAGE)
             assert page.check_element_image_is_visible(block1_image), "The image in section 2 block 1 is invisible"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.16_01 - Check correctness of the image in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_16_01_check_image_correctness_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is correct"""
@@ -258,7 +254,6 @@ class TestMainPage:
             block1_image_url = ImageUrls.SECTION_2_BLOCK_1_IMAGE_URL
             assert page.check_image_src(block1_image) == block1_image_url, "The image in section 2 block 1 is incorrect"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.17 - Check the display of the info block in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_17_check_info_block_in_section2_block1(self, driver):
             """This test checks if info block in section 2 block 1 'home-pants' is displayed"""
@@ -267,7 +262,6 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK), \
                 "The info block in section 2 block 1 under header is invisible on the Main Page"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.18 - Check the display of the title in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_18_check_info_block_title_in_section2_block1(self, driver):
             """This test checks if the info block title in section 2 block 1 'home-pants' is correct
@@ -279,7 +273,6 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.19 - Check the display of the text in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_19_check_info_block_text_in_section2_block1(self, driver):
             """This test checks if the info block text in section 2 block 1 'home-pants' is correct
@@ -291,7 +284,6 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual text '{actual_text}' in info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.20 - Check the display of the sign in block 1 'home-pants' in the Promo Block")
         def test_tc_13_01_20_check_info_block_sign_in_section2_block1(self, driver):
             """This test checks if the sign in info block in section 2 block 1 'home-pants' is correct
@@ -581,7 +573,6 @@ class TestMainPage:
             assert section2 is not None, "The Section 2 in the Promo Block is not present in the DOM tree " \
                                          "on the main page"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.44 - Check block 1 'home-pants' in section 2 of the Promo Block is present "
                       "in the DOM tree")
         def test_tc_13_01_44_check_block1_in_section2_is_present(self, driver):
@@ -645,7 +636,6 @@ class TestMainPage:
             section1 = page.check_section1_clickability()
             assert section1, "The Section 1 in Promo Blck is not clickable"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.01.50 - Check if block 1 'home-pants' in section 2 is clickable"
                       "in the Promo Block on the main page")
         def test_tc_13_01_50_check_section2_block1_clickability(self, driver):
@@ -702,7 +692,6 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.YOGA_COLLECTION_URL \
                    and title == "New Luma Yoga Collection", "The link is not correct or the new page is not loaded"
 
-        @pytest.mark.skip(reason="In CI, there is no this element in changing section 2 now, so the test is skipped")
         @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
                       "leads to the correct page")
         def test_tc_13_02_02_check_section2_block1_link(self, driver):
