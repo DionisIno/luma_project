@@ -297,14 +297,6 @@ class TestMainPage:
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
         @allure.title("TC 13.01.21 - Check the display of an image in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_21_check_image_visibility_in_section2_block2_01(self, driver):
-            """This test checks if the image in section 2 block 2 'home-t-shirts' is visible"""
-            page = PromoBlock(driver, MAIN_PAGE_URL)
-            page.open()
-            block2_image = page.find_element(self.locators.SECTION_2_BLOCK_2_IMAGE)
-            assert page.check_element_image_is_visible(block2_image), "The image in section 2 block 2 is invisible"
-
-        @allure.title("TC 13.01.21 - Check the display of an image in block 2 'home-t-shirts' in the Promo Block")
         def test_tc_13_01_21_check_image_visibility_in_section2_block2(self, driver):
             """This test checks if the image in section 2 block 2 'home-t-shirts' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
