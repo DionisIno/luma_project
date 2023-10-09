@@ -249,22 +249,12 @@ class PromoBlock(BasePage):
     def check_image_src(self, element):
         return element.get_attribute("src")
 
-    # @allure.step("Get the element text")
-    # def get_element_text(self, element):
-    #     return element.text
-
     @allure.step("Check the image in section 2 block 5 'home-eco' is correct in the Promo Block")
     def check_image_in_section2_block5(self):
         """Checks the image in block 5 'home-eco'"""
         element = self.element_is_visible(self.locators.SECTION_2_BLOCK_5_IMAGE)
         block5_image = element.get_attribute("src")
         return block5_image
-
-    @allure.step("Check the title of info block in section 2 block 1 'home-pants' in the Promo Block is correct")
-    def check_info_block_title_in_section2_block1(self):
-        """Checks the title of info-block in block 1 'home-pants'"""
-        info_block_title = self.find_element(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK_TITLE).text
-        return info_block_title
 
     @allure.step("Check the title of info block in section 2 block 2 'home-t-shirts' in the Promo Block is correct")
     def check_info_block_title_in_section2_block2(self):
