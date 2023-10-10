@@ -237,16 +237,16 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_5), \
                 "Block 5 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.16 - Check the display of an image in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_16_check_image_visibility_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.15 - Check the display of an image in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_15_check_image_visibility_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            block1_image = page.find_element(self.locators.SECTION_2_BLOCK_1_IMAGE)
-            assert page.check_element_image_is_visible(block1_image), "The image in section 2 block 1 is invisible"
+            assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1_IMAGE), \
+                "The image in section 2 block 1 is invisible in the Promo Block on the Main Page"
 
-        @allure.title("TC 13.01.16_01 - Check correctness of the image in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_16_01_check_image_correctness_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.16 - Check correctness of the image in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_16_check_image_correctness_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
