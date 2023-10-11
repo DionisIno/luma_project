@@ -179,7 +179,7 @@ class TestMainPage:
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            actual_text = page.check_info_block_title_in_section1()
+            actual_text = page.get_text(self.locators.SECTION_1_INFO_BLOCK_TITLE)
             expected_text = PromoBlockElementsText.SECTION_1_INFO_BLOCK_TITLE
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 1 " \
                                                  f"of Promo Block does not match expected '{expected_text}'"
