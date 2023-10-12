@@ -164,10 +164,10 @@ class TestMainPage:
                       "in section 1 'home-main' in the Promo Block")
         def test_tc_13_01_06_check_info_block_text_in_section1(self, driver):
             """This test checks if the info block text in section 1 'home-main' is correct
-            in the Promo Block under header on the main page"""
+            in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
-            actual_text = page.check_info_block_text_in_section1()
+            actual_text = page.get_text(self.locators.SECTION_1_INFO_BLOCK_TEXT)
             expected_text = PromoBlockElementsText.SECTION_1_INFO_BLOCK_TEXT
             assert actual_text == expected_text, f"Actual text '{actual_text}' of info block in section 1 " \
                                                  f"of Promo Block does not match expected '{expected_text}'"
@@ -176,7 +176,7 @@ class TestMainPage:
                       "in section 1 'home-main' in the Promo Block")
         def test_tc_13_01_07_check_correctness_of_info_block_title_in_section1(self, driver):
             """This test checks if the info block title in section 1 'home-main' is correct
-            in the Promo Block under header on the main page"""
+            in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             actual_text = page.get_text(self.locators.SECTION_1_INFO_BLOCK_TITLE)
