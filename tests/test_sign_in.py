@@ -244,10 +244,10 @@ class TestLogin:
                and sign_in_page.check_h1_header().text in ['My Account', 'Home Page', 'Not Acceptable!'], "Login failed"
 
 
-@allure.feature('Login Functionality with captcha')
-@pytest.mark.skip(reason="to be run with secret code for captcha")
+@allure.feature('Failed Login Functionality')
+# @pytest.mark.skip(reason="to be run with secret code for captcha")
 class TestFailedLogin:
-    @allure.title('TC 03.02.01 to 03_02_10 Verify and Failed Login, no error validation')
+    @allure.title('TC 03.02.01 to 03_02_10 Verify Failed Login, no error validation')
     @pytest.mark.parametrize('email, password', LOGIN)
     def test_03_02_01_to_03_02_10_login(self, driver, email, password):
         """Check Success and Failed Login, no error validation"""
@@ -273,6 +273,5 @@ class TestFailedLogin:
         sign_in_page.click_sign_in_button()
 
         error_message = sign_in_page.get_error_message((SingInPageLocators.ERROR_MESSAGE))
-        print(error_message)
-        assert error_message in [sign_in_errors['invalid_credentials_msg'], sign_in_errors['incorrect_captcha_msg']], \
+        assert error_message in [sign_in_errors['invalid_credentials_msg']], \
             "The error message is incorrect or missing"
