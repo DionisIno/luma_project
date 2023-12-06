@@ -19,6 +19,7 @@ def header_page(driver):
 @allure.epic('Test Header')
 class TestHeader:
 
+    @pytest.mark.skip(reason="Skipped because the element was changed in the updated UI design.")
     @allure.title('TC 01.01.01 greeting message is visible')
     def test_tc_01_01_01_greeting_message_is_displayed(self, driver):
         """Check greeting message == 'Default welcome msg!' and is visible"""

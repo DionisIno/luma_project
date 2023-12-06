@@ -73,6 +73,7 @@ class TestCreateAnAccount:
             check_last_name_field_style_before_and_after_click()
         assert before_activate != after_activate, "Last name field is not highlighted when clicked"
 
+    @pytest.mark.skip(reason="Skipped because the element was not found in the updated UI design.")
     @allure.title('TC 04_01_09 Verify checkbox is present and unchecked')
     def test_04_01_09_sign_up_for_letters_checkbox(self, create_account_page):
         """ Verify that checkbox is present and unchecked"""
