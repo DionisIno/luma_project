@@ -55,7 +55,7 @@ class TestForgotYourPassword:
             "Email label or asterisk is not present for Email field"
 
     @allure.title('TC 17.01.06 Verify FYP Email field highlighting on click')
-    def test_17_01_07_email_field_gets_highlighted_when_clicked(self, driver, forgot_psw_page):
+    def test_17_01_06_email_field_gets_highlighted_when_clicked(self, driver, forgot_psw_page):
         """
         Check the Email field is activated with a cursor and gets highlighted when clicked
         """
@@ -81,12 +81,14 @@ class TestForgotYourPassword:
             assert error_message == forgot_your_password_errors['incorrect_email_format_msg'], \
                 "The error message is incorrect or missing"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.09 Verify FYP captcha input field is present')
     def test_17_01_09_email_field_is_present(self, driver, forgot_psw_page):
         """Check if the captcha input field is present"""
         captcha_input = forgot_psw_page.check_forgot_psw_captcha_field_is_clickable()
         assert captcha_input.is_displayed(), "The captcha input field is not displayed"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.10 Verify FYP captcha input field is correct format and clickable')
     def test_17_01_10_captcha_field_is_correct_format_and_clickable(self, driver, forgot_psw_page):
         """Check if the captcha input is of correct format (input-text) and clickable"""
@@ -95,6 +97,7 @@ class TestForgotYourPassword:
                and captcha_input.is_enabled(), \
             "The captcha input field does not accept text or is not clickable"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.11 Verify FYP captcha input field is appropriately labeled')
     def test_17_01_11_captcha_field_is_appropriately_labeled(self, driver, forgot_psw_page):
         """Check if Email field is appropriately labeled """
@@ -104,7 +107,8 @@ class TestForgotYourPassword:
                and captcha_label.text == forgot_your_password_data["captcha_field_label"], \
             "The captcha label or asterisk is not present for captcha field"
 
-    @allure.title('TC 17.01.12 Verify FYP Email field highlighting on click')
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
+    @allure.title('TC 17.01.12 Verify FYP captcha field highlighting on click')
     def test_17_01_12_captcha_field_gets_highlighted_when_clicked(self, driver, forgot_psw_page):
         """
         Check the captcha field is activated with a cursor and gets highlighted when clicked
@@ -113,6 +117,7 @@ class TestForgotYourPassword:
         assert active_box_shadow != initial_box_shadow, \
             "Error: captcha input field style doesn't change on activation"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.13 Verify displayed captcha matches the entered value in FYP captcha field')
     def test_17_01_13_displayed_value_in_captcha_field_matches_entered(self, driver, forgot_psw_page):
         """The test checks if the displayed captcha matches the entered value in the captcha field"""
@@ -120,6 +125,7 @@ class TestForgotYourPassword:
         displayed_captcha = forgot_psw_page.get_forgot_psw_captcha_field_attribute('value')
         assert displayed_captcha == captcha, "Captcha value in the field doesn't match the entered captcha"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.14 Verify Reload captcha button is present')
     def test_17_01_14_reload_captcha_id_displayed(self, driver, forgot_psw_page):
         """Check if the 'Reload captcha' button is present"""
@@ -128,12 +134,14 @@ class TestForgotYourPassword:
                and reload_captcha_button.text == forgot_your_password_data['reload_captcha_btn'], \
                f'''The {forgot_your_password_data['reload_captcha_btn']} button is not visible'''
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.15 Verify Reload captcha button is clickable')
     def test_17_01_15_reload_captcha_is_clickable(self, driver, forgot_psw_page):
         """Check that the 'Reload captcha' button is clickable"""
         reload_captcha_button = forgot_psw_page.check_reload_captcha_button_is_clickable()
         assert reload_captcha_button is not None, "Reload captcha button element not found"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.16 Verify click Reload captcha button generates a new captcha image')
     def test_17_01_16_click_reload_captcha_generates_captcha_image(self, driver, forgot_psw_page):
         """
@@ -147,6 +155,7 @@ class TestForgotYourPassword:
         assert new_image_src.endswith("png") and new_image_src != image_src, \
             "The new captcha image source is empty or incorrect or did not reload"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.17 Verify captcha image is present by default')
     def test_17_01_17_captcha_image_is_displayed(self, driver, forgot_psw_page):
         """Check that the captcha image is present by default"""
@@ -155,6 +164,7 @@ class TestForgotYourPassword:
         assert captcha_image.is_displayed(), "The captcha image is not visible"
         assert image_src and image_src.endswith("png"), "The new captcha image source is empty or incorrect"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.18 Verify captcha image has alternative text')
     def test_17_01_18_captcha_image_is_displayed(self, driver, forgot_psw_page):
         """Check that the captcha image is present by default"""
@@ -163,6 +173,7 @@ class TestForgotYourPassword:
         assert image_alt_text == forgot_your_password_data['captcha_image_alt_text'], \
             "The captcha image is incorrect or missing"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.19 Verify Reset My Password button is present')
     def test_17_01_19_reload_captcha_id_displayed(self, driver, forgot_psw_page):
         """Check if the 'Reload captcha' button is present"""
@@ -180,6 +191,7 @@ class TestForgotYourPassword:
 
 @allure.epic('Forgot Your Password Functionality')
 class TestForgotYourPasswordFunctionality:
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.24 Verify Error on resetting My Password with invalid captcha')
     def test_17_01_24_error_if_reset_my_password_with_invalid_captcha(self, driver, forgot_psw_page):
         """Check error message on attempt to reset password with invalid captcha"""
@@ -193,12 +205,13 @@ class TestForgotYourPasswordFunctionality:
     @allure.title('TC 17.01.25 Verify error on resetting My Password with empty email')
     def test_17_01_25_error_if_reset_my_password_with_empty_email(self, driver, forgot_psw_page):
         """Check error message on attempt to reset password with empty email field"""
-        forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
+        # forgot_psw_page.fill_in_forgot_psw_captcha_field(captcha)
         forgot_psw_page.click_reset_my_password_button()
         error_message = forgot_psw_page.get_error_email_input_is_required()
         assert error_message == forgot_your_password_errors['required_field_msg'], \
             "The error message is incorrect or missing"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.26 Verify error on resetting My Password with empty captcha')
     def test_17_01_26_error_if_reset_my_password_with_empty_captcha(self, driver, forgot_psw_page):
         """Check error message on attempt to reset password with empty captcha input field"""
@@ -208,6 +221,7 @@ class TestForgotYourPasswordFunctionality:
         assert error_message == forgot_your_password_errors['required_field_msg'], \
             "The error message is incorrect or missing"
 
+    @pytest.mark.skip(reason="Skipped because the Captcha removed from the UI and the test is not working")
     @allure.title('TC 17.01.27 Verify all fields got cleared after the failed attempt to reset password')
     def test_17_01_27_fields_are_cleared_after_failed_attempt_to_reset_password(self, driver, forgot_psw_page):
         """Check if all the fields are getting cleared after failed attempt to reset password with invalid captcha"""
