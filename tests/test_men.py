@@ -1,6 +1,7 @@
 import allure
 from data.data_urls import MEN_PAGE_URL, MenPageImageURLS
 from pages.men_page import MenPage
+import pytest
 
 
 @allure.epic("MenPage")
