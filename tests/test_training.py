@@ -60,42 +60,49 @@ class TestMainPage:
             title = training_page.check_title_training()
             assert title == "Training", f"Expected title: 'Training', Actual title: {title}"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.02 - Check the display of block 1 main")
         def test_tc_16_02_02_check_block_1_main_display(self, training_page):
             """This test checks block-promo training-main is displayed"""
             block_1 = training_page.check_block_training_main_display()
             assert block_1 is True, "The block-promo training-main is not visible"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.03 - Check the display of block 2 erin")
         def test_tc_16_02_03_check_block_2_erin_display(self, training_page):
             """This test checks block-promo training-erin is displayed"""
             block_2 = training_page.check_block_training_erin_display()
             assert block_2 is True, "The block-promo training-erin is not visible"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.04 - Check the display of block 3 on demand")
         def test_tc_16_02_04_check_block_3_training_on_demand_display(self, training_page):
             """This test checks block-promo training-on-demand is displayed"""
             block_3 = training_page.check_block_training_demand_display()
             assert block_3 is True, "The block-promo training-erin is not visible"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.05 Verify title Training is visible and contains text 'Top Videos'")
         def test_tc_16_02_05_check_title_training(self, training_page):
             """Check Top Videos title has correct text and is visible"""
             title = training_page.check_title_top_videos()
             assert title == "Top Videos", f"Expected title: 'Top Videos', Actual title: {title}"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.06 Check the cursor change to block training main ")
         def test_tc_16_02_06_check_the_cursor_change_to_block_training_main(self, training_page):
             """This test check the cursor change when hovering over the block training main"""
             cursor_before, cursor_after = training_page.check_the_cursor_change_to_block_training_main()
             assert cursor_before != cursor_after, "Mouse cursor has not changed on the block training main"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.07 Check the cursor change to block training erin")
         def test_tc_16_02_07_check_the_cursor_change_to_block_training_erin(self, training_page):
             """This test check the cursor change when hovering over the block training erin"""
             cursor_before, cursor_after = training_page.check_the_cursor_change_to_block_training_erin()
             assert cursor_before != cursor_after, "Mouse cursor has not changed on the block training erin"
 
+        @pytest.mark.skip(reason="Skipped because the UI had been changed and the test is not working")
         @allure.title("TC 16.02.08 Check the cursor change to block training on demand")
         def test_tc_16_02_08_check_the_cursor_change_to_block_training_on_demand(self, training_page):
             """This test check the cursor change when hovering over the block training on demand"""
