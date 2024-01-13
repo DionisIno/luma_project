@@ -352,5 +352,10 @@ class FooterPage(BasePage):
         """Checks that the title of opened page Subscribe is displayed"""
         return self.get_text(self.locators7.SUBSCRIBE_TITLE)
 
+    @allure.step("Get attribute 'href' of link")
+    def get_link_href(self, locator):
+        return self.driver.find_element(*locator).get_attribute("href")
 
-
+    @allure.step("Get attribute 'href' of the Write for us link")
+    def get_write_for_us_link_href(self):
+        return self.get_link_href(self.footer_locators.WRITE_FOR_US_LINK)
