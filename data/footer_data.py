@@ -4,7 +4,9 @@
 class FooterElementsText:
     ADVANCED_SEARCH_LINK_TEXT = "Advanced Search"
     CONTACT_US_LINK_TEXT = "Contact us"
-    COPYRIGHT_TEXT = "Copyright © 2013-present Magento, Inc. All rights reserved."
+    # COPYRIGHT_TEXT = "Copyright © 2013-present Magento, Inc. All rights reserved."
+    COPYRIGHT_TEXT = "We know you have an assignment to complete. If this site is not functioning as expected, " \
+                     "drop us an email. Copyright © 2013-present Magento, Inc. All rights reserved."
     ORDERS_AND_RETURNS_LINK_TEXT = "Orders and Returns"
     PRIVACY_AND_COOKIE_POLICY_LINK_TEXT = "Privacy and Cookie Policy"
     SEARCH_TERMS_LINK_TEXT = "Search Terms"
