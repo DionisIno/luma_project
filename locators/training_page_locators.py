@@ -1,4 +1,4 @@
-"""This section contain training locators"""
+"""This section contains training locators"""
 
 from selenium.webdriver.common.by import By
 

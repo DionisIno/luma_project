@@ -21,21 +21,21 @@ def sign_in_page(driver):
 @allure.feature('Registered Customers')
 class TestRegisteredCustomers:
     @allure.title('TC 03.01.01 Verify Sign In Page h1 Header')
-    def test_03_01_01_h1_heading(self, driver, sign_in_page):
+    def test_03_01_01_presence_h1_heading(self, driver, sign_in_page):
         """Check Login Page Heading is present """
         h1_heading = sign_in_page.check_h1_header()
         assert h1_heading is not None and h1_heading.text == sign_in_data["h1_heading"], \
             "H1 Heading is incorrect or not present"
 
     @allure.title('TC 03.01.02 Verify Registered Customers Heading')
-    def test_03_01_02_registered_customers_heading(self, driver, sign_in_page):
+    def test_03_01_02_presence_registered_customers_heading(self, driver, sign_in_page):
         """Check Registered Customers Heading is present """
         heading = sign_in_page.check_registered_customers_heading()
         assert heading is not None and heading.text == sign_in_data["customer_login_heading"], \
             "Registered Customers heading is incorrect or not present"
 
     @allure.title('TC 03.01.03 Verify Registered Customers note')
-    def test_03_01_03_registered_customers_note(self, driver, sign_in_page):
+    def test_03_01_03_presence_registered_customers_note(self, driver, sign_in_page):
         """Check Registered Customers note is present """
         note = sign_in_page.check_registered_customers_note()
         assert note is not None and note.text == sign_in_data["customer_login_note"], \
@@ -129,7 +129,7 @@ class TestRegisteredCustomers:
         assert sign_in_button is not None, "Sign In button element not found"
 
     @allure.title('TC 03.01.16 Verify Forgot Your Password link is present')
-    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+    def test_03_01_16_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that the 'Forgot your password?' link is present"""
         element = sign_in_page.check_forgot_your_password_link()
         element_href = element.get_attribute("href")
@@ -195,6 +195,7 @@ class TestNewCustomers:
         assert driver.current_url == CREATE_ACCOUNT_PAGE_URL \
                and header is not None and header.text == "Create New Customer Account", \
                "Verify Create an Account button is incorrect or not redirect to correct page"
+
 
 @allure.feature('Login Functionality')
 class TestLogin:

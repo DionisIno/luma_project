@@ -1,4 +1,4 @@
-"""This section contain Men page locators"""
+"""This section contains Men page locators"""
 
 from selenium.webdriver.common.by import By
 

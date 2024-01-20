@@ -5,9 +5,11 @@ from pages.reviews_page import ReviewsPage
 from data.data_urls import REVIEWS_URL_DIRECT_ANCHOR_LINK, REVIEWS_URL_GENERAL
 
 
+@allure.epic("Reviews Page")
 class TestReviews:
     locators = ReviewsPageLocators
 
+    @allure.title("TC 01.15.01 - Verify that it is possible to vote for 1 star")
     def test_tc_01_15_01_check_that_it_is_possible_to_vote_for_1_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -60,6 +62,7 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
+    @allure.title("TC 01.15.02 - Verify that it is possible to vote for 2 star")
     def test_tc_01_15_02_check_that_it_is_possible_to_vote_for_2_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -115,6 +118,7 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
+    @allure.title("TC 01.15.03 - Verify that it is possible to vote for 3 star")
     def test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -166,6 +170,7 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
+    @allure.title("TC 01.15.04 - Verify that it is possible to vote for 4 star")
     def test_tc_01_15_04_check_that_it_is_possible_to_vote_for_4_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"
@@ -217,6 +222,7 @@ class TestReviews:
             print('Leave a review failed')
             assert review_successfully_submitted == "You submitted your review for moderation." or 'https://magento.softwaretestingboard.com/review/product/post/id' in result_CI_GitHub_Action_URL, "Leave a review failed"
 
+    @allure.title("TC 01.15.05 - Verify that it is possible to vote for 5 star")
     def test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star(self, driver):
         """
         The user is NOT logged in, located in the product card, section "Reviews"

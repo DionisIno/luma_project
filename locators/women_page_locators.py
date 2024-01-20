@@ -1,4 +1,4 @@
-"""This section contain Women page locators"""
+"""This section contains Women page locators"""
 
 from selenium.webdriver.common.by import By
 

@@ -1,10 +1,11 @@
 """This section contains locators for Shopping Cart page"""
+
 import random
 from selenium.webdriver.common.by import By
 
 
 class ShoppingCartPageLocators:
-    TITLE = (By.CSS_SELECTOR, '[data-ui-id="page-title-wrapper"]')
+    TITLE = (By.CSS_SELECTOR, 'span[data-ui-id="page-title-wrapper"]')
     IS_EMPTY_MESSAGE = (By.CSS_SELECTOR, 'div.cart-empty > p:nth-child(1)')
     HERE_LINK = (By.CSS_SELECTOR, 'div.cart-empty > p:nth-child(2) > a')
     SIZE_BUTTON = (By.CSS_SELECTOR, '#option-label-size-143-item-166')

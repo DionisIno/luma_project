@@ -1,5 +1,4 @@
 """This section contain Bags page locators"""
-"""This section contain 'Bags' page locators"""
 
 from selenium.webdriver.common.by import By
 

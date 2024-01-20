@@ -1,3 +1,5 @@
+"""This section contains data for testing of the Sale Page"""
+
 expected_titles_w = {
     "hoodies_women": "Hoodies & Sweatshirts - Tops - Women",
     "jackets_women": "Jackets - Tops - Women",

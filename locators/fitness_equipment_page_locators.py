@@ -1,4 +1,4 @@
-"""This section contain Fitness Equipment page locators"""
+"""This section contains Fitness Equipment page locators"""
 
 from selenium.webdriver.common.by import By
 

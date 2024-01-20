@@ -1,4 +1,4 @@
-"""This section contain training-video download locators"""
+"""This section contains training-video download locators"""
 
 from selenium.webdriver.common.by import By
 

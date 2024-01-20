@@ -1,4 +1,4 @@
-"""This section contain What's New page locators"""
+"""This section contains What's New page locators"""
 
 from selenium.webdriver.common.by import By
 

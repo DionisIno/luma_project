@@ -1,4 +1,4 @@
-"""This section contain Sign In page locators"""
+"""This section contains Sign In page locators"""
 
 from selenium.webdriver.common.by import By
 

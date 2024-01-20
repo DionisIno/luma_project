@@ -1,4 +1,4 @@
-"""This section contain Watches page locators"""
+"""This section contains Watches page locators"""
 
 from selenium.webdriver.common.by import By
 

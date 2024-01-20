@@ -16,8 +16,8 @@ class TestMainPage:
     @allure.feature("Testing Hot Seller Section")
     class TestHotSellerSection:
         @pytest.mark.xfail(reason="In CI the test failed in PR#203")
-        @allure.title("TC 06.01.02 - verify the card is interactive on hover")
-        def test_verify_the_card_is_interactive_on_hover(self, driver):
+        @allure.title("TC 06.01.02 - Verify the card is interactive on hover")
+        def test_06_01_02_the_card_is_interactive_on_hover(self, driver):
             """This test checks that the card is interactive"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
@@ -25,14 +25,16 @@ class TestMainPage:
             assert shadow_before != shadow_after, \
                 "Card is not interactive"
 
-        def test_verify_the_card_has_title(self, driver):
+        @allure.title("TC 06.01.04 - Verify that the product card has title")
+        def test_06_01_03_the_card_has_title(self, driver):
             """This test checks that the card has title"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             title_text = page.check_product_card_title()
             assert len(title_text) > 0, "Card has no title"
 
-        def test_check_for_duplicate_titles_after_clicking_on_the_card(self, driver):
+        @allure.title("TC 06.01.04 - Verify for the same titles before and after clicking on the product card")
+        def test_06_01_04_the_same_titles_for_product_before_and_after_clicking_on_the_card(self, driver):
             """This test checks for the same titles after clicking on the product card and going to the product page"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
@@ -41,26 +43,29 @@ class TestMainPage:
                 "Headers are not equal or redirect to the wrong page of the site"
 
         @pytest.mark.xfail(reason="In CI the test failed in PR#203")
-        def test_check_card_price(self, driver):
+        @allure.title("TC 06.01.05 - Verify if product card displays a price and a price in USD")
+        def test_06_01_05_card_has_price_and_dollar_sign(self, driver):
             """This test checks that the card has a price and a price in USD"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             text = page.check_card_price()
             assert len(text) > 0 and "$" in text, "The price is not present and does not contain the $ sign"
 
-        def test_check_card_rating(self, driver):
+        @allure.title("TC 06.01.06 - Verify product card displays a rating if the product has a review")
+        def test_06_01_06_card_rating_is_visible_for_products_with_reviews(self, driver):
             """This test checks that if a product has a review, then the product card has a rating"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
 
-        def test_tc_06_01_08_check_btn_add_to_cart_is_visible(self, driver):
+        @allure.title("TC 06.01.08 - Verify if 'Add to Cart' button is visible on hover by product")
+        def test_tc_06_01_08_add_to_cart_button_is_visible(self, driver):
             """This test checks that button Add to Cart is visible on the product card when hover by product"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
             assert page.btn_is_visible(), 'Button Add to Cart is not visible on the product card'
 
-        @allure.title("TC 06.01.09 - check the color change to add to cart button")
-        def test_tc_06_01_09_check_the_color_change_to_add_to_cart_button(self, driver):
+        @allure.title("TC 06.01.09 - Verify the color changes on hover on 'Add to cart' button")
+        def test_tc_06_01_09_the_color_change_to_add_to_cart_button(self, driver):
             """This test check the color change when hovering over the Add to Cart button"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
@@ -69,7 +74,7 @@ class TestMainPage:
             assert background_before != background_after, "Product card button did not change color on hover"
 
         @pytest.mark.parametrize("item", product_card_button)
-        def test_tc_06_01_10_check_the_cursor_change_to_cart_button(self, driver, item):
+        def test_tc_06_01_10_the_cursor_change_to_cart_button(self, driver, item):
             """This test check the cursor change when hovering over the cart buttons"""
             page = MainPage(driver, MAIN_PAGE_URL)
             page.open()
@@ -85,9 +90,9 @@ class TestMainPage:
             assert color_before != color_after, "Product card button did not change color on hover"
 
         @pytest.mark.xfail(reason="In CI the test failed in PR#182")
-        @allure.title("Check the display of the add to wish and add to compare buttons")
+        @allure.title("Verify display of the add to wish and add to compare buttons")
         @pytest.mark.parametrize("item", product_card_button)
-        def test_tc_06_01_15_check_the_display_of_the_card_buttons(self, driver, item):
+        def test_tc_06_01_15_the_display_of_the_card_buttons(self, driver, item):
             """
             This test will check that the add to wishlist and add to compare buttons are visible on the screen
             """
@@ -97,8 +102,8 @@ class TestMainPage:
             assert check_display, "Element is not displayed"
 
         @pytest.mark.xfail(reason="In CI, there is no transition to the user registration page, so the test fails")
-        @allure.title("Check the transition to the page my wish after clicking on the button. User is not authorized")
-        def test_06_01_17_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
+        @allure.title("Verify transition to the page my wish after clicking on the button. User is not authorized")
+        def test_06_01_17_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver):
             """
             This test will check that after clicking on the add to wishlist button,
             you are redirected to the My Wishlist page
@@ -111,8 +116,8 @@ class TestMainPage:
                 f"The text does not equal {error_message} or did not go to the page 'My desires'"
 
         @pytest.mark.xfail(reason="In CI, there is no transition to the user registration page, so the test fails")
-        @allure.title("Check the transition to the page my wish after clicking on the button. User is authorized")
-        def test_06_01_18_check_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver, sing_in):
+        @allure.title("Verify transition to the page my wish after clicking on the button. User is authorized")
+        def test_06_01_18_the_transition_to_the_page_my_wish_after_click_on_the_button(self, driver, sing_in):
             """
             This test will check that after clicking on the add to wishlist button,
             you are redirected to the My Wishlist page
@@ -127,32 +132,32 @@ class TestMainPage:
     class TestPromoBlock:
         locators = MainPageLocators
 
-        @allure.title("TC 13.01.01 - Check the display of the Promo Block under header on the Main Page")
-        def test_tc_13_01_01_check_promo_block_display(self, driver):
+        @allure.title("TC 13.01.01 - Verify display of the Promo Block under header on the Main Page")
+        def test_tc_13_01_01_promo_block_display(self, driver):
             """This test checks if Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.PROMO_BLOCK), \
                 "Promo Block under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.02 - Check the display of Section 1 in the Promo Block")
-        def test_tc_13_01_02_check_section1_display(self, driver):
+        @allure.title("TC 13.01.02 - Verify display of Section 1 in the Promo Block")
+        def test_tc_13_01_02_section1_display(self, driver):
             """This test checks if Section 1 in Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.SECTION_1), \
                 "Section 1 in Promo Block under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.03 - Check the display of an image in section 1 'home-main' in the Promo Block")
-        def test_tc_13_01_03_check_image_visibility_in_section1(self, driver):
+        @allure.title("TC 13.01.03 - Verify display of an image in section 1 'home-main' in the Promo Block")
+        def test_tc_13_01_03_image_visibility_in_section1(self, driver):
             """This test checks if an image in section 1 'home-main' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.SECTION_1_IMAGE), \
                 "The image in section 2 block 1 is invisible in the Promo Block on the Main Page"
 
-        @allure.title("TC 13.01.04 - Check correctness of the image in section 1 'home-main' in the Promo Block")
-        def test_tc_13_01_04_check_image_correctness_in_section1(self, driver):
+        @allure.title("TC 13.01.04 - Verify correctness of the image in section 1 'home-main' in the Promo Block")
+        def test_tc_13_01_04_image_correctness_in_section1(self, driver):
             """This test checks if the image in section 1 'home-main' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -160,9 +165,9 @@ class TestMainPage:
             section1_image_url = ImageUrls.SECTION_1_IMAGE_URL
             assert page.check_image_src(section1_image) == section1_image_url, "The image in section 1 is incorrect"
 
-        @allure.title("TC 13.01.06 - Check the display of the info block text "
+        @allure.title("TC 13.01.06 - Verify display of the info block text "
                       "in section 1 'home-main' in the Promo Block")
-        def test_tc_13_01_06_check_info_block_text_in_section1(self, driver):
+        def test_tc_13_01_06_info_block_text_in_section1(self, driver):
             """This test checks if the info block text in section 1 'home-main' is correct
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -172,9 +177,9 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual text '{actual_text}' of info block in section 1 " \
                                                  f"of Promo Block does not match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.07 - Check the display of the info block title "
+        @allure.title("TC 13.01.07 - Verify display of the info block title "
                       "in section 1 'home-main' in the Promo Block")
-        def test_tc_13_01_07_check_correctness_of_info_block_title_in_section1(self, driver):
+        def test_tc_13_01_07_correctness_of_info_block_title_in_section1(self, driver):
             """This test checks if the info block title in section 1 'home-main' is correct
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -184,16 +189,16 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 1 " \
                                                  f"of Promo Block does not match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.09 - Check the display of Section 2 in the Promo Block")
-        def test_tc_13_01_09_check_section2_display(self, driver):
+        @allure.title("TC 13.01.09 - Verify display of Section 2 in the Promo Block")
+        def test_tc_13_01_09_section2_display(self, driver):
             """This test checks if Section 2 in Promo Block under header is displayed on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.SECTION_2), \
                 "Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.10 - Check display of block 1 'home-pants' in section 2 in the Promo Block")
-        def test_tc_13_01_10_check_section2_block1_display(self, driver):
+        @allure.title("TC 13.01.10 - Verify display of block 1 'home-pants' in section 2 in the Promo Block")
+        def test_tc_13_01_10_section2_block1_display(self, driver):
             """This test checks if block 1 'home-pants' is displayed in section 2 of Promo Block under header
             on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -201,8 +206,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1), \
                 "Block 1 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.11 - Check display of block 2 'home-t-shirts' in section 2 in the Promo Block")
-        def test_tc_13_01_11_check_section2_block2_display(self, driver):
+        @allure.title("TC 13.01.11 - Verify display of block 2 'home-t-shirts' in section 2 in the Promo Block")
+        def test_tc_13_01_11_section2_block2_display(self, driver):
             """This test checks if block 2 'home-t-shirts' is displayed in section 2 of Promo Block under header
              on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -210,8 +215,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_2), \
                 "Block 2 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.12 - Check display of block 3 'home-erin' in section 2 in the Promo Block")
-        def test_tc_13_01_12_check_section2_block3_display(self, driver):
+        @allure.title("TC 13.01.12 - Verify display of block 3 'home-erin' in section 2 in the Promo Block")
+        def test_tc_13_01_12_section2_block3_display(self, driver):
             """This test checks if block 3 'home-erin' is displayed in section 2 of Promo Block under header
             on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -219,8 +224,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_3), \
                 "Block 3 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.13 - Check display of block 4 'home-performance' in section 2 in the Promo Block")
-        def test_tc_13_01_13_check_section2_block4_display(self, driver):
+        @allure.title("TC 13.01.13 - Verify display of block 4 'home-performance' in section 2 in the Promo Block")
+        def test_tc_13_01_13_section2_block4_display(self, driver):
             """This test checks if block 4 'home-performance' is displayed in section 2 of Promo Block under header
             on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -228,8 +233,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_4), \
                 "Block 4 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.14 - Check display of block 5 'home-eco' in section 2 in the Promo Block")
-        def test_tc_13_01_14_check_section2_block5_display(self, driver):
+        @allure.title("TC 13.01.14 - Verify display of block 5 'home-eco' in section 2 in the Promo Block")
+        def test_tc_13_01_14_section2_block5_display(self, driver):
             """This test checks if block 5 'home-eco' is displayed in section 2
             of Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -237,16 +242,16 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_5), \
                 "Block 5 in Section 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.15 - Check the display of an image in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_15_check_image_visibility_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.15 - Verify display of an image in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_15_image_visibility_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1_IMAGE), \
                 "The image in section 2 block 1 is invisible in the Promo Block on the Main Page"
 
-        @allure.title("TC 13.01.16 - Check correctness of the image in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_16_check_image_correctness_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.16 - Verify correctness of the image in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_16_image_correctness_in_section2_block1(self, driver):
             """This test checks if the image in section 2 block 1 'home-pants' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -254,16 +259,16 @@ class TestMainPage:
             block1_image_url = ImageUrls.SECTION_2_BLOCK_1_IMAGE_URL
             assert page.check_image_src(block1_image) == block1_image_url, "The image in section 2 block 1 is incorrect"
 
-        @allure.title("TC 13.01.17 - Check the display of the info block in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_17_check_info_block_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.17 - Verify display of the info block in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_17_info_block_in_section2_block1(self, driver):
             """This test checks if info block in section 2 block 1 'home-pants' is displayed"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_1_INFO_BLOCK), \
                 "The info block in section 2 block 1 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.18 - Check the display of the title in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_18_check_info_block_title_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.18 - Verify display of the title in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_18_info_block_title_in_section2_block1(self, driver):
             """This test checks if the info block title in section 2 block 1 'home-pants' is correct
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -273,8 +278,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.19 - Check the display of the text in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_19_check_info_block_text_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.19 - Verify display of the text in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_19_info_block_text_in_section2_block1(self, driver):
             """This test checks if the info block text in section 2 block 1 'home-pants' is correct
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -284,8 +289,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual text '{actual_text}' in info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.20 - Check the display of the sign in block 1 'home-pants' in the Promo Block")
-        def test_tc_13_01_20_check_info_block_sign_in_section2_block1(self, driver):
+        @allure.title("TC 13.01.20 - Verify display of the sign in block 1 'home-pants' in the Promo Block")
+        def test_tc_13_01_20_info_block_sign_in_section2_block1(self, driver):
             """This test checks if the sign in info block in section 2 block 1 'home-pants' is correct
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -295,16 +300,16 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 1 " \
                                                  f"'home-pants' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.21 - Check the display of an image in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_21_check_image_visibility_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.21 - Verify display of an image in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_21_image_visibility_in_section2_block2(self, driver):
             """This test checks if the image in section 2 block 2 'home-t-shirts' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block2_image = page.find_element(self.locators.SECTION_2_BLOCK_2_IMAGE)
             assert page.check_element_image_is_visible(block2_image), "The image in section 2 block 2 is invisible"
 
-        @allure.title("TC 13.01.21_01 - Check correctness of the image in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_21_01_check_image_correctness_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.21_01 - Verify correctness of the image in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_21_01_image_correctness_in_section2_block2(self, driver):
             """This test checks if the image in section 2 block 2 'home-t-shirts' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -312,8 +317,8 @@ class TestMainPage:
             block2_image_url = ImageUrls.SECTION_2_BLOCK_2_IMAGE_URL
             assert page.check_image_src(block2_image) == block2_image_url, "The image in section 2 block 2 is incorrect"
 
-        @allure.title("TC 13.01.22 - Check the display of the info block in block 2 't-shirts' in the Promo Block")
-        def test_tc_13_01_22_check_info_block_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.22 - Verify display of the info block in block 2 't-shirts' in the Promo Block")
+        def test_tc_13_01_22_info_block_in_section2_block2(self, driver):
             """This test checks if info block in section 2 block 2 'home-t-shirts' is displayed
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -321,8 +326,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_2_INFO_BLOCK), \
                 "The info block in section 2 block 2 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.23 - Check the display of the title in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_23_check_info_block_title_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.23 - Verify display of the title in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_23_info_block_title_in_section2_block2(self, driver):
             """This test checks if the info block title in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -333,8 +338,8 @@ class TestMainPage:
                                                  f"'home-t-shirts' of Promo Block does not match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.24 - Check the display of the text in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_24_check_info_block_text_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.24 - Verify display of the text in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_24_info_block_text_in_section2_block2(self, driver):
             """This test checks if the info block text in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -345,8 +350,8 @@ class TestMainPage:
                                                  f"'home-t-shirts' of Promo Block doesn't match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.25 - Check the display of the sign in block 2 'home-t-shirts' in the Promo Block")
-        def test_tc_13_01_25_check_info_block_sign_in_section2_block2(self, driver):
+        @allure.title("TC 13.01.25 - Verify display of the sign in block 2 'home-t-shirts' in the Promo Block")
+        def test_tc_13_01_25_info_block_sign_in_section2_block2(self, driver):
             """This test checks if the sign in info block in section 2 block 2 'home-t-shirts' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -357,16 +362,16 @@ class TestMainPage:
                                                  f"'home-t-shirts' of Promo Block doesn't match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.26 - Check the display of an image in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_26_check_image_visibility_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.26 - Verify display of an image in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_26_image_visibility_in_section2_block3(self, driver):
             """This test checks if the image in section 2 block 3 'home-erin' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block3_image = page.find_element(self.locators.SECTION_2_BLOCK_3_IMAGE)
             assert page.check_element_image_is_visible(block3_image), "The image in section 2 block 3 is invisible"
 
-        @allure.title("TC 13.01.26_01 - Check correctness of the image in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_26_01_check_image_correctness_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.26_01 - Verify correctness of the image in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_26_01_image_correctness_in_section2_block3(self, driver):
             """This test checks if the image in section 2 block 3 'home-erin' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -374,8 +379,8 @@ class TestMainPage:
             block3_image_url = ImageUrls.SECTION_2_BLOCK_3_IMAGE_URL
             assert page.check_image_src(block3_image) == block3_image_url, "The image in section 2 block 3 is incorrect"
 
-        @allure.title("TC 13.01.27 - Check the display of the info block in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_27_check_info_block_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.27 - Verify display of the info block in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_27_info_block_in_section2_block3(self, driver):
             """This test checks if info block in section 2 block 3 'home-erin' is displayed in the Promo Block
              under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -383,8 +388,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_3_INFO_BLOCK), \
                 "The info block in section 2 block 3 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.28 - Check the display of the title in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_28_check_info_block_title_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.28 - Verify display of the title in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_28_info_block_title_in_section2_block3(self, driver):
             """This test checks if the info block title in section 2 block 3 'home-erin' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -394,8 +399,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 3 " \
                                                  f"'home-erin' of Promo Block does not match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.29 - Check the display of the text in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_29_check_info_block_text_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.29 - Verify display of the text in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_29_info_block_text_in_section2_block3(self, driver):
             """This test checks if the info block text in section 2 block 3 'home-erin' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -405,8 +410,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual text '{actual_text}' in info block in section 2 block 3 " \
                                                  f"'home-erin' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.30 - Check the display of the sign in block 3 'home-erin' in the Promo Block")
-        def test_tc_13_01_30_check_info_block_sign_in_section2_block3(self, driver):
+        @allure.title("TC 13.01.30 - Verify display of the sign in block 3 'home-erin' in the Promo Block")
+        def test_tc_13_01_30_info_block_sign_in_section2_block3(self, driver):
             """This test checks if the sign in info block in section 2 block 3 'home-erin' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -416,16 +421,16 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 3 " \
                                                  f"'home-erin' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.31 - Check the display of an image in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_31_check_image_visibility_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.31 - Verify display of an image in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_31_image_visibility_in_section2_block4(self, driver):
             """This test checks if the image in section 2 block 4 'home-performance' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block4_image = page.find_element(self.locators.SECTION_2_BLOCK_4_IMAGE)
             assert page.check_element_image_is_visible(block4_image), "The image in section 2 block 4 is invisible"
 
-        @allure.title("TC 13.01.31_01 - Check correctness of the image in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_31_01_check_image_correctness_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.31_01 - Verify correctness of image in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_31_01_image_correctness_in_section2_block4(self, driver):
             """This test checks if the image in section 2 block 4 'home-performance' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -433,9 +438,8 @@ class TestMainPage:
             block4_image_url = ImageUrls.SECTION_2_BLOCK_4_IMAGE_URL
             assert page.check_image_src(block4_image) == block4_image_url, "The image in section 2 block 4 is incorrect"
 
-        @allure.title("TC 13.01.32 - Check the display of the info block in block 4 'home-performance' in the Promo "
-                      "Block")
-        def test_tc_13_01_32_check_info_block_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.32 - Verify display of info block in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_32_info_block_in_section2_block4(self, driver):
             """This test checks if info block in section 2 block 4 'home-performance' is displayed in the Promo Block
             under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -443,8 +447,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_4_INFO_BLOCK), \
                 "The info block in section 2 block 4 under header is invisible on the Main Page"
 
-        @allure.title("TC 13.01.33 - Check the display of the title in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_33_check_info_block_title_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.33 - Verify display of the title in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_33_info_block_title_in_section2_block4(self, driver):
             """This test checks if the info block title in section 2 block 4 'home-performance' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -455,8 +459,8 @@ class TestMainPage:
                                                  f"'home-performance' of Promo Block does not match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.34 - Check the display of the text in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_34_check_info_block_text_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.34 - Verify display of the text in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_34_info_block_text_in_section2_block4(self, driver):
             """This test checks if the info block text in section 2 block 4 'home-performance' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -467,8 +471,8 @@ class TestMainPage:
                                                  f"'home-performance' of Promo Block doesn't match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.35 - Check the display of the sign in block 4 'home-performance' in the Promo Block")
-        def test_tc_13_01_35_check_info_block_sign_in_section2_block4(self, driver):
+        @allure.title("TC 13.01.35 - Verify display of the sign in block 4 'home-performance' in the Promo Block")
+        def test_tc_13_01_35_info_block_sign_in_section2_block4(self, driver):
             """This test checks if the sign in info block in section 2 block 4 'home-performance' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -479,8 +483,8 @@ class TestMainPage:
                                                  f"'home-performance' of Promo Block doesn't match expected " \
                                                  f"'{expected_text}'"
 
-        @allure.title("TC 13.01.36 - Check the display of the image in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_36_check_image_in_section2_block5_01(self, driver):
+        @allure.title("TC 13.01.36 - Verify display of the image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_image_in_section2_block5_01(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -488,16 +492,16 @@ class TestMainPage:
             block5_image = page.check_image_in_section2_block5()
             assert block5_image == ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL, "The image is not correct"
 
-        @allure.title("TC 13.01.36 - Check the display of an image in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_36_check_image_visibility_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.36 - Verify display of an image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_image_visibility_in_section2_block5(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is visible"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             block5_image = page.find_element(self.locators.SECTION_2_BLOCK_5_IMAGE)
             assert page.check_element_image_is_visible(block5_image), "The image in section 2 block 5 is invisible"
 
-        @allure.title("TC 13.01.36_01 - Check correctness of the image in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_36_01_check_image_correctness_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.36_01 - Verify correctness of the image in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_36_01_image_correctness_in_section2_block5(self, driver):
             """This test checks if the image in section 2 block 5 'home-eco' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -505,8 +509,8 @@ class TestMainPage:
             block5_image_url = ImageUrls.SECTION_2_BLOCK_5_IMAGE_URL
             assert page.check_image_src(block5_image) == block5_image_url, "The image in section 2 block 5 is incorrect"
 
-        @allure.title("TC 13.01.37 - Check the display of the info block in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_37_check_info_block_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.37 - Verify display of the info block in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_37_info_block_in_section2_block5(self, driver):
             """This test checks if info block in section 2 block 5 'home-eco' is displayed
             in the Promo Block under header on the Main Page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -514,8 +518,8 @@ class TestMainPage:
             assert page.element_is_visible(self.locators.SECTION_2_BLOCK_5_INFO_BLOCK), \
                 "The info block in section 2 block 5 is invisible"
 
-        @allure.title("TC 13.01.38 - Check the display of the title in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_38_check_info_block_title_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.38 - Verify display of the title in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_38_info_block_title_in_section2_block5(self, driver):
             """This test checks if the info block title in section 2 block 5 'home-eco' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -525,8 +529,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual title '{actual_text}' of info block in section 2 block 5 " \
                                                  f"'home-eco' of Promo Block does not match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.39 - Check the display of the text in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_39_check_info_block_text_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.39 - Verify display of the text in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_39_info_block_text_in_section2_block5(self, driver):
             """This test checks if the info block text in section 2 block 5 'home-eco' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -536,8 +540,8 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual text '{actual_text}' in info block in section 2 block 5 " \
                                                  f"'home-eco' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.40 - Check the display of the sign in block 5 'home-eco' in the Promo Block")
-        def test_tc_13_01_40_check_info_block_sign_in_section2_block5(self, driver):
+        @allure.title("TC 13.01.40 - Verify display of the sign in block 5 'home-eco' in the Promo Block")
+        def test_tc_13_01_40_info_block_sign_in_section2_block5(self, driver):
             """This test checks if the sign in info block in section 2 block 5 'home-eco' is correct
             in the Promo Block under header on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -547,16 +551,16 @@ class TestMainPage:
             assert actual_text == expected_text, f"Actual sign '{actual_text}' in info block in section 2 block 5 " \
                                                  f"'home-eco' of Promo Block doesn't match expected '{expected_text}'"
 
-        @allure.title("TC 13.01.41 - Check Promo Block is present in the DOM tree")
-        def test_tc_13_01_41_check_promo_block_is_present(self, driver):
+        @allure.title("TC 13.01.41 - Verify if Promo Block is present in the DOM tree")
+        def test_tc_13_01_41_promo_block_is_present(self, driver):
             """This test checks if Promo Block is present in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             promo_block = page.check_promo_block_is_present()
             assert promo_block is not None, "The Promo Block is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.42 - Check section 1 in the Promo Block is present in the DOM tree")
-        def test_tc_13_01_42_check_section1_is_present(self, driver):
+        @allure.title("TC 13.01.42 - Verify if section 1 in the Promo Block is present in the DOM tree")
+        def test_tc_13_01_42_section1_is_present(self, driver):
             """This test checks if section 1 in the Promo Block is present in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -564,8 +568,8 @@ class TestMainPage:
             assert section1 is not None, "The Section 1 in the Promo Block is not present in the DOM tree " \
                                          "on the main page"
 
-        @allure.title("TC 13.01.43 - Check section 2 in the Promo Block is present in the DOM tree")
-        def test_tc_13_01_43_check_section2_is_present(self, driver):
+        @allure.title("TC 13.01.43 - Verify if section 2 in the Promo Block is present in the DOM tree")
+        def test_tc_13_01_43_section2_is_present(self, driver):
             """This test checks if section 2 in the Promo Block is present in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -573,9 +577,9 @@ class TestMainPage:
             assert section2 is not None, "The Section 2 in the Promo Block is not present in the DOM tree " \
                                          "on the main page"
 
-        @allure.title("TC 13.01.44 - Check block 1 'home-pants' in section 2 of the Promo Block is present "
+        @allure.title("TC 13.01.44 - Verify if block 1 'home-pants' in section 2 of the Promo Block is present "
                       "in the DOM tree")
-        def test_tc_13_01_44_check_block1_in_section2_is_present(self, driver):
+        def test_tc_13_01_44_block1_in_section2_is_present(self, driver):
             """This test checks if block 1 'home-pants' in section 2 in the Promo Block is present
             in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -584,9 +588,9 @@ class TestMainPage:
             assert block1_section2 is not None, "The block 1 'home-pants' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.45 - Check block 2 'home-t-shirts' in section 2 of the Promo Block is present "
+        @allure.title("TC 13.01.45 - Verify if block 2 'home-t-shirts' in section 2 of the Promo Block is present "
                       "in the DOM tree")
-        def test_tc_13_01_45_check_block2_in_section2_is_present(self, driver):
+        def test_tc_13_01_45_block2_in_section2_is_present(self, driver):
             """This test checks if block 2 'home-t-shirts' in section 2 in the Promo Block is present
             in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -595,9 +599,9 @@ class TestMainPage:
             assert block2_section2 is not None, "The block 2 'home-t-shirts' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.46 - Check block 3 'home-erin' in section 2 of the Promo Block is present "
+        @allure.title("TC 13.01.46 - Verify if block 3 'home-erin' in section 2 of the Promo Block is present "
                       "in the DOM tree")
-        def test_tc_13_01_46_check_block3_in_section2_is_present(self, driver):
+        def test_tc_13_01_46_block3_in_section2_is_present(self, driver):
             """This test checks if block 3 'home-erin' in section 2 in the Promo Block is present
             in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -606,9 +610,9 @@ class TestMainPage:
             assert block3_section2 is not None, "The block 3 'home-erin' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.47 - Check block 4 'home-performance' in section 2 of the Promo Block is present "
+        @allure.title("TC 13.01.47 - Verify if block 4 'home-performance' in section 2 of the Promo Block is present "
                       "in the DOM tree")
-        def test_tc_13_01_47_check_block4_in_section2_is_present(self, driver):
+        def test_tc_13_01_47_block4_in_section2_is_present(self, driver):
             """This test checks if block 4 'home-performance' in section 2 in the Promo Block is present
             in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -617,9 +621,9 @@ class TestMainPage:
             assert block4_section2 is not None, "The block 4 'home-performance' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.48 - Check block 5 'home-eco' in section 2 of the Promo Block is present "
+        @allure.title("TC 13.01.48 - Verify if block 5 'home-eco' in section 2 of the Promo Block is present "
                       "in the DOM tree")
-        def test_tc_13_01_48_check_block5_in_section2_is_present(self, driver):
+        def test_tc_13_01_48_block5_in_section2_is_present(self, driver):
             """This test checks if block 5 'home-eco' in section 2 in the Promo Block is present
             in the DOM tree on the main page"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
@@ -628,61 +632,61 @@ class TestMainPage:
             assert block5_section2 is not None, "The block 5 'home-eco' in Section 2 of the Promo Block " \
                                                 "is not present in the DOM tree on the main page"
 
-        @allure.title("TC 13.01.49 - Check if section 1 is clickable in the Promo Block on the main page")
-        def test_tc_13_01_49_check_section1_clickability(self, driver):
+        @allure.title("TC 13.01.49 - Verify if section 1 is clickable in the Promo Block on the main page")
+        def test_tc_13_01_49_section1_clickability(self, driver):
             """This test checks if section 1 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section1 = page.check_section1_clickability()
             assert section1, "The Section 1 in Promo Blck is not clickable"
 
-        @allure.title("TC 13.01.50 - Check if block 1 'home-pants' in section 2 is clickable"
+        @allure.title("TC 13.01.50 - Verify if block 1 'home-pants' in section 2 is clickable"
                       "in the Promo Block on the main page")
-        def test_tc_13_01_50_check_section2_block1_clickability(self, driver):
+        def test_tc_13_01_50_section2_block1_clickability(self, driver):
             """This test checks if block 1 'home-pants' in section 2 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section2_block1 = page.check_section2_block1_clickability()
             assert section2_block1, "The block 1 'home-pants' in the Section 2 in the Promo Blck is not clickable"
 
-        @allure.title("TC 13.01.51 - Check if block 2 'home-t-shirts' in section 2 is clickable"
+        @allure.title("TC 13.01.51 - Verify if block 2 'home-t-shirts' in section 2 is clickable"
                       "in the Promo Block on the main page")
-        def test_tc_13_01_51_check_section2_block2_clickability(self, driver):
+        def test_tc_13_01_51_section2_block2_clickability(self, driver):
             """This test checks if block 2 'home-t-shirts' in section 2 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section2_block2 = page.check_section2_block2_clickability()
             assert section2_block2, "The block 2 'home-t-shirts' in the Section 2 in the Promo Blck is not clickable"
 
-        @allure.title("TC 13.01.52 - Check if block 3 'home-erin' in section 2 is clickable"
+        @allure.title("TC 13.01.52 - Verify if block 3 'home-erin' in section 2 is clickable"
                       "in the Promo Block on the main page")
-        def test_tc_13_01_52_check_section2_block3_clickability(self, driver):
+        def test_tc_13_01_52_section2_block3_clickability(self, driver):
             """This test checks if block 3 'home-erin' in section 2 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section2_block3 = page.check_section2_block3_clickability()
             assert section2_block3, "The block 3 'home-erin' in the Section 2 in the Promo Blck is not clickable"
 
-        @allure.title("TC 13.01.53 - Check if block 4 'home-performance' in section 2 is clickable"
+        @allure.title("TC 13.01.53 - Verify if block 4 'home-performance' in section 2 is clickable"
                       "in the Promo Block on the main page")
-        def test_tc_13_01_53_check_section2_block4_clickability(self, driver):
+        def test_tc_13_01_53_section2_block4_clickability(self, driver):
             """This test checks if block 4 'home-performance' in section 2 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section2_block4 = page.check_section2_block4_clickability()
             assert section2_block4, "The block 4 'home-performance' in the Section 2 in the Promo Blck is not clickable"
 
-        @allure.title("TC 13.01.54 - Check if block 5 'home-eco' in section 2 is clickable"
+        @allure.title("TC 13.01.54 - Verify if block 5 'home-eco' in section 2 is clickable"
                       "in the Promo Block on the main page")
-        def test_tc_13_01_54_check_section2_block5_clickability(self, driver):
+        def test_tc_13_01_54_section2_block5_clickability(self, driver):
             """This test checks if block 5 'home-eco' in section 2 in Promo Block under header is clickable"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
             section2_block5 = page.check_section2_block5_clickability()
             assert section2_block5, "The block 5 'home-eco' in the Section 2 in the Promo Blck is not clickable"
 
-        @allure.title("TC 13.02.01 - Check the section 1 link in the Promo Block leads to the correct page")
-        def test_tc_13_02_01_check_section1_link(self, driver):
+        @allure.title("TC 13.02.01 - Verify the section 1 link in the Promo Block leads to the correct page")
+        def test_tc_13_02_01_section1_link(self, driver):
             """Check that link in section 1 is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -692,9 +696,9 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.YOGA_COLLECTION_URL \
                    and title == "New Luma Yoga Collection", "The link is not correct or the new page is not loaded"
 
-        @allure.title("TC 13.02.02 - Check the link in section 2 block 1 'home-pants' in the Promo Block "
+        @allure.title("TC 13.02.02 - Verify the link in section 2 block 1 'home-pants' in the Promo Block "
                       "leads to the correct page")
-        def test_tc_13_02_02_check_section2_block1_link(self, driver):
+        def test_tc_13_02_02_section2_block1_link(self, driver):
             """Check that link in section 2 block 1 'home-pants' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -703,9 +707,9 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.PANTS_PROMO_URL and title == "Pants", \
                 'The link is not correct or the new page is not loaded'
 
-        @allure.title("TC 13.02.03 - Check the link in section 2 block 2 'home-t-shirts' in the Promo Block "
+        @allure.title("TC 13.02.03 - Verify the link in section 2 block 2 'home-t-shirts' in the Promo Block "
                       "leads to the correct page")
-        def test_tc_13_02_03_check_section2_block2_link(self, driver):
+        def test_tc_13_02_03_section2_block2_link(self, driver):
             """Check that link in section 2 block 2 'home-t-shirts' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -714,9 +718,9 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.TEES_PROMO_URL and title == "Tees", \
                 "The link is not correct or the new page is not loaded"
 
-        @allure.title("TC 13.02.04 - Check the link in section 2 block 3 'home-erin' in the Promo Block "
+        @allure.title("TC 13.02.04 - Verify the link in section 2 block 3 'home-erin' in the Promo Block "
                       "leads to the correct page")
-        def test_tc_13_02_04_check_section2_block3_link(self, driver):
+        def test_tc_13_02_04_section2_block3_link(self, driver):
             """Check that link in section 2 block 3 'home-erin' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -725,9 +729,9 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.ERIN_RECOMMENDS_PROMO_URL \
                    and title == "Erin Recommends", "The link is not correct or the new page is not loaded"
 
-        @allure.title("TC 13.02.05 - Check the link in section 2 block 4 'home-performance' in the Promo Block "
+        @allure.title("TC 13.02.05 - Verify the link in section 2 block 4 'home-performance' in the Promo Block "
                       "leads to the correct page")
-        def test_tc_13_02_05_check_section2_block4_link(self, driver):
+        def test_tc_13_02_05_section2_block4_link(self, driver):
             """Check that link in section 2 block 4 'home-performance' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()
@@ -736,9 +740,9 @@ class TestMainPage:
             assert page.get_actual_url_of_current_page() == PromoBlockLinks.PERFORMANCE_FABRICS_PROMO_URL \
                    and title == "Performance Fabrics", "The link is not correct or the new page is not loaded"
 
-        @allure.title("TC 13.02.06 - Check the link in section 2 block 5 'home-eco' in the Promo Block "
+        @allure.title("TC 13.02.06 - Verify the link in section 2 block 5 'home-eco' in the Promo Block "
                       "leads to the correct page")
-        def test_tc_13_02_06_check_section2_block5_link(self, driver):
+        def test_tc_13_02_06_section2_block5_link(self, driver):
             """Check that link in section 2 block 5 'home-eco' is correct"""
             page = PromoBlock(driver, MAIN_PAGE_URL)
             page.open()

@@ -54,7 +54,7 @@ class TestShoppingCart:
 class TestShoppingCartFull:
 
     @allure.title("tc 07.02.01 Verify that title Shopping Cart is displayed correctly when it is full")
-    def test_tc_07_02_01_verify_title_shopping_cart_is_displayed_correctly(self, driver, full_cart_page):
+    def test_tc_07_02_01_title_shopping_cart_is_displayed_correctly(self, driver, full_cart_page):
         """Check Shopping Cart title is displayed correctly"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -62,7 +62,7 @@ class TestShoppingCartFull:
         assert title == "Shopping Cart", "The title of Shopping Cart is not displayed correctly"
 
     @allure.title("tc 07.02.03 Verify that quantity field is displayed and clickable")
-    def test_tc_07_02_03_verify_quantity_field_is_clickable(self, driver, full_cart_page):
+    def test_tc_07_02_03_quantity_field_is_clickable(self, driver, full_cart_page):
         """Check that quantity field is displayed and clickable."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -70,7 +70,7 @@ class TestShoppingCartFull:
         assert quantity_field is not None, 'The quantity input field is not displayed or clickable'
 
     @allure.title("tc 07.02.04 Verify that entered quantity displayed correctly after changing")
-    def test_tc_07_02_04_verify_quantity_field_displayed_correctly(self, driver, full_cart_page):
+    def test_tc_07_02_04_quantity_field_displayed_correctly(self, driver, full_cart_page):
         """Check that entered quantity displayed correctly after changing."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.fill_in_quantity_field("2")
@@ -78,7 +78,7 @@ class TestShoppingCartFull:
         assert displayed_quantity == "2", "Displayed quantity isn't the same as entered in the quantity field"
 
     @allure.title("tc 07.02.05 Verify the subtotal amounts in the item cart and in the Summary cart are the same.")
-    def test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summarys_cart_are_equal(self, driver, full_cart_page):
+    def test_tc_07_02_05_subtotal_in_the_item_cart_and_in_the_summary_cart_are_equal(self, driver, full_cart_page):
         """Verify the subtotal amounts in the item cart and in the summary cart are the same."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         subtotal_item = page.check_subtotal_of_item()
@@ -86,21 +86,21 @@ class TestShoppingCartFull:
         assert subtotal_item == subtotal_summary, "The subtotals aren't the same"
 
     @allure.title("tc 07.02.07 Verify that 'Proceed to checkout' button is displayed and clickable")
-    def test_tc_07_02_07_verify_proceed_to_checkout_button_is_actual(self, driver, full_cart_page):
+    def test_tc_07_02_07_proceed_to_checkout_button_is_actual(self, driver, full_cart_page):
         """Check that the 'Proceed to checkout' button is displayed and clickable."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         checkout_button = page.check_checkout_button_is_clickable
         assert checkout_button is not None, 'The "Proceed to checkout" button is not actual'
 
     @allure.title("tc 07.02.08 Verify that 'Proceed to checkout' button redirects to the shipping page")
-    def test_tc_07_02_08_verify_proceed_to_checkout_button_leads_to_the_shipping_page(self, driver, full_cart_page):
+    def test_tc_07_02_08_proceed_to_checkout_button_leads_to_the_shipping_page(self, driver, full_cart_page):
         """Verify that the 'Proceed to checkout' button redirects to the shipping page."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         link = page.check_checkout_button_redirects_to_shipping_page()
         assert link == SHIPPING_PAGE
 
     @allure.title("tc 07.02.21 Verify subtotal for items: subtotal = price * qty and displayed correctly.")
-    def test_tc_07_02_21_verify_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):
+    def test_tc_07_02_21_subtotal_items_displayed_correctly_in_the_cart(self, driver, full_cart_page):
         """Verify subtotal for items: subtotal = price * qty and displayed correctly."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         subtotal = page.check_subtotal_of_item_price_multiply_qty()
@@ -108,7 +108,7 @@ class TestShoppingCartFull:
         assert subtotal == subtotal_by_page, 'Wrong count Subtotal for items'
 
     @allure.title("tc 07.02.22 Verify subtotal in Summury Card: subtotal = price * qty and displayed correctly.")
-    def test_tc_07_02_22_verify_subtotal_displayed_correctly_in_summary_card(self, driver, full_cart_page):
+    def test_tc_07_02_22_subtotal_displayed_correctly_in_summary_card(self, driver, full_cart_page):
         """Verify subtotal in summary: subtotal = price * qty and displayed correctly."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         subtotal = page.check_subtotal_of_item_price_multiply_qty()
@@ -116,7 +116,7 @@ class TestShoppingCartFull:
         assert subtotal == subtotal_by_page, 'Wrong count Subtotal in summary'
 
     @allure.title("tc 07.02.23 Verify Order Total in Summury displayed correctly.")
-    def test_tc_07_02_23_verify_order_total_displayed_correctly_in_summary_card(self, driver, full_cart_page):
+    def test_tc_07_02_23_order_total_displayed_correctly_in_summary_card(self, driver, full_cart_page):
         """Verify Order Total in Summary: Order Total = Subtotal - Discount + Tax and displayed correctly."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         order_total = page.check_order_total()
@@ -124,7 +124,7 @@ class TestShoppingCartFull:
         assert order_total == order_total_by_page, 'Wrong count Order Total in summary'
 
     @allure.title("tc 07.02.10 Verify that remove button deletes item from the shipping page")
-    def test_tc_07_02_10_verify_remove_button_delete_item(self, driver, full_cart_page):
+    def test_tc_07_02_10_remove_button_delete_item(self, driver, full_cart_page):
         """Check that remove button deletes item from the shipping page"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         message = page.check_remove_button_deletes_item_from_shopping_cart()
@@ -132,14 +132,14 @@ class TestShoppingCartFull:
 
 
     @pytest.mark.parametrize("t_header", shopping_locators.TABLE_HEADERS.values())
-    def test_tc_07_02_02_Verify_table_headers_in_item_cart_are_visible(self, driver, t_header, full_cart_page):
+    def test_tc_07_02_02_table_headers_in_item_cart_are_visible(self, driver, t_header, full_cart_page):
         """Check that table headers in item cart are visible"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         headers_in_item_cart = page.element_is_visible(t_header)
         assert headers_in_item_cart is not None, "Table headers are not displayed"
 
     @allure.title("tc 07.02.24 Verify the Apply Discount Code is displayed")
-    def test_tc_07_02_24_verify_field_apply_discount_code_is_displayed(self, driver, full_cart_page):
+    def test_tc_07_02_24_field_apply_discount_code_is_displayed(self, driver, full_cart_page):
         """Check that Apply Discount Code is displayed."""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -147,7 +147,7 @@ class TestShoppingCartFull:
         assert apply_discount_code == "Apply Discount Code", 'The Apply Discount is not displayed correctly.'
 
     @allure.title("tc 07.02.26 Verify the button 'Apply Discount' is displayed correct")
-    def test_tc_07_02_26_verify_button_apply_discount_is_displayed(self, driver, full_cart_page):
+    def test_tc_07_02_26_button_apply_discount_is_displayed(self, driver, full_cart_page):
         """Check that button 'Apply Discount' is displayed correct"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -156,7 +156,7 @@ class TestShoppingCartFull:
         assert btn == "Apply Discount", "The button Apply Discount is not displayed correctly."
 
     @allure.title("tc 07.02.25 Verify the message coupon code is not valid is displayed correct")
-    def test_tc_07_02_25_verify_msg_coupon_code_is_not_valid_is_displayed(self, driver, full_cart_page):
+    def test_tc_07_02_25_msg_coupon_code_is_not_valid_is_displayed(self, driver, full_cart_page):
         """Check that message coupon code is not valid is displayed correct"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -167,7 +167,7 @@ class TestShoppingCartFull:
         assert msg == page.get_valid_msg_coupon_code(page.code)
 
     @allure.title("TC 07.02.27 Verify that the list of items in the Shopping Cart is displayed correct")
-    def test_tc_07_02_27_verify_title_in_cart_vs_title_item_from_more_choices_is_displayed_correct(self, driver, full_cart_page):
+    def test_tc_07_02_27_title_in_cart_vs_title_item_from_more_choices_is_displayed_correct(self, driver, full_cart_page):
         """Check that the list of items in the Shopping Cart contains title item which was added from More Choices"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
         page.open()
@@ -180,7 +180,7 @@ class TestShoppingCartFull:
 
     @allure.title("TC 07.02.28 Verify that the price in list of items in the Shopping Cart "
                   "is displayed correct")
-    def test_tc_07_02_28_verify_price_in_cart_vs_price_item_from_more_choicesis(self, driver, full_cart_page):
+    def test_tc_07_02_28_price_in_cart_vs_price_item_from_more_choices(self, driver, full_cart_page):
         """Check that the price in list of items in the Shopping Cart
         contains item with correct price which was added from More Choices"""
         page = ShoppingCartPage(driver, SHOPPING_CART_PAGE)
@@ -191,4 +191,3 @@ class TestShoppingCartFull:
         actual_price = page.get_price_last_item()
         assert expected_price in actual_price, 'The list of items in the Shopping Cart does not contains ' \
                                                 'the added product from More Choices with correct price'
-

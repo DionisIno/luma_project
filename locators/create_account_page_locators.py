@@ -1,4 +1,4 @@
-"""This section contain create account page locators"""
+"""This section contains create account page locators"""
 
 from selenium.webdriver.common.by import By
 

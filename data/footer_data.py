@@ -10,5 +10,5 @@ class FooterElementsText:
     SEARCH_TERMS_LINK_TEXT = "Search Terms"
     SUBSCRIBE_TO_OUR_MAILING_LIST_TEXT = "Subscribe to our mailing list"
     WRITE_FOR_US_LINK_TEXT = "Write for us"
-    # SUBSCRIBE_BUTTON_TEXT = "Subscribe"                                     # excluded from interface
-    # SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER_TEXT = "Enter your email address"     # excluded from interface
+    SUBSCRIBE_BUTTON_TEXT = "Subscribe"                                     # excluded from interface
+    SUBSCRIBE_EMAIL_FIELD_PLACEHOLDER_TEXT = "Enter your email address"     # excluded from interface

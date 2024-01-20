@@ -1,3 +1,5 @@
+"""This section contains Wish List page locators"""
+
 from selenium.webdriver.common.by import By
 
 

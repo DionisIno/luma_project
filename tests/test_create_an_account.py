@@ -16,7 +16,7 @@ def create_account_page(driver):
 @allure.epic('Create An Account')
 class TestCreateAnAccount:
     @allure.title('TC 04_01_01 Verify Create An Account Page h1 Header')
-    def test_04_01_01_h1_heading(self, create_account_page):
+    def test_04_01_01_presence_h1_heading(self, create_account_page):
         """ Verify that the Create An Account page heading is present. """
         h1_heading = create_account_page.check_h1_header()
         assert h1_heading and h1_heading.text == create_account_data['h1_heading'], \

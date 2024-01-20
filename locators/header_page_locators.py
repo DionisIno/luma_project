@@ -1,4 +1,4 @@
-"""This section contain header locators"""
+"""This section contains header locators"""
 
 from selenium.webdriver.common.by import By
 

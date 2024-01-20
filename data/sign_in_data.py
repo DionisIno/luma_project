@@ -1,3 +1,5 @@
+"""This section contains data for testing of the SignIn Page"""
+
 import pytest
 
 from data.credentials import credentials

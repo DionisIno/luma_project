@@ -1,3 +1,5 @@
+"""This section contains data for testing of the Forgot Your Password Page"""
+
 import random
 import string
 
