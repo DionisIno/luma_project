@@ -14,7 +14,8 @@ class SingInPageLocators:
     CUSTOMER_PASSWORD_LABEL = (By.CSS_SELECTOR, "label[for ='pass'] span")
     CUSTOMER_PASSWORD = (By.CSS_SELECTOR, "#pass")
     SIGN_IN_BUTTON = (By.XPATH, '//button[@id="send2"]')
-    FORGOT_PASSWORD = (By.XPATH, '//*[@id="login-form"]/fieldset/div[4]/div[2]/a/span')
+    FORGOT_PASSWORD = (By.CSS_SELECTOR, 'a.action.remind')
+    FORGOT_PASSWORD_TEXT = (By.CSS_SELECTOR, 'a.action.remind span')
     EMAIL_ERROR = (By.CSS_SELECTOR, "#email-error")
     PASSWORD_ERROR = By.XPATH, "//div[@id='pass-error']"
     ERROR = By.CSS_SELECTOR, '.mage-error'
