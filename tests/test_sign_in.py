@@ -136,7 +136,7 @@ class TestRegisteredCustomers:
         assert element.is_displayed() and element_href == FORGOT_YOUR_PASSWORD_URL, "Forgot Your Password link is not present"
 
     @allure.title('TC 03.01.17 Verify Forgot Your Password link is functional')
-    def test_03_01_16_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
+    def test_03_01_17_verify_forgot_your_password_link_is_present(self, driver, sign_in_page):
         """Verify that click 'Forgot your password?' link opens correct page"""
         sign_in_page.click_forgot_your_password_link()
         header = sign_in_page.check_h1_header()
