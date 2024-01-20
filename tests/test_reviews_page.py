@@ -1,3 +1,6 @@
+import pytest
+import allure
+
 from selenium.webdriver.support import expected_conditions as EC
 from locators.reviews_page_locators import ReviewsPageLocators
 from selenium.webdriver.support.wait import WebDriverWait

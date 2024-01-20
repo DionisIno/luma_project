@@ -1,8 +1,10 @@
 """This section contains Training page tests"""
-from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL
-from pages.training_page import TrainingPage
+
 import allure
 import pytest
+
+from data.data_urls import TRAINING_PAGE_URL, VIDEO_DOWNLOAD_PAGE_URL
+from pages.training_page import TrainingPage
 
 
 @pytest.fixture(scope="function")

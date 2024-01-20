@@ -1,3 +1,6 @@
+import pytest
+import allure
+
 from data.data_urls import PromoBlockLinks
 from data.gear_data import expected_link
 from pages.promotion_pants_page import PromotionPantsPage

@@ -1,3 +1,6 @@
+import pytest
+import allure
+
 from data.data_urls import GEAR_PAGE_URL
 from data.gear_data import expected_link
 from pages.gear_page_ import GearPage

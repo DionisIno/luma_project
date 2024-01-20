@@ -1,8 +1,9 @@
+import allure
+import pytest
+
 from data.data_urls import WOMEN_PAGE_URL
 from pages.women_page import WomenPage
 from locators.women_page_locators import WomenPageLocators
-import allure
-import pytest
 
 
 @allure.epic("WomenPage")

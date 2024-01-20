@@ -1,6 +1,8 @@
+import allure
+import pytest
+
 from data.data_urls import VIDEO_DOWNLOAD_PAGE_URL
 from pages.training_video_download_page import TrainingVideoDownloadPage
-import allure
 
 
 @allure.epic('Test Training Video')
