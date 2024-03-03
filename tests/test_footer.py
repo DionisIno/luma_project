@@ -1,10 +1,11 @@
 """This section contains footer tests"""
 import allure
 import pytest
+import requests
 from selenium.webdriver.common.by import By
 from data.data_urls import MAIN_PAGE_URL, DATA_1, FooterLinks
 from pages.footer_page import FooterPage
-from data.footer_data import FooterElementsText
+from data.footer_data import FooterElementsText, FooterElementsAttributes
 
 
 @allure.epic("Test Footer")
@@ -263,7 +264,18 @@ class TestFooter:
         notes_link = page.check_write_for_us_link_clickability()
         assert notes_link, "The Write for us link is not clickable"
 
-    @allure.title("TC 02.01.32 - Verify text of Write for us link on each page specified in DATA_1")
+    @allure.title("TC 02.01.31 - Check correctness of the attribute 'href' in the 'Write for us' link in the footer")
+    def test_tc_02_01_31_check_href_in_write_for_us_link(self, driver):
+        """Check that attribute 'href' in the 'Write for us' link is correct"""
+        page = FooterPage(driver, MAIN_PAGE_URL)
+        page.open()
+        link_href = page.get_write_for_us_link_href()
+        link_status = requests.head(link_href).status_code   # this equals 406 for all footer links exactly on this site
+        assert link_href == FooterElementsAttributes.write_for_us_link_href \
+               and link_status == 406, "The attribute 'href' of the 'Write for us' link does not match " \
+                                       "the expected value or the link functionality is broken"
+
+    @allure.title("TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_32_text_of_notes_link_on_pages(self, driver, URL):
         """Checks if text of Write for us link is correct on each page in DATA_1"""

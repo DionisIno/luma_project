@@ -31,7 +31,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Get Pytest changed files
       id: changed-py-files
-      uses: tj-actions/changed-files@v23
+      uses: tj-actions/changed-files@v41
       with:
           files: |
             tests/*.py
