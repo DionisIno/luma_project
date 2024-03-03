@@ -277,38 +277,3 @@ class TestFailedLogin:
         error_message = sign_in_page.get_error_message((SingInPageLocators.ERROR_MESSAGE))
         assert error_message in [sign_in_errors['invalid_credentials_msg']], \
             "The error message is incorrect or missing"
-
-# test_03_02_02_to_10 - ?
-# _02_03_01_correct_transfers
-# test_tc_02_02_01_search_terms
-# test_tc_02_02_01_search_terms_
-# tc_02_01_07_text
-# 02_01_23 ,TC 02.01.24, 25, 27
-# 01_15_02_ check_that_it_is_possible_to_vote_for_2_star
-# test_tc_01_15_03_check_that_it_is_possible_to_vote_for_3_star
-# test_tc_01_15_04_check_that_it_is_possible_to_vote_for_4_star
-# TestReviews::test_tc_01_15_05_check_that_it_is_possible_to_vote_for_5_star
-# _02_01_27_check_text_of_contact_us_link_on_pages
-#        assert 'Subscribe to... mailing list' == 'Contact us'
-# E         - Contact us
-# E         + Subscribe to our mailing list
-# tc_02_01_27_check_text_of_contact_us_link_on_pages
-# AssertionError: Actual text 'Subscribe to our mailing list' of 'Contact us' link does not match expected 'Contact us'
-# E       assert 'Subscribe to... mailing list' == 'Contact us'
-# E         - Contact us
-# E         + Subscribe to our mailing list
-#
-# 02_01_32_check_text_of_write_for_us_link_on_pages
-# #assert 'Notes' == 'Write for us'
-# E         - Write for us
-# E         + Notes
-#
-# tc_02_01_32_check_text_of_write_for_us_link_on_pages
-# tc_02_01_56_check_text_of_subscribe_to_our_mailing_list_link_on_page
-# tc_02_02_05_check_contact_us_link_functionality
-# 02_02_05_check_contact_us_link_
-# 02_02_06_check_write_for_us_link_functionality
-# 02_02_07_check_subscribe_to_our_mailing_list_link_functionality
-# 02_01_27_
-# 01_15_02_ ??
-# @pytest.mark.skip(reason="Skipping the test due to UI changes")
