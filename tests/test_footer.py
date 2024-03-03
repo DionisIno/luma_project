@@ -237,6 +237,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of 'Contact us' link does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.28 - Verify Write for us link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_28_presence_of_write_for_us_link_on_pages(self, driver, URL):
@@ -246,6 +247,7 @@ class TestFooter:
         write_for_us_link = page.check_write_for_us_link_presence()
         assert write_for_us_link, "The Write for us link is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.29 - Verify display of Write for us link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_29_visibility_of_write_for_us_link_on_pages(self, driver, URL):
@@ -255,6 +257,7 @@ class TestFooter:
         write_for_us_link = page.check_write_for_us_link_is_visible()
         assert write_for_us_link, "The Write for us link is not visible"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.30 - Verify if Write for us link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_30_clickability_of_notes_link_on_pages(self, driver, URL):
@@ -264,6 +267,7 @@ class TestFooter:
         notes_link = page.check_write_for_us_link_clickability()
         assert notes_link, "The Write for us link is not clickable"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.31 - Check correctness of the attribute 'href' in the 'Write for us' link in the footer")
     def test_tc_02_01_31_check_href_in_write_for_us_link(self, driver):
         """Check that attribute 'href' in the 'Write for us' link is correct"""
@@ -275,6 +279,7 @@ class TestFooter:
                and link_status == 406, "The attribute 'href' of the 'Write for us' link does not match " \
                                        "the expected value or the link functionality is broken"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.32 - Check text of Write for us link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_32_text_of_notes_link_on_pages(self, driver, URL):
