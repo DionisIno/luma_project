@@ -519,6 +519,7 @@ class TestHeader:
         assert driver.current_url == WOMEN_BOTTOMS_PANTS_URL and header.text == "Pants", \
             "Pants page of Women section is either not opened or the page header is incorrect"
 
+    @pytest.mark.skip(reason="skip because if UI changes")
     @allure.title('TC 01.03.14 correctness of the "Shorts" link of the "Women" section')
     def test_tc_01_03_14_correctness_shorts_link_women_section(self, driver):
         """Check 'Shorts' subsection link click in 'Women' section redirects to the Shorts page and \

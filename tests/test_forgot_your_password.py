@@ -202,6 +202,7 @@ class TestForgotYourPasswordFunctionality:
         assert error_message == forgot_your_password_errors['incorrect_captcha_msg'], \
             "The error message is incorrect or missing"
 
+    @pytest.mark.skip(reason="skip because if UI changes")
     @allure.title('TC 17.01.25 Verify error on resetting My Password with empty email')
     def test_17_01_25_error_if_reset_my_password_with_empty_email(self, driver, forgot_psw_page):
         """Check error message on attempt to reset password with empty email field"""

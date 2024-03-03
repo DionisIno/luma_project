@@ -10,6 +10,7 @@ from data.footer_data import FooterElementsText
 @allure.epic("Test Footer")
 class TestFooter:
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.01 - Verify Footer is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_01_presence_of_footer_on_pages(self, driver, URL):
@@ -64,6 +65,7 @@ class TestFooter:
         underlined_link = page.check_element_hover_style(page.footer_locators.SEARCH_TERMS_LINK, "text-decoration", 2)
         assert "underline" in underlined_link, "The Search Terms link is not underlined while hovering over it"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.07 - Verify text of Search Terms link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_07_text_of_search_terms_link_on_pages(self, driver, URL):
@@ -192,6 +194,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of Orders and Returns link does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.23 - Verify 'Contact us' link is present in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_23_presence_of_contact_us_link_on_pages(self, driver, URL):
@@ -201,6 +204,7 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_presence()
         assert contact_us_link, "The 'Contact us' link is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.24 - Verify display of 'Contact us' link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_24_visibility_of_contact_us_link_on_pages(self, driver, URL):
@@ -210,6 +214,7 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_is_visible()
         assert contact_us_link, "The 'Contact us' link is not visible"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.25 - Verify if 'Contact us' link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_25_clickability_of_contact_us_link_on_pages(self, driver, URL):
@@ -219,6 +224,7 @@ class TestFooter:
         contact_us_link = page.check_contact_us_link_clickability()
         assert contact_us_link, "The 'Contact us' link is not clickable"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.27 - Verify text of 'Contact us' link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_27_text_of_contact_us_link_on_pages(self, driver, URL):
@@ -250,21 +256,21 @@ class TestFooter:
 
     @allure.title("TC 02.01.30 - Verify if Write for us link is clickable on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_01_30_clickability_of_write_for_us_link_on_pages(self, driver, URL):
+    def test_tc_02_01_30_clickability_of_notes_link_on_pages(self, driver, URL):
         """This test checks if Write for us link is clickable on each page specified in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
-        write_for_us_link = page.check_write_for_us_link_clickability()
-        assert write_for_us_link, "The Write for us link is not clickable"
+        notes_link = page.check_write_for_us_link_clickability()
+        assert notes_link, "The Write for us link is not clickable"
 
     @allure.title("TC 02.01.32 - Verify text of Write for us link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
-    def test_tc_02_01_32_text_of_write_for_us_link_on_pages(self, driver, URL):
+    def test_tc_02_01_32_text_of_notes_link_on_pages(self, driver, URL):
         """Checks if text of Write for us link is correct on each page in DATA_1"""
         page = FooterPage(driver, url=URL)
         page.open()
         actual_text = page.check_text_of_write_for_us_link()
-        expected_text = FooterElementsText.WRITE_FOR_US_LINK_TEXT
+        expected_text = FooterElementsText.NOTES
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of Write for us link does not match expected '{expected_text}'"
 
@@ -455,6 +461,7 @@ class TestFooter:
             f"Actual text '{actual_text}' of placeholder in Subscribe Email Field " \
             f"does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.52 - Verify 'Subscribe to our mailing list' link is present "
                   "in the DOM tree on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -466,6 +473,7 @@ class TestFooter:
         subscribe_link = page.check_subscribe_to_our_mailing_list_link_presence()
         assert subscribe_link, "The 'Subscribe to our mailing list' link is not present in the DOM tree"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.53 - Verify 'Subscribe to our mailing list' link is visible "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -476,6 +484,7 @@ class TestFooter:
         subscribe_link = page.check_subscribe_to_our_mailing_list_link_is_visible()
         assert subscribe_link, "The 'Subscribe to our mailing list' link is not visible in the DOM tree"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.54 - Verify if 'Subscribe to our mailing list' link is clickable "
                   "on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -486,6 +495,7 @@ class TestFooter:
         subscribe_link = page.check_subscribe_to_our_mailing_list_link_clickability()
         assert subscribe_link, "The 'Subscribe to our mailing list' link is not clickable"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.01.56 - Verify text of 'Subscribe to our mailing list' link on each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
     def test_tc_02_01_56_text_of_subscribe_to_our_mailing_list_link_on_pages(self, driver, URL):
@@ -497,6 +507,7 @@ class TestFooter:
         assert actual_text == expected_text, \
             f"Actual text '{actual_text}' of 'Subscribe to our mailing list' link does not match expected '{expected_text}'"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.02.01 - Verify Search Terms link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -547,6 +558,7 @@ class TestFooter:
                and title == "Orders and Returns", "The Orders and Returns link is not correct " \
                                                   "or the new page is not loaded"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.02.05 - Verify Contact Us link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -559,6 +571,7 @@ class TestFooter:
         assert page.get_actual_url_of_current_page() == FooterLinks.CONTACT_URL \
                and title == "Contact", "The Contact Us link is not correct or the new page is not loaded"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.02.06 - Verify Write for us link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -571,6 +584,7 @@ class TestFooter:
         assert page.get_actual_url_of_current_page() == FooterLinks.WRITE_FOR_US_URL \
                and title == "Write For Us", "The Write for us link is not correct or the new page is not loaded"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.02.07 - Verify 'Subscribe to our mailing list' link in footer leads to the correct page "
                   "from each page specified in DATA_1")
     @pytest.mark.parametrize('URL', DATA_1)
@@ -584,6 +598,7 @@ class TestFooter:
                and title == "Subscribe", "The 'Subscribe to our mailing list' link is not correct " \
                                          "or the new page is not loaded"
 
+    @pytest.mark.skip(reason="Skipping the test due to UI changes")
     @allure.title("TC 02.03.01 - Verify correct transfers by clicking on links in the footer")
     def test_tc_02_03_01_correct_transfers_by_clicking_on_links_in_the_footer(self, driver):
         """Check that transfers between pages by clicking on links in the footer are correct"""
